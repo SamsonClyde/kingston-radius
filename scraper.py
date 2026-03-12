@@ -662,4 +662,67 @@ def scrape_massmoca():
                         "location": "North Adams, MA",
                         "mapsUrl": "https://maps.google.com/?q=1040+Mass+MoCA+Way+North+Adams+MA",
                         "price": "See website", "free": False})
-    
+            except Exception as e:
+                print(f"  MASS MoCA item error: {e}")
+    except Exception as e:
+        print(f"MASS MoCA error: {e}")
+    seen = set()
+    unique = [e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"MASS MoCA: {len(unique)} events")
+    return unique
+
+# ─── HUDSON BREWING CO ────────────────────────────────────────────────────────
+# Website under construction — skip for now, add manually
+# def scrape_hudson_brewing(): return []
+
+# ─── MAIN ─────────────────────────────────────────────────────────────────────
+def main():
+    all_events = []
+    all_events += scrape_tubbys()
+    all_events += scrape_assembly()
+    all_events += scrape_falcon()
+    all_events += scrape_basilica()
+    all_events += scrape_keegan()
+    all_events += scrape_bardavon()
+    all_events += scrape_unicorn()
+    all_events += scrape_bearsville()
+    all_events += scrape_levon_helm()
+    all_events += scrape_hutton()
+    all_events += scrape_bethel_woods()
+    all_events += scrape_outlier()
+    all_events += scrape_spotty_dog()
+    all_events += scrape_tompkins()
+    all_events += scrape_crandell()
+    all_events += scrape_massmoca()
+
+    dated = sorted([e for e in all_events if e.get("date")], key=lambda e: e["date"])
+    undated = [e for e in all_events if not e.get("date")]
+    all_events = dated + undated
+
+    for i, e in enumerate(all_events):
+        e["id"] = i + 1
+
+    lines = []
+    for e in all_events:
+        title = e['title'].replace("\\", "\\\\").replace('"', '\\"')
+        lines.append(f"""  {{
+    id: {e['id']},
+    date: "{e['date']}",
+    title: "{title}",
+    venue: "{e['venue']}",
+    venueUrl: "{e['venueUrl']}",
+    location: "{e['location']}",
+    mapsUrl: "{e['mapsUrl']}",
+    time: "{e['time']}",
+    price: "{e['price']}",
+    free: {'true' if e['free'] else 'false'}
+  }}""")
+
+    output = "const EVENTS = [\n" + ",\n".join(lines) + "\n];\n"
+    with open("events.js", "w") as f:
+        f.write(output)
+
+    print(f"\nTotal: {len(all_events)} events written to events.js")
+
+if __name__ == "__main__":
+    main()
