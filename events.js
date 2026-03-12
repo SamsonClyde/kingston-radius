@@ -210,10 +210,10 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/the-stevenson-ranch-davidians-adam-amram-free-show",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
-    price: "See website",
-    free: false
+    price: "Free",
+    free: true
   },
   {
     id: 19,
@@ -234,10 +234,10 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/watch-the-knicks-with-nick-free",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:30 PM",
-    price: "See website",
-    free: false
+    price: "Free",
+    free: true
   },
   {
     id: 21,
@@ -246,7 +246,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/the-whimbrels-500",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -258,7 +258,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/habibi",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -294,7 +294,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/ace-of-cups-chef-ananya-food-special",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "5:00 PM",
     price: "See website",
     free: false
@@ -306,7 +306,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/light-beams-178-product-salvatore-principato-of-liquid-liquid",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -318,7 +318,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/ruth-mascelli-cube-content-blocks",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -330,10 +330,10 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/tashi-dorji-che-chen",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
-    price: "See website",
-    free: false
+    price: "Free",
+    free: true
   },
   {
     id: 29,
@@ -354,7 +354,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/anastasia-coope-autobahn",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -378,10 +378,10 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/nic-panken-michael-beharie",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
-    price: "See website",
-    free: false
+    price: "Free",
+    free: true
   },
   {
     id: 33,
@@ -390,7 +390,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/dj-night-chewy",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "6:30 PM",
     price: "See website",
     free: false
@@ -402,7 +402,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/wild-pink-dead-gowns",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -414,7 +414,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/dj-night-dreamhouse-zine-crew",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -426,7 +426,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/bjornqorn-night",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -462,7 +462,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/mdou-moctar-solo",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -474,7 +474,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/facs-open-head",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -486,7 +486,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/closing-of-ace-of-cups-3-nights-of-hotpot",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "",
     price: "See website",
     free: false
@@ -522,7 +522,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/marissa-nadler",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -534,7 +534,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/jane-inc",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -558,7 +558,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/freakout-spot-anniversary-party-wes-tirey-aubreyhaddard-carnivorous-bells",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -582,7 +582,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/2l4fz9xzgzd2w8tkd7jgfkjpgjwy9x",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "6:00 PM",
     price: "See website",
     free: false
@@ -594,7 +594,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/happy-hour-gear-swap",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "5:00 PM",
     price: "See website",
     free: false
@@ -606,7 +606,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/cochemea",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -630,7 +630,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/moviola-antietam-sleepyhead",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -654,10 +654,10 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/swdyt-vol-30-keefe-jackson-trio-with-luke-stewart-amp-mikel-patrick-avery",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
-    price: "See website",
-    free: false
+    price: "Free",
+    free: true
   },
   {
     id: 56,
@@ -666,7 +666,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/lucid-express",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -678,7 +678,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/clubbys-dj-rhonda-larry-termite-downstairs-j",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "8:00 PM",
     price: "See website",
     free: false
@@ -690,7 +690,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/times-new-viking-the-serfs",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -702,10 +702,10 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/live-music-society-presents-thom-nguyen-lea-bertucci-leo-chang-free",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
-    price: "See website",
-    free: false
+    price: "Free",
+    free: true
   },
   {
     id: 60,
@@ -714,7 +714,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/coma-cinema-trace-mountains",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -738,7 +738,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/some-velvet-sidewalk-dominick-amp-the-family-band-500",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -762,7 +762,7 @@ const EVENTS = [
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/acopia-australia",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
@@ -781,18 +781,30 @@ const EVENTS = [
   },
   {
     id: 66,
+    date: "2026-03-13",
+    title: "Tasi",
+    venue: "Keegan Ales",
+    venueUrl: "https://www.keeganales.com/event/tasi/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    time: "7:30PM",
+    price: "Free",
+    free: true
+  },
+  {
+    id: 67,
     date: "2026-03-14",
     title: "FRONT ROOM DJS: RAUSCH / STANKUS (FREE)",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/front-room-djs-rausch-stankus-free",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
-    price: "See website",
-    free: false
+    price: "Free",
+    free: true
   },
   {
-    id: 67,
+    id: 68,
     date: "2026-03-14",
     title: "Two Many Guitars",
     venue: "The Falcon",
@@ -804,7 +816,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 68,
+    id: 69,
     date: "2026-03-14",
     title: "Fat Cakes",
     venue: "The Falcon",
@@ -816,7 +828,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 69,
+    id: 70,
+    date: "2026-03-14",
+    title: "Dead Operator with Lousy Birthday & The Fuze",
+    venue: "Keegan Ales",
+    venueUrl: "https://www.keeganales.com/event/dead-operator-with-lousy-birthday-the-fuze/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    time: "7:00PM",
+    price: "Free",
+    free: true
+  },
+  {
+    id: 71,
     date: "2026-03-15",
     title: "Woodstock Film Festival: Oscars Viewing Party",
     venue: "Assembly Kingston",
@@ -828,7 +852,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 70,
+    id: 72,
     date: "2026-03-15",
     title: "Eddy’s Chemistry Set",
     venue: "The Falcon",
@@ -840,19 +864,43 @@ const EVENTS = [
     free: false
   },
   {
-    id: 71,
+    id: 73,
+    date: "2026-03-15",
+    title: "Shamrock Run Day with Mike & Pete!",
+    venue: "Keegan Ales",
+    venueUrl: "https://www.keeganales.com/event/shamrock-run-day-hooley-keegans/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    time: "10:00AM",
+    price: "Free",
+    free: true
+  },
+  {
+    id: 74,
+    date: "2026-03-17",
+    title: "Trivia Break Tuesdays with Andre",
+    venue: "Keegan Ales",
+    venueUrl: "https://www.keeganales.com/event/trivia-break-tuesdays-andre-11/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    time: "6:30PM",
+    price: "Free",
+    free: true
+  },
+  {
+    id: 75,
     date: "2026-03-18",
     title: "CLARICE JENSEN + CHUCK JOHNSON",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/clarice-jensen-chuck-johnson",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 72,
+    id: 76,
     date: "2026-03-18",
     title: "HV JAZZ JAM in the Underground",
     venue: "The Falcon",
@@ -864,19 +912,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 73,
+    id: 77,
     date: "2026-03-19",
     title: "TARA CLERKIN TRIO + MORE EAZE",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/tara-clerkin-trio",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 74,
+    id: 78,
     date: "2026-03-19",
     title: "John Gullo’s ROLLING STONES!",
     venue: "The Falcon",
@@ -888,19 +936,31 @@ const EVENTS = [
     free: false
   },
   {
-    id: 75,
+    id: 79,
+    date: "2026-03-19",
+    title: "EVEN THE GOOD GIRLS WILL CRY: MY ‘90s Rock Memoir",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/even-the-good-girls-will-cry-my-90s-rock-memoir/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 80,
     date: "2026-03-20",
     title: "BENEFIT FOR VETERANS FOR PEACE WITH JEFRE CANTU-LEDESMA / BOOKER STARDRUM / OMER SHEMESH / JOEY WEISS + JARED ASHDOWN",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/benefit-for-veterans-for-peace-with-jefre-cantu-ledesma-booker-stardrum-omer-shemesh-joey-weiss-jared-ashdown",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "",
     price: "See website",
     free: false
   },
   {
-    id: 76,
+    id: 81,
     date: "2026-03-20",
     title: "Robbie Fulks",
     venue: "The Falcon",
@@ -912,19 +972,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 77,
+    id: 82,
     date: "2026-03-21",
     title: "SUSS + ADELINE HOTEL",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/suss",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 78,
+    id: 83,
     date: "2026-03-21",
     title: "Bernard Purdie & Friends",
     venue: "The Falcon",
@@ -936,7 +996,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 79,
+    id: 84,
     date: "2026-03-21",
     title: "New Paltz Middle School “Battle of the Bands”",
     venue: "The Falcon",
@@ -948,7 +1008,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 80,
+    id: 85,
     date: "2026-03-22",
     title: "Ecstatic Dance with Cosmal",
     venue: "Assembly Kingston",
@@ -960,7 +1020,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 81,
+    id: 86,
     date: "2026-03-22",
     title: "Buffalo Stack",
     venue: "The Falcon",
@@ -972,7 +1032,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 82,
+    id: 87,
     date: "2026-03-23",
     title: "Kevin Hays Trio ft. Thomas Morgan & Brian Blade",
     venue: "The Falcon",
@@ -984,31 +1044,31 @@ const EVENTS = [
     free: false
   },
   {
-    id: 83,
+    id: 88,
     date: "2026-03-24",
     title: "OPTIC SINK + SPAIN",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/optic-sink-spain",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 84,
+    id: 89,
     date: "2026-03-25",
     title: "OPENING NIGHT BASEBALL ON TV",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/opening-night-baseball-on-tv",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 85,
+    id: 90,
     date: "2026-03-25",
     title: "Lil’ Ed & The Blues Imperials",
     venue: "The Falcon",
@@ -1020,19 +1080,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 86,
+    id: 91,
     date: "2026-03-26",
     title: "OPENING DAY BASEBALL ON TV with Wild Man Doyle on DJ Duty",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/opening-day-baseball-on-tv-with-wild-man-doyle-on-dj-duty",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "4:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 87,
+    id: 92,
     date: "2026-03-26",
     title: "Dilemastronauta",
     venue: "The Falcon",
@@ -1044,19 +1104,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 88,
+    id: 93,
     date: "2026-03-27",
     title: "live music society presents: DILEMASTRONAUTA Y LA TRIPULACIÓN CÓSMICA (mems COMBO CHIMBITA) (FREE SHOW)",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/live-music-society-presents-dilemastronauta-y-la-tripulacin-csmica-mems-combo-chimbita-free-show",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
-    price: "See website",
-    free: false
+    price: "Free",
+    free: true
   },
   {
-    id: 89,
+    id: 94,
     date: "2026-03-27",
     title: "Sal \"The Voice\" Valentinetti",
     venue: "The Falcon",
@@ -1068,7 +1128,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 90,
+    id: 95,
     date: "2026-03-27",
     title: "True North",
     venue: "The Falcon",
@@ -1080,19 +1140,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 91,
+    id: 96,
     date: "2026-03-28",
     title: "Hold on Whale zine release Party with Bill Baird + The Sisters + Brian McCarthy",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/hold-on-whale-zine-release-party-with-bill-baird-the-sisters-brian-mccarthy",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "6:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 92,
+    id: 97,
     date: "2026-03-28",
     title: "Popa Chubby Band | Big B'Day Show",
     venue: "The Falcon",
@@ -1104,7 +1164,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 93,
+    id: 98,
     date: "2026-03-28",
     title: "the Buoy Decibel System // Gravity Krush",
     venue: "The Falcon",
@@ -1116,7 +1176,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 94,
+    id: 99,
     date: "2026-03-29",
     title: "Jerry Vivino’s All Stars",
     venue: "The Falcon",
@@ -1128,7 +1188,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 95,
+    id: 100,
     date: "2026-03-31",
     title: "Ryan Davis & The Roadhouse Band",
     venue: "Assembly Kingston",
@@ -1140,7 +1200,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 96,
+    id: 101,
     date: "2026-04-02",
     title: "The Soul Experience ft. Corey Glover (of Living Colour)",
     venue: "The Falcon",
@@ -1152,19 +1212,31 @@ const EVENTS = [
     free: false
   },
   {
-    id: 97,
+    id: 102,
+    date: "2026-04-02",
+    title: "Thievery Corporation",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/thievery-corporation/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 103,
     date: "2026-04-03",
     title: "TAKAAT",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/takaat",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
-    price: "See website",
-    free: false
+    price: "Free",
+    free: true
   },
   {
-    id: 98,
+    id: 104,
     date: "2026-04-03",
     title: "Reelin’ In The Years: An All Star Tribute to Steely Dan",
     venue: "The Falcon",
@@ -1176,7 +1248,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 99,
+    id: 105,
     date: "2026-04-04",
     title: "Jungle Love",
     venue: "The Falcon",
@@ -1188,7 +1260,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 100,
+    id: 106,
     date: "2026-04-04",
     title: "Fred Zepplin",
     venue: "The Falcon",
@@ -1200,7 +1272,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 101,
+    id: 107,
     date: "2026-04-05",
     title: "Luna",
     venue: "Assembly Kingston",
@@ -1212,19 +1284,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 102,
+    id: 108,
     date: "2026-04-07",
     title: "STUCK + TV SLEEP",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/stuck",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 103,
+    id: 109,
     date: "2026-04-07",
     title: "Whitney",
     venue: "Assembly Kingston",
@@ -1236,19 +1308,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 104,
+    id: 110,
     date: "2026-04-08",
     title: "DANIEL VILLARREAL",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/daniel-villarreal-1",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 105,
+    id: 111,
     date: "2026-04-08",
     title: "The Underground Blues Jam | Hosted by Karl Allweier",
     venue: "The Falcon",
@@ -1260,19 +1332,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 106,
+    id: 112,
     date: "2026-04-09",
     title: "CONTAINER + EXPENSIVE $HIT + ROSE CLUB + NICK MALKIN",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/container-expensive-hit",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 107,
+    id: 113,
     date: "2026-04-09",
     title: "THE NYNES VARIETY HOUR PRESENTS: An Evening of Disaster and Triumph",
     venue: "The Falcon",
@@ -1284,19 +1356,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 108,
+    id: 114,
     date: "2026-04-10",
     title: "HOLY FUCK + GUS ENGLEHORN",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/holy-fuck-gus-englehorn",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 109,
+    id: 115,
     date: "2026-04-10",
     title: "Trixie Whitley",
     venue: "The Falcon",
@@ -1308,7 +1380,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 110,
+    id: 116,
     date: "2026-04-10",
     title: "Ron Shalom Presents: Minivan – Two Night Residency in the Falcon Underground",
     venue: "The Falcon",
@@ -1320,19 +1392,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 111,
+    id: 117,
     date: "2026-04-11",
     title: "NØIR + ANCIENT MY ENEMY + SHIPS IN THE NIGHT",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/nir-ancient-my-enemy-ships-in-the-night",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 112,
+    id: 118,
     date: "2026-04-11",
     title: "Chloe Radcliffe",
     venue: "Assembly Kingston",
@@ -1344,7 +1416,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 113,
+    id: 119,
     date: "2026-04-11",
     title: "Jay Collins & Northern Resistance | Album release show!",
     venue: "The Falcon",
@@ -1356,7 +1428,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 114,
+    id: 120,
     date: "2026-04-11",
     title: "Ron Shalom Presents: Minivan – Two Night Residency in the Falcon Underground",
     venue: "The Falcon",
@@ -1368,7 +1440,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 115,
+    id: 121,
     date: "2026-04-12",
     title: "Analog Jazz Orchestra",
     venue: "The Falcon",
@@ -1380,19 +1452,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 116,
+    id: 122,
     date: "2026-04-15",
     title: "MAGIC: The Gathering night",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/magic-the-gathering-night",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "6:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 117,
+    id: 123,
     date: "2026-04-15",
     title: "HV JAZZ JAM in the Underground",
     venue: "The Falcon",
@@ -1404,7 +1476,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 118,
+    id: 124,
     date: "2026-04-16",
     title: "Thomas Dolby",
     venue: "Assembly Kingston",
@@ -1416,19 +1488,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 119,
+    id: 125,
     date: "2026-04-17",
     title: "KING TUFF + MORGAN NAGLER",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/king-tuff-morgan-nagler",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 120,
+    id: 126,
     date: "2026-04-17",
     title: "The Slambovian Circus of Dreams",
     venue: "The Falcon",
@@ -1440,19 +1512,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 121,
+    id: 127,
     date: "2026-04-18",
     title: "420 PARTY: SIDE X SIDE RECORD FAIR, OWSLEY’S OWLS with Jerry Tone Store + JUMA SULTAN + Freakout Spot DJs",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/420-party-side-x-side-record-fair-owsleys-owls-with-jerry-tone-store-juma-sultan-freakout-spot-djs",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "12:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 122,
+    id: 128,
     date: "2026-04-18",
     title: "The Rhinebeck School Of Music | Rock Band Student Concert",
     venue: "The Falcon",
@@ -1464,7 +1536,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 123,
+    id: 129,
     date: "2026-04-18",
     title: "Bruce Katz Band",
     venue: "The Falcon",
@@ -1476,7 +1548,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 124,
+    id: 130,
     date: "2026-04-19",
     title: "Haley Heynderickx & Max García Conover",
     venue: "Assembly Kingston",
@@ -1488,7 +1560,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 125,
+    id: 131,
     date: "2026-04-19",
     title: "Neil Alexander & NAIL",
     venue: "The Falcon",
@@ -1500,19 +1572,31 @@ const EVENTS = [
     free: false
   },
   {
-    id: 126,
+    id: 132,
+    date: "2026-04-19",
+    title: "“The Days Pass Quickly Immersed in the Shadow of Eternity” Lea Bertucci with Norbert Rodenkirchen.",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/the-days-pass-quickly-immersed-in-the-shadow-of-eternity-lea-bertucci-with-norbert-rodenkirchen/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 133,
     date: "2026-04-21",
     title: "THE ANTLERS + with special guest Tōth",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/the-antlers",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 127,
+    id: 134,
     date: "2026-04-23",
     title: "Thee Sinseers & The Altons: 2026 Tour",
     venue: "Assembly Kingston",
@@ -1524,7 +1608,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 128,
+    id: 135,
     date: "2026-04-23",
     title: "LOTUS “Spirit of Santana”",
     venue: "The Falcon",
@@ -1536,19 +1620,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 129,
+    id: 136,
     date: "2026-04-24",
     title: "NIC PANKEN + ONGOING + RAKEL STAMMER",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/nic-panken-ongoing-rakel-stammer",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 130,
+    id: 137,
     date: "2026-04-24",
     title: "Conan",
     venue: "Assembly Kingston",
@@ -1560,7 +1644,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 131,
+    id: 138,
     date: "2026-04-24",
     title: "The BEATLE Project | Sgt Pepper & Magical Mystery Tour",
     venue: "The Falcon",
@@ -1572,19 +1656,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 132,
+    id: 139,
     date: "2026-04-25",
     title: "LARA HOPE BAND + EL ARIS",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/lara-hope-band-el-aris",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 133,
+    id: 140,
     date: "2026-04-25",
     title: "The Ed Palermo Big Band",
     venue: "The Falcon",
@@ -1596,7 +1680,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 134,
+    id: 141,
     date: "2026-04-26",
     title: "Camille Thurman with the Darrell Green Quartet",
     venue: "The Falcon",
@@ -1608,19 +1692,31 @@ const EVENTS = [
     free: false
   },
   {
-    id: 135,
+    id: 142,
     date: "2026-04-28",
     title: "WHITNEY JOHNSON / LIA KOHL / MACIE STEWART",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/whitney-johnson-lia-kohl-macie-stewart",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
+    price: "Free",
+    free: true
+  },
+  {
+    id: 143,
+    date: "2026-04-29",
+    title: "TY SEGALL",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/15896-2/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
     price: "See website",
     free: false
   },
   {
-    id: 136,
+    id: 144,
     date: "2026-04-30",
     title: "Jeffrey Gaines",
     venue: "The Falcon",
@@ -1632,7 +1728,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 137,
+    id: 145,
     date: "2026-05-01",
     title: "Arturo O'Farrill & The Afro Latin Jazz Orchestra",
     venue: "The Falcon",
@@ -1644,7 +1740,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 138,
+    id: 146,
     date: "2026-05-02",
     title: "Kofi Baker’s Psychedelic Trip",
     venue: "The Falcon",
@@ -1656,7 +1752,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 139,
+    id: 147,
     date: "2026-05-02",
     title: "Fred Zepplin",
     venue: "The Falcon",
@@ -1668,19 +1764,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 140,
+    id: 148,
     date: "2026-05-03",
     title: "WICCA PHASE SPRINGS ETERNAL & The Mystery Mountain Band + fanclubwallet",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/wicca-phase-springs-eternal-amp-the-mystery-mountain-band-fanclubwallet",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
-    price: "See website",
-    free: false
+    price: "Free",
+    free: true
   },
   {
-    id: 141,
+    id: 149,
     date: "2026-05-03",
     title: "Pilc Moutin Hoenig",
     venue: "The Falcon",
@@ -1692,31 +1788,43 @@ const EVENTS = [
     free: false
   },
   {
-    id: 142,
+    id: 150,
+    date: "2026-05-03",
+    title: "Dry Cleaning",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/dry-cleaning/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 151,
     date: "2026-05-04",
     title: "THE MESSTHETICS AND JAMES BRANDON LEWIS + YR KNIVES",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/the-messthetics-and-james-brandon-lewis",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 143,
+    id: 152,
     date: "2026-05-05",
     title: "EXEK",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/exek",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 144,
+    id: 153,
     date: "2026-05-05",
     title: "BoDeans: 40th Anniversary Tour",
     venue: "Assembly Kingston",
@@ -1728,19 +1836,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 145,
+    id: 154,
     date: "2026-05-07",
     title: "GLADIE + NOUN",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/gladie-noun",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 146,
+    id: 155,
     date: "2026-05-07",
     title: "Knorrwood",
     venue: "Assembly Kingston",
@@ -1752,7 +1860,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 147,
+    id: 156,
     date: "2026-05-07",
     title: "The Silos",
     venue: "The Falcon",
@@ -1764,7 +1872,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 148,
+    id: 157,
     date: "2026-05-08",
     title: "Dar Williams",
     venue: "Assembly Kingston",
@@ -1776,7 +1884,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 149,
+    id: 158,
     date: "2026-05-09",
     title: "Bill Callahan",
     venue: "Assembly Kingston",
@@ -1788,7 +1896,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 150,
+    id: 159,
     date: "2026-05-09",
     title: "Bill Callahan",
     venue: "Assembly Kingston",
@@ -1800,7 +1908,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 151,
+    id: 160,
     date: "2026-05-09",
     title: "Alexis P. Suter Band",
     venue: "The Falcon",
@@ -1812,7 +1920,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 152,
+    id: 161,
+    date: "2026-05-09",
+    title: "Basilica Farm & Flea Spring Market 2026",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/basilica-farm-flea-spring-market-2026/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 162,
     date: "2026-05-10",
     title: "Son Rompe Pera",
     venue: "The Falcon",
@@ -1824,19 +1944,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 153,
+    id: 163,
     date: "2026-05-12",
     title: "SLUICE + HIDING PLACES",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/sluice-hiding-places",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 154,
+    id: 164,
     date: "2026-05-14",
     title: "Wheatus",
     venue: "Assembly Kingston",
@@ -1848,7 +1968,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 155,
+    id: 165,
     date: "2026-05-15",
     title: "El Dorado Slim ft. Scott Sharrard",
     venue: "The Falcon",
@@ -1860,7 +1980,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 156,
+    id: 166,
     date: "2026-05-15",
     title: "Richard Barone & Glenn Mercer: Hazy Cosmic Jive",
     venue: "The Falcon",
@@ -1872,7 +1992,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 157,
+    id: 167,
     date: "2026-05-16",
     title: "The Dirty Dozen Brass Band",
     venue: "Assembly Kingston",
@@ -1884,7 +2004,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 158,
+    id: 168,
     date: "2026-05-16",
     title: "SunDub",
     venue: "The Falcon",
@@ -1896,7 +2016,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 159,
+    id: 169,
     date: "2026-05-17",
     title: "Brock, Lanzetti, Ogawa",
     venue: "The Falcon",
@@ -1908,19 +2028,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 160,
+    id: 170,
     date: "2026-05-20",
     title: "MINT FIELD",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/mint-field",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 161,
+    id: 171,
     date: "2026-05-20",
     title: "Jimmy Vivino",
     venue: "The Falcon",
@@ -1932,19 +2052,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 162,
+    id: 172,
     date: "2026-05-21",
     title: "MEMORIALS (UK)",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/memorials-uk",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 163,
+    id: 173,
     date: "2026-05-21",
     title: "Quinn Sullivan",
     venue: "The Falcon",
@@ -1956,19 +2076,31 @@ const EVENTS = [
     free: false
   },
   {
-    id: 164,
+    id: 174,
+    date: "2026-05-21",
+    title: "THE WALLFLOWERS",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/the-wallflowers/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 175,
     date: "2026-05-22",
     title: "DOUG GILLARD + CATHEDRAL CEILINGS",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/doug-gillard-cathedral-ceilings",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 165,
+    id: 176,
     date: "2026-05-22",
     title: "Jonah Smith",
     venue: "The Falcon",
@@ -1980,19 +2112,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 166,
+    id: 177,
     date: "2026-05-23",
     title: "JOHN ANDREWS & THE YAWNS (release show) + RUBY OF THANKS + SARAH LA PUERTA",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/john-andrews-amp-the-yawns-release-show-ruby-of-thanks-sarah-la-puerta",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 167,
+    id: 178,
     date: "2026-05-23",
     title: "The Soul Experience ft. Corey Glover (of Living Colour)",
     venue: "The Falcon",
@@ -2004,19 +2136,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 168,
+    id: 179,
     date: "2026-05-28",
     title: "ROBBER ROBBER + EMPATH",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/robber-robber",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
-    price: "See website",
-    free: false
+    price: "Free",
+    free: true
   },
   {
-    id: 169,
+    id: 180,
     date: "2026-05-29",
     title: "Dylan Doyle Band",
     venue: "The Falcon",
@@ -2028,7 +2160,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 170,
+    id: 181,
     date: "2026-05-30",
     title: "Tom Freund",
     venue: "The Falcon",
@@ -2040,7 +2172,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 171,
+    id: 182,
     date: "2026-05-31",
     title: "The Michael Abene Big Band",
     venue: "The Falcon",
@@ -2052,19 +2184,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 172,
+    id: 183,
     date: "2026-06-01",
     title: "MY NEW BAND BELIEVE",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/my-new-band-believe",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 173,
+    id: 184,
     date: "2026-06-04",
     title: "Junco Partners \"Mardi Gras Show\"",
     venue: "The Falcon",
@@ -2076,31 +2208,31 @@ const EVENTS = [
     free: false
   },
   {
-    id: 174,
+    id: 185,
     date: "2026-06-05",
     title: "MARISA ANDERSON",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/marisa-anderson-1",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 175,
+    id: 186,
     date: "2026-06-06",
     title: "PARTY DOZEN (Australia)",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/party-dozen-australia",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 176,
+    id: 187,
     date: "2026-06-06",
     title: "Fred Zepplin",
     venue: "The Falcon",
@@ -2112,7 +2244,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 177,
+    id: 188,
     date: "2026-06-07",
     title: "Chimera",
     venue: "The Falcon",
@@ -2124,43 +2256,43 @@ const EVENTS = [
     free: false
   },
   {
-    id: 178,
+    id: 189,
     date: "2026-06-10",
     title: "GRACIE AND RACHEL",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/gracie-and-rachel",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 179,
+    id: 190,
     date: "2026-06-25",
     title: "MOUNTAIN MOVERS + THE SPATULAS",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/mountain-movers-the-spatulas",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 180,
+    id: 191,
     date: "2026-06-26",
     title: "PREWN + OFFICIAL CLAIRE",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/prewn-official-claire",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 181,
+    id: 192,
     date: "2026-06-28",
     title: "Jesse Royal",
     venue: "Assembly Kingston",
@@ -2172,7 +2304,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 182,
+    id: 193,
     date: "2026-07-04",
     title: "Fred Zepplin",
     venue: "The Falcon",
@@ -2184,7 +2316,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 183,
+    id: 194,
     date: "2026-07-11",
     title: "Buck Meek",
     venue: "Assembly Kingston",
@@ -2196,19 +2328,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 184,
+    id: 195,
     date: "2026-07-15",
     title: "STYROFOAM WINOS + WILL LAWRENCE/WEDNESDAY KNUDSEN / KRYSSI BATTALENE",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/styrofoam-winos-will-lawrencewednesday-knudsen-kryssi-battalene",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 185,
+    id: 196,
     date: "2026-07-17",
     title: "Allah-Las",
     venue: "Assembly Kingston",
@@ -2220,23 +2352,23 @@ const EVENTS = [
     free: false
   },
   {
-    id: 186,
+    id: 197,
     date: "2026-08-05",
     title: "CHEATER SLICKS + SUNBURNED HAND OF THE MAN",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/cheater-slicks-sunburned-hand-of-the-man",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tubby%27s+31+Broadway+Kingston+NY",
+    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     time: "7:00 PM",
     price: "See website",
     free: false
   },
   {
-    id: 187,
-    date: "",
-    title: "March 19 EVEN THE GOOD GIRLS WILL CRY: MY ‘90s Rock Memoir",
+    id: 198,
+    date: "2026-10-18",
+    title: "SUGAR",
     venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/even-the-good-girls-will-cry-my-90s-rock-memoir/",
+    venueUrl: "https://basilicahudson.org/events/sugar/",
     location: "Hudson, NY",
     mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
     time: "See website",
@@ -2244,79 +2376,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 188,
-    date: "",
-    title: "April 2 Thievery Corporation",
-    venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/thievery-corporation/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 189,
-    date: "",
-    title: "April 19 “The Days Pass Quickly Immersed in the Shadow of Eternity” Lea Bertucci with Norbert Rodenkirchen.",
-    venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/the-days-pass-quickly-immersed-in-the-shadow-of-eternity-lea-bertucci-with-norbert-rodenkirchen/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 190,
-    date: "",
-    title: "April 29 TY SEGALL",
-    venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/15896-2/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 191,
-    date: "",
-    title: "May 3 Dry Cleaning",
-    venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/dry-cleaning/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 192,
-    date: "",
-    title: "May 9 Basilica Farm & Flea Spring Market 2026",
-    venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/basilica-farm-flea-spring-market-2026/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 193,
-    date: "",
-    title: "May 21 THE WALLFLOWERS",
-    venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/the-wallflowers/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 194,
+    id: 199,
     date: "",
     title: "Basilica Farm & Flea Summer Market 2026",
     venue: "Basilica Hudson",
@@ -2328,11 +2388,11 @@ const EVENTS = [
     free: false
   },
   {
-    id: 195,
+    id: 200,
     date: "",
-    title: "October 18 SUGAR",
+    title: "March 12",
     venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/sugar/",
+    venueUrl: "https://basilicahudson.org/events/geneve-brossard-left-to-glimmer-march-12-22-2026-back-gallery/",
     location: "Hudson, NY",
     mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
     time: "See website",
@@ -2340,7 +2400,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 196,
+    id: 201,
     date: "",
     title: "Genève Brossard Left to Glimmer March 12 – 22, 2026 Back Gallery",
     venue: "Basilica Hudson",
@@ -2352,7 +2412,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 197,
+    id: 202,
+    date: "",
+    title: "February 16",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/the-dark-ps21s-fearless-winter-festival-of-live-performance-radiating-across-columbia-county/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 203,
     date: "",
     title: "Lee Ranaldo & Leah Singer Contre Jour",
     venue: "Basilica Hudson",
@@ -2364,7 +2436,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 198,
+    id: 204,
+    date: "",
+    title: "January 30",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/explosions-in-the-sky/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 205,
     date: "",
     title: "Explosions in the Sky",
     venue: "Basilica Hudson",
@@ -2376,7 +2460,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 199,
+    id: 206,
     date: "",
     title: "Basilica Farm & Flea Holiday Market",
     venue: "Basilica Hudson",
