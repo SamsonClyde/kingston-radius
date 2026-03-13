@@ -169,18 +169,6 @@ const EVENTS = [
   },
   {
     id: 15,
-    date: "2025-12-31",
-    title: "The Felice Brothers & Friends",
-    venue: "Assembly Kingston",
-    venueUrl: "https://www.assemblykingston.com/events/the-felice-brothers-amp-friends-ye6k2",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
-    time: "9:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 16,
     date: "2026-01-01",
     title: "Medicine Disco: New Year's Day",
     venue: "Assembly Kingston",
@@ -192,7 +180,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 17,
+    id: 16,
     date: "2026-01-10",
     title: "Isabel Hagen",
     venue: "Assembly Kingston",
@@ -204,7 +192,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 18,
+    id: 17,
     date: "2026-01-17",
     title: "THE STEVENSON RANCH DAVIDIANS + ADAM AMRAM (FREE SHOW!)",
     venue: "Tubby's",
@@ -216,7 +204,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 19,
+    id: 18,
     date: "2026-01-17",
     title: "Clap Your Hands Say Yeah — Piano & Voice",
     venue: "Assembly Kingston",
@@ -228,7 +216,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 20,
+    id: 19,
     date: "2026-01-17",
     title: "Jan 17 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -240,19 +228,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 21,
-    date: "2026-01-17",
-    title: "Ondara Presents: The Jet Stone Conspiracy",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/01-17/ondara-presents-the-jet-stone-conspiracy",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 22,
+    id: 20,
     date: "2026-01-21",
     title: "WATCH THE KNICKS WITH NICK (FREE)",
     venue: "Tubby's",
@@ -264,7 +240,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 23,
+    id: 21,
     date: "2026-01-23",
     title: "THE WHIMBRELS + CATHEDRAL CEILINGS + PG SIX",
     venue: "Tubby's",
@@ -276,7 +252,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 24,
+    id: 22,
     date: "2026-01-23",
     title: "Jan 23 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -288,19 +264,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 25,
-    date: "2026-01-23",
-    title: "Josh Ritter",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/01-23/josh-ritter",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 26,
+    id: 23,
     date: "2026-01-24",
     title: "HABIBI",
     venue: "Tubby's",
@@ -312,7 +276,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 27,
+    id: 24,
     date: "2026-01-24",
     title: "Squalid Gold: Stand-Up Comedy Showcase",
     venue: "Assembly Kingston",
@@ -324,7 +288,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 28,
+    id: 25,
     date: "2026-01-25",
     title: "RESCHEDULED: Ecstatic Dance with Keena Maya",
     venue: "Assembly Kingston",
@@ -336,7 +300,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 29,
+    id: 26,
     date: "2026-01-27",
     title: "ACE OF CUPS: CHEF ANANYA FOOD SPECIAL!",
     venue: "Tubby's",
@@ -348,7 +312,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 30,
+    id: 27,
     date: "2026-01-28",
     title: "LIGHT BEAMS + 178 PRODUCT (Salvatore Principato of Liquid Liquid)",
     venue: "Tubby's",
@@ -360,7 +324,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 31,
+    id: 28,
     date: "2026-01-29",
     title: "RUTH MASCELLI + CUBE + CONTENT BLOCKS",
     venue: "Tubby's",
@@ -372,7 +336,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 32,
+    id: 29,
     date: "2026-01-30",
     title: "TASHI DORJI + CHE CHEN",
     venue: "Tubby's",
@@ -384,7 +348,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 33,
+    id: 30,
     date: "2026-01-30",
     title: "Labiahead",
     venue: "Assembly Kingston",
@@ -396,7 +360,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 34,
+    id: 31,
     date: "2026-01-31",
     title: "ANASTASIA COOPE + AUTOBAHN",
     venue: "Tubby's",
@@ -408,7 +372,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 35,
+    id: 32,
     date: "2026-01-31",
     title: "Jan 31 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -420,19 +384,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 36,
-    date: "2026-01-31",
-    title: "Cornelia Murr",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/01-31/cornelia-murr",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 37,
+    id: 33,
     date: "2026-02-01",
     title: "Michael Nau",
     venue: "Assembly Kingston",
@@ -444,7 +396,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 38,
+    id: 34,
     date: "2026-02-03",
     title: "Nic Panken + Michael Beharie",
     venue: "Tubby's",
@@ -456,7 +408,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 39,
+    id: 35,
     date: "2026-02-04",
     title: "DJ NIGHT: CHEWY SABBATICAL + DEEDEEDAME",
     venue: "Tubby's",
@@ -468,7 +420,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 40,
+    id: 36,
     date: "2026-02-05",
     title: "WILD PINK + DEAD GOWNS",
     venue: "Tubby's",
@@ -480,7 +432,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 41,
+    id: 37,
     date: "2026-02-06",
     title: "DJ NIGHT: DREAMHOUSE ZINE CREW",
     venue: "Tubby's",
@@ -492,7 +444,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 42,
+    id: 38,
     date: "2026-02-07",
     title: "BjornQorn NIGHT",
     venue: "Tubby's",
@@ -504,7 +456,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 43,
+    id: 39,
     date: "2026-02-07",
     title: "Jazz Mandolin Project",
     venue: "Assembly Kingston",
@@ -516,19 +468,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 44,
-    date: "2026-02-07",
-    title: "Jazz Mandolin Project",
-    venue: "Assembly Kingston",
-    venueUrl: "https://www.assemblykingston.com/events/jazz-mandolin-project-bcnn8",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
-    time: "3:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 45,
+    id: 40,
     date: "2026-02-07",
     title: "Feb 7 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -540,19 +480,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 46,
-    date: "2026-02-07",
-    title: "The Helm Family Midnight Ramble ft. Jim Keller",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/02-07/hfmr",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 47,
+    id: 41,
     date: "2026-02-10",
     title: "MDOU MOCTAR (SOLO)",
     venue: "Tubby's",
@@ -564,7 +492,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 48,
+    id: 42,
     date: "2026-02-11",
     title: "FACS + OPEN HEAD",
     venue: "Tubby's",
@@ -576,7 +504,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 49,
+    id: 43,
     date: "2026-02-12",
     title: "CLOSING OF ACE OF CUPS 3 NIGHTS OF HOTPOT!",
     venue: "Tubby's",
@@ -588,7 +516,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 50,
+    id: 44,
     date: "2026-02-12",
     title: "Melt",
     venue: "Assembly Kingston",
@@ -600,7 +528,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 51,
+    id: 45,
     date: "2026-02-15",
     title: "Ecstatic Dance with Keena Maya",
     venue: "Assembly Kingston",
@@ -612,7 +540,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 52,
+    id: 46,
     date: "2026-02-17",
     title: "MARISSA NADLER + MARIA BC",
     venue: "Tubby's",
@@ -624,7 +552,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 53,
+    id: 47,
     date: "2026-02-19",
     title: "JANE INC + LUAH + ALLIE YOUNG",
     venue: "Tubby's",
@@ -636,7 +564,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 54,
+    id: 48,
     date: "2026-02-19",
     title: "TUSK: The Classic Tribute to Fleetwood Mac",
     venue: "Assembly Kingston",
@@ -648,7 +576,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 55,
+    id: 49,
     date: "2026-02-20",
     title: "Feb 20 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -660,19 +588,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 56,
-    date: "2026-02-20",
-    title: "Tyler Ramsey & Carl Broemel (of My Morning Jacket) - Celestun Tour",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/02-20/tyler-ramsey-carl-broemel-celestun-tour",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 57,
+    id: 50,
     date: "2026-02-21",
     title: "FREAKOUT SPOT ANNIVERSARY PARTY: WES TIREY + AUBREY HADDARD + CARNIVOROUS BELLS",
     venue: "Tubby's",
@@ -684,7 +600,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 58,
+    id: 51,
     date: "2026-02-21",
     title: "Kingston Techno: Sin Vergüenza III",
     venue: "Assembly Kingston",
@@ -696,7 +612,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 59,
+    id: 52,
     date: "2026-02-21",
     title: "Feb 21 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -708,19 +624,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 60,
-    date: "2026-02-21",
-    title: "The Helm Family Midnight Ramble ft. Krystle Warren & The Faculty",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/02-21/hfmr",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 61,
+    id: 53,
     date: "2026-02-24",
     title: "OPEN TURNTABLES",
     venue: "Tubby's",
@@ -732,7 +636,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 62,
+    id: 54,
     date: "2026-02-25",
     title: "HAPPY HOUR GEAR SWAP",
     venue: "Tubby's",
@@ -744,7 +648,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 63,
+    id: 55,
     date: "2026-02-27",
     title: "COCHEMEA",
     venue: "Tubby's",
@@ -756,7 +660,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 64,
+    id: 56,
     date: "2026-02-27",
     title: "Jonatha Brooke",
     venue: "Assembly Kingston",
@@ -768,7 +672,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 65,
+    id: 57,
     date: "2026-02-27",
     title: "Feb 27 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -780,19 +684,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 66,
-    date: "2026-02-27",
-    title: "Max Creek (Night 1)",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/02-27/max-creek",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 67,
+    id: 58,
     date: "2026-02-28",
     title: "MOVIOLA + ANTIETAM + SLEEPYHEAD",
     venue: "Tubby's",
@@ -804,7 +696,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 68,
+    id: 59,
     date: "2026-02-28",
     title: "India Ramey",
     venue: "Assembly Kingston",
@@ -816,7 +708,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 69,
+    id: 60,
     date: "2026-02-28",
     title: "Feb 28 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -828,19 +720,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 70,
-    date: "2026-02-28",
-    title: "Max Creek (Night 2)",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/02-28/max-creek",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 71,
+    id: 61,
     date: "2026-03-01",
     title: "SWDYT? VOL 30 THESE THINGS HAPPEN",
     venue: "Tubby's",
@@ -852,7 +732,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 72,
+    id: 62,
     date: "2026-03-03",
     title: "LUCID EXPRESS + HIGH + NEW VISION",
     venue: "Tubby's",
@@ -864,7 +744,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 73,
+    id: 63,
     date: "2026-03-06",
     title: "CLUBBYS: DJ RHONDA + Larry Termite + downstairs J",
     venue: "Tubby's",
@@ -876,7 +756,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 74,
+    id: 64,
     date: "2026-03-06",
     title: "Mar 6 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -888,19 +768,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 75,
-    date: "2026-03-06",
-    title: "POSTPONED - New Date TBD: Alejandro Escovedo",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/03-06/alejandro-escovedo",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 76,
+    id: 65,
     date: "2026-03-07",
     title: "TIMES NEW VIKING + THE SERFS",
     venue: "Tubby's",
@@ -912,7 +780,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 77,
+    id: 66,
     date: "2026-03-07",
     title: "Mar 7 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -924,7 +792,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 78,
+    id: 67,
     date: "2026-03-08",
     title: "Apr 25 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -936,43 +804,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 79,
-    date: "2026-03-08",
-    title: "An Evening with Chris Smither",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/03-08/chris-smither-wtnz2",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 80,
-    date: "2026-03-08",
-    title: "Mar 8 8:00 PM20:00",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/03-08/chris-smither",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 81,
-    date: "2026-03-08",
-    title: "RESCHEDULED TO 4/25: An Evening with Chris Smither",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/03-08/chris-smither",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 82,
+    id: 68,
     date: "2026-03-10",
     title: "live music society presents: THOM NGUYEN + LEA BERTUCCI + LEO CHANG (FREE)",
     venue: "Tubby's",
@@ -984,7 +816,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 83,
+    id: 69,
     date: "2026-03-11",
     title: "COMA CINEMA + TRACE MOUNTAINS + honeygaze",
     venue: "Tubby's",
@@ -996,7 +828,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 84,
+    id: 70,
     date: "2026-03-11",
     title: "Shaun Cassidy",
     venue: "Assembly Kingston",
@@ -1008,7 +840,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 85,
+    id: 71,
     date: "2026-03-12",
     title: "SOME VELVET SIDEWALK + DOMINICK & THE FAMILY BAND + $500",
     venue: "Tubby's",
@@ -1020,7 +852,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 86,
+    id: 72,
     date: "2026-03-13",
     title: "ACOPIA (Australia) + SEX WEEK",
     venue: "Tubby's",
@@ -1032,7 +864,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 87,
+    id: 73,
     date: "2026-03-13",
     title: "Albert Lee",
     venue: "The Falcon",
@@ -1044,7 +876,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 88,
+    id: 74,
     date: "2026-03-13",
     title: "Tasi",
     venue: "Keegan Ales",
@@ -1056,7 +888,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 89,
+    id: 75,
     date: "2026-03-13",
     title: "T4T Mixer",
     venue: "Unicorn Bar",
@@ -1068,19 +900,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 90,
+    id: 76,
     date: "2026-03-13",
-    title: "Light the Lights: A Muppet-tational, Celebrational, Drag Spectacular!",
-    venue: "Unicorn Bar",
-    venueUrl: "https://unicornkingston.com/calendar",
+    title: "Karaoke Night at Castaways Bar & Grill",
+    venue: "Castaways Bar and Grill",
+    venueUrl: "https://kingstonhappenings.org/locations/castaways-bar-and-grill/",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
-    time: "9:00 PM",
+    mapsUrl: "https://maps.google.com/?q=Castaways%20Bar%20and%20Grill%20Kingston%20NY",
+    time: "7:00 pm",
     price: "See website",
     free: false
   },
   {
-    id: 91,
+    id: 77,
     date: "2026-03-14",
     title: "FRONT ROOM DJS: RAUSCH / STANKUS (FREE)",
     venue: "Tubby's",
@@ -1092,7 +924,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 92,
+    id: 78,
     date: "2026-03-14",
     title: "Two Many Guitars",
     venue: "The Falcon",
@@ -1104,19 +936,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 93,
-    date: "2026-03-14",
-    title: "Fat Cakes",
-    venue: "The Falcon",
-    venueUrl: "https://www.liveatthefalcon.com",
-    location: "Marlboro, NY",
-    mapsUrl: "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 94,
+    id: 79,
     date: "2026-03-14",
     title: "Dead Operator with Lousy Birthday & The Fuze",
     venue: "Keegan Ales",
@@ -1128,7 +948,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 95,
+    id: 80,
     date: "2026-03-14",
     title: "Making Dark Waves: A Night of Post-Punk/ Dark-Alternative/ Atmospheric Dark Folk Music + DANCE PARTY",
     venue: "Unicorn Bar",
@@ -1140,7 +960,43 @@ const EVENTS = [
     free: false
   },
   {
-    id: 96,
+    id: 81,
+    date: "2026-03-14",
+    title: "Dean Friedman w/ special guest Vance Gilbert",
+    venue: "Colony Woodstock NY",
+    venueUrl: "https://kingstonhappenings.org/locations/colony-woodstock-ny/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Colony%20Woodstock%20NY%20Kingston%20NY",
+    time: "7:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 82,
+    date: "2026-03-14",
+    title: "Woodstock Symphony Orchestra: Unity, Love, and the New World",
+    venue: "Woodstock Playhouse",
+    venueUrl: "https://kingstonhappenings.org/locations/woodstock-playhouse/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Woodstock%20Playhouse%20Kingston%20NY",
+    time: "7:30 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 83,
+    date: "2026-03-14",
+    title: "Space Bacon",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 84,
     date: "2026-03-15",
     title: "Woodstock Film Festival: Oscars Viewing Party",
     venue: "Assembly Kingston",
@@ -1152,7 +1008,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 97,
+    id: 85,
     date: "2026-03-15",
     title: "Eddy’s Chemistry Set",
     venue: "The Falcon",
@@ -1164,7 +1020,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 98,
+    id: 86,
     date: "2026-03-15",
     title: "Shamrock Run Day with Mike & Pete!",
     venue: "Keegan Ales",
@@ -1176,7 +1032,31 @@ const EVENTS = [
     free: true
   },
   {
-    id: 99,
+    id: 87,
+    date: "2026-03-15",
+    title: "Yasmin Williams",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 88,
+    date: "2026-03-15",
+    title: "Live Irish Music @ the Reher Center",
+    venue: "Reher Center for Immigrant Culture and History",
+    venueUrl: "https://kingstonhappenings.org/locations/reher-center-for-immigrant-culture-and-history/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Reher%20Center%20for%20Immigrant%20Culture%20and%20History%20Kingston%20NY",
+    time: "2:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 89,
     date: "2026-03-17",
     title: "Trivia Break Tuesdays with Andre",
     venue: "Keegan Ales",
@@ -1188,7 +1068,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 100,
+    id: 90,
     date: "2026-03-18",
     title: "CLARICE JENSEN + CHUCK JOHNSON",
     venue: "Tubby's",
@@ -1200,7 +1080,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 101,
+    id: 91,
     date: "2026-03-18",
     title: "HV JAZZ JAM in the Underground",
     venue: "The Falcon",
@@ -1212,7 +1092,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 102,
+    id: 92,
     date: "2026-03-18",
     title: "Open Mic Night with Bubbles!",
     venue: "Unicorn Bar",
@@ -1224,7 +1104,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 103,
+    id: 93,
     date: "2026-03-19",
     title: "TARA CLERKIN TRIO + MORE EAZE",
     venue: "Tubby's",
@@ -1236,7 +1116,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 104,
+    id: 94,
     date: "2026-03-19",
     title: "John Gullo’s ROLLING STONES!",
     venue: "The Falcon",
@@ -1248,7 +1128,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 105,
+    id: 95,
     date: "2026-03-19",
     title: "EVEN THE GOOD GIRLS WILL CRY: MY ‘90s Rock Memoir",
     venue: "Basilica Hudson",
@@ -1260,7 +1140,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 106,
+    id: 96,
     date: "2026-03-19",
     title: "Balkan Night with MacNCheez Balkan Power Trio",
     venue: "Unicorn Bar",
@@ -1272,7 +1152,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 107,
+    id: 97,
     date: "2026-03-20",
     title: "BENEFIT FOR VETERANS FOR PEACE WITH JEFRE CANTU-LEDESMA / BOOKER STARDRUM / OMER SHEMESH / JOEY WEISS + JARED ASHDOWN",
     venue: "Tubby's",
@@ -1284,7 +1164,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 108,
+    id: 98,
     date: "2026-03-20",
     title: "Robbie Fulks",
     venue: "The Falcon",
@@ -1296,7 +1176,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 109,
+    id: 99,
     date: "2026-03-20",
     title: "Julie's Girl's Club x Unicorn Bar: 40+ Queer Friends Mixer!",
     venue: "Unicorn Bar",
@@ -1308,19 +1188,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 110,
+    id: 100,
     date: "2026-03-20",
-    title: "Queer Honky Tonk with Hudson Valley Flyers",
-    venue: "Unicorn Bar",
-    venueUrl: "https://unicornkingston.com/calendar",
+    title: "Patrick Watson",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
     location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
-    time: "8:00 PM",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
     price: "See website",
     free: false
   },
   {
-    id: 111,
+    id: 101,
     date: "2026-03-2025",
     title: "Home",
     venue: "Tompkins Corners Cultural Center",
@@ -1332,43 +1212,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 112,
-    date: "2026-03-2025",
-    title: "Events & Tickets",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/events--tickets.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 113,
-    date: "2026-03-2025",
-    title: "Music",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 114,
-    date: "2026-03-2025",
-    title: "Farmers Market 2025",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/farmers-market-2025.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 115,
+    id: 102,
     date: "2026-03-21",
     title: "SUSS + ADELINE HOTEL",
     venue: "Tubby's",
@@ -1380,7 +1224,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 116,
+    id: 103,
     date: "2026-03-21",
     title: "Bernard Purdie & Friends",
     venue: "The Falcon",
@@ -1392,19 +1236,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 117,
-    date: "2026-03-21",
-    title: "New Paltz Middle School “Battle of the Bands”",
-    venue: "The Falcon",
-    venueUrl: "https://www.liveatthefalcon.com",
-    location: "Marlboro, NY",
-    mapsUrl: "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 118,
+    id: 104,
     date: "2026-03-21",
     title: "Queer Parents Mixer with Andrew Cowie!",
     venue: "Unicorn Bar",
@@ -1416,19 +1248,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 119,
-    date: "2026-03-21",
-    title: "House of Scoutington presents: A F*ck around, Find Out Variety Show",
-    venue: "Unicorn Bar",
-    venueUrl: "https://unicornkingston.com/calendar",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 120,
+    id: 105,
     date: "2026-03-21",
     title: "Mar 21 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -1440,43 +1260,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 121,
+    id: 106,
     date: "2026-03-21",
-    title: "The Helm Family Midnight Ramble ft. The Nine Seas",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/03-21/hfmr",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
+    title: "Peace & Protest: Songwriting Lab",
+    venue: "Hudson Valley LGBTQ Community Center",
+    venueUrl: "https://kingstonhappenings.org/locations/hudson-valley-lgbtq-community-center/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Hudson%20Valley%20LGBTQ%20Community%20Center%20Kingston%20NY",
+    time: "2:00 pm",
     price: "See website",
     free: false
   },
   {
-    id: 122,
-    date: "2026-03-21",
-    title: "ICS",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/03-21/hfmr?format=ical",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 123,
-    date: "2026-03-21",
-    title: "View Event →",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/03-21/hfmr",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 124,
+    id: 107,
     date: "2026-03-22",
     title: "Ecstatic Dance with Cosmal",
     venue: "Assembly Kingston",
@@ -1488,7 +1284,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 125,
+    id: 108,
     date: "2026-03-22",
     title: "Buffalo Stack",
     venue: "The Falcon",
@@ -1500,7 +1296,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 126,
+    id: 109,
     date: "2026-03-22",
     title: "Sep 26 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -1512,19 +1308,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 127,
+    id: 110,
     date: "2026-03-22",
-    title: "Infinity Song World Tour II Continues…",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/03-22/infinity-song",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
+    title: "Ars Choralis Presents “A Quilt of Courage”",
+    venue: "Overlook United Methodist Church",
+    venueUrl: "https://kingstonhappenings.org/locations/overlook-methodist-church/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Overlook%20United%20Methodist%20Church%20Kingston%20NY",
+    time: "4:00 pm",
     price: "See website",
     free: false
   },
   {
-    id: 128,
+    id: 111,
     date: "2026-03-23",
     title: "Kevin Hays Trio ft. Thomas Morgan & Brian Blade",
     venue: "The Falcon",
@@ -1536,7 +1332,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 129,
+    id: 112,
     date: "2026-03-24",
     title: "OPTIC SINK + SPAIN",
     venue: "Tubby's",
@@ -1548,7 +1344,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 130,
+    id: 113,
+    date: "2026-03-24",
+    title: "Matt Berninger",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 114,
     date: "2026-03-25",
     title: "OPENING NIGHT BASEBALL ON TV",
     venue: "Tubby's",
@@ -1560,7 +1368,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 131,
+    id: 115,
     date: "2026-03-25",
     title: "Lil’ Ed & The Blues Imperials",
     venue: "The Falcon",
@@ -1572,7 +1380,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 132,
+    id: 116,
     date: "2026-03-25",
     title: "Sketch & Burlesque: The Alluring Drawing Affair",
     venue: "Unicorn Bar",
@@ -1584,7 +1392,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 133,
+    id: 117,
+    date: "2026-03-25",
+    title: "BERTHA: Grateful Drag",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 118,
     date: "2026-03-26",
     title: "OPENING DAY BASEBALL ON TV with Wild Man Doyle on DJ Duty",
     venue: "Tubby's",
@@ -1596,7 +1416,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 134,
+    id: 119,
     date: "2026-03-26",
     title: "Dilemastronauta",
     venue: "The Falcon",
@@ -1608,7 +1428,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 135,
+    id: 120,
     date: "2026-03-26",
     title: "Unicorn Bar presents: Liana Gabel with the Tender Hearted Ramblers / Ella Ray Kondrat / Magdalen",
     venue: "Unicorn Bar",
@@ -1620,7 +1440,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 136,
+    id: 121,
     date: "2026-03-27",
     title: "live music society presents: DILEMASTRONAUTA Y LA TRIPULACIÓN CÓSMICA (mems COMBO CHIMBITA) (FREE SHOW)",
     venue: "Tubby's",
@@ -1632,7 +1452,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 137,
+    id: 122,
     date: "2026-03-27",
     title: "Sal \"The Voice\" Valentinetti",
     venue: "The Falcon",
@@ -1644,19 +1464,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 138,
-    date: "2026-03-27",
-    title: "True North",
-    venue: "The Falcon",
-    venueUrl: "https://www.liveatthefalcon.com",
-    location: "Marlboro, NY",
-    mapsUrl: "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 139,
+    id: 123,
     date: "2026-03-27",
     title: "SHATTERED: DuttyWine - A Natural Wine Dancehall Party",
     venue: "Unicorn Bar",
@@ -1668,7 +1476,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 140,
+    id: 124,
     date: "2026-03-28",
     title: "Hold on Whale zine release Party with Bill Baird + The Sisters + Brian McCarthy",
     venue: "Tubby's",
@@ -1680,7 +1488,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 141,
+    id: 125,
     date: "2026-03-28",
     title: "Popa Chubby Band | Big B'Day Show",
     venue: "The Falcon",
@@ -1692,19 +1500,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 142,
-    date: "2026-03-28",
-    title: "the Buoy Decibel System // Gravity Krush",
-    venue: "The Falcon",
-    venueUrl: "https://www.liveatthefalcon.com",
-    location: "Marlboro, NY",
-    mapsUrl: "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 143,
+    id: 126,
     date: "2026-03-28",
     title: "Strangehouse Presents: DARKWAVE DANCE PARTY with DJ Tryst",
     venue: "Unicorn Bar",
@@ -1716,7 +1512,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 144,
+    id: 127,
+    date: "2026-03-28",
+    title: "Brazilian Choro Music: Mike Marshall & Alessandro Penezzi",
+    venue: "Tempo Arts",
+    venueUrl: "https://kingstonhappenings.org/locations/tempo-arts/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Tempo%20Arts%20Kingston%20NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 128,
     date: "2026-03-29",
     title: "Jerry Vivino’s All Stars",
     venue: "The Falcon",
@@ -1728,7 +1536,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 145,
+    id: 129,
     date: "2026-03-31",
     title: "Ryan Davis & The Roadhouse Band",
     venue: "Assembly Kingston",
@@ -1740,7 +1548,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 146,
+    id: 130,
+    date: "2026-03-31",
+    title: "JOSEPH",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 131,
     date: "2026-04-02",
     title: "The Soul Experience ft. Corey Glover (of Living Colour)",
     venue: "The Falcon",
@@ -1752,7 +1572,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 147,
+    id: 132,
     date: "2026-04-02",
     title: "Thievery Corporation",
     venue: "Basilica Hudson",
@@ -1764,7 +1584,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 148,
+    id: 133,
     date: "2026-04-02",
     title: "Queer Line Dancing - First Thursdays",
     venue: "Unicorn Bar",
@@ -1776,7 +1596,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 149,
+    id: 134,
+    date: "2026-04-02",
+    title: "James McMurtry",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 135,
     date: "2026-04-03",
     title: "TAKAAT",
     venue: "Tubby's",
@@ -1788,7 +1620,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 150,
+    id: 136,
     date: "2026-04-03",
     title: "Reelin’ In The Years: An All Star Tribute to Steely Dan",
     venue: "The Falcon",
@@ -1800,7 +1632,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 151,
+    id: 137,
     date: "2026-04-03",
     title: "Plus-Size Clothing Swap!",
     venue: "Unicorn Bar",
@@ -1812,19 +1644,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 152,
-    date: "2026-04-03",
-    title: "Queeraoke with Major Mayhem",
-    venue: "Unicorn Bar",
-    venueUrl: "https://unicornkingston.com/calendar",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 153,
+    id: 138,
     date: "2026-04-03",
     title: "Apr 3 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -1836,19 +1656,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 154,
+    id: 139,
     date: "2026-04-03",
-    title: "Antibalas",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/04-03/antibalas",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
+    title: "Keller Williams",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
     price: "See website",
     free: false
   },
   {
-    id: 155,
+    id: 140,
     date: "2026-04-04",
     title: "Jungle Love",
     venue: "The Falcon",
@@ -1860,19 +1680,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 156,
-    date: "2026-04-04",
-    title: "Fred Zepplin",
-    venue: "The Falcon",
-    venueUrl: "https://www.liveatthefalcon.com",
-    location: "Marlboro, NY",
-    mapsUrl: "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 157,
+    id: 141,
     date: "2026-04-04",
     title: "Live Music from Mariposas Galacticas & ABBAsolutely fABBAlous!",
     venue: "Unicorn Bar",
@@ -1884,7 +1692,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 158,
+    id: 142,
     date: "2026-04-04",
     title: "Apr 4 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -1896,19 +1704,31 @@ const EVENTS = [
     free: false
   },
   {
-    id: 159,
+    id: 143,
     date: "2026-04-04",
-    title: "The Helm Family Midnight Ramble",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/04-04/hfmr",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
+    title: "Coyote Island at The Lemon Squeeze Tavern",
+    venue: "New Paltz",
+    venueUrl: "https://kingstonhappenings.org/locations/new-paltz/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=New%20Paltz%20Kingston%20NY",
+    time: "7:00 pm",
     price: "See website",
     free: false
   },
   {
-    id: 160,
+    id: 144,
+    date: "2026-04-04",
+    title: "A Whole Nother Album Release Show @ Keegan Ales w/ Bird Week",
+    venue: "Keegan Ales",
+    venueUrl: "https://kingstonhappenings.org/locations/keegan-ales/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Keegan%20Ales%20Kingston%20NY",
+    time: "7:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 145,
     date: "2026-04-05",
     title: "Luna",
     venue: "Assembly Kingston",
@@ -1920,7 +1740,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 161,
+    id: 146,
     date: "2026-04-07",
     title: "STUCK + TV SLEEP",
     venue: "Tubby's",
@@ -1932,7 +1752,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 162,
+    id: 147,
     date: "2026-04-07",
     title: "Whitney",
     venue: "Assembly Kingston",
@@ -1944,7 +1764,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 163,
+    id: 148,
     date: "2026-04-08",
     title: "DANIEL VILLARREAL",
     venue: "Tubby's",
@@ -1956,7 +1776,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 164,
+    id: 149,
     date: "2026-04-08",
     title: "The Underground Blues Jam | Hosted by Karl Allweier",
     venue: "The Falcon",
@@ -1968,7 +1788,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 165,
+    id: 150,
     date: "2026-04-08",
     title: "Vegan Options Food Pop-Up",
     venue: "Unicorn Bar",
@@ -1980,7 +1800,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 166,
+    id: 151,
     date: "2026-04-09",
     title: "CONTAINER + EXPENSIVE $HIT + ROSE CLUB + NICK MALKIN",
     venue: "Tubby's",
@@ -1992,7 +1812,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 167,
+    id: 152,
     date: "2026-04-09",
     title: "THE NYNES VARIETY HOUR PRESENTS: An Evening of Disaster and Triumph",
     venue: "The Falcon",
@@ -2004,7 +1824,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 168,
+    id: 153,
+    date: "2026-04-09",
+    title: "Song Circle",
+    venue: "WildHeart: Center for Performance and Embodiment Practice",
+    venueUrl: "https://kingstonhappenings.org/locations/wildheart-center-for-performance-and-embodiment-practice/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=WildHeart%3A%20Center%20for%20Performance%20and%20Embodiment%20Practice%20Kingston%20NY",
+    time: "7:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 154,
     date: "2026-04-10",
     title: "HOLY FUCK + GUS ENGLEHORN",
     venue: "Tubby's",
@@ -2016,7 +1848,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 169,
+    id: 155,
     date: "2026-04-10",
     title: "Trixie Whitley",
     venue: "The Falcon",
@@ -2028,19 +1860,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 170,
-    date: "2026-04-10",
-    title: "Ron Shalom Presents: Minivan – Two Night Residency in the Falcon Underground",
-    venue: "The Falcon",
-    venueUrl: "https://www.liveatthefalcon.com",
-    location: "Marlboro, NY",
-    mapsUrl: "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 171,
+    id: 156,
     date: "2026-04-10",
     title: "Purple Productions presents: DARK FOREST - Garden of Deities",
     venue: "Unicorn Bar",
@@ -2052,7 +1872,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 172,
+    id: 157,
     date: "2026-04-10",
     title: "Apr 10 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -2064,19 +1884,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 173,
-    date: "2026-04-10",
-    title: "An Evening With Maya Hawke / The Maitreya Corso Tour",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/04-10/maya-hawke",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 174,
+    id: 158,
     date: "2026-04-11",
     title: "NØIR + ANCIENT MY ENEMY + SHIPS IN THE NIGHT",
     venue: "Tubby's",
@@ -2088,7 +1896,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 175,
+    id: 159,
     date: "2026-04-11",
     title: "Chloe Radcliffe",
     venue: "Assembly Kingston",
@@ -2100,7 +1908,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 176,
+    id: 160,
     date: "2026-04-11",
     title: "Jay Collins & Northern Resistance | Album release show!",
     venue: "The Falcon",
@@ -2112,19 +1920,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 177,
-    date: "2026-04-11",
-    title: "Ron Shalom Presents: Minivan – Two Night Residency in the Falcon Underground",
-    venue: "The Falcon",
-    venueUrl: "https://www.liveatthefalcon.com",
-    location: "Marlboro, NY",
-    mapsUrl: "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 178,
+    id: 161,
     date: "2026-04-11",
     title: "Kinky Speed Flirting",
     venue: "Unicorn Bar",
@@ -2136,7 +1932,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 179,
+    id: 162,
     date: "2026-04-11",
     title: "Apr 11 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -2148,19 +1944,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 180,
-    date: "2026-04-11",
-    title: "Fantastic Cat",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/04-11/fantastic-cat",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 181,
+    id: 163,
     date: "2026-04-12",
     title: "Analog Jazz Orchestra",
     venue: "The Falcon",
@@ -2172,7 +1956,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 182,
+    id: 164,
+    date: "2026-04-12",
+    title: "An Evening with Shadowgrass",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 165,
     date: "2026-04-15",
     title: "MAGIC: The Gathering night",
     venue: "Tubby's",
@@ -2184,7 +1980,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 183,
+    id: 166,
     date: "2026-04-15",
     title: "HV JAZZ JAM in the Underground",
     venue: "The Falcon",
@@ -2196,7 +1992,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 184,
+    id: 167,
     date: "2026-04-15",
     title: "Switch Salsa Dancing with DJ Jams Bond",
     venue: "Unicorn Bar",
@@ -2208,7 +2004,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 185,
+    id: 168,
     date: "2026-04-16",
     title: "Thomas Dolby",
     venue: "Assembly Kingston",
@@ -2220,7 +2016,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 186,
+    id: 169,
     date: "2026-04-17",
     title: "KING TUFF + MORGAN NAGLER",
     venue: "Tubby's",
@@ -2232,7 +2028,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 187,
+    id: 170,
     date: "2026-04-17",
     title: "The Slambovian Circus of Dreams",
     venue: "The Falcon",
@@ -2244,7 +2040,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 188,
+    id: 171,
     date: "2026-04-17",
     title: "Apr 17 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -2256,19 +2052,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 189,
-    date: "2026-04-17",
-    title: "Soul Asylum Acoustic",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/04-17/soul-asylum-acoustic",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 190,
+    id: 172,
     date: "2026-04-18",
     title: "420 PARTY: SIDE X SIDE RECORD FAIR, OWSLEY’S OWLS with Jerry Tone Store + JUMA SULTAN + Freakout Spot DJs",
     venue: "Tubby's",
@@ -2280,7 +2064,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 191,
+    id: 173,
     date: "2026-04-18",
     title: "The Rhinebeck School Of Music | Rock Band Student Concert",
     venue: "The Falcon",
@@ -2292,19 +2076,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 192,
-    date: "2026-04-18",
-    title: "Bruce Katz Band",
-    venue: "The Falcon",
-    venueUrl: "https://www.liveatthefalcon.com",
-    location: "Marlboro, NY",
-    mapsUrl: "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 193,
+    id: 174,
     date: "2026-04-19",
     title: "Haley Heynderickx & Max García Conover",
     venue: "Assembly Kingston",
@@ -2316,7 +2088,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 194,
+    id: 175,
     date: "2026-04-19",
     title: "Neil Alexander & NAIL",
     venue: "The Falcon",
@@ -2328,7 +2100,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 195,
+    id: 176,
     date: "2026-04-19",
     title: "“The Days Pass Quickly Immersed in the Shadow of Eternity” Lea Bertucci with Norbert Rodenkirchen.",
     venue: "Basilica Hudson",
@@ -2340,7 +2112,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 196,
+    id: 177,
+    date: "2026-04-20",
+    title: "The Nude Party",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 178,
     date: "2026-04-21",
     title: "THE ANTLERS + with special guest Tōth",
     venue: "Tubby's",
@@ -2352,7 +2136,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 197,
+    id: 179,
     date: "2026-04-22",
     title: "Unicorn Bar presents: The Toasters with Tiger Piss / The Hedons",
     venue: "Unicorn Bar",
@@ -2364,7 +2148,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 198,
+    id: 180,
     date: "2026-04-23",
     title: "Thee Sinseers & The Altons: 2026 Tour",
     venue: "Assembly Kingston",
@@ -2376,7 +2160,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 199,
+    id: 181,
     date: "2026-04-23",
     title: "LOTUS “Spirit of Santana”",
     venue: "The Falcon",
@@ -2388,7 +2172,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 200,
+    id: 182,
     date: "2026-04-23",
     title: "Queer Classics Book Club: \"Open Throat\" by Henry Hoke",
     venue: "Unicorn Bar",
@@ -2400,7 +2184,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 201,
+    id: 183,
     date: "2026-04-24",
     title: "NIC PANKEN + ONGOING + RAKEL STAMMER",
     venue: "Tubby's",
@@ -2412,7 +2196,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 202,
+    id: 184,
     date: "2026-04-24",
     title: "Conan",
     venue: "Assembly Kingston",
@@ -2424,7 +2208,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 203,
+    id: 185,
     date: "2026-04-24",
     title: "The BEATLE Project | Sgt Pepper & Magical Mystery Tour",
     venue: "The Falcon",
@@ -2436,7 +2220,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 204,
+    id: 186,
     date: "2026-04-24",
     title: "Big Gay Hudson Valley presents: BRONCO - Upstate Boylesque",
     venue: "Unicorn Bar",
@@ -2448,7 +2232,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 205,
+    id: 187,
     date: "2026-04-25",
     title: "LARA HOPE BAND + EL ARIS",
     venue: "Tubby's",
@@ -2460,7 +2244,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 206,
+    id: 188,
     date: "2026-04-25",
     title: "The Ed Palermo Big Band",
     venue: "The Falcon",
@@ -2472,7 +2256,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 207,
+    id: 189,
     date: "2026-04-26",
     title: "Camille Thurman with the Darrell Green Quartet",
     venue: "The Falcon",
@@ -2484,7 +2268,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 208,
+    id: 190,
     date: "2026-04-28",
     title: "WHITNEY JOHNSON / LIA KOHL / MACIE STEWART",
     venue: "Tubby's",
@@ -2496,7 +2280,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 209,
+    id: 191,
     date: "2026-04-29",
     title: "TY SEGALL",
     venue: "Basilica Hudson",
@@ -2508,7 +2292,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 210,
+    id: 192,
     date: "2026-04-30",
     title: "Jeffrey Gaines",
     venue: "The Falcon",
@@ -2520,7 +2304,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 211,
+    id: 193,
     date: "2026-04-30",
     title: "Zine Machine presents: Chosen Family Feud!",
     venue: "Unicorn Bar",
@@ -2532,7 +2316,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 212,
+    id: 194,
     date: "2026-05-01",
     title: "Arturo O'Farrill & The Afro Latin Jazz Orchestra",
     venue: "The Falcon",
@@ -2544,7 +2328,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 213,
+    id: 195,
     date: "2026-05-02",
     title: "Kofi Baker’s Psychedelic Trip",
     venue: "The Falcon",
@@ -2556,19 +2340,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 214,
-    date: "2026-05-02",
-    title: "Fred Zepplin",
-    venue: "The Falcon",
-    venueUrl: "https://www.liveatthefalcon.com",
-    location: "Marlboro, NY",
-    mapsUrl: "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 215,
+    id: 196,
     date: "2026-05-02",
     title: "May 2 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -2580,19 +2352,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 216,
-    date: "2026-05-02",
-    title: "Dave Alvin & Jimmie Dale Gilmore – Almost Acoustic Duo",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/05-02/dave-alvin-jimmie-dale-gilmore",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 217,
+    id: 197,
     date: "2026-05-03",
     title: "WICCA PHASE SPRINGS ETERNAL & The Mystery Mountain Band + fanclubwallet",
     venue: "Tubby's",
@@ -2604,7 +2364,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 218,
+    id: 198,
     date: "2026-05-03",
     title: "Pilc Moutin Hoenig",
     venue: "The Falcon",
@@ -2616,7 +2376,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 219,
+    id: 199,
     date: "2026-05-03",
     title: "Dry Cleaning",
     venue: "Basilica Hudson",
@@ -2628,7 +2388,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 220,
+    id: 200,
     date: "2026-05-03",
     title: "May 3 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -2640,19 +2400,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 221,
-    date: "2026-05-03",
-    title: "John Doe & David Lowery",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/05-03/john-doe-david-lowery",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 222,
+    id: 201,
     date: "2026-05-04",
     title: "THE MESSTHETICS AND JAMES BRANDON LEWIS + YR KNIVES",
     venue: "Tubby's",
@@ -2664,7 +2412,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 223,
+    id: 202,
     date: "2026-05-05",
     title: "EXEK",
     venue: "Tubby's",
@@ -2676,7 +2424,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 224,
+    id: 203,
     date: "2026-05-05",
     title: "BoDeans: 40th Anniversary Tour",
     venue: "Assembly Kingston",
@@ -2688,7 +2436,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 225,
+    id: 204,
     date: "2026-05-07",
     title: "GLADIE + NOUN",
     venue: "Tubby's",
@@ -2700,7 +2448,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 226,
+    id: 205,
     date: "2026-05-07",
     title: "Knorrwood",
     venue: "Assembly Kingston",
@@ -2712,7 +2460,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 227,
+    id: 206,
     date: "2026-05-07",
     title: "The Silos",
     venue: "The Falcon",
@@ -2724,7 +2472,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 228,
+    id: 207,
     date: "2026-05-08",
     title: "Dar Williams",
     venue: "Assembly Kingston",
@@ -2736,7 +2484,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 229,
+    id: 208,
     date: "2026-05-08",
     title: "May 8 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -2748,19 +2496,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 230,
-    date: "2026-05-08",
-    title: "Kevin Morby",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/05-08/kevin-morby",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 231,
+    id: 209,
     date: "2026-05-09",
     title: "Bill Callahan",
     venue: "Assembly Kingston",
@@ -2772,19 +2508,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 232,
-    date: "2026-05-09",
-    title: "Bill Callahan",
-    venue: "Assembly Kingston",
-    venueUrl: "https://www.assemblykingston.com/events/bill-callahan-2",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 233,
+    id: 210,
     date: "2026-05-09",
     title: "Alexis P. Suter Band",
     venue: "The Falcon",
@@ -2796,7 +2520,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 234,
+    id: 211,
     date: "2026-05-09",
     title: "Basilica Farm & Flea Spring Market 2026",
     venue: "Basilica Hudson",
@@ -2808,7 +2532,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 235,
+    id: 212,
     date: "2026-05-10",
     title: "Son Rompe Pera",
     venue: "The Falcon",
@@ -2820,7 +2544,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 236,
+    id: 213,
     date: "2026-05-10",
     title: "May 10 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -2832,19 +2556,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 237,
-    date: "2026-05-10",
-    title: "Railroad Earth",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/05-10/railroad-earth",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 238,
+    id: 214,
     date: "2026-05-11",
     title: "#theoutlierinnpresents… Yoga Sundays",
     venue: "The Outlier Inn",
@@ -2856,7 +2568,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 239,
+    id: 215,
     date: "2026-05-12",
     title: "SLUICE + HIDING PLACES",
     venue: "Tubby's",
@@ -2868,7 +2580,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 240,
+    id: 216,
     date: "2026-05-14",
     title: "Wheatus",
     venue: "Assembly Kingston",
@@ -2880,7 +2592,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 241,
+    id: 217,
     date: "2026-05-14",
     title: "Unicorn Bar x DCxPC Live presents: Cellmate / Christy Costello / Modern Natives",
     venue: "Unicorn Bar",
@@ -2892,7 +2604,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 242,
+    id: 218,
     date: "2026-05-15",
     title: "El Dorado Slim ft. Scott Sharrard",
     venue: "The Falcon",
@@ -2904,19 +2616,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 243,
-    date: "2026-05-15",
-    title: "Richard Barone & Glenn Mercer: Hazy Cosmic Jive",
-    venue: "The Falcon",
-    venueUrl: "https://www.liveatthefalcon.com",
-    location: "Marlboro, NY",
-    mapsUrl: "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 244,
+    id: 219,
     date: "2026-05-16",
     title: "The Dirty Dozen Brass Band",
     venue: "Assembly Kingston",
@@ -2928,7 +2628,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 245,
+    id: 220,
     date: "2026-05-16",
     title: "SunDub",
     venue: "The Falcon",
@@ -2940,7 +2640,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 246,
+    id: 221,
+    date: "2026-05-16",
+    title: "The Mountain Goats",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 222,
     date: "2026-05-17",
     title: "Brock, Lanzetti, Ogawa",
     venue: "The Falcon",
@@ -2952,7 +2664,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 247,
+    id: 223,
     date: "2026-05-20",
     title: "MINT FIELD",
     venue: "Tubby's",
@@ -2964,7 +2676,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 248,
+    id: 224,
     date: "2026-05-20",
     title: "Jimmy Vivino",
     venue: "The Falcon",
@@ -2976,7 +2688,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 249,
+    id: 225,
     date: "2026-05-21",
     title: "MEMORIALS (UK)",
     venue: "Tubby's",
@@ -2988,7 +2700,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 250,
+    id: 226,
     date: "2026-05-21",
     title: "Quinn Sullivan",
     venue: "The Falcon",
@@ -3000,7 +2712,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 251,
+    id: 227,
     date: "2026-05-21",
     title: "THE WALLFLOWERS",
     venue: "Basilica Hudson",
@@ -3012,7 +2724,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 252,
+    id: 228,
     date: "2026-05-22",
     title: "DOUG GILLARD + CATHEDRAL CEILINGS",
     venue: "Tubby's",
@@ -3024,7 +2736,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 253,
+    id: 229,
     date: "2026-05-22",
     title: "Jonah Smith",
     venue: "The Falcon",
@@ -3036,7 +2748,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 254,
+    id: 230,
     date: "2026-05-23",
     title: "JOHN ANDREWS & THE YAWNS (release show) + RUBY OF THANKS + SARAH LA PUERTA",
     venue: "Tubby's",
@@ -3048,7 +2760,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 255,
+    id: 231,
     date: "2026-05-23",
     title: "The Soul Experience ft. Corey Glover (of Living Colour)",
     venue: "The Falcon",
@@ -3060,7 +2772,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 256,
+    id: 232,
     date: "2026-05-23",
     title: "May 23 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3072,19 +2784,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 257,
-    date: "2026-05-23",
-    title: "The Helm Family Midnight Ramble - Levon Helm's Birthday Weekend (Night 1)",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/05-23/levon-helms-birthday-weekend-ramble",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 258,
+    id: 233,
     date: "2026-05-24",
     title: "May 24 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3096,19 +2796,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 259,
-    date: "2026-05-24",
-    title: "The Helm Family Midnight Ramble - Levon Helm's Birthday Weekend (Night 2)",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/05-24/levon-helms-birthday-weekend-ramble",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
+    id: 234,
+    date: "2026-05-27",
+    title: "Camera Obscura",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
     price: "See website",
     free: false
   },
   {
-    id: 260,
+    id: 235,
     date: "2026-05-28",
     title: "ROBBER ROBBER + EMPATH",
     venue: "Tubby's",
@@ -3120,7 +2820,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 261,
+    id: 236,
     date: "2026-05-29",
     title: "Dylan Doyle Band",
     venue: "The Falcon",
@@ -3132,7 +2832,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 262,
+    id: 237,
     date: "2026-05-29",
     title: "May 29 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3144,19 +2844,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 263,
-    date: "2026-05-29",
-    title: "NRBQ (Night 1)",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/05-29/nrbq-night-1",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 264,
+    id: 238,
     date: "2026-05-30",
     title: "Tom Freund",
     venue: "The Falcon",
@@ -3168,7 +2856,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 265,
+    id: 239,
     date: "2026-05-30",
     title: "May 30 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3180,19 +2868,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 266,
-    date: "2026-05-30",
-    title: "NRBQ (Night 2)",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/05-30/nrbq/night-2",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 267,
+    id: 240,
     date: "2026-05-31",
     title: "The Michael Abene Big Band",
     venue: "The Falcon",
@@ -3204,7 +2880,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 268,
+    id: 241,
     date: "2026-06-01",
     title: "MY NEW BAND BELIEVE",
     venue: "Tubby's",
@@ -3216,7 +2892,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 269,
+    id: 242,
     date: "2026-06-04",
     title: "Junco Partners \"Mardi Gras Show\"",
     venue: "The Falcon",
@@ -3228,7 +2904,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 270,
+    id: 243,
     date: "2026-06-05",
     title: "MARISA ANDERSON",
     venue: "Tubby's",
@@ -3240,7 +2916,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 271,
+    id: 244,
     date: "2026-06-06",
     title: "PARTY DOZEN (Australia)",
     venue: "Tubby's",
@@ -3252,7 +2928,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 272,
+    id: 245,
     date: "2026-06-06",
     title: "Fred Zepplin",
     venue: "The Falcon",
@@ -3264,7 +2940,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 273,
+    id: 246,
     date: "2026-06-06",
     title: "Jun 6 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3276,7 +2952,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 274,
+    id: 247,
     date: "2026-06-06",
     title: "The Outlier Inn Presents: Camp Canine with Joshua Latour",
     venue: "The Outlier Inn",
@@ -3288,7 +2964,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 275,
+    id: 248,
     date: "2026-06-07",
     title: "Chimera",
     venue: "The Falcon",
@@ -3300,7 +2976,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 276,
+    id: 249,
+    date: "2026-06-09",
+    title: "mekons",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 250,
     date: "2026-06-10",
     title: "GRACIE AND RACHEL",
     venue: "Tubby's",
@@ -3312,7 +3000,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 277,
+    id: 251,
     date: "2026-06-12",
     title: "Aquarius",
     venue: "The Falcon",
@@ -3324,7 +3012,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 278,
+    id: 252,
     date: "2026-06-13",
     title: "The Ed Palermo Big Band | Matinee Show",
     venue: "The Falcon",
@@ -3336,19 +3024,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 279,
-    date: "2026-06-13",
-    title: "The Ed Palermo Big Band",
-    venue: "The Falcon",
-    venueUrl: "https://www.liveatthefalcon.com",
-    location: "Marlboro, NY",
-    mapsUrl: "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 280,
+    id: 253,
     date: "2026-06-14",
     title: "Bridge Arts Jazz Concert",
     venue: "The Falcon",
@@ -3360,19 +3036,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 281,
-    date: "2026-06-14",
-    title: "Guillermo Klein Quintet",
-    venue: "The Falcon",
-    venueUrl: "https://www.liveatthefalcon.com",
-    location: "Marlboro, NY",
-    mapsUrl: "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 282,
+    id: 254,
     date: "2026-06-25",
     title: "MOUNTAIN MOVERS + THE SPATULAS",
     venue: "Tubby's",
@@ -3384,7 +3048,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 283,
+    id: 255,
     date: "2026-06-26",
     title: "PREWN + OFFICIAL CLAIRE",
     venue: "Tubby's",
@@ -3396,7 +3060,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 284,
+    id: 256,
     date: "2026-06-26",
     title: "Jun 26 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3408,19 +3072,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 285,
-    date: "2026-06-26",
-    title: "S.G. Goodman",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/06-26/sg-goodman",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 286,
+    id: 257,
     date: "2026-06-28",
     title: "Jesse Royal",
     venue: "Assembly Kingston",
@@ -3432,7 +3084,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 287,
+    id: 258,
     date: "2026-07-04",
     title: "Fred Zepplin",
     venue: "The Falcon",
@@ -3444,7 +3096,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 288,
+    id: 259,
     date: "2026-07-10",
     title: "Jul 10 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3456,19 +3108,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 289,
-    date: "2026-07-10",
-    title: "Richard Thompson (Night 1)",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/07-10/richard-thompson",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 290,
+    id: 260,
     date: "2026-07-11",
     title: "Buck Meek",
     venue: "Assembly Kingston",
@@ -3480,7 +3120,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 291,
+    id: 261,
     date: "2026-07-11",
     title: "Jul 11 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3492,19 +3132,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 292,
-    date: "2026-07-11",
-    title: "Richard Thompson (Night 2)",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/07-11/richard-thompson",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 293,
+    id: 262,
     date: "2026-07-15",
     title: "STYROFOAM WINOS + WILL LAWRENCE/WEDNESDAY KNUDSEN / KRYSSI BATTALENE",
     venue: "Tubby's",
@@ -3516,7 +3144,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 294,
+    id: 263,
     date: "2026-07-17",
     title: "Allah-Las",
     venue: "Assembly Kingston",
@@ -3528,7 +3156,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 295,
+    id: 264,
     date: "2026-07-23",
     title: "Jul 23 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3540,19 +3168,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 296,
-    date: "2026-07-23",
-    title: "Shovels & Rope",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/07-23/shovels-rope",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 297,
+    id: 265,
     date: "2026-08-05",
     title: "CHEATER SLICKS + SUNBURNED HAND OF THE MAN",
     venue: "Tubby's",
@@ -3564,7 +3180,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 298,
+    id: 266,
     date: "2026-08-08",
     title: "Outlier Concerts: Nick Hakim with Eddie Chacon, June McDoom, Marem Ladson, and Outlier DJs",
     venue: "The Outlier Inn",
@@ -3576,7 +3192,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 299,
+    id: 267,
     date: "2026-08-13",
     title: "Aug 13 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3588,19 +3204,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 300,
-    date: "2026-08-13",
-    title: "Tim O’Brien, Sam Grisman & Victor Furtado Trio ft. Jan Fabricius (Night 1)",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/08-13/tim-obrien-sam-grisman",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 301,
+    id: 268,
     date: "2026-08-13",
     title: "Outlier Presents: The Poetry Society of New York’s Poetry Camp",
     venue: "The Outlier Inn",
@@ -3612,7 +3216,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 302,
+    id: 269,
     date: "2026-08-14",
     title: "Aug 14 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3624,19 +3228,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 303,
-    date: "2026-08-14",
-    title: "Tim O’Brien, Sam Grisman & Victor Furtado Trio ft. Jan Fabricius (Night 2)",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/08-14/tim-obrien-sam-grisman-slyb5",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 304,
+    id: 270,
     date: "2026-08-18",
     title: "Forest Rhythms Retreat",
     venue: "The Outlier Inn",
@@ -3648,7 +3240,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 305,
+    id: 271,
     date: "2026-08-21",
     title: "Outlier Presents: Solid Gold Yoga Retreat",
     venue: "The Outlier Inn",
@@ -3660,7 +3252,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 306,
+    id: 272,
     date: "2026-08-29",
     title: "Aug 29 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3672,19 +3264,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 307,
-    date: "2026-08-29",
-    title: "Shinyribs",
-    venue: "Levon Helm Studios",
-    venueUrl: "https://levonhelm.com/shows/2026/08-29/shinyribs",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    time: "8:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 308,
+    id: 273,
     date: "2026-09-10",
     title: "Outlier Concerts and Chosen Family Present: Shannon Lay & co.",
     venue: "The Outlier Inn",
@@ -3696,7 +3276,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 309,
+    id: 274,
     date: "2026-10-10",
     title: "Fall Yoga Retreat with Solid Gold Yogi",
     venue: "The Outlier Inn",
@@ -3708,7 +3288,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 310,
+    id: 275,
     date: "2026-10-17",
     title: "Upcoming Events.",
     venue: "The Outlier Inn",
@@ -3720,19 +3300,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 311,
-    date: "2026-10-17",
-    title: "The Gift of Discomfort",
-    venue: "The Outlier Inn",
-    venueUrl: "https://www.outlierinn.com/events/the-gift-of-discomfort",
-    location: "Woodridge, NY",
-    mapsUrl: "https://maps.google.com/?q=307+Mountaindale+Rd+Woodridge+NY",
-    time: "3:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 312,
+    id: 276,
     date: "2026-10-18",
     title: "SUGAR",
     venue: "Basilica Hudson",
@@ -3744,95 +3312,11 @@ const EVENTS = [
     free: false
   },
   {
-    id: 313,
+    id: 277,
     date: "",
     title: "Basilica Farm & Flea Summer Market 2026",
     venue: "Basilica Hudson",
     venueUrl: "https://basilicahudson.org/events/basilica-farm-flea-summer-market-2026/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 314,
-    date: "",
-    title: "March 12",
-    venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/geneve-brossard-left-to-glimmer-march-12-22-2026-back-gallery/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 315,
-    date: "",
-    title: "Genève Brossard Left to Glimmer March 12 – 22, 2026 Back Gallery",
-    venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/geneve-brossard-left-to-glimmer-march-12-22-2026-back-gallery/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 316,
-    date: "",
-    title: "February 16",
-    venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/the-dark-ps21s-fearless-winter-festival-of-live-performance-radiating-across-columbia-county/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 317,
-    date: "",
-    title: "Lee Ranaldo & Leah Singer Contre Jour",
-    venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/the-dark-ps21s-fearless-winter-festival-of-live-performance-radiating-across-columbia-county/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 318,
-    date: "",
-    title: "January 30",
-    venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/explosions-in-the-sky/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 319,
-    date: "",
-    title: "Explosions in the Sky",
-    venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/explosions-in-the-sky/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
-    time: "See website",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 320,
-    date: "",
-    title: "Basilica Farm & Flea Holiday Market",
-    venue: "Basilica Hudson",
-    venueUrl: "https://basilicahudson.org/events/basilica-farm-flea-holiday-market-2/",
     location: "Hudson, NY",
     mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
     time: "See website",
