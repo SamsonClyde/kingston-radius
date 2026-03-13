@@ -950,18 +950,6 @@ const EVENTS = [
   {
     id: 80,
     date: "2026-03-14",
-    title: "Space Bacon",
-    venue: "Bearsville Theater",
-    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
-    time: "8:00 pm",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 81,
-    date: "2026-03-14",
     title: "Dean Friedman w/ special guest Vance Gilbert",
     venue: "Colony Woodstock NY",
     venueUrl: "https://kingstonhappenings.org/locations/colony-woodstock-ny/",
@@ -972,7 +960,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 82,
+    id: 81,
     date: "2026-03-14",
     title: "Woodstock Symphony Orchestra: Unity, Love, and the New World",
     venue: "Woodstock Playhouse",
@@ -980,6 +968,18 @@ const EVENTS = [
     location: "Kingston, NY",
     mapsUrl: "https://maps.google.com/?q=Woodstock%20Playhouse%20Kingston%20NY",
     time: "7:30 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 82,
+    date: "2026-03-14",
+    title: "Space Bacon",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
     price: "See website",
     free: false
   },
