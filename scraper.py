@@ -395,7 +395,12 @@ def scrape_levon_helm():
     except Exception as e:
         print(f"Levon Helm error: {e}")
     seen = set()
-    unique = [e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    unique = []
+    for e in events:
+        key = e.get("date", "") or e.get("title", "")
+        if key not in seen:
+            seen.add(key)
+            unique.append(e)
     print(f"Levon Helm: {len(unique)} events")
     return unique
 
@@ -675,6 +680,315 @@ def scrape_massmoca():
 # Website under construction — skip for now, add manually
 # def scrape_hudson_brewing(): return []
 
+# ─── OPUS 40 ──────────────────────────────────────────────────────────────────
+def scrape_opus40():
+    events = []
+    try:
+        r = requests.get("https://opus40.org/events/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article, .tribe-event, .type-tribe_events, .eventlist-event"):
+            try:
+                title_el = block.select_one("h1,h2,h3,a")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    date_str = date_el.get("datetime","")[:10]
+                else:
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://opus40.org/events/"
+                if not event_url.startswith("http"): event_url = "https://opus40.org" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Opus 40","venueUrl":event_url,"location":"Saugerties, NY",
+                        "mapsUrl":"https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  Opus40 item error: {e}")
+    except Exception as e: print(f"Opus40 error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Opus 40: {len(unique)} events"); return unique
+
+# ─── BARD FISHER CENTER ───────────────────────────────────────────────────────
+def scrape_fisher_center():
+    events = []
+    try:
+        r = requests.get("https://fishercenter.bard.edu/events/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article, .event-item, .tribe-event, .type-tribe_events"):
+            try:
+                title_el = block.select_one("h1,h2,h3,.event-title")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    date_str = date_el.get("datetime","")[:10]
+                else:
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://fishercenter.bard.edu/events/"
+                if not event_url.startswith("http"): event_url = "https://fishercenter.bard.edu" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Bard Fisher Center","venueUrl":event_url,
+                        "location":"Annandale-on-Hudson, NY",
+                        "mapsUrl":"https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  Fisher Center item error: {e}")
+    except Exception as e: print(f"Fisher Center error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Fisher Center: {len(unique)} events"); return unique
+
+# ─── CATSKILL MOUNTAIN FOUNDATION ─────────────────────────────────────────────
+def scrape_catskill_mtn():
+    events = []
+    try:
+        r = requests.get("https://catskillmtn.org/events/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article, .type-tribe_events, .tribe-event"):
+            try:
+                title_el = block.select_one("h1,h2,h3,.tribe-event-url,a")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    date_str = date_el.get("datetime","")[:10]
+                else:
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://catskillmtn.org/events/"
+                if not event_url.startswith("http"): event_url = "https://catskillmtn.org" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Catskill Mountain Foundation","venueUrl":event_url,
+                        "location":"Hunter, NY",
+                        "mapsUrl":"https://maps.google.com/?q=Main+St+Hunter+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  CMF item error: {e}")
+    except Exception as e: print(f"Catskill Mtn Foundation error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Catskill Mtn Foundation: {len(unique)} events"); return unique
+
+# ─── BRIDGE STREET THEATRE ────────────────────────────────────────────────────
+def scrape_bridge_street():
+    events = []
+    try:
+        r = requests.get("https://www.bridgestreettheatre.com/performances", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article, .eventlist-event, .summary-item"):
+            try:
+                title_el = block.select_one("h1,h2,h3,.eventlist-title,.summary-title")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://www.bridgestreettheatre.com"
+                if not event_url.startswith("http"): event_url = "https://www.bridgestreettheatre.com" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Bridge Street Theatre","venueUrl":event_url,
+                        "location":"Catskill, NY",
+                        "mapsUrl":"https://maps.google.com/?q=44+West+Bridge+St+Catskill+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  Bridge Street item error: {e}")
+    except Exception as e: print(f"Bridge Street error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Bridge Street Theatre: {len(unique)} events"); return unique
+
+# ─── ROSENDALE CAFÉ ───────────────────────────────────────────────────────────
+def scrape_rosendale_cafe():
+    events = []
+    try:
+        r = requests.get("https://www.rosendalecafe.com/events", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article, .eventlist-event, .tribe-event, .summary-item, p"):
+            try:
+                title_el = block.select_one("h1,h2,h3,strong,b")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://www.rosendalecafe.com/events"
+                if not event_url.startswith("http"): event_url = "https://www.rosendalecafe.com" + event_url
+                free = "free" in text.lower() or "no cover" in text.lower()
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Rosendale Café","venueUrl":event_url,
+                        "location":"Rosendale, NY",
+                        "mapsUrl":"https://maps.google.com/?q=434+Main+St+Rosendale+NY",
+                        "price":"Free" if free else "See website","free":free})
+            except Exception as e: print(f"  Rosendale Café item error: {e}")
+    except Exception as e: print(f"Rosendale Café error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Rosendale Café: {len(unique)} events"); return unique
+
+# ─── CATSKILL BREWERY ─────────────────────────────────────────────────────────
+def scrape_catskill_brewery():
+    events = []
+    try:
+        r = requests.get("https://www.catskillbrewery.com/events", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article, .eventlist-event, .tribe-event, .summary-item"):
+            try:
+                title_el = block.select_one("h1,h2,h3,.eventlist-title,.summary-title")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://www.catskillbrewery.com/events"
+                if not event_url.startswith("http"): event_url = "https://www.catskillbrewery.com" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Catskill Brewery","venueUrl":event_url,
+                        "location":"Livingston Manor, NY",
+                        "mapsUrl":"https://maps.google.com/?q=672+Old+Rte+17+Livingston+Manor+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  Catskill Brewery item error: {e}")
+    except Exception as e: print(f"Catskill Brewery error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Catskill Brewery: {len(unique)} events"); return unique
+
+# ─── KINGSTON HAPPENINGS ──────────────────────────────────────────────────────
+# Paginated music category — scrape listing pages then fetch each event detail
+def scrape_kingston_happenings():
+    events = []
+    base = "https://kingstonhappenings.org"
+    seen_urls = set()
+    event_links = []
+
+    # Collect links from up to 5 pages of the music category
+    for page in range(1, 6):
+        url = f"{base}/events/categories/music/" if page == 1 else f"{base}/events/categories/music/page/{page}/"
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            if r.status_code != 200:
+                break
+            soup = BeautifulSoup(r.text, "html.parser")
+            links = soup.select("h3 a[href*='/events/']")
+            if not links:
+                break
+            for a in links:
+                href = a.get("href","")
+                if href and href not in seen_urls:
+                    seen_urls.add(href)
+                    event_links.append((clean(a.get_text()), href))
+        except Exception as e:
+            print(f"  KH listing page {page} error: {e}")
+            break
+
+    print(f"  Kingston Happenings: found {len(event_links)} event links, fetching details...")
+
+    for title_hint, href in event_links:
+        try:
+            r = requests.get(href, headers=HEADERS, timeout=15)
+            soup = BeautifulSoup(r.text, "html.parser")
+
+            # Title: h1
+            title_el = soup.select_one("h1")
+            title = clean(title_el.get_text()) if title_el else title_hint
+            if not title or len(title) < 3:
+                continue
+
+            # Date: look for "Fri, Mar 13, 2026" pattern
+            text = clean(soup.get_text())
+            date_str = ""
+            m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+),\s+(\d{4})", text)
+            if m:
+                date_str = fmt_date(m.group(1), m.group(2), int(m.group(3))) or ""
+
+            # Time
+            tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+            time_str = tm.group(1) if tm else ""
+
+            # Venue: look for location link or text after "Where"
+            venue_name = ""
+            venue_url = href
+            loc_el = soup.select_one("a[href*='/locations/']")
+            if loc_el:
+                venue_name = clean(loc_el.get_text())
+                venue_url = loc_el.get("href", href)
+
+            if not venue_name:
+                wm = re.search(r"Where\s+(.+?)(?:\n|When|$)", text)
+                venue_name = clean(wm.group(1)) if wm else "Kingston Area"
+
+            location = "Kingston, NY"
+            maps_url = f"https://maps.google.com/?q={requests.utils.quote(venue_name+' Kingston NY')}"
+
+            # Skip non-music / non-concert events (karaoke, fitness, community)
+            cats_els = soup.select("a[href*='/events/categories/']")
+            cats = [clean(c.get_text()).lower() for c in cats_els]
+            music_cats = {"music", "nightlife and entertainment"}
+            if not any(c in music_cats for c in cats):
+                continue
+
+            if title and date_str:
+                events.append({"title": title, "date": date_str, "time": time_str,
+                    "venue": venue_name or "Kingston Area", "venueUrl": venue_url,
+                    "location": location, "mapsUrl": maps_url,
+                    "price": "See website", "free": False})
+        except Exception as e:
+            print(f"  KH event error ({href}): {e}")
+
+    seen = set()
+    unique = [e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Kingston Happenings: {len(unique)} events")
+    return unique
+
+# ─── LIVELY ARTS AT CHATHAM ───────────────────────────────────────────────────
+def scrape_lively_arts():
+    events = []
+    try:
+        r = requests.get("https://www.livelyartsatchatham.org/events", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article, .eventlist-event, .tribe-event, .sqs-block-content, p"):
+            try:
+                title_el = block.select_one("h1,h2,h3,strong,.eventlist-title")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://www.livelyartsatchatham.org"
+                if not event_url.startswith("http"): event_url = "https://www.livelyartsatchatham.org" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Lively Arts at Chatham","venueUrl":event_url,
+                        "location":"Chatham, NY",
+                        "mapsUrl":"https://maps.google.com/?q=Chatham+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  Lively Arts item error: {e}")
+    except Exception as e: print(f"Lively Arts error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Lively Arts at Chatham: {len(unique)} events"); return unique
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 def main():
     all_events = []
@@ -694,6 +1008,24 @@ def main():
     all_events += scrape_tompkins()
     all_events += scrape_crandell()
     all_events += scrape_massmoca()
+    all_events += scrape_opus40()
+    all_events += scrape_fisher_center()
+    all_events += scrape_catskill_mtn()
+    all_events += scrape_bridge_street()
+    all_events += scrape_rosendale_cafe()
+    all_events += scrape_catskill_brewery()
+    all_events += scrape_lively_arts()
+    all_events += scrape_kingston_happenings()
+
+    # Deduplicate: one event per (venue, date) — keep first occurrence
+    seen_slots = set()
+    deduped = []
+    for e in all_events:
+        slot = (e.get("venue",""), e.get("date",""))
+        if slot not in seen_slots:
+            seen_slots.add(slot)
+            deduped.append(e)
+    all_events = deduped
 
     dated = sorted([e for e in all_events if e.get("date")], key=lambda e: e["date"])
     undated = [e for e in all_events if not e.get("date")]
