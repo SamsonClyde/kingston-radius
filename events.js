@@ -962,6 +962,18 @@ const EVENTS = [
   {
     id: 81,
     date: "2026-03-14",
+    title: "Space Bacon",
+    venue: "Bearsville Theater",
+    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 82,
+    date: "2026-03-14",
     title: "Dean Friedman w/ special guest Vance Gilbert",
     venue: "Colony Woodstock NY",
     venueUrl: "https://kingstonhappenings.org/locations/colony-woodstock-ny/",
@@ -972,7 +984,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 82,
+    id: 83,
     date: "2026-03-14",
     title: "Woodstock Symphony Orchestra: Unity, Love, and the New World",
     venue: "Woodstock Playhouse",
@@ -980,18 +992,6 @@ const EVENTS = [
     location: "Kingston, NY",
     mapsUrl: "https://maps.google.com/?q=Woodstock%20Playhouse%20Kingston%20NY",
     time: "7:30 pm",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 83,
-    date: "2026-03-14",
-    title: "Space Bacon",
-    venue: "Bearsville Theater",
-    venueUrl: "https://kingstonhappenings.org/locations/bearsville-theater/",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Bearsville%20Theater%20Kingston%20NY",
-    time: "8:00 pm",
     price: "See website",
     free: false
   },
@@ -2605,6 +2605,18 @@ const EVENTS = [
   },
   {
     id: 218,
+    date: "2026-05-14",
+    title: "DCxPC Live presents: Cellmate / Christy Costello / Modern Natives",
+    venue: "Snapper Magee's",
+    venueUrl: "https://kingstonhappenings.org/locations/snapper-magees/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Snapper%20Magee%27s%20Kingston%20NY",
+    time: "7:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 219,
     date: "2026-05-15",
     title: "El Dorado Slim ft. Scott Sharrard",
     venue: "The Falcon",
@@ -2616,7 +2628,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 219,
+    id: 220,
     date: "2026-05-16",
     title: "The Dirty Dozen Brass Band",
     venue: "Assembly Kingston",
@@ -2628,7 +2640,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 220,
+    id: 221,
     date: "2026-05-16",
     title: "SunDub",
     venue: "The Falcon",
@@ -2640,7 +2652,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 221,
+    id: 222,
     date: "2026-05-16",
     title: "The Mountain Goats",
     venue: "Bearsville Theater",
@@ -2652,7 +2664,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 222,
+    id: 223,
     date: "2026-05-17",
     title: "Brock, Lanzetti, Ogawa",
     venue: "The Falcon",
@@ -2664,7 +2676,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 223,
+    id: 224,
     date: "2026-05-20",
     title: "MINT FIELD",
     venue: "Tubby's",
@@ -2676,7 +2688,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 224,
+    id: 225,
     date: "2026-05-20",
     title: "Jimmy Vivino",
     venue: "The Falcon",
@@ -2688,7 +2700,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 225,
+    id: 226,
     date: "2026-05-21",
     title: "MEMORIALS (UK)",
     venue: "Tubby's",
@@ -2700,7 +2712,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 226,
+    id: 227,
     date: "2026-05-21",
     title: "Quinn Sullivan",
     venue: "The Falcon",
@@ -2712,7 +2724,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 227,
+    id: 228,
     date: "2026-05-21",
     title: "THE WALLFLOWERS",
     venue: "Basilica Hudson",
@@ -2724,7 +2736,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 228,
+    id: 229,
     date: "2026-05-22",
     title: "DOUG GILLARD + CATHEDRAL CEILINGS",
     venue: "Tubby's",
@@ -2736,7 +2748,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 229,
+    id: 230,
     date: "2026-05-22",
     title: "Jonah Smith",
     venue: "The Falcon",
@@ -2748,7 +2760,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 230,
+    id: 231,
     date: "2026-05-23",
     title: "JOHN ANDREWS & THE YAWNS (release show) + RUBY OF THANKS + SARAH LA PUERTA",
     venue: "Tubby's",
@@ -2760,7 +2772,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 231,
+    id: 232,
     date: "2026-05-23",
     title: "The Soul Experience ft. Corey Glover (of Living Colour)",
     venue: "The Falcon",
@@ -2772,7 +2784,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 232,
+    id: 233,
     date: "2026-05-23",
     title: "May 23 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -2784,7 +2796,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 233,
+    id: 234,
     date: "2026-05-24",
     title: "May 24 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -2796,7 +2808,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 234,
+    id: 235,
     date: "2026-05-27",
     title: "Camera Obscura",
     venue: "Bearsville Theater",
@@ -2808,7 +2820,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 235,
+    id: 236,
     date: "2026-05-28",
     title: "ROBBER ROBBER + EMPATH",
     venue: "Tubby's",
@@ -2820,7 +2832,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 236,
+    id: 237,
     date: "2026-05-29",
     title: "Dylan Doyle Band",
     venue: "The Falcon",
@@ -2832,7 +2844,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 237,
+    id: 238,
     date: "2026-05-29",
     title: "May 29 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -2844,7 +2856,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 238,
+    id: 239,
     date: "2026-05-30",
     title: "Tom Freund",
     venue: "The Falcon",
@@ -2856,7 +2868,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 239,
+    id: 240,
     date: "2026-05-30",
     title: "May 30 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -2868,7 +2880,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 240,
+    id: 241,
     date: "2026-05-31",
     title: "The Michael Abene Big Band",
     venue: "The Falcon",
@@ -2880,7 +2892,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 241,
+    id: 242,
     date: "2026-06-01",
     title: "MY NEW BAND BELIEVE",
     venue: "Tubby's",
@@ -2892,7 +2904,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 242,
+    id: 243,
     date: "2026-06-04",
     title: "Junco Partners \"Mardi Gras Show\"",
     venue: "The Falcon",
@@ -2904,7 +2916,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 243,
+    id: 244,
     date: "2026-06-05",
     title: "MARISA ANDERSON",
     venue: "Tubby's",
@@ -2916,7 +2928,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 244,
+    id: 245,
     date: "2026-06-06",
     title: "PARTY DOZEN (Australia)",
     venue: "Tubby's",
@@ -2928,7 +2940,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 245,
+    id: 246,
     date: "2026-06-06",
     title: "Fred Zepplin",
     venue: "The Falcon",
@@ -2940,7 +2952,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 246,
+    id: 247,
     date: "2026-06-06",
     title: "Jun 6 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -2952,7 +2964,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 247,
+    id: 248,
     date: "2026-06-06",
     title: "The Outlier Inn Presents: Camp Canine with Joshua Latour",
     venue: "The Outlier Inn",
@@ -2964,7 +2976,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 248,
+    id: 249,
     date: "2026-06-07",
     title: "Chimera",
     venue: "The Falcon",
@@ -2976,7 +2988,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 249,
+    id: 250,
     date: "2026-06-09",
     title: "mekons",
     venue: "Bearsville Theater",
@@ -2988,7 +3000,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 250,
+    id: 251,
     date: "2026-06-10",
     title: "GRACIE AND RACHEL",
     venue: "Tubby's",
@@ -3000,7 +3012,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 251,
+    id: 252,
     date: "2026-06-12",
     title: "Aquarius",
     venue: "The Falcon",
@@ -3012,7 +3024,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 252,
+    id: 253,
     date: "2026-06-13",
     title: "The Ed Palermo Big Band | Matinee Show",
     venue: "The Falcon",
@@ -3024,7 +3036,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 253,
+    id: 254,
     date: "2026-06-14",
     title: "Bridge Arts Jazz Concert",
     venue: "The Falcon",
@@ -3036,7 +3048,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 254,
+    id: 255,
     date: "2026-06-25",
     title: "MOUNTAIN MOVERS + THE SPATULAS",
     venue: "Tubby's",
@@ -3048,7 +3060,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 255,
+    id: 256,
     date: "2026-06-26",
     title: "PREWN + OFFICIAL CLAIRE",
     venue: "Tubby's",
@@ -3060,7 +3072,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 256,
+    id: 257,
     date: "2026-06-26",
     title: "Jun 26 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3072,7 +3084,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 257,
+    id: 258,
     date: "2026-06-28",
     title: "Jesse Royal",
     venue: "Assembly Kingston",
@@ -3084,7 +3096,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 258,
+    id: 259,
     date: "2026-07-04",
     title: "Fred Zepplin",
     venue: "The Falcon",
@@ -3096,7 +3108,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 259,
+    id: 260,
     date: "2026-07-10",
     title: "Jul 10 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3108,7 +3120,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 260,
+    id: 261,
     date: "2026-07-11",
     title: "Buck Meek",
     venue: "Assembly Kingston",
@@ -3120,7 +3132,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 261,
+    id: 262,
     date: "2026-07-11",
     title: "Jul 11 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3132,7 +3144,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 262,
+    id: 263,
     date: "2026-07-15",
     title: "STYROFOAM WINOS + WILL LAWRENCE/WEDNESDAY KNUDSEN / KRYSSI BATTALENE",
     venue: "Tubby's",
@@ -3144,7 +3156,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 263,
+    id: 264,
     date: "2026-07-17",
     title: "Allah-Las",
     venue: "Assembly Kingston",
@@ -3156,7 +3168,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 264,
+    id: 265,
     date: "2026-07-23",
     title: "Jul 23 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3168,7 +3180,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 265,
+    id: 266,
     date: "2026-08-05",
     title: "CHEATER SLICKS + SUNBURNED HAND OF THE MAN",
     venue: "Tubby's",
@@ -3180,7 +3192,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 266,
+    id: 267,
     date: "2026-08-08",
     title: "Outlier Concerts: Nick Hakim with Eddie Chacon, June McDoom, Marem Ladson, and Outlier DJs",
     venue: "The Outlier Inn",
@@ -3192,7 +3204,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 267,
+    id: 268,
     date: "2026-08-13",
     title: "Aug 13 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3204,7 +3216,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 268,
+    id: 269,
     date: "2026-08-13",
     title: "Outlier Presents: The Poetry Society of New York’s Poetry Camp",
     venue: "The Outlier Inn",
@@ -3216,7 +3228,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 269,
+    id: 270,
     date: "2026-08-14",
     title: "Aug 14 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3228,7 +3240,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 270,
+    id: 271,
     date: "2026-08-18",
     title: "Forest Rhythms Retreat",
     venue: "The Outlier Inn",
@@ -3240,7 +3252,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 271,
+    id: 272,
     date: "2026-08-21",
     title: "Outlier Presents: Solid Gold Yoga Retreat",
     venue: "The Outlier Inn",
@@ -3252,7 +3264,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 272,
+    id: 273,
     date: "2026-08-29",
     title: "Aug 29 8:00 PM20:00",
     venue: "Levon Helm Studios",
@@ -3264,7 +3276,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 273,
+    id: 274,
     date: "2026-09-10",
     title: "Outlier Concerts and Chosen Family Present: Shannon Lay & co.",
     venue: "The Outlier Inn",
@@ -3276,7 +3288,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 274,
+    id: 275,
     date: "2026-10-10",
     title: "Fall Yoga Retreat with Solid Gold Yogi",
     venue: "The Outlier Inn",
@@ -3288,7 +3300,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 275,
+    id: 276,
     date: "2026-10-17",
     title: "Upcoming Events.",
     venue: "The Outlier Inn",
@@ -3300,7 +3312,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 276,
+    id: 277,
     date: "2026-10-18",
     title: "SUGAR",
     venue: "Basilica Hudson",
@@ -3312,7 +3324,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 277,
+    id: 278,
     date: "",
     title: "Basilica Farm & Flea Summer Market 2026",
     venue: "Basilica Hudson",
