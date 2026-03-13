@@ -363,30 +363,49 @@ def scrape_bearsville():
     return unique
 
 # ─── LEVON HELM STUDIOS ───────────────────────────────────────────────────────
-# Squarespace site — static HTML, shows listed as h1 links under date headers
+# Squarespace — each show block has: date link, h1 title link, optional h3 subtitle, detail list
 def scrape_levon_helm():
     events = []
     try:
         r = requests.get("https://levonhelm.com/shows", headers=HEADERS, timeout=15)
         soup = BeautifulSoup(r.text, "html.parser")
-        # Each show: anchor tag with href like /shows/2026/03-21/show-slug, h1 inside
-        for link in soup.select("a[href*='/shows/2026/'], a[href*='/shows/2027/']"):
+        # Each show: h1 with an <a href="/shows/YYYY/..."> inside it
+        for h1 in soup.find_all("h1"):
             try:
-                title_el = link.select_one("h1, h2, h3")
-                title = clean(title_el.get_text()) if title_el else clean(link.get_text())
-                if not title or len(title) < 3:
+                a = h1.find("a", href=re.compile(r"/shows/\d{4}/"))
+                if not a:
                     continue
-                href = link.get("href", "")
-                # URL format: /shows/2026/03-21/slug → extract date
-                m = re.search(r"/shows/(\d{4})/(\d{2})-(\d{2})/", href)
-                date_str = f"{m.group(1)}-{m.group(2)}-{m.group(3)}" if m else ""
+                href = a.get("href", "")
+                main_title = clean(a.get_text())
+                if not main_title or len(main_title) < 3:
+                    continue
+                # Look for h3 subtitle immediately after this h1 (sibling or nearby)
+                subtitle = ""
+                for sib in h1.find_next_siblings():
+                    tag = sib.name
+                    if tag in ("h1", "h2"):
+                        break
+                    if tag == "h3":
+                        subtitle = clean(sib.get_text())
+                        break
+                full_title = f"{main_title} / {subtitle}" if subtitle else main_title
+                # Extract date from URL: /shows/2026/03-21/slug
+                m = re.search(r"/shows/(\d{4})/(\d{2})-(\d{2})", href)
+                if not m:
+                    # fallback: /shows/2026/slug (no day) — skip
+                    m2 = re.search(r"/shows/(\d{4})/(?!(\d{2}-\d{2}))(\w+)", href)
+                    if not m2:
+                        continue
+                    # Try to get date from nearby text
+                    block_text = clean(h1.parent.get_text() if h1.parent else "")
+                    dm = re.search(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d+),\s+(\d{4})", block_text)
+                    date_str = fmt_date(dm.group(1)[:3], dm.group(2), int(dm.group(3))) if dm else ""
+                else:
+                    date_str = f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
                 event_url = "https://levonhelm.com" + href if href.startswith("/") else href
-                text = clean(link.get_text())
-                tm = re.search(r"(\d+:\d+\s*[AP]M)", text, re.I)
-                time_str = tm.group(1) if tm else "8:00 PM"
-                if title and date_str:
-                    events.append({"title": title, "date": date_str, "time": time_str,
-                        "venue": "Levon Helm Studios", "venueUrl": event_url,
+                if full_title and date_str:
+                    events.append({"title": full_title, "date": date_str, "time": "8:00 PM",
+                        "venue": "Levon Helm Studios", "venueUrl": "https://levonhelm.com/shows",
                         "location": "Woodstock, NY",
                         "mapsUrl": "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
                         "price": "See website", "free": False})
@@ -394,12 +413,12 @@ def scrape_levon_helm():
                 print(f"  Levon Helm item error: {e}")
     except Exception as e:
         print(f"Levon Helm error: {e}")
+    # Deduplicate by date
     seen = set()
     unique = []
     for e in events:
-        key = e.get("date", "") or e.get("title", "")
-        if key not in seen:
-            seen.add(key)
+        if e["date"] not in seen:
+            seen.add(e["date"])
             unique.append(e)
     print(f"Levon Helm: {len(unique)} events")
     return unique
@@ -924,13 +943,31 @@ def scrape_kingston_happenings():
             tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
             time_str = tm.group(1) if tm else ""
 
-            # Venue: look for location link or text after "Where"
+            # Venue: prefer external venue website link, fall back to location page
             venue_name = ""
             venue_url = href
             loc_el = soup.select_one("a[href*='/locations/']")
             if loc_el:
                 venue_name = clean(loc_el.get_text())
-                venue_url = loc_el.get("href", href)
+                # Try to find an external website link for this venue on the event page
+                # Look for links that aren't kingstonhappenings.org or social media
+                for a in soup.select("a[href^='http']"):
+                    link_href = a.get("href","")
+                    if ("kingstonhappenings.org" not in link_href and
+                        "facebook.com" not in link_href and
+                        "instagram.com" not in link_href and
+                        "google.com" not in link_href and
+                        "twitter.com" not in link_href and
+                        "youtube.com" not in link_href and
+                        "tixr.com" not in link_href and
+                        "eventbrite.com" not in link_href and
+                        "calendar" not in link_href.lower() and
+                        "ical" not in link_href.lower()):
+                        venue_url = link_href
+                        break
+                # If no external link found, use the KH location page
+                if venue_url == href:
+                    venue_url = loc_el.get("href", href)
 
             if not venue_name:
                 wm = re.search(r"Where\s+(.+?)(?:\n|When|$)", text)
