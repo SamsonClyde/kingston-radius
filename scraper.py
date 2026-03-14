@@ -15,7 +15,34 @@ MONTHS = {
 def clean(text):
     return re.sub(r'\s+', ' ', text).strip() if text else ""
 
-def fmt_date(month, day, year=None):
+def fmt_time(raw):
+    """Normalize any time string to 'H:MM am' or 'H:MM pm' format."""
+    if not raw:
+        return ""
+    t = raw.strip()
+    # Already correct: "8:00 pm" or "11:00 am"
+    m = re.match(r'^(\d{1,2}):(\d{2})\s*([ap]m)$', t, re.I)
+    if m:
+        return f"{m.group(1)}:{m.group(2)} {m.group(3).lower()}"
+    # "8:00PM" no space
+    m = re.match(r'^(\d{1,2}):(\d{2})\s*([AP]M)$', t)
+    if m:
+        return f"{m.group(1)}:{m.group(2)} {m.group(3).lower()}"
+    # 24-hour "20:00" or "08:30"
+    m = re.match(r'^(\d{1,2}):(\d{2})$', t)
+    if m:
+        h, mn = int(m.group(1)), m.group(2)
+        ampm = "pm" if h >= 12 else "am"
+        if h > 12: h -= 12
+        if h == 0: h = 12
+        return f"{h}:{mn} {ampm}"
+    # "8PM" or "8 pm" no colon
+    m = re.match(r'^(\d{1,2})\s*([ap]m)$', t, re.I)
+    if m:
+        return f"{m.group(1)}:00 {m.group(2).lower()}"
+    return t
+
+
     if not year:
         year = datetime.now().year
     try:
@@ -1320,12 +1347,15 @@ def scrape_silk_factory():
                     else:
                         m2 = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+),?\s+(\d{4})", text, re.I)
                         date_str = fmt_date(m2.group(1), m2.group(2), int(m2.group(3))) if m2 else ""
-                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
-                time_str = tm.group(1) if tm else "8:00 PM"
+                tm = re.search(r"(\d+:\d+\s*[ap]m|\d+\s*[ap]m)", text, re.I)
+                time_str = fmt_time(tm.group(1)) if tm else "11:00 am"
+                # Silk Factory Sunday Sounds brunch is the primary recurring show
+                title = "Sunday Sounds with Hurley Mountain Highway"
+                time_str = "11:00 am"
                 link_el = block.select_one("a[href]")
                 event_url = link_el["href"] if link_el else "https://silkfcty.com/live-entertainment/"
                 if not event_url.startswith("http"): event_url = "https://silkfcty.com" + event_url
-                if title and date_str:
+                if date_str:
                     events.append({"title":title,"date":date_str,"time":time_str,
                         "venue":"Silk Factory","venueUrl":event_url,
                         "location":"Newburgh, NY",
@@ -1333,7 +1363,9 @@ def scrape_silk_factory():
                         "price":"See website","free":False})
             except Exception as e: print(f"  Silk Factory item error: {e}")
     except Exception as e: print(f"Silk Factory error: {e}")
-    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    seen=set(); unique=[e for e in events if e["date"] not in set() and not set().add(e["date"])]
+    # dedup by date for this venue
+    seen_d=set(); unique=[e for e in events if e["date"] not in seen_d and not seen_d.add(e["date"])]
     print(f"Silk Factory: {len(unique)} events"); return unique
 
 # ─── CITY WINERY HUDSON VALLEY (Newburgh) ─────────────────────────────────────
@@ -1558,6 +1590,285 @@ def scrape_reher():
         "https://maps.google.com/?q=99+Broadway+Kingston+NY"
     )
 
+
+# ═══════════════════════════════════════════════════════════════════════════════
+#  LIBRARIES
+#  Strategy: LibCal JSON API for MHLS libraries (Kingston, Woodstock, Saugerties
+#  etc.), plus direct scraping for standalone library sites.
+#  All filtered to music/performance category events only.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+MUSIC_KEYWORDS = re.compile(
+    r'\b(music|concert|perform|recital|band|jazz|folk|classical|bluegrass|'
+    r'singer|guitarist|quartet|trio|duo|ensemble|live\s+music|acoustic|'
+    r'open\s+mic|open\s+jam|jam\s+session|choir|choral|orchestra|symphony|'
+    r'songs|singer.songwriter|musician|fiddle|ukulele|blues)\b', re.I)
+
+def is_music_event(title, desc=""):
+    return bool(MUSIC_KEYWORDS.search(title + " " + desc))
+
+# ─── MHLS LibCal JSON API ─────────────────────────────────────────────────────
+# Mid-Hudson Library System covers: Kingston, Woodstock, Saugerties, Stone Ridge,
+# West Hurley, Marlboro, Phoenicia, Morton/Pine Hill, Town of Ulster, Highland
+# Calendar IDs from the LibCal site
+MHLS_CALENDARS = {
+    20933: ("Kingston Library",       "Kingston, NY",     "https://maps.google.com/?q=55+Franklin+St+Kingston+NY"),
+    22662: ("Woodstock Library",      "Woodstock, NY",    "https://maps.google.com/?q=5+Library+Ln+Woodstock+NY"),
+    20938: ("Saugerties Library",     "Saugerties, NY",   "https://maps.google.com/?q=91+Washington+Ave+Saugerties+NY"),
+    20929: ("Stone Ridge Library",    "Stone Ridge, NY",  "https://maps.google.com/?q=3700+Main+St+Stone+Ridge+NY"),
+    20926: ("West Hurley Library",    "West Hurley, NY",  "https://maps.google.com/?q=West+Hurley+NY"),
+    20925: ("Marlboro Library",       "Marlboro, NY",     "https://maps.google.com/?q=Marlboro+Free+Library+Marlboro+NY"),
+    20939: ("Morton Memorial Library","Rhinecliff, NY",   "https://maps.google.com/?q=Morton+Memorial+Library+Rhinecliff+NY"),
+    20936: ("Phoenicia Library",      "Phoenicia, NY",    "https://maps.google.com/?q=Phoenicia+Library+Phoenicia+NY"),
+    20928: ("Town of Ulster Library", "Kingston, NY",     "https://maps.google.com/?q=Town+of+Ulster+Library+NY"),
+    20931: ("Highland Library",       "Highland, NY",     "https://maps.google.com/?q=Highland+Public+Library+Highland+NY"),
+}
+
+def scrape_mhls_libcal():
+    """Fetch all MHLS library calendars via LibCal JSON API, filter music events."""
+    events = []
+    today     = datetime.now().strftime("%Y-%m-%d")
+    end_date  = (datetime.now().replace(month=min(datetime.now().month+4, 12))).strftime("%Y-%m-%d")
+
+    for cal_id, (lib_name, city, maps_url) in MHLS_CALENDARS.items():
+        try:
+            api_url = (
+                f"https://midhudsonlibraries.libcal.com/api/1.1/events"
+                f"?cal_id={cal_id}&start={today}&end={end_date}&limit=100"
+            )
+            r = requests.get(api_url, headers=HEADERS, timeout=15)
+            if r.status_code != 200:
+                print(f"  MHLS LibCal {lib_name}: HTTP {r.status_code}")
+                continue
+            data = r.json()
+            raw_events = data if isinstance(data, list) else data.get("events", [])
+            count = 0
+            for ev in raw_events:
+                title = clean(ev.get("title","") or "")
+                desc  = clean(ev.get("description","") or "")
+                if not title or not is_music_event(title, desc):
+                    continue
+                start = ev.get("start","")
+                date_str = start[:10] if start else ""
+                time_str = ""
+                if start and "T" in start:
+                    time_str = fmt_time(start[11:16])  # "HH:MM"
+                event_url = ev.get("url","") or f"https://midhudsonlibraries.libcal.com/calendar/{cal_id}"
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":lib_name,"venueUrl":event_url,
+                        "location":city,"mapsUrl":maps_url,
+                        "price":"Free","free":True})
+                    count += 1
+            print(f"  {lib_name}: {count} music events")
+        except Exception as e:
+            print(f"  MHLS LibCal {lib_name} error: {e}")
+
+    seen=set(); unique=[e for e in events if (e["venue"]+e["date"]) not in seen and not seen.add(e["venue"]+e["date"])]
+    print(f"MHLS Libraries total: {len(unique)} events")
+    return unique
+
+# ─── ADRIANCE MEMORIAL LIBRARY (Poughkeepsie) ─────────────────────────────────
+def scrape_adriance():
+    events = []
+    try:
+        # Adriance uses LibCal — cal_id 5787
+        today    = datetime.now().strftime("%Y-%m-%d")
+        end_date = (datetime.now().replace(month=min(datetime.now().month+4,12))).strftime("%Y-%m-%d")
+        api_url  = f"https://poklib.libcal.com/api/1.1/events?cal_id=5787&start={today}&end={end_date}&limit=100"
+        r = requests.get(api_url, headers=HEADERS, timeout=15)
+        if r.status_code == 200:
+            raw = r.json()
+            raw_events = raw if isinstance(raw, list) else raw.get("events", [])
+            for ev in raw_events:
+                title = clean(ev.get("title",""))
+                desc  = clean(ev.get("description",""))
+                if not is_music_event(title, desc): continue
+                start = ev.get("start","")
+                date_str = start[:10] if start else ""
+                time_str = fmt_time(start[11:16]) if start and "T" in start else ""
+                event_url = ev.get("url","") or "https://poklib.libcal.com/events"
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Adriance Memorial Library","venueUrl":event_url,
+                        "location":"Poughkeepsie, NY",
+                        "mapsUrl":"https://maps.google.com/?q=93+Market+St+Poughkeepsie+NY",
+                        "price":"Free","free":True})
+        else:
+            # Fallback: scrape the events page directly
+            r2 = requests.get("https://poklib.org/events/", headers=HEADERS, timeout=15)
+            soup = BeautifulSoup(r2.text, "html.parser")
+            for block in soup.select("article,.tribe-event,.type-tribe_events"):
+                title_el = block.select_one("h1,h2,h3")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or not is_music_event(title): continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                date_str = date_el.get("datetime","")[:10] if date_el else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = fmt_time(tm.group(1)) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://poklib.org/events/"
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Adriance Memorial Library","venueUrl":event_url,
+                        "location":"Poughkeepsie, NY",
+                        "mapsUrl":"https://maps.google.com/?q=93+Market+St+Poughkeepsie+NY",
+                        "price":"Free","free":True})
+    except Exception as e:
+        print(f"Adriance error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Adriance Library: {len(unique)} events"); return unique
+
+# ─── STARR LIBRARY (Rhinebeck) ────────────────────────────────────────────────
+def scrape_starr_library():
+    events = []
+    try:
+        # Try LibCal API first
+        today    = datetime.now().strftime("%Y-%m-%d")
+        end_date = (datetime.now().replace(month=min(datetime.now().month+4,12))).strftime("%Y-%m-%d")
+        api_url  = f"https://rhinebecklibrary.libcal.com/api/1.1/events?start={today}&end={end_date}&limit=100"
+        r = requests.get(api_url, headers=HEADERS, timeout=15)
+        if r.status_code == 200:
+            raw = r.json()
+            raw_events = raw if isinstance(raw, list) else raw.get("events", [])
+            for ev in raw_events:
+                title = clean(ev.get("title",""))
+                desc  = clean(ev.get("description",""))
+                if not is_music_event(title, desc): continue
+                start = ev.get("start","")
+                date_str = start[:10] if start else ""
+                time_str = fmt_time(start[11:16]) if start and "T" in start else ""
+                event_url = ev.get("url","") or "https://rhinebecklibrary.libcal.com/events"
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Starr Library (Rhinebeck)","venueUrl":event_url,
+                        "location":"Rhinebeck, NY",
+                        "mapsUrl":"https://maps.google.com/?q=68+West+Market+St+Rhinebeck+NY",
+                        "price":"Free","free":True})
+        else:
+            r2 = requests.get("https://www.starrlibrary.org/events/", headers=HEADERS, timeout=15)
+            soup = BeautifulSoup(r2.text, "html.parser")
+            for block in soup.select("article,.tribe-event,.type-tribe_events"):
+                title_el = block.select_one("h1,h2,h3")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or not is_music_event(title): continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                date_str = date_el.get("datetime","")[:10] if date_el else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = fmt_time(tm.group(1)) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://www.starrlibrary.org/events/"
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Starr Library (Rhinebeck)","venueUrl":event_url,
+                        "location":"Rhinebeck, NY",
+                        "mapsUrl":"https://maps.google.com/?q=68+West+Market+St+Rhinebeck+NY",
+                        "price":"Free","free":True})
+    except Exception as e:
+        print(f"Starr Library error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Starr Library: {len(unique)} events"); return unique
+
+# ─── MILLBROOK FREE LIBRARY ───────────────────────────────────────────────────
+def scrape_millbrook_library():
+    return scrape_generic_tribe(
+        "https://millbrookfreelibrary.org/events/",
+        "Millbrook Free Library", "Millbrook, NY",
+        "https://maps.google.com/?q=3098+Franklin+Ave+Millbrook+NY"
+    )
+
+# ─── PAWLING LIBRARY ──────────────────────────────────────────────────────────
+def scrape_pawling_library():
+    return scrape_generic_tribe(
+        "https://pawlinglibrary.org/events/",
+        "Pawling Library", "Pawling, NY",
+        "https://maps.google.com/?q=11+Broad+St+Pawling+NY"
+    )
+
+# ─── CATSKILL PUBLIC LIBRARY ──────────────────────────────────────────────────
+def scrape_catskill_library():
+    events = []
+    try:
+        today    = datetime.now().strftime("%Y-%m-%d")
+        end_date = (datetime.now().replace(month=min(datetime.now().month+4,12))).strftime("%Y-%m-%d")
+        api_url  = f"https://catskill.librarycalendar.com/api/1.1/events?start={today}&end={end_date}&limit=100"
+        r = requests.get(api_url, headers=HEADERS, timeout=15)
+        if r.status_code == 200:
+            raw = r.json()
+            raw_events = raw if isinstance(raw, list) else raw.get("events", [])
+            for ev in raw_events:
+                title = clean(ev.get("title",""))
+                desc  = clean(ev.get("description",""))
+                if not is_music_event(title, desc): continue
+                start = ev.get("start","")
+                date_str = start[:10] if start else ""
+                time_str = fmt_time(start[11:16]) if start and "T" in start else ""
+                event_url = ev.get("url","") or "https://catskill.librarycalendar.com/events"
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Catskill Public Library","venueUrl":event_url,
+                        "location":"Catskill, NY",
+                        "mapsUrl":"https://maps.google.com/?q=1+Franklin+St+Catskill+NY",
+                        "price":"Free","free":True})
+        else:
+            r2 = requests.get("https://catskillpubliclibrary.org/events/", headers=HEADERS, timeout=15)
+            soup = BeautifulSoup(r2.text, "html.parser")
+            for block in soup.select("article,.tribe-event,.type-tribe_events"):
+                title_el = block.select_one("h1,h2,h3")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or not is_music_event(title): continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                date_str = date_el.get("datetime","")[:10] if date_el else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = fmt_time(tm.group(1)) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://catskillpubliclibrary.org/events/"
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Catskill Public Library","venueUrl":event_url,
+                        "location":"Catskill, NY",
+                        "mapsUrl":"https://maps.google.com/?q=1+Franklin+St+Catskill+NY",
+                        "price":"Free","free":True})
+    except Exception as e:
+        print(f"Catskill Library error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Catskill Library: {len(unique)} events"); return unique
+
+# ─── GENERAL LIBCAL HELPER ────────────────────────────────────────────────────
+def scrape_libcal(subdomain, venue_name, city, maps_url, cal_id=None):
+    """Generic LibCal scraper for any library using Springshare."""
+    events = []
+    try:
+        today    = datetime.now().strftime("%Y-%m-%d")
+        end_date = (datetime.now().replace(month=min(datetime.now().month+4,12))).strftime("%Y-%m-%d")
+        cal_param = f"&cal_id={cal_id}" if cal_id else ""
+        api_url   = f"https://{subdomain}.libcal.com/api/1.1/events?start={today}&end={end_date}&limit=100{cal_param}"
+        r = requests.get(api_url, headers=HEADERS, timeout=15)
+        if r.status_code != 200:
+            return []
+        raw = r.json()
+        raw_events = raw if isinstance(raw, list) else raw.get("events", [])
+        for ev in raw_events:
+            title = clean(ev.get("title",""))
+            desc  = clean(ev.get("description",""))
+            if not is_music_event(title, desc): continue
+            start = ev.get("start","")
+            date_str = start[:10] if start else ""
+            time_str = fmt_time(start[11:16]) if start and "T" in start else ""
+            event_url = ev.get("url","") or f"https://{subdomain}.libcal.com/events"
+            if title and date_str:
+                events.append({"title":title,"date":date_str,"time":time_str,
+                    "venue":venue_name,"venueUrl":event_url,
+                    "location":city,"mapsUrl":maps_url,
+                    "price":"Free","free":True})
+    except Exception as e:
+        print(f"{venue_name} LibCal error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"{venue_name}: {len(unique)} events"); return unique
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 def main():
     all_events = []
@@ -1586,10 +1897,24 @@ def main():
     all_events += scrape_lively_arts()
     all_events += scrape_kingston_happenings()
     all_events += scrape_lemon_squeeze()
-    # Ashokan Center
+    # Ashokan + new venues
     all_events += scrape_ashokan()
     all_events += scrape_monument()
     all_events += scrape_reher()
+    # ── LIBRARIES ──
+    all_events += scrape_mhls_libcal()           # Kingston, Woodstock, Saugerties, Stone Ridge, etc.
+    all_events += scrape_adriance()              # Poughkeepsie
+    all_events += scrape_starr_library()         # Rhinebeck
+    all_events += scrape_millbrook_library()     # Millbrook
+    all_events += scrape_pawling_library()       # Pawling
+    all_events += scrape_catskill_library()      # Catskill
+    # Additional LibCal libraries
+    all_events += scrape_libcal("beaconfalls",   "Howland Public Library",          "Beacon, NY",         "https://maps.google.com/?q=313+Main+St+Beacon+NY")
+    all_events += scrape_libcal("newpaltzlibrary","New Paltz Library",              "New Paltz, NY",      "https://maps.google.com/?q=124+Main+St+New+Paltz+NY")
+    all_events += scrape_libcal("hudsonlibrary",  "Hudson Library & Historical Society","Hudson, NY",     "https://maps.google.com/?q=51+N+Fifth+St+Hudson+NY")
+    all_events += scrape_libcal("peekskillibrary","Field Library",                  "Peekskill, NY",      "https://maps.google.com/?q=4+Nelson+Ave+Peekskill+NY")
+    all_events += scrape_libcal("cornwalllibrary","Cornwall Public Library",        "Cornwall, NY",       "https://maps.google.com/?q=395+Hudson+St+Cornwall+NY")
+    all_events += scrape_libcal("newburghlibrary","Newburgh Free Library",          "Newburgh, NY",       "https://maps.google.com/?q=124+Grand+St+Newburgh+NY")
     # Peekskill
     all_events += scrape_paramount()
     all_events += scrape_gleasons()
@@ -1625,6 +1950,10 @@ def main():
     all_events += scrape_generic_tribe("https://balmvillefarm.com/events/","Balmville Farm","Newburgh, NY","https://maps.google.com/?q=Balmville+Farm+Newburgh+NY")
     all_events += scrape_generic_tribe("https://cornwallonhudson.com/events/","Hudson Valley Newburgh area","Newburgh, NY","https://maps.google.com/?q=Newburgh+NY")
     all_events += scrape_generic_tribe("https://theMARKsaugerties.com/events/","The Mark","Saugerties, NY","https://maps.google.com/?q=The+Mark+Saugerties+NY")
+
+    # Normalize all times to "H:MM am/pm" format
+    for e in all_events:
+        e["time"] = fmt_time(e.get("time",""))
 
     # Deduplicate: one event per (venue, date) — keep first occurrence
     seen_slots = set()
