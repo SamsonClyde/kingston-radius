@@ -1178,12 +1178,12 @@ const EVENTS = [
   {
     id: 99,
     date: "2026-03-15",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "LIVE ENTERTAINMENT",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/sunday-sounds-with-hurley-mountain-highway/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "202611:00 am",
     price: "See website",
     free: false
   },
@@ -1442,12 +1442,12 @@ const EVENTS = [
   {
     id: 121,
     date: "2026-03-21",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Line Dancing Night at Silk Factory",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/line-dancing-night-at-silk-factory/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20267:00 pm",
     price: "See website",
     free: false
   },
@@ -1502,12 +1502,12 @@ const EVENTS = [
   {
     id: 126,
     date: "2026-03-22",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Lucky House at Silk Factory",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/lucky-house-at-silk-factory/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "202611:00 am",
     price: "See website",
     free: false
   },
@@ -1694,12 +1694,12 @@ const EVENTS = [
   {
     id: 142,
     date: "2026-03-27",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Generals Gathered, Tribute to Black Sabbath & Ozzy Osbourne",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/generals-gathered-tribute-to-black-sabbath-ozzy-osbourne/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20268:00 pm",
     price: "See website",
     free: false
   },
@@ -1778,12 +1778,12 @@ const EVENTS = [
   {
     id: 149,
     date: "2026-03-28",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Alice in Chains by Facelift with Hindsight 90s Grunge Show",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/alice-in-chains-by-facelift-with-hindsight-90s-grunge-show/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20267:30 pm",
     price: "See website",
     free: false
   },
@@ -1814,12 +1814,12 @@ const EVENTS = [
   {
     id: 152,
     date: "2026-03-29",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Brian Collazo at Silk Factory",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/brian-collazo-at-silk-factory/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "202611:00 am",
     price: "See website",
     free: false
   },
@@ -1970,12 +1970,12 @@ const EVENTS = [
   {
     id: 165,
     date: "2026-04-03",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Emo Night",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/emo-night/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20267:00 pm",
     price: "See website",
     free: false
   },
@@ -2042,12 +2042,12 @@ const EVENTS = [
   {
     id: 171,
     date: "2026-04-04",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Super Trans AM 70s Rock Show",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/super-trans-am-70s-rock-show-2/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20268:00 pm",
     price: "See website",
     free: false
   },
@@ -2234,12 +2234,12 @@ const EVENTS = [
   {
     id: 187,
     date: "2026-04-10",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Latin Night at Silk Factory",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/latin-night-at-silk-factory/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20267:00 pm",
     price: "See website",
     free: false
   },
@@ -2486,12 +2486,12 @@ const EVENTS = [
   {
     id: 208,
     date: "2026-04-17",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Shotguns N Roses – A Powerful Blast Of GNR",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/shotguns-n-roses-a-powerful-blast-of-gnr/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20268:00 pm",
     price: "See website",
     free: false
   },
@@ -2546,12 +2546,12 @@ const EVENTS = [
   {
     id: 213,
     date: "2026-04-18",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Suckapunch at Silk Factory",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/suckapunch-at-silk-factory/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20266:00 pm",
     price: "See website",
     free: false
   },
@@ -2606,12 +2606,12 @@ const EVENTS = [
   {
     id: 218,
     date: "2026-04-19",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Sunday Sounds with Tony DePaolo",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/sunday-sounds-with-tony-depaolo-20/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "202611:00 am",
     price: "See website",
     free: false
   },
@@ -2894,12 +2894,12 @@ const EVENTS = [
   {
     id: 242,
     date: "2026-05-01",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Anthony Robustiano",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/anthony-robustiano/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20268:00 pm",
     price: "See website",
     free: false
   },
@@ -3158,12 +3158,12 @@ const EVENTS = [
   {
     id: 264,
     date: "2026-05-09",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "One Funny Lisa Marie: The Stand By Me Tour",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/one-funny-lisa-marie-the-stand-by-me-tour/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20266:00 pm",
     price: "See website",
     free: false
   },
@@ -3278,12 +3278,12 @@ const EVENTS = [
   {
     id: 274,
     date: "2026-05-15",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Core – The Ultimate 90s / 2000s Alternative Rock Tribute Band",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/core-the-ultimate-90s-2000s-alternative-rock-tribute-band/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20267:00 pm",
     price: "See website",
     free: false
   },
@@ -3518,12 +3518,12 @@ const EVENTS = [
   {
     id: 294,
     date: "2026-05-23",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Funk Junkies at Silk Factory",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/funk-junkies-at-silk-factory/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20267:00 pm",
     price: "See website",
     free: false
   },
@@ -3854,12 +3854,12 @@ const EVENTS = [
   {
     id: 322,
     date: "2026-06-12",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Newburgh Voice Contest",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/newburgh-voice-contest/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20266:00 pm",
     price: "See website",
     free: false
   },
@@ -4622,12 +4622,12 @@ const EVENTS = [
   {
     id: 386,
     date: "2026-09-26",
-    title: "Sunday Sounds with Hurley Mountain Highway",
+    title: "Gaspare Randazzo",
     venue: "Silk Factory",
     venueUrl: "https://silkfcty.com/events/gaspare-randazzo/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "11:00 am",
+    time: "20268:00 pm",
     price: "See website",
     free: false
   },
