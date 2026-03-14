@@ -43,20 +43,32 @@ def fmt_time(raw):
     return t
 
 
-    if not year:
-        year = datetime.now().year
+def fmt_date(month, day, year=None):
+    now = datetime.now()
     try:
-        m = MONTHS.get(month[:3].lower())
-        if m:
-            d = int(day)
-            # If month already passed this year, assume next year
-            now = datetime.now()
-            if year == now.year and m < now.month:
-                year += 1
-            return f"{year}-{m:02d}-{d:02d}"
+        m = MONTHS.get(month[:3].lower()) if isinstance(month, str) else int(month)
+        if not m:
+            return None
+        d = int(day)
+        if year:
+            return f"{int(year)}-{m:02d}-{d:02d}"
+        else:
+            y = now.year
+            from datetime import date as _date
+            if _date(y, m, d) < now.date():
+                y += 1
+            return f"{y}-{m:02d}-{d:02d}"
     except:
         pass
     return None
+
+def calc_end_date(months_ahead=4):
+    """Calculate an end date N months ahead, safely handling year rollover."""
+    now   = datetime.now()
+    month = now.month + months_ahead
+    year  = now.year + (month - 1) // 12
+    month = ((month - 1) % 12) + 1
+    return f"{year}-{month:02d}-01"
 
 # ─── TUBBY'S ─────────────────────────────────────────────────────────────────
 def scrape_tubbys():
@@ -1628,7 +1640,7 @@ def scrape_mhls_libcal():
     """Fetch all MHLS library calendars via LibCal JSON API, filter music events."""
     events = []
     today     = datetime.now().strftime("%Y-%m-%d")
-    end_date  = (datetime.now().replace(month=min(datetime.now().month+4, 12))).strftime("%Y-%m-%d")
+    end_date  = calc_end_date(4)
 
     for cal_id, (lib_name, city, maps_url) in MHLS_CALENDARS.items():
         try:
@@ -1674,7 +1686,7 @@ def scrape_adriance():
     try:
         # Adriance uses LibCal — cal_id 5787
         today    = datetime.now().strftime("%Y-%m-%d")
-        end_date = (datetime.now().replace(month=min(datetime.now().month+4,12))).strftime("%Y-%m-%d")
+        end_date = calc_end_date(4)
         api_url  = f"https://poklib.libcal.com/api/1.1/events?cal_id=5787&start={today}&end={end_date}&limit=100"
         r = requests.get(api_url, headers=HEADERS, timeout=15)
         if r.status_code == 200:
@@ -1726,7 +1738,7 @@ def scrape_starr_library():
     try:
         # Try LibCal API first
         today    = datetime.now().strftime("%Y-%m-%d")
-        end_date = (datetime.now().replace(month=min(datetime.now().month+4,12))).strftime("%Y-%m-%d")
+        end_date = calc_end_date(4)
         api_url  = f"https://rhinebecklibrary.libcal.com/api/1.1/events?start={today}&end={end_date}&limit=100"
         r = requests.get(api_url, headers=HEADERS, timeout=15)
         if r.status_code == 200:
@@ -1792,7 +1804,7 @@ def scrape_catskill_library():
     events = []
     try:
         today    = datetime.now().strftime("%Y-%m-%d")
-        end_date = (datetime.now().replace(month=min(datetime.now().month+4,12))).strftime("%Y-%m-%d")
+        end_date = calc_end_date(4)
         api_url  = f"https://catskill.librarycalendar.com/api/1.1/events?start={today}&end={end_date}&limit=100"
         r = requests.get(api_url, headers=HEADERS, timeout=15)
         if r.status_code == 200:
@@ -1843,7 +1855,7 @@ def scrape_libcal(subdomain, venue_name, city, maps_url, cal_id=None):
     events = []
     try:
         today    = datetime.now().strftime("%Y-%m-%d")
-        end_date = (datetime.now().replace(month=min(datetime.now().month+4,12))).strftime("%Y-%m-%d")
+        end_date = calc_end_date(4)
         cal_param = f"&cal_id={cal_id}" if cal_id else ""
         api_url   = f"https://{subdomain}.libcal.com/api/1.1/events?start={today}&end={end_date}&limit=100{cal_param}"
         r = requests.get(api_url, headers=HEADERS, timeout=15)
