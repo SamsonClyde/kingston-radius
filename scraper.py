@@ -984,6 +984,18 @@ def scrape_kingston_happenings():
 
             # ── Venue overrides: correct URLs, maps, names, and cities ──
             VENUE_OVERRIDES = {
+                "reher center": {
+                    "name": "Reher Center for Immigrant Culture and History",
+                    "url": "https://www.rehercenter.org/events/",
+                    "maps": "https://maps.google.com/?q=99+Broadway+Kingston+NY",
+                    "city": "Kingston, NY",
+                },
+                "monument": {
+                    "name": "MONUMENT hv",
+                    "url": "https://monumenthv.net/",
+                    "maps": "https://maps.app.goo.gl/aK923p8uugECAban6",
+                    "city": "Kingston, NY",
+                },
                 "castaways bar and grill": {
                     "name": "Castaways Bar & Grill",
                     "url": "https://www.facebook.com/CastawaysMarinaNY/",
@@ -1180,25 +1192,30 @@ def scrape_ashokan():
             try:
                 a = h4.find("a")
                 if not a: continue
-                text = clean(a.get_text())
-                # Format: "Event Title Mon, Month DD at H:MM AM/PM"
-                m = re.match(r"(.+?)\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+)\s+(?:at\s+)?(\d+:\d+\s*[AP]M)", text, re.I)
-                if not m:
-                    # Try simpler: title then date in format "Title Mon, Mar 29 at 3 PM"
-                    m2 = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+)", text, re.I)
-                    if not m2: continue
-                    title = text[:m2.start()].strip(" -,")
-                    date_str = fmt_date(m2.group(1), m2.group(2)) or ""
-                    tm = re.search(r"(\d+:\d+\s*[AP]M|\d+\s*[AP]M)", text, re.I)
-                    time_str = tm.group(1) if tm else ""
-                else:
-                    title = m.group(1).strip()
-                    date_str = fmt_date(m.group(3), m.group(4)) or ""
-                    time_str = m.group(5)
+                raw = clean(a.get_text())
+                # Strip trailing day-of-week (Mon/Tue/etc) with or without space
+                raw = re.sub(r'\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*$', '', raw, flags=re.I).strip()
+                # Strip trailing 4-digit year
+                raw = re.sub(r'\s*\b(20\d{2})\b\s*$', '', raw).strip()
+                # Strip trailing day-of-week again (in case year came after dow)
+                raw = re.sub(r'\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*$', '', raw, flags=re.I).strip()
+                # Strip trailing " Concert" (standalone word)
+                raw = re.sub(r'\s+Concert\s*$', '', raw, flags=re.I).strip()
+                # Find and extract the date portion: "Sun, Mar 29 at 3 PM" or "Mar 29"
+                m = re.search(
+                    r'(?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*,?\s+)?'
+                    r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+)'
+                    r'(?:\s+(?:at\s+)?(\d+:\d+\s*[AP]M|\d+\s*[AP]M))?',
+                    raw, re.I)
+                if not m: continue
+                title = raw[:m.start()].strip(' –-,')
                 if not title or len(title) < 3: continue
+                date_str = fmt_date(m.group(1), m.group(2)) or ""
+                time_str = m.group(3) or ""
                 # Skip non-music events
                 lower = title.lower()
-                skip_words = ["retreat", "yoga", "wellness", "hike", "maple fest", "earth fest", "field trip", "workshop", "conference"]
+                skip_words = ["retreat", "yoga", "wellness", "hike", "maple fest", "earth fest",
+                              "field trip", "workshop", "conference", "day pass"]
                 if any(w in lower for w in skip_words): continue
                 event_url = a.get("href","") or "https://ashokancenter.org/events/"
                 if title and date_str:
@@ -1525,6 +1542,22 @@ def scrape_generic_tribe(url, venue_name, city, maps_url, fallback_url=None):
     seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
     print(f"{venue_name}: {len(unique)} events"); return unique
 
+# ─── MONUMENT HV (Kingston) ───────────────────────────────────────────────────
+def scrape_monument():
+    return scrape_generic_tribe(
+        "https://monumenthv.net/",
+        "MONUMENT hv", "Kingston, NY",
+        "https://maps.app.goo.gl/aK923p8uugECAban6"
+    )
+
+# ─── REHER CENTER (Kingston) ──────────────────────────────────────────────────
+def scrape_reher():
+    return scrape_generic_tribe(
+        "https://www.rehercenter.org/events/",
+        "Reher Center for Immigrant Culture and History", "Kingston, NY",
+        "https://maps.google.com/?q=99+Broadway+Kingston+NY"
+    )
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 def main():
     all_events = []
@@ -1555,6 +1588,8 @@ def main():
     all_events += scrape_lemon_squeeze()
     # Ashokan Center
     all_events += scrape_ashokan()
+    all_events += scrape_monument()
+    all_events += scrape_reher()
     # Peekskill
     all_events += scrape_paramount()
     all_events += scrape_gleasons()
