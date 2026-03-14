@@ -1353,11 +1353,18 @@ def scrape_silk_factory():
                 text = clean(block.get_text())
                 date_el = block.select_one("time[datetime]")
                 date_str = ""
+                time_str = ""
                 if date_el:
-                    raw_dt = date_el.get("datetime","")
-                    # Proper ISO: "2026-03-15" or "2026-03-15T11:00:00"
+                    raw_dt = date_el.get("datetime", "")
+                    # Extract ISO date: "2026-03-15" from anything like "2026-03-15T11:00" or "2026-03-1511:00"
                     iso = re.search(r'(\d{4}-\d{2}-\d{2})', raw_dt)
                     date_str = iso.group(1) if iso else ""
+                    # Extract time from the datetime attribute after the date portion
+                    if iso:
+                        after = raw_dt[iso.end():].lstrip('T ')
+                        tm_attr = re.match(r'(\d{1,2}:\d{2})', after)
+                        if tm_attr:
+                            time_str = fmt_time(tm_attr.group(1))
                 if not date_str:
                     m = re.search(r"(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})", text, re.I)
                     if m:
@@ -1365,9 +1372,10 @@ def scrape_silk_factory():
                     else:
                         m2 = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+),?\s+(\d{4})", text, re.I)
                         date_str = fmt_date(m2.group(1), m2.group(2), int(m2.group(3))) if m2 else ""
-                # Match time carefully — must not grab a year like "2026"
-                tm = re.search(r'\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b', text, re.I)
-                time_str = fmt_time(tm.group(0)) if tm else ""
+                # If still no time, try plain text: "8:00 pm" or "8:00 pm - 10:30 pm"
+                if not time_str:
+                    tm = re.search(r'\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b', text, re.I)
+                    time_str = fmt_time(tm.group(0)) if tm else ""
                 link_el = block.select_one("a[href]")
                 event_url = link_el["href"] if link_el else "https://silkfcty.com/live-entertainment/"
                 if not event_url.startswith("http"): event_url = "https://silkfcty.com" + event_url
@@ -1969,11 +1977,11 @@ def main():
     for e in all_events:
         e["time"] = fmt_time(e.get("time",""))
 
-    # Deduplicate: one event per (venue, date) — keep first occurrence
+    # Deduplicate: one event per (venue, date, time) — allows matinee + evening same day
     seen_slots = set()
     deduped = []
     for e in all_events:
-        slot = (e.get("venue",""), e.get("date",""))
+        slot = (e.get("venue",""), e.get("date",""), e.get("time",""))
         if slot not in seen_slots:
             seen_slots.add(slot)
             deduped.append(e)
