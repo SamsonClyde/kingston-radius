@@ -1360,14 +1360,11 @@ def scrape_silk_factory():
                         m2 = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+),?\s+(\d{4})", text, re.I)
                         date_str = fmt_date(m2.group(1), m2.group(2), int(m2.group(3))) if m2 else ""
                 tm = re.search(r"(\d+:\d+\s*[ap]m|\d+\s*[ap]m)", text, re.I)
-                time_str = fmt_time(tm.group(1)) if tm else "11:00 am"
-                # Silk Factory Sunday Sounds brunch is the primary recurring show
-                title = "Sunday Sounds with Hurley Mountain Highway"
-                time_str = "11:00 am"
+                time_str = fmt_time(tm.group(1)) if tm else ""
                 link_el = block.select_one("a[href]")
                 event_url = link_el["href"] if link_el else "https://silkfcty.com/live-entertainment/"
                 if not event_url.startswith("http"): event_url = "https://silkfcty.com" + event_url
-                if date_str:
+                if title and date_str:
                     events.append({"title":title,"date":date_str,"time":time_str,
                         "venue":"Silk Factory","venueUrl":event_url,
                         "location":"Newburgh, NY",
@@ -1375,9 +1372,7 @@ def scrape_silk_factory():
                         "price":"See website","free":False})
             except Exception as e: print(f"  Silk Factory item error: {e}")
     except Exception as e: print(f"Silk Factory error: {e}")
-    seen=set(); unique=[e for e in events if e["date"] not in set() and not set().add(e["date"])]
-    # dedup by date for this venue
-    seen_d=set(); unique=[e for e in events if e["date"] not in seen_d and not seen_d.add(e["date"])]
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
     print(f"Silk Factory: {len(unique)} events"); return unique
 
 # ─── CITY WINERY HUDSON VALLEY (Newburgh) ─────────────────────────────────────
