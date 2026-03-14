@@ -1106,6 +1106,18 @@ const EVENTS = [
   {
     id: 93,
     date: "2026-03-13",
+    title: "Tasi",
+    venue: "Keegan Ales",
+    venueUrl: "https://www.keeganales.com/event/tasi/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    time: "7:30PM",
+    price: "Free",
+    free: true
+  },
+  {
+    id: 94,
+    date: "2026-03-13",
     title: "Bruce Foley and John NolanBack by Popular Demand!",
     venue: "Tompkins Corners Cultural Center",
     venueUrl: "https://www.eventbrite.com/e/1982047797317?aff=oddtdtcreator",
@@ -1113,18 +1125,6 @@ const EVENTS = [
     mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
     time: "7:30pm",
     price: "$25",
-    free: false
-  },
-  {
-    id: 94,
-    date: "2026-03-13",
-    title: "Karaoke Night at Castaways Bar & Grill",
-    venue: "Castaways Bar & Grill",
-    venueUrl: "https://www.facebook.com/CastawaysMarinaNY/",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.app.goo.gl/gvATHUWZ93QoKnRE7",
-    time: "7:00 pm",
-    price: "See website",
     free: false
   },
   {
@@ -2138,11 +2138,11 @@ const EVENTS = [
   {
     id: 179,
     date: "2026-04-04",
-    title: "Coyote Island at The Lemon Squeeze Tavern",
-    venue: "The Lemon Squeeze",
-    venueUrl: "https://thelemonsqueezenewpaltz.com/events/",
-    location: "New Paltz, NY",
-    mapsUrl: "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
+    title: "A Whole Nother Album Release Show @ Keegan Ales w/ Bird Week",
+    venue: "Keegan Ales",
+    venueUrl: "https://linktr.ee/awholenother",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Keegan%20Ales%20Kingston%2C%20NY",
     time: "7:00 pm",
     price: "See website",
     free: false
@@ -2150,11 +2150,11 @@ const EVENTS = [
   {
     id: 180,
     date: "2026-04-04",
-    title: "A Whole Nother Album Release Show @ Keegan Ales w/ Bird Week",
-    venue: "Keegan Ales",
-    venueUrl: "https://linktr.ee/awholenother",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Keegan%20Ales%20Kingston%2C%20NY",
+    title: "Coyote Island at The Lemon Squeeze Tavern",
+    venue: "The Lemon Squeeze",
+    venueUrl: "https://thelemonsqueezenewpaltz.com/events/",
+    location: "New Paltz, NY",
+    mapsUrl: "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
     time: "7:00 pm",
     price: "See website",
     free: false
