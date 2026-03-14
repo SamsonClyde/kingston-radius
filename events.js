@@ -1183,7 +1183,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/sunday-sounds-with-hurley-mountain-highway/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "202611:00 am",
+    time: "",
     price: "See website",
     free: false
   },
@@ -1447,7 +1447,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/line-dancing-night-at-silk-factory/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20267:00 pm",
+    time: "",
     price: "See website",
     free: false
   },
@@ -1507,7 +1507,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/lucky-house-at-silk-factory/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "202611:00 am",
+    time: "",
     price: "See website",
     free: false
   },
@@ -1699,7 +1699,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/generals-gathered-tribute-to-black-sabbath-ozzy-osbourne/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20268:00 pm",
+    time: "",
     price: "See website",
     free: false
   },
@@ -1783,7 +1783,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/alice-in-chains-by-facelift-with-hindsight-90s-grunge-show/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20267:30 pm",
+    time: "",
     price: "See website",
     free: false
   },
@@ -1819,7 +1819,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/brian-collazo-at-silk-factory/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "202611:00 am",
+    time: "",
     price: "See website",
     free: false
   },
@@ -1975,7 +1975,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/emo-night/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20267:00 pm",
+    time: "",
     price: "See website",
     free: false
   },
@@ -2047,7 +2047,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/super-trans-am-70s-rock-show-2/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20268:00 pm",
+    time: "",
     price: "See website",
     free: false
   },
@@ -2239,7 +2239,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/latin-night-at-silk-factory/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20267:00 pm",
+    time: "",
     price: "See website",
     free: false
   },
@@ -2491,7 +2491,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/shotguns-n-roses-a-powerful-blast-of-gnr/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20268:00 pm",
+    time: "",
     price: "See website",
     free: false
   },
@@ -2551,7 +2551,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/suckapunch-at-silk-factory/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20266:00 pm",
+    time: "",
     price: "See website",
     free: false
   },
@@ -2611,7 +2611,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/sunday-sounds-with-tony-depaolo-20/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "202611:00 am",
+    time: "",
     price: "See website",
     free: false
   },
@@ -2899,7 +2899,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/anthony-robustiano/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20268:00 pm",
+    time: "",
     price: "See website",
     free: false
   },
@@ -3163,7 +3163,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/one-funny-lisa-marie-the-stand-by-me-tour/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20266:00 pm",
+    time: "",
     price: "See website",
     free: false
   },
@@ -3283,7 +3283,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/core-the-ultimate-90s-2000s-alternative-rock-tribute-band/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20267:00 pm",
+    time: "",
     price: "See website",
     free: false
   },
@@ -3523,7 +3523,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/funk-junkies-at-silk-factory/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20267:00 pm",
+    time: "",
     price: "See website",
     free: false
   },
@@ -3859,7 +3859,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/newburgh-voice-contest/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20266:00 pm",
+    time: "",
     price: "See website",
     free: false
   },
@@ -4627,7 +4627,7 @@ const EVENTS = [
     venueUrl: "https://silkfcty.com/events/gaspare-randazzo/",
     location: "Newburgh, NY",
     mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    time: "20268:00 pm",
+    time: "",
     price: "See website",
     free: false
   },
