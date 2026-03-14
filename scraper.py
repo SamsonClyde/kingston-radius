@@ -20,6 +20,8 @@ def fmt_time(raw):
     if not raw:
         return ""
     t = raw.strip()
+    # Guard: if a 4-digit year is embedded (e.g. "202611:00"), strip it
+    t = re.sub(r'^\d{4}', '', t).strip()
     # Already correct: "8:00 pm" or "11:00 am"
     m = re.match(r'^(\d{1,2}):(\d{2})\s*([ap]m)$', t, re.I)
     if m:
@@ -1350,17 +1352,22 @@ def scrape_silk_factory():
                 if not title or len(title) < 3: continue
                 text = clean(block.get_text())
                 date_el = block.select_one("time[datetime]")
+                date_str = ""
                 if date_el:
-                    date_str = date_el.get("datetime","")[:10]
-                else:
+                    raw_dt = date_el.get("datetime","")
+                    # Proper ISO: "2026-03-15" or "2026-03-15T11:00:00"
+                    iso = re.search(r'(\d{4}-\d{2}-\d{2})', raw_dt)
+                    date_str = iso.group(1) if iso else ""
+                if not date_str:
                     m = re.search(r"(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})", text, re.I)
                     if m:
                         date_str = fmt_date(m.group(2)[:3], m.group(1), int(m.group(3))) or ""
                     else:
                         m2 = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+),?\s+(\d{4})", text, re.I)
                         date_str = fmt_date(m2.group(1), m2.group(2), int(m2.group(3))) if m2 else ""
-                tm = re.search(r"(\d+:\d+\s*[ap]m|\d+\s*[ap]m)", text, re.I)
-                time_str = fmt_time(tm.group(1)) if tm else ""
+                # Match time carefully — must not grab a year like "2026"
+                tm = re.search(r'\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b', text, re.I)
+                time_str = fmt_time(tm.group(0)) if tm else ""
                 link_el = block.select_one("a[href]")
                 event_url = link_el["href"] if link_el else "https://silkfcty.com/live-entertainment/"
                 if not event_url.startswith("http"): event_url = "https://silkfcty.com" + event_url
