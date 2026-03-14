@@ -574,38 +574,47 @@ def scrape_spotty_dog():
     return unique
 
 # ─── TOMPKINS CORNERS CULTURAL CENTER ────────────────────────────────────────
-# Simple Wix-based site with a calendar.html page — static HTML
+# Wix site — music.html has h2 headings like "Artist Name\nDate, Time"
 def scrape_tompkins():
     events = []
     try:
-        r = requests.get("https://www.tompkinscorners.org/calendar.html", headers=HEADERS, timeout=15)
+        r = requests.get("https://www.tompkinscorners.org/music.html", headers=HEADERS, timeout=15)
         soup = BeautifulSoup(r.text, "html.parser")
-        for block in soup.select("p, div, li, td"):
+        for h2 in soup.find_all("h2"):
             try:
-                text = clean(block.get_text())
-                if len(text) < 10:
+                text = clean(h2.get_text())
+                if not text or len(text) < 3:
                     continue
-                m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
-                if not m:
+                # h2 contains artist name + optional subtitle + date like "Saturday, March 21st, 7:30 pm"
+                # Split on common date words
+                date_match = re.search(
+                    r"(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\s+"
+                    r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)\w*,?\s+(\d+:\d+\s*[ap]m)",
+                    text, re.I)
+                if not date_match:
                     continue
-                date_str = fmt_date(m.group(1), m.group(2)) or ""
-                # Title heuristic: bold or first line before pipe/dash
-                title_el = block.select_one("strong, b, a")
-                title = clean(title_el.get_text()) if title_el else text[:60]
-                if not title or len(title) < 3:
+                # Title = everything before the date
+                title = text[:date_match.start()].strip().strip('*').strip()
+                if not title or len(title) < 2:
                     continue
-                tm = re.search(r"(\d+:\d+\s*[ap]m|\d+\s*[AP]M)", text, re.I)
-                time_str = tm.group(1) if tm else "7:30 PM"
-                link_el = block.select_one("a[href]")
-                event_url = link_el["href"] if link_el else "https://www.tompkinscorners.org/calendar.html"
-                if not event_url.startswith("http"):
-                    event_url = "https://www.tompkinscorners.org" + event_url
+                date_str = fmt_date(date_match.group(2), date_match.group(3)) or ""
+                time_str = date_match.group(4)
+                # Get ticket link from sibling content
+                ticket_link = ""
+                for sib in h2.find_next_siblings():
+                    if sib.name == "h2":
+                        break
+                    a = sib.find("a", href=re.compile(r"eventbrite|tix|ticket", re.I))
+                    if a:
+                        ticket_link = a.get("href","")
+                        break
+                event_url = ticket_link or "https://www.tompkinscorners.org/music.html"
                 if title and date_str:
                     events.append({"title": title, "date": date_str, "time": time_str,
                         "venue": "Tompkins Corners Cultural Center", "venueUrl": event_url,
                         "location": "Putnam Valley, NY",
                         "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-                        "price": "See website", "free": False})
+                        "price": "$25", "free": False})
             except Exception as e:
                 print(f"  Tompkins item error: {e}")
     except Exception as e:
@@ -973,8 +982,79 @@ def scrape_kingston_happenings():
                 wm = re.search(r"Where\s+(.+?)(?:\n|When|$)", text)
                 venue_name = clean(wm.group(1)) if wm else "Kingston Area"
 
-            location = "Kingston, NY"
-            maps_url = f"https://maps.google.com/?q={requests.utils.quote(venue_name+' Kingston NY')}"
+            # ── Venue overrides: correct URLs, maps, names, and cities ──
+            VENUE_OVERRIDES = {
+                "castaways bar and grill": {
+                    "name": "Castaways Bar & Grill",
+                    "url": "https://www.facebook.com/CastawaysMarinaNY/",
+                    "maps": "https://maps.app.goo.gl/gvATHUWZ93QoKnRE7",
+                    "city": "Kingston, NY",
+                },
+                "colony woodstock ny": {
+                    "name": "Colony Woodstock",
+                    "url": "https://www.colonywoodstock.com/shows",
+                    "maps": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+                    "city": "Woodstock, NY",
+                },
+                "woodstock playhouse": {
+                    "name": "Woodstock Playhouse",
+                    "url": "https://woodstockplayhouse.org",
+                    "maps": "https://maps.app.goo.gl/C2RVThJ4DH67hQjG9",
+                    "city": "Woodstock, NY",
+                },
+                "hudson valley lgbtq community center": {
+                    "name": "Hudson Valley LGBTQ Community Center",
+                    "url": "https://www.lgbtqcenter.org/calendar",
+                    "maps": "https://maps.google.com/?q=300+Wall+St+Kingston+NY",
+                    "city": "Kingston, NY",
+                },
+                "overlook united methodist church": {
+                    "name": "Overlook United Methodist Church",
+                    "url": "http://www.umcwoodstockny.com/index.html",
+                    "maps": "https://maps.google.com/?q=Overlook+United+Methodist+Church+Woodstock+NY",
+                    "city": "Woodstock, NY",
+                },
+                "tempo arts": {
+                    "name": "Tempo Arts",
+                    "url": "https://tempokingston.org/events/",
+                    "maps": "https://maps.google.com/?q=Tempo+Kingston+NY",
+                    "city": "Kingston, NY",
+                },
+                "wildhart": {
+                    "name": "WildHeart: Center for Performance and Embodiment Practice",
+                    "url": "https://www.wearewildarts.org/",
+                    "maps": "https://maps.app.goo.gl/M96f9nLwu18iK7g37",
+                    "city": "Kingston, NY",
+                },
+                "wildarts": {
+                    "name": "WildHeart: Center for Performance and Embodiment Practice",
+                    "url": "https://www.wearewildarts.org/",
+                    "maps": "https://maps.app.goo.gl/M96f9nLwu18iK7g37",
+                    "city": "Kingston, NY",
+                },
+                "new paltz": {
+                    "name": "The Lemon Squeeze",
+                    "url": "https://thelemonsqueezenewpaltz.com/events/",
+                    "maps": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
+                    "city": "New Paltz, NY",
+                },
+            }
+            key = venue_name.lower().strip()
+            override = None
+            for k, v in VENUE_OVERRIDES.items():
+                if k in key or key in k:
+                    override = v
+                    break
+            if override:
+                venue_name = override["name"]
+                venue_url = override["url"]
+                maps_url = override["maps"]
+                location = override["city"]
+            else:
+                # Infer city from venue name / address text
+                city_match = re.search(r"(?:Woodstock|Saugerties|Rosendale|New Paltz|Catskill|Hudson|Rhinebeck|Bearsville|Phoenicia)", venue_name + " " + text, re.I)
+                location = (city_match.group(0).title() + ", NY") if city_match else "Kingston, NY"
+                maps_url = f"https://maps.google.com/?q={requests.utils.quote(venue_name + ' ' + location)}"
 
             # Skip non-music / non-concert events (karaoke, fitness, community)
             cats_els = soup.select("a[href*='/events/categories/']")
@@ -1026,6 +1106,425 @@ def scrape_lively_arts():
     seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
     print(f"Lively Arts at Chatham: {len(unique)} events"); return unique
 
+# ─── LEMON SQUEEZE (New Paltz) ───────────────────────────────────────────────
+# WordPress site — events listed as h3 headings "monthDD: artist"
+def scrape_lemon_squeeze():
+    events = []
+    try:
+        r = requests.get("https://thelemonsqueezenewpaltz.com/events/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        current_year = datetime.now().year
+        for h3 in soup.find_all("h3"):
+            try:
+                text = clean(h3.get_text())
+                if not text or len(text) < 4:
+                    continue
+                # Pattern: "march13: far trio" or "April 11: Vinyl Biscuit Band"
+                m = re.match(
+                    r"(jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|"
+                    r"jul(?:y)?|aug(?:ust)?|sep(?:tember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)"
+                    r"\s*(\d+)\s*:?\s*(.+)", text, re.I)
+                if not m:
+                    continue
+                month_str = m.group(1)[:3]
+                day_str = m.group(2)
+                title = m.group(3).strip().strip('*').strip()
+                if not title or title.lower() in ("get tickets", "cover at door"):
+                    continue
+                date_str = fmt_date(month_str, day_str) or ""
+                # Ticket link from next sibling <a>
+                event_url = "https://thelemonsqueezenewpaltz.com/events/"
+                next_a = h3.find_next("a", href=re.compile(r"ticket", re.I))
+                if next_a:
+                    # Only grab if it's close (before next h3)
+                    for sib in h3.find_next_siblings():
+                        if sib.name == "h3":
+                            break
+                        a = sib.find("a", href=re.compile(r"ticket", re.I)) if hasattr(sib, "find") else None
+                        if a:
+                            event_url = a.get("href", event_url)
+                            break
+                # Price
+                price_sib = ""
+                for sib in h3.find_next_siblings():
+                    if sib.name == "h3":
+                        break
+                    st = clean(sib.get_text()) if hasattr(sib, "get_text") else ""
+                    if "cover at door" in st.lower():
+                        price_sib = "Cover at door"
+                        break
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": "",
+                        "venue": "The Lemon Squeeze", "venueUrl": event_url,
+                        "location": "New Paltz, NY",
+                        "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
+                        "price": price_sib or "See website", "free": False})
+            except Exception as e:
+                print(f"  Lemon Squeeze item error: {e}")
+    except Exception as e:
+        print(f"Lemon Squeeze error: {e}")
+    seen = set()
+    unique = [e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Lemon Squeeze: {len(unique)} events")
+    return unique
+
+
+# ─── ASHOKAN CENTER ───────────────────────────────────────────────────────────
+# WordPress site — h4 headings with inline date like "Sun, Mar 29 at 3 PM"
+def scrape_ashokan():
+    events = []
+    try:
+        r = requests.get("https://ashokancenter.org/events/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for h4 in soup.find_all("h4"):
+            try:
+                a = h4.find("a")
+                if not a: continue
+                text = clean(a.get_text())
+                # Format: "Event Title Mon, Month DD at H:MM AM/PM"
+                m = re.match(r"(.+?)\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+)\s+(?:at\s+)?(\d+:\d+\s*[AP]M)", text, re.I)
+                if not m:
+                    # Try simpler: title then date in format "Title Mon, Mar 29 at 3 PM"
+                    m2 = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+)", text, re.I)
+                    if not m2: continue
+                    title = text[:m2.start()].strip(" -,")
+                    date_str = fmt_date(m2.group(1), m2.group(2)) or ""
+                    tm = re.search(r"(\d+:\d+\s*[AP]M|\d+\s*[AP]M)", text, re.I)
+                    time_str = tm.group(1) if tm else ""
+                else:
+                    title = m.group(1).strip()
+                    date_str = fmt_date(m.group(3), m.group(4)) or ""
+                    time_str = m.group(5)
+                if not title or len(title) < 3: continue
+                # Skip non-music events
+                lower = title.lower()
+                skip_words = ["retreat", "yoga", "wellness", "hike", "maple fest", "earth fest", "field trip", "workshop", "conference"]
+                if any(w in lower for w in skip_words): continue
+                event_url = a.get("href","") or "https://ashokancenter.org/events/"
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "The Ashokan Center", "venueUrl": event_url,
+                        "location": "Olivebridge, NY",
+                        "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
+                        "price": "See website", "free": False})
+            except Exception as e: print(f"  Ashokan item error: {e}")
+    except Exception as e: print(f"Ashokan error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Ashokan Center: {len(unique)} events"); return unique
+
+# ─── PARAMOUNT HUDSON VALLEY (Peekskill) ──────────────────────────────────────
+# WordPress events page — article blocks with h2 title and date in meta
+def scrape_paramount():
+    events = []
+    try:
+        r = requests.get("https://paramounthudsonvalley.com/events/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article, .tribe-event, .type-tribe_events"):
+            try:
+                title_el = block.select_one("h2,h3,.tribe-event-url,a")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    date_str = date_el.get("datetime","")[:10]
+                else:
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+),?\s+(\d{4})", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2), int(m.group(3))) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else "8:00 PM"
+                link_el = block.select_one("a[href*='/events/']")
+                event_url = link_el["href"] if link_el else "https://paramounthudsonvalley.com/events/"
+                if not event_url.startswith("http"): event_url = "https://paramounthudsonvalley.com" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Paramount Hudson Valley","venueUrl":event_url,
+                        "location":"Peekskill, NY",
+                        "mapsUrl":"https://maps.google.com/?q=1008+Brown+St+Peekskill+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  Paramount item error: {e}")
+    except Exception as e: print(f"Paramount error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Paramount Hudson Valley: {len(unique)} events"); return unique
+
+# ─── TOWNE CRIER CAFÉ (Beacon) ────────────────────────────────────────────────
+# Homepage lists events with "Weekday, Month DD, YYYY | H:MM pm" format
+def scrape_towne_crier():
+    events = []
+    try:
+        r = requests.get("https://townecrier.com/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        text = soup.get_text()
+        # Pattern: "Friday, March 13, 2026 | 8:00 pm\nTitle text"
+        blocks = re.split(r'\n{2,}', text)
+        current_date = ""
+        current_time = ""
+        for block in blocks:
+            block = clean(block)
+            dm = re.match(r"(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+),\s+(\d{4})\s*\|\s*(\d+:\d+\s*[ap]m)", block, re.I)
+            if dm:
+                current_date = fmt_date(dm.group(1), dm.group(2), int(dm.group(3))) or ""
+                current_time = dm.group(4)
+            elif current_date and len(block) > 5 and len(block) < 200:
+                # Skip nav/boilerplate
+                if any(w in block.lower() for w in ["home","menu","about","contact","gallery","tickets","buy","follow","©","http","subscribe"]): continue
+                title = block.split("\n")[0].strip()[:120]
+                if title and len(title) > 4:
+                    events.append({"title": title, "date": current_date, "time": current_time,
+                        "venue": "Towne Crier Café", "venueUrl": "https://townecrier.com/",
+                        "location": "Beacon, NY",
+                        "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+                        "price": "See website", "free": False})
+                    current_date = ""
+    except Exception as e: print(f"Towne Crier error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Towne Crier: {len(unique)} events"); return unique
+
+# ─── SILK FACTORY (Newburgh) ──────────────────────────────────────────────────
+# WordPress/custom — events page with date blocks
+def scrape_silk_factory():
+    events = []
+    try:
+        r = requests.get("https://silkfcty.com/live-entertainment/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article, .tribe-event, .type-tribe_events, .event-item, li"):
+            try:
+                title_el = block.select_one("h1,h2,h3,h4,.event-title,strong")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    date_str = date_el.get("datetime","")[:10]
+                else:
+                    m = re.search(r"(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})", text, re.I)
+                    if m:
+                        date_str = fmt_date(m.group(2)[:3], m.group(1), int(m.group(3))) or ""
+                    else:
+                        m2 = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+),?\s+(\d{4})", text, re.I)
+                        date_str = fmt_date(m2.group(1), m2.group(2), int(m2.group(3))) if m2 else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else "8:00 PM"
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://silkfcty.com/live-entertainment/"
+                if not event_url.startswith("http"): event_url = "https://silkfcty.com" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Silk Factory","venueUrl":event_url,
+                        "location":"Newburgh, NY",
+                        "mapsUrl":"https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  Silk Factory item error: {e}")
+    except Exception as e: print(f"Silk Factory error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Silk Factory: {len(unique)} events"); return unique
+
+# ─── CITY WINERY HUDSON VALLEY (Newburgh) ─────────────────────────────────────
+def scrape_city_winery():
+    events = []
+    try:
+        r = requests.get("https://citywinery.com/hudsonvalley/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article,.event-listing,.show-listing,.tribe-event,.type-tribe_events"):
+            try:
+                title_el = block.select_one("h1,h2,h3,.event-title,.show-title")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    date_str = date_el.get("datetime","")[:10]
+                else:
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+),?\s+(\d{4})", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2), int(m.group(3))) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://citywinery.com/hudsonvalley/"
+                if not event_url.startswith("http"): event_url = "https://citywinery.com" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"City Winery Hudson Valley","venueUrl":event_url,
+                        "location":"Newburgh, NY",
+                        "mapsUrl":"https://maps.google.com/?q=23+S+Water+St+Newburgh+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  City Winery item error: {e}")
+    except Exception as e: print(f"City Winery error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"City Winery Hudson Valley: {len(unique)} events"); return unique
+
+# ─── GLEASON'S (Peekskill) ────────────────────────────────────────────────────
+def scrape_gleasons():
+    events = []
+    try:
+        r = requests.get("https://gleasonspeekskill.com/events/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article,.tribe-event,.type-tribe_events,.eventlist-event"):
+            try:
+                title_el = block.select_one("h1,h2,h3,a")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    date_str = date_el.get("datetime","")[:10]
+                else:
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://gleasonspeekskill.com/events/"
+                if not event_url.startswith("http"): event_url = "https://gleasonspeekskill.com" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Gleason's","venueUrl":event_url,
+                        "location":"Peekskill, NY",
+                        "mapsUrl":"https://maps.google.com/?q=911+South+St+Peekskill+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  Gleason's item error: {e}")
+    except Exception as e: print(f"Gleason's error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Gleason's: {len(unique)} events"); return unique
+
+# ─── STISSING CENTER (Pine Plains) ───────────────────────────────────────────
+def scrape_stissing():
+    events = []
+    try:
+        r = requests.get("https://stissingcenter.org/events/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article,.tribe-event,.type-tribe_events"):
+            try:
+                title_el = block.select_one("h1,h2,h3,a")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    date_str = date_el.get("datetime","")[:10]
+                else:
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://stissingcenter.org/events/"
+                if not event_url.startswith("http"): event_url = "https://stissingcenter.org" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Stissing Center","venueUrl":event_url,
+                        "location":"Pine Plains, NY",
+                        "mapsUrl":"https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  Stissing item error: {e}")
+    except Exception as e: print(f"Stissing error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Stissing Center: {len(unique)} events"); return unique
+
+# ─── MAJED J. NESHEIWAT CONVENTION CENTER (Poughkeepsie) ──────────────────────
+def scrape_nesheiwat():
+    events = []
+    try:
+        r = requests.get("https://www.dutchessstadium.com/events/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article,.tribe-event,.type-tribe_events"):
+            try:
+                title_el = block.select_one("h1,h2,h3")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    date_str = date_el.get("datetime","")[:10]
+                else:
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://www.dutchessstadium.com/events/"
+                if not event_url.startswith("http"): event_url = "https://www.dutchessstadium.com" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Majed J. Nesheiwat Convention Center","venueUrl":event_url,
+                        "location":"Poughkeepsie, NY",
+                        "mapsUrl":"https://maps.google.com/?q=14+Civic+Center+Plz+Poughkeepsie+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  Nesheiwat item error: {e}")
+    except Exception as e: print(f"Nesheiwat error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Nesheiwat Convention Center: {len(unique)} events"); return unique
+
+# ─── LIFEBRIDGE SANCTUARY (Rosendale/nearby) ─────────────────────────────────
+def scrape_lifebridge():
+    events = []
+    try:
+        r = requests.get("https://www.lifebridge.org/events/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article,.tribe-event,.type-tribe_events"):
+            try:
+                title_el = block.select_one("h1,h2,h3")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                lower = text.lower()
+                if not any(w in lower for w in ["music","concert","band","performance","jazz","folk","sing"]): continue
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    date_str = date_el.get("datetime","")[:10]
+                else:
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://www.lifebridge.org/events/"
+                if not event_url.startswith("http"): event_url = "https://www.lifebridge.org" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"LifeBridge Sanctuary","venueUrl":event_url,
+                        "location":"Rosendale, NY",
+                        "mapsUrl":"https://maps.google.com/?q=LifeBridge+Rosendale+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  LifeBridge item error: {e}")
+    except Exception as e: print(f"LifeBridge error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"LifeBridge: {len(unique)} events"); return unique
+
+# ─── GENERIC HELPER for Tribe Events WordPress sites ─────────────────────────
+def scrape_generic_tribe(url, venue_name, city, maps_url, fallback_url=None):
+    events = []
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article,.tribe-event,.type-tribe_events,.eventlist-event,.summary-item"):
+            try:
+                title_el = block.select_one("h1,h2,h3,.tribe-event-url,a")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    date_str = date_el.get("datetime","")[:10]
+                else:
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else (fallback_url or url)
+                domain = re.match(r"(https?://[^/]+)", url)
+                if domain and not event_url.startswith("http"):
+                    event_url = domain.group(1) + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":venue_name,"venueUrl":event_url,"location":city,
+                        "mapsUrl":maps_url,"price":"See website","free":False})
+            except: pass
+    except Exception as e: print(f"{venue_name} error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"{venue_name}: {len(unique)} events"); return unique
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 def main():
     all_events = []
@@ -1053,6 +1552,44 @@ def main():
     all_events += scrape_catskill_brewery()
     all_events += scrape_lively_arts()
     all_events += scrape_kingston_happenings()
+    all_events += scrape_lemon_squeeze()
+    # Ashokan Center
+    all_events += scrape_ashokan()
+    # Peekskill
+    all_events += scrape_paramount()
+    all_events += scrape_gleasons()
+    all_events += scrape_generic_tribe("https://kinosaitoarts.org/events/","KinoSaito Arts Center","Peekskill, NY","https://maps.google.com/?q=600+Washington+St+Verplanck+NY")
+    all_events += scrape_generic_tribe("https://peekskillcoffee.com/events/","Peekskill Coffee House","Peekskill, NY","https://maps.google.com/?q=101+S+Division+St+Peekskill+NY")
+    all_events += scrape_generic_tribe("https://factorybarandgrill.com/events/","Factory Bar & Grill","Peekskill, NY","https://maps.google.com/?q=Factory+Bar+Grill+Peekskill+NY")
+    all_events += scrape_generic_tribe("https://www.deckpeekskill.com/events","The Deck at Peekskill Brewery","Peekskill, NY","https://maps.google.com/?q=47+S+Water+St+Peekskill+NY")
+    all_events += scrape_generic_tribe("https://peekskillbrewery.com/events/","Peekskill Brewery","Peekskill, NY","https://maps.google.com/?q=47+S+Water+St+Peekskill+NY")
+    all_events += scrape_generic_tribe("https://www.thehivewoodstock.com/events","The Hive","Peekskill, NY","https://maps.google.com/?q=The+Hive+Peekskill+NY")
+    all_events += scrape_generic_tribe("https://www.dragonflypeekskill.com/events","Dragonfly","Peekskill, NY","https://maps.google.com/?q=Dragonfly+Peekskill+NY")
+    all_events += scrape_generic_tribe("https://hudson-valley.eventful.com/","Hudson Valley Arts Center","Peekskill, NY","https://maps.google.com/?q=Hudson+Valley+Arts+Peekskill+NY")
+    # Poughkeepsie
+    all_events += scrape_nesheiwat()
+    all_events += scrape_generic_tribe("https://www.bardavon.org/","Bardavon","Poughkeepsie, NY","https://maps.google.com/?q=35+Market+St+Poughkeepsie+NY")
+    all_events += scrape_generic_tribe("https://www.thechancetheater.com/events/","The Chance Theater","Poughkeepsie, NY","https://maps.google.com/?q=6+Crannell+St+Poughkeepsie+NY")
+    all_events += scrape_generic_tribe("https://bardavon.org/upac/","UPAC","Kingston, NY","https://maps.google.com/?q=601+Broadway+Kingston+NY")
+    all_events += scrape_generic_tribe("https://townecrier.com/events/","Towne Crier Café","Beacon, NY","https://maps.google.com/?q=379+Main+St+Beacon+NY")
+    all_events += scrape_towne_crier()
+    all_events += scrape_generic_tribe("https://cafezinnkingston.com/events/","Cafe Zinn","Poughkeepsie, NY","https://maps.google.com/?q=Cafe+Zinn+Poughkeepsie+NY")
+    all_events += scrape_generic_tribe("https://walkwaymartinsdale.com/events/","Walkway Brewing at Martinsdale","Poughkeepsie, NY","https://maps.google.com/?q=Walkway+Brewing+Poughkeepsie+NY")
+    all_events += scrape_generic_tribe("https://rhinecliff.com/events/","Rhinecliff Hotel","Rhinecliff, NY","https://maps.google.com/?q=4+Grinnell+St+Rhinecliff+NY")
+    all_events += scrape_generic_tribe("https://hyphenatedbrewing.com/events/","Hyphenated Brewing","Poughkeepsie, NY","https://maps.google.com/?q=Hyphenated+Brewing+Poughkeepsie+NY")
+    all_events += scrape_generic_tribe("https://www.mahoneysirshpub.com/events/","Mahoney's Irish Pub","Poughkeepsie, NY","https://maps.google.com/?q=Mahoneys+Irish+Pub+Poughkeepsie+NY")
+    all_events += scrape_stissing()
+    # Newburgh
+    all_events += scrape_silk_factory()
+    all_events += scrape_city_winery()
+    all_events += scrape_generic_tribe("https://theellisnewburgh.com/events/","The Ellis","Newburgh, NY","https://maps.google.com/?q=The+Ellis+Newburgh+NY")
+    all_events += scrape_generic_tribe("https://powerhousearts.org/events/","Powerhouse Arts","Newburgh, NY","https://maps.google.com/?q=Powerhouse+Arts+Newburgh+NY")
+    all_events += scrape_generic_tribe("https://newburghbrewing.com/events/","Newburgh Brewing Company","Newburgh, NY","https://maps.google.com/?q=88+Colden+St+Newburgh+NY")
+    all_events += scrape_generic_tribe("https://www.torchfly.com/events/","Torchfly","Newburgh, NY","https://maps.google.com/?q=Torchfly+Newburgh+NY")
+    all_events += scrape_generic_tribe("https://thedrinkingbird.com/events/","The Drinking Bird","Newburgh, NY","https://maps.google.com/?q=The+Drinking+Bird+Newburgh+NY")
+    all_events += scrape_generic_tribe("https://balmvillefarm.com/events/","Balmville Farm","Newburgh, NY","https://maps.google.com/?q=Balmville+Farm+Newburgh+NY")
+    all_events += scrape_generic_tribe("https://cornwallonhudson.com/events/","Hudson Valley Newburgh area","Newburgh, NY","https://maps.google.com/?q=Newburgh+NY")
+    all_events += scrape_generic_tribe("https://theMARKsaugerties.com/events/","The Mark","Saugerties, NY","https://maps.google.com/?q=The+Mark+Saugerties+NY")
 
     # Deduplicate: one event per (venue, date) — keep first occurrence
     seen_slots = set()
