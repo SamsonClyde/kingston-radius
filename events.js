@@ -1696,7 +1696,7 @@ const EVENTS = [
     date: "2026-03-26",
     title: "A Women’s History Celebration: Doc – Frida Kahlo & Drumsong Orchestra",
     venue: "Rosendale Theater",
-    venueUrl: "https://www.bwpkingston.com/",
+    venueUrl: "https://www.apartmenthomeliving.com/apartment-finder/Orchard-Hills-Apartment-Homes-Kingston-NY-12401-192736",
     location: "Rosendale, NY",
     mapsUrl: "https://maps.google.com/?q=Rosendale%20Theater%20Rosendale%2C%20NY",
     time: "7:00 pm",
