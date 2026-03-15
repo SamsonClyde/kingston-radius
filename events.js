@@ -2272,7 +2272,7 @@ const EVENTS = [
     date: "2026-04-09",
     title: "Song Circle",
     venue: "WildHeart: Center for Performance and Embodiment Practice",
-    venueUrl: "https://www.rwhm.com/",
+    venueUrl: "https://www.apartmenthomeliving.com/apartment-finder/Orchard-Hills-Apartment-Homes-Kingston-NY-12401-192736",
     location: "Kingston, NY",
     mapsUrl: "https://maps.google.com/?q=WildHeart%3A%20Center%20for%20Performance%20and%20Embodiment%20Practice%20Kingston%2C%20NY",
     time: "7:00 pm",
