@@ -2170,6 +2170,53 @@ def scrape_station_bar():
         "https://maps.google.com/?q=Station+Bar+Curio+Woodstock+NY"
     )
 
+# ─── THE LOCAL (Saugerties) ───────────────────────────────────────────────────
+# Squarespace — /calendar page, same .eventlist-event structure as Tubby's
+def scrape_the_local():
+    events = []
+    try:
+        r = requests.get("https://www.thelocalsaugerties.com/calendar", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select(".eventlist-event, article"):
+            try:
+                title_el = block.select_one(".eventlist-title, h1, h2, h3")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    raw_dt = date_el.get("datetime","")
+                    iso = re.search(r'(\d{4}-\d{2}-\d{2})', raw_dt)
+                    date_str = iso.group(1) if iso else ""
+                    if iso:
+                        after = raw_dt[iso.end():].lstrip('T ')
+                        tm_attr = re.match(r'(\d{1,2}:\d{2})', after)
+                        time_str = fmt_time(tm_attr.group(1)) if tm_attr else ""
+                    else:
+                        time_str = ""
+                else:
+                    text = clean(block.get_text())
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+),?\s+(\d{4})", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2), int(m.group(3))) if m else ""
+                    tm = re.search(r'\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b', text, re.I)
+                    time_str = fmt_time(tm.group(0)) if tm else ""
+                if not time_str:
+                    text = clean(block.get_text())
+                    tm = re.search(r'\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b', text, re.I)
+                    time_str = fmt_time(tm.group(0)) if tm else ""
+                link_el = block.select_one("a.eventlist-title-link, a[href*='/event']")
+                event_url = link_el["href"] if link_el else "https://www.thelocalsaugerties.com/calendar"
+                if event_url.startswith("/"): event_url = "https://www.thelocalsaugerties.com" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"The Local","venueUrl":event_url,
+                        "location":"Saugerties, NY",
+                        "mapsUrl":"https://maps.google.com/?q=16+John+St+Saugerties+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  The Local item error: {e}")
+    except Exception as e: print(f"The Local error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"The Local: {len(unique)} events"); return unique
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 def main():
     all_events = []
@@ -2208,6 +2255,7 @@ def main():
     all_events += scrape_darkside_records()
     all_events += scrape_green_kill()
     all_events += scrape_station_bar()
+    all_events += scrape_the_local()
     # ── LIBRARIES ──
     all_events += scrape_mhls_libcal()           # Kingston, Woodstock, Saugerties, Stone Ridge, etc.
     all_events += scrape_adriance()              # Poughkeepsie
