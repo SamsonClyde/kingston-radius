@@ -13,7 +13,14 @@ MONTHS = {
 }
 
 def clean(text):
-    return re.sub(r'\s+', ' ', text).strip() if text else ""
+    if not text:
+        return ""
+    # Insert space where lowercase runs into uppercase (smashed titles)
+    # Matches: "HildalandA captivating" → "Hildaland A captivating"
+    # Also:    "Too BlueOriginal"       → "Too Blue Original"
+    # But not: "MoCA", "UPAC", "BBQ"   (consecutive uppercase left alone)
+    text = re.sub(r'([a-z])([A-Z])', r'\1 \2', text)
+    return re.sub(r'\s+', ' ', text).strip()
 
 def fmt_time(raw):
     """Normalize any time string to 'H:MM am' or 'H:MM pm' format."""
@@ -1495,16 +1502,39 @@ def scrape_bard_conservatory():
                     m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+),\s+(\d{4})", date_text, re.I)
                     if not m: continue
                     date_str = fmt_date(m.group(1), m.group(2), int(m.group(3))) or ""
-                    # Look back ~200 chars for the title
-                    start = max(0, match.start() - 300)
-                    before = text_full[start:match.start()].strip()
-                    lines_before = [l.strip() for l in before.splitlines() if l.strip()]
-                    title = lines_before[-1] if lines_before else ""
+                    # Get text after the date match (contains location, time, title all jammed together)
+                    after_date = text_full[match.end():match.end()+300]
+                    # Strip leading location like "Bard Hall, " or "Fisher Center, "
+                    after_date = re.sub(r'^[A-Z][^,\n]{1,40},\s*', '', after_date.strip())
+                    # Extract time range like "12:30–1:30 pm" or "7:30 pm" — may have no space after
+                    time_str = ""
+                    tm = re.search(
+                        r'(\d{1,2}:\d{2})\s*[–\-]\s*\d{1,2}:\d{2}\s*([ap]m)'  # range "12:30–1:30 pm"
+                        r'|(\d{1,2}:\d{2})\s*([ap]m)'                            # single "7:30 pm" or "7:30pm"
+                        r'|(\d{1,2})\s*([ap]m)',                                  # bare "7 pm" or "7pm"
+                        after_date, re.I)
+                    if tm:
+                        if tm.group(1) and tm.group(2):
+                            time_str = fmt_time(tm.group(1) + ' ' + tm.group(2))
+                        elif tm.group(3) and tm.group(4):
+                            time_str = fmt_time(tm.group(3) + ' ' + tm.group(4))
+                        elif tm.group(5) and tm.group(6):
+                            time_str = fmt_time(tm.group(5) + ':00 ' + tm.group(6))
+                        after_date = after_date[tm.end():].strip()
+                    # Title: first substantial line after stripping date/location/time
+                    title_lines = [l.strip() for l in after_date.splitlines() if l.strip()]
+                    title = title_lines[0][:150] if title_lines else ""
+                    # Also try looking before the date for the title
+                    if not title or len(title) < 5:
+                        start = max(0, match.start() - 300)
+                        before = text_full[start:match.start()].strip()
+                        lines_before = [l.strip() for l in before.splitlines() if l.strip()]
+                        title = lines_before[-1] if lines_before else ""
+                    # Strip any leading date/weekday from title
+                    title = re.sub(r'^(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)[,\s]+', '', title, flags=re.I)
+                    title = re.sub(r'^(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+\d+,?\s*\d*\s*', '', title, flags=re.I)
+                    title = title.strip(' ,–-')
                     if not title or len(title) < 3 or not is_music_event(title): continue
-                    # Time after the date
-                    after_date = text_full[match.end():match.end()+100]
-                    tm = re.search(r'\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b|\b([1-9]|1[0-2])\s*[ap]m\b', after_date, re.I)
-                    time_str = fmt_time(tm.group(0)) if tm else ""
                     # Avoid duplicates from the block pass
                     key = title + date_str
                     if not any(e["title"]+e["date"] == key for e in events):
