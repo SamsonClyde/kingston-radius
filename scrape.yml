@@ -1,0 +1,51 @@
+name: Scrape Events
+
+on:
+  schedule:
+    - cron: '0 11 * * *'  # 6am EST (UTC-5) / 7am EDT (UTC-4) — runs once daily
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper
+        run: python scraper.py
+
+      - name: Commit updated events.js
+        run: |
+          git config user.name "Kingston Radius Bot"
+          git config user.email "bot@kingstonradius.netlify.app"
+          git add events.js
+          git diff --staged --quiet || git commit -m "Auto-update events $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "Scraper failed — check the Actions log at https://github.com/${{ github.repository }}/actions"
+          # Optional: uncomment and add SLACK_WEBHOOK secret to repo for Slack alerts
+          # curl -s -X POST "${{ secrets.SLACK_WEBHOOK }}" \
+          #   -H "Content-Type: application/json" \
+          #   -d "{\"text\":\"❌ Kingston Radius scraper failed: https://github.com/${{ github.repository }}/actions\"}"
