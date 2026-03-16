@@ -1306,37 +1306,218 @@ def scrape_paramount():
     print(f"Paramount Hudson Valley: {len(unique)} events"); return unique
 
 # ─── TOWNE CRIER CAFÉ (Beacon) ────────────────────────────────────────────────
-# Homepage lists events with "Weekday, Month DD, YYYY | H:MM pm" format
+# WordPress site — /shows/ page lists events with Tribe Events structure
 def scrape_towne_crier():
     events = []
-    try:
-        r = requests.get("https://townecrier.com/", headers=HEADERS, timeout=15)
-        soup = BeautifulSoup(r.text, "html.parser")
-        text = soup.get_text()
-        # Pattern: "Friday, March 13, 2026 | 8:00 pm\nTitle text"
-        blocks = re.split(r'\n{2,}', text)
-        current_date = ""
-        current_time = ""
-        for block in blocks:
-            block = clean(block)
-            dm = re.match(r"(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+),\s+(\d{4})\s*\|\s*(\d+:\d+\s*[ap]m)", block, re.I)
-            if dm:
-                current_date = fmt_date(dm.group(1), dm.group(2), int(dm.group(3))) or ""
-                current_time = dm.group(4)
-            elif current_date and len(block) > 5 and len(block) < 200:
-                # Skip nav/boilerplate
-                if any(w in block.lower() for w in ["home","menu","about","contact","gallery","tickets","buy","follow","©","http","subscribe"]): continue
-                title = block.split("\n")[0].strip()[:120]
-                if title and len(title) > 4:
-                    events.append({"title": title, "date": current_date, "time": current_time,
-                        "venue": "Towne Crier Café", "venueUrl": "https://townecrier.com/",
-                        "location": "Beacon, NY",
-                        "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
-                        "price": "See website", "free": False})
-                    current_date = ""
-    except Exception as e: print(f"Towne Crier error: {e}")
+    for url in ["https://townecrier.com/shows/", "https://townecrier.com/events/", "https://townecrier.com/"]:
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            if r.status_code != 200:
+                continue
+            soup = BeautifulSoup(r.text, "html.parser")
+            # Try Tribe Events blocks first
+            blocks = soup.select("article, .tribe-event, .type-tribe_events, .show-item, .event-item")
+            if blocks:
+                for block in blocks:
+                    try:
+                        title_el = block.select_one("h1,h2,h3,.tribe-event-url,a")
+                        title = clean(title_el.get_text()) if title_el else ""
+                        if not title or len(title) < 3: continue
+                        text = clean(block.get_text())
+                        date_el = block.select_one("time[datetime]")
+                        if date_el:
+                            raw_dt = date_el.get("datetime","")
+                            iso = re.search(r'(\d{4}-\d{2}-\d{2})', raw_dt)
+                            date_str = iso.group(1) if iso else ""
+                            if iso:
+                                after = raw_dt[iso.end():].lstrip('T ')
+                                tm_attr = re.match(r'(\d{1,2}:\d{2})', after)
+                                time_str = fmt_time(tm_attr.group(1)) if tm_attr else ""
+                            else:
+                                time_str = ""
+                        else:
+                            m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+),?\s+(\d{4})", text, re.I)
+                            date_str = fmt_date(m.group(1), m.group(2), int(m.group(3))) if m else ""
+                            tm = re.search(r'\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b', text, re.I)
+                            time_str = fmt_time(tm.group(0)) if tm else ""
+                        link_el = block.select_one("a[href]")
+                        event_url = link_el["href"] if link_el else url
+                        if not event_url.startswith("http"): event_url = "https://townecrier.com" + event_url
+                        if title and date_str:
+                            events.append({"title":title,"date":date_str,"time":time_str,
+                                "venue":"Towne Crier Café","venueUrl":event_url,
+                                "location":"Beacon, NY",
+                                "mapsUrl":"https://maps.google.com/?q=379+Main+St+Beacon+NY",
+                                "price":"See website","free":False})
+                    except Exception as e: print(f"  Towne Crier item error: {e}")
+                if events:
+                    break
+            else:
+                # Fallback: parse plain text "Weekday, Month DD, YYYY | H:MM pm\nTitle"
+                text = soup.get_text()
+                lines = [clean(l) for l in text.splitlines() if clean(l)]
+                i = 0
+                while i < len(lines):
+                    dm = re.match(
+                        r"(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*,\s+"
+                        r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+),\s+(\d{4})"
+                        r"(?:\s*[|–-]\s*(\d+:\d+\s*[ap]m))?", lines[i], re.I)
+                    if dm:
+                        date_str = fmt_date(dm.group(1), dm.group(2), int(dm.group(3))) or ""
+                        time_str = fmt_time(dm.group(4)) if dm.group(4) else ""
+                        # Title is on the next non-empty line
+                        j = i + 1
+                        while j < len(lines) and len(lines[j]) < 4: j += 1
+                        if j < len(lines):
+                            title = lines[j][:120]
+                            skip = ["home","menu","about","contact","©","http","tickets","subscribe","follow","buy now"]
+                            if title and len(title) > 4 and not any(w in title.lower() for w in skip):
+                                events.append({"title":title,"date":date_str,"time":time_str,
+                                    "venue":"Towne Crier Café","venueUrl":"https://townecrier.com/",
+                                    "location":"Beacon, NY",
+                                    "mapsUrl":"https://maps.google.com/?q=379+Main+St+Beacon+NY",
+                                    "price":"See website","free":False})
+                    i += 1
+                if events: break
+        except Exception as e:
+            print(f"Towne Crier ({url}) error: {e}")
     seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
     print(f"Towne Crier: {len(unique)} events"); return unique
+
+# ─── GLEN FALLS HOUSE (Round Top) ─────────────────────────────────────────────
+# Squarespace site — .eventlist-event blocks, same structure as Tubby's/Assembly
+def scrape_glen_falls_house():
+    events = []
+    try:
+        r = requests.get("https://glenfallshouse.com/event-calendar", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select(".eventlist-event, article"):
+            try:
+                title_el = block.select_one(".eventlist-title, h1, h2, h3")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                # Skip non-music events
+                lower = title.lower()
+                skip_words = ["private event", "closed", "retreat", "wedding", "brunch menu",
+                              "yoga", "hike", "farm", "dinner reservation", "holiday party"]
+                if any(w in lower for w in skip_words): continue
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    raw_dt = date_el.get("datetime","")
+                    iso = re.search(r'(\d{4}-\d{2}-\d{2})', raw_dt)
+                    date_str = iso.group(1) if iso else ""
+                    if iso:
+                        after = raw_dt[iso.end():].lstrip('T ')
+                        tm_attr = re.match(r'(\d{1,2}:\d{2})', after)
+                        time_str = fmt_time(tm_attr.group(1)) if tm_attr else ""
+                    else:
+                        time_str = ""
+                else:
+                    text = clean(block.get_text())
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+),?\s+(\d{4})", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2), int(m.group(3))) if m else ""
+                    tm = re.search(r'\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b', text, re.I)
+                    time_str = fmt_time(tm.group(0)) if tm else ""
+                link_el = block.select_one("a.eventlist-title-link, a[href*='/event']")
+                event_url = link_el["href"] if link_el else "https://glenfallshouse.com/event-calendar"
+                if event_url.startswith("/"): event_url = "https://glenfallshouse.com" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"Glen Falls House","venueUrl":event_url,
+                        "location":"Round Top, NY",
+                        "mapsUrl":"https://maps.google.com/?q=810+Route+296+Round+Top+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  Glen Falls House item error: {e}")
+    except Exception as e: print(f"Glen Falls House error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Glen Falls House: {len(unique)} events"); return unique
+
+# ─── BARD CONSERVATORY ────────────────────────────────────────────────────────
+# Static HTML — events listed as paragraphs with date, title, time, location
+def scrape_bard_conservatory():
+    events = []
+    urls = [
+        "https://www.bard.edu/conservatory/events/",
+        f"https://www.bard.edu/inside/calendar/event/?year={datetime.now().year}&month={datetime.now().month}",
+        f"https://www.bard.edu/inside/calendar/event/?year={datetime.now().year}&month={datetime.now().month + 1 if datetime.now().month < 12 else 1}",
+    ]
+    for url in urls:
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            if r.status_code != 200: continue
+            soup = BeautifulSoup(r.text, "html.parser")
+            # Bard conservatory events page: h2/h3 headings with title, followed by date/time text
+            # Also try article/event blocks
+            for block in soup.select("article, .event, .tribe-event, li.event-item, div.event-item"):
+                try:
+                    title_el = block.select_one("h1,h2,h3,h4,a")
+                    title = clean(title_el.get_text()) if title_el else ""
+                    if not title or len(title) < 3: continue
+                    if not is_music_event(title): continue
+                    text = clean(block.get_text())
+                    date_el = block.select_one("time[datetime]")
+                    if date_el:
+                        raw_dt = date_el.get("datetime","")
+                        iso = re.search(r'(\d{4}-\d{2}-\d{2})', raw_dt)
+                        date_str = iso.group(1) if iso else ""
+                        if iso:
+                            after = raw_dt[iso.end():].lstrip('T ')
+                            tm_attr = re.match(r'(\d{1,2}:\d{2})', after)
+                            time_str = fmt_time(tm_attr.group(1)) if tm_attr else ""
+                        else:
+                            time_str = ""
+                    else:
+                        # Format from search results: "Sunday, January 25, 2026 ... 4 pm"
+                        m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+),?\s+(\d{4})", text, re.I)
+                        date_str = fmt_date(m.group(1), m.group(2), int(m.group(3))) if m else ""
+                        tm = re.search(r'\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b|\b([1-9]|1[0-2])\s*[ap]m\b', text, re.I)
+                        time_str = fmt_time(tm.group(0)) if tm else ""
+                    link_el = block.select_one("a[href]")
+                    event_url = link_el["href"] if link_el else url
+                    if event_url.startswith("/"): event_url = "https://www.bard.edu" + event_url
+                    if title and date_str:
+                        events.append({"title":title,"date":date_str,"time":time_str,
+                            "venue":"Bard College Conservatory","venueUrl":event_url,
+                            "location":"Annandale-on-Hudson, NY",
+                            "mapsUrl":"https://maps.google.com/?q=61+Blithewood+Ave+Annandale-on-Hudson+NY",
+                            "price":"Free","free":True})
+                except Exception as e: print(f"  Bard Conservatory item error: {e}")
+            # Also try plain-text parsing for the conservatory events page
+            # Format: "Title\nDate, Time\nLocation"
+            text_full = soup.get_text()
+            pattern = re.compile(
+                r'((?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s+'
+                r'(?:January|February|March|April|May|June|July|August|September|October|November|December)'
+                r'\s+\d+,\s+\d{4})',re.I)
+            for match in pattern.finditer(text_full):
+                try:
+                    date_text = match.group(1)
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+),\s+(\d{4})", date_text, re.I)
+                    if not m: continue
+                    date_str = fmt_date(m.group(1), m.group(2), int(m.group(3))) or ""
+                    # Look back ~200 chars for the title
+                    start = max(0, match.start() - 300)
+                    before = text_full[start:match.start()].strip()
+                    lines_before = [l.strip() for l in before.splitlines() if l.strip()]
+                    title = lines_before[-1] if lines_before else ""
+                    if not title or len(title) < 3 or not is_music_event(title): continue
+                    # Time after the date
+                    after_date = text_full[match.end():match.end()+100]
+                    tm = re.search(r'\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b|\b([1-9]|1[0-2])\s*[ap]m\b', after_date, re.I)
+                    time_str = fmt_time(tm.group(0)) if tm else ""
+                    # Avoid duplicates from the block pass
+                    key = title + date_str
+                    if not any(e["title"]+e["date"] == key for e in events):
+                        events.append({"title":title,"date":date_str,"time":time_str,
+                            "venue":"Bard College Conservatory","venueUrl":url,
+                            "location":"Annandale-on-Hudson, NY",
+                            "mapsUrl":"https://maps.google.com/?q=61+Blithewood+Ave+Annandale-on-Hudson+NY",
+                            "price":"Free","free":True})
+                except: pass
+        except Exception as e: print(f"Bard Conservatory ({url}) error: {e}")
+    seen=set(); unique=[e for e in events if (e["title"]+e["date"]) not in seen and not seen.add(e["title"]+e["date"])]
+    print(f"Bard Conservatory: {len(unique)} events"); return unique
+
 
 # ─── SILK FACTORY (Newburgh) ──────────────────────────────────────────────────
 # WordPress/custom — events page with date blocks
@@ -1891,6 +2072,104 @@ def scrape_libcal(subdomain, venue_name, city, maps_url, cal_id=None):
     seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
     print(f"{venue_name}: {len(unique)} events"); return unique
 
+
+# ─── THE GRAND CROTON ─────────────────────────────────────────────────────────
+# Squarespace — /calendar page, format "Month DD - Title"
+def scrape_grand_croton():
+    events = []
+    try:
+        r = requests.get("https://www.thegrandcroton.com/calendar", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        # Try standard Squarespace eventlist blocks first
+        for block in soup.select(".eventlist-event, article"):
+            try:
+                title_el = block.select_one(".eventlist-title, h1, h2, h3")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3: continue
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    raw_dt = date_el.get("datetime","")
+                    iso = re.search(r'(\d{4}-\d{2}-\d{2})', raw_dt)
+                    date_str = iso.group(1) if iso else ""
+                    if iso:
+                        after = raw_dt[iso.end():].lstrip('T ')
+                        tm_attr = re.match(r'(\d{1,2}:\d{2})', after)
+                        time_str = fmt_time(tm_attr.group(1)) if tm_attr else ""
+                    else:
+                        time_str = ""
+                else:
+                    text = clean(block.get_text())
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+),?\s+(\d{4})", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2), int(m.group(3))) if m else ""
+                    tm = re.search(r'\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b', text, re.I)
+                    time_str = fmt_time(tm.group(0)) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://www.thegrandcroton.com/calendar"
+                if event_url.startswith("/"): event_url = "https://www.thegrandcroton.com" + event_url
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":time_str,
+                        "venue":"The Grand","venueUrl":event_url,
+                        "location":"Croton-on-Hudson, NY",
+                        "mapsUrl":"https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+                        "price":"See website","free":False})
+            except Exception as e: print(f"  The Grand item error: {e}")
+        # Fallback: parse plain text "Month DD - Title" format seen on their site
+        if not events:
+            text = soup.get_text()
+            for m in re.finditer(r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+)\s*[-–]\s*(.+?)(?:\n|$)', text, re.I):
+                title = clean(m.group(3))
+                if not title or len(title) < 3: continue
+                date_str = fmt_date(m.group(1), m.group(2)) or ""
+                if title and date_str:
+                    events.append({"title":title,"date":date_str,"time":"",
+                        "venue":"The Grand","venueUrl":"https://www.thegrandcroton.com/calendar",
+                        "location":"Croton-on-Hudson, NY",
+                        "mapsUrl":"https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+                        "price":"See website","free":False})
+    except Exception as e: print(f"The Grand error: {e}")
+    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"The Grand: {len(unique)} events"); return unique
+
+# ─── PARK THEATER HUDSON ──────────────────────────────────────────────────────
+def scrape_park_theater_hudson():
+    return scrape_generic_tribe(
+        "https://parktheaterhudson.com/events/",
+        "Park Theater Hudson", "Hudson, NY",
+        "https://maps.google.com/?q=337+Warren+St+Hudson+NY"
+    )
+
+# ─── BAD SEED HARD CIDER (Highland) ──────────────────────────────────────────
+def scrape_bad_seed():
+    return scrape_generic_tribe(
+        "https://www.badseedhardcider.com/events/",
+        "Bad Seed Hard Cider", "Highland, NY",
+        "https://maps.google.com/?q=87+Burroughs+Dr+Highland+NY"
+    )
+
+# ─── DARKSIDE RECORDS (Poughkeepsie) ──────────────────────────────────────────
+def scrape_darkside_records():
+    return scrape_generic_tribe(
+        "https://darksiderecords.com/events/",
+        "Darkside Records", "Poughkeepsie, NY",
+        "https://maps.google.com/?q=Darkside+Records+Poughkeepsie+NY"
+    )
+
+# ─── GREEN KILL (Kingston) ────────────────────────────────────────────────────
+def scrape_green_kill():
+    return scrape_generic_tribe(
+        "https://greenkill.org/events/",
+        "Green Kill", "Kingston, NY",
+        "https://maps.google.com/?q=229+Green+Kill+Ave+Kingston+NY"
+    )
+
+# ─── STATION BAR & CURIO (Woodstock) ─────────────────────────────────────────
+def scrape_station_bar():
+    return scrape_generic_tribe(
+        "https://www.stationbarandcurio.com/events/",
+        "Station Bar & Curio", "Woodstock, NY",
+        "https://maps.google.com/?q=Station+Bar+Curio+Woodstock+NY"
+    )
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 def main():
     all_events = []
@@ -1923,6 +2202,12 @@ def main():
     all_events += scrape_ashokan()
     all_events += scrape_monument()
     all_events += scrape_reher()
+    all_events += scrape_grand_croton()
+    all_events += scrape_park_theater_hudson()
+    all_events += scrape_bad_seed()
+    all_events += scrape_darkside_records()
+    all_events += scrape_green_kill()
+    all_events += scrape_station_bar()
     # ── LIBRARIES ──
     all_events += scrape_mhls_libcal()           # Kingston, Woodstock, Saugerties, Stone Ridge, etc.
     all_events += scrape_adriance()              # Poughkeepsie
@@ -1955,6 +2240,8 @@ def main():
     all_events += scrape_generic_tribe("https://bardavon.org/upac/","UPAC","Kingston, NY","https://maps.google.com/?q=601+Broadway+Kingston+NY")
     all_events += scrape_generic_tribe("https://townecrier.com/events/","Towne Crier Café","Beacon, NY","https://maps.google.com/?q=379+Main+St+Beacon+NY")
     all_events += scrape_towne_crier()
+    all_events += scrape_glen_falls_house()
+    all_events += scrape_bard_conservatory()
     all_events += scrape_generic_tribe("https://cafezinnkingston.com/events/","Cafe Zinn","Poughkeepsie, NY","https://maps.google.com/?q=Cafe+Zinn+Poughkeepsie+NY")
     all_events += scrape_generic_tribe("https://walkwaymartinsdale.com/events/","Walkway Brewing at Martinsdale","Poughkeepsie, NY","https://maps.google.com/?q=Walkway+Brewing+Poughkeepsie+NY")
     all_events += scrape_generic_tribe("https://rhinecliff.com/events/","Rhinecliff Hotel","Rhinecliff, NY","https://maps.google.com/?q=4+Grinnell+St+Rhinecliff+NY")
