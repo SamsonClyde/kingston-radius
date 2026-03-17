@@ -1,27 +1,25 @@
 // netlify/functions/events-load.js
-// Reads manual-events.json directly from the GitHub repo (raw content).
+// Reads manual events from JSONBin.io
 
 exports.handler = async () => {
-  const owner = process.env.GITHUB_OWNER;
-  const repo  = process.env.GITHUB_REPO;
+  const binId  = process.env.JSONBIN_BIN_ID;
+  const apiKey = process.env.JSONBIN_API_KEY;
 
-  if (!owner || !repo) {
+  if (!binId || !apiKey) {
     return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: '[]' };
   }
 
   try {
-    // Use raw.githubusercontent.com — no auth needed for public repos
-    const url = `https://raw.githubusercontent.com/${owner}/${repo}/main/manual-events.json`;
-    const resp = await fetch(url);
+    const resp = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`, {
+      headers: { 'X-Master-Key': apiKey },
+    });
 
-    if (resp.status === 404) {
+    if (!resp.ok) {
       return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: '[]' };
     }
 
-    const text = await resp.text();
-    // Validate JSON
-    const parsed = JSON.parse(text);
-    const events = Array.isArray(parsed) ? parsed : [];
+    const data   = await resp.json();
+    const events = Array.isArray(data.record?.events) ? data.record.events : [];
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' },
