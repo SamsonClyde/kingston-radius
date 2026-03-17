@@ -1,5 +1,6 @@
 // netlify/functions/events-save.js
-// Saves manual events to a separate manual-events.json file in GitHub repo.
+// Saves manual events to JSONBin.io — simple key/value JSON storage.
+// Required env vars: JSONBIN_BIN_ID, JSONBIN_API_KEY, ADMIN_SECRET
 
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
@@ -19,49 +20,31 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: `Bad request: ${e.message}` };
   }
 
-  const token = process.env.GITHUB_TOKEN;
-  const owner = process.env.GITHUB_OWNER;
-  const repo  = process.env.GITHUB_REPO;
+  const binId  = process.env.JSONBIN_BIN_ID;
+  const apiKey = process.env.JSONBIN_API_KEY;
 
-  if (!token || !owner || !repo) {
-    return { statusCode: 500, body: 'Missing GITHUB_TOKEN, GITHUB_OWNER or GITHUB_REPO env vars' };
+  if (!binId || !apiKey) {
+    return { statusCode: 500, body: 'Missing JSONBIN_BIN_ID or JSONBIN_API_KEY env vars' };
   }
 
-  const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/manual-events.json`;
-  const headers = {
-    Authorization: `Bearer ${token}`,
-    Accept: 'application/vnd.github.v3+json',
-    'User-Agent': 'KingstonRadius/1.0',
-    'Content-Type': 'application/json',
-  };
+  try {
+    const resp = await fetch(`https://api.jsonbin.io/v3/b/${binId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Master-Key': apiKey,
+        'X-Bin-Versioning': 'false',
+      },
+      body: JSON.stringify({ events }),
+    });
 
-  // Get current SHA (needed for update)
-  let sha = null;
-  const getResp = await fetch(apiUrl, { headers });
-  if (getResp.ok) {
-    const data = await getResp.json();
-    sha = data.sha;
-  }
+    if (!resp.ok) {
+      const txt = await resp.text();
+      return { statusCode: 500, body: `JSONBin error: ${resp.status} ${txt}` };
+    }
 
-  // Write the file
-  const content = Buffer.from(JSON.stringify(events, null, 2)).toString('base64');
-  const body = { message: '[admin] Update manual events', content };
-  if (sha) body.sha = sha;
-
-  let putResp = await fetch(apiUrl, { method: 'PUT', headers, body: JSON.stringify(body) });
-
-  // Retry once on SHA conflict
-  if (putResp.status === 409) {
-    const retry = await fetch(apiUrl, { headers });
-    const retryData = await retry.json();
-    body.sha = retryData.sha;
-    putResp = await fetch(apiUrl, { method: 'PUT', headers, body: JSON.stringify(body) });
-  }
-
-  if (putResp.ok) {
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: events.length }) };
-  } else {
-    const txt = await putResp.text();
-    return { statusCode: 500, body: `GitHub write failed: ${putResp.status} ${txt}` };
+  } catch (e) {
+    return { statusCode: 500, body: `Error: ${e.message}` };
   }
 };
