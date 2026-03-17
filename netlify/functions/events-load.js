@@ -5,20 +5,41 @@ exports.handler = async () => {
     const token  = process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_AUTH_TOKEN;
 
     if (!siteId || !token) {
-      // No Blobs config — return empty array gracefully
       return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: '[]' };
     }
 
-    const resp = await fetch(
+    // Get the pre-signed URL
+    const metaResp = await fetch(
       `https://api.netlify.com/api/v1/sites/${siteId}/blobs/kr-manual-events?context=production`,
       { headers: { Authorization: `Bearer ${token}` } }
     );
 
-    if (resp.status === 404) {
+    if (metaResp.status === 404) {
       return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: '[]' };
     }
 
-    const text = await resp.text();
+    const meta = await metaResp.json();
+
+    // If we got a pre-signed URL, follow it to get the actual data
+    if (meta.url) {
+      const dataResp = await fetch(meta.url);
+      const text = await dataResp.text();
+      // Validate it's actually JSON array
+      try {
+        const parsed = JSON.parse(text);
+        const events = Array.isArray(parsed) ? parsed : [];
+        return {
+          statusCode: 200,
+          headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' },
+          body: JSON.stringify(events),
+        };
+      } catch {
+        return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: '[]' };
+      }
+    }
+
+    // Direct response (no pre-signed URL)
+    const text = await metaResp.text();
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' },
