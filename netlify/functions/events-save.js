@@ -29,7 +29,7 @@ exports.handler = async (event) => {
 
   const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/manual-events.json`;
   const headers = {
-    Authorization: `token ${token}`,
+    Authorization: `Bearer ${token}`,
     Accept: 'application/vnd.github.v3+json',
     'User-Agent': 'KingstonRadius/1.0',
     'Content-Type': 'application/json',
