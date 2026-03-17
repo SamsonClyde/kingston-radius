@@ -1,25 +1,30 @@
 // netlify/functions/events-load.js
-// Returns all manually added events from Netlify Blobs.
-// Called on page load — no auth required (data is public).
-
-const { getStore } = require('@netlify/blobs');
-
 exports.handler = async () => {
   try {
-    const store  = getStore('kr-manual-events');
-    const result = await store.get('events', { type: 'json' });
-    const events = Array.isArray(result) ? result : [];
+    const siteId = process.env.SITE_ID || process.env.NETLIFY_SITE_ID;
+    const token  = process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_AUTH_TOKEN;
+
+    if (!siteId || !token) {
+      // No Blobs config — return empty array gracefully
+      return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: '[]' };
+    }
+
+    const resp = await fetch(
+      `https://api.netlify.com/api/v1/sites/${siteId}/blobs/kr-manual-events?context=production`,
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+
+    if (resp.status === 404) {
+      return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: '[]' };
+    }
+
+    const text = await resp.text();
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' },
-      body: JSON.stringify(events),
+      body: text,
     };
   } catch (e) {
-    // If store is empty or doesn't exist yet, return empty array
-    return {
-      statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
-      body: '[]',
-    };
+    return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: '[]' };
   }
 };
