@@ -1,15 +1,9 @@
 // netlify/functions/events-save.js
-// Saves the full manual events array to Netlify Blobs.
-// Requires X-Admin-Secret header matching ADMIN_SECRET env var.
-
-const { getStore } = require('@netlify/blobs');
-
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method not allowed' };
   }
 
-  // Auth check
   const secret = process.env.ADMIN_SECRET;
   if (!secret || event.headers['x-admin-secret'] !== secret) {
     return { statusCode: 401, body: 'Unauthorized' };
@@ -24,13 +18,32 @@ exports.handler = async (event) => {
   }
 
   try {
-    const store = getStore('kr-manual-events');
-    await store.set('events', events);
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ ok: true, count: events.length }),
-    };
+    const siteId = process.env.SITE_ID || process.env.NETLIFY_SITE_ID;
+    const token  = process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_AUTH_TOKEN;
+
+    if (!siteId || !token) {
+      return { statusCode: 500, body: 'Missing Netlify env vars (NETLIFY_SITE_ID and NETLIFY_AUTH_TOKEN)' };
+    }
+
+    const resp = await fetch(
+      `https://api.netlify.com/api/v1/sites/${siteId}/blobs/kr-manual-events?context=production`,
+      {
+        method: 'PUT',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(events),
+      }
+    );
+
+    if (!resp.ok) {
+      const txt = await resp.text();
+      return { statusCode: 500, body: `Blob PUT failed: ${resp.status} ${txt}` };
+    }
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, count: events.length }) };
   } catch (e) {
-    return { statusCode: 500, body: `Storage error: ${e.message}` };
+    return { statusCode: 500, body: `Error: ${e.message}` };
   }
 };
