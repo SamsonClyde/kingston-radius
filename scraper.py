@@ -1820,6 +1820,86 @@ def scrape_reher():
     )
 
 
+# ─── HUDSON HALL (Hudson, NY) ─────────────────────────────────────────────────
+# Uses The Events Calendar REST API — HTML page is JS-rendered so we bypass it.
+# Filters to "featured" category to match the requested URL.
+def scrape_hudson_hall():
+    events = []
+    try:
+        today = datetime.now().strftime("%Y-%m-%d")
+        page  = 1
+        while True:
+            url = (
+                f"https://hudsonhall.org/wp-json/tribe/events/v1/events"
+                f"?per_page=50&page={page}&start_date={today}&status=publish"
+                f"&categories=featured"
+            )
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            if r.status_code == 404:
+                # Category filter not supported — try without it
+                url = (
+                    f"https://hudsonhall.org/wp-json/tribe/events/v1/events"
+                    f"?per_page=50&page={page}&start_date={today}&status=publish"
+                )
+                r = requests.get(url, headers=HEADERS, timeout=15)
+            if r.status_code != 200:
+                print(f"  Hudson Hall API error: {r.status_code}")
+                break
+            data = r.json()
+            raw_events = data.get("events", [])
+            if not raw_events:
+                break
+            for ev in raw_events:
+                try:
+                    title = clean(ev.get("title", ""))
+                    if not title or len(title) < 3:
+                        continue
+                    start = ev.get("start_date", "")
+                    date_str = start[:10] if start else ""
+                    time_str = ""
+                    if start and "T" in start:
+                        time_str = fmt_time(start[11:16])
+                    elif start and len(start) > 10:
+                        time_str = fmt_time(start[11:16])
+                    elif start and len(start) == 19:
+                        time_str = fmt_time(start[11:16])
+                    # Try plain time from start_date field
+                    if not time_str and start:
+                        m = re.search(r'(\d{2}:\d{2})(?::\d{2})?$', start)
+                        if m:
+                            time_str = fmt_time(m.group(1))
+                    event_url = ev.get("url", "https://hudsonhall.org/events/")
+                    # Check if free
+                    cost = str(ev.get("cost", "")).strip()
+                    free = cost in ("0", "Free", "free", "FREE", "") or "free" in cost.lower()
+                    price = "Free" if free else (cost if cost else "See website")
+                    if title and date_str:
+                        events.append({
+                            "title": title,
+                            "date": date_str,
+                            "time": time_str,
+                            "venue": "Hudson Hall",
+                            "venueUrl": event_url,
+                            "location": "Hudson, NY",
+                            "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
+                            "price": price,
+                            "free": free,
+                        })
+                except Exception as e:
+                    print(f"  Hudson Hall item error: {e}")
+            # Check if there are more pages
+            total_pages = data.get("total_pages", 1)
+            if page >= total_pages:
+                break
+            page += 1
+    except Exception as e:
+        print(f"Hudson Hall error: {e}")
+    seen = set()
+    unique = [e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Hudson Hall: {len(unique)} events")
+    return unique
+
+
 # ═══════════════════════════════════════════════════════════════════════════════
 #  LIBRARIES
 #  Strategy: LibCal JSON API for MHLS libraries (Kingston, Woodstock, Saugerties
@@ -2196,6 +2276,252 @@ def scrape_station_bar():
         "https://maps.google.com/?q=Station+Bar+Curio+Woodstock+NY"
     )
 
+# ─── HUDSON HALL ─────────────────────────────────────────────────────────────
+# WordPress site with SearchWP filtering — scrape the featured events URL
+def scrape_hudson_hall():
+    events = []
+    urls = [
+        "https://hudsonhall.org/events/?_sfm_event_category=featured",
+        "https://hudsonhall.org/events/",
+    ]
+    for url in urls:
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            if r.status_code != 200:
+                continue
+            soup = BeautifulSoup(r.text, "html.parser")
+            # Try standard WordPress event blocks
+            for block in soup.select("article, .type-tribe_events, .tribe-event, .event-item, .entry"):
+                try:
+                    title_el = block.select_one("h1, h2, h3, h4, .entry-title, a")
+                    title = clean(title_el.get_text()) if title_el else ""
+                    if not title or len(title) < 3:
+                        continue
+                    # Skip non-music/performance events
+                    lower = title.lower()
+                    skip = ["exhibition", "exhibit", "gallery", "workshop", "tour", "wedding", "rental", "volunteer"]
+                    if any(w in lower for w in skip):
+                        continue
+                    text = clean(block.get_text())
+                    date_el = block.select_one("time[datetime]")
+                    if date_el:
+                        raw_dt = date_el.get("datetime", "")
+                        iso = re.search(r'(\d{4}-\d{2}-\d{2})', raw_dt)
+                        date_str = iso.group(1) if iso else ""
+                        if iso:
+                            after = raw_dt[iso.end():].lstrip('T ')
+                            tm_attr = re.match(r'(\d{1,2}:\d{2})', after)
+                            time_str = fmt_time(tm_attr.group(1)) if tm_attr else ""
+                        else:
+                            time_str = ""
+                    else:
+                        m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+),?\s+(\d{4})", text, re.I)
+                        date_str = fmt_date(m.group(1), m.group(2), int(m.group(3))) if m else ""
+                        tm = re.search(r'\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b', text, re.I)
+                        time_str = fmt_time(tm.group(0)) if tm else ""
+                    link_el = block.select_one("a[href*='/event/'], a[href*='/events/']")
+                    event_url = link_el["href"] if link_el else "https://hudsonhall.org/events/"
+                    if not event_url.startswith("http"):
+                        event_url = "https://hudsonhall.org" + event_url
+                    free = "free" in text.lower()
+                    if title and date_str:
+                        events.append({
+                            "title": title, "date": date_str, "time": time_str,
+                            "venue": "Hudson Hall", "venueUrl": event_url,
+                            "location": "Hudson, NY",
+                            "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
+                            "price": "Free" if free else "See website", "free": free
+                        })
+                except Exception as e:
+                    print(f"  Hudson Hall item error: {e}")
+            if events:
+                break
+        except Exception as e:
+            print(f"Hudson Hall ({url}) error: {e}")
+    seen = set()
+    unique = [e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Hudson Hall: {len(unique)} events")
+    return unique
+
+
+# ─── ARROWOOD FARMS (Accord/Stone Ridge area) ────────────────────────────────
+# Squarespace events page with live music calendar
+def scrape_arrowood():
+    events = []
+    try:
+        r = requests.get("https://arrowoodfarms.com/free-music-and-events/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select(".eventlist-event, article, .summary-item"):
+            try:
+                title_el = block.select_one(".eventlist-title, h1, h2, h3, .summary-title")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3:
+                    continue
+                lower = title.lower()
+                skip_words = ["movie night", "outdoor movie", "food truck", "sunset flix", "private event"]
+                if any(w in lower for w in skip_words):
+                    continue
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    raw_dt = date_el.get("datetime", "")
+                    iso = re.search(r'(\d{4}-\d{2}-\d{2})', raw_dt)
+                    date_str = iso.group(1) if iso else ""
+                    if iso:
+                        after = raw_dt[iso.end():].lstrip('T ')
+                        tm_attr = re.match(r'(\d{1,2}:\d{2})', after)
+                        time_str = fmt_time(tm_attr.group(1)) if tm_attr else ""
+                    else:
+                        time_str = ""
+                else:
+                    text = clean(block.get_text())
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+),?\s+(\d{4})", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2), int(m.group(3))) if m else ""
+                    tm = re.search(r'\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b', text, re.I)
+                    time_str = fmt_time(tm.group(0)) if tm else ""
+                link_el = block.select_one("a.eventlist-title-link, a[href*='/event']")
+                event_url = link_el["href"] if link_el else "https://arrowoodfarms.com/free-music-and-events/"
+                if event_url.startswith("/"): event_url = "https://arrowoodfarms.com" + event_url
+                text = clean(block.get_text())
+                free = "free" in text.lower()
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "Arrowood Farms", "venueUrl": event_url,
+                        "location": "Accord, NY",
+                        "mapsUrl": "https://maps.google.com/?q=236+Lower+Whitfield+Rd+Accord+NY",
+                        "price": "Free" if free else "See website", "free": free})
+            except Exception as e:
+                print(f"  Arrowood item error: {e}")
+    except Exception as e:
+        print(f"Arrowood Farms error: {e}")
+    seen = set()
+    unique = [e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Arrowood Farms: {len(unique)} events")
+    return unique
+
+# ─── MaMA / MARBLETOWN MULTI-ARTS (Stone Ridge) ───────────────────────────────
+# WordPress site at cometomama.org — concerts and community events
+def scrape_mama_stone_ridge():
+    events = []
+    try:
+        r = requests.get("https://cometomama.org/events/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article, .tribe-event, .type-tribe_events, .event-item"):
+            try:
+                title_el = block.select_one("h1, h2, h3, a")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3:
+                    continue
+                lower = title.lower()
+                skip_words = ["yoga", "tai chi", "qigong", "dance class", "workshop", "gathering"]
+                if any(w in lower for w in skip_words):
+                    continue
+                text = clean(block.get_text())
+                date_el = block.select_one("time[datetime]")
+                if date_el:
+                    date_str = date_el.get("datetime", "")[:10]
+                else:
+                    m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                    date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m)", text, re.I)
+                time_str = tm.group(1) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://cometomama.org/events/"
+                if not event_url.startswith("http"):
+                    event_url = "https://cometomama.org" + event_url
+                free = "free" in text.lower() or "donation" in text.lower()
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "MaMA (Marbletown Multi-Arts)", "venueUrl": event_url,
+                        "location": "Stone Ridge, NY",
+                        "mapsUrl": "https://maps.google.com/?q=3588+Main+St+Stone+Ridge+NY",
+                        "price": "Free" if free else "See website", "free": free})
+            except Exception as e:
+                print(f"  MaMA item error: {e}")
+    except Exception as e:
+        print(f"MaMA error: {e}")
+    seen = set()
+    unique = [e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"MaMA Stone Ridge: {len(unique)} events")
+    return unique
+
+# ─── STONE RIDGE ORCHARD ──────────────────────────────────────────────────────
+# Weebly site — seasonal events with live music, wassail festivals etc.
+def scrape_stone_ridge_orchard():
+    events = []
+    try:
+        r = requests.get("https://www.stoneridgeorchard.com/events.html", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("div, section, article, p"):
+            try:
+                title_el = block.select_one("h1, h2, h3, strong, b")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 4:
+                    continue
+                text = clean(block.get_text())
+                # Must mention music or festival to qualify
+                if not any(w in text.lower() for w in ["music", "concert", "band", "festival", "wassail", "perform"]):
+                    continue
+                m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+)", text, re.I)
+                date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m|\d+\s*[ap]m)", text, re.I)
+                time_str = fmt_time(tm.group(1)) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://www.stoneridgeorchard.com/events.html"
+                if event_url.startswith("/"): event_url = "https://www.stoneridgeorchard.com" + event_url
+                if not event_url.startswith("http"): event_url = "https://www.stoneridgeorchard.com/events.html"
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "Stone Ridge Orchard", "venueUrl": event_url,
+                        "location": "Stone Ridge, NY",
+                        "mapsUrl": "https://maps.google.com/?q=3012+State+Route+213+Stone+Ridge+NY",
+                        "price": "See website", "free": False})
+            except Exception as e:
+                print(f"  Stone Ridge Orchard item error: {e}")
+    except Exception as e:
+        print(f"Stone Ridge Orchard error: {e}")
+    seen = set()
+    unique = [e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Stone Ridge Orchard: {len(unique)} events")
+    return unique
+
+# ─── CHRIST THE KING EPISCOPAL CHURCH (Stone Ridge) ──────────────────────────
+# Folk/Celtic/blues concert series — static HTML at ctkstoneridge.org
+def scrape_ctk_stone_ridge():
+    events = []
+    try:
+        r = requests.get("https://www.ctkstoneridge.org/concerts", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article, .entry, div, p, li"):
+            try:
+                title_el = block.select_one("h1, h2, h3, h4, strong, b")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 4:
+                    continue
+                text = clean(block.get_text())
+                m = re.search(r"(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\.?\s+(\d+)", text, re.I)
+                date_str = fmt_date(m.group(1), m.group(2)) if m else ""
+                tm = re.search(r"(\d+:\d+\s*[ap]m|\d+\s*[ap]m)", text, re.I)
+                time_str = fmt_time(tm.group(1)) if tm else ""
+                link_el = block.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://www.ctkstoneridge.org/concerts"
+                if not event_url.startswith("http"): event_url = "https://www.ctkstoneridge.org" + event_url
+                price_m = re.search(r'\$(\d+)', text)
+                price = f"${price_m.group(1)}" if price_m else "See website"
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "Christ the King Episcopal Church", "venueUrl": event_url,
+                        "location": "Stone Ridge, NY",
+                        "mapsUrl": "https://maps.google.com/?q=3021+State+Route+213+Stone+Ridge+NY",
+                        "price": price, "free": False})
+            except Exception as e:
+                print(f"  CTK item error: {e}")
+    except Exception as e:
+        print(f"CTK Stone Ridge error: {e}")
+    seen = set()
+    unique = [e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Christ the King Stone Ridge: {len(unique)} events")
+    return unique
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 def main():
     all_events = []
@@ -2229,12 +2555,19 @@ def main():
     all_events += scrape_ashokan()
     all_events += scrape_monument()
     all_events += scrape_reher()
+    all_events += scrape_hudson_hall()
     all_events += scrape_grand_croton()
     all_events += scrape_park_theater_hudson()
     all_events += scrape_bad_seed()
     all_events += scrape_darkside_records()
     all_events += scrape_green_kill()
     all_events += scrape_station_bar()
+    # ── Stone Ridge area ──
+    all_events += scrape_arrowood()
+    all_events += scrape_mama_stone_ridge()
+    all_events += scrape_stone_ridge_orchard()
+    all_events += scrape_ctk_stone_ridge()
+    all_events += scrape_hudson_hall()
     # ── LIBRARIES ──
     all_events += scrape_mhls_libcal()           # Kingston, Woodstock, Saugerties, Stone Ridge, etc.
     all_events += scrape_adriance()              # Poughkeepsie
