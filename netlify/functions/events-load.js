@@ -1,12 +1,16 @@
 // netlify/functions/events-load.js
-// Reads manual events from JSONBin.io
+// Returns both manual events and review status from JSONBin.
 
 exports.handler = async () => {
   const binId  = process.env.JSONBIN_BIN_ID;
   const apiKey = process.env.JSONBIN_API_KEY;
 
   if (!binId || !apiKey) {
-    return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: '[]' };
+    return {
+      statusCode: 200,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ events: [], reviewStatus: {} }),
+    };
   }
 
   try {
@@ -15,17 +19,28 @@ exports.handler = async () => {
     });
 
     if (!resp.ok) {
-      return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: '[]' };
+      return {
+        statusCode: 200,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ events: [], reviewStatus: {} }),
+      };
     }
 
-    const data   = await resp.json();
-    const events = Array.isArray(data.record?.events) ? data.record.events : [];
+    const data = await resp.json();
+    const record = data.record || {};
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' },
-      body: JSON.stringify(events),
+      body: JSON.stringify({
+        events:       Array.isArray(record.events) ? record.events : [],
+        reviewStatus: (record.reviewStatus && typeof record.reviewStatus === 'object') ? record.reviewStatus : {},
+      }),
     };
   } catch (e) {
-    return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: '[]' };
+    return {
+      statusCode: 200,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ events: [], reviewStatus: {} }),
+    };
   }
 };
