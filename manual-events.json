@@ -284,5 +284,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 62,
+    "date": "2026-03-26",
+    "title": "Women in Music Honoring Judy Whitfield",
+    "venue": "The Colony",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
