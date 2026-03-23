@@ -1247,52 +1247,59 @@ def scrape_lemon_squeeze():
 
 
 # ─── ASHOKAN CENTER ───────────────────────────────────────────────────────────
-# WordPress site — h4 headings with inline date like "Sun, Mar 29 at 3 PM"
+# WordPress site — events listed as h4 headings or product links
 def scrape_ashokan():
     events = []
-    try:
-        r = requests.get("https://ashokancenter.org/events/", headers=HEADERS, timeout=15)
-        soup = BeautifulSoup(r.text, "html.parser")
-        for h4 in soup.find_all("h4"):
-            try:
-                a = h4.find("a")
-                if not a: continue
-                raw = clean(a.get_text())
-                # Strip trailing day-of-week (Mon/Tue/etc) with or without space
-                raw = re.sub(r'\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*$', '', raw, flags=re.I).strip()
-                # Strip trailing 4-digit year
-                raw = re.sub(r'\s*\b(20\d{2})\b\s*$', '', raw).strip()
-                # Strip trailing day-of-week again (in case year came after dow)
-                raw = re.sub(r'\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*$', '', raw, flags=re.I).strip()
-                # Strip trailing " Concert" (standalone word)
-                raw = re.sub(r'\s+Concert\s*$', '', raw, flags=re.I).strip()
-                # Find and extract the date portion: "Sun, Mar 29 at 3 PM" or "Mar 29"
-                m = re.search(
-                    r'(?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*,?\s+)?'
-                    r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+)'
-                    r'(?:\s+(?:at\s+)?(\d+:\d+\s*[AP]M|\d+\s*[AP]M))?',
-                    raw, re.I)
-                if not m: continue
-                title = raw[:m.start()].strip(' –-,')
-                if not title or len(title) < 3: continue
-                date_str = fmt_date(m.group(1), m.group(2)) or ""
-                time_str = m.group(3) or ""
-                # Skip non-music events
-                lower = title.lower()
-                skip_words = ["retreat", "yoga", "wellness", "hike", "maple fest", "earth fest",
-                              "field trip", "workshop", "conference", "day pass"]
-                if any(w in lower for w in skip_words): continue
-                event_url = a.get("href","") or "https://ashokancenter.org/events/"
-                if title and date_str:
-                    events.append({"title": title, "date": date_str, "time": time_str,
-                        "venue": "The Ashokan Center", "venueUrl": event_url,
-                        "location": "Olivebridge, NY",
-                        "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
-                        "price": "See website", "free": False})
-            except Exception as e: print(f"  Ashokan item error: {e}")
-    except Exception as e: print(f"Ashokan error: {e}")
-    seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
-    print(f"Ashokan Center: {len(unique)} events"); return unique
+    urls = [
+        "https://ashokancenter.org/events/",
+        "https://ashokancenter.org/upcoming-events-calendar/",
+    ]
+    for url in urls:
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            soup = BeautifulSoup(r.text, "html.parser")
+            for h4 in soup.find_all("h4"):
+                try:
+                    a = h4.find("a")
+                    if not a: continue
+                    href = a.get("href", "")
+                    raw = clean(a.get_text())
+                    # Strip trailing day-of-week
+                    raw = re.sub(r'\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*$', '', raw, flags=re.I).strip()
+                    # Strip trailing 4-digit year
+                    raw = re.sub(r'\s*\b(20\d{2})\b\s*$', '', raw).strip()
+                    raw = re.sub(r'\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*$', '', raw, flags=re.I).strip()
+                    raw = re.sub(r'\s+Concert\s*$', '', raw, flags=re.I).strip()
+                    m = re.search(
+                        r'(?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*,?\s+)?'
+                        r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\w*\s+(\d+)'
+                        r'(?:\s+(?:at\s+)?(\d+:\d+\s*[AP]M|\d+\s*[AP]M))?',
+                        raw, re.I)
+                    if not m: continue
+                    title = raw[:m.start()].strip(' –-,')
+                    if not title or len(title) < 3: continue
+                    date_str = fmt_date(m.group(1), m.group(2)) or ""
+                    time_str = m.group(3) or ""
+                    lower = title.lower()
+                    skip_words = ["retreat", "yoga", "wellness", "hike", "maple fest", "earth fest",
+                                  "field trip", "workshop", "conference", "day pass", "hot chocolate",
+                                  "dinner reservation", "farm tour"]
+                    if any(w in lower for w in skip_words): continue
+                    # Use the direct product/event URL if available
+                    event_url = href if href and href.startswith("http") else \
+                                ("https://ashokancenter.org" + href if href else "https://ashokancenter.org/events/")
+                    if title and date_str:
+                        events.append({"title": title, "date": date_str, "time": time_str,
+                            "venue": "The Ashokan Center", "venueUrl": event_url,
+                            "location": "Olivebridge, NY",
+                            "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
+                            "price": "See website", "free": False})
+                except Exception as e: print(f"  Ashokan item error: {e}")
+        except Exception as e: print(f"Ashokan ({url}) error: {e}")
+    seen = set()
+    unique = [e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Ashokan Center: {len(unique)} events")
+    return unique
 
 # ─── PARAMOUNT HUDSON VALLEY (Peekskill) ──────────────────────────────────────
 # WordPress events page — article blocks with h2 title and date in meta
@@ -1562,14 +1569,13 @@ def scrape_silk_factory():
                 time_str = ""
                 if date_el:
                     raw_dt = date_el.get("datetime", "")
-                    # Extract ISO date: "2026-03-15" from anything like "2026-03-15T11:00" or "2026-03-1511:00"
                     iso = re.search(r'(\d{4}-\d{2}-\d{2})', raw_dt)
                     date_str = iso.group(1) if iso else ""
-                    # Extract time from the datetime attribute after the date portion
                     if iso:
                         after = raw_dt[iso.end():].lstrip('T ')
                         tm_attr = re.match(r'(\d{1,2}:\d{2})', after)
-                        if tm_attr:
+                        # Skip midnight placeholder (00:00) — not a real showtime
+                        if tm_attr and tm_attr.group(1) not in ('00:00', '0:00'):
                             time_str = fmt_time(tm_attr.group(1))
                 if not date_str:
                     m = re.search(r"(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})", text, re.I)
