@@ -258,5 +258,18 @@
     "price": "Free",
     "free": true,
     "_manual": true
+  },
+  {
+    "id": 43,
+    "date": "2026-03-23",
+    "title": "Kevin Hays Trio featuring Thomas Morgan & Brian Blade",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "See website",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
