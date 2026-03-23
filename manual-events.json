@@ -323,5 +323,18 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 93,
+    "date": "2026-03-30",
+    "title": "World Famous Open Mic Night",
+    "venue": "The Colony",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "8:00 PM",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
