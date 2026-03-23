@@ -336,5 +336,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 72,
+    "date": "2026-03-27",
+    "title": "Lindsey Webster",
+    "venue": "The Colony",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
