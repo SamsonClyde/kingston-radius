@@ -310,5 +310,18 @@
     "price": "$17",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 92,
+    "date": "2026-03-29",
+    "title": "Honky Tonk Last Sunday w/ Hudson Valley Flyers",
+    "venue": "The Colony",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
