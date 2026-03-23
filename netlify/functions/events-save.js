@@ -1,6 +1,6 @@
 // netlify/functions/events-save.js
-// Saves manual events and/or review status to JSONBin.
-// Accepts: { events: [...] } or { reviewStatus: {...} } or both.
+// Writes manual-events.json and/or review-status.json to GitHub repo.
+// Accepts: { events: [...] } and/or { reviewStatus: {...} }
 
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
@@ -19,50 +19,75 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: `Bad request: ${e.message}` };
   }
 
-  const binId  = process.env.JSONBIN_BIN_ID;
-  const apiKey = process.env.JSONBIN_API_KEY;
+  const token = process.env.GITHUB_TOKEN;
+  const owner = process.env.GITHUB_OWNER;
+  const repo  = process.env.GITHUB_REPO;
 
-  if (!binId || !apiKey) {
-    return { statusCode: 500, body: 'Missing JSONBIN_BIN_ID or JSONBIN_API_KEY' };
+  if (!token || !owner || !repo) {
+    return { statusCode: 500, body: 'Missing GITHUB_TOKEN, GITHUB_OWNER, or GITHUB_REPO' };
   }
 
-  try {
-    // First read current data so we can merge
-    const getResp = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`, {
-      headers: { 'X-Master-Key': apiKey },
+  const headers = {
+    'Authorization': `Bearer ${token}`,
+    'Accept': 'application/vnd.github.v3+json',
+    'User-Agent': 'KingstonRadius/1.0',
+    'Content-Type': 'application/json',
+  };
+
+  async function writeFile(path, data) {
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+
+    // Get current SHA if file exists
+    let sha = null;
+    try {
+      const getResp = await fetch(apiUrl, { headers });
+      if (getResp.ok) {
+        const existing = await getResp.json();
+        sha = existing.sha;
+      }
+    } catch {}
+
+    const content = Buffer.from(JSON.stringify(data, null, 2)).toString('base64');
+    const putBody = JSON.stringify({
+      message: `[admin] Update ${path}`,
+      content,
+      ...(sha ? { sha } : {}),
     });
 
-    let current = { events: [], reviewStatus: {} };
-    if (getResp.ok) {
-      const data = await getResp.json();
-      current = data.record || current;
+    let putResp = await fetch(apiUrl, { method: 'PUT', headers, body: putBody });
+
+    // Retry once on SHA conflict
+    if (putResp.status === 409) {
+      const retryGet = await fetch(apiUrl, { headers });
+      const retryData = await retryGet.json();
+      const retryBody = JSON.stringify({
+        message: `[admin] Update ${path}`,
+        content,
+        sha: retryData.sha,
+      });
+      putResp = await fetch(apiUrl, { method: 'PUT', headers, body: retryBody });
     }
-
-    // Merge incoming fields over current data
-    const merged = {
-      events:       Array.isArray(body.events) ? body.events : (current.events || []),
-      reviewStatus: (body.reviewStatus && typeof body.reviewStatus === 'object')
-                    ? body.reviewStatus
-                    : (current.reviewStatus || {}),
-    };
-
-    const putResp = await fetch(`https://api.jsonbin.io/v3/b/${binId}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Master-Key': apiKey,
-        'X-Bin-Versioning': 'false',
-      },
-      body: JSON.stringify(merged),
-    });
 
     if (!putResp.ok) {
       const txt = await putResp.text();
-      return { statusCode: 500, body: `JSONBin error: ${putResp.status} ${txt}` };
+      throw new Error(`GitHub write failed for ${path}: ${putResp.status} ${txt}`);
     }
+  }
 
+  try {
+    const writes = [];
+    if (Array.isArray(body.events)) {
+      writes.push(writeFile('manual-events.json', body.events));
+    }
+    if (body.reviewStatus && typeof body.reviewStatus === 'object') {
+      writes.push(writeFile('review-status.json', body.reviewStatus));
+    }
+    if (writes.length === 0) {
+      return { statusCode: 400, body: 'No data to save' };
+    }
+    await Promise.all(writes);
     return { statusCode: 200, body: JSON.stringify({ ok: true }) };
   } catch (e) {
-    return { statusCode: 500, body: `Error: ${e.message}` };
+    return { statusCode: 500, body: e.message };
   }
 };
