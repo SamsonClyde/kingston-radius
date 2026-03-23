@@ -1,11 +1,12 @@
 // netlify/functions/events-load.js
-// Returns both manual events and review status from JSONBin.
+// Reads manual-events.json and review-status.json from GitHub repo.
+// Uses raw.githubusercontent.com — no auth needed for public repos.
 
 exports.handler = async () => {
-  const binId  = process.env.JSONBIN_BIN_ID;
-  const apiKey = process.env.JSONBIN_API_KEY;
+  const owner = process.env.GITHUB_OWNER;
+  const repo  = process.env.GITHUB_REPO;
 
-  if (!binId || !apiKey) {
+  if (!owner || !repo) {
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
@@ -13,34 +14,30 @@ exports.handler = async () => {
     };
   }
 
-  try {
-    const resp = await fetch(`https://api.jsonbin.io/v3/b/${binId}/latest`, {
-      headers: { 'X-Master-Key': apiKey },
-    });
+  const base = `https://raw.githubusercontent.com/${owner}/${repo}/main`;
 
-    if (!resp.ok) {
-      return {
-        statusCode: 200,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ events: [], reviewStatus: {} }),
-      };
+  async function fetchJson(path) {
+    try {
+      const resp = await fetch(`${base}/${path}`);
+      if (resp.status === 404) return null;
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      return await resp.json();
+    } catch {
+      return null;
     }
-
-    const data = await resp.json();
-    const record = data.record || {};
-    return {
-      statusCode: 200,
-      headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' },
-      body: JSON.stringify({
-        events:       Array.isArray(record.events) ? record.events : [],
-        reviewStatus: (record.reviewStatus && typeof record.reviewStatus === 'object') ? record.reviewStatus : {},
-      }),
-    };
-  } catch (e) {
-    return {
-      statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ events: [], reviewStatus: {} }),
-    };
   }
+
+  const [eventsRaw, statusRaw] = await Promise.all([
+    fetchJson('manual-events.json'),
+    fetchJson('review-status.json'),
+  ]);
+
+  return {
+    statusCode: 200,
+    headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' },
+    body: JSON.stringify({
+      events:       Array.isArray(eventsRaw) ? eventsRaw : [],
+      reviewStatus: (statusRaw && typeof statusRaw === 'object') ? statusRaw : {},
+    }),
+  };
 };
