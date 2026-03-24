@@ -401,5 +401,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 103,
+    "date": "2026-03-25",
+    "title": "Eye High Quartet",
+    "venue": "Bard College Conservatory",
+    "venueUrl": "https://www.bard.edu/inside/calendar/eye-high-quartet",
+    "location": "Annandale-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=61+Blithewood+Ave+Annandale-on-Hudson+NY",
+    "time": "4:00 pm",
+    "price": "Free",
+    "free": true,
+    "_manual": true
   }
 ]
