@@ -362,5 +362,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 94,
+    "date": "2026-03-31",
+    "title": "Ryan Davis & The Roadhouse Band | Rosali",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/ryan-davis-amp-the-roadhouse-band",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
