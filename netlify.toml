@@ -1,2 +1,4 @@
 [functions]
   node_bundler = "esbuild"
+[build]
+  ignore = "git diff --quiet HEAD^ HEAD -- manual-events.json review-status.json"
