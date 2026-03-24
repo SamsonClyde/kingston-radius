@@ -453,5 +453,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 118,
+    "date": "2026-03-27",
+    "title": "Sal “The Voice” Valentinetti",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The%20Falcon%20Hudson%2C%20NY",
+    "time": "7:30 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
