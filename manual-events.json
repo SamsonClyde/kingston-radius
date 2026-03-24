@@ -479,5 +479,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 120,
+    "date": "2026-03-27",
+    "title": "Marco Benevento and Friends",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Bearsville, NY",
+    "mapsUrl": "https://maps.google.com/?q=Bearsville%20Theater%20Bearsville%2C%20NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
