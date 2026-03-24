@@ -414,5 +414,18 @@
     "price": "Free",
     "free": true,
     "_manual": true
+  },
+  {
+    "id": 108,
+    "date": "2026-03-26",
+    "title": "Women in Music Series Honoring Judy Whitefield",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
