@@ -4081,6 +4081,18 @@ const EVENTS = [
   },
   {
     id: 341,
+    date: "2026-07-22",
+    title: "Lucy Dacus",
+    venue: "Bardavon",
+    venueUrl: "https://www.bardavon.org/",
+    location: "Poughkeepsie, NY",
+    mapsUrl: "https://maps.google.com/?q=35+Market+St+Poughkeepsie+NY",
+    time: "",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 342,
     date: "2026-07-23",
     title: "Shovels & Rope",
     venue: "Levon Helm Studios",
@@ -4092,7 +4104,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 342,
+    id: 343,
     date: "2026-07-23",
     title: "\"Open Book\"",
     venue: "Tompkins Corners Cultural Center",
@@ -4104,7 +4116,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 343,
+    id: 344,
     date: "2026-07-24",
     title: "W M D 2Live on the Outdoor Stage",
     venue: "Tompkins Corners Cultural Center",
@@ -4116,7 +4128,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 344,
+    id: 345,
     date: "2026-07-26",
     title: "Professor Louie & the Crowmatix Rock, Blues, Gospel and American Roots music",
     venue: "Tompkins Corners Cultural Center",
@@ -4128,7 +4140,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 345,
+    id: 346,
     date: "2026-07-27",
     title: "Ray Blue Jazz Quartet - Outdoors!Award-winning jazz composer​ Andy Farber to step in for Ray",
     venue: "Tompkins Corners Cultural Center",
@@ -4140,7 +4152,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 346,
+    id: 347,
     date: "2026-07-27",
     title: "Acoustic Guitar Camp 2026",
     venue: "The Ashokan Center",
@@ -4152,7 +4164,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 347,
+    id: 348,
     date: "2026-07-29",
     title: "Guitar Summit 2026",
     venue: "The Ashokan Center",
@@ -4164,7 +4176,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 348,
+    id: 349,
     date: "2026-08-03",
     title: "Frye & Harris Improvised Soundscapes",
     venue: "Tompkins Corners Cultural Center",
@@ -4176,7 +4188,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 349,
+    id: 350,
     date: "2026-08-05",
     title: "CHEATER SLICKS + SUNBURNED HAND OF THE MAN",
     venue: "Tubby's",
@@ -4188,7 +4200,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 350,
+    id: 351,
     date: "2026-08-06",
     title: "Ray Blue Quartet",
     venue: "Tompkins Corners Cultural Center",
@@ -4200,7 +4212,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 351,
+    id: 352,
     date: "2026-08-07",
     title: "Wyndham Baird Live on the Outdoor Stage",
     venue: "Tompkins Corners Cultural Center",
@@ -4212,7 +4224,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 352,
+    id: 353,
     date: "2026-08-08",
     title: "Outlier Concerts: Nick Hakim with Eddie Chacon, June Mc Doom, Marem Ladson, and Outlier DJs",
     venue: "The Outlier Inn",
@@ -4224,7 +4236,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 353,
+    id: 354,
     date: "2026-08-10",
     title: "Bluegrass Camp 2026",
     venue: "The Ashokan Center",
@@ -4236,7 +4248,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 354,
+    id: 355,
     date: "2026-08-13",
     title: "Tim O’Brien, Sam Grisman & Victor Furtado Trio ft. Jan Fabricius (Night 1)",
     venue: "Levon Helm Studios",
@@ -4248,7 +4260,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 355,
+    id: 356,
     date: "2026-08-13",
     title: "Outlier Presents: The Poetry Society of New York’s Poetry Camp",
     venue: "The Outlier Inn",
@@ -4260,7 +4272,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 356,
+    id: 357,
     date: "2026-08-13",
     title: "Bluegrass Open House 2026",
     venue: "The Ashokan Center",
@@ -4272,7 +4284,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 357,
+    id: 358,
     date: "2026-08-14",
     title: "Tim O’Brien, Sam Grisman & Victor Furtado Trio ft. Jan Fabricius (Night 2)",
     venue: "Levon Helm Studios",
@@ -4284,7 +4296,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 358,
+    id: 359,
     date: "2026-08-15",
     title: "Southern Shindig 2026",
     venue: "The Ashokan Center",
@@ -4296,7 +4308,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 359,
+    id: 360,
     date: "2026-08-16",
     title: "Eddie Allen Jazz Quartet Live on Our Outdoor Stage!",
     venue: "Tompkins Corners Cultural Center",
@@ -4308,7 +4320,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 360,
+    id: 361,
     date: "2026-08-16",
     title: "Southern Week 2026",
     venue: "The Ashokan Center",
@@ -4320,7 +4332,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 361,
+    id: 362,
     date: "2026-08-18",
     title: "Forest Rhythms Retreat",
     venue: "The Outlier Inn",
@@ -4332,7 +4344,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 362,
+    id: 363,
     date: "2026-08-19",
     title: "The Man Without A World Cine Concert with Alicia Svigals and Donald Sosin",
     venue: "Tompkins Corners Cultural Center",
@@ -4344,7 +4356,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 363,
+    id: 364,
     date: "2026-08-21",
     title: "Outlier Presents: Solid Gold Yoga Retreat",
     venue: "The Outlier Inn",
@@ -4356,7 +4368,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 364,
+    id: 365,
     date: "2026-08-22",
     title: "Kieran Kane & Rayna Gellert Celebrated Americana Singer/Songwriters",
     venue: "Tompkins Corners Cultural Center",
@@ -4368,7 +4380,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 365,
+    id: 366,
     date: "2026-08-23",
     title: "Kieran Kane and Rayna Gellert Celebrated Americana Singer/Songwriters",
     venue: "Tompkins Corners Cultural Center",
@@ -4380,7 +4392,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 366,
+    id: 367,
     date: "2026-08-27",
     title: "Howard Britz Trio",
     venue: "Tompkins Corners Cultural Center",
@@ -4392,7 +4404,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 367,
+    id: 368,
     date: "2026-08-28",
     title: "Summer Hoot 2026",
     venue: "The Ashokan Center",
@@ -4404,7 +4416,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 368,
+    id: 369,
     date: "2026-08-29",
     title: "Shinyribs",
     venue: "Levon Helm Studios",
@@ -4416,7 +4428,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 369,
+    id: 370,
     date: "2026-09-03",
     title: "labor day weekend",
     venue: "Glen Falls House",
@@ -4428,7 +4440,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 370,
+    id: 371,
     date: "2026-09-09",
     title: "The Putnam Chorale Summer Ensemble\"Poppin' Through the Decades!\"",
     venue: "Tompkins Corners Cultural Center",
@@ -4440,7 +4452,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 371,
+    id: 372,
     date: "2026-09-10",
     title: "Outlier Concerts and Chosen Family Present: Shannon Lay & co.",
     venue: "The Outlier Inn",
@@ -4452,7 +4464,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 372,
+    id: 373,
     date: "2026-09-13",
     title: "Phineas and the Lonely Leaves Outdoor Family Concert!",
     venue: "Tompkins Corners Cultural Center",
@@ -4464,7 +4476,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 373,
+    id: 374,
     date: "2026-09-17",
     title: "Mamie Minch and Tamar Korn John Cohen Memorial Music Series",
     venue: "Tompkins Corners Cultural Center",
@@ -4476,7 +4488,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 374,
+    id: 375,
     date: "2026-09-20",
     title: "Ukrainian Community Day 2026",
     venue: "The Ashokan Center",
@@ -4488,7 +4500,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 375,
+    id: 376,
     date: "2026-09-23",
     title: "Songs, Stories & Art - Lessons from Strangers A Multimedia Show by John John Brown",
     venue: "Tompkins Corners Cultural Center",
@@ -4500,7 +4512,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 376,
+    id: 377,
     date: "2026-09-26",
     title: "Gaspare Randazzo",
     venue: "Silk Factory",
@@ -4512,7 +4524,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 377,
+    id: 378,
     date: "2026-10-01",
     title: "String Busters ​ Moved indoors Blues to bluegrass to country, folk and more!",
     venue: "Tompkins Corners Cultural Center",
@@ -4524,7 +4536,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 378,
+    id: 379,
     date: "2026-10-04",
     title: "The Down Hill Strugglers Old Time String Band​John Cohen Memorial Music Series",
     venue: "Tompkins Corners Cultural Center",
@@ -4536,7 +4548,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 379,
+    id: 380,
     date: "2026-10-05",
     title: "\"Out To Lunch\"Mixed styles from Bluegrass to Jazz to Celtic",
     venue: "Tompkins Corners Cultural Center",
@@ -4548,7 +4560,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 380,
+    id: 381,
     date: "2026-10-10",
     title: "Fall Yoga Retreat with Solid Gold Yogi",
     venue: "The Outlier Inn",
@@ -4560,7 +4572,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 381,
+    id: 382,
     date: "2026-10-15",
     title: "Benjamin Verdery",
     venue: "Tompkins Corners Cultural Center",
@@ -4572,7 +4584,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 382,
+    id: 383,
     date: "2026-10-17",
     title: "Upcoming Events.",
     venue: "The Outlier Inn",
@@ -4584,7 +4596,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 383,
+    id: 384,
     date: "2026-10-18",
     title: "SUGAR",
     venue: "Basilica Hudson",
@@ -4596,7 +4608,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 384,
+    id: 385,
     date: "2026-10-21",
     title: "Corner House Scottish, progressive bluegrass and folk",
     venue: "Tompkins Corners Cultural Center",
@@ -4608,7 +4620,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 385,
+    id: 386,
     date: "2026-10-29",
     title: "HALLOWEEN WEEKEND",
     venue: "Glen Falls House",
@@ -4620,7 +4632,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 386,
+    id: 387,
     date: "2026-11-01",
     title: "Cole Quest and the City Pickers Not Your Average Bluegrass Band!John Cohen Memorial Music Series",
     venue: "Tompkins Corners Cultural Center",
@@ -4632,7 +4644,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 387,
+    id: 388,
     date: "2026-11-05",
     title: "Maeve Gilchrist",
     venue: "Tompkins Corners Cultural Center",
@@ -4644,7 +4656,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 388,
+    id: 389,
     date: "2026-11-06",
     title: "Banjo Weekend 2026",
     venue: "The Ashokan Center",
@@ -4656,7 +4668,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 389,
+    id: 390,
     date: "2026-11-09",
     title: "Back At It Sam Krugman, Wolfgang Lagomarsini, Timothy E. Pitt​Opening act - Linda Thornton",
     venue: "Tompkins Corners Cultural Center",
@@ -4668,7 +4680,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 390,
+    id: 391,
     date: "2026-11-12",
     title: "George and Ruth: Songs and Letters ofthe Spanish Civil War",
     venue: "Tompkins Corners Cultural Center",
@@ -4680,7 +4692,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 391,
+    id: 392,
     date: "2026-11-16",
     title: "Windborne Music of Midwinter​John Cohen Memorial Music Series",
     venue: "Tompkins Corners Cultural Center",
@@ -4692,7 +4704,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 392,
+    id: 393,
     date: "2026-11-16",
     title: "HOLIDAY BREAK",
     venue: "Glen Falls House",
@@ -4704,7 +4716,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 393,
+    id: 394,
     date: "2026-11-18",
     title: "Down Hill Strugglers Old-time String Band",
     venue: "Tompkins Corners Cultural Center",
@@ -4716,7 +4728,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 394,
+    id: 395,
     date: "2026-11-19",
     title: "NORA BROWNDown Hill Strugglers John Cohen Memorial Music Series",
     venue: "Tompkins Corners Cultural Center",
@@ -4728,7 +4740,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 395,
+    id: 396,
     date: "2026-11-21",
     title: "KJ Denhert And the NY Unit John Cohen Memorial Music Series",
     venue: "Tompkins Corners Cultural Center",
@@ -4740,7 +4752,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 396,
+    id: 397,
     date: "2026-11-23",
     title: "KJ Denhert John Cohen Memorial Music Series",
     venue: "Tompkins Corners Cultural Center",
@@ -4752,7 +4764,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 397,
+    id: 398,
     date: "2026-12-01",
     title: "A Christmas Carol Master Storyteller Jonathan Kruk",
     venue: "Tompkins Corners Cultural Center",
@@ -4764,7 +4776,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 398,
+    id: 399,
     date: "2026-12-03",
     title: "Dream Choir\"Happy\" Concert",
     venue: "Tompkins Corners Cultural Center",
@@ -4776,7 +4788,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 399,
+    id: 400,
     date: "2026-12-13",
     title: "An Evening of Community, Connection, and Healingwith Alison Jolicoeur and Chris Toland",
     venue: "Tompkins Corners Cultural Center",
@@ -4788,7 +4800,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 400,
+    id: 401,
     date: "2026-12-18",
     title: "The Putnam Chorale Songs of the Season",
     venue: "Tompkins Corners Cultural Center",
@@ -4800,7 +4812,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 401,
+    id: 402,
     date: "2026-12-30",
     title: "New Years Eve",
     venue: "Glen Falls House",
@@ -4812,7 +4824,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 402,
+    id: 403,
     date: "2027-03-07",
     title: "Cécilia - Québécois Trio Celtic and Trad Music TICKETS WILL BE AVAILABLE AT THE DOOR.",
     venue: "Tompkins Corners Cultural Center",
@@ -4824,7 +4836,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 403,
+    id: 404,
     date: "2027-03-08",
     title: "Bruce Foley & John Nolan Celebrating Irish Heritage Month",
     venue: "Tompkins Corners Cultural Center",
@@ -4836,7 +4848,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 404,
+    id: 405,
     date: "2027-03-09",
     title: "A Celtic Celebrationwith Liz Hanley, Jefferson Hamer and the TC Ceili Band",
     venue: "Tompkins Corners Cultural Center",
@@ -4848,7 +4860,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 405,
+    id: 406,
     date: "2027-03-10",
     title: "Jerron Paxton + Dennis Lichtman",
     venue: "Tompkins Corners Cultural Center",
@@ -4860,7 +4872,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 406,
+    id: 407,
     date: "2027-03-13",
     title: "Bruce Foley and John Nolan Back by Popular Demand!",
     venue: "Tompkins Corners Cultural Center",
@@ -4872,7 +4884,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 407,
+    id: 408,
     date: "2027-03-13",
     title: "far trio",
     venue: "The Lemon Squeeze",
@@ -4884,7 +4896,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 408,
+    id: 409,
     date: "2027-03-14",
     title: "Up & Orange",
     venue: "The Lemon Squeeze",
@@ -4896,7 +4908,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 409,
+    id: 410,
     date: "2027-04-29",
     title: "Foy Vance: The Wake World Tour",
     venue: "Levon Helm Studios",
