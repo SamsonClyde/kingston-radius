@@ -427,5 +427,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 109,
+    "date": "2026-03-26",
+    "title": "Bridge Arts Community Jazz Band Benefit for Paul Duffy",
+    "venue": "Trinity Lutheran Church",
+    "venueUrl": "https://kingstonhappenings.org/events/bridge-arts-community-jazz-band-benefit-for-paul-duffy/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Trinity%20Lutheran%20Church%20Kingston%2C%20NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
