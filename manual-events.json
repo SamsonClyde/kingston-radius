@@ -544,5 +544,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 129,
+    "date": "2026-03-28",
+    "title": "Flower Pop-Up with Atelier Marguerite!",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
+    "time": "5:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
