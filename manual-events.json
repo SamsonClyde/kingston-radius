@@ -440,5 +440,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 112,
+    "date": "2026-03-26",
+    "title": "EVERY THURSDAY Open Mic Night",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "6:30 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
