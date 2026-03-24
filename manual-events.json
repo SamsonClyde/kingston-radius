@@ -518,5 +518,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 124,
+    "date": "2026-03-27",
+    "title": "Latin Jazz Jam Session #3",
+    "venue": "Bard College Conservatory",
+    "venueUrl": "https://www.bard.edu/inside/calendar/event/?year=2026&month=3",
+    "location": "Annandale-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=61+Blithewood+Ave+Annandale-on-Hudson+NY",
+    "time": "6:00 pm",
+    "price": "Free",
+    "free": true,
+    "_manual": true
   }
 ]
