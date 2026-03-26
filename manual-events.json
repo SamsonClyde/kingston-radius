@@ -583,5 +583,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 133,
+    "date": "2026-03-28",
+    "title": "Greg Hawkes of The Cars with Eddie Japan Performing the Music of The Cars",
+    "venue": "Levon Helm Studios",
+    "venueUrl": "https://levonhelm.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=Levon%20Helm%20Studios%28aka%20The%20Barn%29%20Woodstock%2C%20NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
