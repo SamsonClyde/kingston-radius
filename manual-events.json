@@ -596,5 +596,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 134,
+    "date": "2026-03-28",
+    "title": "Jack Manley w/ Joey Eppard and Leo Lovechild",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
