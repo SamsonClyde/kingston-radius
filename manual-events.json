@@ -609,5 +609,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 135,
+    "date": "2026-03-28",
+    "title": "Martoberfest",
+    "venue": "RMV Cellars",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=RMV%20Cellars%20Kingston%2C%20NY",
+    "time": "2:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
