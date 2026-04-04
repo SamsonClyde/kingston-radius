@@ -700,5 +700,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 230,
+    "date": "2026-04-16",
+    "title": "Hot Reads, Hotter Conversations: A Night of Smut & Connection!",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
