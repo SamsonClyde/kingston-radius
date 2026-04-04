@@ -648,5 +648,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 212,
+    "date": "2026-04-11",
+    "title": "Square Dance Hootenanny",
+    "venue": "Olive Free Library",
+    "venueUrl": "http://givebutter.com/squaredance",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Olive%20Free%20Library%20Rosendale%2C%20NY",
+    "time": "5:30 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
