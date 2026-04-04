@@ -752,5 +752,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 260,
+    "date": "2026-04-22",
+    "title": "The Toasters",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://dcxpclive.com/dcxpc-live-shows/dcxpc-live-presents-the-toasters-tiger-piss-and-the-hedons",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Unicorn%20Bar%20New%20Paltz%2C%20NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
