@@ -596,5 +596,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 178,
+    "date": "2026-04-04",
+    "title": "coyote island [with opener Mr. Mota]",
+    "venue": "The Lemon Squeeze",
+    "venueUrl": "https://thelemonsqueezenewpaltz.com/events/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
