@@ -739,5 +739,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 254,
+    "date": "2026-04-19",
+    "title": "Sunday Sounds with Tony DePaolo",
+    "venue": "Silk Factory",
+    "venueUrl": "https://silkfcty.com/events/sunday-sounds-with-tony-depaolo-20/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
