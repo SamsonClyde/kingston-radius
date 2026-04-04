@@ -713,5 +713,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 235,
+    "date": "2026-04-17",
+    "title": "Bombón and Aw di Body Present: Bombody!",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
