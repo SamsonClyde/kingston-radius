@@ -1,4 +1,8 @@
+
+Copy
+
 [functions]
   node_bundler = "esbuild"
+ 
 [build]
-  ignore = "git diff --quiet HEAD^ HEAD -- manual-events.json review-status.json"
+  ignore = "git diff --name-only HEAD^ HEAD | grep -qvE '^(manual-events\\.json|review-status\\.json)$' && exit 1 || exit 0"
