@@ -687,5 +687,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 228,
+    "date": "2026-04-16",
+    "title": "ART / FILM WORKERS APPRECIATION NIGHT",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/art-film-workers-appreciation-night",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=31+Broadway+Kingston+NY",
+    "time": "4:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
