@@ -622,5 +622,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 196,
+    "date": "2026-04-09",
+    "title": "Song Circle",
+    "venue": "WildHeart: Center for Performance and Embodiment Practice",
+    "venueUrl": "https://www.wildheartcenter.art/",
+    "location": "Wallkill, NY",
+    "mapsUrl": "https://maps.google.com/?q=WildHeart%3A%20Center%20for%20Performance%20and%20Embodiment%20Practice%20Kingston%2C%20NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
