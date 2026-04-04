@@ -726,5 +726,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 248,
+    "date": "2026-04-18",
+    "title": "Suckapunch at Silk Factory",
+    "venue": "Silk Factory",
+    "venueUrl": "https://silkfcty.com/events/suckapunch-at-silk-factory/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
