@@ -635,5 +635,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 205,
+    "date": "2026-04-10",
+    "title": "Latin Night at Silk Factory",
+    "venue": "Silk Factory",
+    "venueUrl": "https://silkfcty.com/events/latin-night-at-silk-factory/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
