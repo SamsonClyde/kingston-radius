@@ -609,5 +609,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 192,
+    "date": "2026-04-08",
+    "title": "Unicorn Bar Presents: OPEN STAGE 3.0",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
