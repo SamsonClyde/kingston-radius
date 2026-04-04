@@ -674,5 +674,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 218,
+    "date": "2026-04-12",
+    "title": "Laurel Massé and the Professors Concert",
+    "venue": "The Ashokan Center",
+    "venueUrl": "https://ashokancenter.org/product/laurel-masse-and-the-professors-concert",
+    "location": "Olivebridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
