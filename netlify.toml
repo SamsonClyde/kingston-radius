@@ -1,6 +1,3 @@
-
-Copy
-
 [functions]
   node_bundler = "esbuild"
  
