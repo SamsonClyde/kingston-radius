@@ -661,5 +661,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 210,
+    "date": "2026-04-11",
+    "title": "Leather + Harness Night: DJ Dalex & DJ Prephab",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
+    "time": "9:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
