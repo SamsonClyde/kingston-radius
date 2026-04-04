@@ -583,5 +583,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 175,
+    "date": "2026-04-04",
+    "title": "The Jones Factor Lite",
+    "venue": "Lydia's Cafe",
+    "venueUrl": "https://www.lydias-cafe.com/events/",
+    "location": "High Falls, NY",
+    "mapsUrl": "https://maps.google.com/?q=Lydia%27s%20Cafe%20Kingston%2C%20NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
