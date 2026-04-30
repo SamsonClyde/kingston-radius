@@ -1,32 +1,27 @@
 // netlify/functions/events-save.js
-// Writes manual-events.json and/or review-status.json to GitHub repo.
+// Writes manual-events.json and/or review-status.json to the `data` branch.
+// Using a separate branch means admin saves never trigger a Netlify deploy.
 // Accepts: { events: [...] } and/or { reviewStatus: {...} }
-
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method not allowed' };
   }
-
   const secret = process.env.ADMIN_SECRET;
   if (!secret || event.headers['x-admin-secret'] !== secret) {
     return { statusCode: 401, body: 'Unauthorized' };
   }
-
   let body;
   try {
     body = JSON.parse(event.body);
   } catch (e) {
     return { statusCode: 400, body: `Bad request: ${e.message}` };
   }
-
   const token = process.env.GITHUB_TOKEN;
   const owner = process.env.GITHUB_OWNER;
   const repo  = process.env.GITHUB_REPO;
-
   if (!token || !owner || !repo) {
     return { statusCode: 500, body: 'Missing GITHUB_TOKEN, GITHUB_OWNER, or GITHUB_REPO' };
   }
-
   const headers = {
     'Authorization': `Bearer ${token}`,
     'Accept': 'application/vnd.github.v3+json',
@@ -34,10 +29,12 @@ exports.handler = async (event) => {
     'Content-Type': 'application/json',
   };
 
-  async function writeFile(path, data) {
-    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+  // Write to the `data` branch so Netlify (watching `main`) never redeploys
+  const DATA_BRANCH = 'data';
 
-    // Get current SHA if file exists
+  async function writeFile(path, data) {
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${DATA_BRANCH}`;
+    // Get current SHA if file exists on data branch
     let sha = null;
     try {
       const getResp = await fetch(apiUrl, { headers });
@@ -46,16 +43,15 @@ exports.handler = async (event) => {
         sha = existing.sha;
       }
     } catch {}
-
     const content = Buffer.from(JSON.stringify(data, null, 2)).toString('base64');
     const putBody = JSON.stringify({
       message: `[admin] Update ${path}`,
       content,
+      branch: DATA_BRANCH,
       ...(sha ? { sha } : {}),
     });
-
-    let putResp = await fetch(apiUrl, { method: 'PUT', headers, body: putBody });
-
+    const putApiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+    let putResp = await fetch(putApiUrl, { method: 'PUT', headers, body: putBody });
     // Retry once on SHA conflict
     if (putResp.status === 409) {
       const retryGet = await fetch(apiUrl, { headers });
@@ -63,11 +59,11 @@ exports.handler = async (event) => {
       const retryBody = JSON.stringify({
         message: `[admin] Update ${path}`,
         content,
+        branch: DATA_BRANCH,
         sha: retryData.sha,
       });
-      putResp = await fetch(apiUrl, { method: 'PUT', headers, body: retryBody });
+      putResp = await fetch(putApiUrl, { method: 'PUT', headers, body: retryBody });
     }
-
     if (!putResp.ok) {
       const txt = await putResp.text();
       throw new Error(`GitHub write failed for ${path}: ${putResp.status} ${txt}`);
