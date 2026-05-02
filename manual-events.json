@@ -830,5 +830,18 @@
     "price": "Free",
     "free": true,
     "_manual": true
+  },
+  {
+    "id": 107,
+    "date": "2026-05-02",
+    "title": "Shakespeare on the Rocks | Hamlet with Catskill Mountain Shakespeare",
+    "venue": "Opus 40",
+    "venueUrl": "https://opus40.org/event/shakespeare-on-the-rocks-hamlet-with-catskill-mountain-shakespeare/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",
+    "time": "1:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
