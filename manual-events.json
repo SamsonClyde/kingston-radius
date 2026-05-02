@@ -817,5 +817,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 105,
+    "date": "2026-05-02",
+    "title": "The Big Shoe",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/event/the-big-shoe-2/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "Free",
+    "free": true,
+    "_manual": true
   }
 ]
