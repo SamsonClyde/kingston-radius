@@ -778,5 +778,18 @@
     "price": "Free",
     "free": true,
     "_manual": true
+  },
+  {
+    "id": 97,
+    "date": "2026-05-01",
+    "title": "Lesser Mysteries at Opus 40",
+    "venue": "Opus 40",
+    "venueUrl": "https://opus40.org/event/lesser-mysteries-at-opus-40/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",
+    "time": "6:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
