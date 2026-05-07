@@ -73,18 +73,6 @@ const EVENTS = [
   },
   {
     id: 7,
-    date: "2025-12-30",
-    title: "The Felice Brothers & Friends",
-    venue: "Assembly Kingston",
-    venueUrl: "https://www.assemblykingston.com/events/the-felice-brothers-amp-friends",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
-    time: "8:00 pm",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 8,
     date: "2025-12-31",
     title: "THE AFTERS: New Year's Eve",
     venue: "Assembly Kingston",
@@ -96,7 +84,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 9,
+    id: 8,
     date: "2025-12-31",
     title: "The Felice Brothers & Friends",
     venue: "Assembly Kingston",
@@ -108,7 +96,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 10,
+    id: 9,
     date: "2025-12-31",
     title: "The Helm Family Midnight Ramble ft. Jay Collins & Gravy Train - New Year's Eve!",
     venue: "Levon Helm Studios",
@@ -120,7 +108,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 11,
+    id: 10,
     date: "2026-01-01",
     title: "Medicine Disco: New Year's Day",
     venue: "Assembly Kingston",
@@ -132,7 +120,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 12,
+    id: 11,
     date: "2026-01-10",
     title: "Isabel Hagen",
     venue: "Assembly Kingston",
@@ -144,9 +132,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 13,
+    id: 12,
     date: "2026-01-17",
-    title: "Clap Your Hands Say Yeah \\u2014 Piano & Voice",
+    title: "Clap Your Hands Say Yeah \u2014 Piano & Voice",
     venue: "Assembly Kingston",
     venueUrl: "https://www.assemblykingston.com/events/clap-your-hands-say-yeah-piano-amp-voice",
     location: "Kingston, NY",
@@ -156,7 +144,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 14,
+    id: 13,
     date: "2026-01-17",
     title: "Ondara Presents: The Jet Stone Conspiracy",
     venue: "Levon Helm Studios",
@@ -168,7 +156,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 15,
+    id: 14,
     date: "2026-01-23",
     title: "Josh Ritter",
     venue: "Levon Helm Studios",
@@ -180,7 +168,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 16,
+    id: 15,
     date: "2026-01-24",
     title: "Squalid Gold: Stand-Up Comedy Showcase",
     venue: "Assembly Kingston",
@@ -192,7 +180,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 17,
+    id: 16,
     date: "2026-01-25",
     title: "RESCHEDULED: Ecstatic Dance with Keena Maya",
     venue: "Assembly Kingston",
@@ -204,7 +192,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 18,
+    id: 17,
     date: "2026-01-30",
     title: "Labiahead",
     venue: "Assembly Kingston",
@@ -216,7 +204,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 19,
+    id: 18,
     date: "2026-01-31",
     title: "Cornelia Murr",
     venue: "Levon Helm Studios",
@@ -228,7 +216,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 20,
+    id: 19,
     date: "2026-02-01",
     title: "Michael Nau",
     venue: "Assembly Kingston",
@@ -240,19 +228,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 21,
-    date: "2026-02-04",
-    title: "Wednesday, February 4, 2026 \\u2013 Wednesday, May 13, 202690s Female Singer Songwriters: Weekly Meeting",
-    venue: "Bard College Conservatory",
-    venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
-    location: "Annandale-on-Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=61+Blithewood+Ave+Annandale-on-Hudson+NY",
-    time: "",
-    price: "Free",
-    free: true
-  },
-  {
-    id: 22,
+    id: 20,
     date: "2026-02-07",
     title: "Jazz Mandolin Project",
     venue: "Assembly Kingston",
@@ -264,7 +240,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 23,
+    id: 21,
     date: "2026-02-07",
     title: "Jazz Mandolin Project",
     venue: "Assembly Kingston",
@@ -276,7 +252,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 24,
+    id: 22,
     date: "2026-02-07",
     title: "The Helm Family Midnight Ramble ft. Jim Keller",
     venue: "Levon Helm Studios",
@@ -288,7 +264,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 25,
+    id: 23,
     date: "2026-02-12",
     title: "Melt",
     venue: "Assembly Kingston",
@@ -300,7 +276,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 26,
+    id: 24,
     date: "2026-02-15",
     title: "Ecstatic Dance with Keena Maya",
     venue: "Assembly Kingston",
@@ -312,7 +288,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 27,
+    id: 25,
     date: "2026-02-19",
     title: "TUSK: The Classic Tribute to Fleetwood Mac",
     venue: "Assembly Kingston",
@@ -324,7 +300,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 28,
+    id: 26,
     date: "2026-02-20",
     title: "Tyler Ramsey & Carl Broemel (of My Morning Jacket) - Celestun Tour",
     venue: "Levon Helm Studios",
@@ -336,9 +312,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 29,
+    id: 27,
     date: "2026-02-21",
-    title: "Kingston Techno: Sin Verg\\u00fcenza III",
+    title: "Kingston Techno: Sin Verg\u00fcenza III",
     venue: "Assembly Kingston",
     venueUrl: "https://www.assemblykingston.com/events/kingston-techno-sin-vergenza-iii",
     location: "Kingston, NY",
@@ -348,7 +324,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 30,
+    id: 28,
     date: "2026-02-21",
     title: "The Helm Family Midnight Ramble ft. Krystle Warren & The Faculty",
     venue: "Levon Helm Studios",
@@ -360,7 +336,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 31,
+    id: 29,
     date: "2026-02-27",
     title: "Jonatha Brooke",
     venue: "Assembly Kingston",
@@ -372,7 +348,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 32,
+    id: 30,
     date: "2026-02-27",
     title: "Max Creek (Night 1)",
     venue: "Levon Helm Studios",
@@ -384,7 +360,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 33,
+    id: 31,
     date: "2026-02-28",
     title: "India Ramey",
     venue: "Assembly Kingston",
@@ -396,7 +372,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 34,
+    id: 32,
     date: "2026-02-28",
     title: "Max Creek (Night 2)",
     venue: "Levon Helm Studios",
@@ -408,7 +384,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 35,
+    id: 33,
     date: "2026-03-06",
     title: "POSTPONED - New Date TBD: Alejandro Escovedo",
     venue: "Levon Helm Studios",
@@ -420,7 +396,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 36,
+    id: 34,
     date: "2026-03-07",
     title: "The Helm Family Midnight Ramble",
     venue: "Levon Helm Studios",
@@ -432,7 +408,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 37,
+    id: 35,
     date: "2026-03-08",
     title: "An Evening with Chris Smither",
     venue: "Levon Helm Studios",
@@ -444,7 +420,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 38,
+    id: 36,
     date: "2026-03-11",
     title: "Shaun Cassidy",
     venue: "Assembly Kingston",
@@ -456,7 +432,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 39,
+    id: 37,
     date: "2026-03-15",
     title: "Woodstock Film Festival: Oscars Viewing Party",
     venue: "Assembly Kingston",
@@ -468,19 +444,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 40,
-    date: "2026-03-19",
-    title: "TARA CLERKIN TRIO + MORE EAZE + DJ EVERYTHING NICE (JESS)",
-    venue: "Tubby's",
-    venueUrl: "https://www.tubbyskingston.com/calendar/tara-clerkin-trio",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",
-    time: "7:00 pm",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 41,
+    id: 38,
     date: "2026-03-20",
     title: "BENEFIT FOR VETERANS FOR PEACE WITH JEFRE CANTU-LEDESMA / BOOKER STARDRUM / OMER SHEMESH / JOEY WEISS + JARED ASHDOWN",
     venue: "Tubby's",
@@ -492,7 +456,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 42,
+    id: 39,
     date: "2026-03-21",
     title: "SUSS + ADELINE HOTEL",
     venue: "Tubby's",
@@ -504,7 +468,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 43,
+    id: 40,
     date: "2026-03-21",
     title: "The Helm Family Midnight Ramble ft. The Nine Seas",
     venue: "Levon Helm Studios",
@@ -516,9 +480,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 44,
+    id: 41,
     date: "2026-03-22",
-    title: "Infinity Song World Tour II Continues\\u2026",
+    title: "Infinity Song World Tour II Continues\u2026",
     venue: "Levon Helm Studios",
     venueUrl: "https://levonhelm.com/shows",
     location: "Woodstock, NY",
@@ -528,7 +492,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 45,
+    id: 42,
     date: "2026-03-24",
     title: "OPTIC SINK + SPAIN",
     venue: "Tubby's",
@@ -540,7 +504,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 46,
+    id: 43,
     date: "2026-03-25",
     title: "OPENING NIGHT BASEBALL ON TV",
     venue: "Tubby's",
@@ -552,7 +516,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 47,
+    id: 44,
     date: "2026-03-26",
     title: "OPENING DAY BASEBALL ON TV with Wild Man Doyle on DJ Duty",
     venue: "Tubby's",
@@ -564,9 +528,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 48,
+    id: 45,
     date: "2026-03-27",
-    title: "live music society presents: DILEMASTRONAUTA Y LA TRIPULACI\\u00d3N C\\u00d3SMICA (mems COMBO CHIMBITA) (FREE SHOW)",
+    title: "live music society presents: DILEMASTRONAUTA Y LA TRIPULACI\u00d3N C\u00d3SMICA (mems COMBO CHIMBITA) (FREE SHOW)",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/live-music-society-presents-dilemastronauta-y-la-tripulacin-csmica-mems-combo-chimbita-free-show",
     location: "Kingston, NY",
@@ -576,7 +540,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 49,
+    id: 46,
     date: "2026-03-27",
     title: "LILITH AT THE BARN: A Benefit for Washbourne House & Grace Smith House",
     venue: "Levon Helm Studios",
@@ -588,7 +552,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 50,
+    id: 47,
     date: "2026-03-28",
     title: "Hold on Whale zine release Party with Bill Baird + The Sisters + Brian McCarthy",
     venue: "Tubby's",
@@ -600,7 +564,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 51,
+    id: 48,
     date: "2026-03-28",
     title: "Greg Hawkes of The Cars with Eddie Japan Performing the Music of The Cars",
     venue: "Levon Helm Studios",
@@ -612,7 +576,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 52,
+    id: 49,
     date: "2026-03-31",
     title: "AFTER PARTY FOR RYAN DAVIS & THE ROADHOUSE BAND + ROSALI",
     venue: "Tubby's",
@@ -624,7 +588,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 53,
+    id: 50,
     date: "2026-03-31",
     title: "Ryan Davis & The Roadhouse Band",
     venue: "Assembly Kingston",
@@ -636,7 +600,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 54,
+    id: 51,
     date: "2026-04-01",
     title: "FRONT ROOM DJ: M GEDDES GENGRAS",
     venue: "Tubby's",
@@ -648,7 +612,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 55,
+    id: 52,
     date: "2026-04-02",
     title: "Book release party: COSMIC MUSIC The life, art, and transcendence of ALICE COLTRANE",
     venue: "Tubby's",
@@ -660,7 +624,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 56,
+    id: 53,
     date: "2026-04-03",
     title: "TAKAAT",
     venue: "Tubby's",
@@ -672,7 +636,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 57,
+    id: 54,
     date: "2026-04-03",
     title: "Antibalas",
     venue: "Levon Helm Studios",
@@ -684,7 +648,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 58,
+    id: 55,
     date: "2026-04-04",
     title: "The Helm Family Midnight Ramble ft. The Sirens of Brooklyn",
     venue: "Levon Helm Studios",
@@ -696,7 +660,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 59,
+    id: 56,
     date: "2026-04-05",
     title: "Luna",
     venue: "Assembly Kingston",
@@ -708,7 +672,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 60,
+    id: 57,
     date: "2026-04-07",
     title: "STUCK + TV SLEEP",
     venue: "Tubby's",
@@ -720,7 +684,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 61,
+    id: 58,
     date: "2026-04-07",
     title: "Whitney",
     venue: "Assembly Kingston",
@@ -732,7 +696,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 62,
+    id: 59,
     date: "2026-04-08",
     title: "DANIEL VILLARREAL TRIO",
     venue: "Tubby's",
@@ -744,7 +708,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 63,
+    id: 60,
     date: "2026-04-09",
     title: "CONTAINER + EXPENSIVE $HIT + ROSE CLUB + NICK MALKIN",
     venue: "Tubby's",
@@ -756,7 +720,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 64,
+    id: 61,
     date: "2026-04-10",
     title: "HOLY FUCK + GUS ENGLEHORN",
     venue: "Tubby's",
@@ -768,7 +732,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 65,
+    id: 62,
     date: "2026-04-10",
     title: "An Evening With Maya Hawke / The Maitreya Corso Tour",
     venue: "Levon Helm Studios",
@@ -780,9 +744,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 66,
+    id: 63,
     date: "2026-04-11",
-    title: "N\\u00d8IR + ANCIENT MY ENEMY",
+    title: "N\u00d8IR + ANCIENT MY ENEMY",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/nir-ancient-my-enemy-ships-in-the-night",
     location: "Kingston, NY",
@@ -792,7 +756,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 67,
+    id: 64,
     date: "2026-04-11",
     title: "Chloe Radcliffe",
     venue: "Assembly Kingston",
@@ -804,7 +768,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 68,
+    id: 65,
     date: "2026-04-11",
     title: "Fantastic Cat",
     venue: "Levon Helm Studios",
@@ -816,7 +780,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 69,
+    id: 66,
     date: "2026-04-15",
     title: "MAGIC: The Gathering night",
     venue: "Tubby's",
@@ -828,7 +792,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 70,
+    id: 67,
     date: "2026-04-16",
     title: "ART / FILM WORKERS APPRECIATION NIGHT",
     venue: "Tubby's",
@@ -840,7 +804,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 71,
+    id: 68,
     date: "2026-04-16",
     title: "Thomas Dolby",
     venue: "Assembly Kingston",
@@ -852,7 +816,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 72,
+    id: 69,
     date: "2026-04-17",
     title: "KING TUFF + MORGAN NAGLER",
     venue: "Tubby's",
@@ -864,7 +828,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 73,
+    id: 70,
     date: "2026-04-17",
     title: "Soul Asylum Acoustic",
     venue: "Levon Helm Studios",
@@ -876,11 +840,11 @@ const EVENTS = [
     free: false
   },
   {
-    id: 74,
+    id: 71,
     date: "2026-04-17",
-    title: "Open Mic Night \\u2013 Hosted by Scott Kent",
+    title: "Open Mic Night \u2013 Hosted by Scott Kent",
     venue: "Phoenicia Playhouse",
-    venueUrl: "https://www.bwpkingston.com/",
+    venueUrl: "https://www.rwhm.com/",
     location: "Phoenicia, NY",
     mapsUrl: "https://maps.google.com/?q=Phoenicia%20Playhouse%20Phoenicia%2C%20NY",
     time: "6:30 pm",
@@ -888,9 +852,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 75,
+    id: 72,
     date: "2026-04-18",
-    title: "420 PARTY: SIDE X SIDE RECORD FAIR, OWSLEY\\u2019S OWLS with Jerry Tone Store + JUMA SULTAN + Freakout Spot DJs",
+    title: "420 PARTY: SIDE X SIDE RECORD FAIR, OWSLEY\u2019S OWLS with Jerry Tone Store + JUMA SULTAN + Freakout Spot DJs",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/420-party-side-x-side-record-fair-owsleys-owls-with-jerry-tone-store-juma-sultan-freakout-spot-djs",
     location: "Kingston, NY",
@@ -900,9 +864,9 @@ const EVENTS = [
     free: true
   },
   {
-    id: 76,
+    id: 73,
     date: "2026-04-19",
-    title: "Haley Heynderickx & Max Garc\\u00eda Conover",
+    title: "Haley Heynderickx & Max Garc\u00eda Conover",
     venue: "Assembly Kingston",
     venueUrl: "https://www.assemblykingston.com/events/haley-heynderickx-amp-max-garca-conover",
     location: "Kingston, NY",
@@ -912,9 +876,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 77,
+    id: 74,
     date: "2026-04-21",
-    title: "THE ANTLERS + with special guest T\\u014dth",
+    title: "THE ANTLERS + with special guest T\u014dth",
     venue: "Tubby's",
     venueUrl: "https://www.tubbyskingston.com/calendar/the-antlers",
     location: "Kingston, NY",
@@ -924,7 +888,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 78,
+    id: 75,
     date: "2026-04-23",
     title: "Allegra Krieger + Jackie West",
     venue: "Tubby's",
@@ -936,7 +900,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 79,
+    id: 76,
     date: "2026-04-23",
     title: "Thee Sinseers",
     venue: "Assembly Kingston",
@@ -948,7 +912,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 80,
+    id: 77,
     date: "2026-04-24",
     title: "NIC PANKEN (record release show) + ONGOING + RAKEL STAMMER",
     venue: "Tubby's",
@@ -960,7 +924,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 81,
+    id: 78,
     date: "2026-04-24",
     title: "Conan",
     venue: "Assembly Kingston",
@@ -972,7 +936,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 82,
+    id: 79,
     date: "2026-04-25",
     title: "LARA HOPE BAND + EL ARIS",
     venue: "Tubby's",
@@ -984,7 +948,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 83,
+    id: 80,
     date: "2026-04-25",
     title: "FAM JAM",
     venue: "Assembly Kingston",
@@ -996,7 +960,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 84,
+    id: 81,
     date: "2026-04-26",
     title: "Ecstatic Dance with Joro-Boro",
     venue: "Assembly Kingston",
@@ -1008,7 +972,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 85,
+    id: 82,
     date: "2026-04-28",
     title: "WHITNEY JOHNSON / LIA KOHL / MACIE STEWART",
     venue: "Tubby's",
@@ -1020,7 +984,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 86,
+    id: 83,
     date: "2026-05-01",
     title: "MAYDAY: GARCIA PEOPLES get medieval / ULSTERADOS play work songs / MORGAN O'KANE backyard set",
     venue: "Tubby's",
@@ -1032,7 +996,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 87,
+    id: 84,
     date: "2026-05-02",
     title: "Dromedary Records: Get Your Rond Out Release show",
     venue: "Tubby's",
@@ -1044,9 +1008,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 88,
+    id: 85,
     date: "2026-05-02",
-    title: "Dave Alvin & Jimmie Dale Gilmore \\u2013 Almost Acoustic Duo",
+    title: "Dave Alvin & Jimmie Dale Gilmore \u2013 Almost Acoustic Duo",
     venue: "Levon Helm Studios",
     venueUrl: "https://levonhelm.com/shows",
     location: "Woodstock, NY",
@@ -1056,7 +1020,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 89,
+    id: 86,
     date: "2026-05-03",
     title: "WICCA PHASE SPRINGS ETERNAL & The Mystery Mountain Band + fanclubwallet",
     venue: "Tubby's",
@@ -1068,7 +1032,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 90,
+    id: 87,
     date: "2026-05-03",
     title: "John Doe & David Lowery",
     venue: "Levon Helm Studios",
@@ -1080,7 +1044,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 91,
+    id: 88,
     date: "2026-05-04",
     title: "THE MESSTHETICS AND JAMES BRANDON LEWIS + YR KNIVES",
     venue: "Tubby's",
@@ -1092,7 +1056,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 92,
+    id: 89,
     date: "2026-05-05",
     title: "EXEK + BILL NACE/SAKINA ABDOU",
     venue: "Tubby's",
@@ -1104,7 +1068,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 93,
+    id: 90,
     date: "2026-05-05",
     title: "BoDeans",
     venue: "Assembly Kingston",
@@ -1116,7 +1080,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 94,
+    id: 91,
     date: "2026-05-06",
     title: "THE HOBKNOBS + $500",
     venue: "Tubby's",
@@ -1128,43 +1092,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 95,
-    date: "2026-05-06",
-    title: "Drag Academy with LeRoi Prince!",
-    venue: "Unicorn Bar",
-    venueUrl: "https://unicornkingston.com/calendar",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
-    time: "5:30 pm",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 96,
-    date: "2026-05-06",
-    title: "Queer Trivia Wednesdays with Diana Dysentery",
-    venue: "Unicorn Bar",
-    venueUrl: "https://unicornkingston.com/calendar",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
-    time: "7:30 pm",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 97,
-    date: "2026-05-06",
-    title: "Tuesday, May 12, 2026South Hall, 6\\u20138 pmWomen Composers Ensemble",
-    venue: "Bard College Conservatory",
-    venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
-    location: "Annandale-on-Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=61+Blithewood+Ave+Annandale-on-Hudson+NY",
-    time: "",
-    price: "Free",
-    free: true
-  },
-  {
-    id: 98,
+    id: 92,
     date: "2026-05-07",
     title: "GLADIE + NOUN",
     venue: "Tubby's",
@@ -1176,7 +1104,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 99,
+    id: 93,
     date: "2026-05-07",
     title: "Knorrwood",
     venue: "Assembly Kingston",
@@ -1188,7 +1116,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 100,
+    id: 94,
     date: "2026-05-07",
     title: "The Silos",
     venue: "The Falcon",
@@ -1200,7 +1128,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 101,
+    id: 95,
     date: "2026-05-07",
     title: "All Upcoming Events",
     venue: "Keegan Ales",
@@ -1212,7 +1140,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 102,
+    id: 96,
     date: "2026-05-07",
     title: "Keegan Ales Comedy Show!",
     venue: "Keegan Ales",
@@ -1224,7 +1152,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 103,
+    id: 97,
     date: "2026-05-07",
     title: "Queer Line Dancing - First Thursdays",
     venue: "Unicorn Bar",
@@ -1236,58 +1164,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 104,
-    date: "2026-05-07",
-    title: "KNORRWOOD",
-    venue: "Assembly",
-    venueUrl: "https://www.apartmenthomeliving.com/apartment-finder/Orchard-Hills-Apartment-Homes-Kingston-NY-12401-192736",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=Assembly%20Hudson%2C%20NY",
-    time: "7:00 pm",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 105,
-    date: "2026-05-07",
-    title: "Bet Williams & Laurelyn Dossett on The Patio",
-    venue: "Colony Woodstock",
-    venueUrl: "https://www.colonywoodstock.com/shows",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    time: "5:30 pm",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 106,
-    date: "2026-05-07",
-    title: "Eric Andersen x Jon Pousette-Dart",
-    venue: "Colony Woodstock",
-    venueUrl: "https://www.colonywoodstock.com/shows",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    time: "7:00 pm",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 107,
-    date: "2026-05-07",
-    title: "ROADHOUSE 60\\u2019s \\u2013 A Tribute to the Music of the 1960\\u2019s",
-    venue: "Colony Woodstock",
-    venueUrl: "https://www.colonywoodstock.com/shows",
-    location: "Woodstock, NY",
-    mapsUrl: "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    time: "8:00 pm",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 108,
+    id: 98,
     date: "2026-05-07",
     title: "Get On The Good Foot With DJs Rhoda & Al",
-    venue: "Towne Crier Caf\\u00e9",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -1296,10 +1176,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 109,
+    id: 99,
     date: "2026-05-07",
     title: "EVERY THURSDAY Open Mic Night",
-    venue: "Towne Crier Caf\\u00e9",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -1308,9 +1188,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 110,
+    id: 100,
     date: "2026-05-07",
-    title: "Friday, May 22, 2026 \\u2013 Sunday, May 24, 2026Bard College CampusSpiro Spero\\u00a0Spring 2026 Senior Dance Concert: Senior Projects in Dance by:\\u00a0Audrey Schlief &\\u00a0Gabriel Medina Maldonado",
+    title: "Thursday, May 7, 2026Brooklyn Museum, 4\u20135:30 pmJazz Improv\u00a0Ensemble",
     venue: "Bard College Conservatory",
     venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
     location: "Annandale-on-Hudson, NY",
@@ -1320,19 +1200,19 @@ const EVENTS = [
     free: true
   },
   {
-    id: 111,
+    id: 101,
     date: "2026-05-07",
-    title: "Gerry Leonard's Spooky Ghost",
-    venue: "The Local Saugerties",
-    venueUrl: "https://www.thelocalsaugerties.com/calendar",
-    location: "Saugerties, NY",
-    mapsUrl: "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
-    time: "7:00 PM",
-    price: "See website",
-    free: false
+    title: "Friday, May 22, 2026 \u2013 Sunday, May 24, 2026Bard College CampusSpiro Spero: Spring 2026 Senior Dance Concert",
+    venue: "Bard College Conservatory",
+    venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
+    location: "Annandale-on-Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=61+Blithewood+Ave+Annandale-on-Hudson+NY",
+    time: "9:00 am",
+    price: "Free",
+    free: true
   },
   {
-    id: 112,
+    id: 102,
     date: "2026-05-08",
     title: "THE LOWLIEST ONE + MEOW MEOW + BIRD WEEK",
     venue: "Tubby's",
@@ -1344,7 +1224,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 113,
+    id: 103,
     date: "2026-05-08",
     title: "Dar Williams",
     venue: "Assembly Kingston",
@@ -1356,7 +1236,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 114,
+    id: 104,
     date: "2026-05-08",
     title: "Fareed Haque Trio with Mike Clark and Peter Washington",
     venue: "The Falcon",
@@ -1368,7 +1248,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 115,
+    id: 105,
     date: "2026-05-08",
     title: "The Tonebenders",
     venue: "Keegan Ales",
@@ -1380,7 +1260,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 116,
+    id: 106,
     date: "2026-05-08",
     title: "Bad Bunny Dance Party with DJ Litokoqui",
     venue: "Unicorn Bar",
@@ -1392,7 +1272,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 117,
+    id: 107,
     date: "2026-05-08",
     title: "Kevin Morby",
     venue: "Levon Helm Studios",
@@ -1404,21 +1284,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 118,
+    id: 108,
     date: "2026-05-08",
-    title: "The Madison String Quartet\"Voices of Survival\"",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.eventbrite.com/e/1985741959656?aff=oddtdtcreator",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 119,
-    date: "2026-05-08",
-    title: "DJ Darkstar Presents: Queens of the Damned \\u2013 The Mother\\u2019s Day Weekend Gothic Ball",
+    title: "DJ Darkstar Presents: Queens of the Damned \u2013 The Mother\u2019s Day Weekend Gothic Ball",
     venue: "Colony Woodstock",
     venueUrl: "https://www.colonywoodstock.com/shows",
     location: "Woodstock, NY",
@@ -1428,11 +1296,11 @@ const EVENTS = [
     free: false
   },
   {
-    id: 120,
+    id: 109,
     date: "2026-05-08",
     title: "DAR WILLIAMS",
     venue: "Assembly",
-    venueUrl: "https://www.bwpkingston.com/",
+    venueUrl: "https://www.restaurantji.com/ny/kingston/liquor-barn-/",
     location: "Hudson, NY",
     mapsUrl: "https://maps.google.com/?q=Assembly%20Hudson%2C%20NY",
     time: "7:00 pm",
@@ -1440,7 +1308,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 121,
+    id: 110,
     date: "2026-05-08",
     title: "Upcoming events",
     venue: "Station Bar & Curio",
@@ -1452,10 +1320,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 122,
+    id: 111,
     date: "2026-05-08",
-    title: "Jester\\u2019s Edge & Snow White",
-    venue: "Towne Crier Caf\\u00e9",
+    title: "Jester\u2019s Edge & Snow White",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -1464,10 +1332,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 123,
+    id: 112,
     date: "2026-05-08",
-    title: "Samba Jazz with The Lake Trio \\u2013 Salon Stage",
-    venue: "Towne Crier Caf\\u00e9",
+    title: "Samba Jazz with The Lake Trio \u2013 Salon Stage",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -1476,9 +1344,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 124,
+    id: 113,
     date: "2026-05-08",
-    title: "Friday, May 8, 2026Bertelsmann Campus Center, Quad, 12\\u20132 pmGraduate Degree Recital: Mark Kov\\u00e1cs, trumpet",
+    title: "Friday, May 8, 2026Blum Hall, 12:30 pmGraduate Degree Recital: Mark Kov\u00e1cs, trumpet",
     venue: "Bard College Conservatory",
     venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
     location: "Annandale-on-Hudson, NY",
@@ -1488,7 +1356,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 125,
+    id: 114,
     date: "2026-05-09",
     title: "RYAN SKRABALAK (BOOK RELEASE) with Sunburned Hand of the Man + Slyne & The Family Stoned",
     venue: "Tubby's",
@@ -1500,7 +1368,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 126,
+    id: 115,
     date: "2026-05-09",
     title: "Bill Callahan",
     venue: "Assembly Kingston",
@@ -1512,7 +1380,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 127,
+    id: 116,
     date: "2026-05-09",
     title: "Bill Callahan",
     venue: "Assembly Kingston",
@@ -1524,7 +1392,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 128,
+    id: 117,
     date: "2026-05-09",
     title: "Alexis P. Suter Band",
     venue: "The Falcon",
@@ -1536,7 +1404,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 129,
+    id: 118,
+    date: "2026-05-09",
+    title: "Basilica Farm & Flea Spring Market 2026",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/basilica-farm-flea-spring-market-2026/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 119,
     date: "2026-05-09",
     title: "The Willie Amrod Band",
     venue: "Keegan Ales",
@@ -1548,7 +1428,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 130,
+    id: 120,
     date: "2026-05-09",
     title: "Ghoulin Rouge: A Night of Sideshow, Drag, Burlesque & more!",
     venue: "Unicorn Bar",
@@ -1560,9 +1440,21 @@ const EVENTS = [
     free: false
   },
   {
-    id: 131,
+    id: 121,
     date: "2026-05-09",
-    title: "Elias R\\u00f8nnenfelt x Evanora Unlimited w/ John FM",
+    title: "Community Day \u2013 Celebrating 50 Years of Opus 40",
+    venue: "Opus 40",
+    venueUrl: "https://opus40.org/event/community-day-celebrating-50-years-of-opus-40/",
+    location: "Saugerties, NY",
+    mapsUrl: "https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",
+    time: "10:45 am",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 122,
+    date: "2026-05-09",
+    title: "Elias R\u00f8nnenfelt x Evanora Unlimited w/ John FM",
     venue: "Colony Woodstock",
     venueUrl: "https://www.colonywoodstock.com/shows",
     location: "Woodstock, NY",
@@ -1572,22 +1464,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 132,
-    date: "2026-05-09",
-    title: "MeadowlarkSeptember 14th + 15thFor more information and to buy tickets please visit:https://meadowlarkfest.org/Meadowlark Two Day Farmers & Makers Market withVia Viaggio, Carla Colour, Steffi Snyder Art, GormKin (Sat Only), El Azteca, Cave Glow Studio, Sweet Deliverance, Monroe Jewelry, Lone Dame Vintage, LuAnne Vintage, Crispin Dopamine, The Rolling Cones, The Blissful Dragonfly (Sat Only)GratefulGemHead, Morphologically & Stone Blossom Studio",
-    venue: "Stone Ridge Orchard",
-    venueUrl: "https://www.stoneridgeorchard.com/",
-    location: "Stone Ridge, NY",
-    mapsUrl: "https://maps.google.com/?q=3012+State+Route+213+Stone+Ridge+NY",
-    time: "2:00 pm",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 133,
+    id: 123,
     date: "2026-05-09",
     title: "Aztec Two-Step 2.0 featuring The Simon & Garfunkel Songbook",
-    venue: "Towne Crier Caf\\u00e9",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -1596,10 +1476,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 134,
+    id: 124,
     date: "2026-05-09",
-    title: "Route One \\u2013 Salon Stage",
-    venue: "Towne Crier Caf\\u00e9",
+    title: "Route One \u2013 Salon Stage",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -1608,7 +1488,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 135,
+    id: 125,
     date: "2026-05-09",
     title: "spring Thaw saturday",
     venue: "Glen Falls House",
@@ -1620,9 +1500,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 136,
+    id: 126,
     date: "2026-05-09",
-    title: "Friday, May 8, 2026Blum N211, the Jazz room, 8\\u20139 pmStudent Recital: Lili\\u00e1na Szokol, flute",
+    title: "Friday, May 8, 2026Blum N211, the Jazz room, 8\u20139 pmStudent Recital: Lili\u00e1na Szokol, flute",
     venue: "Bard College Conservatory",
     venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
     location: "Annandale-on-Hudson, NY",
@@ -1632,19 +1512,19 @@ const EVENTS = [
     free: true
   },
   {
-    id: 137,
+    id: 127,
     date: "2026-05-09",
-    title: "Overheard / Liam Singer",
-    venue: "The Local Saugerties",
-    venueUrl: "https://www.thelocalsaugerties.com/calendar",
-    location: "Saugerties, NY",
-    mapsUrl: "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
-    time: "7:30 PM",
+    title: "LIVE ENTERTAINMENT",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/one-funny-lisa-marie-the-stand-by-me-tour/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    time: "",
     price: "See website",
     free: false
   },
   {
-    id: 138,
+    id: 128,
     date: "2026-05-10",
     title: "Son Rompe Pera",
     venue: "The Falcon",
@@ -1656,7 +1536,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 139,
+    id: 129,
     date: "2026-05-10",
     title: "Railroad Earth",
     venue: "Levon Helm Studios",
@@ -1668,19 +1548,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 140,
-    date: "2026-05-10",
-    title: "Ensemble SanginetoItalian Strings and Voices for World Music",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 141,
+    id: 130,
     date: "2026-05-10",
     title: "Cafe Music by Chamber Music on the Hudson",
     venue: "Senate Garage",
@@ -1692,7 +1560,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 142,
+    id: 131,
     date: "2026-05-10",
     title: "International Folk Concert Series",
     venue: "Christ the King Episcopal Church",
@@ -1704,10 +1572,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 143,
+    id: 132,
     date: "2026-05-10",
-    title: "Mother\\u2019s Day Brunch with Judith Tulloch Band \\u2013 Salon Stage",
-    venue: "Towne Crier Caf\\u00e9",
+    title: "Mother\u2019s Day Brunch with Judith Tulloch Band \u2013 Salon Stage",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -1716,10 +1584,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 144,
+    id: 133,
     date: "2026-05-10",
-    title: "Judy Kass & Bill Kelly \\u2013 Salon Stage",
-    venue: "Towne Crier Caf\\u00e9",
+    title: "Judy Kass & Bill Kelly \u2013 Salon Stage",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -1728,9 +1596,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 145,
+    id: 134,
     date: "2026-05-10",
-    title: "Sunday, May 10, 2026Kappa House Lawn, 11 am \\u2013 1 pmUndergraduate Degree Recital: Tess von Brachel, cello",
+    title: "Sunday, May 10, 2026Kappa House Lawn, 11 am \u2013 1 pmUndergraduate Degree Recital: Tess von Brachel, cello",
     venue: "Bard College Conservatory",
     venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
     location: "Annandale-on-Hudson, NY",
@@ -1740,9 +1608,21 @@ const EVENTS = [
     free: true
   },
   {
-    id: 146,
+    id: 135,
+    date: "2026-05-10",
+    title: "Mother\u2019s Day Brunch",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/mothers-day-brunch/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    time: "",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 136,
     date: "2026-05-11",
-    title: "#theoutlierinnpresents\\u2026 Yoga Sundays",
+    title: "#theoutlierinnpresents\u2026 Yoga Sundays",
     venue: "The Outlier Inn",
     venueUrl: "https://www.outlierinn.com/events/wdv80qv35um4pdawvm1gqrassrhiet",
     location: "Woodridge, NY",
@@ -1752,21 +1632,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 147,
+    id: 137,
     date: "2026-05-11",
-    title: "Sunday, May 10, 2026The Old Gym, 8:30\\u20139:30 pmGraduate Degree Recital: Hengjian Zhang, sheng",
-    venue: "Bard College Conservatory",
-    venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
-    location: "Annandale-on-Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=61+Blithewood+Ave+Annandale-on-Hudson+NY",
-    time: "2:30 pm",
-    price: "Free",
-    free: true
-  },
-  {
-    id: 148,
-    date: "2026-05-11",
-    title: "Monday, May 11, 2026Bard Hall, 6:30 pmAlternative Strings Ensemble concert",
+    title: "Monday, May 11, 2026Bertelsmann Campus Center, Lobby, 11:30 am \u2013 12:30 pmGraduate Degree Recital: Hengjian Zhang, sheng",
     venue: "Bard College Conservatory",
     venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
     location: "Annandale-on-Hudson, NY",
@@ -1776,7 +1644,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 149,
+    id: 138,
     date: "2026-05-12",
     title: "SLUICE + HIDING PLACES",
     venue: "Tubby's",
@@ -1788,7 +1656,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 150,
+    id: 139,
     date: "2026-05-12",
     title: "Trivia Break Tuesdays with Andre",
     venue: "Keegan Ales",
@@ -1800,9 +1668,9 @@ const EVENTS = [
     free: true
   },
   {
-    id: 151,
+    id: 140,
     date: "2026-05-12",
-    title: "Monday, May 11, 2026The Jazz Room, Blum N211, 9\\u201310 pmThe Graduate Vocal Arts Program Presents: Love and Truth, Actually",
+    title: "Monday, May 11, 2026The Jazz Room, Blum N211, 9\u201310 pmThe Graduate Vocal Arts Program Presents: Love and Truth, Actually",
     venue: "Bard College Conservatory",
     venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
     location: "Annandale-on-Hudson, NY",
@@ -1812,7 +1680,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 152,
+    id: 141,
     date: "2026-05-13",
     title: "lovetempo + Meghan Dowlen + La Mirage",
     venue: "Tubby's",
@@ -1824,7 +1692,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 153,
+    id: 142,
     date: "2026-05-13",
     title: "The Underground Blues Jam | Hosted by Karl Allweier",
     venue: "The Falcon",
@@ -1836,7 +1704,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 154,
+    id: 143,
     date: "2026-05-13",
     title: "Unicorn Bar presents: Jocelyn Mackenzie & Syd Caldera",
     venue: "Unicorn Bar",
@@ -1848,9 +1716,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 155,
+    id: 144,
     date: "2026-05-13",
-    title: "Wednesday, May 6, 2026The Jazz Room, Blum N211, 9\\u201310 pmCompletion Days\\u2014Regular Classes and Final\\u00a0Exams: All students and faculty remain on campus",
+    title: "Wednesday, May 13, 2026Olin Language Center, 5\u20136 pmStudio Recital: Harp Students of Mariko Anraku",
     venue: "Bard College Conservatory",
     venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
     location: "Annandale-on-Hudson, NY",
@@ -1860,19 +1728,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 156,
-    date: "2026-05-13",
-    title: "Local Waves: Pocket Merchant",
-    venue: "The Local Saugerties",
-    venueUrl: "https://www.thelocalsaugerties.com/calendar",
-    location: "Saugerties, NY",
-    mapsUrl: "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
-    time: "",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 157,
+    id: 145,
     date: "2026-05-14",
     title: "EMO NIGHT WITH mollyxmurder (FREE)",
     venue: "Tubby's",
@@ -1884,7 +1740,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 158,
+    id: 146,
     date: "2026-05-14",
     title: "Wheatus",
     venue: "Assembly Kingston",
@@ -1896,7 +1752,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 159,
+    id: 147,
     date: "2026-05-14",
     title: "Misty Blues",
     venue: "The Falcon",
@@ -1908,7 +1764,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 160,
+    id: 148,
     date: "2026-05-14",
     title: "Unicorn Bar x DCxPC Live presents: Cellmate / Christy Costello / Modern Natives",
     venue: "Unicorn Bar",
@@ -1920,7 +1776,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 161,
+    id: 149,
     date: "2026-05-14",
     title: "DCxPC Live presents: Cellmate / Christy Costello / Modern Natives",
     venue: "Snapper Magee's",
@@ -1932,10 +1788,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 162,
+    id: 150,
     date: "2026-05-14",
     title: "Michael J. Miles: Great American Jukebox",
-    venue: "Towne Crier Caf\\u00e9",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -1944,9 +1800,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 163,
+    id: 151,
     date: "2026-05-14",
-    title: "Wednesday, May 13, 2026Bit\\u00f3 Conservatory Building, Performance Space, 7\\u20138:30 pmGraduate Degree Recital: Hongfan Su, piano",
+    title: "Wednesday, May 13, 2026Bit\u00f3 Conservatory Building, Performance Space, 7\u20138:30 pmGraduate Degree Recital: Hongfan Su, piano",
     venue: "Bard College Conservatory",
     venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
     location: "Annandale-on-Hudson, NY",
@@ -1956,7 +1812,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 164,
+    id: 152,
     date: "2026-05-15",
     title: "TYVEK + FREAKOUT SPOT DJS",
     venue: "Tubby's",
@@ -1968,7 +1824,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 165,
+    id: 153,
     date: "2026-05-15",
     title: "El Dorado Slim ft. Scott Sharrard",
     venue: "The Falcon",
@@ -1980,7 +1836,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 166,
+    id: 154,
     date: "2026-05-15",
     title: "Easy Money",
     venue: "Keegan Ales",
@@ -1992,7 +1848,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 167,
+    id: 155,
     date: "2026-05-15",
     title: "SABOTEUR: A New Goth-Industrial Dance Nite",
     venue: "Unicorn Bar",
@@ -2004,10 +1860,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 168,
+    id: 156,
     date: "2026-05-15",
     title: "Lara Hope Band and Erin Harpe & Countryman Jim Country Blues Duo",
-    venue: "Towne Crier Caf\\u00e9",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -2016,7 +1872,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 169,
+    id: 157,
     date: "2026-05-15",
     title: "Thursday, May 14, 2026Blum N211, the Jazz room, 8:30 pmUndergraduate Degree Recital: Rodney Clark, percussion",
     venue: "Bard College Conservatory",
@@ -2028,19 +1884,19 @@ const EVENTS = [
     free: true
   },
   {
-    id: 170,
+    id: 158,
     date: "2026-05-15",
-    title: "Colombian Cumbia Party: Yeison Landero",
-    venue: "The Local Saugerties",
-    venueUrl: "https://www.thelocalsaugerties.com/calendar",
-    location: "Saugerties, NY",
-    mapsUrl: "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
-    time: "8:00 PM",
+    title: "Core \u2013 The Ultimate 90s / 2000s Alternative Rock Tribute Band",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/core-the-ultimate-90s-2000s-alternative-rock-tribute-band/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    time: "",
     price: "See website",
     free: false
   },
   {
-    id: 171,
+    id: 159,
     date: "2026-05-16",
     title: "ANGELS IN THE LEFT FIELD + downstairs j + DJ FEMALE + MUSIC LOVERS ANONYMOUS (FREE)",
     venue: "Tubby's",
@@ -2052,7 +1908,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 172,
+    id: 160,
     date: "2026-05-16",
     title: "The Dirty Dozen Brass Band",
     venue: "Assembly Kingston",
@@ -2064,7 +1920,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 173,
+    id: 161,
     date: "2026-05-16",
     title: "SunDub",
     venue: "The Falcon",
@@ -2076,7 +1932,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 174,
+    id: 162,
     date: "2026-05-16",
     title: "Tap NY Bus Trip!",
     venue: "Keegan Ales",
@@ -2088,7 +1944,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 175,
+    id: 163,
     date: "2026-05-16",
     title: "The Deadbeats",
     venue: "Keegan Ales",
@@ -2100,7 +1956,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 176,
+    id: 164,
     date: "2026-05-16",
     title: "NPCC presents RAINBOWS + RESISTANCE: Queer Prom with DJ Tryst",
     venue: "Unicorn Bar",
@@ -2112,19 +1968,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 177,
-    date: "2026-05-16",
-    title: "Sprig of ThatBoundary-crossing String Band",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.eventbrite.com/e/1985826338034?aff=oddtdtcreator",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 178,
+    id: 165,
     date: "2026-05-16",
     title: "The Mountain Goats",
     venue: "Bearsville Theater",
@@ -2136,10 +1980,22 @@ const EVENTS = [
     free: false
   },
   {
-    id: 179,
+    id: 166,
+    date: "2026-05-16",
+    title: "A Groove Gathering \u2013 Dance Party!",
+    venue: "Lydia's Cafe",
+    venueUrl: "https://www.bwpkingston.com/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Lydia%27s%20Cafe%20Kingston%2C%20NY",
+    time: "7:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 167,
     date: "2026-05-16",
     title: "Ian Flanigan; special guest Michele Gedney",
-    venue: "Towne Crier Caf\\u00e9",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -2148,9 +2004,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 180,
+    id: 168,
     date: "2026-05-16",
-    title: "Friday, May 15, 2026Bit\\u00f3 Conservatory Building, Performance Space, 7\\u20138:30 pmThird Year Recital: Abby Wolf, cello",
+    title: "Friday, May 15, 2026Bit\u00f3 Conservatory Building, Performance Space, 7\u20138:30 pmThird Year Recital: Abby Wolf, cello",
     venue: "Bard College Conservatory",
     venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
     location: "Annandale-on-Hudson, NY",
@@ -2160,7 +2016,19 @@ const EVENTS = [
     free: true
   },
   {
-    id: 181,
+    id: 169,
+    date: "2026-05-16",
+    title: "Illusionist Ryan Dutcher\u2019s Stand Up Comedy Magic Show",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/illusionist-ryan-dutchers-stand-up-comedy-magic-show/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    time: "",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 170,
     date: "2026-05-17",
     title: "FREE CUMBIA PARTY!",
     venue: "Tubby's",
@@ -2172,7 +2040,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 182,
+    id: 171,
     date: "2026-05-17",
     title: "Ecstatic Dance with Cosmal",
     venue: "Assembly Kingston",
@@ -2184,7 +2052,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 183,
+    id: 172,
     date: "2026-05-17",
     title: "Brock, Lanzetti, Ogawa",
     venue: "The Falcon",
@@ -2196,19 +2064,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 184,
-    date: "2026-05-17",
-    title: "Tim Eriksen Concert - 7:30",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 185,
+    id: 173,
     date: "2026-05-17",
     title: "DCxPC Live Benefit for UC SPCA",
     venue: "Snapper Magee's",
@@ -2220,9 +2076,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 186,
+    id: 174,
     date: "2026-05-17",
-    title: "Saturday, May 16, 2026Bit\\u00f3 Conservatory Building, Performance Space, 7\\u20138:30 pmUndergraudate Degree Recital: Isabel Chin Garita, violin",
+    title: "Saturday, May 16, 2026Bit\u00f3 Conservatory Building, Performance Space, 7\u20138:30 pmUndergraudate Degree Recital: Isabel Chin Garita, violin",
     venue: "Bard College Conservatory",
     venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
     location: "Annandale-on-Hudson, NY",
@@ -2232,21 +2088,9 @@ const EVENTS = [
     free: true
   },
   {
-    id: 187,
+    id: 175,
     date: "2026-05-18",
-    title: "Circle of SongDeni Bonet to open our Circle!",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 188,
-    date: "2026-05-18",
-    title: "Sunday, May 17, 2026Olin Hall, 7\\u20138:30 pmStudio Recital: Double Bass Students of Satoshi Okamoto",
+    title: "Sunday, May 17, 2026Olin Hall, 7\u20138:30 pmStudio Recital: Double Bass Students of Satoshi Okamoto",
     venue: "Bard College Conservatory",
     venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
     location: "Annandale-on-Hudson, NY",
@@ -2256,7 +2100,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 189,
+    id: 176,
     date: "2026-05-19",
     title: "OPEN TURNTABLES",
     venue: "Tubby's",
@@ -2268,11 +2112,11 @@ const EVENTS = [
     free: false
   },
   {
-    id: 190,
+    id: 177,
     date: "2026-05-19",
     title: "Bloomington Fire Dept Food Truck Fiesta",
     venue: "Bloomington Fire Department",
-    venueUrl: "https://www.bwpkingston.com/",
+    venueUrl: "https://www.restaurantji.com/ny/kingston/liquor-barn-/",
     location: "Kingston, NY",
     mapsUrl: "https://maps.google.com/?q=Bloomington%20Fire%20Department%20Kingston%2C%20NY",
     time: "5:00 pm",
@@ -2280,9 +2124,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 191,
+    id: 178,
     date: "2026-05-19",
-    title: "Monday, May 18, 2026Bard College CampusGraduate Degree Recital: Imani Oluoch, mezzo-soprano, with Nomin Samdan, piano: Heretic: Exploring the Delicate Science of \\u201cOthering\\u201d",
+    title: "Monday, May 18, 2026Bard College CampusGraduate Degree Recital: Imani Oluoch, mezzo-soprano, with Nomin Samdan, piano: Heretic: Exploring the Delicate Science of \u201cOthering\u201d",
     venue: "Bard College Conservatory",
     venueUrl: "https://www.bard.edu/inside/calendar/event/?year=2026&month=5",
     location: "Annandale-on-Hudson, NY",
@@ -2292,7 +2136,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 192,
+    id: 179,
     date: "2026-05-20",
     title: "MINT FIELD + GLIMMER",
     venue: "Tubby's",
@@ -2304,7 +2148,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 193,
+    id: 180,
     date: "2026-05-20",
     title: "Jimmy Vivino",
     venue: "The Falcon",
@@ -2316,7 +2160,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 194,
+    id: 181,
     date: "2026-05-20",
     title: "Sketch & Burlesque: The Alluring Drawing Affair",
     venue: "Unicorn Bar",
@@ -2328,7 +2172,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 195,
+    id: 182,
     date: "2026-05-21",
     title: "MEMORIALS (UK)",
     venue: "Tubby's",
@@ -2340,7 +2184,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 196,
+    id: 183,
     date: "2026-05-21",
     title: "Quinn Sullivan",
     venue: "The Falcon",
@@ -2352,7 +2196,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 197,
+    id: 184,
+    date: "2026-05-21",
+    title: "THE WALLFLOWERS",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/the-wallflowers/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 185,
     date: "2026-05-21",
     title: "Dyke Country: An Evening of Stand-Up Comedy!",
     venue: "Unicorn Bar",
@@ -2364,10 +2220,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 198,
+    id: 186,
     date: "2026-05-21",
     title: "Latin Dance with Beacon Dance Beat",
-    venue: "Towne Crier Caf\\u00e9",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -2376,7 +2232,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 199,
+    id: 187,
     date: "2026-05-22",
     title: "DOUG GILLARD + CATHEDRAL CEILINGS + SKY FURROWS",
     venue: "Tubby's",
@@ -2388,7 +2244,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 200,
+    id: 188,
     date: "2026-05-22",
     title: "Jonah Smith",
     venue: "The Falcon",
@@ -2400,7 +2256,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 201,
+    id: 189,
     date: "2026-05-22",
     title: "Queer Comedy Night: Bailey Pope & Caroline Contillo!",
     venue: "Unicorn Bar",
@@ -2412,7 +2268,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 202,
+    id: 190,
     date: "2026-05-22",
     title: "NOCHE LATINA with DJ RVMBA!",
     venue: "Unicorn Bar",
@@ -2424,31 +2280,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 203,
+    id: 191,
     date: "2026-05-22",
-    title: "Deni Bonetwith Chris Flynn",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 204,
-    date: "2026-05-22",
-    title: "Night Swim Two-Year Anniversary Weekender!",
-    venue: "NightSwim",
-    venueUrl: "http://put.over.photo/",
-    location: "Hudson, NY",
-    mapsUrl: "https://maps.google.com/?q=NightSwim%20Hudson%2C%20NY",
-    time: "7:00 pm",
+    title: "Swing Dance Bash with Matt Munisteri\\\u2019s TEMPO All-Stars featuring Tamar Korn",
+    venue: "Tempo Arts",
+    venueUrl: "https://tempokingston.org/events/",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=Tempo+Kingston+NY",
+    time: "8:00 pm",
     price: "See website",
     free: false
   },
   {
-    id: 205,
+    id: 192,
     date: "2026-05-22",
     title: "A Whole Nother & Pour La Terre @ O+ Exchange Clinic",
     venue: "Wall and N. Front St.",
@@ -2460,19 +2304,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 206,
-    date: "2026-05-22",
-    title: "Swing Dance Bash with Matt Munisteri\\\\u2019s TEMPO All-Stars featuring Tamar Korn",
-    venue: "Tempo Arts",
-    venueUrl: "https://tempokingston.org/events/",
-    location: "Kingston, NY",
-    mapsUrl: "https://maps.google.com/?q=Tempo+Kingston+NY",
-    time: "8:00 pm",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 207,
+    id: 193,
     date: "2026-05-22",
     title: "Ukulele Weekend 2026",
     venue: "The Ashokan Center",
@@ -2484,10 +2316,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 208,
+    id: 194,
     date: "2026-05-22",
     title: "Kelli Baker Band & Murali Coryell",
-    venue: "Towne Crier Caf\\u00e9",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -2496,7 +2328,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 209,
+    id: 195,
     date: "2026-05-22",
     title: "swim club w/ Good Bar at Glen Falls House",
     venue: "Glen Falls House",
@@ -2508,7 +2340,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 210,
+    id: 196,
+    date: "2026-05-22",
+    title: "Latin Night at Silk Factory",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/latin-night-at-silk-factory-2/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    time: "",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 197,
     date: "2026-05-23",
     title: "JOHN ANDREWS & THE YAWNS (release show) + RUBY OF THANKS + SARAH LA PUERTA",
     venue: "Tubby's",
@@ -2520,7 +2364,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 211,
+    id: 198,
     date: "2026-05-23",
     title: "Hudson Valley Burlesque Bash: Circus of Tease",
     venue: "Assembly Kingston",
@@ -2532,7 +2376,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 212,
+    id: 199,
     date: "2026-05-23",
     title: "The Soul Experience ft. Corey Glover (of Living Colour)",
     venue: "The Falcon",
@@ -2544,7 +2388,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 213,
+    id: 200,
     date: "2026-05-23",
     title: "Strip Spelling Bee 2: Extra Credit",
     venue: "Unicorn Bar",
@@ -2556,7 +2400,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 214,
+    id: 201,
     date: "2026-05-23",
     title: "CRUISE CONTROL: HI-NRG DEVIANT CRUISE DISCO W/ BOUFFANT BOUFFANT",
     venue: "Unicorn Bar",
@@ -2568,7 +2412,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 215,
+    id: 202,
     date: "2026-05-23",
     title: "The Helm Family Midnight Ramble - Levon Helm's Birthday Weekend (Night 1) ft. Chaney Sims & Jackson Speller",
     venue: "Levon Helm Studios",
@@ -2580,11 +2424,11 @@ const EVENTS = [
     free: false
   },
   {
-    id: 216,
+    id: 203,
     date: "2026-05-23",
     title: "Hudson Valley Burlesque Bash: Circus of Tease",
     venue: "Assembly",
-    venueUrl: "https://www.restaurantji.com/ny/kingston/liquor-barn-/",
+    venueUrl: "https://www.bwpkingston.com/",
     location: "Hudson, NY",
     mapsUrl: "https://maps.google.com/?q=Assembly%20Hudson%2C%20NY",
     time: "7:00 pm",
@@ -2592,7 +2436,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 217,
+    id: 204,
     date: "2026-05-23",
     title: "Uke Revue 2026",
     venue: "The Ashokan Center",
@@ -2604,10 +2448,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 218,
+    id: 205,
     date: "2026-05-23",
-    title: "Ladies Who Rocked the 80\\u2019s!",
-    venue: "Towne Crier Caf\\u00e9",
+    title: "Ladies Who Rocked the 80\u2019s!",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -2616,9 +2460,21 @@ const EVENTS = [
     free: false
   },
   {
-    id: 219,
+    id: 206,
+    date: "2026-05-23",
+    title: "Funk Junkies at Silk Factory",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/funk-junkies-at-silk-factory/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    time: "",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 207,
     date: "2026-05-24",
-    title: "Pandemonium \\u2013 The Best of Arena Rock",
+    title: "Pandemonium \u2013 The Best of Arena Rock",
     venue: "The Falcon",
     venueUrl: "https://www.liveatthefalcon.com",
     location: "Marlboro, NY",
@@ -2628,9 +2484,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 220,
+    id: 208,
     date: "2026-05-24",
-    title: "No Shelter \\u2013 Rage Against the Machine Show with Special Guests Kingston Skanks",
+    title: "No Shelter \u2013 Rage Against the Machine Show with Special Guests Kingston Skanks",
     venue: "Keegan Ales",
     venueUrl: "https://www.keeganales.com/event/no-shelter-special-guest-dead-unicorn/",
     location: "Kingston, NY",
@@ -2640,7 +2496,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 221,
+    id: 209,
     date: "2026-05-24",
     title: "The Helm Family Midnight Ramble - Levon Helm's Birthday Weekend (Night 2) ft. Jon Gries with Mal Not Bad",
     venue: "Levon Helm Studios",
@@ -2652,7 +2508,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 222,
+    id: 210,
     date: "2026-05-24",
     title: "Sekanjabin",
     venue: "Tempo Arts",
@@ -2664,10 +2520,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 223,
+    id: 211,
     date: "2026-05-24",
-    title: "Last Minute Soulmates Celebrate Bob Dylan\\u2019s Birthday",
-    venue: "Towne Crier Caf\\u00e9",
+    title: "Last Minute Soulmates Celebrate Bob Dylan\u2019s Birthday",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -2676,7 +2532,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 224,
+    id: 212,
     date: "2026-05-27",
     title: "WOLF EYES + DANI DOBKIN/MATT SARGENT",
     venue: "Tubby's",
@@ -2688,7 +2544,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 225,
+    id: 213,
     date: "2026-05-27",
     title: "Nonfiction for No Reason",
     venue: "Unicorn Bar",
@@ -2700,7 +2556,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 226,
+    id: 214,
     date: "2026-05-27",
     title: "Camera Obscura",
     venue: "Bearsville Theater",
@@ -2712,7 +2568,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 227,
+    id: 215,
+    date: "2026-05-27",
+    title: "Circuit at Silk with EM!",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/circuit-at-silk-with-em-2/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    time: "",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 216,
     date: "2026-05-28",
     title: "ROBBER ROBBER + EMPATH",
     venue: "Tubby's",
@@ -2724,7 +2592,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 228,
+    id: 217,
     date: "2026-05-28",
     title: "SB: Harry Katz & the Pistachios // Lara Hope Band",
     venue: "The Falcon",
@@ -2736,7 +2604,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 229,
+    id: 218,
+    date: "2026-05-28",
+    title: "New York Queer Comedy Festival: Comedy Night!",
+    venue: "Unicorn Bar",
+    venueUrl: "https://unicornkingston.com/calendar",
+    location: "Kingston, NY",
+    mapsUrl: "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 219,
     date: "2026-05-29",
     title: "BEN SERETAN/JOHN THAYER + THE EARLY + BENT LIGHT",
     venue: "Tubby's",
@@ -2748,7 +2628,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 230,
+    id: 220,
     date: "2026-05-29",
     title: "Dylan Doyle Band",
     venue: "The Falcon",
@@ -2760,9 +2640,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 231,
+    id: 221,
     date: "2026-05-29",
-    title: "Parents Night Out \\u2013 HNS Fundraiser & Live Music",
+    title: "Parents Night Out \u2013 HNS Fundraiser & Live Music",
     venue: "Keegan Ales",
     venueUrl: "https://www.keeganales.com/event/hurley-nursery-school-fundraiser/",
     location: "Kingston, NY",
@@ -2772,7 +2652,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 232,
+    id: 222,
     date: "2026-05-29",
     title: "Queer Honky Tonk with Hudson Valley Flyers",
     venue: "Unicorn Bar",
@@ -2784,7 +2664,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 233,
+    id: 223,
     date: "2026-05-29",
     title: "NRBQ (Night 1)",
     venue: "Levon Helm Studios",
@@ -2796,7 +2676,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 234,
+    id: 224,
     date: "2026-05-29",
     title: "Field + Supply Spring MRKT",
     venue: "Hutton Brickyards",
@@ -2808,7 +2688,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 235,
+    id: 225,
     date: "2026-05-29",
     title: "Old Time Rollick 2026",
     venue: "The Ashokan Center",
@@ -2820,10 +2700,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 236,
+    id: 226,
     date: "2026-05-29",
     title: "Feast of Friends: Doors Tribute",
-    venue: "Towne Crier Caf\\u00e9",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -2832,7 +2712,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 237,
+    id: 227,
     date: "2026-05-29",
     title: "SWIM CLUB w/ Good Bar at Glen Falls House",
     venue: "Glen Falls House",
@@ -2844,19 +2724,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 238,
+    id: 228,
     date: "2026-05-29",
-    title: "Moroccan Sufi Blues: Saha Gnawa",
-    venue: "The Local Saugerties",
-    venueUrl: "https://www.thelocalsaugerties.com/calendar",
-    location: "Saugerties, NY",
-    mapsUrl: "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    title: "Black Dirt Bandits",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/black-dirt-bandits/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
     time: "",
     price: "See website",
     free: false
   },
   {
-    id: 239,
+    id: 229,
     date: "2026-05-30",
     title: "DJ BENEFIT: Ulster County SPCA",
     venue: "Tubby's",
@@ -2868,7 +2748,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 240,
+    id: 230,
     date: "2026-05-30",
     title: "Michael Kosta",
     venue: "Assembly Kingston",
@@ -2880,7 +2760,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 241,
+    id: 231,
     date: "2026-05-30",
     title: "Tom Freund",
     venue: "The Falcon",
@@ -2892,7 +2772,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 242,
+    id: 232,
+    date: "2026-05-30",
+    title: "Light Up the Night, a fundraiser concert for Hawthorne Valley Waldorf School",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/light-up-the-night-a-fundraiser-concert-for-hawthorne-valley-waldorf-school/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 233,
     date: "2026-05-30",
     title: "LISICK & LENNON PRESENT: DEAD DARLINGS - MAYDAY EDITION!",
     venue: "Unicorn Bar",
@@ -2904,7 +2796,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 243,
+    id: 234,
     date: "2026-05-30",
     title: "AFTERGLOW 2 Benefit Party!",
     venue: "Unicorn Bar",
@@ -2916,7 +2808,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 244,
+    id: 235,
     date: "2026-05-30",
     title: "NRBQ (Night 2)",
     venue: "Levon Helm Studios",
@@ -2928,9 +2820,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 245,
+    id: 236,
     date: "2026-05-30",
-    title: "FlamenKora \\u2014 A Night of Ancestral Crossings and New\\u2011World Fire",
+    title: "FlamenKora \u2014 A Night of Ancestral Crossings and New\u2011World Fire",
     venue: "Tempo Arts",
     venueUrl: "https://tempokingston.org/events/",
     location: "Kingston, NY",
@@ -2940,7 +2832,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 246,
+    id: 237,
     date: "2026-05-30",
     title: "Square Dance at the Rollick 2026",
     venue: "The Ashokan Center",
@@ -2952,10 +2844,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 247,
+    id: 238,
     date: "2026-05-30",
     title: "Muscle Shoals: Allman Brothers Tribute",
-    venue: "Towne Crier Caf\\u00e9",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -2964,7 +2856,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 248,
+    id: 239,
     date: "2026-05-31",
     title: "The Michael Abene Big Band",
     venue: "The Falcon",
@@ -2976,7 +2868,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 249,
+    id: 240,
     date: "2026-05-31",
     title: "Monday, May 25, 2026Charles P. Stevenson Jr. Library, First FloorPoiesis Quartet",
     venue: "Bard College Conservatory",
@@ -2988,19 +2880,19 @@ const EVENTS = [
     free: true
   },
   {
-    id: 250,
+    id: 241,
     date: "2026-05-31",
-    title: "The Art of Sardinian Guitar: Paolo Angeli",
-    venue: "The Local Saugerties",
-    venueUrl: "https://www.thelocalsaugerties.com/calendar",
-    location: "Saugerties, NY",
-    mapsUrl: "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    title: "Taylor Swift Tribute at Silk Factory",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/taylor-swift-tribute-at-silk-factory/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
     time: "",
     price: "See website",
     free: false
   },
   {
-    id: 251,
+    id: 242,
     date: "2026-06-01",
     title: "MY NEW BAND BELIEVE + WENDY EISENBERG",
     venue: "Tubby's",
@@ -3012,7 +2904,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 252,
+    id: 243,
     date: "2026-06-02",
     title: "SILVER TRIPLETS OF THE RIO HONDO",
     venue: "Tubby's",
@@ -3024,7 +2916,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 253,
+    id: 244,
     date: "2026-06-03",
     title: "STREET FRUIT + AR-KARICS",
     venue: "Tubby's",
@@ -3036,7 +2928,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 254,
+    id: 245,
     date: "2026-06-04",
     title: "Junco Partners \"Mardi Gras Show\"",
     venue: "The Falcon",
@@ -3048,9 +2940,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 255,
+    id: 246,
     date: "2026-06-04",
-    title: "Queer Classics Book Club: \\u201cOrlando\\u201d by Virginia Woolf",
+    title: "Queer Classics Book Club: \u201cOrlando\u201d by Virginia Woolf",
     venue: "Unicorn Bar",
     venueUrl: "https://unicornkingston.com/calendar",
     location: "Kingston, NY",
@@ -3060,19 +2952,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 256,
-    date: "2026-06-04",
-    title: "Flamenco x Jazz: Emilio Solla + Antonio Lizana Quartet",
-    venue: "The Local Saugerties",
-    venueUrl: "https://www.thelocalsaugerties.com/calendar",
-    location: "Saugerties, NY",
-    mapsUrl: "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
-    time: "",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 257,
+    id: 247,
     date: "2026-06-05",
     title: "MARISA ANDERSON",
     venue: "Tubby's",
@@ -3084,7 +2964,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 258,
+    id: 248,
     date: "2026-06-05",
     title: "The Big Takeover",
     venue: "The Falcon",
@@ -3096,22 +2976,22 @@ const EVENTS = [
     free: false
   },
   {
-    id: 259,
+    id: 249,
     date: "2026-06-05",
-    title: "Joanie Madden, Mary Coogan& Bruce Foleyof Cherish the Ladies",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "4:00 pm",
-    price: "$25",
+    title: "Sonny Rollins Documentary: Saxophone Colossus + A Conversation with Filmmaker Robert Mugge",
+    venue: "Opus 40",
+    venueUrl: "https://opus40.org/event/sonny-rollins-documentary-saxophone-colossus-a-conversation-with-filmmaker-robert-mugge/",
+    location: "Saugerties, NY",
+    mapsUrl: "https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",
+    time: "7:00 pm",
+    price: "See website",
     free: false
   },
   {
-    id: 260,
+    id: 250,
     date: "2026-06-05",
     title: "Eileen Ivers & The Brigideens",
-    venue: "Towne Crier Caf\\u00e9",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -3120,19 +3000,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 261,
+    id: 251,
     date: "2026-06-05",
-    title: "West Africa: Dogo Du Togo & The Alagaa Beat Band",
-    venue: "The Local Saugerties",
-    venueUrl: "https://www.thelocalsaugerties.com/calendar",
-    location: "Saugerties, NY",
-    mapsUrl: "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    title: "Tom Cotter",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/tom-cotter/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
     time: "",
     price: "See website",
     free: false
   },
   {
-    id: 262,
+    id: 252,
     date: "2026-06-06",
     title: "PARTY DOZEN (Australia)",
     venue: "Tubby's",
@@ -3144,7 +3024,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 263,
+    id: 253,
     date: "2026-06-06",
     title: "Lucas Zelnick",
     venue: "Assembly Kingston",
@@ -3156,7 +3036,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 264,
+    id: 254,
     date: "2026-06-06",
     title: "Fred Zepplin",
     venue: "The Falcon",
@@ -3168,7 +3048,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 265,
+    id: 255,
     date: "2026-06-06",
     title: "The Helm Family Midnight Ramble ft. Jay Collins & Northern Resistance",
     venue: "Levon Helm Studios",
@@ -3180,7 +3060,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 266,
+    id: 256,
     date: "2026-06-06",
     title: "The Outlier Inn Presents: Camp Canine with Joshua Latour",
     venue: "The Outlier Inn",
@@ -3192,31 +3072,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 267,
+    id: 257,
     date: "2026-06-06",
-    title: "The Lonetown BoysOld-Time Country Music",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.eventbrite.com/e/1986922317137?aff=oddtdtcreator",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:00 pm",
-    price: "$25",
+    title: "Rita Harvey\u2019s \u2018Heart Like a Wheel\u2019: The Music of Linda Ronstadt",
+    venue: "Towne Crier Caf\u00e9",
+    venueUrl: "https://townecrier.com/",
+    location: "Beacon, NY",
+    mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    time: "8:30 pm",
+    price: "See website",
     free: false
   },
   {
-    id: 268,
-    date: "2026-06-06",
-    title: "True North Jazz ProjectHudson Valley Musicians",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 269,
+    id: 258,
     date: "2026-06-07",
     title: "SWDYT? 31 MICHAEL FOSTER'S THE GHOST with Zach Rowden / Joey Sullivan + SARAH HENNIES / TRISTAN KASTEN-KRAUS",
     venue: "Tubby's",
@@ -3228,7 +3096,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 270,
+    id: 259,
     date: "2026-06-07",
     title: "Chimera",
     venue: "The Falcon",
@@ -3240,7 +3108,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 271,
+    id: 260,
     date: "2026-06-07",
     title: "Unicorn Bar x DCxPC Live presents: KulfiGirls with MEOW MEOW & Pucker Up!",
     venue: "Unicorn Bar",
@@ -3252,7 +3120,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 272,
+    id: 261,
     date: "2026-06-07",
     title: "KulfiGirls Vinyl Release Tour",
     venue: "Unicorn Bar",
@@ -3264,7 +3132,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 273,
+    id: 262,
     date: "2026-06-07",
     title: "Monday, June 1, 2026Bard College CampusAeolus Quartet",
     venue: "Bard College Conservatory",
@@ -3276,31 +3144,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 274,
-    date: "2026-06-07",
-    title: "Noche Flamenca",
-    venue: "The Local Saugerties",
-    venueUrl: "https://www.thelocalsaugerties.com/calendar",
-    location: "Saugerties, NY",
-    mapsUrl: "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
-    time: "",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 275,
-    date: "2026-06-09",
-    title: "Guy DavisAmerican Roots Musician",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 276,
+    id: 263,
     date: "2026-06-09",
     title: "mekons",
     venue: "Bearsville Theater",
@@ -3312,7 +3156,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 277,
+    id: 264,
     date: "2026-06-10",
     title: "GRACIE AND RACHEL + beccs",
     venue: "Tubby's",
@@ -3324,7 +3168,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 278,
+    id: 265,
     date: "2026-06-10",
     title: "The Underground Blues Jam | Hosted by Karl Allweier",
     venue: "The Falcon",
@@ -3336,31 +3180,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 279,
-    date: "2026-06-10",
-    title: "\"Coming Home\" Concert and Reception With David Amram and Kate Hoekstra",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "2:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 280,
-    date: "2026-06-10",
-    title: "Local Waves: Ongoing",
-    venue: "The Local Saugerties",
-    venueUrl: "https://www.thelocalsaugerties.com/calendar",
-    location: "Saugerties, NY",
-    mapsUrl: "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
-    time: "",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 281,
+    id: 266,
     date: "2026-06-12",
     title: "LIQUOR STORE + ANDREW CEDERMARK (formerly of TITUS ANDRONICUS)",
     venue: "Tubby's",
@@ -3372,7 +3192,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 282,
+    id: 267,
     date: "2026-06-12",
     title: "FERRIS 40",
     venue: "Assembly Kingston",
@@ -3384,7 +3204,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 283,
+    id: 268,
     date: "2026-06-12",
     title: "Chris Bergson - East River Blues | RECORD RELEASE SHOW",
     venue: "The Falcon",
@@ -3396,7 +3216,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 284,
+    id: 269,
     date: "2026-06-12",
     title: "Futurebirds",
     venue: "Levon Helm Studios",
@@ -3408,19 +3228,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 285,
-    date: "2026-06-12",
-    title: "The Dream ChoirJoin Us for a Singalong",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 286,
+    id: 270,
     date: "2026-06-12",
     title: "The Garifuna Collective",
     venue: "Tempo Arts",
@@ -3432,7 +3240,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 287,
+    id: 271,
     date: "2026-06-12",
     title: "Lyraccord in Concert",
     venue: "WildHeart: Center for Performance and Embodiment Practice",
@@ -3444,10 +3252,10 @@ const EVENTS = [
     free: false
   },
   {
-    id: 288,
+    id: 272,
     date: "2026-06-12",
     title: "Rick Estrin & The Nightcats",
-    venue: "Towne Crier Caf\\u00e9",
+    venue: "Towne Crier Caf\u00e9",
     venueUrl: "https://townecrier.com/",
     location: "Beacon, NY",
     mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
@@ -3456,7 +3264,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 289,
+    id: 273,
     date: "2026-06-12",
     title: "Swim Club w/ Good Bar at Glen Falls House",
     venue: "Glen Falls House",
@@ -3468,7 +3276,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 290,
+    id: 274,
+    date: "2026-06-12",
+    title: "Newburgh Voice Contest",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/newburgh-voice-contest/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    time: "",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 275,
     date: "2026-06-13",
     title: "UTD + HAIRBAG + RBNX + QUIET",
     venue: "Tubby's",
@@ -3480,7 +3300,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 291,
+    id: 276,
     date: "2026-06-13",
     title: "The Ed Palermo Big Band | Matinee Show",
     venue: "The Falcon",
@@ -3492,55 +3312,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 292,
+    id: 277,
     date: "2026-06-13",
-    title: "An Evening with Tom ChapinSong, Stories and Inspiration",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 293,
-    date: "2026-06-13",
-    title: "Willie Nile Band",
-    venue: "Towne Crier Caf\\u00e9",
-    venueUrl: "https://townecrier.com/",
-    location: "Beacon, NY",
-    mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",
-    time: "8:30 pm",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 294,
-    date: "2026-06-13",
-    title: "The Golden Eras of Jamaican Music: NYC Ska Orchestra featuring Larry McDonald of the Skatelites",
-    venue: "The Local Saugerties",
-    venueUrl: "https://www.thelocalsaugerties.com/calendar",
-    location: "Saugerties, NY",
-    mapsUrl: "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    title: "The Ultimate Ozzy Show S.A.T.O",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/the-ultimate-ozzy-show-s-a-t-o/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
     time: "",
     price: "See website",
     free: false
   },
   {
-    id: 295,
-    date: "2026-06-13",
-    title: "2nd Annual Art Auction Fundraiser",
-    venue: "Stissing Center",
-    venueUrl: "https://www.thestissingcenter.org/events",
-    location: "Pine Plains, NY",
-    mapsUrl: "https://maps.app.goo.gl/NGxaff71QdhYoLhYA",
-    time: "5:00 PM",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 296,
+    id: 278,
     date: "2026-06-14",
     title: "Bridge Arts Jazz Concert",
     venue: "The Falcon",
@@ -3552,7 +3336,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 297,
+    id: 279,
     date: "2026-06-14",
     title: "DCxPC Live Presents Benefit for Trans Closet Hudson Valley",
     venue: "Snapper Magee's",
@@ -3564,19 +3348,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 298,
-    date: "2026-06-15",
-    title: "Lisa Gutkin and Christina CrowderIntertwining Irish, Jewish, and American tunes",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 299,
+    id: 280,
     date: "2026-06-17",
     title: "HV JAZZ JAM in the Underground",
     venue: "The Falcon",
@@ -3588,19 +3360,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 300,
-    date: "2026-06-17",
-    title: "Larry & JoeVenezuelan and Appalachian fusion folk",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 301,
+    id: 281,
     date: "2026-06-18",
     title: "Bit Brigade PERFORMS \"MEGA MAN X\" LIVE",
     venue: "Assembly Kingston",
@@ -3612,7 +3372,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 302,
+    id: 282,
     date: "2026-06-18",
     title: "Chris O'Leary Band",
     venue: "The Falcon",
@@ -3624,19 +3384,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 303,
-    date: "2026-06-18",
-    title: "True North Jazz ProjectHudson Valley Musicians & Educators",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 304,
+    id: 283,
     date: "2026-06-19",
     title: "Fred Thomas of The JBs",
     venue: "The Falcon",
@@ -3648,19 +3396,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 305,
-    date: "2026-06-19",
-    title: "Down Hill Strugglers",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 306,
+    id: 284,
     date: "2026-06-20",
     title: "Purple Productions presents: PRISM - Realm of Kink",
     venue: "Unicorn Bar",
@@ -3672,7 +3408,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 307,
+    id: 285,
+    date: "2026-06-20",
+    title: "Live in Concert \u2013 Milagro Verde",
+    venue: "Rosendale Theater",
+    venueUrl: "https://www.apartmenthomeliving.com/apartment-finder/Orchard-Hills-Apartment-Homes-Kingston-NY-12401-192736",
+    location: "Rosendale, NY",
+    mapsUrl: "https://maps.google.com/?q=Rosendale%20Theater%20Rosendale%2C%20NY",
+    time: "7:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 286,
     date: "2026-06-21",
     title: "The Klezmatics",
     venue: "The Falcon",
@@ -3684,7 +3432,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 308,
+    id: 287,
     date: "2026-06-24",
     title: "Switch Salsa Dancing with DJ Jams Bond",
     venue: "Unicorn Bar",
@@ -3696,7 +3444,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 309,
+    id: 288,
     date: "2026-06-25",
     title: "MOUNTAIN MOVERS + THE SPATULAS",
     venue: "Tubby's",
@@ -3708,7 +3456,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 310,
+    id: 289,
     date: "2026-06-25",
     title: "Sasha Dobson",
     venue: "The Falcon",
@@ -3720,19 +3468,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 311,
-    date: "2026-06-25",
-    title: "The Cortlandt String Quartetwith Andy Stein",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 312,
+    id: 290,
     date: "2026-06-26",
     title: "PREWN + OFFICIAL CLAIRE",
     venue: "Tubby's",
@@ -3744,7 +3480,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 313,
+    id: 291,
     date: "2026-06-26",
     title: "UPSTATE ART WEEKEND x NOISE FOR NOW Dance Party",
     venue: "Assembly Kingston",
@@ -3756,7 +3492,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 314,
+    id: 292,
     date: "2026-06-26",
     title: "The Brighton Beat",
     venue: "The Falcon",
@@ -3768,7 +3504,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 315,
+    id: 293,
     date: "2026-06-26",
     title: "S.G. Goodman",
     venue: "Levon Helm Studios",
@@ -3780,19 +3516,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 316,
+    id: 294,
     date: "2026-06-26",
-    title: "Grant Peeplesand the Peeples Republik Tourwith Erik Alvar",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "4:00 pm",
-    price: "$25",
+    title: "Troy Bond",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/troy-bond/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    time: "",
+    price: "See website",
     free: false
   },
   {
-    id: 317,
+    id: 295,
     date: "2026-06-27",
     title: "DELICATE STEVE + AGGIE MILLER",
     venue: "Tubby's",
@@ -3804,7 +3540,7 @@ const EVENTS = [
     free: true
   },
   {
-    id: 318,
+    id: 296,
     date: "2026-06-27",
     title: "Honky Tonk Swing Dance 2026",
     venue: "The Ashokan Center",
@@ -3816,7 +3552,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 319,
+    id: 297,
     date: "2026-06-28",
     title: "Jesse Royal",
     venue: "Assembly Kingston",
@@ -3828,7 +3564,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 320,
+    id: 298,
     date: "2026-06-28",
     title: "The Jamie Baum Septet+",
     venue: "The Falcon",
@@ -3840,19 +3576,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 321,
-    date: "2026-06-28",
-    title: "Deni Bonet & Chris FlynnAmericana meets Folk-Rock",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 322,
+    id: 299,
     date: "2026-06-28",
     title: "Western & Swing Week 2026",
     venue: "The Ashokan Center",
@@ -3864,19 +3588,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 323,
-    date: "2026-06-29",
-    title: "Professor Louie and the CrowmatixMOVED INDOORSRoots Music Royalty",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 324,
+    id: 300,
     date: "2026-07-01",
     title: "GREG MENDEZ + SCARLET RAE",
     venue: "Tubby's",
@@ -3888,7 +3600,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 325,
+    id: 301,
     date: "2026-07-02",
     title: "Ladies of the Valley | Joni Mitchell Tribute",
     venue: "The Falcon",
@@ -3900,7 +3612,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 326,
+    id: 302,
     date: "2026-07-04",
     title: "Fred Zepplin",
     venue: "The Falcon",
@@ -3912,7 +3624,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 327,
+    id: 303,
     date: "2026-07-04",
     title: "EVENTS",
     venue: "Hutton Brickyards",
@@ -3924,7 +3636,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 328,
+    id: 304,
+    date: "2026-07-05",
+    title: "Afro-Cuba! Ricardo Lemvo and Makina Loca!",
+    venue: "Opus 40",
+    venueUrl: "https://opus40.org/event/afro-cuba-ricardo-lemvo-and-makina-loca/",
+    location: "Saugerties, NY",
+    mapsUrl: "https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",
+    time: "7:30 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 305,
     date: "2026-07-08",
     title: "The Underground Blues Jam | Hosted by Karl Allweier",
     venue: "The Falcon",
@@ -3936,31 +3660,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 329,
-    date: "2026-07-08",
-    title: "Ray BlueStraight-ahead jazz with a rhythmic groove",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 330,
-    date: "2026-07-08",
-    title: "Local Waves: Spero",
-    venue: "The Local Saugerties",
-    venueUrl: "https://www.thelocalsaugerties.com/calendar",
-    location: "Saugerties, NY",
-    mapsUrl: "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
-    time: "",
-    price: "See website",
-    free: false
-  },
-  {
-    id: 331,
+    id: 306,
     date: "2026-07-09",
     title: "Charlie Parr",
     venue: "Levon Helm Studios",
@@ -3972,19 +3672,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 332,
-    date: "2026-07-09",
-    title: "House of HamillSophisticated, Independent Irish Folk MusicJohn Cohen Memorial Music Series",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 333,
+    id: 307,
     date: "2026-07-10",
     title: "Johnny Nicholas",
     venue: "The Falcon",
@@ -3996,7 +3684,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 334,
+    id: 308,
     date: "2026-07-10",
     title: "Richard Thompson (Night 1)",
     venue: "Levon Helm Studios",
@@ -4008,7 +3696,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 335,
+    id: 309,
     date: "2026-07-11",
     title: "Buck Meek",
     venue: "Assembly Kingston",
@@ -4020,7 +3708,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 336,
+    id: 310,
     date: "2026-07-11",
     title: "The Soul Experience ft. Corey Glover (of Living Colour)",
     venue: "The Falcon",
@@ -4032,7 +3720,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 337,
+    id: 311,
     date: "2026-07-11",
     title: "Richard Thompson (Night 2)",
     venue: "Levon Helm Studios",
@@ -4044,11 +3732,11 @@ const EVENTS = [
     free: false
   },
   {
-    id: 338,
+    id: 312,
     date: "2026-07-11",
     title: "Jenna Nicholls Benefit Concert for Clearwater",
     venue: "The Local",
-    venueUrl: "https://www.restaurantji.com/ny/kingston/liquor-barn-/",
+    venueUrl: "https://www.bwpkingston.com/",
     location: "Saugerties, NY",
     mapsUrl: "https://maps.google.com/?q=The%20Local%20Saugerties%2C%20NY",
     time: "5:30 am",
@@ -4056,7 +3744,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 339,
+    id: 313,
     date: "2026-07-12",
     title: "Joanne Shaw Taylor",
     venue: "Assembly Kingston",
@@ -4068,7 +3756,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 340,
+    id: 314,
     date: "2026-07-12",
     title: "The Mahavishnu Project",
     venue: "The Falcon",
@@ -4080,7 +3768,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 341,
+    id: 315,
     date: "2026-07-12",
     title: "Alejandro Escovedo",
     venue: "Levon Helm Studios",
@@ -4092,31 +3780,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 342,
-    date: "2026-07-12",
-    title: "Swing du Jour QuintetGypsy Jazz on our Outdoor Stage!",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 343,
-    date: "2026-07-14",
-    title: "DeadgrassOutdoors!A Stringband Adventure through Jerry Garcia's World",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "3:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 344,
+    id: 316,
     date: "2026-07-15",
     title: "STYROFOAM WINOS + WILL LAWRENCE/WEDNESDAY KNUDSEN / KRYSSI BATTALENE",
     venue: "Tubby's",
@@ -4128,7 +3792,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 345,
+    id: 317,
     date: "2026-07-15",
     title: "HV JAZZ JAM in the Underground",
     venue: "The Falcon",
@@ -4140,9 +3804,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 346,
+    id: 318,
     date: "2026-07-16",
-    title: "Tisziji Mu\\u00f1oz | 80th Birthday Awakening",
+    title: "Tisziji Mu\u00f1oz | 80th Birthday Awakening",
     venue: "The Falcon",
     venueUrl: "https://www.liveatthefalcon.com",
     location: "Marlboro, NY",
@@ -4152,7 +3816,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 347,
+    id: 319,
     date: "2026-07-17",
     title: "Allah-Las",
     venue: "Assembly Kingston",
@@ -4164,7 +3828,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 348,
+    id: 320,
     date: "2026-07-17",
     title: "Professor Louie & The Crowmatix",
     venue: "The Falcon",
@@ -4176,7 +3840,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 349,
+    id: 321,
     date: "2026-07-18",
     title: "Moon Boot Lover",
     venue: "The Falcon",
@@ -4188,7 +3852,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 350,
+    id: 322,
+    date: "2026-07-18",
+    title: "Reggae on the Rocks | The Big Takeover",
+    venue: "Opus 40",
+    venueUrl: "https://opus40.org/event/the-big-takeover-2/",
+    location: "Saugerties, NY",
+    mapsUrl: "https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 323,
     date: "2026-07-18",
     title: "DCxPC Live Presents Punk Night at Night Swim",
     venue: "NightSwim",
@@ -4200,7 +3876,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 351,
+    id: 324,
     date: "2026-07-18",
     title: "Northern Week Dance Party 2026",
     venue: "The Ashokan Center",
@@ -4212,9 +3888,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 352,
+    id: 325,
     date: "2026-07-19",
-    title: "Eddy\\u2019s Chemistry Set w/ special guest: Napoleon Murphy Brock",
+    title: "Eddy\u2019s Chemistry Set w/ special guest: Napoleon Murphy Brock",
     venue: "The Falcon",
     venueUrl: "https://www.liveatthefalcon.com",
     location: "Marlboro, NY",
@@ -4224,7 +3900,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 353,
+    id: 326,
     date: "2026-07-19",
     title: "Northern Week 2026",
     venue: "The Ashokan Center",
@@ -4236,7 +3912,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 354,
+    id: 327,
+    date: "2026-07-22",
+    title: "WEDNESDAY",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/wednesday/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 328,
     date: "2026-07-23",
     title: "Twen",
     venue: "Assembly Kingston",
@@ -4248,7 +3936,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 355,
+    id: 329,
     date: "2026-07-23",
     title: "Melissa Carper",
     venue: "The Falcon",
@@ -4260,7 +3948,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 356,
+    id: 330,
     date: "2026-07-23",
     title: "Shovels & Rope",
     venue: "Levon Helm Studios",
@@ -4272,19 +3960,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 357,
-    date: "2026-07-23",
-    title: "\"Open Book\"",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 358,
+    id: 331,
     date: "2026-07-24",
     title: "Early Elton Trio",
     venue: "The Falcon",
@@ -4296,7 +3972,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 359,
+    id: 332,
     date: "2026-07-24",
     title: "Searows",
     venue: "Levon Helm Studios",
@@ -4308,19 +3984,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 360,
-    date: "2026-07-24",
-    title: "W M D 2Live on the Outdoor Stage",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 361,
+    id: 333,
     date: "2026-07-25",
     title: "Fruit Bats",
     venue: "Assembly Kingston",
@@ -4332,7 +3996,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 362,
+    id: 334,
     date: "2026-07-25",
     title: "Popa Chubby Band",
     venue: "The Falcon",
@@ -4344,7 +4008,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 363,
+    id: 335,
     date: "2026-07-25",
     title: "Noah Gundersen",
     venue: "Levon Helm Studios",
@@ -4356,7 +4020,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 364,
+    id: 336,
+    date: "2026-07-25",
+    title: "Emily King",
+    venue: "Opus 40",
+    venueUrl: "https://opus40.org/event/emily-king/",
+    location: "Saugerties, NY",
+    mapsUrl: "https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 337,
     date: "2026-07-26",
     title: "The Howard Levy 4",
     venue: "The Falcon",
@@ -4368,31 +4044,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 365,
-    date: "2026-07-26",
-    title: "Professor Louie & the Crowmatix Rock, Blues, Gospel and American Roots music",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 366,
-    date: "2026-07-27",
-    title: "Ray Blue Jazz Quartet - Outdoors!Award-winning jazz composer\\u200b Andy Farber to step in for Ray",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 367,
+    id: 338,
     date: "2026-07-27",
     title: "Acoustic Guitar Camp 2026",
     venue: "The Ashokan Center",
@@ -4404,7 +4056,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 368,
+    id: 339,
     date: "2026-07-29",
     title: "Souls of Mischief",
     venue: "Assembly Kingston",
@@ -4416,7 +4068,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 369,
+    id: 340,
     date: "2026-07-29",
     title: "Guitar Summit 2026",
     venue: "The Ashokan Center",
@@ -4428,19 +4080,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 370,
-    date: "2026-08-03",
-    title: "Frye & HarrisImprovised Soundscapes",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
+    id: 341,
+    date: "2026-07-31",
+    title: "Rock the Quarry Music Festival",
+    venue: "Opus 40",
+    venueUrl: "https://opus40.org/event/rock-the-quarry-2026/",
+    location: "Saugerties, NY",
+    mapsUrl: "https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",
+    time: "6:30 pm",
+    price: "See website",
     free: false
   },
   {
-    id: 371,
+    id: 342,
     date: "2026-08-03",
     title: "Family Camp 2026",
     venue: "The Ashokan Center",
@@ -4452,7 +4104,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 372,
+    id: 343,
+    date: "2026-08-04",
+    title: "HOUNDMOUTH",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/houndmouth/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 344,
     date: "2026-08-05",
     title: "CHEATER SLICKS + SUNBURNED HAND OF THE MAN",
     venue: "Tubby's",
@@ -4464,31 +4128,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 373,
-    date: "2026-08-06",
-    title: "Ray Blue Quartet",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.eventbrite.com/e/ray-blue-jazz-quartet-at-tompkins-corners-tickets-378344437397",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 374,
-    date: "2026-08-07",
-    title: "Wyndham BairdLive on the Outdoor Stage",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 375,
+    id: 345,
     date: "2026-08-08",
     title: "Joan Osborne Sings The Songs of Bob Dylan",
     venue: "Assembly Kingston",
@@ -4500,7 +4140,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 376,
+    id: 346,
+    date: "2026-08-08",
+    title: "Lola Kirke",
+    venue: "Levon Helm Studios",
+    venueUrl: "https://levonhelm.com/shows",
+    location: "Woodstock, NY",
+    mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 347,
     date: "2026-08-08",
     title: "Outlier Concerts: Nick Hakim with Eddie Chacon, June McDoom, Marem Ladson, and Outlier DJs",
     venue: "The Outlier Inn",
@@ -4512,7 +4164,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 377,
+    id: 348,
+    date: "2026-08-08",
+    title: "Sally Baby\u2019s Silver Dollars + Live Visuals by BA Miale",
+    venue: "Opus 40",
+    venueUrl: "https://opus40.org/event/sally-babys-silver-dollars/",
+    location: "Saugerties, NY",
+    mapsUrl: "https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",
+    time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 349,
     date: "2026-08-09",
     title: "ONEIDA + KINSKI + SPREADERS",
     venue: "Tubby's",
@@ -4524,7 +4188,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 378,
+    id: 350,
     date: "2026-08-10",
     title: "Bluegrass Camp 2026",
     venue: "The Ashokan Center",
@@ -4536,9 +4200,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 379,
+    id: 351,
     date: "2026-08-13",
-    title: "Tim O\\u2019Brien, Sam Grisman & Victor Furtado Trio ft. Jan Fabricius (Night 1)",
+    title: "Tim O\u2019Brien, Sam Grisman & Victor Furtado Trio ft. Jan Fabricius (Night 1)",
     venue: "Levon Helm Studios",
     venueUrl: "https://levonhelm.com/shows",
     location: "Woodstock, NY",
@@ -4548,9 +4212,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 380,
+    id: 352,
     date: "2026-08-13",
-    title: "Outlier Presents: The Poetry Society of New York\\u2019s Poetry Camp",
+    title: "Outlier Presents: The Poetry Society of New York\u2019s Poetry Camp",
     venue: "The Outlier Inn",
     venueUrl: "https://www.outlierinn.com/events/psny",
     location: "Woodridge, NY",
@@ -4560,7 +4224,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 381,
+    id: 353,
     date: "2026-08-13",
     title: "Bluegrass Open House 2026",
     venue: "The Ashokan Center",
@@ -4572,9 +4236,9 @@ const EVENTS = [
     free: false
   },
   {
-    id: 382,
+    id: 354,
     date: "2026-08-14",
-    title: "Tim O\\u2019Brien, Sam Grisman & Victor Furtado Trio ft. Jan Fabricius (Night 2)",
+    title: "Tim O\u2019Brien, Sam Grisman & Victor Furtado Trio ft. Jan Fabricius (Night 2)",
     venue: "Levon Helm Studios",
     venueUrl: "https://levonhelm.com/shows",
     location: "Woodstock, NY",
@@ -4584,7 +4248,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 383,
+    id: 355,
     date: "2026-08-15",
     title: "Southern Shindig 2026",
     venue: "The Ashokan Center",
@@ -4596,19 +4260,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 384,
-    date: "2026-08-16",
-    title: "Eddie Allen Jazz Quartet Live on Our Outdoor Stage!",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "6:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 385,
+    id: 356,
     date: "2026-08-16",
     title: "Southern Week 2026",
     venue: "The Ashokan Center",
@@ -4620,7 +4272,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 386,
+    id: 357,
     date: "2026-08-18",
     title: "Forest Rhythms Retreat",
     venue: "The Outlier Inn",
@@ -4632,19 +4284,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 387,
-    date: "2026-08-19",
-    title: "The Man Without A WorldCine Concert with Alicia Svigals and Donald Sosin",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 388,
+    id: 358,
     date: "2026-08-21",
     title: "Outlier Presents: Solid Gold Yoga Retreat",
     venue: "The Outlier Inn",
@@ -4656,7 +4296,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 389,
+    id: 359,
     date: "2026-08-22",
     title: "DREAM HORIZON: Jeff Coffin, Nir Felder, James Genus, Futureman",
     venue: "The Falcon",
@@ -4668,43 +4308,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 390,
+    id: 360,
     date: "2026-08-22",
-    title: "Kieran Kane & Rayna GellertCelebrated Americana Singer/Songwriters",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
+    title: "Euphonia Balkan and Brass Festival",
+    venue: "Opus 40",
+    venueUrl: "https://opus40.org/event/brass-festival/",
+    location: "Saugerties, NY",
+    mapsUrl: "https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",
+    time: "4:00 pm",
+    price: "See website",
     free: false
   },
   {
-    id: 391,
-    date: "2026-08-23",
-    title: "Kieran Kane and Rayna GellertCelebrated Americana Singer/Songwriters",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 392,
-    date: "2026-08-27",
-    title: "Howard Britz Trio",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 393,
+    id: 361,
     date: "2026-08-28",
     title: "Summer Hoot 2026",
     venue: "The Ashokan Center",
@@ -4716,7 +4332,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 394,
+    id: 362,
+    date: "2026-08-28",
+    title: "Girls Night Out The Show",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/girls-night-out/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    time: "",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 363,
     date: "2026-08-29",
     title: "The Ed Palermo Big Band | Matinee Show",
     venue: "The Falcon",
@@ -4728,7 +4356,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 395,
+    id: 364,
     date: "2026-08-29",
     title: "Shinyribs",
     venue: "Levon Helm Studios",
@@ -4740,7 +4368,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 396,
+    id: 365,
+    date: "2026-08-30",
+    title: "Cumbia Vortex: Chicha Libre, opener TBA + Live Visuals by B.A. Miale",
+    venue: "Opus 40",
+    venueUrl: "https://opus40.org/event/chicha-libre/",
+    location: "Saugerties, NY",
+    mapsUrl: "https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",
+    time: "7:30 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 366,
     date: "2026-09-04",
     title: "SWIM CLUB w/ Good Bar At Glen Falls House",
     venue: "Glen Falls House",
@@ -4752,19 +4392,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 397,
-    date: "2026-09-09",
-    title: "The Putnam Chorale Summer Ensemble\"Poppin' Through the Decades!\"",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "3:00 pm",
-    price: "$25",
+    id: 367,
+    date: "2026-09-05",
+    title: "Primal Disco with Michael Vadacchino! + Live Visuals by B.A. Miale",
+    venue: "Opus 40",
+    venueUrl: "https://opus40.org/event/primal-disco-michael-v/",
+    location: "Saugerties, NY",
+    mapsUrl: "https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",
+    time: "7:30 pm",
+    price: "See website",
     free: false
   },
   {
-    id: 398,
+    id: 368,
     date: "2026-09-10",
     title: "Outlier Concerts and Chosen Family Present: Shannon Lay & co.",
     venue: "The Outlier Inn",
@@ -4776,7 +4416,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 399,
+    id: 369,
     date: "2026-09-12",
     title: "The Beatle Project",
     venue: "Assembly Kingston",
@@ -4788,7 +4428,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 400,
+    id: 370,
     date: "2026-09-12",
     title: "John Craigie",
     venue: "Levon Helm Studios",
@@ -4800,31 +4440,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 401,
-    date: "2026-09-13",
-    title: "Phineas and the Lonely LeavesOutdoor Family Concert!",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "4:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 402,
-    date: "2026-09-17",
-    title: "Mamie Minch and Tamar KornJohn Cohen Memorial Music Series",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 403,
+    id: 371,
     date: "2026-09-18",
     title: "Tyler Ballgame",
     venue: "Levon Helm Studios",
@@ -4836,7 +4452,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 404,
+    id: 372,
     date: "2026-09-19",
     title: "Donna The Buffalo",
     venue: "Assembly Kingston",
@@ -4848,7 +4464,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 405,
+    id: 373,
     date: "2026-09-19",
     title: "Alela Diane at Unicorn Bar",
     venue: "Unicorn Bar",
@@ -4860,7 +4476,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 406,
+    id: 374,
     date: "2026-09-20",
     title: "David Nihill",
     venue: "Assembly Kingston",
@@ -4872,7 +4488,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 407,
+    id: 375,
     date: "2026-09-20",
     title: "Ukrainian Community Day 2026",
     venue: "The Ashokan Center",
@@ -4884,55 +4500,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 408,
-    date: "2026-09-23",
-    title: "Songs, Stories & Art - Lessons from StrangersA Multimedia Show by John John Brown",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
+    id: 376,
+    date: "2026-09-26",
+    title: "Gaspare Randazzo",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/gaspare-randazzo/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    time: "",
+    price: "See website",
     free: false
   },
   {
-    id: 409,
-    date: "2026-10-01",
-    title: "String Busters \\u200b Moved indoorsBlues to bluegrass to country, folk and more!",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "4:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 410,
-    date: "2026-10-04",
-    title: "The Down Hill StrugglersOld Time String Band\\u200bJohn Cohen Memorial Music Series",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 411,
-    date: "2026-10-05",
-    title: "\"Out To Lunch\"Mixed styles from Bluegrass to Jazz to Celtic",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 412,
+    id: 377,
     date: "2026-10-10",
     title: "Fall Yoga Retreat with Solid Gold Yogi",
     venue: "The Outlier Inn",
@@ -4944,19 +4524,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 413,
-    date: "2026-10-15",
-    title: "Benjamin Verdery",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:00 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 414,
+    id: 378,
     date: "2026-10-16",
     title: "Lifehouse (Best of Acoustic)",
     venue: "Assembly Kingston",
@@ -4968,7 +4536,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 415,
+    id: 379,
     date: "2026-10-17",
     title: "TAB BENOIT",
     venue: "Assembly Kingston",
@@ -4980,7 +4548,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 416,
+    id: 380,
     date: "2026-10-17",
     title: "Upcoming Events.",
     venue: "The Outlier Inn",
@@ -4992,19 +4560,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 417,
-    date: "2026-10-21",
-    title: "Corner HouseScottish, progressive bluegrass and folk",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
+    id: 381,
+    date: "2026-10-18",
+    title: "SUGAR",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/sugar/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
+    price: "See website",
     free: false
   },
   {
-    id: 418,
+    id: 382,
     date: "2026-10-29",
     title: "HALLOWEEN WEEKEND",
     venue: "Glen Falls House",
@@ -5016,23 +4584,11 @@ const EVENTS = [
     free: false
   },
   {
-    id: 419,
-    date: "2026-11-01",
-    title: "Cole Quest and the City PickersNot Your Average Bluegrass Band!John Cohen Memorial Music Series",
-    venue: "Tompkins Corners Cultural Center",
-    venueUrl: "https://www.tompkinscorners.org/music.html",
-    location: "Putnam Valley, NY",
-    mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
-    time: "7:30 pm",
-    price: "$25",
-    free: false
-  },
-  {
-    id: 420,
+    id: 383,
     date: "2026-11-09",
     title: "BILL CALLAHAN w/Noveller",
     venue: "Assembly",
-    venueUrl: "https://www.restaurantji.com/ny/kingston/liquor-barn-/",
+    venueUrl: "https://www.apartmenthomeliving.com/apartment-finder/Orchard-Hills-Apartment-Homes-Kingston-NY-12401-192736",
     location: "Hudson, NY",
     mapsUrl: "https://maps.google.com/?q=Assembly%20Hudson%2C%20NY",
     time: "7:00 pm",
@@ -5040,7 +4596,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 421,
+    id: 384,
     date: "2026-11-16",
     title: "HOLIDAY BREAK",
     venue: "Glen Falls House",
@@ -5052,7 +4608,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 422,
+    id: 385,
     date: "2026-11-20",
     title: "Eilen Jewell",
     venue: "Levon Helm Studios",
@@ -5064,7 +4620,19 @@ const EVENTS = [
     free: false
   },
   {
-    id: 423,
+    id: 386,
+    date: "2026-11-22",
+    title: "Peter Antoniou",
+    venue: "Silk Factory",
+    venueUrl: "https://silkfcty.com/events/peter-antoniou/",
+    location: "Newburgh, NY",
+    mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
+    time: "",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 387,
     date: "2026-12-30",
     title: "New Years Eve",
     venue: "Glen Falls House",
@@ -5076,7 +4644,7 @@ const EVENTS = [
     free: false
   },
   {
-    id: 424,
+    id: 388,
     date: "2027-04-29",
     title: "Foy Vance: The Wake World Tour",
     venue: "Levon Helm Studios",
@@ -5084,6 +4652,18 @@ const EVENTS = [
     location: "Woodstock, NY",
     mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
     time: "8:00 pm",
+    price: "See website",
+    free: false
+  },
+  {
+    id: 389,
+    date: "",
+    title: "Basilica Farm & Flea Summer Market 2026",
+    venue: "Basilica Hudson",
+    venueUrl: "https://basilicahudson.org/events/basilica-farm-flea-summer-market-2026/",
+    location: "Hudson, NY",
+    mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",
+    time: "See website",
     price: "See website",
     free: false
   }
