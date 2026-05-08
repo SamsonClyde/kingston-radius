@@ -463,5 +463,6 @@
   "Unicorn Bar||2026-04-22||7:00 pm": "approved",
   "Keegan Ales||2026-05-08||8:00 pm": "approved",
   "Keegan Ales||2026-05-07||": "rejected",
-  "Keegan Ales||2026-05-07||8:00 pm": "rejected"
+  "Keegan Ales||2026-05-07||8:00 pm": "rejected",
+  "Unicorn Bar||2026-05-07||7:30 pm": "rejected"
 }
