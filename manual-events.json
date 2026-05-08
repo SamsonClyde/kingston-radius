@@ -791,5 +791,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 104,
+    "date": "2026-05-08",
+    "title": "Fareed Haque Trio with Mike Clark & Peter Washington",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "See website",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
