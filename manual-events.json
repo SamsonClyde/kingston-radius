@@ -1663,5 +1663,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 213,
+    "date": "2026-07-12",
+    "title": "Joanne Shaw Taylor",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/joanne-shaw-taylor",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
