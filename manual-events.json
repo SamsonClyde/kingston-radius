@@ -2521,5 +2521,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 344,
+    "date": "2026-10-01",
+    "title": "Amythyst Kiah",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/b6dYXn3tzHWHQeKt9",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
