@@ -1243,8 +1243,8 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     "time": "7:00 pm",
-    "price": "Free",
-    "free": true,
+    "price": "$25",
+    "free": false,
     "_manual": true
   }
 ]
