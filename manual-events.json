@@ -1598,5 +1598,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 202,
+    "date": "2026-07-10",
+    "title": "Fire & Thyme Tribute to Taylor, Simon and Browne",
+    "venue": "Tompkins Corners Cultural Center",
+    "venueUrl": "https://www.eventbrite.com/e/fire-thyme-at-tccc-tickets-1990045887821?aff=oddtdtcreator&keep_tld=true",
+    "location": "Putnam Valley, NY",
+    "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
+    "time": "6:00 pm",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
