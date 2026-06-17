@@ -1103,5 +1103,18 @@
     "price": "Free",
     "free": true,
     "_manual": true
+  },
+  {
+    "id": 149,
+    "date": "2026-06-25",
+    "title": "Balkan Night with MacN'Cheez Balkan Power Trio",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/Ga6KQfXRsw6uXxsn9",
+    "time": "7:30 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
