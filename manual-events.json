@@ -1064,5 +1064,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 144,
+    "date": "2026-06-24",
+    "title": "Switch Salsa Dancing with DJ Jams Bond",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
+    "time": "7:30 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
