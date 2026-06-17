@@ -1806,5 +1806,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 244,
+    "date": "2026-07-24",
+    "title": "ALEX AMEN",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/alex-amen",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=31+Broadway+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
