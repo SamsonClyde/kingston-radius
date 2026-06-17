@@ -1350,5 +1350,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 183,
+    "date": "2026-07-03",
+    "title": "SUMMERTIDE 2026",
+    "venue": "The Lace Mill",
+    "venueUrl": "https://thelacemillarts.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=The%20Lace%20Mill%20Hudson%2C%20NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
