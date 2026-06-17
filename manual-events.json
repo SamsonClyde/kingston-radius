@@ -960,5 +960,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 133,
+    "date": "2026-06-20",
+    "title": "William Sadler – Salon Stage",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "6:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
