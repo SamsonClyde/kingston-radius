@@ -2339,5 +2339,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 320,
+    "date": "2026-09-04",
+    "title": "Disco Summer Camp (SWIM CLUB w/ Good Bar)",
+    "venue": "Glen Falls House",
+    "venueUrl": "https://glenfallshouse.com/event-calendar/aknipgaopaso9sxsjktwo8ux12hg2l",
+    "location": "Round Top, NY",
+    "mapsUrl": "https://maps.google.com/?q=810+Route+296+Round+Top+NY",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
