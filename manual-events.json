@@ -2066,5 +2066,31 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 279,
+    "date": "2026-08-07",
+    "title": "Dylan Doyle Band",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "See website",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 281,
+    "date": "2026-08-07",
+    "title": "BLOOM 2026",
+    "venue": "The Ashokan Center",
+    "venueUrl": "https://ashokancenter.org/product/bloom-2026-at-the-ashokan-center",
+    "location": "Olivebridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
