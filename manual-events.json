@@ -2170,5 +2170,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 296,
+    "date": "2026-08-15",
+    "title": "The Kevin McKrell Band Celtic-infused Folk and Bluegrass",
+    "venue": "Tompkins Corners Cultural Center",
+    "venueUrl": "https://www.eventbrite.com/e/1991994208300?aff=oddtdtcreator",
+    "location": "Putnam Valley, NY",
+    "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
+    "time": "6:00 pm",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
