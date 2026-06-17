@@ -2092,5 +2092,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 282,
+    "date": "2026-08-08",
+    "title": "Joan Osborne Sings The Songs of Bob Dylan",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/joan-osborne-signs-the-songs-of-bob-dylan",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
