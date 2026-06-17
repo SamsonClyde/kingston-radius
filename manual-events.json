@@ -1376,5 +1376,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 185,
+    "date": "2026-07-03",
+    "title": "Swim Club w/ Good Bar",
+    "venue": "Glen Falls House",
+    "venueUrl": "https://glenfallshouse.com/event-calendar/funkyseshwa",
+    "location": "Round Top, NY",
+    "mapsUrl": "https://maps.google.com/?q=810+Route+296+Round+Top+NY",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
