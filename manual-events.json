@@ -1090,5 +1090,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 147,
+    "date": "2026-06-25",
+    "title": "Jelly Kelly, A Whole Nother and Debbie Dopamine",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/event/schmave-jelly-kelly-and-roacher/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "Free",
+    "free": true,
+    "_manual": true
   }
 ]
