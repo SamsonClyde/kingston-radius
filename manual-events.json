@@ -1311,5 +1311,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 180,
+    "date": "2026-07-02",
+    "title": "M. GEDDES GENGRAS RECORD RELEASE SHOW + SHEMESH/TAMPASIS",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/m-geddes-gengras-record-release-show-shemeshtampasis",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=31+Broadway+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "Free",
+    "free": true,
+    "_manual": true
   }
 ]
