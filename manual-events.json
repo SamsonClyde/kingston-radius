@@ -1754,5 +1754,18 @@
     "price": "Free",
     "free": true,
     "_manual": true
+  },
+  {
+    "id": 227,
+    "date": "2026-07-17",
+    "title": "Professor Louie & The Crowmatix",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "See website",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
