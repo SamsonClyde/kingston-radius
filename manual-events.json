@@ -1468,5 +1468,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 231,
+    "date": "2026-07-18",
+    "title": "DCxPC Live Presents Punk Night at Night Swim",
+    "venue": "NightSwim",
+    "venueUrl": "https://events.ticketleap.com/tickets/dcxpc-live/dcxpc-live-punk-night-at-night-swim",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/Q8P1BkUhrzLy8eie9",
+    "time": "6:00 pm",
+    "price": "$11.20",
+    "free": false,
+    "_manual": true
   }
 ]
