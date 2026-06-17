@@ -2665,5 +2665,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 377,
+    "date": "2026-11-19",
+    "title": "Rising Appalachia",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/rising-appalachia",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
