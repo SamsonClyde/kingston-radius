@@ -2599,5 +2599,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1781738782062,
+    "date": "",
+    "title": "TAB BENOIT",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/tab-benoit",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true,
+    "_addedNew": true
   }
 ]
