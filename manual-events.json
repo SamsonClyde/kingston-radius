@@ -1012,5 +1012,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 138,
+    "date": "2026-06-21",
+    "title": "Robert Tellefsen – Salon Stage",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "6:30 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
