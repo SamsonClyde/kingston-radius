@@ -1142,5 +1142,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 154,
+    "date": "2026-06-26",
+    "title": "UPSTATE ART WEEKEND x NOISE FOR NOW Dance Party",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/upstate-art-weekend-x-noise-for-now-dance-party",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
