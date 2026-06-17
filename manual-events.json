@@ -1455,5 +1455,18 @@
     "free": false,
     "_manual": true,
     "_addedNew": true
+  },
+  {
+    "id": 161,
+    "date": "2026-06-26",
+    "title": "Grant Peeplesand the Peeples Republik Tour with Erik Alvar",
+    "venue": "Tompkins Corners Cultural Center",
+    "venueUrl": "https://www.tompkinscorners.org/music.html",
+    "location": "Putnam Valley, NY",
+    "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
+    "time": "4:00 pm",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
