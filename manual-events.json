@@ -1402,5 +1402,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 189,
+    "date": "2026-07-04",
+    "title": "Noah Kahan, Gigi Perez (Stateside Fest)",
+    "venue": "Hutton Brickyards",
+    "venueUrl": "https://www.statesidefest.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+North+St+Kingston+NY",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
