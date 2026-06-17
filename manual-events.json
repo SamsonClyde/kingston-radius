@@ -2417,5 +2417,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 331,
+    "date": "2026-09-13",
+    "title": "The Rhythmic Arts Project Benefit ft. Jon Bates Band & Hurley Mountain Highway",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "See website",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
