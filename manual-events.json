@@ -1936,5 +1936,18 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 261,
+    "date": "2026-07-29",
+    "title": "Souls of Mischief",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/souls-of-mischief",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
