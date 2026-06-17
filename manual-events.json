@@ -1715,5 +1715,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 222,
+    "date": "2026-07-16",
+    "title": "Tisziji Muñoz | 80th Birthday Awakening",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "See website",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
