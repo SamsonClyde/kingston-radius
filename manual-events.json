@@ -1207,5 +1207,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 162,
+    "date": "2026-06-26",
+    "title": "Ashokan Western & Swing Week KICK OFF Dance Party",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
