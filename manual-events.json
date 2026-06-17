@@ -1559,5 +1559,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 198,
+    "date": "2026-07-10",
+    "title": "VIVIAN GIRLS",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/vivian-girls",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=31+Broadway+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
