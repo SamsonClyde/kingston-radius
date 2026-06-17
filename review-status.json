@@ -680,5 +680,6 @@
   "Assembly Kingston||2026-10-17||7:00 pm": "approved",
   "Assembly||2026-10-17||12:00 am": "rejected",
   "Assembly||2026-10-30||12:00 am": "rejected",
-  "Tempo||2026-10-30||8:00pm": "approved"
+  "Tempo||2026-10-30||8:00pm": "approved",
+  "Assembly Kingston||2026-11-01||8:00 pm": "rejected"
 }
