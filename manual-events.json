@@ -921,5 +921,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 127,
+    "date": "2026-06-20",
+    "title": "Ars Choralis Presents “Mozart at Maverick”",
+    "venue": "Maverick Concerts",
+    "venueUrl": "https://maverickconcerts.org/2026-schedule/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=Maverick%20Concerts%20Woodstock%2C%20NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
