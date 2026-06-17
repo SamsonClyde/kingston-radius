@@ -2404,5 +2404,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 329,
+    "date": "2026-09-12",
+    "title": "John Craigie",
+    "venue": "Levon Helm Studios",
+    "venueUrl": "https://levonhelm.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
