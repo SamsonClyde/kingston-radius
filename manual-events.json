@@ -2131,5 +2131,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 286,
+    "date": "2026-08-08",
+    "title": "Professor Louie and the Crowmatix Roots Music Royalty",
+    "venue": "Tompkins Corners Cultural Center",
+    "venueUrl": "https://www.eventbrite.com/e/1991944886778?aff=oddtdtcreator",
+    "location": "Putnam Valley, NY",
+    "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
+    "time": "6:00 pm",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
