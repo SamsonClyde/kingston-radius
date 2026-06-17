@@ -1637,5 +1637,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 208,
+    "date": "2026-07-11",
+    "title": "Tommydidit/ Miss Education/ Soular Sounds",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/b6dYXn3tzHWHQeKt9",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
