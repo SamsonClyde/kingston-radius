@@ -1233,5 +1233,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 164,
+    "date": "2026-06-27",
+    "title": "DELICATE STEVE + AGGIE MILLER",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/delicate-steve-aggie-miller",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=31+Broadway+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "Free",
+    "free": true,
+    "_manual": true
   }
 ]
