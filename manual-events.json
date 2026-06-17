@@ -1611,5 +1611,18 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 204,
+    "date": "2026-07-10",
+    "title": "On Land & Sea with Shantyman Geoff Kaufman",
+    "venue": "Hudson River Maritime Museum",
+    "venueUrl": "https://hrmm.app.neoncrm.com/np/clients/hrmm/event.jsp?event=10441&",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Hudson%20River%20Maritime%20Museum%20Hudson%2C%20NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
