@@ -882,5 +882,18 @@
     "price": "Free",
     "free": true,
     "_manual": true
+  },
+  {
+    "id": 117,
+    "date": "2026-06-19",
+    "title": "Son Little CityFolk Tour",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/event/son-little?utm_id=97758_v0_s00_e0_tv4_a1demo0e1mpxd4&fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExZUlEUkpLNERoZ1VCbEx4QnNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR4DLLCVnE-edP4Q6W89hcqn2qk7IlSRHS_nvswl6hSYuGAu7477USu_WVXvaw_aem_SrUJS6M3ohahL6WMYxcBAg",
+    "location": "Bearsville, NY",
+    "mapsUrl": "https://maps.google.com/?q=Bearsville%20Theater%20Bearsville%2C%20NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
