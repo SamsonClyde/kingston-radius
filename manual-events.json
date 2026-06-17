@@ -1428,5 +1428,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 191,
+    "date": "2026-07-05",
+    "title": "The Block Party",
+    "venue": "Red Maple Vineyard",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
+    "location": "West Park, NY",
+    "mapsUrl": "https://maps.app.goo.gl/qAuHQnsi2f13N4GN8",
+    "time": "12:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
