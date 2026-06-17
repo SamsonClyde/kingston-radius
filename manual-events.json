@@ -2508,5 +2508,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 343,
+    "date": "2026-09-26",
+    "title": "Woodsist Festival",
+    "venue": "Arrowood Farms",
+    "venueUrl": "https://www.woodsistfestival.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Arrowood%20Farms%20Kingston%2C%20NY",
+    "time": "12:00 am",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
