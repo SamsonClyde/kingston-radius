@@ -999,5 +999,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 137,
+    "date": "2026-06-21",
+    "title": "Father’s Day Brunch with Judith Tulloch Band – Salon Stage",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "11:30 am",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
