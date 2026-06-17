@@ -2573,5 +2573,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 355,
+    "date": "2026-10-16",
+    "title": "Lifehouse (Best of Acoustic)",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/lifehouse-best-of-acoustic",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
