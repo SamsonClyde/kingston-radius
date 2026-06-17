@@ -1975,5 +1975,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 268,
+    "date": "2026-08-01",
+    "title": "The RESET",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/the-reset",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
