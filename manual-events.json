@@ -973,5 +973,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 134,
+    "date": "2026-06-21",
+    "title": "The Klezmatics",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "7:30pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
