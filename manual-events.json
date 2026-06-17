@@ -690,13 +690,13 @@
   },
   {
     "id": 228,
-    "date": "2026-04-16",
-    "title": "ART / FILM WORKERS APPRECIATION NIGHT",
-    "venue": "Tubby's",
-    "venueUrl": "https://www.tubbyskingston.com/calendar/art-film-workers-appreciation-night",
+    "date": "2026-07-17",
+    "title": "Allah-Las w/ Rahill",
+    "venue": "Assembly",
+    "venueUrl": "https://www.assemblykingston.com/",
     "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=31+Broadway+Kingston+NY",
-    "time": "4:00 pm",
+    "mapsUrl": "https://maps.app.goo.gl/aPWEFcXhwzeJuoK28",
+    "time": "8:00pm",
     "price": "See website",
     "free": false,
     "_manual": true
@@ -1453,6 +1453,19 @@
     "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
     "time": "4:00 pm",
     "price": "$25",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 229,
+    "date": "2026-07-17",
+    "title": "Simon’s Dream: Music & Members of Penguin Café Orchestra",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "8:30 pm",
+    "price": "See website",
     "free": false,
     "_manual": true
   }
