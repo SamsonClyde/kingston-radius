@@ -1741,5 +1741,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 225,
+    "date": "2026-07-16",
+    "title": "The John Hartford Fiddle Tune Project (Fisher Center, Spiegeltent)",
+    "venue": "Bard College Conservatory",
+    "venueUrl": "https://www.bard.edu/inside/calendar/the-john-hartford-fiddle-tune-project",
+    "location": "Annandale-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=61+Blithewood+Ave+Annandale-on-Hudson+NY",
+    "time": "7:00pm",
+    "price": "Free",
+    "free": true,
+    "_manual": true
   }
 ]
