@@ -1168,5 +1168,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 156,
+    "date": "2026-06-26",
+    "title": "Whoah!",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/event/woah-and-the-kairos/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "time": "8:00 pm",
+    "price": "Free",
+    "free": true,
+    "_manual": true
   }
 ]
