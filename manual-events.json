@@ -1298,5 +1298,18 @@
     "price": "Free",
     "free": true,
     "_manual": true
+  },
+  {
+    "id": 179,
+    "date": "2026-07-01",
+    "title": "Fat Cakes",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "See website",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
