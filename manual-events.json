@@ -2391,5 +2391,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 328,
+    "date": "2026-09-12",
+    "title": "The Beatle Project",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/the-beatle-project",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
