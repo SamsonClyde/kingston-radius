@@ -1988,5 +1988,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 269,
+    "date": "2026-08-01",
+    "title": "Sun Records Midnight Ramble (Night 1)",
+    "venue": "Levon Helm Studios",
+    "venueUrl": "https://levonhelm.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
