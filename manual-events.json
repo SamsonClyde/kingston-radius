@@ -1116,5 +1116,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 151,
+    "date": "2026-06-25",
+    "title": "Drum Circle",
+    "venue": "Athens Cultural Center",
+    "venueUrl": "https://athensculturalcenter.org/events-1",
+    "location": "Athens, NY",
+    "mapsUrl": "https://maps.google.com/?q=Athens%20Cultural%20Center%20Kingston%2C%20NY",
+    "time": "6:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
