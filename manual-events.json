@@ -2482,5 +2482,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 339,
+    "date": "2026-09-20",
+    "title": "David Nihill",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/david-nihill",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
