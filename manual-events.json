@@ -2613,5 +2613,18 @@
     "free": false,
     "_manual": true,
     "_addedNew": true
+  },
+  {
+    "id": 362,
+    "date": "2026-10-30",
+    "title": "Rasputina w/ Dust Bowl Faeries",
+    "venue": "Tempo",
+    "venueUrl": "https://www.viewcy.com/event/rasputina_with_dust_b",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1ZaHZwSURUe5yDku5",
+    "time": "8:00pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
