@@ -2157,5 +2157,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 295,
+    "date": "2026-08-14",
+    "title": "BROADWAY THEATRE FESTIVAL AUG 14-16",
+    "venue": "Hutton Brickyards",
+    "venueUrl": "https://www.huttonbrickyards.com/events-happenings",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+North+St+Kingston+NY",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
