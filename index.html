@@ -1392,6 +1392,7 @@ function renderEvents() {
           <option value="false" ${!e.free?'selected':''}>Paid</option>
           <option value="true"  ${e.free?'selected':''}>Free</option>
         </select>
+        <input type="text" class="ie-venue"    value="${esc(e.venue||'')}"    placeholder="Venue Name" style="flex:2;min-width:200px;">
         <input type="url"  class="ie-venueUrl" value="${esc(e.venueUrl||'')}" placeholder="Venue URL">
         <input type="url"  class="ie-mapsUrl"  value="${esc(e.mapsUrl||'')}"  placeholder="Maps URL">
         <input type="text" class="ie-location" value="${esc(e.location||'')}" placeholder="Location e.g. Kingston, NY">
@@ -1884,6 +1885,7 @@ document.getElementById('events-list').addEventListener('click', async (ev) => {
     const time     = form.querySelector('.ie-time')?.value.trim();
     const price    = form.querySelector('.ie-price')?.value.trim() || 'See website';
     const free     = form.querySelector('.ie-free')?.value === 'true';
+    const venue    = form.querySelector('.ie-venue')?.value.trim();
     const venueUrl = form.querySelector('.ie-venueUrl')?.value.trim();
     const mapsUrl  = form.querySelector('.ie-mapsUrl')?.value.trim();
     const location = form.querySelector('.ie-location')?.value.trim();
@@ -1897,6 +1899,7 @@ document.getElementById('events-list').addEventListener('click', async (ev) => {
     const record = {
       ...orig,
       title, date, time, price, free,
+      venue:     venue     || orig.venue     || '',
       venueUrl:  venueUrl  || orig.venueUrl  || '',
       mapsUrl:   mapsUrl   || orig.mapsUrl   || '',
       location:  location  || orig.location  || '',
