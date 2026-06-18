@@ -543,6 +543,46 @@
   }
   .btn-export:hover { border-color: var(--text); background: var(--tag-bg); }
 
+  /* ── SAVED VENUE BOX ── */
+  .saved-venue-box {
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    display: none;
+  }
+  .saved-venue-box.visible { display: block; }
+  .saved-venue-label {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 6px;
+  }
+  .saved-venue-name { font-weight: 600; font-size: 0.9rem; color: var(--text); margin-bottom: 2px; }
+  .saved-venue-meta { font-size: 0.78rem; color: var(--muted); }
+  .btn-add-saved {
+    width: 100%; background: #2E7D32; color: #fff; border: none;
+    border-radius: 6px; padding: 10px; font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem; font-weight: 600; cursor: pointer;
+    transition: background 0.15s; margin-bottom: 8px;
+  }
+  .btn-add-saved:hover { background: #1B5E20; }
+  .btn-save-venue {
+    width: 100%; background: none; color: var(--text);
+    border: 1.5px solid var(--border); border-radius: 6px;
+    padding: 8px; font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem; font-weight: 500; cursor: pointer;
+    transition: all 0.15s; margin-top: 8px;
+  }
+  .btn-save-venue:hover { border-color: var(--text); background: var(--tag-bg); }
+  .add-section-divider {
+    display: flex; align-items: center; gap: 10px;
+    margin: 20px 0; color: var(--muted); font-size: 0.75rem;
+    font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .add-section-divider::before, .add-section-divider::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
+
   @media (max-width: 600px) {
     .event-card { grid-template-columns: 52px 1fr; }
     .filters-bar { padding: 10px 12px; }
@@ -588,8 +628,14 @@
       <option value="">All venues</option>
     </select>
   </div>
-  <div class="filter-row" style="padding-top:2px;padding-bottom:4px;">
+  <div class="filter-row" style="padding-top:2px;padding-bottom:4px;justify-content:space-between;align-items:center;">
     <span style="font-size:0.72rem;color:var(--muted);">Click venue name to visit site &nbsp;·&nbsp; Click city to open in Google Maps</span>
+    <button id="venue-delete-mode-btn" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;" onclick="toggleVenueDeleteMode()">Manage venues</button>
+  </div>
+  <div id="venue-delete-bar" style="display:none;padding:8px 0 4px;gap:6px;flex-wrap:wrap;" class="filter-row">
+    <span style="font-size:0.72rem;color:var(--red);font-weight:600;">Select a venue to hide all its events:</span>
+    <div id="venue-delete-list" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
+    <button onclick="toggleVenueDeleteMode()" style="font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;margin-left:auto;">Done</button>
   </div>
 </div>
 
@@ -605,54 +651,58 @@
 
 <!-- ── HOW TO PAGE ── -->
 <div id="page-howto" class="page">
-  <div class="info-page">
-    <h1>How to Use Kingston Radius</h1>
-    <p class="subtitle">Everything you need to know to find your next show.</p>
-
-    <h2>Browsing Shows</h2>
-    <p>The Music page lists upcoming live performances from over 100 venues within 90 minutes of Kingston, NY. Shows are sorted chronologically.</p>
-
-    <h2>Filtering by Distance</h2>
-    <p>Use the distance buttons to narrow shows by how far you want to travel:</p>
-    <ul>
-      <li><strong>Kingston only</strong> — venues right in Kingston, NY</li>
-      <li><strong>≤ 30 min</strong> — Rosendale, Woodstock, Saugerties, Bearsville area</li>
-      <li><strong>≤ 60 min</strong> — Hudson, New Paltz, Poughkeepsie, Rhinebeck, Newburgh</li>
-      <li><strong>≤ 90 min</strong> — Peekskill, Bethel Woods, North Adams MA and beyond</li>
-    </ul>
-
-    <h2>Filtering by Month</h2>
-    <p>Click any month button to see only shows in that month. Click it again to return to all months.</p>
-
-    <h2>Filtering by Venue</h2>
-    <p>Use the venue dropdown to see only shows from a specific venue — great for checking what's coming up at a favorite spot.</p>
-
-    <h2>Venue &amp; Ticket Links</h2>
-    <p>Each event card shows the venue name as a link to that venue's website or calendar, and the city name links to Google Maps directions. Click through to buy tickets or confirm details directly with the venue.</p>
+  <div style="max-width:860px;margin:0 auto;padding:40px 24px 80px;">
+    <div style="margin-bottom:32px;">
+      <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">How it works</div>
+      <h1 style="font-family:'DM Serif Display',serif;font-size:2rem;line-height:1.15;margin-bottom:12px;">Live music within 90 minutes of Kingston.</h1>
+      <p style="font-size:0.95rem;color:var(--muted);line-height:1.7;max-width:520px;">Filter by distance, month, or venue. Click any venue name to visit their site, or the city to open directions.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Distance</div>
+        <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Kingston only, 30, 60, or 90 minutes out. Covers Woodstock, Hudson, Poughkeepsie, Peekskill, and beyond.</p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Month</div>
+        <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Filter to a specific month. Buttons appear automatically based on what's listed.</p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Venue</div>
+        <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Use the dropdown to see everything coming up at one spot.</p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Free only</div>
+        <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Toggle to show only free events. No-cover shows, open mics, and free admission.</p>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- ── ABOUT PAGE ── -->
 <div id="page-about" class="page">
-  <div class="info-page">
-    <h1>About Kingston Radius</h1>
-    <p class="subtitle">A live music calendar for the Hudson Valley — built for people who actually go to shows.</p>
-
-    <h2>What This Is</h2>
-    <p>Kingston Radius is an independent concert listing site covering live music within roughly 90 minutes of Kingston, NY.</p>
-
-    <h2>Why It Exists</h2>
-    <p>Finding out what's happening locally shouldn't mean checking a dozen different venue websites, Facebook events, and Instagram stories. Kingston Radius is one place for the region's live music scene — or that is the goal at least, but nothing beats a flyer on a telephone pole.</p>
-
-    <h2>Coverage Area</h2>
-    <p>The site covers venues from Kingston and Woodstock at its core, expanding outward to Hudson, New Paltz, Poughkeepsie, Newburgh, Peekskill, Bethel Woods, the Catskills, and into western Massachusetts.</p>
-
-    <h2>Venues Currently Listed</h2>
-    <p>Kingston Radius currently tracks events from over 100 venues including Tubby's, Assembly Kingston, Unicorn Bar, Keegan Ales, Hutton Brickyards, Castaways Bar &amp; Grill, Tempo Arts, WildHeart, UPAC, Green Kill, Kingston Artist Collective, Night Swim, Reher Center for Immigrant Culture and History, O+ Exchange Clinic, Rosendale Café, Rosendale Theatre, Opus 40, Bard Fisher Center, Bearsville Theater, Levon Helm Studios, Colony Woodstock, Woodstock Playhouse, Station Bar &amp; Curio, Tinker Street Tavern, Overlook United Methodist Church, Bridge Street Theatre, Avalon Lounge, Basilica Hudson, Bardavon, Helsinki Hudson, Hudson Hall, Spotty Dog Books &amp; Ale, Park Theater Hudson, The Lemon Squeeze, Rough Draft Books, Greig Farm, Lively Arts at Chatham, Crandell Theatre, The Falcon, Daryl's House, Tompkins Corners Cultural Center, The Outlier Inn, Catskill Mountain Foundation, Catskill Brewery, Domes Dispensary, Bethel Woods, MASS MoCA, Paramount Hudson Valley, Gleason's, KinoSaito Arts Center, Peekskill Coffee House, Factory Bar &amp; Grill, Peekskill Brewery, The Deck at Peekskill Brewery, Towne Crier Café, Majed J. Nesheiwat Convention Center, The Chance Theater, Mahoney's Irish Pub, Rhinecliff Hotel, Stissing Center, Hyphenated Brewing, Walkway Brewing at Martinsdale, Silk Factory, City Winery Hudson Valley, The Ellis, Powerhouse Arts, Newburgh Brewing Company, Torchfly, The Drinking Bird, The Ashokan Center, The Mark, LifeBridge Sanctuary, Arrowood Farms, MaMA (Marbletown Multi-Arts), Stone Ridge Orchard, Christ the King Episcopal Church, Bard College Conservatory, Quinn's, The Grand, Love, Velma, Bad Seed Hard Cider, Outpost BBQ, Bacchus, Snugs, Darkside Records, High Voltage Kitchen &amp; Bar, MONUMENT hv, and more.</p>
-
-    <div class="info-callout">
-      <p style="margin:0;">Kingston Radius is an independent local project. It is not affiliated with, sponsored by, or endorsed by any of the venues listed. All event information links back directly to the originating venue.</p>
-      <p style="margin:8px 0 0;">Email <a href="/cdn-cgi/l/email-protection#52393b3c3521263d3c2033363b272112353f333b3e7c313d3f"><span class="__cf_email__" data-cfemail="ed8684838a9e9982839f8c8984989ead8a808c8481c38e8280">[email&#160;protected]</span></a> to submit a listing.</p>
+  <div style="max-width:860px;margin:0 auto;padding:40px 24px 80px;">
+    <div style="margin-bottom:32px;">
+      <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Kingston Radius</div>
+      <h1 style="font-family:'DM Serif Display',serif;font-size:2rem;line-height:1.15;margin-bottom:12px;">One place for live music in the Hudson Valley.</h1>
+      <p style="font-size:0.95rem;color:var(--muted);line-height:1.7;max-width:520px;">An independent calendar covering 100+ venues within 90 minutes of Kingston, NY. Updated daily. Nothing for sale.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Coverage</div>
+        <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Kingston and Woodstock at the core, out to Hudson, New Paltz, Newburgh, Peekskill, Bethel Woods, the Catskills, and into western Massachusetts.</p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">How it's built</div>
+        <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Listings are pulled from venues across the region, updated daily, and reviewed before going live.</p>
+      </div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;margin-bottom:16px;">
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Venues include</div>
+      <p style="font-size:0.85rem;line-height:1.8;color:var(--muted);">Tubby's · Assembly Kingston · Unicorn Bar · Keegan Ales · Hutton Brickyards · Bearsville Theater · Levon Helm Studios · Colony Woodstock · Basilica Hudson · Hudson Hall · Bardavon · UPAC · Bard Fisher Center · Opus 40 · The Falcon · Towne Crier Café · Stissing Center · Tompkins Corners · The Outlier Inn · Bethel Woods · MASS MoCA · Paramount Hudson Valley · Silk Factory · City Winery Hudson Valley · The Ashokan Center · Green Kill · MONUMENT hv · Rosendale Café · The Lemon Squeeze · Rough Draft Books · Greig Farm · and 70+ more.</p>
+    </div>
+    <div style="border-top:1px solid var(--border);padding-top:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+      <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;max-width:420px;">Independent project. Not affiliated with or endorsed by any venue listed. All links go directly to the source.</p>
+      <a href="mailto:kingstonradius@gmail.com" style="font-size:0.82rem;font-weight:600;color:var(--red);text-decoration:none;white-space:nowrap;">Submit a listing →</a>
     </div>
   </div>
 </div>
@@ -713,7 +763,68 @@
 
     <!-- ── ADD NEW TAB ── -->
     <div id="panel-add" style="display:none;max-width:600px;margin:0 auto;padding:24px 16px 80px;">
-      <h2 style="font-family:'DM Serif Display',serif;font-size:1.4rem;margin-bottom:20px;">Add Event</h2>
+
+      <!-- Saved venue quick-add -->
+      <div class="saved-venue-box" id="saved-venue-box">
+        <div class="saved-venue-label">Saved Venue</div>
+        <div class="saved-venue-name" id="saved-venue-display-name"></div>
+        <div class="saved-venue-meta" id="saved-venue-display-meta"></div>
+        <div style="margin-top:10px;">
+          <button class="btn-add-saved" id="btn-add-saved-show">+ Add Show at This Venue</button>
+        </div>
+      </div>
+
+      <!-- Quick-add form -->
+      <div id="quick-add-panel" style="display:none;margin-bottom:24px;background:var(--card);border:1.5px solid #2E7D32;border-radius:8px;padding:16px;">
+        <div style="font-size:0.78rem;font-weight:600;color:#2E7D32;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px;">
+          Quick Add — <span id="quick-venue-label"></span>
+        </div>
+        <div class="form-group">
+          <label>Event Title *</label>
+          <input type="text" id="q-title" placeholder="Artist or Event Name" />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date *</label>
+            <input type="date" id="q-date" />
+          </div>
+          <div class="form-group">
+            <label>Time</label>
+            <input type="time" id="q-time" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Price</label>
+            <input type="text" id="q-price" placeholder="$15 / Free / See website" />
+          </div>
+          <div class="form-group">
+            <label>Free?</label>
+            <select id="q-free">
+              <option value="false">No</option>
+              <option value="true">Yes — Free</option>
+            </select>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <button class="btn-primary" id="quick-add-btn" style="margin-bottom:0;">Add Show</button>
+          <button id="quick-add-cancel" style="background:none;border:1.5px solid var(--border);border-radius:6px;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:0.82rem;cursor:pointer;">Cancel</button>
+        </div>
+        <div class="success-msg" id="quick-add-success">✓ Show added!</div>
+      </div>
+
+      <div class="add-section-divider">Full Entry Form</div>
+
+      <div class="form-group">
+        <label>Venue Template <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted)">— pre-fill venue details</span></label>
+        <div style="display:flex;gap:8px;">
+          <select id="f-venue-template" style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:8px 10px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--text);background:var(--bg);">
+            <option value="">— Select a venue —</option>
+          </select>
+          <button id="f-template-delete" title="Delete this template" style="background:none;border:1.5px solid #e74c3c;color:#e74c3c;border-radius:6px;padding:8px 12px;font-family:'DM Sans',sans-serif;font-size:0.82rem;cursor:pointer;white-space:nowrap;display:none;">✕ Delete</button>
+        </div>
+      </div>
+
       <div class="form-group">
         <label>Event Title *</label>
         <input type="text" id="f-title" placeholder="Artist or Event Name" />
@@ -762,13 +873,15 @@
         </div>
       </div>
       <button class="btn-primary" id="add-event-btn">Add Event</button>
+      <button class="btn-save-venue" id="save-venue-btn">💾 Save This Venue for Quick Add</button>
       <div class="success-msg" id="add-success">✓ Event added!</div>
+      <div class="success-msg" id="venue-saved-msg" style="margin-top:6px;">✓ Venue saved!</div>
     </div>
 
   </div>
 </div><!-- /page-admin -->
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="events.js"></script>
+<script src="events.js"></script>
 <script>
 // ── VENUE DRIVE TIMES FROM TUBBY'S (minutes) ─────────────────────────────────
 const DRIVE_TIMES = {
@@ -897,6 +1010,69 @@ const DRIVE_TIMES = {
   "High Voltage Kitchen & Bar":                      50,
 };
 
+// ── VENUE TEMPLATES for quick-add dropdown ───────────────────────────────────
+const VENUE_TEMPLATES = {
+  "Tubby's":                  { venueUrl: "https://www.tubbyskingston.com/calendar",    location: "Kingston, NY",              mapsUrl: "https://maps.google.com/?q=31+Broadway+Kingston+NY",              drive: 0  },
+  "Assembly Kingston":        { venueUrl: "https://www.assemblykingston.com/",          location: "Kingston, NY",              mapsUrl: "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",          drive: 0  },
+  "Unicorn Bar":              { venueUrl: "https://unicornkingston.com/calendar",       location: "Kingston, NY",              mapsUrl: "https://maps.app.goo.gl/b6dYXn3tzHWHQeKt9",                       drive: 0  },
+  "Keegan Ales":              { venueUrl: "https://www.keeganales.com/events/",         location: "Kingston, NY",              mapsUrl: "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",    drive: 0  },
+  "Hutton Brickyards":        { venueUrl: "https://www.huttonbrickyards.com/events-happenings", location: "Kingston, NY",     mapsUrl: "https://maps.google.com/?q=200+North+St+Kingston+NY",             drive: 0  },
+  "Green Kill":               { venueUrl: "https://greenkill.org/events/",             location: "Kingston, NY",              mapsUrl: "https://maps.google.com/?q=229+Green+Kill+Ave+Kingston+NY",       drive: 0  },
+  "MONUMENT hv":              { venueUrl: "https://monumenthv.net/",                   location: "Kingston, NY",              mapsUrl: "https://maps.app.goo.gl/aK923p8uugECAban6",                       drive: 0  },
+  "Night Swim":               { venueUrl: "https://www.instagram.com/nightswimkingston/", location: "Kingston, NY",           mapsUrl: "https://maps.app.goo.gl/sZe9CAVM8vJMB9UL6",                       drive: 0  },
+  "Tempo Arts":               { venueUrl: "https://tempokingston.org/events/",         location: "Kingston, NY",              mapsUrl: "https://maps.google.com/?q=Tempo+Kingston+NY",                    drive: 0  },
+  "Reher Center for Immigrant Culture and History": { venueUrl: "https://www.rehercenter.org/events/", location: "Kingston, NY", mapsUrl: "https://maps.google.com/?q=99+Broadway+Kingston+NY",           drive: 0  },
+  "Rosendale Café":           { venueUrl: "https://www.rosendalecafe.com/events",      location: "Rosendale, NY",             mapsUrl: "https://maps.google.com/?q=434+Main+St+Rosendale+NY",             drive: 15 },
+  "Rosendale Theatre":        { venueUrl: "https://www.rosendaletheatre.org/calendar/", location: "Rosendale, NY",            mapsUrl: "https://maps.google.com/?q=408+Main+St+Rosendale+NY",             drive: 15 },
+  "Opus 40":                  { venueUrl: "https://opus40.org/events/",                location: "Saugerties, NY",            mapsUrl: "https://maps.google.com/?q=50+Fite+Rd+Saugerties+NY",             drive: 20 },
+  "Bard Fisher Center":       { venueUrl: "https://fishercenter.bard.edu/events/",     location: "Annandale-on-Hudson, NY",   mapsUrl: "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",  drive: 20 },
+  "Arrowood Farms":           { venueUrl: "https://arrowoodfarms.com/free-music-and-events/", location: "Accord, NY",         mapsUrl: "https://maps.google.com/?q=236+Lower+Whitfield+Rd+Accord+NY",     drive: 20 },
+  "Bearsville Theater":       { venueUrl: "https://bearsvilletheater.com/",            location: "Woodstock, NY",             mapsUrl: "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",           drive: 22 },
+  "Levon Helm Studios":       { venueUrl: "https://levonhelm.com/shows",              location: "Woodstock, NY",             mapsUrl: "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",      drive: 22 },
+  "Colony Woodstock":         { venueUrl: "https://www.colonywoodstock.com/shows",    location: "Woodstock, NY",             mapsUrl: "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",         drive: 22 },
+  "Station Bar & Curio":      { venueUrl: "https://www.stationbarandcurio.com/events/", location: "Woodstock, NY",           mapsUrl: "https://maps.google.com/?q=Station+Bar+Curio+Woodstock+NY",       drive: 22 },
+  "Basilica Hudson":          { venueUrl: "https://basilicahudson.org/events/",        location: "Hudson, NY",                mapsUrl: "https://maps.google.com/?q=110+South+Front+Street+Hudson+NY",     drive: 35 },
+  "Bardavon":                 { venueUrl: "https://www.bardavon.org/",                location: "Poughkeepsie, NY",          mapsUrl: "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",     drive: 35 },
+  "Hudson Hall":              { venueUrl: "https://hudsonhall.org/events/",           location: "Hudson, NY",                mapsUrl: "https://maps.google.com/?q=327+Warren+St+Hudson+NY",              drive: 35 },
+  "Spotty Dog Books & Ale":   { venueUrl: "https://www.thespottydog.com/",            location: "Hudson, NY",                mapsUrl: "https://maps.google.com/?q=440+Warren+St+Hudson+NY",              drive: 35 },
+  "Park Theater Hudson":      { venueUrl: "https://parktheaterhudson.com/events/",   location: "Hudson, NY",                mapsUrl: "https://maps.google.com/?q=337+Warren+St+Hudson+NY",              drive: 35 },
+  "The Lemon Squeeze":        { venueUrl: "https://thelemonsqueezenewpaltz.com/events/", location: "New Paltz, NY",          mapsUrl: "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",                       drive: 40 },
+  "Towne Crier Café":         { venueUrl: "https://townecrier.com/",                  location: "Beacon, NY",                mapsUrl: "https://maps.google.com/?q=379+Main+St+Beacon+NY",                drive: 40 },
+  "The Falcon":               { venueUrl: "https://www.liveatthefalcon.com/",         location: "Marlboro, NY",              mapsUrl: "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",            drive: 50 },
+  "Stissing Center":          { venueUrl: "https://stissingcenter.org/events/",       location: "Pine Plains, NY",           mapsUrl: "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",        drive: 55 },
+  "Tompkins Corners Cultural Center": { venueUrl: "https://www.tompkinscorners.org/music.html", location: "Putnam Valley, NY", mapsUrl: "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY", drive: 55 },
+  "The Outlier Inn":          { venueUrl: "https://www.outlierinn.com/events",        location: "Woodridge, NY",             mapsUrl: "https://maps.google.com/?q=307+Mountaindale+Rd+Woodridge+NY",     drive: 55 },
+  "Bethel Woods":             { venueUrl: "https://www.bethelwoodscenter.org/events", location: "Bethel, NY",                mapsUrl: "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",                drive: 75 },
+  "MASS MoCA":                { venueUrl: "https://massmoca.org/performances/",       location: "North Adams, MA",           mapsUrl: "https://maps.google.com/?q=1040+Mass+MoCA+Way+North+Adams+MA",    drive: 85 },
+  "Paramount Hudson Valley":  { venueUrl: "https://paramounthudsonvalley.com/events/", location: "Peekskill, NY",            mapsUrl: "https://maps.google.com/?q=1008+Brown+St+Peekskill+NY",           drive: 75 },
+  "Silk Factory":             { venueUrl: "https://silkfcty.com/live-entertainment/", location: "Newburgh, NY",              mapsUrl: "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",        drive: 45 },
+  "City Winery Hudson Valley":{ venueUrl: "https://citywinery.com/hudsonvalley/",    location: "Newburgh, NY",              mapsUrl: "https://maps.google.com/?q=23+S+Water+St+Newburgh+NY",            drive: 45 },
+  "The Ashokan Center":       { venueUrl: "https://ashokancenter.org/events/",        location: "Olivebridge, NY",           mapsUrl: "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",                       drive: 25 },
+  "Rough Draft Books":        { venueUrl: "https://www.roughdraftny.com/events",      location: "Red Hook, NY",              mapsUrl: "https://maps.app.goo.gl/LLZ4sLnaNhZtSSar9",                       drive: 30 },
+  "Greig Farm":               { venueUrl: "https://www.thegreigfarm.com/events-calendar", location: "Red Hook, NY",          mapsUrl: "https://maps.app.goo.gl/NBadsndo1Dez5WdSA",                       drive: 30 },
+  "The Local Saugerties":     { venueUrl: "https://www.thelocalsaugerties.com/calendar", location: "Saugerties, NY",         mapsUrl: "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",                       drive: 22 },
+  "Avalon Lounge":            { venueUrl: "https://www.theavalonlounge.com/show-calendar", location: "Catskill, NY",         mapsUrl: "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",                       drive: 30 },
+  "Darkside Records":         { venueUrl: "https://darksiderecords.com/events/",      location: "Poughkeepsie, NY",          mapsUrl: "https://maps.google.com/?q=Darkside+Records+Poughkeepsie+NY",     drive: 35 },
+  "Catskill Brewery":         { venueUrl: "https://www.catskillbrewery.com/events",   location: "Livingston Manor, NY",      mapsUrl: "https://maps.google.com/?q=672+Old+Rte+17+Livingston+Manor+NY",   drive: 60 },
+  "Bridge Street Theatre":    { venueUrl: "https://www.bridgestreettheatre.com/performances", location: "Catskill, NY",      mapsUrl: "https://maps.google.com/?q=44+West+Bridge+St+Catskill+NY",        drive: 30 },
+  "MaMA (Marbletown Multi-Arts)": { venueUrl: "https://cometomama.org/events/",      location: "Stone Ridge, NY",           mapsUrl: "https://maps.google.com/?q=3588+Main+St+Stone+Ridge+NY",          drive: 20 },
+  "Helsinki Hudson":          { venueUrl: "https://www.helsinkihudson.com/",          location: "Hudson, NY",                mapsUrl: "https://maps.google.com/?q=405+Columbia+St+Hudson+NY",            drive: 35 },
+  "Gleason's":               { venueUrl: "https://gleasonspeekskill.com/events/",    location: "Peekskill, NY",             mapsUrl: "https://maps.google.com/?q=911+South+St+Peekskill+NY",            drive: 75 },
+  "Bad Seed Hard Cider":      { venueUrl: "https://www.badseedhardcider.com/events/", location: "Highland, NY",              mapsUrl: "https://maps.google.com/?q=87+Burroughs+Dr+Highland+NY",          drive: 40 },
+  "Quinn's":                 { venueUrl: "https://quinnsinbeacon.com/",              location: "Beacon, NY",                mapsUrl: "https://maps.google.com/?q=330+Main+St+Beacon+NY",                drive: 40 },
+};
+
+// Load any custom venue templates saved by the admin
+function getCustomVenueTemplates() {
+  try { return JSON.parse(localStorage.getItem('kr_custom_venues') || '{}'); } catch { return {}; }
+}
+function saveCustomVenueTemplates(obj) {
+  localStorage.setItem('kr_custom_venues', JSON.stringify(obj));
+}
+function getAllVenueTemplates() {
+  return { ...VENUE_TEMPLATES, ...getCustomVenueTemplates() };
+}
+
 const KINGSTON_VENUES = new Set(
   Object.entries(DRIVE_TIMES).filter(([,v]) => v === 0).map(([k]) => k)
 );
@@ -930,14 +1106,15 @@ async function loadManualEventsFromServer() {
   }
 }
 
-// FIX: renamed from events-save to match Netlify function filename events-save.js
-async function _saveManualEventsToServer(evts) {
+async function _saveManualEventsToServer(evts, reviewStatusOverride) {
   try {
     const secret = (typeof ADMIN_SECRET !== 'undefined') ? ADMIN_SECRET : '';
+    const payload = { events: evts };
+    if (reviewStatusOverride !== undefined) payload.reviewStatus = reviewStatusOverride;
     const resp = await fetch('/.netlify/functions/events-save', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'X-Admin-Secret': secret },
-      body: JSON.stringify({ events: evts }),
+      body: JSON.stringify(payload),
     });
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     return true;
@@ -961,9 +1138,9 @@ function getManualEvents() {
   return _getLocalManualEvents();
 }
 
-async function saveManualEvents(evts) {
+async function saveManualEvents(evts, reviewStatusOverride) {
   _manualEventsCache = evts;
-  await _saveManualEventsToServer(evts);
+  await _saveManualEventsToServer(evts, reviewStatusOverride);
 }
 
 // ── HOSTED REVIEW STATUS ──────────────────────────────────────────────────────
@@ -992,7 +1169,6 @@ function eventKey(e) {
   return `${e.venue}||${e.date}||${e.time||''}`;
 }
 
-// Returns true if a manual event exists for the same venue+date+time slot
 function hasManualOverride(e) {
   const key = eventKey(e);
   return getManualEvents().some(m => eventKey(m) === key);
@@ -1218,6 +1394,8 @@ function renderEvents() {
         </select>
         <input type="url"  class="ie-venueUrl" value="${esc(e.venueUrl||'')}" placeholder="Venue URL">
         <input type="url"  class="ie-mapsUrl"  value="${esc(e.mapsUrl||'')}"  placeholder="Maps URL">
+        <input type="text" class="ie-location" value="${esc(e.location||'')}" placeholder="Location e.g. Kingston, NY">
+        <input type="number" class="ie-drive" value="${DRIVE_TIMES[e.venue]??''}" placeholder="Drive time (min)" style="min-width:80px;flex:0;">
         <div class="inline-edit-actions">
           <button class="btn-inline-save"      data-action="inline-save">Save</button>
           <button class="btn-inline-duplicate" data-action="inline-duplicate">Duplicate</button>
@@ -1407,20 +1585,24 @@ async function adminSave(idx) {
   const orig    = adminStore.get(idx) || {};
   const updated = readRow(idx);
   const manual  = getManualEvents();
+
+  const origKey = eventKey(orig);
   const i = manual.findIndex(m =>
     (orig.id && m.id === orig.id) ||
-    (orig.venue && eventKey(m) === eventKey(orig)) ||
-    eventKey(m) === eventKey(updated)
+    eventKey(m) === origKey
   );
-  const record = { ...updated, _manual: true, id: orig.id || updated.id || Date.now() };
+  const record = { ...updated, _manual: true, id: orig.id || Date.now() };
   if (i >= 0) manual[i] = record;
   else manual.push(record);
-  await saveManualEvents(manual);
 
   if (!orig._manual) {
     const s = getReviewStatus();
-    s[eventKey(orig)] = 'rejected';
-    await saveReviewStatus(s);
+    s[origKey] = 'rejected';
+    _reviewStatusCache = s;
+    localStorage.setItem('kr_review_status', JSON.stringify(s));
+    await saveManualEvents(manual, s);
+  } else {
+    await saveManualEvents(manual);
   }
 
   adminStore.set(idx, record);
@@ -1540,6 +1722,7 @@ function showAdminContent() {
   formScreen.style.display = '';
   showAdminTab('review');
   document.body.classList.add('admin-mode');
+  updateManageVenueBtn();
 }
 if (sessionStorage.getItem('kr_authed')) {
   showAdminContent();
@@ -1572,6 +1755,7 @@ document.getElementById('admin-logout-btn').addEventListener('click', () => {
   authScreen.style.display = '';
   document.getElementById('admin-pw').value = '';
   document.body.classList.remove('admin-mode');
+  updateManageVenueBtn();
   document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
   document.querySelector('nav a[data-page="music"]').classList.add('active');
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -1702,6 +1886,8 @@ document.getElementById('events-list').addEventListener('click', async (ev) => {
     const free     = form.querySelector('.ie-free')?.value === 'true';
     const venueUrl = form.querySelector('.ie-venueUrl')?.value.trim();
     const mapsUrl  = form.querySelector('.ie-mapsUrl')?.value.trim();
+    const location = form.querySelector('.ie-location')?.value.trim();
+    const driveMin = parseInt(form.querySelector('.ie-drive')?.value) || null;
 
     if (!title || !date) { alert('Title and date are required.'); return; }
 
@@ -1711,11 +1897,13 @@ document.getElementById('events-list').addEventListener('click', async (ev) => {
     const record = {
       ...orig,
       title, date, time, price, free,
-      venueUrl: venueUrl || orig.venueUrl || '',
-      mapsUrl:  mapsUrl  || orig.mapsUrl  || '',
+      venueUrl:  venueUrl  || orig.venueUrl  || '',
+      mapsUrl:   mapsUrl   || orig.mapsUrl   || '',
+      location:  location  || orig.location  || '',
       _manual: true,
       id: orig.id || Date.now(),
     };
+    if (driveMin !== null && !isNaN(driveMin)) DRIVE_TIMES[record.venue] = driveMin;
 
     const manual = getManualEvents();
     const i = manual.findIndex(m => eventKey(m) === key || m.id === record.id);
@@ -1724,12 +1912,15 @@ document.getElementById('events-list').addEventListener('click', async (ev) => {
 
     ev.target.textContent = 'Saving…';
     ev.target.disabled = true;
-    await saveManualEvents(manual);
 
     if (!orig._manual) {
       const s = getReviewStatus();
       s[key] = 'rejected';
-      await saveReviewStatus(s);
+      _reviewStatusCache = s;
+      localStorage.setItem('kr_review_status', JSON.stringify(s));
+      await saveManualEvents(manual, s);
+    } else {
+      await saveManualEvents(manual);
     }
 
     ev.target.textContent = 'Save';
@@ -1743,6 +1934,204 @@ document.getElementById('events-list').addEventListener('click', async (ev) => {
   }
 });
 
+// ── VENUE DELETE MODE (front end) ────────────────────────────────────────────
+let _venueDeleteMode = false;
+
+function toggleVenueDeleteMode() {
+  _venueDeleteMode = !_venueDeleteMode;
+  const bar = document.getElementById('venue-delete-bar');
+  if (_venueDeleteMode) {
+    bar.style.display = 'flex';
+    buildVenueDeleteList();
+  } else {
+    bar.style.display = 'none';
+  }
+}
+
+function buildVenueDeleteList() {
+  const all = getApprovedEvents();
+  const today = new Date(); today.setHours(0,0,0,0);
+  const venues = [...new Set(
+    all.filter(e => parseDate(e.date) >= today).map(e => e.venue)
+  )].sort();
+  const container = document.getElementById('venue-delete-list');
+  container.innerHTML = venues.map(v =>
+    `<button onclick="hideAllFromVenue('${v.replace(/'/g,"\'")}')"
+      style="font-size:0.78rem;background:none;border:1.5px solid #e74c3c;color:#e74c3c;
+             border-radius:20px;padding:4px 12px;cursor:pointer;font-family:'DM Sans',sans-serif;
+             white-space:nowrap;">${v} ✕</button>`
+  ).join('');
+}
+
+async function hideAllFromVenue(venueName) {
+  if (!confirm(`Hide all upcoming events from "${venueName}"?`)) return;
+  const status = getReviewStatus();
+  const today = new Date(); today.setHours(0,0,0,0);
+  const all = getAllEvents();
+  let count = 0;
+  all.forEach(e => {
+    if (e.venue === venueName && parseDate(e.date) >= today) {
+      status[eventKey(e)] = 'rejected';
+      count++;
+    }
+  });
+  await saveReviewStatus(status);
+  renderEvents(); populateVenueSelect(); buildMonthButtons(); updateBadge();
+  buildVenueDeleteList();
+  alert(`Hidden ${count} event(s) from ${venueName}.`);
+}
+
+// ── VENUE TEMPLATE DROPDOWN ───────────────────────────────────────────────────
+function populateVenueTemplateDropdown() {
+  const sel = document.getElementById('f-venue-template');
+  if (!sel) return;
+  const all = getAllVenueTemplates();
+  const custom = getCustomVenueTemplates();
+  const names = Object.keys(all).sort();
+  sel.innerHTML = '<option value="">— Select a venue —</option>' +
+    names.map(n => {
+      const isCustom = !!custom[n];
+      return `<option value="${n}"${isCustom ? ' data-custom="1"' : ''}>${n}${isCustom ? ' ★' : ''}</option>`;
+    }).join('');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sel = document.getElementById('f-venue-template');
+  const delBtn = document.getElementById('f-template-delete');
+  if (sel) {
+    populateVenueTemplateDropdown();
+    sel.addEventListener('change', () => {
+      const name = sel.value;
+      if (!name) { if (delBtn) delBtn.style.display = 'none'; return; }
+      const all = getAllVenueTemplates();
+      const t = all[name];
+      if (!t) return;
+      document.getElementById('f-venue').value    = name;
+      document.getElementById('f-venue-url').value = t.venueUrl || '';
+      document.getElementById('f-location').value  = t.location || '';
+      document.getElementById('f-maps').value      = t.mapsUrl  || '';
+      document.getElementById('f-drive').value     = t.drive    || '';
+      const custom = getCustomVenueTemplates();
+      if (delBtn) delBtn.style.display = custom[name] ? '' : 'none';
+    });
+  }
+  if (delBtn) {
+    delBtn.addEventListener('click', () => {
+      const name = document.getElementById('f-venue-template')?.value;
+      if (!name) return;
+      if (!confirm(`Delete template for "${name}"?`)) return;
+      const custom = getCustomVenueTemplates();
+      delete custom[name];
+      saveCustomVenueTemplates(custom);
+      populateVenueTemplateDropdown();
+      delBtn.style.display = 'none';
+      document.getElementById('f-venue-template').value = '';
+    });
+  }
+});
+
+// Override save-venue-btn to also save to templates
+const _origSaveVenueBtn = document.getElementById('save-venue-btn');
+if (_origSaveVenueBtn) {
+  _origSaveVenueBtn.addEventListener('click', () => {
+    const venue    = document.getElementById('f-venue').value.trim();
+    const venueUrl = document.getElementById('f-venue-url').value.trim();
+    const location = document.getElementById('f-location').value.trim();
+    const mapsUrl  = document.getElementById('f-maps').value.trim();
+    const driveMin = parseInt(document.getElementById('f-drive').value) || 0;
+    if (!venue) { alert('Enter a venue name first.'); return; }
+    // Save to quick-add
+    _savedVenue = { venue, venueUrl, location, mapsUrl, driveMin };
+    localStorage.setItem('kr_saved_venue', JSON.stringify(_savedVenue));
+    renderSavedVenueBox();
+    // Also save to custom templates
+    const custom = getCustomVenueTemplates();
+    custom[venue] = { venueUrl, location, mapsUrl: mapsUrl, drive: driveMin };
+    saveCustomVenueTemplates(custom);
+    populateVenueTemplateDropdown();
+    const msg = document.getElementById('venue-saved-msg');
+    msg.style.display = 'block';
+    setTimeout(() => msg.style.display = 'none', 2000);
+  });
+}
+
+// Show manage button only in admin mode
+function updateManageVenueBtn() {
+  const btn = document.getElementById('venue-delete-mode-btn');
+  if (btn) btn.style.display = sessionStorage.getItem('kr_authed') ? '' : 'none';
+}
+
+// ── SAVED VENUE QUICK-ADD ────────────────────────────────────────────────────
+let _savedVenue = null;
+
+function loadSavedVenue() {
+  try {
+    const v = localStorage.getItem('kr_saved_venue');
+    if (v) _savedVenue = JSON.parse(v);
+  } catch {}
+  renderSavedVenueBox();
+}
+
+function renderSavedVenueBox() {
+  const box = document.getElementById('saved-venue-box');
+  if (!box) return;
+  if (_savedVenue) {
+    document.getElementById('saved-venue-display-name').textContent = _savedVenue.venue || '';
+    document.getElementById('saved-venue-display-meta').textContent =
+      [_savedVenue.location, _savedVenue.driveMin ? `${_savedVenue.driveMin} min from Tubby's` : '']
+      .filter(Boolean).join(' · ');
+    document.getElementById('quick-venue-label').textContent = _savedVenue.venue || '';
+    box.classList.add('visible');
+  } else {
+    box.classList.remove('visible');
+  }
+}
+
+// save-venue-btn handled above in the override section
+
+document.getElementById('btn-add-saved-show').addEventListener('click', () => {
+  document.getElementById('quick-add-panel').style.display = 'block';
+  document.getElementById('q-title').focus();
+});
+
+document.getElementById('quick-add-cancel').addEventListener('click', () => {
+  document.getElementById('quick-add-panel').style.display = 'none';
+  ['q-title','q-date','q-time','q-price'].forEach(id => { document.getElementById(id).value = ''; });
+  document.getElementById('q-free').value = 'false';
+});
+
+document.getElementById('quick-add-btn').addEventListener('click', async () => {
+  if (!_savedVenue) return;
+  const title = document.getElementById('q-title').value.trim();
+  const date  = document.getElementById('q-date').value;
+  const time  = document.getElementById('q-time').value;
+  const price = document.getElementById('q-price').value.trim() || 'See website';
+  const free  = document.getElementById('q-free').value === 'true';
+  if (!title || !date) { alert('Title and date are required.'); return; }
+  const btn = document.getElementById('quick-add-btn');
+  btn.textContent = 'Saving…'; btn.disabled = true;
+  const manual = getManualEvents();
+  const newEvt = {
+    id: Date.now(), title, date, time,
+    venue: _savedVenue.venue, venueUrl: _savedVenue.venueUrl,
+    location: _savedVenue.location || 'Kingston, NY',
+    mapsUrl: _savedVenue.mapsUrl || `https://maps.google.com/?q=${encodeURIComponent(_savedVenue.venue)}`,
+    price, free, _manual: true, _addedNew: true, _driveMin: _savedVenue.driveMin || 0,
+  };
+  manual.push(newEvt);
+  await saveManualEvents(manual);
+  if (_savedVenue.driveMin > 0) DRIVE_TIMES[_savedVenue.venue] = _savedVenue.driveMin;
+  btn.textContent = 'Add Show'; btn.disabled = false;
+  ['q-title','q-date','q-time','q-price'].forEach(id => { document.getElementById(id).value = ''; });
+  document.getElementById('q-free').value = 'false';
+  const msg = document.getElementById('quick-add-success');
+  msg.style.display = 'block';
+  setTimeout(() => msg.style.display = 'none', 2000);
+  renderEvents(); buildMonthButtons(); populateVenueSelect();
+});
+
+loadSavedVenue();
+
 populateVenueSelect();
 buildMonthButtons();
 renderEvents();
@@ -1754,13 +2143,10 @@ loadManualEventsFromServer().then(() => {
   let statusChanged = false;
 
   if (Object.keys(status).length === 0 && scraped.length > 0) {
-    // Auto-approve all scraped events on first load (migration from empty state)
     scraped.forEach(e => { status[eventKey(e)] = 'approved'; });
     statusChanged = true;
   }
 
-  // Retroactively reject any scraped event that now has a manual override
-  // (handles events you edited before this fix was deployed)
   scraped.forEach(e => {
     const key = eventKey(e);
     if (!status[key] && hasManualOverride(e)) {
