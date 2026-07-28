@@ -1197,15 +1197,15 @@
   },
   {
     "id": 162,
-    "date": "2026-06-26",
-    "title": "Ashokan Western & Swing Week KICK OFF Dance Party",
-    "venue": "Tempo Arts",
-    "venueUrl": "https://tempokingston.org/events/",
+    "date": "2026-08-07",
+    "title": "Painted Blue Sky",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/event/blue-sky/",
     "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
-    "time": "7:00 pm",
-    "price": "See website",
-    "free": false,
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "time": "8:00 pm",
+    "price": "Free",
+    "free": true,
     "_manual": true
   },
   {
