@@ -547,15 +547,15 @@
   },
   {
     "id": 129,
-    "date": "2026-06-20",
-    "title": "Milagro Verde",
-    "venue": "Rosendale Theater",
-    "venueUrl": "https://www.rosendaletheatre.org/movies/live-in-concert-milagro-verde/",
-    "location": "Rosendale, NY",
-    "mapsUrl": "https://maps.google.com/?q=Rosendale%20Theater%20Rosendale%2C%20NY",
+    "date": "2026-08-01",
+    "title": "villagerrr + DARI BAY",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/villagerrr-dari-bay",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     "time": "7:00 pm",
-    "price": "$20",
-    "free": false,
+    "price": "Free",
+    "free": true,
     "_manual": true
   },
   {
