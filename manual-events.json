@@ -2977,5 +2977,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 292,
+    "date": "2026-09-26",
+    "title": "Amélie Farren, Lilith Max, Rabbitology",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/amlie-farren-lilith-max-rabbitology-the-three-wishes-tour",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
