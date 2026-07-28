@@ -2756,5 +2756,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 111,
+    "date": "2026-07-30",
+    "title": "Live Music Series ft. Painted Blue Sky",
+    "venue": "The Table at Wiltwyck",
+    "venueUrl": "https://www.instagram.com/p/DbTQU_yESc9/?img_index=1",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=The%20Table%20at%20Wiltwyck%20Kingston%2C%20NY",
+    "time": "6:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
