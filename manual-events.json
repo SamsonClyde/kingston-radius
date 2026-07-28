@@ -2886,5 +2886,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 160,
+    "date": "2026-08-07",
+    "title": "David Anthony",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/david-anthony-an-evening-of-magic-and-hypnosis",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
