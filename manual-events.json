@@ -1705,15 +1705,15 @@
   },
   {
     "id": 221,
-    "date": "2026-07-15",
-    "title": "Soulful Songs: Sariyah Idan, Buggy Jive",
-    "venue": "Unicorn Bar",
-    "venueUrl": "https://unicornkingston.com/calendar",
+    "date": "2026-08-21",
+    "title": "LIVE WELL + CELLMATE + GIRLS WISH",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/live-well-cellmate-girls-wish",
     "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/b6dYXn3tzHWHQeKt9",
+    "mapsUrl": "https://maps.google.com/?q=31+Broadway+Kingston+NY",
     "time": "7:00 pm",
-    "price": "See website",
-    "free": false,
+    "price": "Free",
+    "free": true,
     "_manual": true
   },
   {
