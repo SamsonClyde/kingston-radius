@@ -2717,5 +2717,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 97,
+    "date": "2026-07-28",
+    "title": "CORY HANSON (FOUNDER OF WAND) + DOMINICK & THE FAMILY BAND",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/cory-hanson-founder-of-wand-dominick-amp-the-family-band",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=31+Broadway+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
