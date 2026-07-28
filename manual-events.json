@@ -3094,5 +3094,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 176,
+    "date": "2026-08-08",
+    "title": "Cole Quest & the City Pickers",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
