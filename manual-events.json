@@ -2925,5 +2925,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 226,
+    "date": "2026-08-22",
+    "title": "KIWI JR + 2ND GRADE",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/kiwi-jr-2nd-grade",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=31+Broadway+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
