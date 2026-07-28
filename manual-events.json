@@ -2821,5 +2821,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 173,
+    "date": "2026-08-08",
+    "title": "Unicorn Bar presents: CHAOTIC GROUP CHAT followed by FUN GAY SH!T DANCE PARTY",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/EGQrjSd95GVywWCW8",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
