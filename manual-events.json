@@ -2938,5 +2938,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 242,
+    "date": "2026-08-28",
+    "title": "Kingston Calling: Battle of the Bands",
+    "venue": "Assembly",
+    "venueUrl": "https://www.ulstersavings.com/personal/loans/seminars/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Assembly%20Kingston%2C%20NY",
+    "time": "12:00 am",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
