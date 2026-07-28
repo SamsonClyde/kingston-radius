@@ -2730,5 +2730,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 107,
+    "date": "2026-07-30",
+    "title": "BENEFIT FOR CATSKILL ANIMAL SANCTUARY with ONGOING + DJs",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/benefit-for-catskill-animal-sanctuary",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=31+Broadway+Kingston+NY",
+    "time": "5:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
