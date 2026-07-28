@@ -2743,5 +2743,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 110,
+    "date": "2026-07-30",
+    "title": "Jungle Love – A Retro Soul, Funk & Disco tribute",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
