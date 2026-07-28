@@ -3042,5 +3042,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 122,
+    "date": "2026-07-31",
+    "title": "Babe Rainbow with Sam and Louise Sullivan",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/event/babe-rainbow",
+    "location": "Bearsville, NY",
+    "mapsUrl": "https://maps.google.com/?q=Bearsville%20Theater%20Bearsville%2C%20NY",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
