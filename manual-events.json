@@ -2834,5 +2834,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 186,
+    "date": "2026-08-12",
+    "title": "Unicorn Bar presents: Matthew Carlson with special guest Keven Lareau",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/EGQrjSd95GVywWCW8",
+    "time": "8:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
