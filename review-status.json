@@ -731,5 +731,6 @@
   "Assembly||2026-08-01||12:00 am": "approved",
   "Keegan Ales||2026-08-02||11:00 am": "rejected",
   "Keegan Ales||2026-08-02||2:00 pm": "approved",
-  "Unicorn Bar||2026-08-05||6:30 pm": "approved"
+  "Unicorn Bar||2026-08-05||6:30 pm": "approved",
+  "Unicorn Bar||2026-08-05||7:30 pm": "rejected"
 }
