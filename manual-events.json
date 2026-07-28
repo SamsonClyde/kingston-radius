@@ -3120,5 +3120,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 206,
+    "date": "2026-08-15",
+    "title": "Magic Lantern Show",
+    "venue": "The Snyder Estate",
+    "venueUrl": "https://www.centuryhouse.org/",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=The%20Snyder%20Estate%20Rosendale%2C%20NY",
+    "time": "3:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
