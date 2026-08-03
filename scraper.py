@@ -956,6 +956,46 @@ def scrape_rosendale_cafe():
     seen=set(); unique=[e for e in events if e["title"] not in seen and not seen.add(e["title"])]
     print(f"Rosendale Café: {len(unique)} events"); return unique
 
+# ─── RAIL TRAIL CAFE (Rosendale) ──────────────────────────────────────────────
+def scrape_rail_trail_cafe():
+    events = []
+    try:
+        r = requests.get("https://www.railtrailcaferosendale.com/art-and-music", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for block in soup.select("article, .eventlist-event, .summary-item"):
+            try:
+                title_el = block.select_one("h1, h2, .eventlist-title, .summary-title")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3:
+                    continue
+                text = clean(block.get_text())
+                m = re.search(
+                    r"(January|February|March|April|May|June|July|August|September|October|November|December)"
+                    r"\s+(\d+),\s+(\d{4})", text, re.I)
+                date_str = fmt_date(m.group(1)[:3], m.group(2), int(m.group(3))) if m else ""
+                tm = re.search(r"\b([1-9]|1[0-2]):\d{2}\s*[AP]M\b", text, re.I)
+                time_str = fmt_time(tm.group(0)) if tm else ""
+                link_el = block.select_one("a[href*='/art-and-music/']")
+                event_url = link_el["href"] if link_el else "https://www.railtrailcaferosendale.com/art-and-music"
+                if not event_url.startswith("http"):
+                    event_url = "https://www.railtrailcaferosendale.com" + event_url
+                free = "free" in text.lower() or "pay-what-you-can" in text.lower() or "donation" in text.lower()
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "Rail Trail Cafe", "venueUrl": event_url,
+                        "location": "Rosendale, NY",
+                        "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+                        "price": "Pay what you can" if free else "See website",
+                        "free": free})
+            except Exception as e:
+                print(f"  Rail Trail Cafe item error: {e}")
+    except Exception as e:
+        print(f"Rail Trail Cafe error: {e}")
+    seen = set()
+    unique = [e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    print(f"Rail Trail Cafe: {len(unique)} events")
+    return unique
+
 # ─── CATSKILL BREWERY ─────────────────────────────────────────────────────────
 def scrape_catskill_brewery():
     events = []
@@ -2350,6 +2390,7 @@ def main():
     all_events += scrape_bridge_street()
     all_events += scrape_rosendale()
     all_events += scrape_rosendale_cafe()
+    all_events += scrape_rail_trail_cafe()
     all_events += scrape_catskill_brewery()
     all_events += scrape_lively_arts()
     all_events += scrape_kingston_happenings()
