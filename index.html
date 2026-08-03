@@ -2041,10 +2041,9 @@ loadManualEventsFromServer().then(() => {
   const status = getReviewStatus();
   const scraped = (typeof EVENTS !== 'undefined') ? EVENTS : [];
   let statusChanged = false;
-  if (Object.keys(status).length === 0 && scraped.length > 0) {
-    scraped.forEach(e => { status[eventKey(e)] = 'approved'; });
-    statusChanged = true;
-  }
+
+  // Retroactively reject any scraped event that has a manual override
+  // (handles events edited before this logic was deployed)
   scraped.forEach(e => {
     const key = eventKey(e);
     if (!status[key] && hasManualOverride(e)) {
@@ -2052,6 +2051,10 @@ loadManualEventsFromServer().then(() => {
       statusChanged = true;
     }
   });
+
+  // NOTE: removed auto-approve migration block — new scraped events
+  // should appear in Unreviewed, not be silently approved.
+
   if (statusChanged) saveReviewStatus(status);
   renderEvents();
   buildMonthButtons();
