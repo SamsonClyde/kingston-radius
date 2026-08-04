@@ -186,7 +186,7 @@ def scrape_tubbys():
                     events.append({"title": title, "date": date_str, "time": time_str,
                         "venue": "Tubby's", "venueUrl": event_url,
                         "location": "Kingston, NY",
-                        "mapsUrl": "https://maps.google.com/?q=31+Broadway+Kingston+NY",
+                        "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
                         "price": price, "free": free})
             except Exception as e:
                 print(f"  Tubby's item error: {e}")
@@ -392,7 +392,7 @@ def scrape_unicorn():
                     events.append({"title": title, "date": date_str, "time": time_str,
                         "venue": "Unicorn Bar", "venueUrl": event_url,
                         "location": "Kingston, NY",
-                        "mapsUrl": "https://maps.google.com/?q=168+Albany+Ave+Kingston+NY",
+                        "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
                         "price": "Free" if free else "See website", "free": free})
             except Exception as e:
                 print(f"  Unicorn item error: {e}")
