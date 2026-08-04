@@ -602,7 +602,7 @@
     <a href="#" class="active" data-page="music">Music</a>
     <a href="#" data-page="howto">How</a>
     <a href="#" data-page="about">About</a>
-    <a href="#" data-page="admin" id="admin-nav-link">Admin<span id="review-badge"></span></a>
+    <a href="#" data-page="admin" id="admin-nav-link" style="display:none;">Admin<span id="review-badge"></span></a>
   </nav>
 </header>
 
@@ -618,7 +618,7 @@
     <button class="filter-btn" data-filter="60">≤ 60 min</button>
     <button class="filter-btn" data-filter="90">≤ 90 min</button>
     <div class="filter-sep"></div>
-    <button class="filter-btn red-btn" data-filter="free">Free only</button>
+    <!-- FREE FILTER HIDDEN — re-enable by removing comment: <button class="filter-btn red-btn" data-filter="free">Free only</button> -->
   </div>
   <div class="filter-row" id="month-filter-row">
     <span class="filter-label">Month</span>
@@ -656,10 +656,10 @@
   <div style="max-width:860px;margin:0 auto;padding:40px 24px 80px;">
     <div style="margin-bottom:32px;">
       <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">How it works</div>
-      <h1 style="font-family:'DM Serif Display',serif;font-size:2rem;line-height:1.15;margin-bottom:12px;">Live music within 90 minutes of Kingston.</h1>
+      <h1 style="font-family:'DM Serif Display',serif;font-size:2rem;line-height:1.15;margin-bottom:12px;">Live music within 90 minutes of Kingston, NY.</h1>
       <p style="font-size:0.95rem;color:var(--muted);line-height:1.7;max-width:520px;">Filter by distance, month, or venue. Click any venue name to visit their site, or the city to open directions.</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
       <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Distance</div>
         <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Kingston only, 30, 60, or 90 minutes out. Covers Woodstock, Hudson, Poughkeepsie, Peekskill, and beyond.</p>
@@ -672,10 +672,7 @@
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Venue</div>
         <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Use the dropdown to see everything coming up at one spot.</p>
       </div>
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Free only</div>
-        <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Toggle to show only free events. No-cover shows, open mics, and free admission.</p>
-      </div>
+
     </div>
   </div>
 </div>
@@ -790,8 +787,8 @@
           <div class="form-group"><label>Time</label><input type="time" id="q-time" /></div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label>Price</label><input type="text" id="q-price" placeholder="$15 / Free / See website" /></div>
-          <div class="form-group"><label>Free?</label><select id="q-free"><option value="false">No</option><option value="true">Yes — Free</option></select></div>
+          <div class="form-group"><!-- PRICE HIDDEN — re-enable by removing comment: <label>Price</label><input type="text" id="q-price" placeholder="$15 / Free / See website" /> --></div>
+          <div class="form-group"><!-- FREE FIELD HIDDEN: <label>Free?</label><select id="q-free"><option value="false">No</option><option value="true">Yes — Free</option></select> --></div>
         </div>
         <div style="display:flex;gap:8px;">
           <button class="btn-primary" id="quick-add-btn" style="margin-bottom:0;">Add Show</button>
@@ -825,8 +822,8 @@
       </div>
       <div class="form-group"><label>Drive Time from Tubby's (minutes)</label><input type="number" id="f-drive" placeholder="e.g. 15" min="0" max="120" /></div>
       <div class="form-row">
-        <div class="form-group"><label>Price</label><input type="text" id="f-price" placeholder="$15 / Free / See website" /></div>
-        <div class="form-group"><label>Free?</label><select id="f-free"><option value="false">No</option><option value="true">Yes — Free</option></select></div>
+        <div class="form-group"><!-- PRICE HIDDEN — re-enable by removing comment: <label>Price</label><input type="text" id="f-price" placeholder="$15 / Free / See website" /> --></div>
+        <!-- FREE FIELD HIDDEN: <div class="form-group"><label>Free?</label><select id="f-free"><option value="false">No</option><option value="true">Yes — Free</option></select></div> -->
       </div>
       <button class="btn-primary" id="add-event-btn">Add Event</button>
       <button class="btn-save-venue" id="save-venue-btn">💾 Save This Venue for Quick Add</button>
@@ -1275,7 +1272,7 @@ function renderEvents() {
         <div class="date-mon">${mon}</div>
         <div class="date-dow">${dow}</div>
         ${timeStr ? `<div class="date-time">${esc(timeStr)}</div>` : ''}
-        ${e.price && e.price !== 'See website' ? `<div class="date-price">${esc(e.price)}</div>` : ''}
+        /* PRICE HIDDEN — re-enable by uncommenting: ${e.price && e.price !== 'See website' ? `<div class="date-price">${esc(e.price)}</div>` : ''} */ ''
       </div>
       <div class="event-body">
         <div class="event-title">${esc(e.title)}</div>
@@ -1286,14 +1283,14 @@ function renderEvents() {
           </span>
         </div>
         <div class="event-tags">
-          ${e.free ? '<span class="tag free">Free</span>' : ''}
+          ${/* FREE TAG HIDDEN */ ''}
         </div>
       </div>
       <div class="inline-edit-form">
         <input type="text" class="ie-title"    value="${esc(e.title)}"        placeholder="Title" style="flex:2;min-width:200px;">
         <input type="date" class="ie-date"     value="${esc(e.date)}">
         <input type="text" class="ie-time"     value="${esc(e.time||'')}"     placeholder="Time e.g. 8:00 pm">
-        <input type="text" class="ie-price"    value="${esc(e.price||'')}"    placeholder="Price">
+        <!-- PRICE HIDDEN — re-enable by removing comment: <input type="text" class="ie-price"    value="${esc(e.price||'')}"    placeholder="Price"> -->
         <select class="ie-free">
           <option value="false" ${!e.free?'selected':''}>Paid</option>
           <option value="true"  ${e.free?'selected':''}>Free</option>
@@ -1464,6 +1461,11 @@ function makeEditableRow(e, mode) {
               <label>Location</label>
               <input id="ef-location-${idx}" type="text" value="${esc(e.location)}" />
             </div>
+            <div class="admin-field">
+              <label>Drive Time (min)</label>
+              <input id="ef-drive-${idx}" type="number" min="0" max="120"
+                value="${DRIVE_TIMES[e.venue] ?? ''}" placeholder="e.g. 22" style="max-width:90px;" />
+            </div>
           </div>
           <div class="admin-row-actions">${actionBtns}</div>
         </div>
@@ -1485,6 +1487,7 @@ function readRow(idx) {
     mapsUrl:  get(`ef-mapsurl-${idx}`)?.trim()   ?? orig.mapsUrl  ?? '',
     location: get(`ef-location-${idx}`)?.trim()  ?? orig.location ?? '',
     price:    get(`ef-price-${idx}`)?.trim()     ?? orig.price    ?? 'See website',
+    _driveMin: parseInt(get(`ef-drive-${idx}`))  || null,
   };
 }
 
@@ -1508,6 +1511,10 @@ async function adminSave(idx) {
     await saveManualEvents(manual, s);
   } else {
     await saveManualEvents(manual);
+  }
+  // Update DRIVE_TIMES if a drive time was entered
+  if (updated._driveMin !== null && !isNaN(updated._driveMin)) {
+    DRIVE_TIMES[record.venue] = updated._driveMin;
   }
   adminStore.set(idx, record);
   const row = document.getElementById(`arow-${idx}`);
@@ -2048,6 +2055,24 @@ populateVenueSelect();
 buildMonthButtons();
 renderEvents();
 updateBadge();
+
+// ── SECRET ADMIN ACCESS via #admin hash ──────────────────────────────────────
+function checkAdminHash() {
+  if (window.location.hash === '#admin') {
+    // Navigate to admin page
+    document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+    const adminPage = document.getElementById('page-admin');
+    if (adminPage) adminPage.style.display = '';
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    document.getElementById('admin-nav-link')?.classList.add('active');
+    // Clean hash from URL so it's not visible
+    history.replaceState(null, '', window.location.pathname);
+  }
+}
+// Check on load
+checkAdminHash();
+// Check if someone navigates to #admin directly
+window.addEventListener('hashchange', checkAdminHash);
 
 loadManualEventsFromServer().then(() => {
   const status = getReviewStatus();
