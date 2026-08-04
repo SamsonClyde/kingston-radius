@@ -3185,5 +3185,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 312,
+    "date": "2026-09-10",
+    "title": "FRATERNAL TWIN (RECORD RELEASE)",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/fraternal-twin-record-release",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/6u5zts8maGCwryPE8",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
