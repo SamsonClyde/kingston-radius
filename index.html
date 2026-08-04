@@ -983,14 +983,21 @@ const REVIEW_STATUS_KEY  = 'kr_review_status';
 let _manualEventsCache = null;
 
 // FIX: removed stray extra closing brace that was breaking the entire script
+let _lastSaveTime = 0;  // timestamp of last save — used to avoid CDN cache stomping local state
+
 async function loadManualEventsFromServer() {
   try {
     const resp = await fetch('/.netlify/functions/events-load');
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const data = await resp.json();
     _manualEventsCache = Array.isArray(data.events) ? data.events : [];
-    _reviewStatusCache = (data.reviewStatus && typeof data.reviewStatus === 'object')
-                         ? data.reviewStatus : {};
+    // Don't overwrite reviewStatus from server if we saved within the last 90 seconds
+    // The CDN cache may still be serving stale data and would undo local changes
+    const secsSinceSave = (Date.now() - _lastSaveTime) / 1000;
+    if (secsSinceSave > 90 || _reviewStatusCache === null) {
+      _reviewStatusCache = (data.reviewStatus && typeof data.reviewStatus === 'object')
+                           ? data.reviewStatus : {};
+    }
     return _manualEventsCache;
   } catch (e) {
     console.warn('Could not load from server, using localStorage:', e);
@@ -1012,6 +1019,7 @@ async function _saveManualEventsToServer(evts, reviewStatusOverride) {
       body: JSON.stringify(payload),
     });
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    _lastSaveTime = Date.now();  // protect cache from CDN staleness after any save
     return true;
   } catch (e) {
     console.warn('Could not save to server, saving to localStorage:', e);
@@ -1048,6 +1056,7 @@ function getReviewStatus() {
 
 async function saveReviewStatus(obj) {
   _reviewStatusCache = obj;
+  _lastSaveTime = Date.now();  // record save time to protect cache from CDN staleness
   try {
     const secret = (typeof ADMIN_SECRET !== 'undefined') ? ADMIN_SECRET : '';
     await fetch('/.netlify/functions/events-save', {
@@ -1094,9 +1103,12 @@ function getAllEvents() {
 function getApprovedEvents() {
   const status = getReviewStatus();
   return getAllEvents().filter(e => {
-    if (e._manual) return true;           // manual events always show
     const s = status[eventKey(e)];
+    // Always respect an explicit rejection — even for manual events
     if (s === 'rejected') return false;
+    // Manual events show unless explicitly rejected above
+    if (e._manual) return true;
+    // Scraped events must be explicitly approved
     return s === 'approved';
   });
 }
