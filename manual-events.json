@@ -3159,5 +3159,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 148,
+    "date": "2026-08-07",
+    "title": "DJ NIGHT: ERIC AMLING (FREE)",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/dj-night-eric-amling",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "6:00 pm",
+    "price": "Free",
+    "free": true,
+    "_manual": true
   }
 ]
