@@ -3172,5 +3172,18 @@
     "price": "Free",
     "free": true,
     "_manual": true
+  },
+  {
+    "id": 293,
+    "date": "2026-09-04",
+    "title": "TURBO SONIDERO + SPACE PRIMO + MEXTAPE (MC) + SHAKI",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/turbo-sonidero-space-primo-mextape-mc-shaki",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/6u5zts8maGCwryPE8",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
