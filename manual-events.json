@@ -1392,15 +1392,15 @@
   },
   {
     "id": 189,
-    "date": "2026-07-04",
-    "title": "Noah Kahan, Gigi Perez (Stateside Fest)",
-    "venue": "Hutton Brickyards",
-    "venueUrl": "https://www.statesidefest.com/",
+    "date": "2026-08-11",
+    "title": "CHESS NIGHT (FREE)",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/zz7wm75kbycekcxkhkp4tmfhxgsrmr",
     "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=200+North+St+Kingston+NY",
-    "time": "",
-    "price": "See website",
-    "free": false,
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "6:00 pm",
+    "price": "Free",
+    "free": true,
     "_manual": true
   },
   {
