@@ -3211,5 +3211,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 439,
+    "date": "2026-12-18",
+    "title": "The Putnam Chorale Songs of the Season",
+    "venue": "Tompkins Corners Cultural Center",
+    "venueUrl": "https://www.tompkinscorners.org/music.html",
+    "location": "Putnam Valley, NY",
+    "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
+    "time": "3:00 pm",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
