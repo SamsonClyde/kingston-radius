@@ -1272,7 +1272,7 @@ function renderEvents() {
         <div class="date-mon">${mon}</div>
         <div class="date-dow">${dow}</div>
         ${timeStr ? `<div class="date-time">${esc(timeStr)}</div>` : ''}
-        /* PRICE HIDDEN — re-enable by uncommenting: ${e.price && e.price !== 'See website' ? `<div class="date-price">${esc(e.price)}</div>` : ''} */ ''
+        /* PRICE HIDDEN */
       </div>
       <div class="event-body">
         <div class="event-title">${esc(e.title)}</div>
@@ -1290,7 +1290,7 @@ function renderEvents() {
         <input type="text" class="ie-title"    value="${esc(e.title)}"        placeholder="Title" style="flex:2;min-width:200px;">
         <input type="date" class="ie-date"     value="${esc(e.date)}">
         <input type="text" class="ie-time"     value="${esc(e.time||'')}"     placeholder="Time e.g. 8:00 pm">
-        <!-- PRICE HIDDEN — re-enable by removing comment: <input type="text" class="ie-price"    value="${esc(e.price||'')}"    placeholder="Price"> -->
+        
         <select class="ie-free">
           <option value="false" ${!e.free?'selected':''}>Paid</option>
           <option value="true"  ${e.free?'selected':''}>Free</option>
