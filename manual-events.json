@@ -560,20 +560,6 @@
     "_manual": true
   },
   {
-    "id": 131,
-    "date": "2026-08-05",
-    "title": "Todd Alsup's Piano Bar",
-    "venue": "Unicorn Bar",
-    "venueUrl": "https://unicornkingston.com/calendar",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
-    "time": "6:30 pm",
-    "price": "See website",
-    "free": false,
-    "_manual": true,
-    "_driveMin": null
-  },
-  {
     "id": 143,
     "date": "2026-08-06",
     "title": "Open Mic Night",
