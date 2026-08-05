@@ -2210,15 +2210,16 @@
   },
   {
     "id": 303,
-    "date": "2026-08-22",
-    "title": "DREAM HORIZON: Jeff Coffin, Nir Felder, James Genus, Futureman",
-    "venue": "The Falcon",
-    "venueUrl": "https://www.liveatthefalcon.com",
-    "location": "Marlboro, NY",
-    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    "time": "See website",
+    "date": "2026-09-05",
+    "title": "David Coller & Diane Chodkowski: An Evening of Folk & Maritime Music",
+    "venue": "Hudson River Maritime Museum",
+    "venueUrl": "https://www.hrmm.org/events.html",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Hudson%20River%20Maritime%20Museum%20Hudson%2C%20NY",
+    "time": "7:00 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": null,
     "_manual": true
   },
   {
