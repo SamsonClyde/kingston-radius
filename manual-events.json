@@ -3010,15 +3010,16 @@
   },
   {
     "id": 305,
-    "date": "2026-10-07",
-    "title": "HORSE LORDS + SILK FENCE",
-    "venue": "Tubby's",
-    "venueUrl": "https://www.tubbyskingston.com/calendar/horse-lords-silk-fence",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/6u5zts8maGCwryPE8",
-    "time": "7:00 pm",
+    "date": "2026-09-05",
+    "title": "T R I B U T E: Ozzy Osbourne Tribute Band",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "8:00 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": null,
     "_manual": true
   },
   {
