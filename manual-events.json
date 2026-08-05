@@ -2950,15 +2950,16 @@
   },
   {
     "id": 226,
-    "date": "2026-08-22",
-    "title": "KIWI JR + 2ND GRADE",
-    "venue": "Tubby's",
-    "venueUrl": "https://www.tubbyskingston.com/calendar/kiwi-jr-2nd-grade",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/6u5zts8maGCwryPE8",
-    "time": "7:00 pm",
+    "date": "2026-08-16",
+    "title": "Estuary Sounding Circle with David Budd (The Artful Drummer) and Honey Sweet Harmony",
+    "venue": "Rail Trail Cafe",
+    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/the-artful-drummer-and-sweet-honey-harmony",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+    "time": "3:30 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": 15,
     "_manual": true
   },
   {
