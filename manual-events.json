@@ -1647,15 +1647,16 @@
   },
   {
     "id": 208,
-    "date": "2026-07-11",
-    "title": "Tommydidit/ Miss Education/ Soular Sounds",
-    "venue": "Unicorn Bar",
-    "venueUrl": "https://unicornkingston.com/calendar",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/b6dYXn3tzHWHQeKt9",
-    "time": "8:00 pm",
+    "date": "2026-08-14",
+    "title": "Superunknown: Solo Acoustic Chris Cornell Tribute",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "8:30 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": null,
     "_manual": true
   },
   {
