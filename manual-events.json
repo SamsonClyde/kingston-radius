@@ -3313,5 +3313,19 @@
     "free": false,
     "_driveMin": 50,
     "_manual": true
+  },
+  {
+    "id": 433,
+    "date": "2026-11-28",
+    "title": "Second Annual Local Motion Benefit Concert",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "See website",
+    "price": "See website",
+    "free": false,
+    "_driveMin": 50,
+    "_manual": true
   }
 ]
