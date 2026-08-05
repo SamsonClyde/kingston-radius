@@ -1853,15 +1853,16 @@
   },
   {
     "id": 246,
-    "date": "2026-07-24",
-    "title": "Early Elton Trio",
-    "venue": "The Falcon",
-    "venueUrl": "https://www.liveatthefalcon.com",
-    "location": "Marlboro, NY",
-    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    "time": "See website",
+    "date": "2026-08-21",
+    "title": "Stone Mountain Farm Sound Collective",
+    "venue": "Rail Trail Cafe",
+    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/brian-farmer-and-madeleine-grace-6jr6m-bzjcp",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+    "time": "5:00 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": 15,
     "_manual": true
   },
   {
