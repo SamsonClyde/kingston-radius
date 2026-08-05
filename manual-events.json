@@ -3578,6 +3578,7 @@
     "time": "7:30 pm",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_driveMin": 55
   }
 ]
