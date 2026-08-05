@@ -1174,15 +1174,16 @@
   },
   {
     "id": 158,
-    "date": "2026-08-06",
-    "title": "An Evening with Paul Cauthen",
-    "venue": "Levon Helm Studios",
-    "venueUrl": "https://levonhelm.com/shows",
-    "location": "Woodstock, NY",
-    "mapsUrl": "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
-    "time": "8:00 pm",
+    "date": "2026-08-07",
+    "title": "Steamroller The James Taylor Tribute",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "8:30 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": null,
     "_manual": true
   },
   {
