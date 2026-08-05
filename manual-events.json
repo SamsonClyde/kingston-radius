@@ -3345,5 +3345,19 @@
     "free": false,
     "_driveMin": 22,
     "_manual": true
+  },
+  {
+    "id": 216,
+    "date": "2026-08-15",
+    "title": "Sarah Urech",
+    "venue": "Rail Trail Cafe",
+    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/sarah-urich",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+    "time": "5:30 pm",
+    "price": "Pay what you can",
+    "free": true,
+    "_driveMin": 15,
+    "_manual": true
   }
 ]
