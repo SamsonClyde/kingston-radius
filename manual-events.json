@@ -2367,15 +2367,16 @@
   },
   {
     "id": 320,
-    "date": "2026-09-12",
-    "title": "HAMMERED HULLS + SPAIN (TOUR KICKOFF) + NO MOMENTUM + LOW FICTION",
-    "venue": "Tubby's",
-    "venueUrl": "https://www.tubbyskingston.com/calendar/hammered-hulls-spain-tour-kickoff-no-momentum-low-fiction",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/6u5zts8maGCwryPE8",
-    "time": "7:00 pm",
+    "date": "2026-09-11",
+    "title": "Levanta",
+    "venue": "Rail Trail Cafe",
+    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/4yk2ltygr9k2m3wte2y34kygek6cfh-hprf2",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+    "time": "5:30 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": 15,
     "_manual": true
   },
   {
