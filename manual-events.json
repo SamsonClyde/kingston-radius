@@ -1119,15 +1119,16 @@
   },
   {
     "id": 152,
-    "date": "2026-08-05",
-    "title": "TODD ALSUP’S Piano Bar",
-    "venue": "Unicorn Bar",
-    "venueUrl": "https://unicornkingston.com/calendar",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/EGQrjSd95GVywWCW8",
-    "time": "6:30 pm",
+    "date": "2026-08-07",
+    "title": "Jaketown Road",
+    "venue": "RMV Cellars",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
+    "location": "West Park, NY",
+    "mapsUrl": "https://maps.google.com/?q=RMV%20Cellars%20Kingston%2C%20NY",
+    "time": "6:00 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": 20,
     "_manual": true
   },
   {
