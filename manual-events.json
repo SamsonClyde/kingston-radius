@@ -3103,14 +3103,15 @@
   {
     "id": 176,
     "date": "2026-08-08",
-    "title": "Cole Quest & the City Pickers",
-    "venue": "Tempo Arts",
-    "venueUrl": "https://tempokingston.org/events/",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
-    "time": "8:00 pm",
+    "title": "Peach & Love",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "8:30 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": null,
     "_manual": true
   },
   {
