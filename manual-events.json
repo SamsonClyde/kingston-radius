@@ -3391,5 +3391,19 @@
     "free": false,
     "_driveMin": 15,
     "_manual": true
+  },
+  {
+    "id": 257,
+    "date": "2026-08-23",
+    "title": "Unicorn Bar presents: The 6th Annual DOOR DAZE HVNY Music Festival!",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_driveMin": null,
+    "_manual": true
   }
 ]
