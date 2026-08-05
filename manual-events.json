@@ -3377,5 +3377,19 @@
     "free": false,
     "_driveMin": 15,
     "_manual": true
+  },
+  {
+    "id": 259,
+    "date": "2026-08-23",
+    "title": "Music is Medicine Community Song Circle with David Budd ( The Artful Drummer) & Honey Sweet Harmony",
+    "venue": "Rail Trail Cafe",
+    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/music-is-medicine-song-circle",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+    "time": "1:00 pm",
+    "price": "See website",
+    "free": false,
+    "_driveMin": 15,
+    "_manual": true
   }
 ]
