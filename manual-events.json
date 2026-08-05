@@ -3285,5 +3285,19 @@
     "free": false,
     "_driveMin": null,
     "_manual": true
+  },
+  {
+    "id": 309,
+    "date": "2026-09-06",
+    "title": "Willa Vincitore and The Traveling Riverside Blues Band",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_driveMin": null,
+    "_manual": true
   }
 ]
