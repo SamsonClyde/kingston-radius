@@ -3328,5 +3328,19 @@
     "free": false,
     "_driveMin": 50,
     "_manual": true
+  },
+  {
+    "id": 174,
+    "date": "2026-08-08",
+    "title": "Reggae in the Garden Fest",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "6:00 pm",
+    "price": "See website",
+    "free": false,
+    "_driveMin": 22,
+    "_manual": true
   }
 ]
