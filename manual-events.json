@@ -1041,15 +1041,16 @@
   },
   {
     "id": 142,
-    "date": "2026-06-23",
-    "title": "Martha Elizabeth Miller Live In Concert",
-    "venue": "Athens Cultural Center",
-    "venueUrl": "https://athensculturalcenter.org/up-next/odaxuntb2zqunvqghyxzzcmvjelxsm",
-    "location": "Athens, NY",
-    "mapsUrl": "https://maps.google.com/?q=Athens%20Cultural%20Center%20Kingston%2C%20NY",
-    "time": "6:00 pm",
+    "date": "2026-08-06",
+    "title": "Get On The Good Foot With DJs Rhoda & Al",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "7:00 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": null,
     "_manual": true
   },
   {
