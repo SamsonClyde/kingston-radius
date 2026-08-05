@@ -570,7 +570,8 @@
     "time": "6:30 pm",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_driveMin": null
   },
   {
     "id": 143,
