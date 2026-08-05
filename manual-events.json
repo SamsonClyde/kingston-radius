@@ -2844,15 +2844,16 @@
   },
   {
     "id": 186,
-    "date": "2026-08-12",
-    "title": "Matthew Carlson with special guest Keven Lareau",
-    "venue": "Unicorn Bar",
-    "venueUrl": "https://unicornkingston.com/calendar",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/hG8HcAwSCUynT5Cn8",
-    "time": "8:00 pm",
+    "date": "2026-08-09",
+    "title": "Russ St. George (Salon Stage)",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "6:30 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": null,
     "_manual": true
   },
   {
