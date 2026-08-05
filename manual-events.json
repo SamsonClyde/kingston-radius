@@ -2050,15 +2050,16 @@
   },
   {
     "id": 275,
-    "date": "2026-09-17",
-    "title": "Nai Palm (of Hiatus Kaiyote)",
-    "venue": "Assembly Kingston",
-    "venueUrl": "https://www.assemblykingston.com/events/nai-palm-of-hiatus-kaiyote",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
-    "time": "7:00 pm",
+    "date": "2026-08-28",
+    "title": "Djam Gong",
+    "venue": "Rail Trail Cafe",
+    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/djam-gong-1",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+    "time": "5:00 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": 15,
     "_manual": true
   },
   {
