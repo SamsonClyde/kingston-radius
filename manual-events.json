@@ -3538,5 +3538,19 @@
     "free": false,
     "_driveMin": 15,
     "_manual": true
+  },
+  {
+    "id": 422,
+    "date": "2026-11-17",
+    "title": "WHY?",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/why",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "7:00 pm",
+    "price": "See website",
+    "free": false,
+    "_driveMin": null,
+    "_manual": true
   }
 ]
