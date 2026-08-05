@@ -758,15 +758,16 @@
   },
   {
     "id": 260,
-    "date": "2026-07-28",
-    "title": "Mantra Music Cacao Journey",
-    "venue": "The O+ Exchange Clinic",
-    "venueUrl": "https://opositivefestival.org/year-round-clinic/",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=The%20O%2B%20Exchange%20Clinic%20Kingston%2C%20NY",
+    "date": "2026-08-23",
+    "title": "Open Mic Invitational",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
     "time": "6:00 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": null,
     "_manual": true
   },
   {
