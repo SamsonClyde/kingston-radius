@@ -3495,5 +3495,19 @@
     "free": false,
     "_driveMin": 15,
     "_manual": true
+  },
+  {
+    "id": 370,
+    "date": "2026-10-04",
+    "title": "Honoring the River of Life (Guswenta) with Evan Pritchard",
+    "venue": "Rail Trail Cafe",
+    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/honoring-the-river-of-life-guswenta-with-evan-pritchard",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+    "time": "1:00 pm",
+    "price": "See website",
+    "free": false,
+    "_driveMin": 15,
+    "_manual": true
   }
 ]
