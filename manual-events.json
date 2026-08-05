@@ -3566,5 +3566,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 405,
+    "date": "2026-11-19",
+    "title": "Nora Brown ~ Down Hill Strugglers",
+    "venue": "Tompkins Corners Cultural Center",
+    "venueUrl": "https://www.tompkinscorners.org/music.html",
+    "location": "Putnam Valley, NY",
+    "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
+    "time": "7:30 pm",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
