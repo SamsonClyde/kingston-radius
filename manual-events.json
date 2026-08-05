@@ -744,15 +744,16 @@
   },
   {
     "id": 254,
-    "date": "2026-04-19",
-    "title": "Sunday Sounds with Tony DePaolo",
-    "venue": "Silk Factory",
-    "venueUrl": "https://silkfcty.com/events/sunday-sounds-with-tony-depaolo-20/",
-    "location": "Newburgh, NY",
-    "mapsUrl": "https://maps.google.com/?q=299+Washington+St+Newburgh+NY",
-    "time": "",
+    "date": "2026-08-22",
+    "title": "The Weeklings: The Music of The Beatles and more",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "8:30 pm",
     "price": "See website",
     "free": false,
+    "_driveMin": null,
     "_manual": true
   },
   {
