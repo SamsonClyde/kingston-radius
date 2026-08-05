@@ -1261,7 +1261,7 @@ function renderEvents() {
     const day = d ? d.getDate() : '';
     const mon = d ? MONTH_NAMES[d.getMonth()] : '';
     const dow = d ? ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getDay()] : '';
-    const timeStr = formatTime(e.time);
+    const timeStr = (e.time && e.time !== 'See website') ? formatTime(e.time) : '';
     const isManual = !!e._manual;
     const key = eventKey(e);
 
@@ -1388,7 +1388,7 @@ function makeEditableRow(e, mode) {
   const day = d ? d.getDate() : '';
   const mon = d ? MONTH_NAMES[d.getMonth()] : '';
   const dow = d ? ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getDay()] : '';
-  const timeStr = formatTime(e.time);
+  const timeStr = (e.time && e.time !== 'See website') ? formatTime(e.time) : '';
 
   const badge = `<span class="status-badge ${s}" style="margin-left:auto;flex-shrink:0;">${e._manual ? 'manual' : s}</span>`;
 
@@ -2059,18 +2059,15 @@ updateBadge();
 // ── SECRET ADMIN ACCESS via #admin hash ──────────────────────────────────────
 function checkAdminHash() {
   if (window.location.hash === '#admin') {
-    // Navigate to admin page
-    document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
-    const adminPage = document.getElementById('page-admin');
-    if (adminPage) adminPage.style.display = '';
-    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-    document.getElementById('admin-nav-link')?.classList.add('active');
-    // Clean hash from URL so it's not visible
+    // Clean hash from URL before navigating so it's never visible
     history.replaceState(null, '', window.location.pathname);
+    // Use the site's own nav function to show admin page properly
+    const adminLink = document.getElementById('admin-nav-link');
+    if (adminLink) adminLink.click();
   }
 }
-// Check on load
-checkAdminHash();
+// Check on load — defer so nav system is fully ready first
+setTimeout(checkAdminHash, 0);
 // Check if someone navigates to #admin directly
 window.addEventListener('hashchange', checkAdminHash);
 
