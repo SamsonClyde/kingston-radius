@@ -1,6 +1,6 @@
 // netlify/functions/events-load.js
-// Reads manual-events.json and review-status.json from the `data` branch.
-// Using raw.githubusercontent.com with the data branch ref.
+// Loads manual-events.json, scraped-events.json, email-events.json, review-status.json
+// from the `data` branch. Uses GitHub API to bypass CDN caching.
 exports.handler = async () => {
   const owner = process.env.GITHUB_OWNER;
   const repo  = process.env.GITHUB_REPO;
@@ -8,31 +8,50 @@ exports.handler = async () => {
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ events: [], reviewStatus: {} }),
+      body: JSON.stringify({ manualEvents: [], scrapedEvents: [], emailEvents: [], reviewStatus: {} }),
     };
   }
-  // Read from `data` branch — never triggers a Netlify deploy
-  const base = `https://raw.githubusercontent.com/${owner}/${repo}/data`;
-  async function fetchJson(path) {
+
+  const token = process.env.GITHUB_TOKEN;
+  const headers = {
+    'Authorization': `Bearer ${token}`,
+    'Accept': 'application/vnd.github.v3.raw',
+    'User-Agent': 'KingstonRadius/1.0',
+    'Cache-Control': 'no-cache',
+  };
+
+  async function fetchJson(path, branch = 'data') {
     try {
-      const resp = await fetch(`${base}/${path}`);
+      const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`;
+      const resp = await fetch(apiUrl, { headers });
       if (resp.status === 404) return null;
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      return await resp.json();
+      const data = await resp.json();
+      const decoded = Buffer.from(data.content.replace(/\n/g, ''), 'base64').toString('utf-8');
+      return JSON.parse(decoded);
     } catch {
       return null;
     }
   }
-  const [eventsRaw, statusRaw] = await Promise.all([
+
+  const [manualRaw, scrapedRaw, emailRaw, statusRaw] = await Promise.all([
     fetchJson('manual-events.json'),
+    fetchJson('scraped-events.json'),
+    fetchJson('email-events.json'),
     fetchJson('review-status.json'),
   ]);
+
   return {
     statusCode: 200,
-    headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' },
+    headers: {
+      'Content-Type': 'application/json',
+      'Cache-Control': 'no-store, no-cache, must-revalidate',
+    },
     body: JSON.stringify({
-      events:       Array.isArray(eventsRaw) ? eventsRaw : [],
-      reviewStatus: (statusRaw && typeof statusRaw === 'object') ? statusRaw : {},
+      manualEvents:  Array.isArray(manualRaw)   ? manualRaw   : [],
+      scrapedEvents: Array.isArray(scrapedRaw)  ? scrapedRaw  : [],
+      emailEvents:   Array.isArray(emailRaw)    ? emailRaw    : [],
+      reviewStatus:  (statusRaw && typeof statusRaw === 'object') ? statusRaw : {},
     }),
   };
 };
