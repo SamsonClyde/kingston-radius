@@ -1,3 +1,15 @@
 [
-  
+  {
+    "id": 1786372928128,
+    "title": "Rose Stoller, Jacob Augustine, Field Guides",
+    "date": "2026-09-04",
+    "time": "17:30",
+    "venue": "Louw-Bogardus Ruins at Frog Alley Park",
+    "venueUrl": "https://www.instagram.com/friendsofhistorickingston?igsh=bGR2bmpmeXdwbWph",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YveYZPHrVpQKabSy9",
+    "price": "Free",
+    "free": false,
+    "_manual": true
+  }
 ]
