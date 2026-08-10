@@ -2366,6 +2366,321 @@ def scrape_station_bar():
     )
 
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
+
+# ─── THE HALF MOON (Hudson) ───────────────────────────────────────────────────
+def scrape_half_moon():
+    events = []
+    try:
+        r = requests.get("https://www.thehalfmoonhudson.com/events", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for item in soup.select(".eventlist-event, article, .event-item"):
+            try:
+                title_el = item.select_one("h1, h2, h3, .eventlist-title, .summary-title")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3:
+                    continue
+                text = clean(item.get_text())
+                m = re.search(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(\d{4})", text, re.I)
+                date_str = fmt_date(m.group(1)[:3], m.group(2), int(m.group(3))) if m else ""
+                tm = re.search(r"\b([1-9]|1[0-2]):\d{2}\s*[AP]M\b", text, re.I)
+                time_str = fmt_time(tm.group(0)) if tm else ""
+                link_el = item.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://www.thehalfmoonhudson.com/events"
+                if event_url.startswith("/"): event_url = "https://www.thehalfmoonhudson.com" + event_url
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "The Half Moon", "venueUrl": event_url,
+                        "location": "Hudson, NY", "mapsUrl": "https://maps.app.goo.gl/2xtXkdDVa2REhf9VA",
+                        "price": "See website", "free": False})
+            except Exception as e:
+                print(f"  Half Moon item error: {e}")
+    except Exception as e:
+        print(f"Half Moon error: {e}")
+    print(f"The Half Moon: {len(events)} events")
+    return events
+
+# ─── DARYL'S HOUSE CLUB (Pawling) ────────────────────────────────────────────
+def scrape_daryls_house():
+    events = []
+    url = "https://darylshouseclub.com/shows/"
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for item in soup.select(".tribe-event, article.type-tribe_events, .tribe-events-list-event-row, .show-item"):
+            try:
+                title_el = item.select_one("h2, h3, .tribe-event-url, .tribe-event-name")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3:
+                    continue
+                text = clean(item.get_text())
+                m = re.search(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(\d{4})", text, re.I)
+                date_str = fmt_date(m.group(1)[:3], m.group(2), int(m.group(3))) if m else ""
+                tm = re.search(r"\b([1-9]|1[0-2]):\d{2}\s*[AP]M\b", text, re.I)
+                time_str = fmt_time(tm.group(0)) if tm else ""
+                link_el = item.select_one("a[href]")
+                event_url = link_el["href"] if link_el else url
+                if event_url.startswith("/"): event_url = "https://darylshouseclub.com" + event_url
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "Daryl's House Club", "venueUrl": event_url,
+                        "location": "Pawling, NY", "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+                        "price": "See website", "free": False})
+            except Exception as e:
+                print(f"  Daryl's House item error: {e}")
+    except Exception as e:
+        print(f"Daryl's House error: {e}")
+    print(f"Daryl's House Club: {len(events)} events")
+    return events
+
+# ─── THE LACE MILL (Kingston) ─────────────────────────────────────────────────
+def scrape_lace_mill():
+    events = []
+    try:
+        r = requests.get("https://thelacemillarts.com/", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for item in soup.select(".eventlist-event, article, .sqs-block-summary-v2-item, .event-item"):
+            try:
+                title_el = item.select_one("h1, h2, h3, .eventlist-title, .summary-title")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3:
+                    continue
+                text = clean(item.get_text())
+                m = re.search(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(\d{4})", text, re.I)
+                date_str = fmt_date(m.group(1)[:3], m.group(2), int(m.group(3))) if m else ""
+                tm = re.search(r"\b([1-9]|1[0-2]):\d{2}\s*[AP]M\b", text, re.I)
+                time_str = fmt_time(tm.group(0)) if tm else ""
+                link_el = item.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://thelacemillarts.com/"
+                if event_url.startswith("/"): event_url = "https://thelacemillarts.com" + event_url
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "The Lace Mill", "venueUrl": event_url,
+                        "location": "Kingston, NY", "mapsUrl": "https://maps.app.goo.gl/8k3T7UXQT5Lzeqke9",
+                        "price": "See website", "free": False})
+            except Exception as e:
+                print(f"  Lace Mill item error: {e}")
+    except Exception as e:
+        print(f"Lace Mill error: {e}")
+    print(f"The Lace Mill: {len(events)} events")
+    return events
+
+# ─── KESTREL TAVERN (Kingston) ────────────────────────────────────────────────
+def scrape_kestrel():
+    events = []
+    try:
+        r = requests.get("https://kestreltavern.com/events", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for item in soup.select(".eventlist-event, article, .event-item, .sqs-block-summary-v2-item"):
+            try:
+                title_el = item.select_one("h1, h2, h3, .eventlist-title")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3:
+                    continue
+                text = clean(item.get_text())
+                m = re.search(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(\d{4})", text, re.I)
+                date_str = fmt_date(m.group(1)[:3], m.group(2), int(m.group(3))) if m else ""
+                tm = re.search(r"\b([1-9]|1[0-2]):\d{2}\s*[AP]M\b", text, re.I)
+                time_str = fmt_time(tm.group(0)) if tm else ""
+                link_el = item.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://kestreltavern.com/events"
+                if event_url.startswith("/"): event_url = "https://kestreltavern.com" + event_url
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "Kestrel Tavern", "venueUrl": event_url,
+                        "location": "Kingston, NY", "mapsUrl": "https://maps.app.goo.gl/JLfZqAVU5FP8Vywf6",
+                        "price": "See website", "free": False})
+            except Exception as e:
+                print(f"  Kestrel item error: {e}")
+    except Exception as e:
+        print(f"Kestrel error: {e}")
+    print(f"Kestrel Tavern: {len(events)} events")
+    return events
+
+# ─── PEARL MOON (Woodstock) ───────────────────────────────────────────────────
+def scrape_pearl_moon():
+    events = []
+    try:
+        r = requests.get("https://pearlmoonwoodstock.com/events", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for item in soup.select(".eventlist-event, article, .sqs-block-summary-v2-item"):
+            try:
+                title_el = item.select_one("h1, h2, h3, .eventlist-title, .summary-title")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3:
+                    continue
+                text = clean(item.get_text())
+                m = re.search(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(\d{4})", text, re.I)
+                date_str = fmt_date(m.group(1)[:3], m.group(2), int(m.group(3))) if m else ""
+                tm = re.search(r"\b([1-9]|1[0-2]):\d{2}\s*[AP]M\b", text, re.I)
+                time_str = fmt_time(tm.group(0)) if tm else ""
+                link_el = item.select_one("a[href*='/events/'], a[href*='/event/']")
+                event_url = link_el["href"] if link_el else "https://pearlmoonwoodstock.com/events"
+                if event_url.startswith("/"): event_url = "https://pearlmoonwoodstock.com" + event_url
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "Pearl Moon", "venueUrl": event_url,
+                        "location": "Woodstock, NY", "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+                        "price": "See website", "free": False})
+            except Exception as e:
+                print(f"  Pearl Moon item error: {e}")
+    except Exception as e:
+        print(f"Pearl Moon error: {e}")
+    print(f"Pearl Moon: {len(events)} events")
+    return events
+
+# ─── WEST KILL BREWING Kingston ───────────────────────────────────────────────
+def scrape_westkill_kingston():
+    # West Kill Kingston uses a Google Calendar embed
+    events = []
+    try:
+        # Use the iCal feed from the Google Calendar embed found on their site
+        cal_id = "271086d73e0ac7499ca493cd38f9b5a5a01f559d4784ee21951f8447610b4c30@group.calendar.google.com"
+        encoded_id = cal_id.replace("@", "%40")
+        ical_url = f"https://calendar.google.com/calendar/ical/{encoded_id}/public/basic.ics"
+        r = requests.get(ical_url, headers=HEADERS, timeout=15)
+        if r.status_code == 200:
+            events = _parse_ical_text(r.text, "West Kill Brewing (Kingston)", "Kingston, NY",
+                "https://maps.app.goo.gl/FDYVgTuBWmmjw1tS6",
+                "https://www.westkillbrewing.com")
+    except Exception as e:
+        print(f"West Kill Kingston error: {e}")
+    print(f"West Kill Brewing (Kingston): {len(events)} events")
+    return events
+
+# ─── WEST KILL BREWING Taproom ────────────────────────────────────────────────
+def scrape_westkill_taproom():
+    events = []
+    try:
+        cal_id = "ODQ5MWM3NTIzY2QzNTE1M2Q3MWFmOWRlMDNhY2I3MmIzN2NlNGY5ZTQwMGE2NWVmMGE5YTE5YWExOTlkZTYzOA==@group.calendar.google.com"
+        # Decode base64 portion
+        import base64
+        raw = "ODQ5MWM3NTIzY2QzNTE1M2Q3MWFmOWRlMDNhY2I3MmIzN2NlNGY5ZTQwMGE2NWVmMGE5YTE5YWExOTlkZTYzOA=="
+        decoded = base64.b64decode(raw).decode("utf-8")
+        cal_id = decoded + "@group.calendar.google.com"
+        encoded_id = cal_id.replace("@", "%40")
+        ical_url = f"https://calendar.google.com/calendar/ical/{encoded_id}/public/basic.ics"
+        r = requests.get(ical_url, headers=HEADERS, timeout=15)
+        if r.status_code == 200:
+            events = _parse_ical_text(r.text, "West Kill Brewing", "West Kill, NY",
+                "https://maps.app.goo.gl/kbES8MnTT7ZEeE9M6",
+                "https://www.westkillbrewing.com")
+    except Exception as e:
+        print(f"West Kill Taproom error: {e}")
+    print(f"West Kill Brewing (West Kill): {len(events)} events")
+    return events
+
+def _parse_ical_text(text, venue, location, maps_url, venue_url):
+    """Parse iCal text and return event dicts."""
+    events = []
+    today = datetime.date.today()
+    cutoff = today + datetime.timedelta(days=120)
+    current = {}
+    for line in text.splitlines():
+        line = line.strip()
+        if line == "BEGIN:VEVENT":
+            current = {}
+        elif line == "END:VEVENT":
+            title = current.get("SUMMARY", "").strip()
+            dtstart = current.get("DTSTART", "")
+            dtstart = re.sub(r";[^:]+:", "", dtstart)  # remove params
+            date_str = ""
+            time_str = ""
+            try:
+                if "T" in dtstart:
+                    dt = datetime.datetime.strptime(dtstart[:15], "%Y%m%dT%H%M%S")
+                    date_str = dt.strftime("%Y-%m-%d")
+                    time_str = dt.strftime("%-I:%M %p").lower()
+                else:
+                    dt = datetime.datetime.strptime(dtstart[:8], "%Y%m%d")
+                    date_str = dt.strftime("%Y-%m-%d")
+            except:
+                pass
+            if title and date_str:
+                try:
+                    d = datetime.date.fromisoformat(date_str)
+                    if today <= d <= cutoff:
+                        events.append({"title": title, "date": date_str, "time": time_str,
+                            "venue": venue, "venueUrl": venue_url,
+                            "location": location, "mapsUrl": maps_url,
+                            "price": "See website", "free": False})
+                except:
+                    pass
+            current = {}
+        elif ":" in line:
+            key, _, val = line.partition(":")
+            key = key.split(";")[0]  # remove params like DTSTART;TZID=...
+            current[key] = val
+    return events
+
+# ─── WILDHART CENTER (Windsor) ────────────────────────────────────────────────
+def scrape_wildhart():
+    events = []
+    for url in ["https://www.wildheartcenter.art/events/", "https://www.wildheartcenter.art/events"]:
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=15)
+            soup = BeautifulSoup(r.text, "html.parser")
+            for item in soup.select(".eventlist-event, article, .tribe-event, .event-item"):
+                try:
+                    title_el = item.select_one("h1, h2, h3, .eventlist-title, .tribe-event-name")
+                    title = clean(title_el.get_text()) if title_el else ""
+                    if not title or len(title) < 3:
+                        continue
+                    text = clean(item.get_text())
+                    m = re.search(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(\d{4})", text, re.I)
+                    date_str = fmt_date(m.group(1)[:3], m.group(2), int(m.group(3))) if m else ""
+                    tm = re.search(r"\b([1-9]|1[0-2]):\d{2}\s*[AP]M\b", text, re.I)
+                    time_str = fmt_time(tm.group(0)) if tm else ""
+                    link_el = item.select_one("a[href]")
+                    event_url = link_el["href"] if link_el else url
+                    if event_url.startswith("/"): event_url = "https://www.wildheartcenter.art" + event_url
+                    if title and date_str:
+                        events.append({"title": title, "date": date_str, "time": time_str,
+                            "venue": "WildHeart Center", "venueUrl": event_url,
+                            "location": "Windsor, NY", "mapsUrl": "https://maps.app.goo.gl/qXUfx51mMunywtwM9",
+                            "price": "See website", "free": False})
+                except Exception as e:
+                    print(f"  WildHeart item error: {e}")
+            if events:
+                break
+        except Exception as e:
+            print(f"WildHeart error ({url}): {e}")
+    print(f"WildHeart Center: {len(events)} events")
+    return events
+
+# ─── LOVE, VELMA (Ellenville) — Membership Required ──────────────────────────
+def scrape_love_velma():
+    events = []
+    try:
+        r = requests.get("https://www.lovevelma.com/calendar", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for item in soup.select(".eventlist-event, article, .sqs-block-summary-v2-item, .event-item"):
+            try:
+                title_el = item.select_one("h1, h2, h3, .eventlist-title, .summary-title")
+                raw_title = clean(title_el.get_text()) if title_el else ""
+                if not raw_title or len(raw_title) < 3:
+                    continue
+                title = f"{raw_title} (Membership Required)"
+                text = clean(item.get_text())
+                m = re.search(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(\d{4})", text, re.I)
+                date_str = fmt_date(m.group(1)[:3], m.group(2), int(m.group(3))) if m else ""
+                tm = re.search(r"\b([1-9]|1[0-2]):\d{2}\s*[AP]M\b", text, re.I)
+                time_str = fmt_time(tm.group(0)) if tm else ""
+                link_el = item.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://www.lovevelma.com/calendar"
+                if event_url.startswith("/"): event_url = "https://www.lovevelma.com" + event_url
+                if raw_title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "Love, Velma", "venueUrl": event_url,
+                        "location": "Ellenville, NY", "mapsUrl": "https://maps.app.goo.gl/1N7G54TEiuvAWsch9",
+                        "price": "Members only", "free": False})
+            except Exception as e:
+                print(f"  Love Velma item error: {e}")
+    except Exception as e:
+        print(f"Love Velma error: {e}")
+    print(f"Love, Velma: {len(events)} events")
+    return events
+
+
 def main():
     all_events = []
     all_events += scrape_tubbys()
@@ -2452,6 +2767,16 @@ def main():
     all_events += scrape_generic_tribe("https://www.torchfly.com/events/","Torchfly","Newburgh, NY","https://maps.google.com/?q=Torchfly+Newburgh+NY")
     all_events += scrape_generic_tribe("https://thedrinkingbird.com/events/","The Drinking Bird","Newburgh, NY","https://maps.google.com/?q=The+Drinking+Bird+Newburgh+NY")
     all_events += scrape_generic_tribe("https://theMARKsaugerties.com/events/","The Mark","Saugerties, NY","https://maps.google.com/?q=The+Mark+Saugerties+NY")
+    # ── NEW VENUES ──
+    all_events += scrape_half_moon()
+    all_events += scrape_daryls_house()
+    all_events += scrape_lace_mill()
+    all_events += scrape_kestrel()
+    all_events += scrape_pearl_moon()
+    all_events += scrape_westkill_kingston()
+    all_events += scrape_westkill_taproom()
+    all_events += scrape_wildhart()
+    all_events += scrape_love_velma()
 
     # Normalize all times
     for e in all_events:
@@ -2491,15 +2816,103 @@ def main():
     free: {'true' if e['free'] else 'false'}
   }}""")
 
-    output = "const EVENTS = [\n" + ",\n".join(lines) + "\n];\n"
-    with open("events.js", "w") as f:
-        f.write(output)
+    import json as _json
+    import base64 as _base64
+    import os as _os
+    import urllib.request as _urllib
 
-    total = len(all_events)
-    print(f"\nTotal: {total} events written to events.js")
+    events_data = []
+    for e in all_events:
+        events_data.append({
+            "id":       e["id"],
+            "date":     e.get("date", ""),
+            "title":    e.get("title", ""),
+            "venue":    e.get("venue", ""),
+            "venueUrl": e.get("venueUrl", ""),
+            "location": e.get("location", ""),
+            "mapsUrl":  e.get("mapsUrl", ""),
+            "time":     e.get("time", ""),
+            "price":    e.get("price", "See website"),
+            "free":     e.get("free", False),
+        })
+
+    total = len(events_data)
+    print(f"\nTotal: {total} events")
     if total < 50:
         print(f"ERROR: only {total} events — something may be wrong", file=sys.stderr)
         sys.exit(1)
+
+    # Write to scraped-events.json on the data branch via GitHub API
+    gh_token = _os.environ.get("GITHUB_TOKEN")
+    gh_owner = _os.environ.get("GITHUB_OWNER")
+    gh_repo  = _os.environ.get("GITHUB_REPO")
+
+    if not gh_token or not gh_owner or not gh_repo:
+        print("ERROR: Missing GITHUB_TOKEN, GITHUB_OWNER, or GITHUB_REPO env vars", file=sys.stderr)
+        # Fallback: write locally for debugging
+        with open("scraped-events.json", "w") as f:
+            _json.dump(events_data, f, indent=2)
+        print("Written to local scraped-events.json as fallback")
+        sys.exit(1)
+
+    api_url = f"https://api.github.com/repos/{gh_owner}/{gh_repo}/contents/scraped-events.json?ref=data"
+    headers = {
+        "Authorization": f"Bearer {gh_token}",
+        "Accept": "application/vnd.github.v3+json",
+        "User-Agent": "KingstonRadius-Scraper/1.0",
+        "Content-Type": "application/json",
+    }
+
+    # Get current SHA if file exists
+    sha = None
+    try:
+        req = _urllib.Request(api_url, headers=headers)
+        with _urllib.urlopen(req) as resp:
+            existing = _json.loads(resp.read())
+            sha = existing.get("sha")
+            print(f"  Found existing scraped-events.json (SHA: {sha[:8]}...)")
+    except Exception as e:
+        print(f"  scraped-events.json not found on data branch, will create: {e}")
+
+    content_b64 = _base64.b64encode(_json.dumps(events_data, indent=2).encode()).decode()
+    put_body = _json.dumps({
+        "message": f"[scraper] Update scraped-events.json ({total} events)",
+        "content": content_b64,
+        "branch": "data",
+        **({"sha": sha} if sha else {}),
+    }).encode()
+
+    put_url = f"https://api.github.com/repos/{gh_owner}/{gh_repo}/contents/scraped-events.json"
+    try:
+        req = _urllib.Request(put_url, data=put_body, headers=headers, method="PUT")
+        with _urllib.urlopen(req) as resp:
+            result = _json.loads(resp.read())
+            print(f"✓ scraped-events.json written to data branch ({total} events)")
+    except _urllib.error.HTTPError as e:
+        error_body = e.read().decode()
+        if e.code == 409:
+            # SHA conflict — re-fetch and retry once
+            print("  SHA conflict, retrying...")
+            try:
+                req2 = _urllib.Request(api_url, headers=headers)
+                with _urllib.urlopen(req2) as resp2:
+                    retry_data = _json.loads(resp2.read())
+                    new_sha = retry_data.get("sha")
+                retry_body = _json.dumps({
+                    "message": f"[scraper] Update scraped-events.json ({total} events)",
+                    "content": content_b64,
+                    "branch": "data",
+                    "sha": new_sha,
+                }).encode()
+                req3 = _urllib.Request(put_url, data=retry_body, headers=headers, method="PUT")
+                with _urllib.urlopen(req3) as resp3:
+                    print(f"✓ scraped-events.json written after retry ({total} events)")
+            except Exception as e2:
+                print(f"ERROR: Retry failed: {e2}", file=sys.stderr)
+                sys.exit(1)
+        else:
+            print(f"ERROR: GitHub write failed: {e.code} {error_body}", file=sys.stderr)
+            sys.exit(1)
 
 if __name__ == "__main__":
     try:
