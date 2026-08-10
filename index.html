@@ -714,7 +714,7 @@
 </div><!-- /page-music -->
 
 <!-- ── ABOUT PAGE ── -->
-<div id="page-about" class="page">
+<div id="page-about" class="page" style="display:none;">
   <div style="max-width:860px;margin:0 auto;padding:40px 24px 80px;">
     <div style="margin-bottom:32px;">
       <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Kingston Radius</div>
@@ -1816,7 +1816,7 @@ document.querySelectorAll('nav a[data-page]').forEach(link => {
     document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
     document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
     const el = document.getElementById('page-' + page);
-    if (el) el.style.display = '';
+    if (el) el.style.display = 'block';
     link.classList.add('active');
   });
 });
@@ -1835,10 +1835,27 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
 function checkAdminHash() {
   if (window.location.hash === '#admin') {
     history.replaceState(null, '', window.location.pathname);
-    document.getElementById('admin-nav-link')?.click();
+    // Show admin page directly without relying on nav click
+    document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+    const adminPage = document.getElementById('page-admin');
+    if (adminPage) adminPage.style.display = 'block';
+    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+    document.getElementById('admin-nav-link')?.classList.add('active');
+    // Make sure auth screen is visible
+    const authScreen = document.getElementById('auth-screen');
+    const formScreen = document.getElementById('form-screen');
+    if (authScreen && formScreen) {
+      if (!sessionStorage.getItem('kr_authed')) {
+        authScreen.style.display = '';
+        formScreen.style.display = 'none';
+      } else {
+        showAdminContent();
+      }
+    }
   }
 }
-setTimeout(checkAdminHash, 0);
+// Run after DOM and loadFromServer are both ready
+window.addEventListener('load', checkAdminHash);
 window.addEventListener('hashchange', checkAdminHash);
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
@@ -1854,6 +1871,9 @@ loadFromServer().then(() => {
     }
   });
   if (changed) saveReviewStatus(status);
+
+  // Ensure music page is visible on load
+  document.getElementById('page-music').style.display = 'block';
 
   renderEvents();
   buildMonthButtons();
