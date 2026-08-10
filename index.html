@@ -714,7 +714,7 @@
 </div><!-- /page-music -->
 
 <!-- ── ABOUT PAGE ── -->
-<div id="page-about" class="page" style="display:none;">
+<div id="page-about" class="page">
   <div style="max-width:860px;margin:0 auto;padding:40px 24px 80px;">
     <div style="margin-bottom:32px;">
       <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Kingston Radius</div>
@@ -761,7 +761,7 @@
 </div>
 
 <!-- ── ADMIN PAGE ── -->
-<div id="page-admin" class="page" style="display:none;">
+<div id="page-admin" class="page">
   <div id="auth-screen" style="max-width:360px;margin:80px auto;padding:24px;">
     <h2 style="font-family:'DM Serif Display',serif;font-size:1.6rem;margin-bottom:20px;">Admin</h2>
     <div class="form-group">
@@ -1813,10 +1813,10 @@ document.querySelectorAll('nav a[data-page]').forEach(link => {
   link.addEventListener('click', ev => {
     ev.preventDefault();
     const page = link.dataset.page;
-    document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
     const el = document.getElementById('page-' + page);
-    if (el) el.style.display = 'block';
+    if (el) el.classList.add('active');
     link.classList.add('active');
   });
 });
@@ -1836,9 +1836,9 @@ function checkAdminHash() {
   if (window.location.hash === '#admin') {
     history.replaceState(null, '', window.location.pathname);
     // Show admin page directly without relying on nav click
-    document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     const adminPage = document.getElementById('page-admin');
-    if (adminPage) adminPage.style.display = 'block';
+    if (adminPage) adminPage.classList.add('active');
     document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
     document.getElementById('admin-nav-link')?.classList.add('active');
     // Make sure auth screen is visible
@@ -1873,7 +1873,7 @@ loadFromServer().then(() => {
   if (changed) saveReviewStatus(status);
 
   // Ensure music page is visible on load
-  document.getElementById('page-music').style.display = 'block';
+  document.getElementById('page-music')?.classList.add('active');
 
   renderEvents();
   buildMonthButtons();
