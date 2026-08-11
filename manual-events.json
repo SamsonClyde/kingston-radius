@@ -1003,5 +1003,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 15,
+    "date": "2026-08-16",
+    "title": "Democracy Rocks 2: Natalie Merchant, Gail Ann Dorsey, Kate Pierson, Professor Louie & The Crowmatrix, Jenna Nicholls, The Marc Black Band, The Blue Birds, The Bob Cats",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "15:00",
+    "price": "$45",
+    "free": false,
+    "_source": "email",
+    "_manual": true
   }
 ]
