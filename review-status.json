@@ -15,10 +15,6 @@
   "Assembly Kingston||2026-10-03||20:00": "approved",
   "Assembly Kingston||2026-10-07||20:00": "approved",
   "Assembly Kingston||2026-10-08||20:00": "approved",
-  "Assembly Kingston||2026-10-10||1:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786451177701
-  },
   "Assembly Kingston||2026-10-10||13:00": "approved",
   "Assembly Kingston||2026-10-16||8:00 pm": {
     "status": "rejected",
