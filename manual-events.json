@@ -221,5 +221,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 427,
+    "date": "2026-10-07",
+    "title": "Angelo De Augustine, Erin Rae",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/angelo-de-augustine",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "$30",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
