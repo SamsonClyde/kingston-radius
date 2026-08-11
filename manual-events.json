@@ -540,5 +540,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786453388505,
+    "title": "Great Lakes, Giant Day, Jeff William Baily",
+    "date": "2026-08-20",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
