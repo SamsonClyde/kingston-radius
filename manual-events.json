@@ -333,5 +333,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 478,
+    "date": "2026-11-07",
+    "title": "Deerhoof, New Orthodox Raven Chacon",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/deerhoof",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "$27",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
