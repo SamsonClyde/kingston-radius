@@ -228,5 +228,9 @@
   "Avalon Lounge||2026-08-11||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1786452386270
+  },
+  "Assembly||2026-12-05||12:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1786452407254
   }
 }
