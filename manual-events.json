@@ -934,5 +934,19 @@
     "free": true,
     "_source": "email",
     "_manual": true
+  },
+  {
+    "id": 212,
+    "date": "2026-08-14",
+    "title": "A Band of Brothers – An Allstar Tribute to The Allman Brothers Band",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "19:00",
+    "price": "$23",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
