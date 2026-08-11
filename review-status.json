@@ -248,5 +248,9 @@
     "status": "rejected",
     "hiddenAt": 1786466543487
   },
-  "Colony Woodstock||2026-08-15||18:00": "approved"
+  "Colony Woodstock||2026-08-15||18:00": "approved",
+  "Colony Woodstock||2026-08-15||6:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1786466550291
+  }
 }
