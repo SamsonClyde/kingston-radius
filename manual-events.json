@@ -12,5 +12,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 407,
+    "date": "2026-09-26",
+    "title": "Woodsist Festival - Destroyer, Woods, Frog, Okonski, Rogê, Otto Benson, Secular Music Group, Ruby of Thanks, Tubby's DJ's",
+    "venue": "Arrowood Farms",
+    "venueUrl": "https://www.woodsistfestival.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Arrowood%20Farms%20Kingston%2C%20NY",
+    "time": "13:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
