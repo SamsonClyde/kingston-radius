@@ -235,5 +235,10 @@
     "status": "rejected",
     "hiddenAt": 1786452848219
   },
-  "Avalon Lounge||2026-08-14||20:00": "approved"
+  "Avalon Lounge||2026-08-14||20:00": "approved",
+  "Avalon Lounge||2026-08-15||": {
+    "status": "rejected",
+    "hiddenAt": 1786452987084
+  },
+  "Avalon Lounge||2026-08-15||20:00": "approved"
 }
