@@ -852,5 +852,18 @@
     "price": "$17",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786455625352,
+    "title": "Resavoir",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
