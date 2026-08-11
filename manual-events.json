@@ -514,5 +514,18 @@
     "price": "$12",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786453260785,
+    "title": "Andrew CS, Dani Derks",
+    "date": "2026-08-18",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$12",
+    "free": false,
+    "_manual": true
   }
 ]
