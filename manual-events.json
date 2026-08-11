@@ -151,5 +151,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 392,
+    "date": "2026-09-20",
+    "title": "David Nihill (Stand Up Comedy)",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/david-nihill",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "19:00",
+    "price": "$42/$54",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
