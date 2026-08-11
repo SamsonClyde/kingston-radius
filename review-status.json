@@ -99,5 +99,10 @@
     "status": "rejected",
     "hiddenAt": 1786449561286
   },
-  "Arrowood Farms||2026-09-26||13:00": "approved"
+  "Arrowood Farms||2026-09-26||13:00": "approved",
+  "Assembly Kingston||2026-08-28||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1786450031597
+  },
+  "Assembly Kingston||2026-08-28||20:00": "approved"
 }
