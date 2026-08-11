@@ -906,5 +906,19 @@
     "free": false,
     "_source": "email",
     "_manual": true
+  },
+  {
+    "id": 5,
+    "date": "2026-08-13",
+    "title": "Jamie Thomas",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "17:30",
+    "price": "Donation",
+    "free": false,
+    "_source": "email",
+    "_manual": true
   }
 ]
