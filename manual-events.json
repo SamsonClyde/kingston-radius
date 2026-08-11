@@ -277,5 +277,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 455,
+    "date": "2026-10-17",
+    "title": "TAB BENOIT, GHALIA VOLT",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/tab-benoit",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "$42/$48/$54/$60",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
