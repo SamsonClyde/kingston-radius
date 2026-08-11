@@ -592,5 +592,18 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786453892855,
+    "title": "Piano Parlor: Jared Samuel, Maya Bon, Sarah La Puerta",
+    "date": "2026-08-27",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
