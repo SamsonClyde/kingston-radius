@@ -445,5 +445,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 4,
+    "date": "2026-08-12",
+    "title": "Eliza Edens, Randy Miles, Field Guides, Glenn Echo",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "time": "20:00",
+    "price": "$15",
+    "free": false,
+    "_source": "email",
+    "_manual": true
   }
 ]
