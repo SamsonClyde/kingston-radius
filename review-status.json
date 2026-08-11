@@ -32,10 +32,6 @@
   "Avalon Lounge||2026-08-12||20:00": "approved",
   "Avalon Lounge||2026-08-13||20:00": "approved",
   "Avalon Lounge||2026-08-14||20:00": "approved",
-  "Avalon Lounge||2026-08-15||": {
-    "status": "rejected",
-    "hiddenAt": 1786452987084
-  },
   "Avalon Lounge||2026-08-15||20:00": "approved",
   "Colony Woodstock||2026-08-12||5:30 PM": {
     "status": "rejected",
