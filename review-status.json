@@ -230,5 +230,9 @@
   "(Creative Legion)||2026-08-12||5:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786452706996
+  },
+  "Assembly||2026-11-19||12:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1786452722866
   }
 }
