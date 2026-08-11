@@ -670,5 +670,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786454521949,
+    "title": "Dromfest - Wussy, Antietam, Doug Gillard, Moviola, Via, the Martha's Vineyard Ferries, Barbara Manning, Stuyvesant, The Human Hearts, Tiny Blue Ghost, P.G. Six, Readings from Erica Fletcher, Scott Seward, Tim Sommer",
+    "date": "2026-09-05",
+    "time": "10:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
