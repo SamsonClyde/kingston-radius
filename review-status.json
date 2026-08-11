@@ -238,5 +238,9 @@
     "status": "rejected",
     "hiddenAt": 1786452595828
   },
-  "Avalon Lounge||2026-08-13||20:00": "approved"
+  "Avalon Lounge||2026-08-13||20:00": "approved",
+  "Assembly||2026-08-28||12:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1786452604394
+  }
 }
