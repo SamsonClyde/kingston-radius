@@ -975,5 +975,19 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 226,
+    "date": "2026-08-15",
+    "title": "Jaimoe & Friends (of The Allman Brothers Band)",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "19:00",
+    "price": "$29",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
