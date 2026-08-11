@@ -249,5 +249,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 435,
+    "date": "2026-10-10",
+    "title": "O+ Festival - Lucero, Skorts, Alexis Krauss (of Sleigh Bells), DJ Set, Nathan Meltz, The Jaguar, Alessandra Gonzalez, Eric EQ (DJ Dance Party)",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/o-festival-1",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "13:00",
+    "price": "$0/$150",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
