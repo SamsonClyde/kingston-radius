@@ -10,6 +10,7 @@
     "mapsUrl": "https://maps.app.goo.gl/YveYZPHrVpQKabSy9",
     "price": "Free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
