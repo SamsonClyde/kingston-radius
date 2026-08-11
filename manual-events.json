@@ -235,5 +235,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 429,
+    "date": "2026-10-08",
+    "title": "Karla Bonoff",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/karla-bonoff",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "$36/$48/$59",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
