@@ -94,5 +94,10 @@
   "(Creative Legion)||2026-08-12||5:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786449203488
-  }
+  },
+  "Arrowood Farms||2026-09-26||12:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1786449561286
+  },
+  "Arrowood Farms||2026-09-26||13:00": "approved"
 }
