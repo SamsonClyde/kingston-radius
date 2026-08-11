@@ -230,5 +230,9 @@
   "Assembly||2026-10-07||12:00 am": {
     "status": "rejected",
     "hiddenAt": 1786452657375
+  },
+  "Assembly||2026-10-08||12:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1786452663504
   }
 }
