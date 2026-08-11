@@ -813,5 +813,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786455464874,
+    "title": "Hana Stretton, Helena Deland",
+    "date": "2026-09-29",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
