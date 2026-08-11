@@ -878,5 +878,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 2,
+    "date": "2026-08-12",
+    "title": "Colton Thorn",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "17:30",
+    "price": "Donation",
+    "free": false,
+    "_source": "email",
+    "_manual": true
   }
 ]
