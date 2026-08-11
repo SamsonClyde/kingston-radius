@@ -95,5 +95,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 362,
+    "date": "2026-09-12",
+    "title": "The Beatle Project: Sgt. Pepper & Magical Mystery Tour",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/the-beatle-project",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "$30",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
