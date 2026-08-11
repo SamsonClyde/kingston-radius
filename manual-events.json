@@ -579,5 +579,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786453733535,
+    "title": "Max Knouse, Larry Locust, The Grackles",
+    "date": "2026-08-26",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
