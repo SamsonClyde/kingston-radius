@@ -553,5 +553,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786453513275,
+    "title": "GUHTS, \"Fuck You, Tammy!\", Mama Doom, a place both wonderful and strange, Visuals by B.A. Miale",
+    "date": "2026-08-21",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$12",
+    "free": false,
+    "_manual": true
   }
 ]
