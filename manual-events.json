@@ -389,5 +389,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 494,
+    "date": "2026-11-19",
+    "title": "Rising Appalachia, Viv & Riley",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/rising-appalachia",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "$49",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
