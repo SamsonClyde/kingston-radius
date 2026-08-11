@@ -131,6 +131,19 @@
   },
   {
     "id": 11,
+    "date": "2026-08-14",
+    "title": "Spencer LaJoye",
+    "venue": "Stissing Center",
+    "venueUrl": "https://www.thestissingcenter.org/events",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NGxaff71QdhYoLhYA",
+    "time": "7:30 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 12,
     "date": "2026-08-15",
     "title": "In the Garden - Clover & Sundream",
     "venue": "Colony Woodstock",
@@ -143,7 +156,7 @@
     "_source": "email"
   },
   {
-    "id": 12,
+    "id": 13,
     "date": "2026-08-15",
     "title": "Jaimoe & Friends (of The Allman Brothers Band)",
     "venue": "Colony Woodstock",
@@ -156,7 +169,7 @@
     "_source": "email"
   },
   {
-    "id": 13,
+    "id": 14,
     "date": "2026-08-15",
     "title": "Sounds of Blackness",
     "venue": "Avalon Lounge",
@@ -169,7 +182,7 @@
     "_source": "email"
   },
   {
-    "id": 14,
+    "id": 15,
     "date": "2026-08-16",
     "title": "Democracy Rocks 2 with Natalie Merchant",
     "venue": "Colony Woodstock",
@@ -182,7 +195,7 @@
     "_source": "email"
   },
   {
-    "id": 15,
+    "id": 16,
     "date": "2026-08-22",
     "title": "Windborne",
     "venue": "Stissing Center",
@@ -190,6 +203,19 @@
     "location": "Pine Plains, NY",
     "mapsUrl": "https://maps.app.goo.gl/NGxaff71QdhYoLhYA",
     "time": "",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 17,
+    "date": "2026-10-18",
+    "title": "Roz Chast & Jason Adam Katzenstein",
+    "venue": "MASS MoCA",
+    "venueUrl": "https://massmoca.org/performances/",
+    "location": "North Adams, MA",
+    "mapsUrl": "https://maps.google.com/?q=1040+Mass+MoCA+Way+North+Adams+MA",
+    "time": "7:00 PM",
     "price": "See website",
     "free": false,
     "_source": "email"
