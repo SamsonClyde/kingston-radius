@@ -657,5 +657,18 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786454424350,
+    "title": "Dromfest 2026 - Dumptruck, Consonant, Karen Schoemer & Her \"August\" Band",
+    "date": "2026-09-04",
+    "time": "19:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
