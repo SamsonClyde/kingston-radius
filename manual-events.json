@@ -761,5 +761,18 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786455232804,
+    "title": "CRN - Sharlese, Nick Schiarizzi, Christopher Michael Hefner, SVB (21+)",
+    "date": "2026-08-19",
+    "time": "21:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
