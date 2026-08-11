@@ -618,5 +618,18 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786454007799,
+    "title": "Aura: Baby Prince, Uncle Rudy, Sundae Suki, MLE",
+    "date": "2026-08-29",
+    "time": "21:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
