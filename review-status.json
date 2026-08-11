@@ -238,5 +238,10 @@
   "Assembly||2026-11-01||12:00 am": {
     "status": "rejected",
     "hiddenAt": 1786466414459
-  }
+  },
+  "Colony Woodstock||2026-08-15||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1786466505435
+  },
+  "Colony Woodstock||2026-08-15||19:00": "approved"
 }
