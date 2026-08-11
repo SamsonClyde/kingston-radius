@@ -26,5 +26,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1786449817724,
+    "title": "Woodsist Festival - Cate Le Bon, Divine Songs: The Music of Alice Coltrane, Ryan Davis and The Roadhouse Band, Mdou Moctar (solo), Toody Cole, Dutch Interior, Nirosta Steel, Jens Kuross, Freakout Spot DJ's",
+    "date": "2026-09-27",
+    "time": "13:00",
+    "venue": "Arrowood Farms",
+    "venueUrl": "https://www.woodsistfestival.com/",
+    "location": "Accord, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Lower+Whitfield+Rd+Accord+NY",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
