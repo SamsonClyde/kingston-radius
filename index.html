@@ -291,6 +291,7 @@
   }
   .no-events h3 { font-family: 'DM Serif Display', serif; font-size: 1.4rem; margin-bottom: 8px; color: var(--text); }
 
+  
   /* ── ADMIN EDITABLE ROWS ── */
   .admin-row {
     background: var(--card);
@@ -655,6 +656,26 @@
     color:var(--muted); font-size:0.75rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; }
   .add-section-divider::before, .add-section-divider::after { content:''; flex:1; height:1px; background:var(--border); }
 
+
+  /* ── WIDE INPUT FIELDS ── */
+  .inline-edit input, .inline-edit select {
+    width: 100% !important;
+    min-width: 300px !important;
+    box-sizing: border-box;
+  }
+  .unreviewed-edit input, .unreviewed-edit select {
+    width: 100% !important;
+    min-width: 300px !important;
+    box-sizing: border-box;
+  }
+  .admin-tab-panel input[type="text"],
+  .admin-tab-panel input[type="url"],
+  .admin-tab-panel input[type="date"],
+  .admin-tab-panel input[type="time"],
+  .admin-tab-panel input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+  }
 </style>
 </head>
 <body>
@@ -1352,8 +1373,15 @@ function renderEvents() {
     .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue));
 
   if (_activeFilter !== 'all') {
-    if (_activeFilter === '0') events = events.filter(e => KINGSTON_VENUES.has(e.venue));
-    else events = events.filter(e => getDriveTime(e.venue) <= parseInt(_activeFilter));
+    if (_activeFilter === '0') {
+      events = events.filter(e =>
+        KINGSTON_VENUES.has(e.venue) ||
+        getDriveTime(e.venue) === 0 ||
+        (e.location || '').toLowerCase().includes('kingston')
+      );
+    } else {
+      events = events.filter(e => getDriveTime(e.venue) <= parseInt(_activeFilter));
+    }
   }
   if (_activeMonth) events = events.filter(e => e.date?.startsWith(_activeMonth));
   if (_activeVenue) events = events.filter(e => e.venue === _activeVenue);
@@ -1436,16 +1464,60 @@ function renderAdminUnreviewed() {
     <div class="unreviewed-group">
       <div class="unreviewed-group-header">${esc(venue)}</div>
       ${groups[venue].map(e => {
-        const eJson = JSON.stringify({...e}).replace(/'/g, "\'");
-        return `<div class="unreviewed-card">
-          <div class="unreviewed-card-info">
-            <div><span class="source-tag ${e._source==='email'?'source-email':'source-scraped'}">${e._source==='email'?'Email':'Web'}</span></div>
-            <div class="unreviewed-card-title">${esc(e.title)}</div>
-            <div class="unreviewed-card-meta">${e.date}${e.time?' · '+formatTime(e.time):''}${e.location?' · '+esc(e.location):''}</div>
+        const k = esc(eventKey(e));
+        const sourceLabel = e._source === 'email'
+          ? `Email${e._emailFrom ? ' · ' + esc(e._emailFrom) : ''}`
+          : `Web${e.venueUrl ? ' · ' + esc(e.venueUrl) : ''}`;
+        const sourceClass = e._source === 'email' ? 'source-email' : 'source-scraped';
+        return `<div class="unreviewed-card" style="flex-direction:column;align-items:stretch;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px;">
+            <span class="source-tag ${sourceClass}">${sourceLabel}</span>
+            <div style="display:flex;gap:6px;">
+              <button class="btn-approve" data-action="approve-event" data-key="${k}">✓ Approve</button>
+              <button class="btn-reject-small" data-action="hide-event" data-key="${k}">Hide</button>
+            </div>
           </div>
-          <div class="unreviewed-card-actions">
-            <button class="btn-approve" data-action="approve-event" data-key="${esc(eventKey(e))}">✓ Approve</button>
-            <button class="btn-reject-small" data-action="hide-event" data-key="${esc(eventKey(e))}">Hide</button>
+          <div class="unreviewed-edit" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div>
+              <label style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;">Title</label>
+              <input type="text" class="ur-title" data-key="${k}" value="${esc(e.title||'')}" placeholder="Event Title" style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;">Venue</label>
+              <input type="text" class="ur-venue" data-key="${k}" value="${esc(e.venue||'')}" placeholder="Venue Name" style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;">Date</label>
+              <input type="date" class="ur-date" data-key="${k}" value="${esc(e.date||'')}" style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;">Time</label>
+              <input type="time" class="ur-time" data-key="${k}" value="${esc(e.time||'')}" style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;">Venue URL</label>
+              <input type="url" class="ur-venueUrl" data-key="${k}" value="${esc(e.venueUrl||'')}" placeholder="https://..." style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;">Maps URL</label>
+              <input type="url" class="ur-mapsUrl" data-key="${k}" value="${esc(e.mapsUrl||'')}" placeholder="https://maps.app.goo.gl/..." style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;">Location</label>
+              <input type="text" class="ur-location" data-key="${k}" value="${esc(e.location||'')}" placeholder="Kingston, NY" style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;">Drive Time (min)</label>
+              <input type="number" class="ur-drive" data-key="${k}" value="${DRIVE_TIMES[e.venue]??''}" placeholder="e.g. 22" style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);box-sizing:border-box;">
+            </div>
+            <div>
+              <label style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;">Price</label>
+              <input type="text" class="ur-price" data-key="${k}" value="${esc(e.price||'')}" placeholder="See website" style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);box-sizing:border-box;">
+            </div>
+          </div>
+          <div style="margin-top:10px;display:flex;gap:6px;">
+            <button class="btn-approve" data-action="approve-edited-event" data-key="${k}" style="flex:1;">✓ Approve with Edits</button>
+            <button class="btn-reject-small" data-action="hide-event" data-key="${k}">Hide</button>
           </div>
         </div>`;
       }).join('')}
@@ -1501,6 +1573,43 @@ document.addEventListener('click', async (ev) => {
     const all = getAllEvents();
     const e   = all.find(ev => eventKey(ev) === key);
     if (e) await approveEvent(e);
+    return;
+  }
+
+  if (action === 'approve-edited-event') {
+    // Read edited values from the unreviewed form
+    const card     = document.querySelector(`.unreviewed-card [data-key="${key}"].ur-title`)?.closest('.unreviewed-card');
+    const getVal   = cls => card?.querySelector(`.${cls}[data-key="${key}"]`)?.value.trim() || '';
+    const all      = getAllEvents();
+    const orig     = all.find(ev => eventKey(ev) === key) || {};
+    const venue    = getVal('ur-venue')    || orig.venue    || '';
+    const title    = getVal('ur-title')    || orig.title    || '';
+    const date     = getVal('ur-date')     || orig.date     || '';
+    const time     = getVal('ur-time')     || orig.time     || '';
+    const venueUrl = getVal('ur-venueUrl') || orig.venueUrl || '';
+    const mapsUrl  = getVal('ur-mapsUrl')  || orig.mapsUrl  || '';
+    const location = getVal('ur-location') || orig.location || '';
+    const price    = getVal('ur-price')    || orig.price    || 'See website';
+    const driveVal = parseInt(card?.querySelector(`.ur-drive[data-key="${key}"]`)?.value) || null;
+    if (driveVal !== null) DRIVE_TIMES[venue] = driveVal;
+
+    // Save edited version as manual event and approve it
+    const record = { ...orig, title, date, time, venue, venueUrl, mapsUrl, location, price,
+                     _manual: true, id: orig.id || Date.now() };
+    const manual = getManualEvents();
+    const idx    = manual.findIndex(m => eventKey(m) === key || m.id === orig.id);
+    if (idx >= 0) manual[idx] = record; else manual.push(record);
+
+    const status = getReviewStatus();
+    // Reject original scraped key, approve new manual key
+    status[key] = { status: 'rejected', hiddenAt: Date.now() };
+    const newKey = eventKey(record);
+    if (newKey !== key) status[newKey] = 'approved';
+    else status[key] = 'approved';
+
+    _reviewStatusCache = status;
+    await saveManualEvents(manual, status);
+    renderAdminUnreviewed(); renderEvents(); buildMonthButtons(); populateVenueSelect(); updateBadge();
     return;
   }
   if (action === 'hide-event') {
