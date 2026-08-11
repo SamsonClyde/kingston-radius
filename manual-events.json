@@ -459,5 +459,19 @@
     "free": false,
     "_source": "email",
     "_manual": true
+  },
+  {
+    "id": 7,
+    "date": "2026-08-13",
+    "title": "Helen Gillet",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "time": "20:00",
+    "price": "$15adv/$20door",
+    "free": false,
+    "_source": "email",
+    "_manual": true
   }
 ]
