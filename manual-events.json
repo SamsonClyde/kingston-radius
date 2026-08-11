@@ -207,5 +207,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 420,
+    "date": "2026-10-03",
+    "title": "Margaret Glaspy",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/margaret-glaspy",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "$30",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
