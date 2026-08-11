@@ -709,5 +709,18 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786454760914,
+    "title": "WORLDSUCKS, King In Yellow, Jaelyn, The Entire Earth",
+    "date": "2026-09-11",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
