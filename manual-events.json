@@ -39,5 +39,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 296,
+    "date": "2026-08-28",
+    "title": "Kingston Calling: Battle of the Bands",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/kingston-calling-battle-of-the-bands",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "$20",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
