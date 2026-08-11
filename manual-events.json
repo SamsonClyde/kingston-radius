@@ -1082,5 +1082,31 @@
     "price": "Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786469921367,
+    "title": "Improvement Movement, Adeline Hotel",
+    "date": "2026-08-21",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$20",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1786470012542,
+    "title": "80's Dance Party: DJ MK Ultramatic",
+    "date": "2026-08-21",
+    "time": "22:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
