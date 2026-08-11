@@ -1030,5 +1030,18 @@
     "price": "Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786466956423,
+    "title": "Gabriel Butterfield & The Tone Masons",
+    "date": "2026-08-19",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "Donation",
+    "free": false,
+    "_manual": true
   }
 ]
