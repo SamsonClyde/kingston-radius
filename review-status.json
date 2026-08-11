@@ -230,5 +230,10 @@
   "Assembly||2026-11-05||12:00 am": {
     "status": "rejected",
     "hiddenAt": 1786452755538
-  }
+  },
+  "Avalon Lounge||2026-08-14||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1786452848219
+  },
+  "Avalon Lounge||2026-08-14||20:00": "approved"
 }
