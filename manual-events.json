@@ -566,5 +566,18 @@
     "price": "$12",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786453672070,
+    "title": "Upstate Jamboree: Lee Ross, Spike.Lee, Hart, Groove Easy, Proxymmetry, Luna Rouge (21+)",
+    "date": "2026-08-22",
+    "time": "19:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
