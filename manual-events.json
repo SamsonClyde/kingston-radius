@@ -1056,5 +1056,18 @@
     "price": "Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786467152028,
+    "title": "Punk/Ska Night: Pilfers, Kingston Skanks, The Snorts, Couch Surfer (DCxPC Live)",
+    "date": "2026-08-20",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
