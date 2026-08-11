@@ -683,5 +683,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1786454645631,
+    "title": "Dromfest - Come, Scrawl, Nice Strong Arm, Hypnolovewheel, Sleepyhead, Beth Kaplan, French/Cell, Purple Ivy Shadows, Creative Writing, R.B. Korbet, Sweet Harm, Screening of film \"Radiation\" with Q&A",
+    "date": "2026-09-06",
+    "time": "10:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
