@@ -175,9 +175,9 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
     "time": "20:00",
-    "price": "$42",
+    "price": "$36/$42",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   }
 ]
