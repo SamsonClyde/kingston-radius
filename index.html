@@ -150,6 +150,118 @@
   }
   .event-card:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.08); }
 
+  /* ── CARD INNER LAYOUT (matching buildEventCard class names) ── */
+  .event-date {
+    text-align: center;
+    padding-top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .day-name {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    order: 1;
+  }
+  .day-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: var(--red);
+    order: 2;
+  }
+  .month-name {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    order: 3;
+  }
+  .event-time {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 5px;
+    order: 4;
+  }
+  .event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+  .event-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    color: var(--text);
+    word-break: break-word;
+  }
+  .event-venue-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 8px;
+    align-items: baseline;
+  }
+  .venue-link {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--red);
+    text-decoration: none;
+  }
+  .venue-link:hover { text-decoration: underline; }
+  .city-link {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .city-link:hover { text-decoration: underline; color: var(--text); }
+  .btn-card-edit {
+    margin-top: 4px;
+    align-self: flex-start;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 3px 9px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.74rem;
+    cursor: pointer;
+    color: var(--muted);
+  }
+  .btn-card-edit:hover { border-color: var(--text); color: var(--text); }
+  .inline-edit {
+    margin-top: 10px;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    flex-direction: column;
+  }
+  .inline-edit > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .inline-edit input {
+    border: 1.5px solid var(--border);
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    background: var(--card);
+    color: var(--text);
+    flex: 1;
+    min-width: 200px;
+    box-sizing: border-box;
+  }
+  .inline-edit input:focus { outline: none; border-color: var(--red); }
+  .manual-event { border-left: 3px solid var(--red); }
+  .card-toggle { display: none; }
+
   /* ── INLINE ADMIN EDIT ── */
   .event-card { position: relative; }
   .card-edit-btn {
@@ -656,24 +768,9 @@
   .add-section-divider::before, .add-section-divider::after { content:''; flex:1; height:1px; background:var(--border); }
 
 
-  .mins-label {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    line-height: 1.2;
-    gap: 1px;
-  }
-  .mins-label span:first-child {
-    font-size: 0.95rem;
-    font-weight: 600;
-  }
-  .mins-label span:last-child {
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    opacity: 0.8;
-  }
+  .mins-label { display:inline-flex; flex-direction:column; align-items:center; line-height:1.2; gap:1px; }
+  .mins-label span:first-child { font-size:0.95rem; font-weight:600; }
+  .mins-label span:last-child { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.04em; opacity:0.8; }
 </style>
 </head>
 <body>
@@ -747,6 +844,22 @@
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
       
+    <div style="margin-top:24px;">
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">How to use it</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:20px;">
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Distance</div>
+          <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Kingston only, 30, 60, or 90 minutes out. Covers Woodstock, Hudson, Poughkeepsie, Peekskill, and beyond.</p>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Month</div>
+          <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Filter to a specific month. Buttons appear automatically based on what's listed.</p>
+        </div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Venue</div>
+          <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Use the dropdown to see everything coming up at one spot. Click any venue name to visit their site, or the city to open directions.</p>
+        </div>
+      </div>
     </div>
 
     <div style="border-top:1px solid var(--border);padding-top:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
@@ -1340,7 +1453,6 @@ function populateVenueSelect() {
 // ── RENDER EVENTS ─────────────────────────────────────────────────────────────
 let _activeFilter = 'all';
 let _sortMode = 'date';
-
 function setSortMode(mode) {
   _sortMode = mode;
   document.getElementById('sort-date-btn')?.classList.toggle('active', mode === 'date');
@@ -1356,19 +1468,17 @@ function renderEvents() {
     .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue));
 
   if (_activeFilter !== 'all') {
-    const maxMins = parseInt(_activeFilter);
     if (_activeFilter === '0') {
       events = events.filter(e =>
         KINGSTON_VENUES.has(e.venue) ||
         getDriveTime(e.venue) === 0 ||
-        (e.location || '').toLowerCase().includes('kingston')
+        (e.location||'').toLowerCase().includes('kingston')
       );
     } else {
+      const maxMins = parseInt(_activeFilter);
       events = events.filter(e => {
-        const drive = getDriveTime(e.venue);
-        return drive === 0 ||
-               (e.location || '').toLowerCase().includes('kingston') ||
-               drive <= maxMins;
+        const d = getDriveTime(e.venue);
+        return d === 0 || (e.location||'').toLowerCase().includes('kingston') || d <= maxMins;
       });
     }
   }
@@ -1391,10 +1501,7 @@ function renderEvents() {
     events.forEach(e => { if (!groups[e.venue]) groups[e.venue] = []; groups[e.venue].push(e); });
     container.innerHTML = Object.keys(groups).sort().map(venue => `
       <div style="margin-bottom:24px;">
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
-          color:var(--muted);padding:6px 0;border-bottom:1px solid var(--border);margin-bottom:10px;">
-          ${venue}
-        </div>
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);padding:6px 0;border-bottom:1px solid var(--border);margin-bottom:10px;">${venue}</div>
         ${groups[venue].map(e => buildEventCard(e, isAdmin)).join('')}
       </div>`).join('');
   } else {
@@ -1436,7 +1543,6 @@ function buildEventCard(e, isAdmin) {
     : '';
 
   return `<div class="event-card${e._manual?' manual-event':''}" data-ekey="${esc(key)}">
-    <button class="card-toggle" aria-label="expand"></button>
     <div class="event-date">
       <span class="day-name">${dayName}</span>
       <span class="day-num">${dayNum}</span>
