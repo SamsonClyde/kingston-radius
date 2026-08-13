@@ -957,6 +957,9 @@
 </div>
 
 <script>
+// Capture hash immediately before anything can clear it
+const _initialHash = window.location.hash;
+
 // ── CONSTANTS ─────────────────────────────────────────────────────────────────
 const ADMIN_SECRET      = 'ifyoubuildittheywillcome6969qrxtvwAbA';
 const STORAGE_KEY       = 'kr_manual_events';
@@ -1983,8 +1986,10 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
 
 // ── SECRET ADMIN via #admin ───────────────────────────────────────────────────
 function checkAdminHash() {
-  if (window.location.hash === '#admin') {
+  const hash = window.location.hash || _initialHash;
+  if (hash === '#admin') {
     history.replaceState(null, '', window.location.pathname);
+    _initialHash = ''; // clear so it doesn't trigger again
     // Show admin page directly without relying on nav click
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     const adminPage = document.getElementById('page-admin');
