@@ -150,6 +150,118 @@
   }
   .event-card:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.08); }
 
+  /* ── CARD INNER LAYOUT (matching buildEventCard class names) ── */
+  .event-date {
+    text-align: center;
+    padding-top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .day-name {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    order: 1;
+  }
+  .day-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: var(--red);
+    order: 2;
+  }
+  .month-name {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    order: 3;
+  }
+  .event-time {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 5px;
+    order: 4;
+  }
+  .event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+  .event-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    color: var(--text);
+    word-break: break-word;
+  }
+  .event-venue-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 8px;
+    align-items: baseline;
+  }
+  .venue-link {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--red);
+    text-decoration: none;
+  }
+  .venue-link:hover { text-decoration: underline; }
+  .city-link {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .city-link:hover { text-decoration: underline; color: var(--text); }
+  .btn-card-edit {
+    margin-top: 4px;
+    align-self: flex-start;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 3px 9px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.74rem;
+    cursor: pointer;
+    color: var(--muted);
+  }
+  .btn-card-edit:hover { border-color: var(--text); color: var(--text); }
+  .inline-edit {
+    margin-top: 10px;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    flex-direction: column;
+  }
+  .inline-edit > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .inline-edit input {
+    border: 1.5px solid var(--border);
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    background: var(--card);
+    color: var(--text);
+    flex: 1;
+    min-width: 200px;
+    box-sizing: border-box;
+  }
+  .inline-edit input:focus { outline: none; border-color: var(--red); }
+  .manual-event { border-left: 3px solid var(--red); }
+  .card-toggle { display: none; }
+
   /* ── INLINE ADMIN EDIT ── */
   .event-card { position: relative; }
   .card-edit-btn {
@@ -419,7 +531,7 @@
 
   /* ── CONTENT PAGES ── */
   .page { display: none; }
-  .page.active { display: block !important; }
+  .page.active { display: block; }
   .info-page {
     max-width: 680px;
     margin: 0 auto;
@@ -656,16 +768,9 @@
   .add-section-divider::before, .add-section-divider::after { content:''; flex:1; height:1px; background:var(--border); }
 
 
-  .mins-label {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    gap: 2px;
-  }
-  .mins-label span:first-child { font-size:1rem; font-weight:700; display:block; }
-  .mins-label span:last-child { font-size:0.55rem; text-transform:uppercase; letter-spacing:0.05em; opacity:0.75; display:block; white-space:nowrap; }
+  .mins-label { display:inline-flex; flex-direction:column; align-items:center; line-height:1.2; gap:1px; }
+  .mins-label span:first-child { font-size:0.95rem; font-weight:600; }
+  .mins-label span:last-child { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.04em; opacity:0.8; }
 </style>
 </head>
 <body>
@@ -683,18 +788,34 @@
 <div id="page-music" class="page active">
 
 <div class="filters-bar">
-  <div class="filter-row" style="padding-top:2px;padding-bottom:4px;display:flex;flex-direction:column;gap:6px;">
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;">
-      <div style="display:flex;gap:4px;align-items:center;">
-        <span style="font-size:0.72rem;color:var(--muted);margin-right:4px;">Sort:</span>
-        <button class="filter-btn active" id="sort-date-btn" onclick="setSortMode('date')" style="padding:4px 10px;font-size:0.75rem;">Date</button>
-        <button class="filter-btn" id="sort-venue-btn" onclick="setSortMode('venue')" style="padding:4px 10px;font-size:0.75rem;">Venue</button>
-      </div>
-    </div>
-    <span style="font-size:0.72rem;color:var(--muted);">Click venue name to visit site &nbsp;·&nbsp; Click city to open in Google Maps</span>
+  <div class="filter-row">
+    <span class="filter-label">Distance</span>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="0">Kingston only</button>
+    <button class="filter-btn" data-filter="30"><span class="mins-label"><span>30</span><span>mins or less</span></span></button>
+    <button class="filter-btn" data-filter="60"><span class="mins-label"><span>60</span><span>mins or less</span></span></button>
+    <button class="filter-btn" data-filter="90"><span class="mins-label"><span>90</span><span>mins or less</span></span></button>
+    <div class="filter-sep"></div>
+    <!-- FREE FILTER HIDDEN — re-enable by removing comment: <button class="filter-btn red-btn" data-filter="free">Free only</button> -->
   </div>
-  <div class="filter-row" style="padding-top:0;padding-bottom:4px;">
+  <div class="filter-row" id="month-filter-row">
+    <span class="filter-label">Month</span>
+    <div id="month-btns" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
+  </div>
+  <div class="filter-row">
+    <span class="filter-label">Venue</span>
+    <select id="venue-select" class="venue-select">
+      <option value="">All venues</option>
+    </select>
+  </div>
+  <div class="filter-row" style="padding-top:2px;padding-bottom:4px;justify-content:space-between;align-items:center;">
     <span style="font-size:0.72rem;color:var(--muted);">Click venue name to visit site &nbsp;·&nbsp; Click city to open in Google Maps</span>
+    <div style="display:flex;gap:4px;align-items:center;">
+      <span style="font-size:0.72rem;color:var(--muted);margin-right:4px;">Sort:</span>
+      <button class="filter-btn active" id="sort-date-btn" onclick="setSortMode('date')" style="padding:4px 10px;font-size:0.75rem;">Date</button>
+      <button class="filter-btn" id="sort-venue-btn" onclick="setSortMode('venue')" style="padding:4px 10px;font-size:0.75rem;">Venue</button>
+    </div>
+    <button id="venue-delete-mode-btn" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;" onclick="toggleVenueDeleteMode()">Manage venues</button>
   </div>
   <div id="venue-delete-bar" style="display:none;padding:8px 0 4px;gap:6px;flex-wrap:wrap;" class="filter-row">
     <span style="font-size:0.72rem;color:var(--red);font-weight:600;">Select a venue to hide all its events:</span>
@@ -722,19 +843,7 @@
       <p style="font-size:0.95rem;color:var(--muted);line-height:1.7;max-width:520px;">An independent calendar covering 100+ venues within 90 minutes of Kingston, NY. Updated daily. Nothing for sale.</p>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Coverage</div>
-        <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Kingston and Woodstock at the core, out to Hudson, New Paltz, Newburgh, Peekskill, Bethel Woods, the Catskills, and into western Massachusetts.</p>
-      </div>
-      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">How it's built</div>
-        <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Listings are pulled from venues across the region, updated daily, and reviewed before going live.</p>
-      </div>
-    </div>
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;margin-bottom:16px;">
-      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;">Venues include</div>
-      <p style="font-size:0.85rem;line-height:1.8;color:var(--muted);">Tubby's · Assembly Kingston · Unicorn Bar · Keegan Ales · Hutton Brickyards · Bearsville Theater · Levon Helm Studios · Colony Woodstock · Basilica Hudson · Hudson Hall · Bardavon · UPAC · Bard Fisher Center · Opus 40 · The Falcon · Towne Crier Café · Stissing Center · Tompkins Corners · The Outlier Inn · Bethel Woods · MASS MoCA · Paramount Hudson Valley · Silk Factory · City Winery Hudson Valley · The Ashokan Center · Green Kill · MONUMENT hv · Rosendale Café · Rail Trail Cafe · The Lemon Squeeze · Rough Draft Books · Greig Farm · and 70+ more.</p>
-    </div>
+      
     <div style="margin-top:24px;">
       <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">How to use it</div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:20px;">
@@ -1343,6 +1452,13 @@ function populateVenueSelect() {
 
 // ── RENDER EVENTS ─────────────────────────────────────────────────────────────
 let _activeFilter = 'all';
+let _sortMode = 'date';
+function setSortMode(mode) {
+  _sortMode = mode;
+  document.getElementById('sort-date-btn')?.classList.toggle('active', mode === 'date');
+  document.getElementById('sort-venue-btn')?.classList.toggle('active', mode === 'venue');
+  renderEvents();
+}
 
 function renderEvents() {
   const container = document.getElementById('events-list');
@@ -1352,19 +1468,45 @@ function renderEvents() {
     .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue));
 
   if (_activeFilter !== 'all') {
-    if (_activeFilter === '0') events = events.filter(e => KINGSTON_VENUES.has(e.venue));
-    else events = events.filter(e => getDriveTime(e.venue) <= parseInt(_activeFilter));
+    if (_activeFilter === '0') {
+      events = events.filter(e =>
+        KINGSTON_VENUES.has(e.venue) ||
+        getDriveTime(e.venue) === 0 ||
+        (e.location||'').toLowerCase().includes('kingston')
+      );
+    } else {
+      const maxMins = parseInt(_activeFilter);
+      events = events.filter(e => {
+        const d = getDriveTime(e.venue);
+        return d === 0 || (e.location||'').toLowerCase().includes('kingston') || d <= maxMins;
+      });
+    }
   }
   if (_activeMonth) events = events.filter(e => e.date?.startsWith(_activeMonth));
   if (_activeVenue) events = events.filter(e => e.venue === _activeVenue);
-  events.sort((a,b) => (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
+  if (_sortMode === 'venue') {
+    events.sort((a,b) => (a.venue||'').localeCompare(b.venue||'') || (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
+  } else {
+    events.sort((a,b) => (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
+  }
 
   if (!events.length) {
     container.innerHTML = '<div style="text-align:center;padding:60px 20px;color:var(--muted);">No shows found.</div>';
     return;
   }
   const isAdmin = document.body.classList.contains('admin-mode');
-  container.innerHTML = events.map(e => buildEventCard(e, isAdmin)).join('');
+
+  if (_sortMode === 'venue') {
+    const groups = {};
+    events.forEach(e => { if (!groups[e.venue]) groups[e.venue] = []; groups[e.venue].push(e); });
+    container.innerHTML = Object.keys(groups).sort().map(venue => `
+      <div style="margin-bottom:24px;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);padding:6px 0;border-bottom:1px solid var(--border);margin-bottom:10px;">${venue}</div>
+        ${groups[venue].map(e => buildEventCard(e, isAdmin)).join('')}
+      </div>`).join('');
+  } else {
+    container.innerHTML = events.map(e => buildEventCard(e, isAdmin)).join('');
+  }
 }
 
 function buildEventCard(e, isAdmin) {
@@ -1373,6 +1515,7 @@ function buildEventCard(e, isAdmin) {
   const monthName= d.toLocaleString('default', {month:'short'});
   const dayNum   = d.getDate();
   const timeStr  = formatTime(e.time);
+  const priceStr = (e.price && e.price !== 'See website' && e.price !== '') ? e.price : '';
   const key      = eventKey(e);
 
   const inlineEdit = isAdmin ? `
@@ -1400,7 +1543,6 @@ function buildEventCard(e, isAdmin) {
     : '';
 
   return `<div class="event-card${e._manual?' manual-event':''}" data-ekey="${esc(key)}">
-    <button class="card-toggle" aria-label="expand"></button>
     <div class="event-date">
       <span class="day-name">${dayName}</span>
       <span class="day-num">${dayNum}</span>
@@ -1413,6 +1555,7 @@ function buildEventCard(e, isAdmin) {
         ${e.venueUrl ? `<a class="venue-link" href="${esc(e.venueUrl)}" target="_blank" rel="noopener">${esc(e.venue)}</a>` : `<span class="venue-link">${esc(e.venue)}</span>`}
         ${e.mapsUrl  ? `<a class="city-link"  href="${esc(e.mapsUrl)}"  target="_blank" rel="noopener">${esc(e.location)}</a>` : `<span class="city-link">${esc(e.location)}</span>`}
       </div>
+      ${priceStr ? `<div style="font-size:0.75rem;color:var(--muted);margin-top:2px;">${priceStr}</div>` : ''}
       ${editBtn}
       ${inlineEdit}
     </div>
@@ -1835,19 +1978,13 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
 function checkAdminHash() {
   if (window.location.hash === '#admin') {
     history.replaceState(null, '', window.location.pathname);
-    // Switch all pages off, show admin
-    document.querySelectorAll('.page').forEach(p => {
-      p.classList.remove('active');
-      p.style.display = 'none';
-    });
+    // Show admin page directly without relying on nav click
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     const adminPage = document.getElementById('page-admin');
-    if (adminPage) {
-      adminPage.classList.add('active');
-      adminPage.style.display = 'block';
-    }
+    if (adminPage) adminPage.classList.add('active');
     document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
     document.getElementById('admin-nav-link')?.classList.add('active');
-    // Show auth or admin content
+    // Make sure auth screen is visible
     const authScreen = document.getElementById('auth-screen');
     const formScreen = document.getElementById('form-screen');
     if (authScreen && formScreen) {
@@ -1860,7 +1997,7 @@ function checkAdminHash() {
     }
   }
 }
-// Run after everything is ready
+// Run after DOM and loadFromServer are both ready
 window.addEventListener('load', checkAdminHash);
 window.addEventListener('hashchange', checkAdminHash);
 
