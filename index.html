@@ -772,6 +772,13 @@
   .mins-label span:first-child { font-size:0.95rem; font-weight:600; }
   .mins-label span:last-child { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.04em; opacity:0.8; }
 </style>
+<script>
+  // Capture #admin hash before any other script can clear it
+  if (window.location.hash === '#admin') {
+    window._wantsAdmin = true;
+    // Don't replaceState here - let the main script handle it after DOM is ready
+  }
+</script>
 </head>
 <body>
 
@@ -957,9 +964,6 @@
 </div>
 
 <script>
-// Capture hash immediately before anything can clear it
-const _initialHash = window.location.hash;
-
 // ── CONSTANTS ─────────────────────────────────────────────────────────────────
 const ADMIN_SECRET      = 'ifyoubuildittheywillcome6969qrxtvwAbA';
 const STORAGE_KEY       = 'kr_manual_events';
@@ -1986,10 +1990,9 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
 
 // ── SECRET ADMIN via #admin ───────────────────────────────────────────────────
 function checkAdminHash() {
-  const hash = window.location.hash || _initialHash;
-  if (hash === '#admin') {
+  if (window.location.hash === '#admin' || window._wantsAdmin) {
+    window._wantsAdmin = false; // clear flag so it only fires once
     history.replaceState(null, '', window.location.pathname);
-    _initialHash = ''; // clear so it doesn't trigger again
     // Show admin page directly without relying on nav click
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     const adminPage = document.getElementById('page-admin');
