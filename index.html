@@ -809,12 +809,12 @@
     </select>
   </div>
   <div class="filter-row" style="padding-top:2px;padding-bottom:4px;justify-content:space-between;align-items:center;">
-    <span style="font-size:0.72rem;color:var(--muted);">Click venue name to visit site &nbsp;·&nbsp; Click city to open in Google Maps</span>
     <div style="display:flex;gap:4px;align-items:center;">
       <span style="font-size:0.72rem;color:var(--muted);margin-right:4px;">Sort:</span>
       <button class="filter-btn active" id="sort-date-btn" onclick="setSortMode('date')" style="padding:4px 10px;font-size:0.75rem;">Date</button>
       <button class="filter-btn" id="sort-venue-btn" onclick="setSortMode('venue')" style="padding:4px 10px;font-size:0.75rem;">Venue</button>
     </div>
+    <span style="font-size:0.72rem;color:var(--muted);">Click venue name to visit site &nbsp;·&nbsp; Click city to open in Google Maps</span>
     <button id="venue-delete-mode-btn" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;" onclick="toggleVenueDeleteMode()">Manage venues</button>
   </div>
   <div id="venue-delete-bar" style="display:none;padding:8px 0 4px;gap:6px;flex-wrap:wrap;" class="filter-row">
@@ -1285,21 +1285,28 @@ function getApprovedEvents() {
 
 // ── GET ALL UNREVIEWED (admin) ────────────────────────────────────────────────
 function getAllUnreviewed() {
-  const status    = getReviewStatus();
-  const manual    = getManualEvents();
+  const status     = getReviewStatus();
+  const manual     = getManualEvents();
   const manualKeys = new Set(manual.map(e => eventKey(e)));
-  const today     = new Date(); today.setHours(0,0,0,0);
-  const items     = [];
+  const today      = new Date(); today.setHours(0,0,0,0);
+  const items      = [];
 
   for (const e of getScrapedEvents()) {
     const k = eventKey(e);
-    if (!status[k] && !manualKeys.has(k) && parseDate(e.date) >= today)
-      items.push({ ...e, _source: 'scraped' });
+    const s = status[k];
+    // Skip if any status decision exists (string or object) or manual override
+    if (s !== undefined && s !== null) continue;
+    if (manualKeys.has(k)) continue;
+    if (parseDate(e.date) < today) continue;
+    items.push({ ...e, _source: 'scraped' });
   }
   for (const e of getEmailEvents()) {
     const k = eventKey(e);
-    if (!status[k] && !manualKeys.has(k) && parseDate(e.date) >= today)
-      items.push({ ...e, _source: 'email' });
+    const s = status[k];
+    if (s !== undefined && s !== null) continue;
+    if (manualKeys.has(k)) continue;
+    if (parseDate(e.date) < today) continue;
+    items.push({ ...e, _source: 'email' });
   }
   items.sort((a, b) => (a.venue||'').localeCompare(b.venue||'') || (a.date||'').localeCompare(b.date||''));
   return items;
@@ -1998,7 +2005,7 @@ function checkAdminHash() {
   }
 }
 // Run after DOM and loadFromServer are both ready
-window.addEventListener('load', checkAdminHash);
+// hashchange handles direct #admin navigation
 window.addEventListener('hashchange', checkAdminHash);
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
@@ -2024,7 +2031,12 @@ loadFromServer().then(() => {
   updateBadge();
   updateManageVenueBtn();
 
-  if (sessionStorage.getItem('kr_authed')) showAdminContent();
+  if (sessionStorage.getItem('kr_authed')) {
+    showAdminContent();
+  } else {
+    // Check #admin hash AFTER renderEvents so music page doesn't override it
+    checkAdminHash();
+  }
 });
 
 </script>
