@@ -2041,8 +2041,7 @@ loadFromServer().then(() => {
 
   if (sessionStorage.getItem('kr_authed')) {
     showAdminContent();
-  } else {
-    // Check #admin hash AFTER renderEvents so music page doesn't override it
+  } else if (window._wantsAdmin) {
     checkAdminHash();
   }
 });
