@@ -878,7 +878,7 @@
 
 <!-- ── ADMIN PAGE ── -->
 <div id="page-admin" class="page">
-  <div id="auth-screen" style="max-width:360px;margin:80px auto;padding:24px;">
+  <div id="auth-screen" style="max-width:360px;margin:80px auto;padding:24px;display:none;">
     <h2 style="font-family:'DM Serif Display',serif;font-size:1.6rem;margin-bottom:20px;">Admin</h2>
     <div class="form-group">
       <label>Password</label>
@@ -1991,25 +1991,32 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
 // ── SECRET ADMIN via #admin ───────────────────────────────────────────────────
 function checkAdminHash() {
   if (window.location.hash === '#admin' || window._wantsAdmin) {
-    window._wantsAdmin = false; // clear flag so it only fires once
+    window._wantsAdmin = false;
     history.replaceState(null, '', window.location.pathname);
-    // Show admin page directly without relying on nav click
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    // Hide all pages, show admin
+    document.querySelectorAll('.page').forEach(p => {
+      p.classList.remove('active');
+      p.style.display = 'none';
+    });
     const adminPage = document.getElementById('page-admin');
-    if (adminPage) adminPage.classList.add('active');
+    if (adminPage) {
+      adminPage.classList.add('active');
+      adminPage.style.display = 'block';
+    }
     document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
     document.getElementById('admin-nav-link')?.classList.add('active');
-    // Make sure auth screen is visible
+    // Show auth screen explicitly
     const authScreen = document.getElementById('auth-screen');
     const formScreen = document.getElementById('form-screen');
-    if (authScreen && formScreen) {
-      if (!sessionStorage.getItem('kr_authed')) {
-        authScreen.style.display = '';
-        formScreen.style.display = 'none';
-      } else {
-        showAdminContent();
-      }
+    if (authScreen) authScreen.style.display = 'block';
+    if (formScreen) formScreen.style.display = 'none';
+    // If already logged in, show admin content instead
+    if (sessionStorage.getItem('kr_authed')) {
+      if (authScreen) authScreen.style.display = 'none';
+      showAdminContent();
     }
+    // Focus password field
+    setTimeout(() => document.getElementById('admin-pw')?.focus(), 100);
   }
 }
 // Run after DOM and loadFromServer are both ready
