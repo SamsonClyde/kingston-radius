@@ -2057,6 +2057,10 @@ loadFromServer().then(() => {
   // Ensure music page is visible on load
   document.getElementById('page-music')?.classList.add('active');
 
+  // Ensure music page is visible (counteract any display:none from previous admin visit)
+  const musicPage = document.getElementById('page-music');
+  if (musicPage) { musicPage.style.display = 'block'; musicPage.classList.add('active'); }
+
   renderEvents();
   buildMonthButtons();
   populateVenueSelect();
