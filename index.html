@@ -878,7 +878,7 @@
 
 <!-- ── ADMIN PAGE ── -->
 <div id="page-admin" class="page">
-  <div id="auth-screen" style="max-width:360px;margin:80px auto;padding:24px;display:none;">
+  <div id="auth-screen" style="max-width:360px;margin:80px auto;padding:24px;">
     <h2 style="font-family:'DM Serif Display',serif;font-size:1.6rem;margin-bottom:20px;">Admin</h2>
     <div class="form-group">
       <label>Password</label>
@@ -2009,7 +2009,22 @@ window.addEventListener('hashchange', checkAdminHash);
     _keyBuffer = (_keyBuffer + e.key).slice(-5);
     if (_keyBuffer === 'admin') {
       _keyBuffer = '';
-      openAdminPanel();
+      // Clear stale auth if needed - force fresh login
+      const authScreen = document.getElementById('auth-screen');
+      const formScreen = document.getElementById('form-screen');
+      // Show admin page
+      document.querySelectorAll('.page').forEach(p => { p.classList.remove('active'); p.style.display = 'none'; });
+      const adminPage = document.getElementById('page-admin');
+      if (adminPage) { adminPage.style.display = 'block'; adminPage.classList.add('active'); }
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+      document.getElementById('admin-nav-link')?.classList.add('active');
+      if (sessionStorage.getItem('kr_authed')) {
+        showAdminContent();
+      } else {
+        if (authScreen) { authScreen.style.display = ''; authScreen.removeAttribute('style'); authScreen.style.display = 'block'; }
+        if (formScreen) formScreen.style.display = 'none';
+        document.getElementById('admin-pw')?.focus();
+      }
     }
   });
 })();
