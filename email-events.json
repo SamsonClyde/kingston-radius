@@ -1,97 +1,6 @@
 [
   {
     "id": 1,
-    "date": "2026-08-14",
-    "title": "In the Garden - The Deadbeats",
-    "venue": "Colony Woodstock",
-    "venueUrl": "https://www.colonywoodstock.com/shows",
-    "location": "Woodstock, NY",
-    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "time": "6:00 PM",
-    "price": "$20",
-    "free": false,
-    "_source": "email"
-  },
-  {
-    "id": 2,
-    "date": "2026-08-14",
-    "title": "A Band of Brothers - An Allstar Tribute to the Allman Brothers Band",
-    "venue": "Colony Woodstock",
-    "venueUrl": "https://www.colonywoodstock.com/shows",
-    "location": "Woodstock, NY",
-    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "time": "7:00 PM",
-    "price": "$20",
-    "free": false,
-    "_source": "email"
-  },
-  {
-    "id": 3,
-    "date": "2026-08-14",
-    "title": "Got A Light? w/ DJs Andre Acosta, Harlan, & Bailey",
-    "venue": "Avalon Lounge",
-    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
-    "location": "Catskill, NY",
-    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
-    "time": "8:00 PM",
-    "price": "$10",
-    "free": false,
-    "_source": "email"
-  },
-  {
-    "id": 4,
-    "date": "2026-08-14",
-    "title": "Spencer LaJoye",
-    "venue": "Stissing Center",
-    "venueUrl": "https://www.thestissingcenter.org/events",
-    "location": "Pine Plains, NY",
-    "mapsUrl": "https://maps.app.goo.gl/NGxaff71QdhYoLhYA",
-    "time": "7:30 PM",
-    "price": "See website",
-    "free": false,
-    "_source": "email"
-  },
-  {
-    "id": 5,
-    "date": "2026-08-14",
-    "title": "Big Thanks Cajun/Zydeco Dance Party",
-    "venue": "Tempo Arts",
-    "venueUrl": "#",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
-    "time": "8:00 PM",
-    "price": "Free",
-    "free": true,
-    "_source": "email"
-  },
-  {
-    "id": 6,
-    "date": "2026-08-14",
-    "title": "Free yoga class for kids/families",
-    "venue": "Greig Farm",
-    "venueUrl": "https://www.thegreigfarm.com/events-calendar",
-    "location": "Red Hook, NY",
-    "mapsUrl": "https://maps.app.goo.gl/NBadsndo1Dez5WdSA",
-    "time": "",
-    "price": "Free",
-    "free": true,
-    "_source": "email"
-  },
-  {
-    "id": 7,
-    "date": "2026-08-14",
-    "title": "Big Thanks Two Step Dance Party with Horace Trahan, Jimmy Breaux & the Ashokan Cajun Zydeco All-Stars",
-    "venue": "Tempo Arts",
-    "venueUrl": "#",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
-    "time": "7:00 PM",
-    "price": "$25",
-    "free": false,
-    "_source": "email"
-  },
-  {
-    "id": 8,
     "date": "2026-08-15",
     "title": "In the Garden - Clover & Sundream",
     "venue": "Colony Woodstock",
@@ -104,7 +13,7 @@
     "_source": "email"
   },
   {
-    "id": 9,
+    "id": 2,
     "date": "2026-08-15",
     "title": "Jaimoe & Friends (of The Allman Brothers Band)",
     "venue": "Colony Woodstock",
@@ -117,7 +26,7 @@
     "_source": "email"
   },
   {
-    "id": 10,
+    "id": 3,
     "date": "2026-08-15",
     "title": "Sounds of Blackness",
     "venue": "Avalon Lounge",
@@ -130,7 +39,7 @@
     "_source": "email"
   },
   {
-    "id": 11,
+    "id": 4,
     "date": "2026-08-15",
     "title": "Meet Jo Piazza & Steven Weinberg",
     "venue": "Rough Draft Books",
@@ -143,7 +52,7 @@
     "_source": "email"
   },
   {
-    "id": 12,
+    "id": 5,
     "date": "2026-08-15",
     "title": "Family Storytime",
     "venue": "MASS MoCA",
@@ -156,7 +65,7 @@
     "_source": "email"
   },
   {
-    "id": 13,
+    "id": 6,
     "date": "2026-08-15",
     "title": "Spencer LaJoye and her Amazing Loop Pedal",
     "venue": "Stissing Center",
@@ -169,7 +78,7 @@
     "_source": "email"
   },
   {
-    "id": 14,
+    "id": 7,
     "date": "2026-08-16",
     "title": "Democracy Rocks 2 with Natalie Merchant",
     "venue": "Colony Woodstock",
@@ -182,7 +91,7 @@
     "_source": "email"
   },
   {
-    "id": 15,
+    "id": 8,
     "date": "2026-08-18",
     "title": "August's Can't-Miss Night School Lineup",
     "venue": "Rough Draft Books",
@@ -195,7 +104,7 @@
     "_source": "email"
   },
   {
-    "id": 16,
+    "id": 9,
     "date": "2026-08-21",
     "title": "Roomful of Teeth",
     "venue": "MASS MoCA",
@@ -208,7 +117,7 @@
     "_source": "email"
   },
   {
-    "id": 17,
+    "id": 10,
     "date": "2026-08-21",
     "title": "The Chalet",
     "venue": "MASS MoCA",
@@ -221,7 +130,20 @@
     "_source": "email"
   },
   {
-    "id": 18,
+    "id": 11,
+    "date": "2026-08-21",
+    "title": "Open Mic Night",
+    "venue": "Stissing Center",
+    "venueUrl": "https://www.thestissingcenter.org/events",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NGxaff71QdhYoLhYA",
+    "time": "7:30 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 12,
     "date": "2026-08-22",
     "title": "Windborne",
     "venue": "Stissing Center",
@@ -234,7 +156,7 @@
     "_source": "email"
   },
   {
-    "id": 19,
+    "id": 13,
     "date": "2026-08-28",
     "title": "Christopher Hoffman in The Grace Note",
     "venue": "Stissing Center",
@@ -247,7 +169,7 @@
     "_source": "email"
   },
   {
-    "id": 20,
+    "id": 14,
     "date": "2026-08-28",
     "title": "Live Music With Pablo Shine",
     "venue": "Rough Draft Books",
@@ -260,7 +182,7 @@
     "_source": "email"
   },
   {
-    "id": 21,
+    "id": 15,
     "date": "2026-08-29",
     "title": "Free Tarot for Prison Book Sponsors",
     "venue": "Rough Draft Books",
@@ -273,7 +195,7 @@
     "_source": "email"
   },
   {
-    "id": 22,
+    "id": 16,
     "date": "2026-08-29",
     "title": "Jay Jurden",
     "venue": "MASS MoCA",
@@ -286,7 +208,7 @@
     "_source": "email"
   },
   {
-    "id": 23,
+    "id": 17,
     "date": "2026-09-18",
     "title": "Caleb Klauder & Reeb Willms",
     "venue": "Tempo Arts",
@@ -299,7 +221,7 @@
     "_source": "email"
   },
   {
-    "id": 24,
+    "id": 18,
     "date": "2026-09-19",
     "title": "The Firebird Retold by The ReMemberers",
     "venue": "Tempo Arts",
@@ -312,7 +234,7 @@
     "_source": "email"
   },
   {
-    "id": 25,
+    "id": 19,
     "date": "2026-09-26",
     "title": "Full-Day Swing Dance Intensive",
     "venue": "Tempo Arts",
@@ -325,7 +247,7 @@
     "_source": "email"
   },
   {
-    "id": 26,
+    "id": 20,
     "date": "2026-09-26",
     "title": "Swing Dance Ball with Eyal Vilner Swing Band",
     "venue": "Tempo Arts",
@@ -338,7 +260,7 @@
     "_source": "email"
   },
   {
-    "id": 27,
+    "id": 21,
     "date": "2026-09-27",
     "title": "KingstonClassical presents Twin Spirits",
     "venue": "Tempo Arts",
@@ -351,7 +273,7 @@
     "_source": "email"
   },
   {
-    "id": 28,
+    "id": 22,
     "date": "2026-10-15",
     "title": "Honky Tonk Dance Party with The Talking Hearts",
     "venue": "Tempo Arts",
@@ -364,7 +286,7 @@
     "_source": "email"
   },
   {
-    "id": 29,
+    "id": 23,
     "date": "2026-10-18",
     "title": "Roz Chast & Jason Adam Katzenstein",
     "venue": "MASS MoCA",
@@ -377,7 +299,7 @@
     "_source": "email"
   },
   {
-    "id": 30,
+    "id": 24,
     "date": "2026-10-30",
     "title": "Rasputina with Dust Bowl Faeries",
     "venue": "Tempo Arts",
