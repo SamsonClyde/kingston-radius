@@ -1751,8 +1751,8 @@ async function checkPassword(pw) {
 }
 
 function showAdminContent() {
-  document.getElementById('auth-screen').style.display = 'none';
-  document.getElementById('form-screen').style.display = '';
+  const _as = document.getElementById('auth-screen'); if (_as) _as.style.display = 'none';
+  const _fs = document.getElementById('form-screen'); if (_fs) _fs.style.display = 'block';
   document.body.classList.add('admin-mode');
   sessionStorage.setItem('kr_authed', '1');
   renderEvents();
@@ -1969,13 +1969,9 @@ document.getElementById('quick-add-btn')?.addEventListener('click', async () => 
 document.querySelectorAll('nav a[data-page]').forEach(link => {
   link.addEventListener('click', ev => {
     ev.preventDefault();
-    const page = link.dataset.page;
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-    const el = document.getElementById('page-' + page);
-    if (el) el.classList.add('active');
-    link.classList.add('active');
+    showPage('page-' + link.dataset.page);
   });
+});
 });
 
 // ── FILTER BUTTONS ────────────────────────────────────────────────────────────
@@ -1989,6 +1985,33 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
 });
 
 // ── SECRET ADMIN via #admin ───────────────────────────────────────────────────
+// ── PAGE SWITCHER ────────────────────────────────────────────────────────────
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(p => {
+    p.style.display = '';       // clear inline styles so CSS class takes over
+    p.classList.remove('active');
+  });
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+  const el = document.getElementById(pageId);
+  if (el) el.classList.add('active');
+  const navLink = document.querySelector(`nav a[data-page="${pageId.replace('page-','')}"]`);
+  if (navLink) navLink.classList.add('active');
+}
+
+function openAdminPanel() {
+  showPage('page-admin');
+  const authScreen = document.getElementById('auth-screen');
+  const formScreen = document.getElementById('form-screen');
+  if (sessionStorage.getItem('kr_authed')) {
+    if (authScreen) authScreen.style.display = 'none';
+    showAdminContent();
+  } else {
+    if (authScreen) authScreen.style.display = 'block';
+    if (formScreen) formScreen.style.display = 'none';
+    setTimeout(() => document.getElementById('admin-pw')?.focus(), 100);
+  }
+}
+
 function checkAdminHash() {
   if (window.location.hash === '#admin' || window._wantsAdmin) {
     window._wantsAdmin = false;
@@ -1996,6 +2019,16 @@ function checkAdminHash() {
     openAdminPanel();
   }
 }
+
+// Type "admin" anywhere on page (not in an input) to open admin panel
+(function() {
+  let _buf = '';
+  document.addEventListener('keypress', e => {
+    if (['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)) return;
+    _buf = (_buf + e.key).slice(-5);
+    if (_buf === 'admin') { _buf = ''; openAdminPanel(); }
+  });
+})();
 // Run after DOM and loadFromServer are both ready
 // hashchange handles direct #admin navigation
 window.addEventListener('hashchange', checkAdminHash);
@@ -2086,7 +2119,9 @@ loadFromServer().then(() => {
     showAdminContent();
   } else if (window._wantsAdmin) {
     checkAdminHash();
-  }
+  
+  showPage('page-music');
+  if (window._wantsAdmin) openAdminPanel();
 });
 
 </script>
