@@ -249,13 +249,12 @@
   .inline-edit input {
     border: 1.5px solid var(--border);
     border-radius: 5px;
-    padding: 5px 8px;
+    padding: 7px 10px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     background: var(--card);
     color: var(--text);
-    flex: 1;
-    min-width: 200px;
+    width: 100%;
     box-sizing: border-box;
   }
   .inline-edit input:focus { outline: none; border-color: var(--red); }
@@ -1538,16 +1537,47 @@ function buildEventCard(e, isAdmin) {
 
   const inlineEdit = isAdmin ? `
     <div class="inline-edit" id="ie-${esc(key)}" style="display:none;padding:10px 0 4px;border-top:1px solid var(--border);margin-top:10px;">
-      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px;">
-        <input type="text" class="ie-venue"    value="${esc(e.venue||'')}"    placeholder="Venue Name" style="flex:2;min-width:160px;">
-        <input type="text" class="ie-title"    value="${esc(e.title||'')}"    placeholder="Title" style="flex:2;min-width:160px;">
-        <input type="date" class="ie-date"     value="${esc(e.date||'')}">
-        <input type="time" class="ie-time"     value="${esc(e.time||'')}">
-        <input type="url"  class="ie-venueUrl" value="${esc(e.venueUrl||'')}" placeholder="Venue URL">
-        <input type="url"  class="ie-mapsUrl"  value="${esc(e.mapsUrl||'')}"  placeholder="Maps URL">
-        <input type="text" class="ie-location" value="${esc(e.location||'')}" placeholder="Location">
-        <input type="number" class="ie-drive"  value="${DRIVE_TIMES[e.venue]??''}" placeholder="Drive (min)" style="min-width:80px;flex:0;">
-        <input type="text" class="ie-price"    value="${esc(e.price||'')}"    placeholder="Price">
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:6px;">
+        <div>
+          <label style="font-size:0.68rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px;">Venue Name</label>
+          <input type="text" class="ie-venue" value="${esc(e.venue||'')}" placeholder="Venue Name">
+        </div>
+        <div>
+          <label style="font-size:0.68rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px;">Title</label>
+          <input type="text" class="ie-title" value="${esc(e.title||'')}" placeholder="Title">
+        </div>
+        <div style="display:flex;gap:8px;">
+          <div style="flex:1;">
+            <label style="font-size:0.68rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px;">Date</label>
+            <input type="date" class="ie-date" value="${esc(e.date||'')}">
+          </div>
+          <div style="flex:1;">
+            <label style="font-size:0.68rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px;">Time</label>
+            <input type="time" class="ie-time" value="${esc(e.time||'')}">
+          </div>
+        </div>
+        <div>
+          <label style="font-size:0.68rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px;">Venue URL</label>
+          <input type="url" class="ie-venueUrl" value="${esc(e.venueUrl||'')}" placeholder="Venue URL">
+        </div>
+        <div>
+          <label style="font-size:0.68rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px;">Maps URL</label>
+          <input type="url" class="ie-mapsUrl" value="${esc(e.mapsUrl||'')}" placeholder="Maps URL">
+        </div>
+        <div>
+          <label style="font-size:0.68rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px;">Location</label>
+          <input type="text" class="ie-location" value="${esc(e.location||'')}" placeholder="Location">
+        </div>
+        <div style="display:flex;gap:8px;">
+          <div style="flex:1;">
+            <label style="font-size:0.68rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px;">Drive (min)</label>
+            <input type="number" class="ie-drive" value="${DRIVE_TIMES[e.venue]??''}" placeholder="Drive (min)">
+          </div>
+          <div style="flex:1;">
+            <label style="font-size:0.68rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px;">Price</label>
+            <input type="text" class="ie-price" value="${esc(e.price||'')}" placeholder="Price">
+          </div>
+        </div>
       </div>
       <div style="display:flex;gap:6px;flex-wrap:wrap;">
         <button class="btn-inline-save"   data-action="inline-save"   data-key="${esc(key)}">Save</button>
@@ -1610,7 +1640,7 @@ function renderAdminUnreviewed() {
               <button class="btn-reject-small" data-action="hide-event" data-key="${k}">Hide</button>
             </div>
           </div>
-          <div class="unreviewed-edit" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+          <div class="unreviewed-edit" style="display:grid;grid-template-columns:1fr;gap:10px;">
             <div>
               <label style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;">Title</label>
               <input type="text" class="ur-title" data-key="${k}" value="${esc(e.title||'')}" placeholder="Event Title" style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);box-sizing:border-box;">
@@ -2055,7 +2085,10 @@ document.querySelectorAll('nav a[data-page]').forEach(link => {
   link.addEventListener('click', ev => {
     ev.preventDefault();
     const page = link.dataset.page;
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.page').forEach(p => {
+      p.classList.remove('active');
+      p.style.removeProperty('display'); // clear any stale inline style
+    });
     document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
     const el = document.getElementById('page-' + page);
     if (el) el.classList.add('active');
@@ -2115,20 +2148,15 @@ window.addEventListener('hashchange', checkAdminHash);
 })();
 
 function openAdminPanel() {
-  // Hide all pages
+  // Clear inline styles on ALL pages so CSS classes control visibility
   document.querySelectorAll('.page').forEach(p => {
     p.classList.remove('active');
-    p.style.display = 'none';
+    p.style.removeProperty('display');
   });
-  // Show admin page
   const adminPage = document.getElementById('page-admin');
-  if (adminPage) {
-    adminPage.style.display = 'block';
-    adminPage.classList.add('active');
-  }
+  if (adminPage) adminPage.classList.add('active');
   document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
   document.getElementById('admin-nav-link')?.classList.add('active');
-  // Show correct screen
   if (sessionStorage.getItem('kr_authed')) {
     showAdminContent();
   } else {
