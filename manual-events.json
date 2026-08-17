@@ -1291,5 +1291,18 @@
     "price": "Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787004708381,
+    "title": "Hudson Valley Flyers",
+    "date": "2026-08-30",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
