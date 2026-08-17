@@ -767,9 +767,10 @@
   .add-section-divider::before, .add-section-divider::after { content:''; flex:1; height:1px; background:var(--border); }
 
 
-  .mins-label { display:inline-flex; flex-direction:column; align-items:center; line-height:1.2; gap:1px; }
-  .mins-label span:first-child { font-size:0.95rem; font-weight:600; }
-  .mins-label span:last-child { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.04em; opacity:0.8; }
+  .mins-label-h2 { display:inline-flex; flex-direction:row; align-items:center; gap:3px; }
+  .mins-label-h2 .num { font-size:1.25rem; font-weight:700; line-height:1; }
+  .mins-label-h2 .cap { display:flex; flex-direction:column; align-items:center; line-height:0.85; text-align:center; }
+  .mins-label-h2 .cap span { font-size:0.48rem; text-transform:uppercase; letter-spacing:0.01em; opacity:0.85; }
 </style>
 <script>
   // Capture #admin hash before any other script can clear it
@@ -796,17 +797,17 @@
 <div class="filters-bar">
   <div class="filter-row">
     <span class="filter-label">Distance</span>
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="0">Kingston only</button>
-    <button class="filter-btn" data-filter="30"><span class="mins-label"><span>30</span><span>mins or less</span></span></button>
-    <button class="filter-btn" data-filter="60"><span class="mins-label"><span>60</span><span>mins or less</span></span></button>
-    <button class="filter-btn" data-filter="90"><span class="mins-label"><span>90</span><span>mins or less</span></span></button>
+    <button class="filter-btn active" data-filter="all"><span class="mins-label-h2"><span class="num">All</span></span></button>
+    <button class="filter-btn" data-filter="0"><span class="mins-label-h2"><span class="num">Kingston</span><span class="cap"><span>only</span></span></span></button>
+    <button class="filter-btn" data-filter="30"><span class="mins-label-h2"><span class="num">30</span><span class="cap"><span>mins</span><span>or</span><span>less</span></span></span></button>
+    <button class="filter-btn" data-filter="60"><span class="mins-label-h2"><span class="num">60</span><span class="cap"><span>mins</span><span>or</span><span>less</span></span></span></button>
+    <button class="filter-btn" data-filter="90"><span class="mins-label-h2"><span class="num">90</span><span class="cap"><span>mins</span><span>or</span><span>less</span></span></span></button>
     <div class="filter-sep"></div>
     <!-- FREE FILTER HIDDEN — re-enable by removing comment: <button class="filter-btn red-btn" data-filter="free">Free only</button> -->
   </div>
   <div class="filter-row" id="month-filter-row">
     <span class="filter-label">Month</span>
-    <div id="month-btns" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
+    <select id="month-select" class="venue-select"></select>
   </div>
   <div class="filter-row">
     <span class="filter-label">Venue</span>
@@ -848,32 +849,15 @@
       <h1 style="font-family:'DM Serif Display',serif;font-size:2rem;line-height:1.15;margin-bottom:12px;">One place for live music in the Hudson Valley.</h1>
       <p style="font-size:0.95rem;color:var(--muted);line-height:1.7;max-width:520px;">An independent calendar covering 100+ venues within 90 minutes of Kingston, NY. Updated daily. Nothing for sale.</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
-      
-    <div style="margin-top:24px;">
-      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">How to use it</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:20px;">
-        <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
-          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Distance</div>
-          <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Kingston only, 30, 60, or 90 minutes out. Covers Woodstock, Hudson, Poughkeepsie, Peekskill, and beyond.</p>
-        </div>
-        <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
-          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Month</div>
-          <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Filter to a specific month. Buttons appear automatically based on what's listed.</p>
-        </div>
-        <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;">
-          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;">Venue</div>
-          <p style="font-size:0.88rem;line-height:1.6;color:var(--text);">Use the dropdown to see everything coming up at one spot. Click any venue name to visit their site, or the city to open directions.</p>
-        </div>
-      </div>
+    <div style="margin-bottom:24px;">
+      <img src="/coverage-map.jpg" alt="Map of the Hudson Valley showing venues within 30, 60, and 90 minutes of Kingston, NY" style="width:100%;height:auto;border-radius:10px;border:1px solid var(--border);display:block;">
     </div>
 
-    <div style="border-top:1px solid var(--border);padding-top:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-      <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;max-width:420px;">Independent project. Not affiliated with or endorsed by any venue listed. All links go directly to the source.</p>
-      <a href="mailto:kingstonradius@gmail.com" style="font-size:0.82rem;font-weight:600;color:var(--red);text-decoration:none;white-space:nowrap;">Submit a listing →</a>
+    <div style="border-top:1px solid var(--border);padding-top:16px;">
+      <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;max-width:520px;margin-bottom:8px;">Independent project. Not affiliated with or endorsed by any venue listed. All links go directly to the source.</p>
+      <p style="font-size:0.82rem;font-weight:600;color:var(--red);">kingstonradius@gmail.com</p>
     </div>
   </div>
-</div>
 </div><!-- /page-about -->
 
 <!-- ── ADMIN PAGE ── -->
@@ -1425,8 +1409,8 @@ function updateBadge() {
 // ── MONTH BUTTONS ─────────────────────────────────────────────────────────────
 let _activeMonth = null;
 function buildMonthButtons() {
-  const container = document.getElementById('month-btns');
-  if (!container) return;
+  const select = document.getElementById('month-select');
+  if (!select) return;
   const today = new Date(); today.setHours(0,0,0,0);
   const months = [...new Set(
     getApprovedEvents()
@@ -1434,17 +1418,17 @@ function buildMonthButtons() {
       .map(e => e.date?.slice(0,7))
       .filter(Boolean)
   )].sort();
-  container.innerHTML = months.map(m => {
+  const options = months.map(m => {
     const [y,mo] = m.split('-');
     const label = new Date(+y, +mo-1).toLocaleString('default', {month:'short'}) + ' ' + y;
-    return `<button class="filter-btn${_activeMonth===m?' active':''}" data-month="${m}">${label}</button>`;
+    return `<option value="${m}"${_activeMonth===m?' selected':''}>${label}</option>`;
   }).join('');
-  container.querySelectorAll('button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      _activeMonth = _activeMonth === btn.dataset.month ? null : btn.dataset.month;
-      buildMonthButtons(); renderEvents();
-    });
-  });
+  select.innerHTML = `<option value="">All months</option>${options}`;
+  select.value = _activeMonth || '';
+  select.onchange = () => {
+    _activeMonth = select.value || null;
+    renderEvents();
+  };
 }
 
 // ── VENUE SELECT ──────────────────────────────────────────────────────────────
