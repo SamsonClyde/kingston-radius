@@ -285,5 +285,9 @@
   "Arrowood Farms||2026-09-26||12:00 am": {
     "status": "rejected",
     "hiddenAt": 1786963756039
+  },
+  "Assembly||2026-11-07||12:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1786963761598
   }
 }
