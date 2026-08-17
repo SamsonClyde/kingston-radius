@@ -1265,5 +1265,18 @@
     "price": "Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787004531500,
+    "title": "Country Joe & The Fish (last surviving members)",
+    "date": "2026-08-29",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$35adv/$45adv/$40door/$50door",
+    "free": false,
+    "_manual": true
   }
 ]
