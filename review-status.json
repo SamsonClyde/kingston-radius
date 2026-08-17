@@ -286,62 +286,8 @@
     "status": "rejected",
     "hiddenAt": 1786963997539
   },
-  "Assembly||2026-09-25||12:00 am": "approved",
-  "Assembly||2026-09-26||7:00 pm": {
+  "Assembly||2026-09-25||12:00 am": {
     "status": "rejected",
-    "hiddenAt": 1786964575860
-  },
-  "Assembly Kingston||2026-12-08||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786964601815
-  },
-  "Assembly Kingston||2026-12-05||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786964713659
-  },
-  "Assembly Kingston||2026-11-28||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786964718558
-  },
-  "Colony Woodstock||2026-08-19||5:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1786965185565
-  },
-  "Colony Woodstock||2026-08-19||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1786965192073
-  },
-  "Colony Woodstock||2026-08-20||5:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1786965195516
-  },
-  "Colony Woodstock||2026-08-20||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1786965199586
-  },
-  "Colony Woodstock||2026-08-21||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1786965227360
-  },
-  "Colony Woodstock||2026-08-21||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1786965232594
-  },
-  "Colony Woodstock||2026-08-22||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1786965846716
-  },
-  "Colony Woodstock||2026-08-22||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1786965852220
-  },
-  "Colony Woodstock||2026-08-23||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1786965870909
-  },
-  "Colony Woodstock||2026-08-23||5:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1786965985845
-  },
-  "Colony Woodstock||2026-08-23||17:30": "approved"
+    "hiddenAt": 1787003905427
+  }
 }
