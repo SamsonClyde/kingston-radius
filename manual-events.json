@@ -1161,5 +1161,31 @@
     "free": false,
     "_source": "email",
     "_manual": true
+  },
+  {
+    "id": 1786966060438,
+    "title": "James Dalton",
+    "date": "2026-08-26",
+    "time": "17:30",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "Donation",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1786966174194,
+    "title": "Dead Last Wednesday with Gratefully Yours",
+    "date": "2026-08-26",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "Donation",
+    "free": false,
+    "_manual": true
   }
 ]
