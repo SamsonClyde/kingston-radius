@@ -1,19 +1,6 @@
 [
   {
     "id": 1,
-    "date": "2026-08-16",
-    "title": "Democracy Rocks 2 with Natalie Merchant",
-    "venue": "Colony Woodstock",
-    "venueUrl": "https://www.colonywoodstock.com/shows",
-    "location": "Woodstock, NY",
-    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "time": "7:00 PM",
-    "price": "$45",
-    "free": false,
-    "_source": "email"
-  },
-  {
-    "id": 2,
     "date": "2026-08-18",
     "title": "August's Can't-Miss Night School Lineup",
     "venue": "Rough Draft Books",
@@ -26,7 +13,59 @@
     "_source": "email"
   },
   {
+    "id": 2,
+    "date": "2026-08-19",
+    "title": "Dan McCabe",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "5:30 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
     "id": 3,
+    "date": "2026-08-19",
+    "title": "Gabriel Butterfield & The Tone Masons",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$20",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 4,
+    "date": "2026-08-20",
+    "title": "Maddy Meeker",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "5:30 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 5,
+    "date": "2026-08-20",
+    "title": "Punk / Ska Night w/ Pilfers, Kingston Skanks, The Snorts, & Couch Surfer",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$20",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 6,
     "date": "2026-08-21",
     "title": "Roomful of Teeth",
     "venue": "MASS MoCA",
@@ -39,7 +78,7 @@
     "_source": "email"
   },
   {
-    "id": 4,
+    "id": 7,
     "date": "2026-08-21",
     "title": "The Chalet",
     "venue": "MASS MoCA",
@@ -52,7 +91,7 @@
     "_source": "email"
   },
   {
-    "id": 5,
+    "id": 8,
     "date": "2026-08-21",
     "title": "Open Mic Night",
     "venue": "Stissing Center",
@@ -65,7 +104,33 @@
     "_source": "email"
   },
   {
-    "id": 6,
+    "id": 9,
+    "date": "2026-08-21",
+    "title": "Sarah Kramer Harrison and The Night Promises",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "6:00 PM",
+    "price": "$20",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 10,
+    "date": "2026-08-21",
+    "title": "Improvement Movement w/ Adeline Hotel",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$18",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 11,
     "date": "2026-08-22",
     "title": "Windborne",
     "venue": "Stissing Center",
@@ -78,7 +143,85 @@
     "_source": "email"
   },
   {
-    "id": 7,
+    "id": 12,
+    "date": "2026-08-22",
+    "title": "The Local x Opus 40 Euphonia Balkan and Brass Festival",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "time": "4:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 13,
+    "date": "2026-08-22",
+    "title": "The Carl Mateo Band",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "6:00 PM",
+    "price": "$20",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 14,
+    "date": "2026-08-22",
+    "title": "The Pink Floyd Project",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$20",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 15,
+    "date": "2026-08-23",
+    "title": "The Secret City",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 16,
+    "date": "2026-08-23",
+    "title": "Doug Marcus",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "5:30 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 17,
+    "date": "2026-08-23",
+    "title": "A Family Party: Celebrating Michael Berg and Tommy Bell",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 18,
     "date": "2026-08-28",
     "title": "Christopher Hoffman in The Grace Note",
     "venue": "Stissing Center",
@@ -91,7 +234,7 @@
     "_source": "email"
   },
   {
-    "id": 8,
+    "id": 19,
     "date": "2026-08-28",
     "title": "Live Music With Pablo Shine",
     "venue": "Rough Draft Books",
@@ -104,7 +247,7 @@
     "_source": "email"
   },
   {
-    "id": 9,
+    "id": 20,
     "date": "2026-08-29",
     "title": "Free Tarot for Prison Book Sponsors",
     "venue": "Rough Draft Books",
@@ -117,7 +260,7 @@
     "_source": "email"
   },
   {
-    "id": 10,
+    "id": 21,
     "date": "2026-08-29",
     "title": "Jay Jurden",
     "venue": "MASS MoCA",
@@ -130,7 +273,7 @@
     "_source": "email"
   },
   {
-    "id": 11,
+    "id": 22,
     "date": "2026-08-29",
     "title": "Frankenstein with World Premiere Chamber Ensemble Score - Argus String Quartet with Steven Beck",
     "venue": "Stissing Center",
@@ -143,7 +286,33 @@
     "_source": "email"
   },
   {
-    "id": 12,
+    "id": 23,
+    "date": "2026-08-29",
+    "title": "The Local x Opus 40 Akwesasne Freedom School Benefit",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "time": "5:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 24,
+    "date": "2026-08-30",
+    "title": "The Local x Opus 40 Cumbia Vortex: Chicha Libre",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "time": "7:30 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 25,
     "date": "2026-09-18",
     "title": "Caleb Klauder & Reeb Willms",
     "venue": "Tempo Arts",
@@ -156,7 +325,7 @@
     "_source": "email"
   },
   {
-    "id": 13,
+    "id": 26,
     "date": "2026-09-19",
     "title": "The Firebird Retold by The ReMemberers",
     "venue": "Tempo Arts",
@@ -169,7 +338,20 @@
     "_source": "email"
   },
   {
-    "id": 14,
+    "id": 27,
+    "date": "2026-09-20",
+    "title": "Widow's Weeds",
+    "venue": "Stissing Center",
+    "venueUrl": "https://www.thestissingcenter.org/events",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NGxaff71QdhYoLhYA",
+    "time": "3:00 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 28,
     "date": "2026-09-26",
     "title": "Full-Day Swing Dance Intensive",
     "venue": "Tempo Arts",
@@ -182,7 +364,7 @@
     "_source": "email"
   },
   {
-    "id": 15,
+    "id": 29,
     "date": "2026-09-26",
     "title": "Swing Dance Ball with Eyal Vilner Swing Band",
     "venue": "Tempo Arts",
@@ -195,7 +377,7 @@
     "_source": "email"
   },
   {
-    "id": 16,
+    "id": 30,
     "date": "2026-09-27",
     "title": "KingstonClassical presents Twin Spirits",
     "venue": "Tempo Arts",
@@ -208,7 +390,7 @@
     "_source": "email"
   },
   {
-    "id": 17,
+    "id": 31,
     "date": "2026-10-15",
     "title": "Honky Tonk Dance Party with The Talking Hearts",
     "venue": "Tempo Arts",
@@ -221,7 +403,7 @@
     "_source": "email"
   },
   {
-    "id": 18,
+    "id": 32,
     "date": "2026-10-18",
     "title": "Roz Chast & Jason Adam Katzenstein",
     "venue": "MASS MoCA",
@@ -234,7 +416,7 @@
     "_source": "email"
   },
   {
-    "id": 19,
+    "id": 33,
     "date": "2026-10-30",
     "title": "Rasputina with Dust Bowl Faeries",
     "venue": "Tempo Arts",
