@@ -1342,12 +1342,17 @@ async function hideEvent(e) {
 
 async function pruneHidden() {
   const status = getReviewStatus();
-  const hidden = getAllHidden();
-  if (hidden.length > MAX_HIDDEN) {
-    const toExpire = hidden.slice(MAX_HIDDEN);
-    toExpire.forEach(e => delete status[eventKey(e)]);
-    await saveReviewStatus(status);
+  const today  = new Date(); today.setHours(0,0,0,0);
+  const all    = getAllEvents();
+  let changed  = false;
+  for (const e of all) {
+    const k = eventKey(e);
+    if (isRejected(status[k]) && parseDate(e.date) < today) {
+      delete status[k];
+      changed = true;
+    }
   }
+  if (changed) await saveReviewStatus(status);
 }
 
 async function restoreEvent(e) {
@@ -2170,6 +2175,9 @@ loadFromServer().then(() => {
     }
   });
   if (changed) saveReviewStatus(status);
+
+  // Clean up any hidden entries whose date has passed
+  pruneHidden();
 
   // Ensure music page is visible on load
   document.getElementById('page-music')?.classList.add('active');
