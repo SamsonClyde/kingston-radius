@@ -1239,5 +1239,18 @@
     "price": "$15adv/$20door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787004314411,
+    "title": "DJ Darkstar Presents: Summerween - A Time For Stranger Things",
+    "date": "2026-08-28",
+    "time": "22:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$15adv+/$20adv/$25door",
+    "free": false,
+    "_manual": true
   }
 ]
