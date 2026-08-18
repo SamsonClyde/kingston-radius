@@ -2467,5 +2467,18 @@
     "price": "$27/$45/$51",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787064026887,
+    "title": "Martin Sexton",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$60/$82",
+    "free": false,
+    "_manual": true
   }
 ]
