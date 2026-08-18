@@ -2610,5 +2610,18 @@
     "price": "$50-$216",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787065555326,
+    "title": "Ringo Starr & His All Starr Band - Steve Lukather, Colin Hay, Warren Ham, Hamish Stuart, Gregg Bissonette, Buck Johnson",
+    "date": "2026-09-25",
+    "time": "19:00",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "price": "$50-$216",
+    "free": false,
+    "_manual": true
   }
 ]
