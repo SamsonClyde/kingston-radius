@@ -1499,5 +1499,18 @@
     "price": "On Sale Sept 8",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787020107525,
+    "title": "Robert Burke Warren - A Tribute to Leonard Cohen",
+    "date": "2026-09-25",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$29adv/$45adv/$30door/$45door",
+    "free": false,
+    "_manual": true
   }
 ]
