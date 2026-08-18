@@ -2766,5 +2766,18 @@
     "price": "$40",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787067444577,
+    "title": "Lily of the Valley Bluegrass Band",
+    "date": "2026-08-29",
+    "time": "12:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
