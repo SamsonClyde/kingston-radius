@@ -1525,5 +1525,18 @@
     "price": "Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787020255948,
+    "title": "The Steel Wheels, Damn Tall Buildings",
+    "date": "2026-10-22",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$29adv/$45adv/$30door/$45door",
+    "free": false,
+    "_manual": true
   }
 ]
