@@ -1577,5 +1577,18 @@
     "price": "$23adv/$40adv/$25door/$40door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787020657534,
+    "title": "The Bones of J.R. Jones, Chris Kasper",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$35adv/$50adv/$40door/$50door",
+    "free": false,
+    "_manual": true
   }
 ]
