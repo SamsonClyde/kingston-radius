@@ -4184,5 +4184,18 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787075653744,
+    "title": "The Life and Legacy of Friedrich Gernsheim (Classical)",
+    "date": "2026-09-19",
+    "time": "11:00",
+    "venue": "Bard Fisher Center",
+    "venueUrl": "https://fishercenter.bard.edu/events/",
+    "location": "Annandale-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
+    "price": "ReserveFree",
+    "free": false,
+    "_manual": true
   }
 ]
