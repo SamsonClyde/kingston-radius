@@ -4132,5 +4132,18 @@
     "price": "$16",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787075207827,
+    "title": "Shakedown Citi (Dead Cover Band)",
+    "date": "2026-09-19",
+    "time": "20:00",
+    "venue": "The Ellis",
+    "venueUrl": "https://www.theellisnewburgh.com/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/r8BMC6j6N8u7Y8Y97",
+    "price": "$22",
+    "free": false,
+    "_manual": true
   }
 ]
