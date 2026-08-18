@@ -4171,5 +4171,18 @@
     "price": "$16",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787075594232,
+    "title": "Epic Narratives: Gernsheim and Brahms (Classical)",
+    "date": "2026-09-18",
+    "time": "19:00",
+    "venue": "Bard Fisher Center",
+    "venueUrl": "https://fishercenter.bard.edu/events/",
+    "location": "Annandale-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
