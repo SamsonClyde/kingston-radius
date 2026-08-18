@@ -3611,5 +3611,18 @@
     "price": "$34-$45",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787071054871,
+    "title": "The Amish Outlaws",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$40-$50",
+    "free": false,
+    "_manual": true
   }
 ]
