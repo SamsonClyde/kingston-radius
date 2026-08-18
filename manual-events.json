@@ -4851,5 +4851,18 @@
     "price": "$45",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787078587291,
+    "title": "Stories and Songs of the Revolution with Jonathan Kruk and Linda Russell",
+    "date": "2026-08-20",
+    "time": "19:00",
+    "venue": "Hudson River Maritime Museum",
+    "venueUrl": "https://www.hrmm.org/events.html",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/BeMvKWTL7bdDv5uB6",
+    "price": "$10/$25",
+    "free": false,
+    "_manual": true
   }
 ]
