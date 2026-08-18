@@ -325,5 +325,10 @@
     "status": "rejected",
     "hiddenAt": 1787053262249
   },
-  "The Ashokan Center||2026-11-06||19:30": "approved"
+  "The Ashokan Center||2026-11-06||19:30": "approved",
+  "The Ashokan Center||2026-11-07||": {
+    "status": "rejected",
+    "hiddenAt": 1787053598845
+  },
+  "The Ashokan Center||2026-11-07||19:30": "approved"
 }
