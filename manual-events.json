@@ -1999,5 +1999,18 @@
     "price": "$40/$71",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787060913758,
+    "title": "John Simon",
+    "date": "2026-08-23",
+    "time": "14:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$9/$15/$27/$34",
+    "free": false,
+    "_manual": true
   }
 ]
