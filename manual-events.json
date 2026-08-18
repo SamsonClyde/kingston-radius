@@ -4053,5 +4053,18 @@
     "price": "$44",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787074326833,
+    "title": "Windham Festival Chamber Orchestra (Classical)",
+    "date": "2026-11-28",
+    "time": "19:00",
+    "venue": "Orpheum Preforming Arts Center (Catskill Mountain Foundation)",
+    "venueUrl": "https://www.catskillmtn.org/performances/",
+    "location": "Tannersville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/8SaKNQ6G3qhXU6hD6",
+    "price": "$28",
+    "free": false,
+    "_manual": true
   }
 ]
