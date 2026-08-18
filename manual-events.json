@@ -1804,5 +1804,18 @@
     "price": "$57/$80/$102",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787059062530,
+    "title": "Aziz Ansari (Stand up)",
+    "date": "2026-10-17",
+    "time": "19:00",
+    "venue": "UPAC",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/jC2VFr3GrpBVxt7h7",
+    "price": "$50/$73/$95/$118/$125/$160/$184/$208",
+    "free": false,
+    "_manual": true
   }
 ]
