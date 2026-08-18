@@ -2480,5 +2480,18 @@
     "price": "$60/$82",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787064084503,
+    "title": "The Wood Brothers, Tyler Ramsey",
+    "date": "2026-12-08",
+    "time": "19:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$63/$116",
+    "free": false,
+    "_manual": true
   }
 ]
