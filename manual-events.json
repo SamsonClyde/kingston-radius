@@ -2064,5 +2064,18 @@
     "price": "$23",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787061235463,
+    "title": "Shinyribs, Scott Strickland",
+    "date": "2026-08-29",
+    "time": "20:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$40/$56/$67",
+    "free": false,
+    "_manual": true
   }
 ]
