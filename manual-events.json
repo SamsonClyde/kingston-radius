@@ -4092,5 +4092,18 @@
     "price": "Pay what you can",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787074808285,
+    "title": "Bob Wagner",
+    "date": "2026-08-22",
+    "time": "20:00",
+    "venue": "The Ellis",
+    "venueUrl": "https://www.theellisnewburgh.com/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/r8BMC6j6N8u7Y8Y97",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
