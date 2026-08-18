@@ -1739,5 +1739,18 @@
     "price": "$51/$61/$71",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787058074508,
+    "title": "Alex Edelman (Stand up)",
+    "date": "2026-09-18",
+    "time": "19:30",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
+    "price": "$91/102/$112",
+    "free": false,
+    "_manual": true
   }
 ]
