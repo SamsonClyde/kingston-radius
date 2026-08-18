@@ -2038,5 +2038,31 @@
     "price": "$21",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787061077600,
+    "title": "The Devil Makes Three, DiTrani Brothers",
+    "date": "2026-08-28",
+    "time": "20:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$47/$79",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1787061156580,
+    "title": "The Music of The Beatles & More For Kids",
+    "date": "2026-08-29",
+    "time": "12:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$23",
+    "free": false,
+    "_manual": true
   }
 ]
