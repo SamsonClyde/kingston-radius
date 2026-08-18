@@ -1947,5 +1947,18 @@
     "price": "Sold Out",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787060448215,
+    "title": "Sleep",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "venue": "Basilica",
+    "venueUrl": "https://basilicahudson.org/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LF5dv1FSGKd1SxNFA",
+    "price": "$57",
+    "free": false,
+    "_manual": true
   }
 ]
