@@ -2350,5 +2350,18 @@
     "price": "$90",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787062675779,
+    "title": "Jeff Tweedy, Case Oats",
+    "date": "2026-10-27",
+    "time": "19:30",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$90/$168",
+    "free": false,
+    "_manual": true
   }
 ]
