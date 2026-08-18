@@ -1843,5 +1843,18 @@
     "price": "$70/$81/$104",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787059406190,
+    "title": "The Wailin’ Jennys",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "venue": "UPAC",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/jC2VFr3GrpBVxt7h7",
+    "price": "$57/$68/$80/$91",
+    "free": false,
+    "_manual": true
   }
 ]
