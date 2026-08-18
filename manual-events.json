@@ -3910,5 +3910,18 @@
     "price": "$45-$66",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787072205175,
+    "title": "70' Rock Parade Late Show",
+    "date": "2026-12-31",
+    "time": "22:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$45-$66",
+    "free": false,
+    "_manual": true
   }
 ]
