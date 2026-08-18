@@ -2974,5 +2974,18 @@
     "price": "$34",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787068253480,
+    "title": "Too Blue",
+    "date": "2026-09-13",
+    "time": "12:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "RSVP Brunch",
+    "free": false,
+    "_manual": true
   }
 ]
