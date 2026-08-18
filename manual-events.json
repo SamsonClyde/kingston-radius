@@ -1595,7 +1595,7 @@
   {
     "id": 244,
     "date": "2026-08-28",
-    "title": "Summer Hoot 28th-30th Mike & Ruthy, Tuba Skinny, Kara McKee, The Milk Carton Kids, The Next Great American Novelist, Picnic Committee",
+    "title": "Summer Hoot 28th-30th Friday: Mike & Ruthy, Tuba Skinny, Kara McKee, The Milk Carton Kids, The Next Great American Novelist, Picnic Committee",
     "venue": "The Ashokan Center",
     "venueUrl": "https://ashokancenter.org/product/summer-hoot-2026",
     "location": "Olivebridge, NY",
@@ -1603,7 +1603,7 @@
     "time": "19:00",
     "price": "$55",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
