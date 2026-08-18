@@ -1895,5 +1895,18 @@
     "price": "$40",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787060178991,
+    "title": "River Valley Baroque",
+    "date": "2026-09-27",
+    "time": "16:00",
+    "venue": "Basilica",
+    "venueUrl": "https://basilicahudson.org/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LF5dv1FSGKd1SxNFA",
+    "price": "$45/$66/$87",
+    "free": false,
+    "_manual": true
   }
 ]
