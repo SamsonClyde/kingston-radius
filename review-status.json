@@ -305,5 +305,10 @@
   "Assembly Kingston||2026-12-08||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787020680726
-  }
+  },
+  "The Ashokan Center||2026-08-28||": {
+    "status": "rejected",
+    "hiddenAt": 1787021209837
+  },
+  "The Ashokan Center||2026-08-28||19:00": "approved"
 }
