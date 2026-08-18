@@ -4197,5 +4197,18 @@
     "price": "ReserveFree",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787075725733,
+    "title": "Gernsheim at the Piano (Classical)",
+    "date": "2026-09-19",
+    "time": "13:00",
+    "venue": "Bard Fisher Center",
+    "venueUrl": "https://fishercenter.bard.edu/events/",
+    "location": "Annandale-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
+    "price": "ReserveFree",
+    "free": false,
+    "_manual": true
   }
 ]
