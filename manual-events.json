@@ -2571,5 +2571,18 @@
     "price": "$55-$177",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787065211656,
+    "title": "Tedeschi Trucks Band, Lukas Nelson",
+    "date": "2026-08-31",
+    "time": "19:00",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "price": "$50-$157",
+    "free": false,
+    "_manual": true
   }
 ]
