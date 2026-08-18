@@ -3936,5 +3936,18 @@
     "price": "$22-$34",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787072339382,
+    "title": "Damn The Torpedos (Tom Petty Cover Band) Night One",
+    "date": "2027-01-07",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$40-$55",
+    "free": false,
+    "_manual": true
   }
 ]
