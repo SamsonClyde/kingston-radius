@@ -3832,5 +3832,18 @@
     "price": "$29-$40",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787071919194,
+    "title": "Carrie Zazz Band",
+    "date": "2026-12-10",
+    "time": "19:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$22-$29",
+    "free": false,
+    "_manual": true
   }
 ]
