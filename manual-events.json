@@ -1765,5 +1765,18 @@
     "price": "$42/$61/$64/$75/$77/$84/$100",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787058498558,
+    "title": "The Sound of Nashville in the Hudson Valley’s Queen City - Craig Morgan, Maggie Rose, Ian Flanigan, Jake Banfield, Brooke Moriber",
+    "date": "2026-10-06",
+    "time": "19:00",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
+    "price": "$119/$172/$224/$276",
+    "free": false,
+    "_manual": true
   }
 ]
