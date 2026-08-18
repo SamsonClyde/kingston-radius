@@ -1564,5 +1564,18 @@
     "price": "$23adv/$40adv/$25door/$40door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787020559556,
+    "title": "Aaron Lee Tasjan, Madeleine Kelson",
+    "date": "2026-11-13",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$23adv/$40adv/$25door/$40door",
+    "free": false,
+    "_manual": true
   }
 ]
