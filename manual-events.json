@@ -2909,5 +2909,18 @@
     "price": "$22-$34",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787067996428,
+    "title": "PJ Ferguson & The Tennessee Strange",
+    "date": "2026-09-09",
+    "time": "19:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$29-$34",
+    "free": false,
+    "_manual": true
   }
 ]
