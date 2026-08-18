@@ -2194,5 +2194,18 @@
     "price": "$51/$82",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787061956638,
+    "title": "Sean Hayes, Etienne de Rocher (Haunted Shed)",
+    "date": "2026-09-24",
+    "time": "20:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$40",
+    "free": false,
+    "_manual": true
   }
 ]
