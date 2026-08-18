@@ -1830,5 +1830,18 @@
     "price": "$50/$61/$95",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787059302896,
+    "title": "Theresa Caputo (Medium)",
+    "date": "2026-11-08",
+    "time": "15:00",
+    "venue": "UPAC",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/jC2VFr3GrpBVxt7h7",
+    "price": "$70/$81/$104",
+    "free": false,
+    "_manual": true
   }
 ]
