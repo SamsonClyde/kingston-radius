@@ -2675,5 +2675,18 @@
     "price": "$34",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787067067792,
+    "title": "Crash Taylor",
+    "date": "2026-08-22",
+    "time": "12:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
