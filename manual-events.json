@@ -3650,5 +3650,18 @@
     "price": "$40-$50",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787071233444,
+    "title": "Hurricane Rocks (Scorpions Cover Band)",
+    "date": "2026-11-15",
+    "time": "19:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$29-$45",
+    "free": false,
+    "_manual": true
   }
 ]
