@@ -1817,5 +1817,18 @@
     "price": "$50/$73/$95/$118/$125/$160/$184/$208",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787059169661,
+    "title": "Orleans",
+    "date": "2026-11-07",
+    "time": "19:30",
+    "venue": "UPAC",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/jC2VFr3GrpBVxt7h7",
+    "price": "$50/$61/$95",
+    "free": false,
+    "_manual": true
   }
 ]
