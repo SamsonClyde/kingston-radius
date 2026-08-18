@@ -4115,8 +4115,9 @@
     "venueUrl": "https://www.theellisnewburgh.com/",
     "location": "Newburgh, NY",
     "mapsUrl": "https://maps.app.goo.gl/r8BMC6j6N8u7Y8Y97",
-    "price": "See website",
+    "price": "$22adv/$28door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
