@@ -2545,5 +2545,18 @@
     "price": "$28/$32/$42/$55/$78/$100/$122-$270",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787065030041,
+    "title": "Outlaw Music Festival - Willie Nelson & Family, The Avett Brothers, Sheryl Crow, Stephen Wilson Jr., Robert Randolph, Don Was & the Pan-Detroit Ensemble",
+    "date": "2026-08-29",
+    "time": "15:20",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "price": "$61-$291",
+    "free": false,
+    "_manual": true
   }
 ]
