@@ -1752,5 +1752,18 @@
     "price": "$91/102/$112",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787058239505,
+    "title": "Stayin’ Alive: One Night of the Bee Gees",
+    "date": "2026-10-03",
+    "time": "19:30",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
+    "price": "$42/$61/$64/$75/$77/$84/$100",
+    "free": false,
+    "_manual": true
   }
 ]
