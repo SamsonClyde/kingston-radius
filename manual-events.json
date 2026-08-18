@@ -3520,5 +3520,18 @@
     "price": "$34-$45",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787070736249,
+    "title": "Radio Flashback (Covers)",
+    "date": "2026-11-01",
+    "time": "19:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$29-$45",
+    "free": false,
+    "_manual": true
   }
 ]
