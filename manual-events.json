@@ -1604,5 +1604,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1787021528097,
+    "title": "Summer Hoot 28th-30th Saturday: Gong Bath with Love Waves, Arm of the Sea Theater, Nate the Great, Johnny Irion, Furnace Mountain, Golden Hours, Katrina Dicrasto, The City Stompers, The Springtails, Chatham County Line, Jordan Hamilton Trio, The Mammals, Bonfire Singalong up on Hoot Hilltop, Jordan Hamilton Trio",
+    "date": "2026-08-29",
+    "time": "10:30",
+    "venue": "The Ashokan Center",
+    "venueUrl": "https://ashokancenter.org/events/",
+    "location": "Olivebridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
+    "price": "$75",
+    "free": false,
+    "_manual": true
   }
 ]
