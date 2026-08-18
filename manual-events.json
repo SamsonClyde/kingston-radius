@@ -2623,5 +2623,18 @@
     "price": "$50-$216",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787066066735,
+    "title": "Big Lawn Music - Luzmila Taylor, Elbi Lewes, Dassi Rosenkrantz, Blair Baldwin, Gracie Lou, Sarah Anjali, Starling Annie, Evie Echoes and The Locations, Kate Prascher, Summer Fling",
+    "date": "2026-08-22",
+    "time": "13:00",
+    "venue": "Big Lawn Music Festival",
+    "venueUrl": "https://www.biglawnmusic.com/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fuDAJZZEMyfcgCF69",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
