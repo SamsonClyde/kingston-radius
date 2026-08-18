@@ -2259,5 +2259,18 @@
     "price": "$67",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787062215435,
+    "title": "The Bobby Lees",
+    "date": "2026-10-10",
+    "time": "20:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$40/$60",
+    "free": false,
+    "_manual": true
   }
 ]
