@@ -2636,5 +2636,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787066619750,
+    "title": "Crickets & Cicadas",
+    "date": "2026-08-22",
+    "time": "14:00",
+    "venue": "Catskill Brewery",
+    "venueUrl": "https://www.catskillbrewery.com/events/",
+    "location": "Livingston Manor, NY",
+    "mapsUrl": "https://maps.app.goo.gl/JDRk9QZUC2tE1rED9",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
