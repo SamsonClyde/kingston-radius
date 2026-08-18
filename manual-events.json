@@ -2298,5 +2298,18 @@
     "price": "$40/$71",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787062466448,
+    "title": "Dizgo, Kale",
+    "date": "2026-10-22",
+    "time": "20:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$29/$50",
+    "free": false,
+    "_manual": true
   }
 ]
