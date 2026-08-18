@@ -2246,5 +2246,18 @@
     "price": "Sold Out",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787062173223,
+    "title": "Lucinda Williams & Her Band",
+    "date": "2026-10-04",
+    "time": "20:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$67",
+    "free": false,
+    "_manual": true
   }
 ]
