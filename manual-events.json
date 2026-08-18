@@ -2376,5 +2376,18 @@
     "price": "$51/$77/$80bothdays",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787062850470,
+    "title": "God Street Wine",
+    "date": "2026-11-01",
+    "time": "18:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$51/$77/$80bothdays",
+    "free": false,
+    "_manual": true
   }
 ]
