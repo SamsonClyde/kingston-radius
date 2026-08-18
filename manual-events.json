@@ -2818,5 +2818,18 @@
     "price": "$29",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787067643494,
+    "title": "Willie Nile",
+    "date": "2026-09-02",
+    "time": "19:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$40",
+    "free": false,
+    "_manual": true
   }
 ]
