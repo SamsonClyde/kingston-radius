@@ -639,5 +639,9 @@
   "Hudson River Cruises||2026-08-21||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787078141654
+  },
+  "Hudson River Maritime Museum||2026-08-20||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787078599701
   }
 }
