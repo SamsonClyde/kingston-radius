@@ -4079,5 +4079,18 @@
     "price": "$28",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787074563704,
+    "title": "Mountaintop Variety Hour",
+    "date": "2027-01-30",
+    "time": "19:00",
+    "venue": "Doctorow Center (Catskill Mountain Foundation)",
+    "venueUrl": "https://www.catskillmtn.org/performances/",
+    "location": "Hunter, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LnFs5qhwS73VKaBh9",
+    "price": "Pay what you can",
+    "free": false,
+    "_manual": true
   }
 ]
