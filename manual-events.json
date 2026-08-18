@@ -765,7 +765,7 @@
   {
     "id": 1786455232804,
     "title": "CRN - Sharlese, Nick Schiarizzi, Christopher Michael Hefner, SVB (21+)",
-    "date": "2026-09-19",
+    "date": "2026-08-19",
     "time": "21:00",
     "venue": "Avalon Lounge",
     "venueUrl": "https://www.theavalonlounge.com/show-calendar",
@@ -773,8 +773,7 @@
     "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
     "price": "$15",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1786455298549,
@@ -1368,6 +1367,19 @@
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$17adv/$23door",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1787019032450,
+    "title": "Professor Louie & The Crowmatrix",
+    "date": "2026-09-06",
+    "time": "18:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "Donation",
     "free": false,
     "_manual": true
   }
