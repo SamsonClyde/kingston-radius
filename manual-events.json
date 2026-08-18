@@ -1447,5 +1447,18 @@
     "price": "$45adv/$66adv",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787019651153,
+    "title": "Lindsey Webster",
+    "date": "2026-09-13",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$23adv/$40adv/$25door/$40door",
+    "free": false,
+    "_manual": true
   }
 ]
