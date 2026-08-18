@@ -1617,5 +1617,18 @@
     "price": "$75",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787021689685,
+    "title": "Summer Hoot 28th-30th Sunday: Gong Bath with Love Waves, Bugs on a Log, Andalucía, The Moon Shells, Gail Ann Dorsey, The Big Takeover, Jay Ungar & Molly Mason, Jim Kweskin & Samoa Wilson",
+    "date": "2026-08-30",
+    "time": "10:30",
+    "venue": "The Ashokan Center",
+    "venueUrl": "https://ashokancenter.org/events/",
+    "location": "Olivebridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
+    "price": "$55",
+    "free": false,
+    "_manual": true
   }
 ]
