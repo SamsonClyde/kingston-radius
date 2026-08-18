@@ -1713,5 +1713,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787057744270,
+    "title": "Temple Roots",
+    "date": "2026-08-29",
+    "time": "22:00",
+    "venue": "Bacchus",
+    "venueUrl": "https://bacchusnewpaltz.com/music-events",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/wttxmc4veyLzkc1s6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
