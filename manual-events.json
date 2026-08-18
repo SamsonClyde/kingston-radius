@@ -1687,5 +1687,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1787056871550,
+    "title": "Leo Belsky",
+    "date": "2026-08-22",
+    "time": "21:00",
+    "venue": "BackBar",
+    "venueUrl": "https://www.facebook.com/backbarhudson/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vNsveLibaz7gbVNc6",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
