@@ -4825,5 +4825,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1787077538232,
+    "title": "Swim Club with Good Bar Presents: Disco Summer Camp (Sept 4th-7th) Lauren Murada, Finn Jones, Timo Lee & friends",
+    "date": "2026-09-07",
+    "time": "14:00",
+    "venue": "Glen Falls House",
+    "venueUrl": "https://glenfallshouse.com/event-calendar",
+    "location": "Round Top, NY",
+    "mapsUrl": "https://maps.app.goo.gl/e5cQbFy9xvXC6EaKA",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
