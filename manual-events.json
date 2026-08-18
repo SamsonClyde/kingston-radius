@@ -3754,5 +3754,18 @@
     "price": "$40-$55",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787071563252,
+    "title": "Moondance (Van Morrison Cover Band)",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$40-$50",
+    "free": false,
+    "_manual": true
   }
 ]
