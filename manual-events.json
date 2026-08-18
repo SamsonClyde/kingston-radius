@@ -3377,5 +3377,18 @@
     "price": "$34-$45",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787070233252,
+    "title": "Last Exit (Pearl Jam Cover Band) Night Two",
+    "date": "2026-10-17",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$34-$45",
+    "free": false,
+    "_manual": true
   }
 ]
