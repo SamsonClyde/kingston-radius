@@ -635,5 +635,9 @@
   "Glen Falls House||2026-12-30||": {
     "status": "rejected",
     "hiddenAt": 1787077557531
+  },
+  "Hudson River Cruises||2026-08-21||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787078141654
   }
 }
