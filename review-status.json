@@ -475,5 +475,10 @@
     "status": "rejected",
     "hiddenAt": 1787076335415
   },
-  "The Falcon||2026-09-20||19:30": "approved"
+  "The Falcon||2026-09-20||19:30": "approved",
+  "The Falcon||2026-09-24||See website": {
+    "status": "rejected",
+    "hiddenAt": 1787076353711
+  },
+  "The Falcon||2026-09-24||19:30": "approved"
 }
