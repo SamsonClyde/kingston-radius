@@ -1595,7 +1595,7 @@
   {
     "id": 244,
     "date": "2026-08-28",
-    "title": "Summer Hoot 28th-30th Friday: Mike & Ruthy, Tuba Skinny, Kara McKee, The Milk Carton Kids, The Next Great American Novelist, Picnic Committee",
+    "title": "Summer Hoot 28th-30th Mike & Ruthy, Tuba Skinny, Kara McKee, The Milk Carton Kids, The Next Great American Novelist, Picnic Committee",
     "venue": "The Ashokan Center",
     "venueUrl": "https://ashokancenter.org/product/summer-hoot-2026",
     "location": "Olivebridge, NY",
@@ -1603,7 +1603,7 @@
     "time": "19:00",
     "price": "$55",
     "free": false,
-    "_source": "manual",
+    "_source": "scraped",
     "_manual": true
   },
   {
@@ -2529,10 +2529,9 @@
     "venueUrl": "https://www.bethelwoodscenter.org/events",
     "location": "Bethel, NY",
     "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
-    "price": "Donation/$28-$140",
+    "price": "Donation/$28/$35/$42/$55/$66/$78/$100/$118/$140",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787064916218,
@@ -2686,10 +2685,9 @@
     "venueUrl": "https://darylshouseclub.com/shows/",
     "location": "Pawling, NY",
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "RSVP Brunch",
+    "price": "RSVP",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787067110855,
@@ -4838,6 +4836,19 @@
     "location": "Round Top, NY",
     "mapsUrl": "https://maps.app.goo.gl/e5cQbFy9xvXC6EaKA",
     "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1787078373570,
+    "title": "So Many Roads (Grateful Dead Cover Band)",
+    "date": "2026-08-21",
+    "time": "19:00",
+    "venue": "Hudson River Cruises",
+    "venueUrl": "https://www.hrmm.org/events.html",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/nDSfFKfhuTC2qNns7",
+    "price": "$45",
     "free": false,
     "_manual": true
   }
