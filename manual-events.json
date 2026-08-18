@@ -2597,5 +2597,18 @@
     "price": "$52-$184",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787065477333,
+    "title": "John Fogerty & Steve Winwood",
+    "date": "2026-09-13",
+    "time": "19:30",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "price": "$50-$216",
+    "free": false,
+    "_manual": true
   }
 ]
