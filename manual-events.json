@@ -2558,5 +2558,18 @@
     "price": "$61-$291",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787065131264,
+    "title": "Jerry Garcia Symphonic Celebration - Melvin Seals, Jacklyn LaBranch, Tom Hamilton, Grahame Lesh, John Morgan Kimock, Kanika Moore",
+    "date": "2026-08-30",
+    "time": "20:00",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "price": "$55-$177",
+    "free": false,
+    "_manual": true
   }
 ]
