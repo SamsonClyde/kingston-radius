@@ -3923,5 +3923,18 @@
     "price": "$45-$66",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787072264023,
+    "title": "Remedy (Black Crowes Cover Band)",
+    "date": "2027-01-03",
+    "time": "19:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$22-$34",
+    "free": false,
+    "_manual": true
   }
 ]
