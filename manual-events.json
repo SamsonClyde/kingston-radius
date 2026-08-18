@@ -2935,5 +2935,18 @@
     "price": "$29-$34",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787068118332,
+    "title": "The Discoteks",
+    "date": "2026-09-11",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$40-$55",
+    "free": false,
+    "_manual": true
   }
 ]
