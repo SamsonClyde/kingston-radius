@@ -3689,5 +3689,18 @@
     "price": "$29-$45",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787071351573,
+    "title": "Meet Loaf",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$40",
+    "free": false,
+    "_manual": true
   }
 ]
