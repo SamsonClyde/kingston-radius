@@ -1673,5 +1673,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 439,
+    "date": "2026-11-07",
+    "title": "Ashokan Barn Dance at Banjo Weekend: 6pm Dinner, Greg Cahill, Brad Kolodner, Gretchen Bowder, Ken Perlman, Janie Rothfield, Maggie Shar, Peter Davis, Melissa Bragdon Caron, Jeff Wasbed & Scott Hopkins, jambassadors",
+    "venue": "The Ashokan Center",
+    "venueUrl": "https://ashokancenter.org/product/banjo-concert-2026",
+    "location": "Olivebridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
+    "time": "19:30",
+    "price": "$20door/$25dinner",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
