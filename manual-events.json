@@ -2686,9 +2686,10 @@
     "venueUrl": "https://darylshouseclub.com/shows/",
     "location": "Pawling, NY",
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "RSVP",
+    "price": "RSVP Brunch",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787067110855,
