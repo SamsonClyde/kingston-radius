@@ -4040,5 +4040,18 @@
     "price": "$28",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787074244810,
+    "title": "Sir Elton with Lance Millard (Elton John Covers)",
+    "date": "2026-10-31",
+    "time": "19:00",
+    "venue": "Orpheum Preforming Arts Center (Catskill Mountain Foundation)",
+    "venueUrl": "https://www.catskillmtn.org/performances/",
+    "location": "Tannersville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/8SaKNQ6G3qhXU6hD6",
+    "price": "$44",
+    "free": false,
+    "_manual": true
   }
 ]
