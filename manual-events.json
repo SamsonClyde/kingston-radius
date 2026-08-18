@@ -4066,5 +4066,18 @@
     "price": "$28",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787074474552,
+    "title": "The Nutcracker (5th, 6th, 12th, 13th) 2pm, 7pm",
+    "date": "2026-12-13",
+    "time": "14:00",
+    "venue": "Orpheum Preforming Arts Center (Catskill Mountain Foundation)",
+    "venueUrl": "https://www.catskillmtn.org/performances/",
+    "location": "Tannersville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/8SaKNQ6G3qhXU6hD6",
+    "price": "$28",
+    "free": false,
+    "_manual": true
   }
 ]
