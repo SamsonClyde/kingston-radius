@@ -4223,5 +4223,19 @@
     "price": "ReserveFree",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 188,
+    "date": "2026-08-19",
+    "title": "John \"Papa\" Gros",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "19:30",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
