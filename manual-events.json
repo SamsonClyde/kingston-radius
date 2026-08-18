@@ -1778,5 +1778,18 @@
     "price": "$119/$172/$224/$276",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787058599212,
+    "title": "Neko Case",
+    "date": "2026-10-22",
+    "time": "19:00",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
+    "price": "$62/$73/$96",
+    "free": false,
+    "_manual": true
   }
 ]
