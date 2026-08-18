@@ -1395,5 +1395,18 @@
     "price": "Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787019284898,
+    "title": "Drivin' N' Cryin'",
+    "date": "2026-09-10",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$29adv/$45adv/$35door/$50door",
+    "free": false,
+    "_manual": true
   }
 ]
