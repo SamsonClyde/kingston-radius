@@ -4601,5 +4601,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 402,
+    "date": "2026-10-15",
+    "title": "LOVE DELUXE: a SADE tribute | Natalie Forteza",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "19:30",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
