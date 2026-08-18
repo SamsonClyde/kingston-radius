@@ -4864,5 +4864,18 @@
     "price": "$10/$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787078669447,
+    "title": "David Coller & Diane Chodkowski: An Evening of Folk & Maritime Music",
+    "date": "2026-09-05",
+    "time": "19:00",
+    "venue": "Hudson River Maritime Museum",
+    "venueUrl": "https://www.hrmm.org/events.html",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/BeMvKWTL7bdDv5uB6",
+    "price": "$23/$25",
+    "free": false,
+    "_manual": true
   }
 ]
