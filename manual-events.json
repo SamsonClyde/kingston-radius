@@ -2701,5 +2701,18 @@
     "price": "$29",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787067154451,
+    "title": "The Kenn Morr Duo",
+    "date": "2026-08-23",
+    "time": "12:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
