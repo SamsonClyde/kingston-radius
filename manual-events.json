@@ -1700,5 +1700,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787057701985,
+    "title": "Talk2Me",
+    "date": "2026-08-28",
+    "time": "22:00",
+    "venue": "Bacchus",
+    "venueUrl": "https://bacchusnewpaltz.com/music-events",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/wttxmc4veyLzkc1s6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
