@@ -1631,5 +1631,19 @@
     "price": "$55",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 342,
+    "date": "2026-09-20",
+    "title": "Ukrainian Community Day",
+    "venue": "The Ashokan Center",
+    "venueUrl": "https://ashokancenter.org/product/ukrainian-community-day-2026",
+    "location": "Olivebridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
+    "time": "12:00",
+    "price": "$20",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
