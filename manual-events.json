@@ -5222,5 +5222,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787159807801,
+    "title": "Woodsist Festival - Destroyer, Woods, Frog, Okonski, Roger, Otto Benson, Secular Music Group, Ruby of Thanks, Tubby's DJs",
+    "date": "2026-09-26",
+    "time": "13:00",
+    "venue": "Arrowood Farms",
+    "venueUrl": "https://arrowoodfarms.com/free-music-and-events/",
+    "location": "Accord, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Lower+Whitfield+Rd+Accord+NY",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
