@@ -5008,5 +5008,18 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1787100070963,
+    "title": "Hudson Jazz Festival - Vuyo Sotashe & Chris Pattishall",
+    "date": "2026-10-03",
+    "time": "19:00",
+    "venue": "Hudson Hall",
+    "venueUrl": "https://hudsonhall.org/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
+    "price": "$35-$85",
+    "free": false,
+    "_manual": true
   }
 ]
