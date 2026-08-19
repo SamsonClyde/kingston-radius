@@ -5112,5 +5112,18 @@
     "price": "$55",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787136704133,
+    "title": "Aryeh Nussbaum Cohen (Classical)",
+    "date": "2026-11-08",
+    "time": "15:00",
+    "venue": "Hudson Hall",
+    "venueUrl": "https://hudsonhall.org/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
+    "price": "$40",
+    "free": false,
+    "_manual": true
   }
 ]
