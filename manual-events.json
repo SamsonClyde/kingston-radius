@@ -4955,5 +4955,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787097873298,
+    "title": "Gus Mancini & His Sonic Soul Band",
+    "date": "2026-08-23",
+    "time": "20:00",
+    "venue": "Green Kill",
+    "venueUrl": "https://greenkill.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=229+Green+Kill+Ave+Kingston+NY",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
