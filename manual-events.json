@@ -4997,7 +4997,7 @@
   },
   {
     "id": 1787099285014,
-    "title": "Hudson Jazz Festival - Dafnis Prieto: Sí o Sí Quartet, The Late Set, The Spark of Hudson",
+    "title": "Hudson Jazz Festival - Dafnis Prieto: Sí o Sí Quartet",
     "date": "2026-09-02",
     "time": "19:00",
     "venue": "Hudson Hall",
@@ -5006,6 +5006,7 @@
     "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
     "price": "$35-$75",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
