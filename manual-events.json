@@ -5021,5 +5021,18 @@
     "price": "$35-$85",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787100156944,
+    "title": "Hudson Jazz Festival - Shenel Johns",
+    "date": "2026-08-04",
+    "time": "17:00",
+    "venue": "Hudson Hall",
+    "venueUrl": "https://hudsonhall.org/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
+    "price": "$35-$75",
+    "free": false,
+    "_manual": true
   }
 ]
