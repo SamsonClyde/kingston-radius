@@ -5086,5 +5086,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787105063455,
+    "title": "Hudson Jazz Festival - Lady Moon & Friends (Family Concert)",
+    "date": "2026-10-04",
+    "time": "13:00",
+    "venue": "The Half Moon",
+    "venueUrl": "https://www.thehalfmoonhudson.com/events",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/2xtXkdDVa2REhf9VA",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
