@@ -4885,12 +4885,11 @@
     "time": "19:00",
     "venue": "Green Growler",
     "venueUrl": "https://www.thegreengrowler.com/events",
-    "location": "Croton-On-Hudson, NY",
+    "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/GWWFznRhKUNYef138",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787097467854,
@@ -4899,12 +4898,11 @@
     "time": "19:00",
     "venue": "Green Growler",
     "venueUrl": "https://www.thegreengrowler.com/events",
-    "location": "Croton-On-Hudson, NY",
+    "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/GWWFznRhKUNYef138",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787097512751,
@@ -4913,12 +4911,11 @@
     "time": "19:00",
     "venue": "Green Growler",
     "venueUrl": "https://www.thegreengrowler.com/events",
-    "location": "Croton-On-Hudson, NY",
+    "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/GWWFznRhKUNYef138",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787097557190,
@@ -4927,12 +4924,11 @@
     "time": "19:00",
     "venue": "Green Growler",
     "venueUrl": "https://www.thegreengrowler.com/events",
-    "location": "Croton-On-Hudson, NY",
+    "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/GWWFznRhKUNYef138",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787097777511,
@@ -5002,7 +4998,7 @@
   {
     "id": 1787099285014,
     "title": "Hudson Jazz Festival - Dafnis Prieto: Sí o Sí Quartet",
-    "date": "2026-10-02",
+    "date": "2026-09-02",
     "time": "19:00",
     "venue": "Hudson Hall",
     "venueUrl": "https://hudsonhall.org/events/",
@@ -5041,7 +5037,7 @@
   },
   {
     "id": 1787103866129,
-    "title": "Hudson Jazz Festival - Shenel Johns",
+    "title": "Shenel Johns",
     "date": "2026-10-04",
     "time": "17:00",
     "venue": "Hudson Hall",
@@ -5050,8 +5046,7 @@
     "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
     "price": "$35-$75",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787104353026,
@@ -5102,6 +5097,19 @@
     "location": "Hudson, NY",
     "mapsUrl": "https://maps.app.goo.gl/2xtXkdDVa2REhf9VA",
     "price": "$10",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1787136603796,
+    "title": "Kaleidoscope Chamber Collective (Classical)",
+    "date": "2026-10-25",
+    "time": "15:00",
+    "venue": "Hudson Hall",
+    "venueUrl": "https://hudsonhall.org/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
+    "price": "$55",
     "free": false,
     "_manual": true
   }
