@@ -5037,7 +5037,7 @@
   },
   {
     "id": 1787103866129,
-    "title": "Shenel Johns",
+    "title": "Hudson Jazz Festival - Shenel Johns",
     "date": "2026-10-04",
     "time": "17:00",
     "venue": "Hudson Hall",
@@ -5046,7 +5046,8 @@
     "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
     "price": "$35-$75",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787104353026,
