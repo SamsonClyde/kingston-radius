@@ -5177,5 +5177,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787136950930,
+    "title": "Deidamia (Opera)",
+    "date": "2026-08-25",
+    "time": "15:00",
+    "venue": "Hudson Hall",
+    "venueUrl": "https://hudsonhall.org/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
