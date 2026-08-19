@@ -5037,7 +5037,7 @@
   },
   {
     "id": 1787103866129,
-    "title": "Hudson Jazz Festival - Shenel Johns",
+    "title": "Shenel Johns",
     "date": "2026-10-04",
     "time": "17:00",
     "venue": "Hudson Hall",
@@ -5046,7 +5046,19 @@
     "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
     "price": "$35-$75",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
+  },
+  {
+    "id": 1787104353026,
+    "title": "Hudson Jazz Festival - Opening Night After Party",
+    "date": "2026-10-02",
+    "time": "21:00",
+    "venue": "The Spark of Hudson",
+    "venueUrl": "https://hudsonhall.org/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/rB9vocEDty9jRC7z5",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
