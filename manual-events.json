@@ -5073,5 +5073,18 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787104864570,
+    "title": "Hudson Jazz Festival - Vinícius Gomes",
+    "date": "2026-10-04",
+    "time": "11:00",
+    "venue": "Pocketbook Hudson",
+    "venueUrl": "https://www.pocketbookhudson.com/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/SwBvLVomLadCwgSC9",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
