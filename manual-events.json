@@ -5399,5 +5399,18 @@
     "price": "$40",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787246579549,
+    "title": "Plantasia - Flore Laurentienne, JJJJJerome Ellis, Mary Lattimore, Gigi Masin, Colin Stetson & Brìghde Chaimbeul (duo)",
+    "date": "2026-09-19",
+    "time": "15:15",
+    "venue": "Seed Song Farm",
+    "venueUrl": "https://www.plantasia-ny.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d9B5KjW2nDPeRVBV6",
+    "price": "$75day/$140both",
+    "free": false,
+    "_manual": true
   }
 ]
