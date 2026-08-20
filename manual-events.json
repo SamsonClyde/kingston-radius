@@ -5345,5 +5345,19 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 192,
+    "date": "2026-08-20",
+    "title": "THE PARANOYDS + PETER & SAMMI + GYMSHORTS",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/the-paranoyds",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "$19",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
