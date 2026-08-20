@@ -5332,5 +5332,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1787188720560,
+    "title": "Naama Tsabar & Kristin Mueller: Untitled (Double Face) - Set I 4pm, Set II 6pm",
+    "date": "2026-09-19",
+    "time": "16:00",
+    "venue": "KinoSaito",
+    "venueUrl": "https://www.kinosaito.org/performances",
+    "location": "Verplanck, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yTg4gbgoEr1tabQt5",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
