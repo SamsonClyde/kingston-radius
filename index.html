@@ -1501,6 +1501,9 @@ function renderEvents() {
     events.sort((a,b) => (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
   }
 
+  const countEl = document.getElementById('event-count');
+  if (countEl) countEl.textContent = events.length ? `${events.length} show${events.length===1?'':'s'}` : '';
+
   if (!events.length) {
     container.innerHTML = '<div style="text-align:center;padding:60px 20px;color:var(--muted);">No shows found.</div>';
     return;
@@ -1512,7 +1515,7 @@ function renderEvents() {
     events.forEach(e => { if (!groups[e.venue]) groups[e.venue] = []; groups[e.venue].push(e); });
     container.innerHTML = Object.keys(groups).sort().map(venue => `
       <div style="margin-bottom:24px;">
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);padding:6px 0;border-bottom:1px solid var(--border);margin-bottom:10px;">${venue}</div>
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);padding:6px 0;border-bottom:1px solid var(--border);margin-bottom:10px;">${venue}</div>
         ${groups[venue].map(e => buildEventCard(e, isAdmin)).join('')}
       </div>`).join('');
   } else {
