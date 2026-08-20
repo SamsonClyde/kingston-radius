@@ -710,5 +710,9 @@
     "status": "rejected",
     "hiddenAt": 1787189292778
   },
-  "Tubby's||2026-08-20||20:00": "approved"
+  "Tubby's||2026-08-20||20:00": "approved",
+  "Kaatsbaan Cultural Park||2026-08-29||11:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1787252497235
+  }
 }
