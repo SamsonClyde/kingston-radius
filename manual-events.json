@@ -5385,5 +5385,18 @@
     "price": "$45",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787224015227,
+    "title": "Sadonna",
+    "date": "2026-09-12",
+    "time": "18:00",
+    "venue": "Kaatsbaan",
+    "venueUrl": "https://kaatsbaan.org/performances-festivals",
+    "location": "Tivoli, NY",
+    "mapsUrl": "https://maps.app.goo.gl/bkAWTZ4NoBL8f4b29",
+    "price": "$40",
+    "free": false,
+    "_manual": true
   }
 ]
