@@ -651,5 +651,9 @@
   "Bearsville Theater||2026-08-21||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787159119024
+  },
+  "Castaways Bar & Grill||2026-08-21||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787186031775
   }
 }
