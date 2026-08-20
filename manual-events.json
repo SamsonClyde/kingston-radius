@@ -5249,5 +5249,19 @@
     "free": true,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 215,
+    "date": "2026-08-22",
+    "title": "Ramona Lane",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/event/ramona-lane-a-whole-nuther-kyle-miller/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "time": "19:00",
+    "price": "Free",
+    "free": true,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
