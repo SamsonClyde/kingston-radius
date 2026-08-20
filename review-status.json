@@ -331,21 +331,9 @@
     "hiddenAt": 1787053598845
   },
   "The Ashokan Center||2026-11-07||19:30": "approved",
-  "Bard College Conservatory||2026-08-19||": {
-    "status": "rejected",
-    "hiddenAt": 1787057364027
-  },
   "Bard College Conservatory||2026-09-08||5:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787057398277
-  },
-  "Colony Woodstock||2026-08-19||5:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1787057402092
-  },
-  "Colony Woodstock||2026-08-19||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1787057405452
   },
   "Colony Woodstock||2026-08-20||5:30 PM": {
     "status": "rejected",
@@ -382,10 +370,6 @@
   "Hudson River Maritime Museum||2026-09-04||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1787075842470
-  },
-  "The Falcon||2026-08-19||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787075985977
   },
   "The Falcon||2026-08-19||19:30": "approved",
   "The Falcon||2026-08-20||See website": {
@@ -656,10 +640,6 @@
     "status": "rejected",
     "hiddenAt": 1787186031775
   },
-  "Colony Woodstock||2026-08-19||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787187431237
-  },
   "Colony Woodstock||2026-08-20||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787187436756
@@ -725,10 +705,6 @@
   "Kingston, NY||2026-09-19||2:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787188990813
-  },
-  "Tubby's||2026-08-19||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787189186161
   },
   "Tubby's||2026-08-20||7:00 pm": {
     "status": "rejected",
