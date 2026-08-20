@@ -5277,5 +5277,19 @@
     "free": true,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 261,
+    "date": "2026-08-29",
+    "title": "Exit 19",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/event/exit-19-2011-06-17/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "Free",
+    "free": true,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
