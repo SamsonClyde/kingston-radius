@@ -5412,5 +5412,18 @@
     "price": "$75day/$140both",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787246699400,
+    "title": "Plantasia - Laraaji (laughter meditation workshop followed by performance), Green-House, Alabaster DePlume, SPELLLING",
+    "date": "2026-09-20",
+    "time": "12:30",
+    "venue": "Seed Song Farm",
+    "venueUrl": "https://www.plantasia-ny.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d9B5KjW2nDPeRVBV6",
+    "price": "$75day/$140both",
+    "free": false,
+    "_manual": true
   }
 ]
