@@ -721,5 +721,9 @@
   "Keegan Ales||2026-11-21||3:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787188391968
+  },
+  "Kingston, NY||2026-09-19||2:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787188990813
   }
 }
