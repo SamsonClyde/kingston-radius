@@ -5359,5 +5359,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1787223808474,
+    "title": "Valerie June",
+    "date": "2026-08-29",
+    "time": "19:00",
+    "venue": "Kaatsbaan",
+    "venueUrl": "https://kaatsbaan.org/performances-festivals",
+    "location": "Tivoli, NY",
+    "mapsUrl": "https://maps.app.goo.gl/bkAWTZ4NoBL8f4b29",
+    "price": "$50/$60",
+    "free": false,
+    "_manual": true
   }
 ]
