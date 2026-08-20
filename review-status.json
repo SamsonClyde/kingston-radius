@@ -655,5 +655,9 @@
   "Castaways Bar & Grill||2026-08-21||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787186031775
+  },
+  "Colony Woodstock||2026-08-19||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787187431237
   }
 }
