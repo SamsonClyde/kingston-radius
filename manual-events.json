@@ -5318,5 +5318,19 @@
     "price": "$20adv/$25door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 482,
+    "date": "2026-11-21",
+    "title": "DIY Kingston Fest (Keegans & Night Swim)- Jelly Kelly, King in Yellow, Grampfather, TV Sleep, Stella & The Reptilians, A Whole Nother, Kissing Well, Your Favorite Person, Tiny Blue Ghost, Hush Woods, Killer Film, Atabeya, Ramona Lane, Pour La Terre, Couch Surfer, Syncope",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://diykingston.com/diy-kingston-fest/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yCLMdARMPSq1CQUY7",
+    "time": "12:00",
+    "price": "$20adv/$25door",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
