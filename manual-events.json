@@ -5305,5 +5305,18 @@
     "free": true,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1787188246302,
+    "title": "DIY Kingston Fest (Keegans & Night Swim)- Jelly Kelly, King in Yellow, Grampfather, TV Sleep, Stella & The Reptilians, A Whole Nother, Kissing Well, Your Favorite Person, Tiny Blue Ghost, Hush Woods, Killer Film, Atabeya, Ramona Lane, Pour La Terre, Couch Surfer, Syncope",
+    "date": "2026-11-21",
+    "time": "12:00",
+    "venue": "Night Swim",
+    "venueUrl": "https://www.instagram.com/nightswimkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sZe9CAVM8vJMB9UL6",
+    "price": "$20adv/$25door",
+    "free": false,
+    "_manual": true
   }
 ]
