@@ -6511,5 +6511,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787349097413,
+    "title": "Jimmy Madison & Friends",
+    "date": "2026-10-17",
+    "time": "19:00",
+    "venue": "Lydia's Cafe",
+    "venueUrl": "https://www.lydias-cafe.com/events/",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/j6zX42zVbeShdQ6H8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
