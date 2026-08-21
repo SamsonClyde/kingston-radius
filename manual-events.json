@@ -5872,5 +5872,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 413,
+    "date": "2026-10-23",
+    "title": "Lover's Lounge (Membership Required)",
+    "venue": "Love, Velma",
+    "venueUrl": "https://www.lovevelma.com/calendar/2ngnhtfxnxt4x99d87rxexxce346zn",
+    "location": "Ellenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1N7G54TEiuvAWsch9",
+    "time": "19:00",
+    "price": "Members only",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
