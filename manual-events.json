@@ -5637,5 +5637,19 @@
     "free": true,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 384,
+    "date": "2026-10-07",
+    "title": "HORSE LORDS + SILK FENCE",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/horse-lords-silk-fence",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "$27adv",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
