@@ -5830,5 +5830,19 @@
     "free": true,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 465,
+    "date": "2027-04-29",
+    "title": "Foy Vance: The Wake World Tour",
+    "venue": "Levon Helm Studios",
+    "venueUrl": "https://levonhelm.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
+    "time": "20:00",
+    "price": "$48-$77",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
