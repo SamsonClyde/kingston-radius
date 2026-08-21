@@ -6264,5 +6264,18 @@
     "price": "$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787347959310,
+    "title": "Latin Jazz & New Orleans Piano Trailblazer : Oscar Rossignoli Trio",
+    "date": "2026-10-29",
+    "time": "19:00",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "price": "$30",
+    "free": false,
+    "_manual": true
   }
 ]
