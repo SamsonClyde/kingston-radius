@@ -6017,5 +6017,18 @@
     "price": "$30-$160",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787347020981,
+    "title": "Primal Disco with Michael V!",
+    "date": "2026-09-05",
+    "time": "18:00",
+    "venue": "Opus 40",
+    "venueUrl": "https://opus40.org/events/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/iEdR65BZUXBAEyvK7",
+    "price": "$22-$120",
+    "free": false,
+    "_manual": true
   }
 ]
