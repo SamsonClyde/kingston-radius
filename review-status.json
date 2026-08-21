@@ -928,5 +928,10 @@
     "status": "rejected",
     "hiddenAt": 1787345286261
   },
-  "Love, Velma||2026-09-25||19:30": "approved"
+  "Love, Velma||2026-09-25||19:30": "approved",
+  "Love, Velma||2026-10-03||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787345298955
+  },
+  "Love, Velma||2026-10-03||21:00": "approved"
 }
