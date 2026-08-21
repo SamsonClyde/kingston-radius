@@ -6615,5 +6615,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787349740460,
+    "title": "T McCann Band, Ed Mullaney",
+    "date": "2026-08-23",
+    "time": "16:00",
+    "venue": "Mahoney's Irish Pub",
+    "venueUrl": "https://mahoneysirishpub.com/nightlife",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/DxjFihFPL3R4LVGB9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
