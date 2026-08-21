@@ -6251,5 +6251,18 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787347918543,
+    "title": "Ma Rainey’s Living Tradition of the Blues",
+    "date": "2026-10-25",
+    "time": "17:00",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "price": "$30",
+    "free": false,
+    "_manual": true
   }
 ]
