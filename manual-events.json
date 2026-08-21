@@ -5525,5 +5525,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 309,
+    "date": "2026-09-12",
+    "title": "HAMMERED HULLS + SPAIN (TOUR KICKOFF) + NO MOMENTUM + LOW FICTION",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/hammered-hulls-spain-tour-kickoff-no-momentum-low-fiction",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "$20adv",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
