@@ -6329,5 +6329,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787348205814,
+    "title": "Afro Funk: Kaleta & Super Yamba Band",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "price": "$30",
+    "free": false,
+    "_manual": true
   }
 ]
