@@ -5707,5 +5707,19 @@
     "free": true,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 423,
+    "date": "2026-10-27",
+    "title": "AK’CHAMEL + ECOLOGY HOMESTONES",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/akchamel-ecology-homestones",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "$25adv",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
