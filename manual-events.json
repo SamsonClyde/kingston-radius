@@ -5539,5 +5539,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 320,
+    "date": "2026-09-14",
+    "title": "L'RAIN",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/lrain-1",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "$26adv",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
