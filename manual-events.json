@@ -5952,5 +5952,18 @@
     "price": "$27/$103",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787345998467,
+    "title": "Escaper w/ opener Trippy Sitter",
+    "date": "2026-10-09",
+    "time": "20:00",
+    "venue": "The Lemon Squeeze",
+    "venueUrl": "https://thelemonsqueezenewpaltz.com/events/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
+    "price": "$16",
+    "free": false,
+    "_manual": true
   }
 ]
