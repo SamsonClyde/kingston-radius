@@ -5647,9 +5647,9 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
     "time": "20:00",
-    "price": "$27adv",
+    "price": "Sold Out/$27adv",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
