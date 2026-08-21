@@ -6199,5 +6199,18 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787347719808,
+    "title": "Seeds Under Nuclear Winter: An Earth Opera with Andes Manta and Mamalama",
+    "date": "2026-10-17",
+    "time": "20:00",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "price": "$30",
+    "free": false,
+    "_manual": true
   }
 ]
