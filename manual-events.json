@@ -5427,5 +5427,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 216,
+    "date": "2026-08-23",
+    "title": "CLOUD NOTHINGS + KNIFEPLAY",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/cloud-nothings-knifeplay",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "Sold Out",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
