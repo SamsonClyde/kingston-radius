@@ -913,5 +913,10 @@
     "status": "rejected",
     "hiddenAt": 1787345134864
   },
-  "Levon Helm Studios||2027-04-29||20:00": "approved"
+  "Levon Helm Studios||2027-04-29||20:00": "approved",
+  "Love, Velma||2026-08-28||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787345218398
+  },
+  "Love, Velma||2026-08-28||21:00": "approved"
 }
