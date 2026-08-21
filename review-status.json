@@ -908,5 +908,10 @@
     "status": "rejected",
     "hiddenAt": 1787345081501
   },
-  "Levon Helm Studios||2026-09-26||20:00": "approved"
+  "Levon Helm Studios||2026-09-26||20:00": "approved",
+  "Levon Helm Studios||2027-04-29||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787345134864
+  },
+  "Levon Helm Studios||2027-04-29||20:00": "approved"
 }
