@@ -6030,5 +6030,18 @@
     "price": "$22-$120",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787347117719,
+    "title": "$500, New Orthodox",
+    "date": "2026-09-09",
+    "time": "19:30",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
