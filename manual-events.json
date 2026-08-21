@@ -5803,5 +5803,18 @@
     "price": "$13adv/Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787344831471,
+    "title": "Caribbean Festival",
+    "date": "2026-08-22",
+    "time": "12:00",
+    "venue": "Kingston Point Beach",
+    "venueUrl": "https://www.facebook.com/hudsonvalleycaribbeancarnival/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/ntbGcGzhNFdfjaio7",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
