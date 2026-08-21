@@ -6576,5 +6576,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787349274405,
+    "title": "Elsa Nillson",
+    "date": "2026-11-21",
+    "time": "19:00",
+    "venue": "Lydia's Cafe",
+    "venueUrl": "https://www.lydias-cafe.com/events/",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/j6zX42zVbeShdQ6H8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
