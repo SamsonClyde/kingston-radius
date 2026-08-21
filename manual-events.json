@@ -5978,5 +5978,18 @@
     "price": "$11",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787346848030,
+    "title": "Euphonia: A Balkan & Brass Music Festival",
+    "date": "2026-08-22",
+    "time": "15:30",
+    "venue": "Opus 40",
+    "venueUrl": "https://opus40.org/events/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/iEdR65BZUXBAEyvK7",
+    "price": "$25-$65",
+    "free": false,
+    "_manual": true
   }
 ]
