@@ -6394,5 +6394,18 @@
     "price": "$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787348520021,
+    "title": "Gospel Holiday: Damien Sneed",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
