@@ -5912,7 +5912,8 @@
     "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
     "price": "$26/$52",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787345897716,
