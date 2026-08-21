@@ -6407,5 +6407,18 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787348543898,
+    "title": "Gabriel Kahane: Every Love Song Is a Protest",
+    "date": "2027-02-06",
+    "time": "20:00",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
