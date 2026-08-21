@@ -6628,5 +6628,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787349809980,
+    "title": "The Blend",
+    "date": "2026-08-28",
+    "time": "19:00",
+    "venue": "Mahoney's Irish Pub",
+    "venueUrl": "https://mahoneysirishpub.com/nightlife",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/DxjFihFPL3R4LVGB9",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
