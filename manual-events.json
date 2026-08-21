@@ -6290,5 +6290,18 @@
     "price": "$46",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787348024270,
+    "title": "Jazz Saxophone Trailblazer: Rudresh Mahanthappa Hero Trio",
+    "date": "2026-11-01",
+    "time": "17:00",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "price": "$30",
+    "free": false,
+    "_manual": true
   }
 ]
