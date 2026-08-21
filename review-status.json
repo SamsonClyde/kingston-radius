@@ -898,5 +898,10 @@
   "Kingston Point Beach||2026-08-22||3:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787344947407
-  }
+  },
+  "Levon Helm Studios||2026-09-25||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787345048667
+  },
+  "Levon Helm Studios||2026-09-25||20:00": "approved"
 }
