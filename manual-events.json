@@ -5401,29 +5401,17 @@
     "_manual": true
   },
   {
-    "id": 1787246579549,
-    "title": "Plantasia - Flore Laurentienne, JJJJJerome Ellis, Mary Lattimore, Gigi Masin, Colin Stetson & Brìghde Chaimbeul (duo)",
-    "date": "2026-09-19",
-    "time": "15:15",
-    "venue": "Seed Song Farm",
-    "venueUrl": "https://www.plantasia-ny.com/",
+    "id": 189,
+    "date": "2026-08-21",
+    "title": "LIVE WELL + CELLMATE + GIRLS WISH",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/live-well-cellmate-girls-wish",
     "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/d9B5KjW2nDPeRVBV6",
-    "price": "$75day/$140both",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1787246699400,
-    "title": "Plantasia - Laraaji (laughter meditation workshop followed by performance), Green-House, Alabaster DePlume, SPELLLING",
-    "date": "2026-09-20",
-    "time": "12:30",
-    "venue": "Seed Song Farm",
-    "venueUrl": "https://www.plantasia-ny.com/",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/d9B5KjW2nDPeRVBV6",
-    "price": "$75day/$140both",
-    "free": false,
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "$19",
+    "free": true,
+    "_source": "scraped",
     "_manual": true
   }
 ]
