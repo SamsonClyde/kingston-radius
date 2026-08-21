@@ -6368,5 +6368,18 @@
     "price": "$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787348318507,
+    "title": "Songs from the Rat Pack to the Andrew Sisters: Duchess",
+    "date": "2026-12-03",
+    "time": "19:00",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "price": "$30",
+    "free": false,
+    "_manual": true
   }
 ]
