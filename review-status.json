@@ -800,5 +800,10 @@
   "Tubby's||2026-09-26||4:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787310084198
-  }
+  },
+  "Tubby's||2026-09-27||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787310110062
+  },
+  "Tubby's||2026-09-27||20:00": "approved"
 }
