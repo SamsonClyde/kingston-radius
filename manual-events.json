@@ -5991,5 +5991,18 @@
     "price": "$25-$65",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787346888274,
+    "title": "Akwesasne Freedom School Benefit",
+    "date": "2026-08-29",
+    "time": "17:00",
+    "venue": "Opus 40",
+    "venueUrl": "https://opus40.org/events/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/iEdR65BZUXBAEyvK7",
+    "price": "$15-$100",
+    "free": false,
+    "_manual": true
   }
 ]
