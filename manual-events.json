@@ -6186,5 +6186,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787347687201,
+    "title": "The Voice of Cape Verde: Lucibela",
+    "date": "2026-10-15",
+    "time": "19:00",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
