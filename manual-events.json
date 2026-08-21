@@ -6173,5 +6173,18 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787347661036,
+    "title": "Nic Panken",
+    "date": "2026-10-14",
+    "time": "19:30",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
