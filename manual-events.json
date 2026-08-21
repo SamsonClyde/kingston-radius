@@ -6121,5 +6121,18 @@
     "price": "$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787347507827,
+    "title": "Jazz Trumpet Trailblazer: Adam O’Farrill’s ELEPHANT",
+    "date": "2026-10-04",
+    "time": "17:00",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "price": "$24",
+    "free": false,
+    "_manual": true
   }
 ]
