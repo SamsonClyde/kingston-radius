@@ -894,5 +894,9 @@
     "status": "rejected",
     "hiddenAt": 1787344940864
   },
-  "Keegan Ales||2026-09-13||14:00": "approved"
+  "Keegan Ales||2026-09-13||14:00": "approved",
+  "Kingston Point Beach||2026-08-22||3:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787344947407
+  }
 }
