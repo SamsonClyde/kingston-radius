@@ -5777,5 +5777,18 @@
     "free": true,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1787310666747,
+    "title": "LUCY (Cooper B. Handy) + Gods Wisdom",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
