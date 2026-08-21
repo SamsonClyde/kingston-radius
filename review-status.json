@@ -885,5 +885,9 @@
     "status": "rejected",
     "hiddenAt": 1787310564163
   },
-  "Tubby's||2026-11-20||20:00": "approved"
+  "Tubby's||2026-11-20||20:00": "approved",
+  "Greig Farm||2026-08-21||": {
+    "status": "rejected",
+    "hiddenAt": 1787344593700
+  }
 }
