@@ -6851,5 +6851,18 @@
     "price": "Free/Family Event",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787399979723,
+    "title": "Azkana Trio (classsical)",
+    "date": "2026-08-29",
+    "time": "14:00",
+    "venue": "Old Dutch Church",
+    "venueUrl": "https://maverickconcerts.org/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yuvCVGBQVs4zNbK3A",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
