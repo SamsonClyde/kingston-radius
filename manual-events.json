@@ -6695,5 +6695,18 @@
     "price": "$36-$252",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787398208982,
+    "title": "“Bella Notte” Italian Night at the Park - Angela Bruno",
+    "date": "2026-08-30",
+    "time": "18:00",
+    "venue": "Marlboro Free Library",
+    "venueUrl": "https://marlborolibrary.org/event/bella-notte-italian-night-at-the-park-sun-aug-30-6pm/",
+    "location": "Milton, NY",
+    "mapsUrl": "https://maps.app.goo.gl/32eMSzVECzmifcRn8",
+    "price": "Wait List",
+    "free": false,
+    "_manual": true
   }
 ]
