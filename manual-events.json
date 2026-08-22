@@ -6667,5 +6667,18 @@
     "price": "$10-$50",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787366572227,
+    "title": "Famous Garlic Jam Festival - Day Two - LOCAL HUDSON VALLEY BANDS ALL WEEKEND",
+    "date": "2026-09-06",
+    "time": "12:00",
+    "venue": "MJN Convention Center",
+    "venueUrl": "https://mjncenter.org/events",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/a53KZKRM3SAspejd6",
+    "price": "$10-$50",
+    "free": false,
+    "_manual": true
   }
 ]
