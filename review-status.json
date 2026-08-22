@@ -948,5 +948,9 @@
   "Assembly Kingston||2026-09-21||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787397795764
+  },
+  "Hudson River Cruises||2026-09-05||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787397801763
   }
 }
