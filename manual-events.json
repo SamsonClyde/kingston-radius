@@ -6825,5 +6825,18 @@
     "price": "$12-$54",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787399721437,
+    "title": "American Chamber Music Society with Reed Tetzloff",
+    "date": "2026-08-23",
+    "time": "16:00",
+    "venue": "Maverick Concert Hall",
+    "venueUrl": "https://maverickconcerts.org/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/R5aNs4FxbD2kdjpP7",
+    "price": "$12-$59",
+    "free": false,
+    "_manual": true
   }
 ]
