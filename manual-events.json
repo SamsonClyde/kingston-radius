@@ -6864,5 +6864,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787400036516,
+    "title": "Cindy Cashdollar, Jack Pettruzzelli & Friends and High Low Duo",
+    "date": "2026-08-29",
+    "time": "20:00",
+    "venue": "Maverick Concert Hall",
+    "venueUrl": "https://maverickconcerts.org/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/R5aNs4FxbD2kdjpP7",
+    "price": "$12-$54",
+    "free": false,
+    "_manual": true
   }
 ]
