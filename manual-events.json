@@ -5912,8 +5912,7 @@
     "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
     "price": "$26/$52",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787345897716,
@@ -5926,8 +5925,7 @@
     "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
     "price": "$11",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787345929249,
@@ -5940,8 +5938,7 @@
     "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
     "price": "$16",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787345966377,
@@ -5954,8 +5951,7 @@
     "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
     "price": "$27/$103",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787345998467,
@@ -5981,8 +5977,7 @@
     "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
     "price": "$11",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787346848030,
@@ -6644,6 +6639,19 @@
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.app.goo.gl/DxjFihFPL3R4LVGB9",
     "price": "$20",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1787366330309,
+    "title": "Theory of a Deadman, Sevendust",
+    "date": "2026-08-25",
+    "time": "19:00",
+    "venue": "MJN Convention Center",
+    "venueUrl": "https://mjncenter.org/events",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/a53KZKRM3SAspejd6",
+    "price": "$61-$120",
     "free": false,
     "_manual": true
   }
