@@ -7007,5 +7007,18 @@
     "price": "$95-$395festivalpass",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787442046215,
+    "title": "Chamber Group - III: Brahms, E Minor Cello Sonata | Beethoven, \"Archduke\" Trio",
+    "date": "2026-09-04",
+    "time": "18:00",
+    "venue": "Round Barn at Churchtown Dairy",
+    "venueUrl": "https://www.chambermusicchurchtown.org/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/h4PdY8CggT96qEBX9",
+    "price": "$95-$395festivalpass",
+    "free": false,
+    "_manual": true
   }
 ]
