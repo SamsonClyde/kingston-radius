@@ -6786,5 +6786,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787399281696,
+    "title": "Earl Sweatshirt + Mike, harrison (SURF GANG), Anysia Kym",
+    "date": "2026-10-20",
+    "time": "20:00",
+    "venue": "MASS MoCA",
+    "venueUrl": "https://massmoca.org/performances/",
+    "location": "North Adams, MA",
+    "mapsUrl": "https://maps.app.goo.gl/SttEGBLzqFEAu41cA",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
