@@ -7033,5 +7033,18 @@
     "price": "$95-$395festivalpass",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787442275203,
+    "title": "Chamber Group - V: Brahms, Horn Trio | Dvořák, Piano Quartet No. 2",
+    "date": "2026-09-06",
+    "time": "15:00",
+    "venue": "Round Barn at Churchtown Dairy",
+    "venueUrl": "https://www.chambermusicchurchtown.org/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/h4PdY8CggT96qEBX9",
+    "price": "$95-$395festivalpass",
+    "free": false,
+    "_manual": true
   }
 ]
