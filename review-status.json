@@ -944,5 +944,9 @@
     "status": "rejected",
     "hiddenAt": 1787345373010
   },
-  "Love, Velma||2027-02-13||20:00": "approved"
+  "Love, Velma||2027-02-13||20:00": "approved",
+  "Assembly Kingston||2026-09-21||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787397795764
+  }
 }
