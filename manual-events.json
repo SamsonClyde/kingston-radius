@@ -6680,5 +6680,18 @@
     "price": "$10-$50",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787366682096,
+    "title": "Mohammad Assaf",
+    "date": "2026-09-18",
+    "time": "20:00",
+    "venue": "MJN Convention Center",
+    "venueUrl": "https://mjncenter.org/events",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/a53KZKRM3SAspejd6",
+    "price": "$36-$252",
+    "free": false,
+    "_manual": true
   }
 ]
