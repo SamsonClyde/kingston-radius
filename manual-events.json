@@ -6968,5 +6968,18 @@
     "price": "$12-$54",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787400494677,
+    "title": "Woodstock Land Conservancy Presents: Celebration of Zena: An Immersive Forest Experience",
+    "date": "2026-09-26",
+    "time": "19:00",
+    "venue": "Maverick Concert Hall",
+    "venueUrl": "https://maverickconcerts.org/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/R5aNs4FxbD2kdjpP7",
+    "price": "Free/RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
