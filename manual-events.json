@@ -6773,5 +6773,18 @@
     "price": "$59-$99",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787399216887,
+    "title": "Hug: Devendra Banhart",
+    "date": "2026-10-09",
+    "time": "20:00",
+    "venue": "MASS MoCA",
+    "venueUrl": "https://massmoca.org/performances/",
+    "location": "North Adams, MA",
+    "mapsUrl": "https://maps.app.goo.gl/SttEGBLzqFEAu41cA",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
