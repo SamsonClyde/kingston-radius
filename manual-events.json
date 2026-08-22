@@ -6708,5 +6708,18 @@
     "price": "Wait List",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787398452720,
+    "title": "The Hudson Valley Chamber Musicians - A Tour of Europe through Music (classical)",
+    "date": "2026-11-10",
+    "time": "18:00",
+    "venue": "Marlboro Free Library",
+    "venueUrl": "https://marlborolibrary.org/event/hudson-valley-chamber-musicians-concert-tues-nov-10-6pm/",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.app.goo.gl/avcU8nD3nmGFRfpK7",
+    "price": "RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
