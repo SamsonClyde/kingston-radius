@@ -6890,5 +6890,18 @@
     "price": "$12-$59",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787400121617,
+    "title": "Marco Benevento & Friends",
+    "date": "2026-09-04",
+    "time": "20:00",
+    "venue": "Maverick Concert Hall",
+    "venueUrl": "https://maverickconcerts.org/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/R5aNs4FxbD2kdjpP7",
+    "price": "$12-$59",
+    "free": false,
+    "_manual": true
   }
 ]
