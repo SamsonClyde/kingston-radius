@@ -6877,5 +6877,18 @@
     "price": "$12-$54",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787400088176,
+    "title": "Chamber Music Society of featuring Worth (classical)",
+    "date": "2026-08-30",
+    "time": "16:00",
+    "venue": "Maverick Concert Hall",
+    "venueUrl": "https://maverickconcerts.org/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/R5aNs4FxbD2kdjpP7",
+    "price": "$12-$59",
+    "free": false,
+    "_manual": true
   }
 ]
