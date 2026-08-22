@@ -6994,5 +6994,18 @@
     "price": "$95-$395festivalpass",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787441911552,
+    "title": "Chamber Group - II: Dvořák, String Sextet | Schubert, Death and the Maiden",
+    "date": "2026-08-30",
+    "time": "15:00",
+    "venue": "Round Barn at Churchtown Dairy",
+    "venueUrl": "https://www.chambermusicchurchtown.org/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/h4PdY8CggT96qEBX9",
+    "price": "$95-$395festivalpass",
+    "free": false,
+    "_manual": true
   }
 ]
