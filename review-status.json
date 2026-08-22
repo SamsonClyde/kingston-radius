@@ -952,5 +952,9 @@
   "Hudson River Cruises||2026-09-05||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787397801763
+  },
+  "Lydia's Cafe||2026-08-29||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787397806151
   }
 }
