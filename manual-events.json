@@ -8612,5 +8612,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787510696281,
+    "title": "Sin Against Sin, Palehorse, Schorched Earth Policy, Gemstar",
+    "date": "2026-09-19",
+    "time": "19:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
