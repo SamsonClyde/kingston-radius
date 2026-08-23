@@ -7177,5 +7177,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787454997900,
+    "title": "Sade Night - John McSwain (AKA DJ Vacations) With Everything Nice",
+    "date": "2026-08-30",
+    "time": "17:00",
+    "venue": "Mirador",
+    "venueUrl": "https://www.instagram.com/miradorkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fFdKACjcf86gXeXj6",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
