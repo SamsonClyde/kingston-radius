@@ -8300,5 +8300,18 @@
     "price": "$44-$59",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787509053141,
+    "title": "Classic Skynyrd Live (Lynyrd Skynyrd Cover Band)",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$39-$52",
+    "free": false,
+    "_manual": true
   }
 ]
