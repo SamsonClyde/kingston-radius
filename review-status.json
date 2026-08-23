@@ -1146,5 +1146,9 @@
     "status": "rejected",
     "hiddenAt": 1787492012423
   },
-  "Stissing Center||2026-08-29||19:30": "approved"
+  "Stissing Center||2026-08-29||19:30": "approved",
+  "Stissing Center||2026-09-20||3:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1787492052719
+  }
 }
