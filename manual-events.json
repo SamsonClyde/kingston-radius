@@ -7506,5 +7506,18 @@
     "price": "$30-40adv/$40-50door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787493509550,
+    "title": "Brazilian Rhythms",
+    "date": "2026-10-17",
+    "time": "19:30",
+    "venue": "Stissing Center",
+    "venueUrl": "https://stissingcenter.org/events/",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
+    "price": "$35adv/$45door",
+    "free": false,
+    "_manual": true
   }
 ]
