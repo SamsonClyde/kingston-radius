@@ -8573,5 +8573,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787510455706,
+    "title": "Alessandra Gonzalez",
+    "date": "2026-09-05",
+    "time": "19:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
