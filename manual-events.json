@@ -8625,5 +8625,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787510833372,
+    "title": "Savage Mystic, God's Favorite, LMI, Pressed Luck, New York Nicks",
+    "date": "2026-08-29",
+    "time": "19:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "price": "$10/$20",
+    "free": false,
+    "_manual": true
   }
 ]
