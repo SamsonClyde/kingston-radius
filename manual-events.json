@@ -8651,5 +8651,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787511433819,
+    "title": "Sean Morrison Jazz Trio",
+    "date": "2026-08-28",
+    "time": "18:00",
+    "venue": "RMV Cellars",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
+    "location": "West Park, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YKDAq1q7vWCf2mNd9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
