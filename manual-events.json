@@ -7480,5 +7480,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787492376354,
+    "title": "Ballake Sissiko and Piers Faccini",
+    "date": "2026-10-09",
+    "time": "19:30",
+    "venue": "Stissing Center",
+    "venueUrl": "https://stissingcenter.org/events/",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
