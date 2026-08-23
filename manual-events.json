@@ -8144,5 +8144,18 @@
     "price": "$54-$69",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787508145306,
+    "title": "The Taylor Swift Experience",
+    "date": "2026-10-04",
+    "time": "15:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$49",
+    "free": false,
+    "_manual": true
   }
 ]
