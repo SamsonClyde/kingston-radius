@@ -712,7 +712,7 @@
   },
   {
     "id": 1786454760914,
-    "title": "WORLDSUCKS, King In Yellow, Jaelyn, The Entire Earth",
+    "title": "WORLDSUCKS, King In Yellow, Jaelyn, The Entire Earth (DCXPC)",
     "date": "2026-09-11",
     "time": "20:00",
     "venue": "Avalon Lounge",
@@ -721,7 +721,8 @@
     "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
     "price": "$15",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1786454894826,
