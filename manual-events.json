@@ -8313,5 +8313,18 @@
     "price": "$39-$52",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787509183168,
+    "title": "The Four Horsemen (Metallica Experience)",
+    "date": "2026-11-27",
+    "time": "20:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$49-$54",
+    "free": false,
+    "_manual": true
   }
 ]
