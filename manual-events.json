@@ -7935,5 +7935,18 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787500615603,
+    "title": "Sweeping Promises, Sky Furrows, Baddreamadventure",
+    "date": "2026-11-08",
+    "time": "19:00",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "price": "$21",
+    "free": false,
+    "_manual": true
   }
 ]
