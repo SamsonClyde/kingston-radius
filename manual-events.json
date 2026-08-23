@@ -8027,5 +8027,18 @@
     "price": "$75",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787506191040,
+    "title": "Day Four: Sammy Lind & Nadine Landry, Jesse Lége & Bayou Brew, The Ozark Highballers, The Alum Ridge Boys & Ashlee, Zach Bryson, Maura Ghan, The New Floyd County Ramblers",
+    "date": "2026-09-13",
+    "time": "10:00",
+    "venue": "Oldtone Music Festival",
+    "venueUrl": "https://www.oldtone.org/",
+    "location": "Hillsdale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/N2ki43EPFJyLdKCF7",
+    "price": "$40",
+    "free": false,
+    "_manual": true
   }
 ]
