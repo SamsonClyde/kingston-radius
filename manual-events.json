@@ -7974,5 +7974,18 @@
     "price": "$13",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787504711252,
+    "title": "Nick Africano & TBD",
+    "date": "2026-11-21",
+    "time": "19:30",
+    "venue": "O+ Exchange",
+    "venueUrl": "https://opositivefestival.org/year-round-clinic/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9ELG2fBz827zrtCC6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
