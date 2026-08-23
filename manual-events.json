@@ -7098,5 +7098,18 @@
     "price": "Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787453480650,
+    "title": "DCxPC Live Presents: Killer Film, Little Low, Five Hundred Bucks, Transmitterrr and Kudome Valentine",
+    "date": "2026-08-30",
+    "time": "17:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "price": "$8adv/$15door",
+    "free": false,
+    "_manual": true
   }
 ]
