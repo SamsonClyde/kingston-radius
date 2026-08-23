@@ -7545,5 +7545,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787498060758,
+    "title": "Edie Carey",
+    "date": "2026-11-13",
+    "time": "19:30",
+    "venue": "Stissing Center",
+    "venueUrl": "https://stissingcenter.org/events/",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
