@@ -8287,5 +8287,18 @@
     "price": "$44-$59",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787508963070,
+    "title": "Floydian Trip (Pink Floyd Cover Band)",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$44-$59",
+    "free": false,
+    "_manual": true
   }
 ]
