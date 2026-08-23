@@ -7151,5 +7151,18 @@
     "price": "$6/Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787454295741,
+    "title": "DCxPC Live Presents: Big Things, ChumHuffer and Los Huevos",
+    "date": "2026-09-22",
+    "time": "19:30",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "price": "$5adv/$10door",
+    "free": false,
+    "_manual": true
   }
 ]
