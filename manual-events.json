@@ -7988,5 +7988,18 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1787505366612,
+    "title": "Day One: Los Texmaniacs, Sammy Lind & Nadine Landry, The Ozark Highballers, Steam Machine, Zach Bryson",
+    "date": "2026-09-10",
+    "time": "16:00",
+    "venue": "Oldtone Music Festival",
+    "venueUrl": "https://www.oldtone.org/",
+    "location": "Hillsdale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/N2ki43EPFJyLdKCF7",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
