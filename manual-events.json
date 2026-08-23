@@ -8677,5 +8677,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787511525724,
+    "title": "Soul Purpose",
+    "date": "2026-09-13",
+    "time": "14:00",
+    "venue": "RMV Cellars",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
+    "location": "West Park, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YKDAq1q7vWCf2mNd9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
