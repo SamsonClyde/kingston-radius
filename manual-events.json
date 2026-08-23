@@ -8508,5 +8508,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787510135581,
+    "title": "Kyle Cary",
+    "date": "2026-10-29",
+    "time": "20:00",
+    "venue": "Park Theater",
+    "venueUrl": "https://parktheaterhudson.com/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/rumcuWciwQhFjQRr8",
+    "price": "$22/$28",
+    "free": false,
+    "_manual": true
   }
 ]
