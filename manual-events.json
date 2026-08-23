@@ -8664,5 +8664,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787511492064,
+    "title": "Dog Party",
+    "date": "2026-09-04",
+    "time": "18:00",
+    "venue": "RMV Cellars",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
+    "location": "West Park, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YKDAq1q7vWCf2mNd9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
