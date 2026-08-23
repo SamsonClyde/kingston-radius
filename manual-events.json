@@ -7218,5 +7218,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 193,
+    "date": "2026-08-29",
+    "title": "Kalina",
+    "venue": "Rail Trail Cafe",
+    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/iiaoaeqdap942y0doin0w2z55748ds",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+    "time": "17:00",
+    "price": "Donation",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
