@@ -8716,5 +8716,18 @@
     "price": "$25adv/$40door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787511951854,
+    "title": "Grape Stomping Festival Oct 3 & 4 (Live Music)",
+    "date": "2026-10-04",
+    "time": "23:00",
+    "venue": "Robibero Winery",
+    "venueUrl": "https://www.robiberofamilyvineyards.com/events",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://www.robiberofamilyvineyards.com/events",
+    "price": "$25adv/$40door",
+    "free": false,
+    "_manual": true
   }
 ]
