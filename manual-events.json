@@ -8222,5 +8222,18 @@
     "price": "$42-$57",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787508600491,
+    "title": "Bloodline of the Land: Daisy Jopling & Indigenous Enterprise",
+    "date": "2026-11-06",
+    "time": "19:30",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$29-$99",
+    "free": false,
+    "_manual": true
   }
 ]
