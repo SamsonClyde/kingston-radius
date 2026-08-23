@@ -8261,5 +8261,18 @@
     "price": "$54-$72",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787508861771,
+    "title": "Big Head Todd and the Monsters",
+    "date": "2026-11-12",
+    "time": "20:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$57-$72",
+    "free": false,
+    "_manual": true
   }
 ]
