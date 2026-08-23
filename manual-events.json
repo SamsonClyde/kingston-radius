@@ -8053,5 +8053,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787507544389,
+    "title": "Still We Stand: Beyond the Peekskill Riots - Resistance Revival Chorus, Cole Quest & The City Pickers, Bria The Artist, Amauta, Peekskill City Singers",
+    "date": "2026-09-13",
+    "time": "15:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
