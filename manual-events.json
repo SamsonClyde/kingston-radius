@@ -8560,5 +8560,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787510411842,
+    "title": "Sunday Brunch with Jay Collins & Gravy Train",
+    "date": "2026-08-30",
+    "time": "11:00",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
