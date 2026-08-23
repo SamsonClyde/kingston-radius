@@ -7072,5 +7072,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787452790621,
+    "title": "Bleed Violet, Copacetic",
+    "date": "2026-09-10",
+    "time": "20:00",
+    "venue": "Night Swim",
+    "venueUrl": "https://www.instagram.com/nightswimkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sZe9CAVM8vJMB9UL6",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
