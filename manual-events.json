@@ -8131,5 +8131,18 @@
     "price": "$54-$74",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787508055068,
+    "title": "Celebrating Taylor, Simon & King",
+    "date": "2026-10-02",
+    "time": "20:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$54-$69",
+    "free": false,
+    "_manual": true
   }
 ]
