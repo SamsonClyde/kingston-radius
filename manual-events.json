@@ -7085,5 +7085,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787453176054,
+    "title": "F&@#$ Cancer Benefit for French from Frenchy and the Punk - Low Flying Plans (HV), Bad Mary (NYC), TurboGoth (NYC), Guitarmy of One (HV), Dick Pinchers (HV)",
+    "date": "2026-08-23",
+    "time": "16:00",
+    "venue": "Snapper McGee's",
+    "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cjXnAPfsLHZ7XD8c9",
+    "price": "Donation",
+    "free": false,
+    "_manual": true
   }
 ]
