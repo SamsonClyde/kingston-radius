@@ -7112,5 +7112,18 @@
     "price": "$8adv/$15door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787453911118,
+    "title": "DCxPC Live Presents Voice of Dissent",
+    "date": "2026-09-18",
+    "time": "20:00",
+    "venue": "El Dorado Bar",
+    "venueUrl": "https://www.instagram.com/eldoradobar_troy/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/QwhaMLfRyAoqbWLt9",
+    "price": "$6adv/$12door",
+    "free": false,
+    "_manual": true
   }
 ]
