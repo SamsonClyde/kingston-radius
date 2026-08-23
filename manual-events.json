@@ -7428,5 +7428,18 @@
     "free": false,
     "_source": "email",
     "_manual": true
+  },
+  {
+    "id": 1787492114017,
+    "title": "House of Hamil",
+    "date": "2026-09-18",
+    "time": "19:30",
+    "venue": "Stissing Center",
+    "venueUrl": "https://stissingcenter.org/events/",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
