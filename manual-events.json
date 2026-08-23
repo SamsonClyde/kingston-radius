@@ -8183,5 +8183,18 @@
     "price": "$62-$79",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787508363196,
+    "title": "The Rascals",
+    "date": "2026-10-16",
+    "time": "20:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$69-$89",
+    "free": false,
+    "_manual": true
   }
 ]
