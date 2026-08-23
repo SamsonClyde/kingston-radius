@@ -7623,5 +7623,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787498639073,
+    "title": "Evan Watson",
+    "date": "2026-09-04",
+    "time": "18:00",
+    "venue": "Newburgh Brewing",
+    "venueUrl": "https://newburghbrewing.com/events",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vXzDY4qTqet4zp2DA",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
