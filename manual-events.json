@@ -7138,5 +7138,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787454212746,
+    "title": "DCxPC Live Benefit: Resource Center for Assisted Living - Fall of Us, We3, Oedipus Triple Rex - O3R, Bobcat, No More Sun",
+    "date": "2026-09-20",
+    "time": "17:00",
+    "venue": "Snapper McGee's",
+    "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cjXnAPfsLHZ7XD8c9",
+    "price": "$6/Donation",
+    "free": false,
+    "_manual": true
   }
 ]
