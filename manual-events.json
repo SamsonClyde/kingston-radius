@@ -7984,8 +7984,9 @@
     "venueUrl": "https://opositivefestival.org/year-round-clinic/",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/9ELG2fBz827zrtCC6",
-    "price": "See website",
+    "price": "$15",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
