@@ -8118,5 +8118,18 @@
     "price": "$36",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787507985536,
+    "title": "Jay & The Americans",
+    "date": "2026-09-27",
+    "time": "15:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$54-$74",
+    "free": false,
+    "_manual": true
   }
 ]
