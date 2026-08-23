@@ -8235,5 +8235,18 @@
     "price": "$29-$99",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787508670815,
+    "title": "Best of The Eagles (Eagles Cover Band)",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$52/$64",
+    "free": false,
+    "_manual": true
   }
 ]
