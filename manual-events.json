@@ -8638,5 +8638,18 @@
     "price": "$10/$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787510889956,
+    "title": "R&B vs Trap",
+    "date": "2026-09-04",
+    "time": "22:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
