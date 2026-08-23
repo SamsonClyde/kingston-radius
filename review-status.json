@@ -969,5 +969,10 @@
   "NightSwim||2026-08-27||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787452336833
-  }
+  },
+  "Rail Trail Cafe||2026-08-23||1:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787484374305
+  },
+  "Rail Trail Cafe||2026-08-23||13:00": "approved"
 }
