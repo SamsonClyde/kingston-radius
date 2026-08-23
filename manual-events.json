@@ -8326,5 +8326,18 @@
     "price": "$49-$54",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787509274535,
+    "title": "Jessica Lynn - A Very Merry Classic Christmas",
+    "date": "2026-12-12",
+    "time": "19:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$37-$56",
+    "free": false,
+    "_manual": true
   }
 ]
