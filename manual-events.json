@@ -7597,5 +7597,18 @@
     "price": "$30-40adv/$40-50door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787498583589,
+    "title": "Steve Black",
+    "date": "2026-08-28",
+    "time": "18:00",
+    "venue": "Newburgh Brewing",
+    "venueUrl": "https://newburghbrewing.com/events",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vXzDY4qTqet4zp2DA",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
