@@ -8040,5 +8040,18 @@
     "price": "$40",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787507296635,
+    "title": "NashSkill Festival - Chesney, Twain, Urban & Bryan, Cosmic American Derelicts, The Long Horns, Jonah Smith, Ashley Jo. (Rain Location: Paramount Theater)",
+    "date": "2026-09-12",
+    "time": "16:00",
+    "venue": "The Factoria",
+    "venueUrl": "https://paramounthudsonvalley.com/events/nashskill-music-festival-celebrates-10-years-at-the-factoria/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LoUWi8u1X8HqzyWs9",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
