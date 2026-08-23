@@ -7046,5 +7046,18 @@
     "price": "$95-$395festivalpass",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787452512597,
+    "title": "DCxPC Live Presents: Hopeless Otis, Your Best Nightmare, General Grievance, Orangutwins",
+    "date": "2026-08-27",
+    "time": "20:00",
+    "venue": "Night Swim",
+    "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sZe9CAVM8vJMB9UL6",
+    "price": "$9",
+    "free": false,
+    "_manual": true
   }
 ]
