@@ -8014,5 +8014,18 @@
     "price": "$55",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787506033556,
+    "title": "Day Three: The Po' Ramblin Boys, Linzay Youngh & Joel Savoy, Cajun Coutry Revival, Sammy Lind & Nadine Landry, Alex Torres & His Latin Orchestra, The Ozark Highballers, The Alum Ridge Boys & Ashlee, Will Mentor, Zach Bryson, Slinky Armadillo, Maura Ghan, The New Floyd County Ramblers, Gina Leslie, Watkins & Small",
+    "date": "2026-09-12",
+    "time": "10:00",
+    "venue": "Oldtone Music Festival",
+    "venueUrl": "https://www.oldtone.org/",
+    "location": "Hillsdale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/N2ki43EPFJyLdKCF7",
+    "price": "$75",
+    "free": false,
+    "_manual": true
   }
 ]
