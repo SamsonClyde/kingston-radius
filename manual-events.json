@@ -8105,5 +8105,18 @@
     "price": "$52-$69",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787507924884,
+    "title": "Puppy Pals Live - The Action-Packed Comedic Stunt Dog Show (Not Music But.....)",
+    "date": "2026-09-26",
+    "time": "23:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$36",
+    "free": false,
+    "_manual": true
   }
 ]
