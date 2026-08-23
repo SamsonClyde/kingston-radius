@@ -8547,5 +8547,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787510376293,
+    "title": "The Classics Live Saturday Dinner Show",
+    "date": "2026-08-29",
+    "time": "19:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
