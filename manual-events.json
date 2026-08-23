@@ -7441,5 +7441,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787492246161,
+    "title": "Harvest Sunset Celebration - John Sebastian",
+    "date": "2026-09-26",
+    "time": "17:00",
+    "venue": "Stissing Center",
+    "venueUrl": "https://stissingcenter.org/events/",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
+    "price": "$250",
+    "free": false,
+    "_manual": true
   }
 ]
