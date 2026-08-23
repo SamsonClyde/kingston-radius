@@ -1127,5 +1127,10 @@
   "The Half Moon||2026-08-26||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787485917015
-  }
+  },
+  "Stissing Center||2026-08-23||7:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1787491791265
+  },
+  "Stissing Center||2026-08-22||19:30": "approved"
 }
