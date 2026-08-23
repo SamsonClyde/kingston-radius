@@ -7125,5 +7125,18 @@
     "price": "$6adv/$12door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787454012452,
+    "title": "Bad Time Records & DCxPC Live Present a Night of Ska and Punk - Catbite (Philadelphia), The Pomps (Boston), and Modern Natives (HV).",
+    "date": "2026-09-19",
+    "time": "21:00",
+    "venue": "Bacchus",
+    "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/wttxmc4veyLzkc1s6",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
