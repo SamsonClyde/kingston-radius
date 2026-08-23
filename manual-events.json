@@ -7302,5 +7302,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 237,
+    "date": "2026-09-06",
+    "title": "Malerie Day",
+    "venue": "Rail Trail Cafe",
+    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/malerie-day-2-nz4sa",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+    "time": "17:00",
+    "price": "Donation",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
