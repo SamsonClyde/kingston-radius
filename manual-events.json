@@ -7316,5 +7316,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 252,
+    "date": "2026-09-11",
+    "title": "Levanta",
+    "venue": "Rail Trail Cafe",
+    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/4yk2ltygr9k2m3wte2y34kygek6cfh-hprf2",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+    "time": "17:30",
+    "price": "Donation",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
