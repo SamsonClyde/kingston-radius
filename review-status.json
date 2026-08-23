@@ -1069,5 +1069,10 @@
     "status": "rejected",
     "hiddenAt": 1787484944196
   },
-  "Rail Trail Cafe||2026-09-26||17:00": "approved"
+  "Rail Trail Cafe||2026-09-26||17:00": "approved",
+  "Rail Trail Cafe||2026-10-04||5:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787484958151
+  },
+  "Rail Trail Cafe||2026-10-04||17:00": "approved"
 }
