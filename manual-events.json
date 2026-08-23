@@ -7870,5 +7870,18 @@
     "price": "$13",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787500386646,
+    "title": "Haha Laughing, Spray Bottle Fever, Social Propaganda",
+    "date": "2026-09-29",
+    "time": "19:00",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "price": "$16",
+    "free": false,
+    "_manual": true
   }
 ]
