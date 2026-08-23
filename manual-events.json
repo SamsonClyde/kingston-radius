@@ -7779,5 +7779,18 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787500025185,
+    "title": "Truck Violence, No Division, PLYERS",
+    "date": "2026-09-13",
+    "time": "19:00",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "price": "$16",
+    "free": false,
+    "_manual": true
   }
 ]
