@@ -8196,5 +8196,18 @@
     "price": "$69-$89",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787508434065,
+    "title": "Molly Hatchet",
+    "date": "2026-10-23",
+    "time": "20:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "$49-$64",
+    "free": false,
+    "_manual": true
   }
 ]
