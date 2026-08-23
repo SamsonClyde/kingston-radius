@@ -8521,5 +8521,18 @@
     "price": "$22/$28",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787510191386,
+    "title": "Raga Space: Eric Fraser (bansuri flute), Abhik Mukherjee (sitar), Mir Naqibul Islam (tabla)",
+    "date": "2026-10-30",
+    "time": "20:00",
+    "venue": "Park Theater",
+    "venueUrl": "https://parktheaterhudson.com/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/rumcuWciwQhFjQRr8",
+    "price": "$38",
+    "free": false,
+    "_manual": true
   }
 ]
