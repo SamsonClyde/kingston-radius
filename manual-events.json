@@ -7372,5 +7372,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 295,
+    "date": "2026-09-20",
+    "title": "Ned and Lynn: Kirtan",
+    "venue": "Rail Trail Cafe",
+    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/ned-and-lynne-kirtan-2-h6sy3",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+    "time": "13:00",
+    "price": "Donation",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
