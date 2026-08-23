@@ -7414,5 +7414,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 11,
+    "date": "2026-08-29",
+    "title": "Frankenstein - Chamber Ensemble Score: Argus String Quartet with Steven Beck",
+    "venue": "Stissing Center",
+    "venueUrl": "https://www.thestissingcenter.org/events",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NGxaff71QdhYoLhYA",
+    "time": "19:30",
+    "price": "$30-40adv/$40-50door",
+    "free": false,
+    "_source": "email",
+    "_manual": true
   }
 ]
