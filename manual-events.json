@@ -9513,5 +9513,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 351,
+    "date": "2026-09-27",
+    "title": "Big Band Swing - Outdoor Fall Benefit",
+    "venue": "Tompkins Corners Cultural Center",
+    "venueUrl": "https://www.eventbrite.com/e/1998436627750?aff=oddtdtcreator",
+    "location": "Putnam Valley, NY",
+    "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
+    "time": "14:00",
+    "price": "$25",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
