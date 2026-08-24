@@ -9344,5 +9344,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787574123939,
+    "title": "Bluegrass Night - Big Draw & friends!",
+    "date": "2026-10-14",
+    "time": "20:00",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
