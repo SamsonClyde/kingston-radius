@@ -1281,5 +1281,9 @@
     "status": "rejected",
     "hiddenAt": 1787541684182
   },
-  "The Outlier Inn||2026-09-10||19:30": "approved"
+  "The Outlier Inn||2026-09-10||19:30": "approved",
+  "The Outlier Inn||2026-10-10||3:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787541724737
+  }
 }
