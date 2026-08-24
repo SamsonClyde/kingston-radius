@@ -9474,5 +9474,18 @@
     "price": "$20-$31",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787575015875,
+    "title": "The Ultimate Ozzy Show - S.A.T.O & GTT Halloween Havoc",
+    "date": "2026-10-30",
+    "time": "19:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
