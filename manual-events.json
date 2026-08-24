@@ -9825,5 +9825,18 @@
     "price": "$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787577905858,
+    "title": "John Gorka",
+    "date": "2026-11-15",
+    "time": "19:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "$30",
+    "free": false,
+    "_manual": true
   }
 ]
