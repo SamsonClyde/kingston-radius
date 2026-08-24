@@ -9025,5 +9025,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1787540173755,
+    "title": "JP Harris' Dreadful Wind & Rain with Sophie Mae Wellington",
+    "date": "2026-11-05",
+    "time": "20:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "price": "$20-$35",
+    "free": false,
+    "_manual": true
   }
 ]
