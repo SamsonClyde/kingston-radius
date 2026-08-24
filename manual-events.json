@@ -9812,5 +9812,18 @@
     "price": "$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787577870960,
+    "title": "The Bookends",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "$30",
+    "free": false,
+    "_manual": true
   }
 ]
