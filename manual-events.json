@@ -8955,5 +8955,19 @@
     "free": false,
     "_source": "email",
     "_manual": true
+  },
+  {
+    "id": 24,
+    "date": "2026-10-04",
+    "title": "Bard East/West Ensemble Conducted by Jindong Cai",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/calendar/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "time": "15:00",
+    "price": "$10",
+    "free": false,
+    "_source": "email",
+    "_manual": true
   }
 ]
