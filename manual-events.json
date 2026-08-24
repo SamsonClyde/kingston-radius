@@ -9999,5 +9999,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 444,
+    "date": "2026-11-11",
+    "title": "THAO (Thao & The Get Down Stay Down), Kendra McKinley",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "time": "19:00",
+    "price": "$25adv/$30door",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
