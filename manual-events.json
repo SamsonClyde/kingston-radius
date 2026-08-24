@@ -8872,5 +8872,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787538863806,
+    "title": "Brian Dewan, Ross Goldstein",
+    "date": "2026-10-26",
+    "time": "20:00",
+    "venue": "Spotty Dog Books & Ale",
+    "venueUrl": "https://www.thespottydog.com/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=440+Warren+St+Hudson+NY",
+    "price": "$5",
+    "free": false,
+    "_manual": true
   }
 ]
