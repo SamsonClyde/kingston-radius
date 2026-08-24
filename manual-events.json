@@ -8846,5 +8846,18 @@
     "price": "$33",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787538464260,
+    "title": "Inner Peace Sound Journey with Kristin Hoffmann",
+    "date": "2026-09-19",
+    "time": "19:00",
+    "venue": "The Sound Womb",
+    "venueUrl": "https://www.liquidbreathwork.com/sound-healing-near-me/class/inner-peace-sound-journey-with-kristin-hoffmann--high-falls--ny--2026-09-19",
+    "location": "High Falls, NY",
+    "mapsUrl": "https://maps.app.goo.gl/rmFCUExbfkpc8QLP7",
+    "price": "Sold Out",
+    "free": false,
+    "_manual": true
   }
 ]
