@@ -9916,5 +9916,18 @@
     "price": "RSVP",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787578258442,
+    "title": "Steve Kirkmam & Michael Angelo Falco - Salon Stage",
+    "date": "2026-10-16",
+    "time": "18:30",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
