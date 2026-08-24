@@ -9107,5 +9107,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 165,
+    "date": "2026-08-24",
+    "title": "Federico Balducci & Lucas Brode & Russ Alderson",
+    "venue": "The Lace Mill",
+    "venueUrl": "https://kingstonhappenings.org/events/federico-balducci-lucas-brode-russ-alderson/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=The%20Lace%20Mill%20Kingston%2C%20NY",
+    "time": "18:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
