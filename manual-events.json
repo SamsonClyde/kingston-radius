@@ -10585,5 +10585,18 @@
     "price": "$38-$259",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787597360345,
+    "title": "A Tribute to Peter Yarrow",
+    "date": "2026-09-06",
+    "time": "19:00",
+    "venue": "Woodstock Playghouse",
+    "venueUrl": "https://www.woodstockplayhouse.org/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dEza9uo94sms4MMt9",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
