@@ -1477,5 +1477,9 @@
   "Tompkins Corners Cultural Center||2026-12-01||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1787576085838
+  },
+  "Tompkins Corners Cultural Center||2026-12-03||3:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787576088266
   }
 }
