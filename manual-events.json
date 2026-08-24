@@ -10130,5 +10130,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787595150717,
+    "title": "Brazilian Night with Alexia Bomtempo and Friends",
+    "date": "2026-09-04",
+    "time": "17:00",
+    "venue": "West Kill Supply (Kingston)",
+    "venueUrl": "https://www.westkillbrewing.com",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/FDYVgTuBWmmjw1tS6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
