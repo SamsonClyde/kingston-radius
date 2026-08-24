@@ -9929,5 +9929,19 @@
     "price": "RSVP",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 198,
+    "date": "2026-08-27",
+    "title": "Jelly Kelly, Granite Garden, The Drips, Noah Arhm Choi",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "time": "19:30",
+    "price": "$18",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
