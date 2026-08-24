@@ -1373,5 +1373,10 @@
   "Keegan Ales||2026-08-30||11:00 am": {
     "status": "rejected",
     "hiddenAt": 1787572769620
-  }
+  },
+  "Old Dutch Church||2026-10-25||4:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787573023978
+  },
+  "Old Dutch Church||2026-10-25||16:00": "approved"
 }
