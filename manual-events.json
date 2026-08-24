@@ -8820,5 +8820,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787538055928,
+    "title": "Experimental Sounds Underground - Zosha Warpeha & Tristan Kasten-Krause, Bobby Previte, Lea Bertucci and Michale Beharie",
+    "date": "2026-09-13",
+    "time": "16:00",
+    "venue": "Widow Jane Mine / Snyder Estate",
+    "venueUrl": "https://www.centuryhouse.org/events26/",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/zu94C58penoyVxzn8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
