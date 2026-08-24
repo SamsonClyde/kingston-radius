@@ -1378,5 +1378,9 @@
     "status": "rejected",
     "hiddenAt": 1787573023978
   },
-  "Old Dutch Church||2026-10-25||16:00": "approved"
+  "Old Dutch Church||2026-10-25||16:00": "approved",
+  "Tompkins Corners Cultural Center||2026-08-25||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787573056718
+  }
 }
