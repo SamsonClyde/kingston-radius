@@ -9149,5 +9149,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787573285982,
+    "title": "A Whole Nother, Back From Nothing",
+    "date": "2026-08-28",
+    "time": "20:00",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
