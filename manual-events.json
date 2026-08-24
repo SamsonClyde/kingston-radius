@@ -9435,5 +9435,18 @@
     "price": "$37-$53",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787574831801,
+    "title": "Nirvani (Nirvana Cover Band)",
+    "date": "2026-10-09",
+    "time": "20:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "price": "$20-$40",
+    "free": false,
+    "_manual": true
   }
 ]
