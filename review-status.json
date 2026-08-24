@@ -1276,5 +1276,10 @@
   "The Local Saugerties||2026-08-30||7:30 PM": {
     "status": "rejected",
     "hiddenAt": 1787541475573
-  }
+  },
+  "The Outlier Inn||2026-09-10||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787541684182
+  },
+  "The Outlier Inn||2026-09-10||19:30": "approved"
 }
