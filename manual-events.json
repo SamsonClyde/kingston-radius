@@ -9121,5 +9121,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 246,
+    "date": "2026-09-10",
+    "title": "Shannon Lay, Shana Falana, Meernaa",
+    "venue": "The Outlier Inn",
+    "venueUrl": "https://www.outlierinn.com/events/outlier-concerts-and-chosen-family-present",
+    "location": "Woodridge, NY",
+    "mapsUrl": "https://maps.google.com/?q=307+Mountaindale+Rd+Woodridge+NY",
+    "time": "19:30",
+    "price": "Sold out",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
