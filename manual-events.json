@@ -8794,5 +8794,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787537327160,
+    "title": "Pablo Shine Latin Jazz Band",
+    "date": "2026-08-28",
+    "time": "18:30",
+    "venue": "Rough Draft Books",
+    "venueUrl": "https://www.roughdraftny.com/events",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LLZ4sLnaNhZtSSar9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
