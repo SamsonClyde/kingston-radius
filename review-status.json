@@ -1297,5 +1297,9 @@
   "The Snyder Estate||2026-09-13||4:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787541893547
+  },
+  "The Snyder Estate||2026-10-31||6:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787541896207
   }
 }
