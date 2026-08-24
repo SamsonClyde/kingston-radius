@@ -9357,5 +9357,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787574160427,
+    "title": "The Lonely Together",
+    "date": "2026-10-16",
+    "time": "21:00",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
