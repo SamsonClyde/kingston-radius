@@ -9370,5 +9370,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787574196231,
+    "title": "Rock N’ Roll Fest: a Feeding Westchester Benefit",
+    "date": "2026-10-17",
+    "time": "19:00",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
