@@ -1289,5 +1289,9 @@
   "The Outlier Inn||2026-10-17||3:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787541802427
+  },
+  "The Snyder Estate||2026-08-30||3:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787541806380
   }
 }
