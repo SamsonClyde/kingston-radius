@@ -1412,5 +1412,10 @@
   "Tompkins Corners Cultural Center||2026-09-23||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1787576002038
-  }
+  },
+  "Tompkins Corners Cultural Center||2026-09-27||2:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787576032418
+  },
+  "Tompkins Corners Cultural Center||2026-09-27||14:00": "approved"
 }
