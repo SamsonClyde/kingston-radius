@@ -9266,5 +9266,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787573892995,
+    "title": "Yvonnick Prene",
+    "date": "2026-09-16",
+    "time": "19:30",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
