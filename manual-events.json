@@ -6856,7 +6856,7 @@
   },
   {
     "id": 1787399979723,
-    "title": "Azkana Trio (classical)",
+    "title": "Azkana Trio (classsical)",
     "date": "2026-08-29",
     "time": "14:00",
     "venue": "Old Dutch Church",
@@ -6865,8 +6865,7 @@
     "mapsUrl": "https://maps.app.goo.gl/yuvCVGBQVs4zNbK3A",
     "price": "Free",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787400036516,
@@ -10013,6 +10012,19 @@
     "price": "$25adv/$30door",
     "free": false,
     "_source": "scraped",
+    "_manual": true
+  },
+  {
+    "id": 1787594727637,
+    "title": "Live Wire Panic",
+    "date": "2026-09-05",
+    "time": "17:00",
+    "venue": "Westwind Orchard",
+    "venueUrl": "https://www.westwindorchard.com/events",
+    "location": "Accord, NY",
+    "mapsUrl": "https://maps.app.goo.gl/i58bW9eeGFi6RZy18",
+    "price": "See website",
+    "free": false,
     "_manual": true
   }
 ]
