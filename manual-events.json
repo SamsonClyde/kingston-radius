@@ -8807,5 +8807,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787537933863,
+    "title": "Dylan Doyle",
+    "date": "2026-08-30",
+    "time": "15:00",
+    "venue": "Widow Jane Mine / Snyder Estate",
+    "venueUrl": "https://www.centuryhouse.org/events26/",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/zu94C58penoyVxzn8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
