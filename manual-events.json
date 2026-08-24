@@ -9903,5 +9903,18 @@
     "price": "RSVP",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787578216474,
+    "title": "Amy Speace - Salon Stage",
+    "date": "2026-09-25",
+    "time": "18:30",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
