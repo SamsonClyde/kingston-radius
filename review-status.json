@@ -1174,5 +1174,10 @@
     "status": "rejected",
     "hiddenAt": 1787539240593
   },
-  "Tempo Arts||2026-09-25||20:00": "approved"
+  "Tempo Arts||2026-09-25||20:00": "approved",
+  "Tempo Arts||2026-09-26||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787539567591
+  },
+  "Tempo Arts||2026-09-26||20:00": "approved"
 }
