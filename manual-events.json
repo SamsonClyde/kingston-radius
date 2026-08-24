@@ -8859,5 +8859,18 @@
     "price": "Sold Out",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787538734302,
+    "title": "Maskarada - Volya Band",
+    "date": "2026-10-31",
+    "time": "20:00",
+    "venue": "Soyuzivka",
+    "venueUrl": "https://soyuzivka.com/events/calendar-of-events/",
+    "location": "Kerhonkson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GMq2kokoye5V1SnG7",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
