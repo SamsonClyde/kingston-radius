@@ -10143,5 +10143,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787595187913,
+    "title": "Sci-Flies!!!",
+    "date": "2026-09-05",
+    "time": "15:00",
+    "venue": "West Kill Supply (Kingston)",
+    "venueUrl": "https://www.westkillbrewing.com",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/FDYVgTuBWmmjw1tS6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
