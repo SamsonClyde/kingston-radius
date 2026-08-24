@@ -9461,5 +9461,18 @@
     "price": "$32-$48",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787574954305,
+    "title": "Uncle Shoehorn's Big Easy",
+    "date": "2026-10-23",
+    "time": "19:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "price": "$20-$31",
+    "free": false,
+    "_manual": true
   }
 ]
