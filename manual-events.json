@@ -10494,5 +10494,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787596578084,
+    "title": "String Drivers",
+    "date": "2026-10-24",
+    "time": "15:00",
+    "venue": "West Kill Brewing (West Kill)",
+    "venueUrl": "https://www.westkillbrewing.com",
+    "location": "West Kill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kbES8MnTT7ZEeE9M6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
