@@ -8885,5 +8885,19 @@
     "price": "$5",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 18,
+    "date": "2026-09-25",
+    "title": "Meg Lui & Keenan O'Meara",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/calendar/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "time": "20:00",
+    "price": "$25-$50",
+    "free": false,
+    "_source": "email",
+    "_manual": true
   }
 ]
