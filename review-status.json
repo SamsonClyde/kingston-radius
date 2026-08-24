@@ -1507,5 +1507,10 @@
     "status": "rejected",
     "hiddenAt": 1787576360499
   },
-  "Towne Crier Café||2026-08-28||18:30": "approved"
+  "Towne Crier Café||2026-08-28||18:30": "approved",
+  "Towne Crier Café||2026-08-29||8:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787576396884
+  },
+  "Towne Crier Café||2026-08-29||20:30": "approved"
 }
