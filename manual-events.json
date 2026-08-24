@@ -9957,5 +9957,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 303,
+    "date": "2026-09-17",
+    "title": "An Evening with David Liebe Hart",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "time": "19:00",
+    "price": "$18/$34",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
