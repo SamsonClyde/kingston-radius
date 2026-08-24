@@ -1493,5 +1493,9 @@
   "Town of Ulster Library||2026-08-29||10:30 am": {
     "status": "rejected",
     "hiddenAt": 1787576094743
+  },
+  "Towne Crier Café||2026-08-27||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787576222425
   }
 }
