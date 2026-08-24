@@ -10026,5 +10026,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787594756533,
+    "title": "Anatole Trio",
+    "date": "2026-09-06",
+    "time": "17:00",
+    "venue": "Westwind Orchard",
+    "venueUrl": "https://www.westwindorchard.com/events",
+    "location": "Accord, NY",
+    "mapsUrl": "https://maps.app.goo.gl/i58bW9eeGFi6RZy18",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
