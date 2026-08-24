@@ -1353,5 +1353,9 @@
   "Colony Woodstock||2026-08-28||10:30 PM": {
     "status": "rejected",
     "hiddenAt": 1787572747181
+  },
+  "Colony Woodstock||2026-08-29||6:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1787572757533
   }
 }
