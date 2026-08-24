@@ -1205,7 +1205,7 @@
   },
   {
     "id": 1786966381279,
-    "title": "Bees Deluxe &The Michael Gross Band",
+    "title": "Bees Deluxe & The Michael Gross Band",
     "date": "2026-08-27",
     "time": "19:00",
     "venue": "Colony Woodstock",
@@ -1214,7 +1214,8 @@
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$15adv/$20door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787004009418,
