@@ -9409,5 +9409,18 @@
     "price": "RSVP",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787574666944,
+    "title": "Rhythmic Arts Project - The Jon Bates Band, Hurley Mountain Highway Band",
+    "date": "2026-09-13",
+    "time": "14:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "price": "$35/RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
