@@ -10078,5 +10078,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787594881539,
+    "title": "Adam Fitch",
+    "date": "2026-10-03",
+    "time": "16:00",
+    "venue": "Westwind Orchard",
+    "venueUrl": "https://www.westwindorchard.com/events",
+    "location": "Accord, NY",
+    "mapsUrl": "https://maps.app.goo.gl/i58bW9eeGFi6RZy18",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
