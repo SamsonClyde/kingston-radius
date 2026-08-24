@@ -9162,5 +9162,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787573434360,
+    "title": "Lovehoney",
+    "date": "2026-08-29",
+    "time": "21:00",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
