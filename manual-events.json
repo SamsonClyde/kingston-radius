@@ -7667,7 +7667,7 @@
   },
   {
     "id": 1787498981331,
-    "title": "Hellseeker Goth Night w/ DJ Maxi / Rachel Rave / Bare Mattress / 100 Psychic Dreams",
+    "title": "Hellseeker Goth Night - DJ Maxi, Rachel Rave, Bare Mattress, 100 Psychic Dreams",
     "date": "2026-08-28",
     "time": "20:00",
     "venue": "NoFun",
@@ -7676,7 +7676,8 @@
     "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
     "price": "$11",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787499021201,
