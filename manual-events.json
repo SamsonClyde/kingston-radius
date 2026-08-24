@@ -4536,7 +4536,7 @@
   {
     "id": 376,
     "date": "2026-10-03",
-    "title": "Maria Muldaur& Bruce Katz",
+    "title": "Maria Muldaur & Bruce Katz",
     "venue": "The Falcon",
     "venueUrl": "https://www.liveatthefalcon.com",
     "location": "Marlboro, NY",
@@ -4544,7 +4544,7 @@
     "time": "19:30",
     "price": "See website",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
@@ -9022,46 +9022,6 @@
     "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
     "time": "20:00",
     "price": "$55-$85",
-    "free": false,
-    "_source": "scraped",
-    "_manual": true
-  },
-  {
-    "id": 1787540173755,
-    "title": "JP Harris' Dreadful Wind & Rain with Sophie Mae Wellington",
-    "date": "2026-11-05",
-    "time": "20:00",
-    "venue": "Tempo Arts",
-    "venueUrl": "https://tempokingston.org/events/",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
-    "price": "$20-$35",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1787540225132,
-    "title": "Jason Carter Band",
-    "date": "2026-11-13",
-    "time": "20:00",
-    "venue": "Tempo Arts",
-    "venueUrl": "https://tempokingston.org/events/",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
-    "price": "$25-$50",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 256,
-    "date": "2026-09-12",
-    "title": "Jeff Slate & Friends | John Lennon Birthday Bash",
-    "venue": "The Falcon",
-    "venueUrl": "https://www.liveatthefalcon.com",
-    "location": "Marlboro, NY",
-    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    "time": "19:30",
-    "price": "See website",
     "free": false,
     "_source": "scraped",
     "_manual": true
