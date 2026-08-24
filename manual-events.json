@@ -8913,5 +8913,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 322,
+    "date": "2026-09-27",
+    "title": "Twin Spirits (classical)",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "time": "15:00",
+    "price": "$25-$50",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
