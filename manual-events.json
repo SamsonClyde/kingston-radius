@@ -8969,5 +8969,19 @@
     "free": false,
     "_source": "email",
     "_manual": true
+  },
+  {
+    "id": 365,
+    "date": "2026-10-15",
+    "title": "Honky Tonk Dance Party with The Talking Hearts (Two Step Dance Class 7:30)",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "time": "20:00",
+    "price": "$20-$35",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
