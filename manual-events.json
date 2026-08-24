@@ -8833,5 +8833,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787538179815,
+    "title": "Gratefully Yours",
+    "date": "2026-10-31",
+    "time": "17:00",
+    "venue": "Widow Jane Mine / Snyder Estate",
+    "venueUrl": "https://www.centuryhouse.org/events26/",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/zu94C58penoyVxzn8",
+    "price": "$33",
+    "free": false,
+    "_manual": true
   }
 ]
