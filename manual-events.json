@@ -9747,5 +9747,18 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787577666024,
+    "title": "The Strayaways",
+    "date": "2026-10-29",
+    "time": "19:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
