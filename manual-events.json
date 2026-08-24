@@ -10182,5 +10182,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787595476528,
+    "title": "Heart of Midtown Festival",
+    "date": "2026-09-19",
+    "time": "12:00",
+    "venue": "West Kill Supply (Kingston)",
+    "venueUrl": "https://www.rewindkingston.com/heart-of-midtown",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/FDYVgTuBWmmjw1tS6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
