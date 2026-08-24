@@ -1259,5 +1259,10 @@
   "The Half Moon||2026-10-04||1:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787541019102
-  }
+  },
+  "The Lace Mill||2026-08-24||6:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787541355954
+  },
+  "The Lace Mill||2026-08-24||18:00": "approved"
 }
