@@ -10611,5 +10611,18 @@
     "price": "$40-$61",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787597614142,
+    "title": "Grouper, jefre cantu-ledesma",
+    "date": "2026-09-12",
+    "time": "20:00",
+    "venue": "Old Dutch Church",
+    "venueUrl": "https://www.instagram.com/chosenfamilypresents/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yuvCVGBQVs4zNbK3A",
+    "price": "Sold Out",
+    "free": false,
+    "_manual": true
   }
 ]
