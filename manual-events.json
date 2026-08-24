@@ -9487,5 +9487,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787575261830,
+    "title": "El Aris",
+    "date": "2026-08-28",
+    "time": "20:30",
+    "venue": "Tinker Street Tavern",
+    "venueUrl": "https://www.instagram.com/p/Dbjs_QdlIQ3/?img_index=2",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/3CHPZ32vyEMKDYXLA",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
