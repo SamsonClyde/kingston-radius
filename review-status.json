@@ -1284,22 +1284,6 @@
   "The Outlier Inn||2026-09-10||19:30": "approved",
   "The Outlier Inn||2026-10-10||3:00 pm": {
     "status": "rejected",
-    "hiddenAt": 1787541724737
-  },
-  "The Outlier Inn||2026-10-17||3:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787541802427
-  },
-  "The Snyder Estate||2026-08-30||3:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787541806380
-  },
-  "The Snyder Estate||2026-09-13||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787541811958
-  },
-  "The Snyder Estate||2026-10-31||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787541815457
+    "hiddenAt": 1787541871317
   }
 }
