@@ -10247,5 +10247,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787595838689,
+    "title": "Oktoberfest Starts at Noon - The Classics",
+    "date": "2026-10-03",
+    "time": "15:00",
+    "venue": "West Kill Supply (Kingston)",
+    "venueUrl": "https://www.westkillbrewing.com",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/FDYVgTuBWmmjw1tS6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
