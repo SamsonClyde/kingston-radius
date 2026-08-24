@@ -10598,5 +10598,18 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787597407781,
+    "title": "Back to the Garden 1969",
+    "date": "2026-10-03",
+    "time": "19:00",
+    "venue": "Woodstock Playghouse",
+    "venueUrl": "https://www.woodstockplayhouse.org/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dEza9uo94sms4MMt9",
+    "price": "$40-$61",
+    "free": false,
+    "_manual": true
   }
 ]
