@@ -1787,5 +1787,9 @@
   "The Falcon||2026-08-28||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1787699904453
+  },
+  "The Falcon||2026-08-29||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787701613740
   }
 }
