@@ -10686,5 +10686,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787700806081,
+    "title": "Chris O'Leary Band",
+    "date": "2026-09-03",
+    "time": "19:30",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com/",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
