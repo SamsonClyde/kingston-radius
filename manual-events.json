@@ -5505,7 +5505,7 @@
   {
     "id": 298,
     "date": "2026-09-10",
-    "title": "FRATERNAL TWIN (RECORD RELEASE) + KISSING WELL + NORA KNIGHT",
+    "title": "Fraternal Twin, Kissing Well, Nora Knight",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar/fraternal-twin-record-release",
     "location": "Kingston, NY",
@@ -5513,7 +5513,7 @@
     "time": "20:00",
     "price": "$19adv",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
