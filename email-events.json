@@ -27,6 +27,19 @@
   },
   {
     "id": 3,
+    "date": "2026-08-26",
+    "title": "Sean Griffin",
+    "venue": "The Grand",
+    "venueUrl": "#",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "8:00 PM",
+    "price": "$10",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 4,
     "date": "2026-08-27",
     "title": "Lindy Hop Practice Session + Swing Social",
     "venue": "Tempo Arts",
@@ -39,7 +52,7 @@
     "_source": "email"
   },
   {
-    "id": 4,
+    "id": 5,
     "date": "2026-08-27",
     "title": "Peter Einhorn Jazz Duo",
     "venue": "Colony Woodstock",
@@ -52,7 +65,7 @@
     "_source": "email"
   },
   {
-    "id": 5,
+    "id": 6,
     "date": "2026-08-27",
     "title": "Bees Deluxe & The Michael Goss Band",
     "venue": "Colony Woodstock",
@@ -65,7 +78,20 @@
     "_source": "email"
   },
   {
-    "id": 6,
+    "id": 7,
+    "date": "2026-08-27",
+    "title": "All Night Happy Hour",
+    "venue": "The Grand",
+    "venueUrl": "#",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "5:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 8,
     "date": "2026-08-28",
     "title": "Christopher Hoffman in The Grace Note",
     "venue": "Stissing Center",
@@ -78,7 +104,7 @@
     "_source": "email"
   },
   {
-    "id": 7,
+    "id": 9,
     "date": "2026-08-28",
     "title": "Live Music With Pablo Shine",
     "venue": "Rough Draft Books",
@@ -91,7 +117,7 @@
     "_source": "email"
   },
   {
-    "id": 8,
+    "id": 10,
     "date": "2026-08-28",
     "title": "Christopher Hoffman",
     "venue": "Stissing Center",
@@ -104,7 +130,7 @@
     "_source": "email"
   },
   {
-    "id": 9,
+    "id": 11,
     "date": "2026-08-28",
     "title": "Sarah Kramer Harrison and The Night Promises",
     "venue": "Colony Woodstock",
@@ -117,7 +143,7 @@
     "_source": "email"
   },
   {
-    "id": 10,
+    "id": 12,
     "date": "2026-08-28",
     "title": "Crossfire Hurricane Rolling Stones Tribute",
     "venue": "Colony Woodstock",
@@ -130,7 +156,7 @@
     "_source": "email"
   },
   {
-    "id": 11,
+    "id": 13,
     "date": "2026-08-28",
     "title": "DJ Darkstar Presents: SUMMERWEEN",
     "venue": "Colony Woodstock",
@@ -143,7 +169,20 @@
     "_source": "email"
   },
   {
-    "id": 12,
+    "id": 14,
+    "date": "2026-08-28",
+    "title": "A Whole Nother with Back From Nothing",
+    "venue": "The Grand",
+    "venueUrl": "#",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "8:00 PM",
+    "price": "$10",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 15,
     "date": "2026-08-29",
     "title": "Free Tarot for Prison Book Sponsors",
     "venue": "Rough Draft Books",
@@ -156,7 +195,7 @@
     "_source": "email"
   },
   {
-    "id": 13,
+    "id": 16,
     "date": "2026-08-29",
     "title": "Jay Jurden",
     "venue": "MASS MoCA",
@@ -169,7 +208,7 @@
     "_source": "email"
   },
   {
-    "id": 14,
+    "id": 17,
     "date": "2026-08-29",
     "title": "Frankenstein with World Premiere Chamber Ensemble Score - Argus String Quartet with Steven Beck",
     "venue": "Stissing Center",
@@ -182,7 +221,7 @@
     "_source": "email"
   },
   {
-    "id": 15,
+    "id": 18,
     "date": "2026-08-29",
     "title": "The Local x Opus 40 Akwesasne Freedom School Benefit",
     "venue": "The Local Saugerties",
@@ -195,7 +234,7 @@
     "_source": "email"
   },
   {
-    "id": 16,
+    "id": 19,
     "date": "2026-08-29",
     "title": "The Backburners",
     "venue": "Colony Woodstock",
@@ -208,7 +247,7 @@
     "_source": "email"
   },
   {
-    "id": 17,
+    "id": 20,
     "date": "2026-08-29",
     "title": "Country Joe & The Fish",
     "venue": "Colony Woodstock",
@@ -221,7 +260,20 @@
     "_source": "email"
   },
   {
-    "id": 18,
+    "id": 21,
+    "date": "2026-08-29",
+    "title": "Lovehoney",
+    "venue": "The Grand",
+    "venueUrl": "#",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "9:00 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 22,
     "date": "2026-08-30",
     "title": "The Local x Opus 40 Cumbia Vortex: Chicha Libre",
     "venue": "The Local Saugerties",
@@ -234,7 +286,7 @@
     "_source": "email"
   },
   {
-    "id": 19,
+    "id": 23,
     "date": "2026-08-30",
     "title": "Peg 'n Awl",
     "venue": "Colony Woodstock",
@@ -247,7 +299,7 @@
     "_source": "email"
   },
   {
-    "id": 20,
+    "id": 24,
     "date": "2026-08-30",
     "title": "Honky Tonk Last Sunday with Hudson Valley Flyers",
     "venue": "Colony Woodstock",
@@ -260,7 +312,7 @@
     "_source": "email"
   },
   {
-    "id": 21,
+    "id": 25,
     "date": "2026-09-06",
     "title": "Sound Sanctuary",
     "venue": "Tempo Arts",
@@ -273,7 +325,7 @@
     "_source": "email"
   },
   {
-    "id": 22,
+    "id": 26,
     "date": "2026-09-06",
     "title": "Beatles vs. Stones: A Musical Showdown",
     "venue": "Bardavon",
@@ -286,7 +338,7 @@
     "_source": "email"
   },
   {
-    "id": 23,
+    "id": 27,
     "date": "2026-09-18",
     "title": "Caleb Klauder & Reeb Willms",
     "venue": "Tempo Arts",
@@ -299,7 +351,7 @@
     "_source": "email"
   },
   {
-    "id": 24,
+    "id": 28,
     "date": "2026-09-18",
     "title": "Alex Edelman: What Are You Going To Do",
     "venue": "Bardavon",
@@ -312,7 +364,7 @@
     "_source": "email"
   },
   {
-    "id": 25,
+    "id": 29,
     "date": "2026-09-19",
     "title": "The Firebird Retold by The ReMemberers",
     "venue": "Tempo Arts",
@@ -325,7 +377,7 @@
     "_source": "email"
   },
   {
-    "id": 26,
+    "id": 30,
     "date": "2026-09-20",
     "title": "Widow's Weeds",
     "venue": "Stissing Center",
@@ -338,7 +390,7 @@
     "_source": "email"
   },
   {
-    "id": 27,
+    "id": 31,
     "date": "2026-09-25",
     "title": "Meg Lui & Keenan O'Meara",
     "venue": "Tempo Arts",
@@ -351,7 +403,7 @@
     "_source": "email"
   },
   {
-    "id": 28,
+    "id": 32,
     "date": "2026-09-26",
     "title": "Full-Day Swing Dance Intensive",
     "venue": "Tempo Arts",
@@ -364,7 +416,7 @@
     "_source": "email"
   },
   {
-    "id": 29,
+    "id": 33,
     "date": "2026-09-26",
     "title": "Swing Dance Ball with Eyal Vilner Swing Band",
     "venue": "Tempo Arts",
@@ -377,7 +429,7 @@
     "_source": "email"
   },
   {
-    "id": 30,
+    "id": 34,
     "date": "2026-09-27",
     "title": "KingstonClassical presents Twin Spirits",
     "venue": "Tempo Arts",
@@ -390,7 +442,7 @@
     "_source": "email"
   },
   {
-    "id": 31,
+    "id": 35,
     "date": "2026-09-30",
     "title": "Los Vega Son Jarocho",
     "venue": "Tempo Arts",
@@ -403,7 +455,7 @@
     "_source": "email"
   },
   {
-    "id": 32,
+    "id": 36,
     "date": "2026-10-02",
     "title": "Steve Bernstein ResoNation Trio",
     "venue": "Tempo Arts",
@@ -416,7 +468,7 @@
     "_source": "email"
   },
   {
-    "id": 33,
+    "id": 37,
     "date": "2026-10-03",
     "title": "Stayin' Alive: One Night of the Bee Gees",
     "venue": "Bardavon",
@@ -429,7 +481,7 @@
     "_source": "email"
   },
   {
-    "id": 34,
+    "id": 38,
     "date": "2026-10-04",
     "title": "Bard East/West Ensemble Conducted by Jindong Cai",
     "venue": "Tempo Arts",
@@ -442,7 +494,7 @@
     "_source": "email"
   },
   {
-    "id": 35,
+    "id": 39,
     "date": "2026-10-06",
     "title": "MHA of Dutchess County: The Sound of Nashville",
     "venue": "Bardavon",
@@ -455,7 +507,7 @@
     "_source": "email"
   },
   {
-    "id": 36,
+    "id": 40,
     "date": "2026-10-15",
     "title": "Honky Tonk Dance Party with The Talking Hearts",
     "venue": "Tempo Arts",
@@ -468,7 +520,7 @@
     "_source": "email"
   },
   {
-    "id": 37,
+    "id": 41,
     "date": "2026-10-17",
     "title": "MET: Macbeth (Verdi)",
     "venue": "Bardavon",
@@ -481,7 +533,7 @@
     "_source": "email"
   },
   {
-    "id": 38,
+    "id": 42,
     "date": "2026-10-18",
     "title": "Roz Chast & Jason Adam Katzenstein",
     "venue": "MASS MoCA",
@@ -494,7 +546,7 @@
     "_source": "email"
   },
   {
-    "id": 39,
+    "id": 43,
     "date": "2026-10-18",
     "title": "Classical Crossroads – Baroque to Tango",
     "venue": "Tempo Arts",
@@ -507,7 +559,7 @@
     "_source": "email"
   },
   {
-    "id": 40,
+    "id": 44,
     "date": "2026-10-22",
     "title": "Neko Case: Neon Grey Midnight Green Tour",
     "venue": "Bardavon",
@@ -520,7 +572,7 @@
     "_source": "email"
   },
   {
-    "id": 41,
+    "id": 45,
     "date": "2026-10-30",
     "title": "Rasputina with Dust Bowl Faeries",
     "venue": "Tempo Arts",
@@ -533,7 +585,7 @@
     "_source": "email"
   },
   {
-    "id": 42,
+    "id": 46,
     "date": "2026-11-21",
     "title": "The Pirates of Penzance",
     "venue": "Bardavon",
@@ -546,7 +598,20 @@
     "_source": "email"
   },
   {
-    "id": 43,
+    "id": 47,
+    "date": "2026-12-06",
+    "title": "Candice Guardino",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+St+Poughkeepsie+NY",
+    "time": "3:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 48,
     "date": "2026-12-20",
     "title": "MET ENCORE: Samson et Dalila (Saint-Saëns)",
     "venue": "Bardavon",
