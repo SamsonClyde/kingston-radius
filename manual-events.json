@@ -5575,7 +5575,7 @@
   {
     "id": 323,
     "date": "2026-09-17",
-    "title": "ALEX CAMERON + JOSH DA COSTA",
+    "title": "Alex Cameron, John Da Costa",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar/alex-cameron",
     "location": "Kingston, NY",
@@ -5583,7 +5583,7 @@
     "time": "20:00",
     "price": "$38adv",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
