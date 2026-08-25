@@ -1715,5 +1715,9 @@
   "The Grand||2026-08-26||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1787669272396
+  },
+  "Ashokan Center||2026-08-28||4:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787669414125
   }
 }
