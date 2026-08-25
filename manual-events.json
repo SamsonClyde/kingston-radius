@@ -4539,7 +4539,7 @@
   {
     "id": 376,
     "date": "2026-10-03",
-    "title": "Maria Muldaur& Bruce Katz",
+    "title": "Maria Muldaur & Bruce Katz",
     "venue": "The Falcon",
     "venueUrl": "https://www.liveatthefalcon.com",
     "location": "Marlboro, NY",
@@ -4547,7 +4547,7 @@
     "time": "19:30",
     "price": "See website",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
