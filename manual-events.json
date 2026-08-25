@@ -5701,7 +5701,7 @@
   {
     "id": 418,
     "date": "2026-10-23",
-    "title": "FLOODING + BLOODSPORTS",
+    "title": "Flooding, Bloodsports",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar/flooding-bloodsports",
     "location": "Kingston, NY",
@@ -5709,7 +5709,7 @@
     "time": "20:00",
     "price": "$20adv",
     "free": true,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
