@@ -5798,7 +5798,7 @@
   },
   {
     "id": 1787310759877,
-    "title": "Family of Woodstock Benefit - ANTI-DURING, DJs: RHONDA, ZIBBY, JUNE",
+    "title": "Family of Woodstock Benefit - Anti-During, DJs: Rhonda, Zibby, June",
     "date": "2026-09-05",
     "time": "20:00",
     "venue": "Tubby's",
@@ -5807,7 +5807,8 @@
     "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
     "price": "$13adv/Donation",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787344831471,
