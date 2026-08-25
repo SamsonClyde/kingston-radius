@@ -281,7 +281,7 @@
   {
     "id": 455,
     "date": "2026-11-20",
-    "title": "WEIRD NIGHTMARE + VISION BOARDS",
+    "title": "Weird Nightmare, Vision Boards",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar/weird-nightmare-vision-boards",
     "location": "Kingston, NY",
@@ -289,7 +289,7 @@
     "time": "20:00",
     "price": "$25adv",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
