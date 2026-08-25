@@ -10777,5 +10777,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1787701197072,
+    "title": "Anthony Geraci",
+    "date": "2026-10-01",
+    "time": "19:30",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com/",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
