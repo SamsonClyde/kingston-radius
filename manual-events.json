@@ -5687,7 +5687,7 @@
   {
     "id": 410,
     "date": "2026-10-17",
-    "title": "WESTERLUND / HAGEN",
+    "title": "Westerlund, Hagen",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar/westerlund-hagen",
     "location": "Kingston, NY",
@@ -5695,7 +5695,7 @@
     "time": "20:00",
     "price": "See website",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
