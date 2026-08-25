@@ -71,7 +71,7 @@
   {
     "id": 334,
     "date": "2026-09-19",
-    "title": "TUBBY'S 8 YEAR ANNIVERSARY / PLANTASIA AFTER PARTY",
+    "title": "Tubby's 8 Year Anniversary - Plantasia After Party",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar/tubbys-8-year-anniversary",
     "location": "Kingston, NY",
@@ -79,7 +79,7 @@
     "time": "16:00",
     "price": "Free",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
