@@ -5449,7 +5449,7 @@
   {
     "id": 232,
     "date": "2026-08-27",
-    "title": "BOB DYLAN ENTIRE STUDIO DISCOGRAPHY DJ NIGHTS VOL. 1 (in the beginning, a long time ago)",
+    "title": "Bob Dylan Entire Studio Discography DJ Nights Vol. 1",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar/bob-dylan-entire-studio-discography-dj-nights-vol-1-in-the-beginning-a-long-time-ago",
     "location": "Kingston, NY",
@@ -5457,7 +5457,7 @@
     "time": "16:00",
     "price": "Free",
     "free": true,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
