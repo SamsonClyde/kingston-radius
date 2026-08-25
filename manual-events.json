@@ -634,16 +634,17 @@
   },
   {
     "id": 1786454081542,
-    "title": "Juilet Garrett",
+    "title": "Juilet Garrett, Margo Ross, Elijah Berlow",
     "date": "2026-08-30",
     "time": "20:00",
     "venue": "Avalon Lounge",
     "venueUrl": "https://www.theavalonlounge.com/show-calendar",
     "location": "Catskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
-    "price": "See website",
+    "price": "$15",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1786454150173,
