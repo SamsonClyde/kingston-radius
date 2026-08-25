@@ -10551,16 +10551,17 @@
   },
   {
     "id": 1787597038601,
-    "title": "Woodstock Fingerstyle Guitar Festival Day One: Bunny Barnes, Red Door Duo, Jesse Smith - 7pm:  Tim and Myles Thompson  Mark Scanga  Brian Henke​",
+    "title": "Woodstock Fingerstyle Guitar Festival Day One: Bunny Barnes, Red Door Duo, Jesse Smith - 7pm:  Tim and Myles Thompson, Mark Scanga, Brian Henke​",
     "date": "2026-08-28",
     "time": "15:00",
-    "venue": "Woodstock Playghouse",
+    "venue": "Woodstock Playhouse",
     "venueUrl": "https://www.woodstockplayhouse.org/",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.app.goo.gl/dEza9uo94sms4MMt9",
     "price": "$38-$259",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787597126272,
