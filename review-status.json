@@ -1767,5 +1767,9 @@
   "Colony Woodstock||2026-08-30||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787699677049
+  },
+  "Hudson River Maritime Museum||2026-09-26||2:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787699684023
   }
 }
