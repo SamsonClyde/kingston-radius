@@ -5589,7 +5589,7 @@
   {
     "id": 327,
     "date": "2026-09-18",
-    "title": "DYLAN EARL + OLIVIA ELLEN LLOYD",
+    "title": "Dylan Earl, Olivia Ellen Lloyd",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar/dylan-earl",
     "location": "Kingston, NY",
@@ -5597,7 +5597,7 @@
     "time": "20:00",
     "price": "$21adv",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
