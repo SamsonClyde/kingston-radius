@@ -4525,7 +4525,7 @@
   {
     "id": 367,
     "date": "2026-09-27",
-    "title": "ANIKA",
+    "title": "Anika",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar/anika",
     "location": "Kingston, NY",
@@ -4533,7 +4533,7 @@
     "time": "20:00",
     "price": "$27adv",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
