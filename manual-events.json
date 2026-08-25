@@ -10596,13 +10596,14 @@
     "title": "A Tribute to Peter Yarrow",
     "date": "2026-09-06",
     "time": "19:00",
-    "venue": "Woodstock Playghouse",
+    "venue": "Woodstock Playhouse",
     "venueUrl": "https://www.woodstockplayhouse.org/",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.app.goo.gl/dEza9uo94sms4MMt9",
     "price": "$35",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787597407781,
