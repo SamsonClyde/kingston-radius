@@ -1803,5 +1803,9 @@
   "The Grand||2026-08-29||9:00 PM": {
     "status": "rejected",
     "hiddenAt": 1787701633309
+  },
+  "Woodstock Playhouse||2026-08-28||12:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1787701638035
   }
 }
