@@ -5561,7 +5561,7 @@
   {
     "id": 321,
     "date": "2026-09-16",
-    "title": "RUBY OF THANKS (ALBUM RELEASE WOODSIST) + BLUE RANGER",
+    "title": "Ruby of Thanks (Album Release Woodsist), Blue Ranger",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar/ruby-of-thanks-album-release-woodsist-blue-ranger",
     "location": "Kingston, NY",
@@ -5569,7 +5569,7 @@
     "time": "20:00",
     "price": "$17adv",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
