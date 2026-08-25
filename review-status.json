@@ -1775,5 +1775,9 @@
   "Maverick Concerts||2026-08-30||4:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787699714683
+  },
+  "RMV Cellars||2026-08-29||2:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787699783962
   }
 }
