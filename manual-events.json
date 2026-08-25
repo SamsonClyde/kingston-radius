@@ -996,7 +996,7 @@
   {
     "id": 227,
     "date": "2026-08-25",
-    "title": "NUOVO TESTAMENTO + DJs TOMMI CALAMARI + MIDNA MAYHEM",
+    "title": "Nuovo Testamento, DJ's Tommi Calamari, Midna Mayhem",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar/nuovo-testamento",
     "location": "Kingston, NY",
@@ -1004,7 +1004,7 @@
     "time": "20:00",
     "price": "Sold Out",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
