@@ -7911,7 +7911,7 @@
   },
   {
     "id": 1787500461929,
-    "title": "UNSANE, PRIZE, Life Abuse",
+    "title": "Unsane, Prize, Life Abuse",
     "date": "2026-10-02",
     "time": "19:00",
     "venue": "NoFun",
@@ -7920,7 +7920,8 @@
     "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
     "price": "$25",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787500507116,
