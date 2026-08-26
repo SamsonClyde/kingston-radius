@@ -5757,7 +5757,7 @@
   {
     "id": 442,
     "date": "2026-11-13",
-    "title": "THE BAD PLUS FAREWELL TOUR (Membership Required)",
+    "title": "The Bad Plus - Farewell Tour (Membership Required)",
     "venue": "Love, Velma",
     "venueUrl": "https://www.lovevelma.com/calendar/995diubf1olw86uoax4mwu4ae5s5ry",
     "location": "Ellenville, NY",
@@ -5765,7 +5765,7 @@
     "time": "19:00",
     "price": "Members only",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
