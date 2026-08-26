@@ -378,6 +378,19 @@
   },
   {
     "id": 30,
+    "date": "2026-09-19",
+    "title": "Classical Indian Sitar Abhik Mukherjee",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "time": "8:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 31,
     "date": "2026-09-20",
     "title": "Widow's Weeds",
     "venue": "Stissing Center",
@@ -390,7 +403,7 @@
     "_source": "email"
   },
   {
-    "id": 31,
+    "id": 32,
     "date": "2026-09-25",
     "title": "Meg Lui & Keenan O'Meara",
     "venue": "Tempo Arts",
@@ -403,7 +416,20 @@
     "_source": "email"
   },
   {
-    "id": 32,
+    "id": 33,
+    "date": "2026-09-25",
+    "title": "OFF Broadway Ryan Shaw & Ray Angry",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "time": "8:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 34,
     "date": "2026-09-26",
     "title": "Full-Day Swing Dance Intensive",
     "venue": "Tempo Arts",
@@ -416,7 +442,7 @@
     "_source": "email"
   },
   {
-    "id": 33,
+    "id": 35,
     "date": "2026-09-26",
     "title": "Swing Dance Ball with Eyal Vilner Swing Band",
     "venue": "Tempo Arts",
@@ -429,7 +455,20 @@
     "_source": "email"
   },
   {
-    "id": 34,
+    "id": 36,
+    "date": "2026-09-26",
+    "title": "The Blues Alexis P. Suter Band",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "time": "8:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 37,
     "date": "2026-09-27",
     "title": "KingstonClassical presents Twin Spirits",
     "venue": "Tempo Arts",
@@ -442,7 +481,20 @@
     "_source": "email"
   },
   {
-    "id": 35,
+    "id": 38,
+    "date": "2026-09-27",
+    "title": "Jazz Vocal Trailblazer Thana Alexa",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "time": "5:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 39,
     "date": "2026-09-30",
     "title": "Los Vega Son Jarocho",
     "venue": "Tempo Arts",
@@ -455,7 +507,7 @@
     "_source": "email"
   },
   {
-    "id": 36,
+    "id": 40,
     "date": "2026-10-02",
     "title": "Steve Bernstein ResoNation Trio",
     "venue": "Tempo Arts",
@@ -468,7 +520,20 @@
     "_source": "email"
   },
   {
-    "id": 37,
+    "id": 41,
+    "date": "2026-10-02",
+    "title": "Guitar Master Kaki King",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "time": "8:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 42,
     "date": "2026-10-03",
     "title": "Stayin' Alive: One Night of the Bee Gees",
     "venue": "Bardavon",
@@ -481,7 +546,20 @@
     "_source": "email"
   },
   {
-    "id": 38,
+    "id": 43,
+    "date": "2026-10-03",
+    "title": "Zydeco & Cajun Cedric Watson and Ethan Moody",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "time": "8:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 44,
     "date": "2026-10-04",
     "title": "Bard East/West Ensemble Conducted by Jindong Cai",
     "venue": "Tempo Arts",
@@ -494,7 +572,7 @@
     "_source": "email"
   },
   {
-    "id": 39,
+    "id": 45,
     "date": "2026-10-06",
     "title": "MHA of Dutchess County: The Sound of Nashville",
     "venue": "Bardavon",
@@ -507,7 +585,7 @@
     "_source": "email"
   },
   {
-    "id": 40,
+    "id": 46,
     "date": "2026-10-15",
     "title": "Honky Tonk Dance Party with The Talking Hearts",
     "venue": "Tempo Arts",
@@ -520,7 +598,7 @@
     "_source": "email"
   },
   {
-    "id": 41,
+    "id": 47,
     "date": "2026-10-17",
     "title": "MET: Macbeth (Verdi)",
     "venue": "Bardavon",
@@ -533,7 +611,7 @@
     "_source": "email"
   },
   {
-    "id": 42,
+    "id": 48,
     "date": "2026-10-18",
     "title": "Roz Chast & Jason Adam Katzenstein",
     "venue": "MASS MoCA",
@@ -546,7 +624,7 @@
     "_source": "email"
   },
   {
-    "id": 43,
+    "id": 49,
     "date": "2026-10-18",
     "title": "Classical Crossroads – Baroque to Tango",
     "venue": "Tempo Arts",
@@ -559,7 +637,7 @@
     "_source": "email"
   },
   {
-    "id": 44,
+    "id": 50,
     "date": "2026-10-22",
     "title": "Neko Case: Neon Grey Midnight Green Tour",
     "venue": "Bardavon",
@@ -572,7 +650,7 @@
     "_source": "email"
   },
   {
-    "id": 45,
+    "id": 51,
     "date": "2026-10-30",
     "title": "Rasputina with Dust Bowl Faeries",
     "venue": "Tempo Arts",
@@ -585,7 +663,7 @@
     "_source": "email"
   },
   {
-    "id": 46,
+    "id": 52,
     "date": "2026-11-21",
     "title": "The Pirates of Penzance",
     "venue": "Bardavon",
@@ -598,7 +676,7 @@
     "_source": "email"
   },
   {
-    "id": 47,
+    "id": 53,
     "date": "2026-12-06",
     "title": "Candice Guardino",
     "venue": "Bardavon",
@@ -611,7 +689,7 @@
     "_source": "email"
   },
   {
-    "id": 48,
+    "id": 54,
     "date": "2026-12-20",
     "title": "MET ENCORE: Samson et Dalila (Saint-Saëns)",
     "venue": "Bardavon",
