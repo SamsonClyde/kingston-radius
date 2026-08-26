@@ -7870,7 +7870,7 @@
   },
   {
     "id": 1787500344166,
-    "title": "Dark Dazey, Pink Lady, GOLEM",
+    "title": "Dark Dazey, Pink Lady, Golem",
     "date": "2026-09-27",
     "time": "19:00",
     "venue": "NoFun",
@@ -7879,7 +7879,8 @@
     "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
     "price": "$13",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787500386646,
