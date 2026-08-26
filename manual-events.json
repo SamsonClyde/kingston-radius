@@ -7925,7 +7925,7 @@
   },
   {
     "id": 1787500507116,
-    "title": "Hellseeker presents: Zanias, Korine + Hellseeker DJ's",
+    "title": "Zanias, Korine, Hellseeker DJ's",
     "date": "2026-10-09",
     "time": "19:00",
     "venue": "NoFun",
@@ -7934,7 +7934,8 @@
     "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
     "price": "$13",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787500569713,
