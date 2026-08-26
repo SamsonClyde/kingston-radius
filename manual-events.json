@@ -7790,7 +7790,7 @@
   },
   {
     "id": 1787500025185,
-    "title": "Truck Violence, No Division, PLYERS",
+    "title": "Truck Violence, No Division, Plyers",
     "date": "2026-09-13",
     "time": "19:00",
     "venue": "NoFun",
@@ -7799,7 +7799,8 @@
     "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
     "price": "$16",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787500077320,
