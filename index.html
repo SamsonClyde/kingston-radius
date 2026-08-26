@@ -121,6 +121,7 @@
     transition: border-color 0.15s;
     max-width: 220px;
   }
+  #keyword-search:focus { outline: none; border-color: var(--red); }
   .venue-select:focus { outline: none; border-color: var(--text); }
 
   /* ── MAIN ── */
@@ -835,6 +836,7 @@
       <span style="font-size:0.72rem;color:var(--muted);margin-right:4px;">Sort:</span>
       <button class="filter-btn active" id="sort-date-btn" onclick="setSortMode('date')" style="padding:4px 10px;font-size:0.75rem;">Date</button>
       <button class="filter-btn" id="sort-venue-btn" onclick="setSortMode('venue')" style="padding:4px 10px;font-size:0.75rem;">Venue</button>
+      <input type="text" id="keyword-search" placeholder="Search…" style="border:1.5px solid var(--border);background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.8rem;padding:4px 12px;border-radius:20px;margin-left:6px;width:150px;transition:border-color 0.15s;">
     </div>
     <span style="font-size:0.72rem;color:var(--muted);">Click venue name to visit site &nbsp;·&nbsp; Click city to open in Google Maps</span>
     <button id="venue-delete-mode-btn" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;" onclick="toggleVenueDeleteMode()">Manage venues</button>
@@ -1462,6 +1464,7 @@ function populateVenueSelect() {
 let _activeFilter = 'all';
 let _sortMode = 'date';
 let _currentPage = 1;
+let _searchKeyword = '';
 function setSortMode(mode) {
   _sortMode = mode;
   _currentPage = 1;
@@ -1494,6 +1497,13 @@ function renderEvents() {
   }
   if (_activeMonth) events = events.filter(e => e.date?.startsWith(_activeMonth));
   if (_activeVenue) events = events.filter(e => e.venue === _activeVenue);
+  if (_searchKeyword) {
+    events = events.filter(e =>
+      (e.title||'').toLowerCase().includes(_searchKeyword) ||
+      (e.venue||'').toLowerCase().includes(_searchKeyword) ||
+      (e.location||'').toLowerCase().includes(_searchKeyword)
+    );
+  }
   if (_sortMode === 'venue') {
     events.sort((a,b) => (a.venue||'').localeCompare(b.venue||'') || (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
   } else {
@@ -1530,11 +1540,19 @@ function renderEvents() {
     listHtml = pageEvents.map(e => buildEventCard(e, isAdmin)).join('');
   }
 
+  const pageNumbersHtml = totalPages > 1 ? Array.from({length: totalPages}, (_, i) => i + 1).map(n => {
+    const isCurrent = n === _currentPage;
+    return `<button class="page-num-btn" data-page-num="${n}" style="background:none;border:none;font-family:'DM Serif Display',serif;font-size:${isCurrent?'1.15rem':'1rem'};color:var(--red);opacity:${isCurrent?'1':'0.55'};cursor:${isCurrent?'default':'pointer'};padding:0 6px;line-height:1;text-decoration:${isCurrent?'underline':'none'};text-underline-offset:4px;" ${isCurrent?'disabled':''}>${n}</button>`;
+  }).join('') : '';
+
   const paginationHtml = totalPages > 1 ? `
-    <div style="display:flex;justify-content:center;align-items:center;gap:14px;margin:28px 0 10px;">
-      <button id="page-prev-btn" ${_currentPage<=1?'disabled':''} style="background:none;border:1px solid var(--border);border-radius:6px;padding:7px 14px;font-family:'DM Sans',sans-serif;font-size:0.82rem;cursor:${_currentPage<=1?'default':'pointer'};color:${_currentPage<=1?'var(--muted)':'var(--text)'};opacity:${_currentPage<=1?'0.5':'1'};">← Prev</button>
-      <span style="font-size:0.82rem;color:var(--muted);">Page ${_currentPage} of ${totalPages}</span>
-      <button id="page-next-btn" ${_currentPage>=totalPages?'disabled':''} style="background:none;border:1px solid var(--border);border-radius:6px;padding:7px 14px;font-family:'DM Sans',sans-serif;font-size:0.82rem;cursor:${_currentPage>=totalPages?'default':'pointer'};color:${_currentPage>=totalPages?'var(--muted)':'var(--text)'};opacity:${_currentPage>=totalPages?'0.5':'1'};">Next →</button>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px;margin:28px 0 10px;">
+      <div style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:2px;">${pageNumbersHtml}</div>
+      <div style="display:flex;justify-content:center;align-items:center;gap:14px;">
+        <button id="page-prev-btn" ${_currentPage<=1?'disabled':''} style="background:none;border:1px solid var(--border);border-radius:6px;padding:7px 14px;font-family:'DM Sans',sans-serif;font-size:0.82rem;cursor:${_currentPage<=1?'default':'pointer'};color:${_currentPage<=1?'var(--muted)':'var(--text)'};opacity:${_currentPage<=1?'0.5':'1'};">← Prev</button>
+        <span style="font-size:0.82rem;color:var(--muted);">Page ${_currentPage} of ${totalPages}</span>
+        <button id="page-next-btn" ${_currentPage>=totalPages?'disabled':''} style="background:none;border:1px solid var(--border);border-radius:6px;padding:7px 14px;font-family:'DM Sans',sans-serif;font-size:0.82rem;cursor:${_currentPage>=totalPages?'default':'pointer'};color:${_currentPage>=totalPages?'var(--muted)':'var(--text)'};opacity:${_currentPage>=totalPages?'0.5':'1'};">Next →</button>
+      </div>
     </div>` : '';
 
   container.innerHTML = listHtml + paginationHtml;
@@ -1544,6 +1562,16 @@ function renderEvents() {
   });
   document.getElementById('page-next-btn')?.addEventListener('click', () => {
     if (_currentPage < totalPages) { _currentPage++; renderEvents(); window.scrollTo({top: document.querySelector('main').offsetTop - 80, behavior: 'smooth'}); }
+  });
+  document.querySelectorAll('.page-num-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const n = parseInt(btn.dataset.pageNum);
+      if (n !== _currentPage) {
+        _currentPage = n;
+        renderEvents();
+        window.scrollTo({top: document.querySelector('main').offsetTop - 80, behavior: 'smooth'});
+      }
+    });
   });
 }
 
@@ -2102,6 +2130,13 @@ document.getElementById('quick-add-btn')?.addEventListener('click', async () => 
 });
 
 // ── NAV ───────────────────────────────────────────────────────────────────────
+// ── KEYWORD SEARCH (live) ────────────────────────────────────────────────────
+document.getElementById('keyword-search')?.addEventListener('input', (e) => {
+  _searchKeyword = e.target.value.trim().toLowerCase();
+  _currentPage = 1;
+  renderEvents();
+});
+
 document.querySelectorAll('nav a[data-page]').forEach(link => {
   link.addEventListener('click', ev => {
     ev.preventDefault();
