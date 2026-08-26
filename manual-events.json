@@ -7856,7 +7856,7 @@
   },
   {
     "id": 1787500308499,
-    "title": "Toody Cole & Her Band Play: DEAD MOON / Rabid Children",
+    "title": "Toody Cole & Her Band Play: Dead Moon, Rabid Children",
     "date": "2026-09-26",
     "time": "19:00",
     "venue": "NoFun",
@@ -7865,7 +7865,8 @@
     "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
     "price": "$25",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787500344166,
