@@ -135,6 +135,43 @@
   }
   .section-head h2 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; }
   .event-count { font-size: 0.78rem; color: var(--muted); font-weight: 400; }
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    margin-left: 7px;
+    padding: 3px;
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: color 0.15s, background 0.15s;
+  }
+  .share-btn:hover { color: var(--red); background: var(--tag-bg, rgba(0,0,0,0.05)); }
+  @keyframes kr-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(192,57,43,0.45); }
+    50% { box-shadow: 0 0 0 7px rgba(192,57,43,0); }
+  }
+  .highlight-pulse { animation: kr-pulse 1s ease-out 2; border-color: var(--red) !important; }
+  .kr-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+  }
+  .kr-toast.show { opacity: 1; }
   .loading-spinner {
     width: 28px; height: 28px; margin: 0 auto;
     border: 3px solid var(--border);
@@ -210,11 +247,30 @@
     color: var(--text);
     word-break: break-word;
   }
+  .event-title-row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+  a.title-link {
+    text-decoration: none;
+  }
+  a.title-link:hover {
+    text-decoration: underline;
+    text-decoration-color: rgba(26,26,24,0.3);
+    text-underline-offset: 3px;
+  }
   .event-venue-row {
     display: flex;
     flex-wrap: wrap;
     gap: 2px 8px;
     align-items: baseline;
+  }
+  .venue-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--red);
   }
   .venue-link {
     font-size: 0.82rem;
@@ -229,6 +285,21 @@
     text-decoration: none;
   }
   .city-link:hover { text-decoration: underline; color: var(--text); }
+  .copy-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    margin-left: 3px;
+    padding: 3px;
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: color 0.15s, background 0.15s;
+  }
+  .copy-btn:hover { color: var(--red); background: var(--tag-bg, rgba(0,0,0,0.05)); }
   .btn-card-edit {
     margin-top: 4px;
     align-self: flex-start;
@@ -838,7 +909,7 @@
       <button class="filter-btn" id="sort-venue-btn" onclick="setSortMode('venue')" style="padding:4px 10px;font-size:0.75rem;">Venue</button>
       <input type="text" id="keyword-search" placeholder="Search…" style="border:1.5px solid var(--border);background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.8rem;padding:4px 12px;border-radius:20px;margin-left:6px;width:150px;transition:border-color 0.15s;">
     </div>
-    <span style="font-size:0.72rem;color:var(--muted);">Click venue name to visit site &nbsp;·&nbsp; Click city to open in Google Maps</span>
+    <span style="font-size:0.72rem;color:var(--muted);">Click title to visit venue site &nbsp;·&nbsp; Click city to open in Google Maps</span>
     <button id="venue-delete-mode-btn" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;" onclick="toggleVenueDeleteMode()">Manage venues</button>
   </div>
   <div id="venue-delete-bar" style="display:none;padding:8px 0 4px;gap:6px;flex-wrap:wrap;" class="filter-row">
@@ -1575,6 +1646,105 @@ function renderEvents() {
   });
 }
 
+// ── SHARE ─────────────────────────────────────────────────────────────────────
+function showToast(msg) {
+  let t = document.getElementById('kr-toast');
+  if (!t) {
+    t = document.createElement('div');
+    t.id = 'kr-toast';
+    t.className = 'kr-toast';
+    document.body.appendChild(t);
+  }
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+async function shareEvent(e) {
+  const key = eventKey(e);
+  const url = new URL(window.location.href);
+  url.hash = '';
+  url.search = '';
+  url.searchParams.set('event', btoa(key));
+  const shareUrl = url.toString();
+
+  const d = parseDate(e.date);
+  const dateStr = d.toLocaleDateString('default', {weekday:'short', month:'short', day:'numeric'});
+  const timeStr = formatTime(e.time);
+  const shareText = `${e.title} — ${e.venue}, ${e.location} — ${dateStr}${timeStr ? ' at ' + timeStr : ''}`;
+
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: e.title, text: shareText, url: shareUrl });
+      return;
+    } catch (err) {
+      if (err && err.name === 'AbortError') return;
+      // fall through to clipboard on other errors
+    }
+  }
+  try {
+    await navigator.clipboard.writeText(shareUrl);
+    showToast('Link copied!');
+  } catch {
+    showToast('Could not copy link');
+  }
+}
+
+async function copyEventBlurb(e) {
+  const d = parseDate(e.date);
+  const dateStr = d.toLocaleDateString('default', {weekday:'short', month:'short', day:'numeric'});
+  const timeStr = formatTime(e.time);
+  const blurb = `${e.title}\n${e.venue}\n${dateStr}${timeStr ? ', ' + timeStr : ''}`;
+  try {
+    await navigator.clipboard.writeText(blurb);
+    showToast('Copied!');
+  } catch {
+    showToast('Could not copy');
+  }
+}
+
+function jumpToSharedEvent() {
+  const params = new URLSearchParams(window.location.search);
+  const sharedKey = params.get('event');
+  if (!sharedKey) return;
+  let decoded;
+  try { decoded = atob(sharedKey); } catch { return; }
+
+  const today = new Date(); today.setHours(0,0,0,0);
+  const upcoming = getApprovedEvents()
+    .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue))
+    .sort((a,b) => (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
+  const idx = upcoming.findIndex(e => eventKey(e) === decoded);
+  if (idx === -1) return; // event not found, in the past, or hidden — just show the normal homepage
+
+  // Reset to default view so the shared event is guaranteed visible
+  _activeFilter = 'all';
+  _activeMonth = null;
+  _activeVenue = null;
+  _searchKeyword = '';
+  _sortMode = 'date';
+  const searchBox = document.getElementById('keyword-search');
+  if (searchBox) searchBox.value = '';
+  document.querySelectorAll('[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
+  document.getElementById('sort-date-btn')?.classList.add('active');
+  document.getElementById('sort-venue-btn')?.classList.remove('active');
+  _currentPage = Math.floor(idx / 100) + 1;
+
+  renderEvents();
+  buildMonthButtons();
+  populateVenueSelect();
+
+  setTimeout(() => {
+    const el = document.querySelector(`[data-ekey="${CSS.escape(decoded)}"]`);
+    if (el) {
+      el.scrollIntoView({behavior:'smooth', block:'center'});
+      el.classList.add('highlight-pulse');
+      setTimeout(() => el.classList.remove('highlight-pulse'), 2200);
+    }
+  }, 60);
+}
+
 function buildEventCard(e, isAdmin) {
   const d        = parseDate(e.date);
   const dayName  = d.toLocaleString('default', {weekday:'short'});
@@ -1647,9 +1817,15 @@ function buildEventCard(e, isAdmin) {
       ${timeStr ? `<span class="event-time">${timeStr}</span>` : ''}
     </div>
     <div class="event-info">
-      <div class="event-title">${esc(e.title)}</div>
+      <div class="event-title-row">
+        ${e.venueUrl
+          ? `<a href="${esc(e.venueUrl)}" target="_blank" rel="noopener" class="event-title title-link">${esc(e.title)}</a>`
+          : `<span class="event-title">${esc(e.title)}</span>`}
+        <button class="share-btn" data-action="share-event" data-key="${esc(key)}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>
+        <button class="copy-btn" data-action="copy-event" data-key="${esc(key)}" title="Copy show details" aria-label="Copy show details"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>
+      </div>
       <div class="event-venue-row">
-        ${e.venueUrl ? `<a class="venue-link" href="${esc(e.venueUrl)}" target="_blank" rel="noopener">${esc(e.venue)}</a>` : `<span class="venue-link">${esc(e.venue)}</span>`}
+        <span class="venue-name">${esc(e.venue)}</span>
         ${e.mapsUrl  ? `<a class="city-link"  href="${esc(e.mapsUrl)}"  target="_blank" rel="noopener">${esc(e.location)}</a>` : `<span class="city-link">${esc(e.location)}</span>`}
       </div>
       ${priceStr ? `<div style="font-size:0.75rem;color:var(--muted);margin-top:2px;">${priceStr}</div>` : ''}
@@ -1839,6 +2015,22 @@ document.addEventListener('click', async (ev) => {
     const all = getAllEvents();
     const e   = all.find(ev => eventKey(ev) === key);
     if (e) await deleteEventPermanently(e);
+    return;
+  }
+
+  // Share action
+  if (action === 'share-event') {
+    const all = getAllEvents();
+    const e   = all.find(ev => eventKey(ev) === key);
+    if (e) await shareEvent(e);
+    return;
+  }
+
+  // Copy action
+  if (action === 'copy-event') {
+    const all = getAllEvents();
+    const e   = all.find(ev => eventKey(ev) === key);
+    if (e) await copyEventBlurb(e);
     return;
   }
 
@@ -2260,6 +2452,9 @@ loadFromServer().then(() => {
   } else if (window._wantsAdmin) {
     checkAdminHash();
   }
+
+  // Jump to a specific event if this page was opened via a share link
+  jumpToSharedEvent();
 });
 
 </script>
