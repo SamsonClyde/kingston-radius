@@ -135,12 +135,23 @@
   }
   .section-head h2 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; }
   .event-count { font-size: 0.78rem; color: var(--muted); font-weight: 400; }
+  .event-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+  }
+  .event-icons {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: auto;
+  }
   .share-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     vertical-align: middle;
-    margin-left: 7px;
     padding: 3px;
     background: none;
     border: none;
@@ -1821,14 +1832,18 @@ function buildEventCard(e, isAdmin) {
         ${e.venueUrl
           ? `<a href="${esc(e.venueUrl)}" target="_blank" rel="noopener" class="event-title title-link">${esc(e.title)}</a>`
           : `<span class="event-title">${esc(e.title)}</span>`}
-        <button class="share-btn" data-action="share-event" data-key="${esc(key)}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>
-        <button class="copy-btn" data-action="copy-event" data-key="${esc(key)}" title="Copy show details" aria-label="Copy show details"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>
       </div>
       <div class="event-venue-row">
         <span class="venue-name">${esc(e.venue)}</span>
         ${e.mapsUrl  ? `<a class="city-link"  href="${esc(e.mapsUrl)}"  target="_blank" rel="noopener">${esc(e.location)}</a>` : `<span class="city-link">${esc(e.location)}</span>`}
       </div>
-      ${priceStr ? `<div style="font-size:0.75rem;color:var(--muted);margin-top:2px;">${priceStr}</div>` : ''}
+      <div class="event-bottom-row">
+        <span style="font-size:0.75rem;color:var(--muted);">${priceStr}</span>
+        <div class="event-icons">
+          <button class="share-btn" data-action="share-event" data-key="${esc(key)}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>
+          <button class="copy-btn" data-action="copy-event" data-key="${esc(key)}" title="Copy show details" aria-label="Copy show details"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>
+        </div>
+      </div>
       ${editBtn}
       ${inlineEdit}
     </div>
