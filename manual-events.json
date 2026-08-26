@@ -113,7 +113,7 @@
   {
     "id": 375,
     "date": "2026-10-03",
-    "title": "ARMO (Membership Required)",
+    "title": "Armo (Membership Required)",
     "venue": "Love, Velma",
     "venueUrl": "https://www.lovevelma.com/calendar/xvahcqwn9xe5u2p1wfya23m97a3vxk",
     "location": "Ellenville, NY",
@@ -121,7 +121,7 @@
     "time": "21:00",
     "price": "Members only",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
