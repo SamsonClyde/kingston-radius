@@ -5896,7 +5896,7 @@
   {
     "id": 464,
     "date": "2027-02-13",
-    "title": "lady Moon & the eclipse (Membership Required)",
+    "title": "Lady Moon & The Eclipse (Membership Required)",
     "venue": "Love, Velma",
     "venueUrl": "https://www.lovevelma.com/calendar/ss7s7j5qzccukworqi0wrprdmlhnsu",
     "location": "Ellenville, NY",
@@ -5904,7 +5904,7 @@
     "time": "20:00",
     "price": "Members only",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
