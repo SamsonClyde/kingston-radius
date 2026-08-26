@@ -134,6 +134,14 @@
   }
   .section-head h2 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; }
   .event-count { font-size: 0.78rem; color: var(--muted); font-weight: 400; }
+  .loading-spinner {
+    width: 28px; height: 28px; margin: 0 auto;
+    border: 3px solid var(--border);
+    border-top-color: var(--red);
+    border-radius: 50%;
+    animation: kr-spin 0.8s linear infinite;
+  }
+  @keyframes kr-spin { to { transform: rotate(360deg); } }
 
   /* ── EVENT CARD ── */
   .event-card {
@@ -792,7 +800,7 @@
   <div class="logo">Kingston<span>Radius</span></div>
   <nav>
     <a href="#" class="active" data-page="music">Music</a>
-    <a href="#" data-page="about">About</a>
+    <a href="about.html">About</a>
     <a href="#" data-page="admin" id="admin-nav-link" style="display:none;">Admin<span id="review-badge"></span></a>
   </nav>
 </header>
@@ -841,31 +849,17 @@
 <main>
   <div class="section-head">
     <h2>Upcoming Shows</h2>
-    <span class="event-count" id="event-count"></span>
+    <span class="event-count" id="event-count">Loading…</span>
   </div>
-  <div id="events-list"></div>
+  <div id="events-list">
+    <div id="initial-loading" style="text-align:center;padding:70px 20px;color:var(--muted);">
+      <div class="loading-spinner"></div>
+      <div style="margin-top:14px;font-size:0.85rem;">Loading shows…</div>
+    </div>
+  </div>
 </main>
 
 </div><!-- /page-music -->
-
-<!-- ── ABOUT PAGE ── -->
-<div id="page-about" class="page">
-  <div style="max-width:860px;margin:0 auto;padding:40px 24px 80px;">
-    <div style="margin-bottom:32px;">
-      <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Kingston Radius</div>
-      <h1 style="font-family:'DM Serif Display',serif;font-size:2rem;line-height:1.15;margin-bottom:12px;">One place for live music in the Hudson Valley.</h1>
-      <p style="font-size:0.95rem;color:var(--muted);line-height:1.7;max-width:520px;">An independent calendar covering 100+ venues within 90 minutes of Kingston, NY. Updated daily. Nothing for sale.</p>
-    </div>
-    <div style="margin-bottom:24px;">
-      <img src="/coverage-map.jpg" alt="Map of the Hudson Valley showing venues within 30, 60, and 90 minutes of Kingston, NY" style="width:100%;height:auto;border-radius:10px;border:1px solid var(--border);display:block;">
-    </div>
-
-    <div style="border-top:1px solid var(--border);padding-top:16px;">
-      <p style="font-size:0.82rem;color:var(--muted);line-height:1.6;max-width:520px;margin-bottom:8px;">Independent project. Not affiliated with or endorsed by any venue listed. All links go directly to the source.</p>
-      <p style="font-size:0.82rem;font-weight:600;color:var(--red);">kingstonradius@gmail.com</p>
-    </div>
-  </div>
-</div><!-- /page-about -->
 
 <!-- ── ADMIN PAGE ── -->
 <div id="page-admin" class="page">
@@ -1439,6 +1433,7 @@ function buildMonthButtons() {
   select.value = _activeMonth || '';
   select.onchange = () => {
     _activeMonth = select.value || null;
+    _currentPage = 1;
     renderEvents();
   };
 }
@@ -1460,14 +1455,16 @@ function populateVenueSelect() {
   )].sort();
   sel.innerHTML = '<option value="">All venues</option>' +
     venues.map(v => `<option value="${esc(v)}"${_activeVenue===v?' selected':''}>${esc(v)}</option>`).join('');
-  sel.onchange = () => { _activeVenue = sel.value || null; renderEvents(); };
+  sel.onchange = () => { _activeVenue = sel.value || null; _currentPage = 1; renderEvents(); };
 }
 
 // ── RENDER EVENTS ─────────────────────────────────────────────────────────────
 let _activeFilter = 'all';
 let _sortMode = 'date';
+let _currentPage = 1;
 function setSortMode(mode) {
   _sortMode = mode;
+  _currentPage = 1;
   document.getElementById('sort-date-btn')?.classList.toggle('active', mode === 'date');
   document.getElementById('sort-venue-btn')?.classList.toggle('active', mode === 'venue');
   renderEvents();
@@ -1512,17 +1509,42 @@ function renderEvents() {
   }
   const isAdmin = document.body.classList.contains('admin-mode');
 
+  // ── PAGINATION (100 per page) ──────────────────────────────────────────────
+  const PAGE_SIZE = 100;
+  const totalPages = Math.max(1, Math.ceil(events.length / PAGE_SIZE));
+  if (_currentPage > totalPages) _currentPage = totalPages;
+  if (_currentPage < 1) _currentPage = 1;
+  const pageStart = (_currentPage - 1) * PAGE_SIZE;
+  const pageEvents = events.slice(pageStart, pageStart + PAGE_SIZE);
+
+  let listHtml;
   if (_sortMode === 'venue') {
     const groups = {};
-    events.forEach(e => { if (!groups[e.venue]) groups[e.venue] = []; groups[e.venue].push(e); });
-    container.innerHTML = Object.keys(groups).sort().map(venue => `
+    pageEvents.forEach(e => { if (!groups[e.venue]) groups[e.venue] = []; groups[e.venue].push(e); });
+    listHtml = Object.keys(groups).sort().map(venue => `
       <div style="margin-bottom:24px;">
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);padding:6px 0;border-bottom:1px solid var(--border);margin-bottom:10px;">${venue}</div>
         ${groups[venue].map(e => buildEventCard(e, isAdmin)).join('')}
       </div>`).join('');
   } else {
-    container.innerHTML = events.map(e => buildEventCard(e, isAdmin)).join('');
+    listHtml = pageEvents.map(e => buildEventCard(e, isAdmin)).join('');
   }
+
+  const paginationHtml = totalPages > 1 ? `
+    <div style="display:flex;justify-content:center;align-items:center;gap:14px;margin:28px 0 10px;">
+      <button id="page-prev-btn" ${_currentPage<=1?'disabled':''} style="background:none;border:1px solid var(--border);border-radius:6px;padding:7px 14px;font-family:'DM Sans',sans-serif;font-size:0.82rem;cursor:${_currentPage<=1?'default':'pointer'};color:${_currentPage<=1?'var(--muted)':'var(--text)'};opacity:${_currentPage<=1?'0.5':'1'};">← Prev</button>
+      <span style="font-size:0.82rem;color:var(--muted);">Page ${_currentPage} of ${totalPages}</span>
+      <button id="page-next-btn" ${_currentPage>=totalPages?'disabled':''} style="background:none;border:1px solid var(--border);border-radius:6px;padding:7px 14px;font-family:'DM Sans',sans-serif;font-size:0.82rem;cursor:${_currentPage>=totalPages?'default':'pointer'};color:${_currentPage>=totalPages?'var(--muted)':'var(--text)'};opacity:${_currentPage>=totalPages?'0.5':'1'};">Next →</button>
+    </div>` : '';
+
+  container.innerHTML = listHtml + paginationHtml;
+
+  document.getElementById('page-prev-btn')?.addEventListener('click', () => {
+    if (_currentPage > 1) { _currentPage--; renderEvents(); window.scrollTo({top: document.querySelector('main').offsetTop - 80, behavior: 'smooth'}); }
+  });
+  document.getElementById('page-next-btn')?.addEventListener('click', () => {
+    if (_currentPage < totalPages) { _currentPage++; renderEvents(); window.scrollTo({top: document.querySelector('main').offsetTop - 80, behavior: 'smooth'}); }
+  });
 }
 
 function buildEventCard(e, isAdmin) {
@@ -2101,6 +2123,7 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
     document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     _activeFilter = btn.dataset.filter;
+    _currentPage = 1;
     renderEvents();
   });
 });
