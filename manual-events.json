@@ -7939,7 +7939,7 @@
   },
   {
     "id": 1787500569713,
-    "title": "Paul Collins Beat! The Best of THE NERVES & THE BEAT, FLAVOUR",
+    "title": "Paul Collins Beat! The Best of The Nerves & The Beat, Flavour",
     "date": "2026-10-17",
     "time": "19:00",
     "venue": "NoFun",
@@ -7948,7 +7948,8 @@
     "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
     "price": "$25",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787500615603,
