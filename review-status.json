@@ -699,10 +699,6 @@
   "Tubby's||2026-08-22||20:00": "approved",
   "Tubby's||2026-08-23||20:00": "approved",
   "Tubby's||2026-08-25||20:00": "approved",
-  "Tubby's||2026-08-26||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787309386017
-  },
   "Tubby's||2026-08-27||4:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787309408541
@@ -1107,10 +1103,6 @@
   "Snapper Magee's||2026-09-20||4:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787485882768
-  },
-  "The Half Moon||2026-08-26||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787485917015
   },
   "Stissing Center||2026-08-23||7:30 PM": {
     "status": "rejected",
@@ -1585,10 +1577,6 @@
   "Tubby's||2026-11-21||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787579658451
-  },
-  "Unicorn Bar||2026-08-26||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787579742239
   },
   "Unicorn Bar||2026-08-26||19:30": "approved",
   "Unicorn Bar||2026-08-27||7:30 pm": {
