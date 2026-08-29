@@ -182,10 +182,6 @@
     "status": "rejected",
     "hiddenAt": 1786963780976
   },
-  "Assembly Kingston||2026-08-28||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786963786369
-  },
   "Assembly Kingston||2026-09-04||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963794150
@@ -306,10 +302,6 @@
     "status": "rejected",
     "hiddenAt": 1787020680726
   },
-  "The Ashokan Center||2026-08-28||": {
-    "status": "rejected",
-    "hiddenAt": 1787021209837
-  },
   "The Ashokan Center||2026-08-28||19:00": "approved",
   "The Ashokan Center||2026-09-20||": {
     "status": "rejected",
@@ -381,10 +373,6 @@
   },
   "The Falcon||2026-08-23||19:30": "approved",
   "The Falcon||2026-08-27||19:30": "approved",
-  "The Falcon||2026-08-28||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076118405
-  },
   "The Falcon||2026-08-28||19:30": "approved",
   "The Falcon||2026-08-29||See website": {
     "status": "rejected",
@@ -654,10 +642,6 @@
     "status": "rejected",
     "hiddenAt": 1787187571453
   },
-  "Keegan Ales||2026-08-28||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787187587206
-  },
   "Keegan Ales||2026-08-28||19:00": "approved",
   "Keegan Ales||2026-08-29||8:00 pm": {
     "status": "rejected",
@@ -696,10 +680,6 @@
   "Tubby's||2026-08-23||20:00": "approved",
   "Tubby's||2026-08-25||20:00": "approved",
   "Tubby's||2026-08-27||16:00": "approved",
-  "Tubby's||2026-08-28||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787309439199
-  },
   "Tubby's||2026-08-28||20:00": "approved",
   "Tubby's||2026-08-29||5:00 pm": {
     "status": "rejected",
@@ -882,10 +862,6 @@
     "hiddenAt": 1787345134864
   },
   "Levon Helm Studios||2027-04-29||20:00": "approved",
-  "Love, Velma||2026-08-28||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787345218398
-  },
   "Love, Velma||2026-08-28||21:00": "approved",
   "Love, Velma||2026-09-11||7:00 pm": {
     "status": "rejected",
@@ -947,10 +923,6 @@
     "hiddenAt": 1787452336833
   },
   "Rail Trail Cafe||2026-08-23||13:00": "approved",
-  "Rail Trail Cafe||2026-08-28||5:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787484543285
-  },
   "Rail Trail Cafe||2026-08-28||17:00": "approved",
   "Rail Trail Cafe||2026-08-29||1:00 pm": {
     "status": "rejected",
@@ -1458,15 +1430,7 @@
     "status": "rejected",
     "hiddenAt": 1787576094743
   },
-  "Towne Crier Café||2026-08-28||8:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787576319022
-  },
   "Towne Crier Café||2026-08-28||20:30": "approved",
-  "Towne Crier Café||2026-08-28||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787576360499
-  },
   "Towne Crier Café||2026-08-28||18:30": "approved",
   "Towne Crier Café||2026-08-29||8:30 pm": {
     "status": "rejected",
@@ -1672,10 +1636,6 @@
     "status": "rejected",
     "hiddenAt": 1787669272396
   },
-  "Ashokan Center||2026-08-28||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787669414125
-  },
   "Bard College Conservatory||2026-09-08||": {
     "status": "rejected",
     "hiddenAt": 1787669418536
@@ -1759,9 +1719,5 @@
   "The Grand||2026-08-29||9:00 PM": {
     "status": "rejected",
     "hiddenAt": 1787701633309
-  },
-  "Woodstock Playhouse||2026-08-28||12:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1787701638035
   }
 }
