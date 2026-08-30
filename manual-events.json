@@ -10852,5 +10852,18 @@
     "free": true,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1788106215972,
+    "title": "Luke Barhart & The Atomics",
+    "date": "2026-09-11",
+    "time": "19:00",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
