@@ -1761,5 +1761,10 @@
     "status": "rejected",
     "hiddenAt": 1788107336898
   },
-  "The Falcon||2026-09-11||19:30": "approved"
+  "The Falcon||2026-09-11||19:30": "approved",
+  "The Lace Mill||2026-09-02||6:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788107721425
+  },
+  "The Lace Mill||2026-09-02||18:00": "approved"
 }
