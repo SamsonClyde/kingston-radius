@@ -1756,5 +1756,10 @@
     "status": "rejected",
     "hiddenAt": 1788107020769
   },
-  "The Ashokan Center||2026-10-18||12:00": "approved"
+  "The Ashokan Center||2026-10-18||12:00": "approved",
+  "The Falcon||2026-09-11||See website": {
+    "status": "rejected",
+    "hiddenAt": 1788107335058
+  },
+  "The Falcon||2026-09-11||19:30": "approved"
 }
