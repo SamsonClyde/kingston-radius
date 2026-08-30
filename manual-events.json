@@ -10878,5 +10878,19 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 32,
+    "date": "2026-10-10",
+    "title": "Hacia Cuando: An Opera 1-1:30 | 4-4:30",
+    "venue": "MASS MoCA",
+    "venueUrl": "https://massmoca.org/performances/",
+    "location": "North Adams, MA",
+    "mapsUrl": "https://maps.google.com/?q=1040+Mass+MoCA+Way+North+Adams+MA",
+    "time": "13:00",
+    "price": "See website",
+    "free": false,
+    "_source": "email",
+    "_manual": true
   }
 ]
