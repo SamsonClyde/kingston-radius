@@ -10952,7 +10952,7 @@
   {
     "id": 1788107149657,
     "title": "Cathy & Marcy’s Old Time Coalition",
-    "date": "2026-09-05",
+    "date": "2026-10-09",
     "time": "19:30",
     "venue": "The Ashokan Center",
     "venueUrl": "https://ashokancenter.org/events/",
@@ -10960,6 +10960,7 @@
     "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
     "price": "$10-$30",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
