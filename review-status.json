@@ -1790,5 +1790,9 @@
   "The Local Saugerties||2026-10-03||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788107764272
+  },
+  "Towne Crier Café||2026-09-03||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788107767859
   }
 }
