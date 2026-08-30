@@ -10934,5 +10934,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 363,
+    "date": "2026-10-07",
+    "title": "Wednesday Swing with the Bad Penny Pleasuremakers",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "time": "19:30",
+    "price": "RSVP/$20-$35",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
