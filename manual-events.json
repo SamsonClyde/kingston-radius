@@ -7275,9 +7275,9 @@
     "location": "Rosendale, NY",
     "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
     "time": "17:00",
-    "price": "Donation",
+    "price": "$10",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
