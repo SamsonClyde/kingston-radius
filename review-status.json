@@ -1679,5 +1679,9 @@
   "Lydia's Cafe||2026-09-05||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788106353571
+  },
+  "MASS MoCA||2026-09-12||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788106369579
   }
 }
