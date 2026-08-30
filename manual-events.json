@@ -10865,5 +10865,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788106269140,
+    "title": "Joey Eppard, DJ MajicJuan",
+    "date": "2026-09-19",
+    "time": "19:00",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
