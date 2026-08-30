@@ -1751,5 +1751,10 @@
     "status": "rejected",
     "hiddenAt": 1788106844974
   },
-  "Tempo Arts||2026-10-07||19:30": "approved"
+  "Tempo Arts||2026-10-07||19:30": "approved",
+  "The Ashokan Center||2026-10-18||": {
+    "status": "rejected",
+    "hiddenAt": 1788107020769
+  },
+  "The Ashokan Center||2026-10-18||12:00": "approved"
 }
