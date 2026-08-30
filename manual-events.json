@@ -10892,5 +10892,19 @@
     "free": false,
     "_source": "email",
     "_manual": true
+  },
+  {
+    "id": 42,
+    "date": "2026-11-14",
+    "title": "Endea Owens & The Cookout",
+    "venue": "MASS MoCA",
+    "venueUrl": "https://massmoca.org/performances/",
+    "location": "North Adams, MA",
+    "mapsUrl": "https://maps.google.com/?q=1040+Mass+MoCA+Way+North+Adams+MA",
+    "time": "20:00",
+    "price": "See website",
+    "free": false,
+    "_source": "email",
+    "_manual": true
   }
 ]
