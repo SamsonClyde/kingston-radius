@@ -10952,7 +10952,7 @@
   {
     "id": 1788107149657,
     "title": "Cathy & Marcy’s Old Time Coalition",
-    "date": "2026-10-09",
+    "date": "2026-09-05",
     "time": "19:30",
     "venue": "The Ashokan Center",
     "venueUrl": "https://ashokancenter.org/events/",
@@ -10960,7 +10960,20 @@
     "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
     "price": "$10-$30",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
+  },
+  {
+    "id": 254,
+    "date": "2026-09-11",
+    "title": "Jay Collins & Northern Resistance",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "19:30",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
