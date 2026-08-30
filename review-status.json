@@ -1721,5 +1721,9 @@
   "MASS MoCA||2026-10-30||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788106613504
+  },
+  "Stissing Center||2026-09-11||7:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788106618418
   }
 }
