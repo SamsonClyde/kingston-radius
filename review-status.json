@@ -1647,5 +1647,9 @@
   "The Grand||2026-08-28||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1787701622690
+  },
+  "Assembly||2026-12-09||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788105875158
   }
 }
