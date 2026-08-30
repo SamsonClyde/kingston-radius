@@ -1766,5 +1766,9 @@
     "status": "rejected",
     "hiddenAt": 1788107721425
   },
-  "The Lace Mill||2026-09-02||18:00": "approved"
+  "The Lace Mill||2026-09-02||18:00": "approved",
+  "The Local Saugerties||2026-09-19||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788107741079
+  }
 }
