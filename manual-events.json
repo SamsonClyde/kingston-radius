@@ -11017,5 +11017,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1788137371414,
+    "title": "Festival Of Makers - Live Music",
+    "date": "2026-10-10",
+    "time": "11:00",
+    "venue": "Hops On The Hudson",
+    "venueUrl": "https://www.hopsonthehudson.com/copy-of-modern-makers-market-2024",
+    "location": "Verplanck, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YveYZPHrVpQKabSy9",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
