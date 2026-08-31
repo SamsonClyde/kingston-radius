@@ -11030,5 +11030,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788138126291,
+    "title": "Nest Sessions hosted by Aubrey Haddard & Jose Lopez, The National Reserve",
+    "date": "2026-09-10",
+    "time": "19:00",
+    "venue": "The Living Room at Full Circle",
+    "venueUrl": "https://www.fcgardiner.com/the-living-room",
+    "location": "Gardiner, NY",
+    "mapsUrl": "https://maps.app.goo.gl/TfiXUNFin7ELp3u38",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
