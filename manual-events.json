@@ -11095,5 +11095,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788138651580,
+    "title": "Rhett Miller",
+    "date": "2026-10-23",
+    "time": "19:00",
+    "venue": "The Living Room at Full Circle",
+    "venueUrl": "https://www.fcgardiner.com/the-living-room",
+    "location": "Gardiner, NY",
+    "mapsUrl": "https://maps.app.goo.gl/TfiXUNFin7ELp3u38",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
