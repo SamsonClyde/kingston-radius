@@ -11033,7 +11033,7 @@
   },
   {
     "id": 1788138126291,
-    "title": "Nest Sessions hosted by Aubrey Haddard & Jose Lopez, The National Reserve",
+    "title": "The National Reserve, Nest Sessions hosted by Aubrey Haddard & Jose Lopez",
     "date": "2026-09-10",
     "time": "19:00",
     "venue": "The Living Room at Full Circle",
@@ -11042,7 +11042,8 @@
     "mapsUrl": "https://maps.app.goo.gl/TfiXUNFin7ELp3u38",
     "price": "$20",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788138255328,
