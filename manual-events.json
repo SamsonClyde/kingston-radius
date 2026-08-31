@@ -11043,5 +11043,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788138255328,
+    "title": "DJ Lenny Tofu",
+    "date": "2026-09-12",
+    "time": "19:00",
+    "venue": "The Living Room at Full Circle",
+    "venueUrl": "https://www.fcgardiner.com/the-living-room",
+    "location": "Gardiner, NY",
+    "mapsUrl": "https://maps.app.goo.gl/TfiXUNFin7ELp3u38",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
