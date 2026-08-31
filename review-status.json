@@ -375,10 +375,6 @@
   "The Falcon||2026-08-27||19:30": "approved",
   "The Falcon||2026-08-28||19:30": "approved",
   "The Falcon||2026-08-29||19:30": "approved",
-  "The Falcon||2026-08-30||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076152005
-  },
   "The Falcon||2026-08-30||19:30": "approved",
   "The Falcon||2026-09-03||See website": {
     "status": "rejected",
@@ -902,15 +898,7 @@
   "Rail Trail Cafe||2026-08-28||17:00": "approved",
   "Rail Trail Cafe||2026-08-29||13:00": "approved",
   "Rail Trail Cafe||2026-08-29||17:00": "approved",
-  "Rail Trail Cafe||2026-08-30||1:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787484604206
-  },
   "Rail Trail Cafe||2026-08-30||13:00": "approved",
-  "Rail Trail Cafe||2026-08-30||5:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787484674663
-  },
   "Rail Trail Cafe||2026-08-30||17:00": "approved",
   "Rail Trail Cafe||2026-09-04||5:00 pm": {
     "status": "rejected",
@@ -1165,10 +1153,6 @@
     "status": "rejected",
     "hiddenAt": 1787541411536
   },
-  "The Local Saugerties||2026-08-30||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1787541475573
-  },
   "The Outlier Inn||2026-09-10||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1787541684182
@@ -1253,18 +1237,6 @@
   "Colony Woodstock||2026-08-28||10:30 PM": {
     "status": "rejected",
     "hiddenAt": 1787572747181
-  },
-  "Colony Woodstock||2026-08-30||5:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1787572762387
-  },
-  "Colony Woodstock||2026-08-30||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1787572765242
-  },
-  "Keegan Ales||2026-08-30||11:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1787572769620
   },
   "Old Dutch Church||2026-10-25||4:00 pm": {
     "status": "rejected",
@@ -1382,15 +1354,7 @@
   "Towne Crier Café||2026-08-28||18:30": "approved",
   "Towne Crier Café||2026-08-29||20:30": "approved",
   "Towne Crier Café||2026-08-29||18:00": "approved",
-  "Towne Crier Café||2026-08-30||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787576442248
-  },
   "Towne Crier Café||2026-08-30||19:30": "approved",
-  "Towne Crier Café||2026-08-30||11:30 am": {
-    "status": "rejected",
-    "hiddenAt": 1787576458866
-  },
   "Towne Crier Café||2026-08-30||23:30": "approved",
   "Towne Crier Café||2026-09-04||8:00 pm": {
     "status": "rejected",
@@ -1470,10 +1434,6 @@
   "Unicorn Bar||2026-08-27||19:30": "approved",
   "Unicorn Bar||2026-08-28||7:30 pm": "approved",
   "Unicorn Bar||2026-08-29||21:00": "approved",
-  "Unicorn Bar||2026-08-30||12:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787590981840
-  },
   "Unicorn Bar||2026-09-02||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787590986860
@@ -1624,10 +1584,6 @@
     "status": "rejected",
     "hiddenAt": 1787699684023
   },
-  "Maverick Concerts||2026-08-30||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787699714683
-  },
   "RMV Cellars||2026-08-29||2:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787699783962
@@ -1657,10 +1613,6 @@
     "hiddenAt": 1788105985574
   },
   "Assembly Kingston||2026-12-09||20:00": "approved",
-  "Keegan Ales||2026-08-30||2:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788106048985
-  },
   "Keegan Ales||2026-08-30||14:00": "approved",
   "Keegan Ales||2026-09-01||6:30 pm": {
     "status": "rejected",
