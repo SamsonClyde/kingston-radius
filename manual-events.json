@@ -11973,8 +11973,9 @@
     "venueUrl": "https://www.instagram.com/rewindkingston/",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/qj7Z5WR4M1M8up1q9",
-    "price": "See website",
+    "price": "$10/$20",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
