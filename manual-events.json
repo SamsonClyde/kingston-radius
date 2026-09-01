@@ -12367,5 +12367,18 @@
     "price": "$23",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788286159286,
+    "title": "Shakedown Citi (Grateful Dead Cover Band)",
+    "date": "2026-10-11",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$17",
+    "free": false,
+    "_manual": true
   }
 ]
