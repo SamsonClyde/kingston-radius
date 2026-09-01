@@ -1,0 +1,22 @@
+# Cache static images for 30 days — they rarely change, and if you
+# do replace one, just rename the file to instantly bust the cache
+# for anyone who visits after the swap.
+/*.jpg
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.png
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.svg
+  Cache-Control: public, max-age=2592000, immutable
+
+/*.ico
+  Cache-Control: public, max-age=2592000, immutable
+
+# Always keep HTML fresh so your edits and new deploys show up
+# immediately for every visitor, with no stale-page risk.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
