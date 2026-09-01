@@ -12341,5 +12341,18 @@
     "price": "Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788286036088,
+    "title": "Carolyn Wonderland (Cindy Cashdollar & Shelley King)",
+    "date": "2026-10-02",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$40",
+    "free": false,
+    "_manual": true
   }
 ]
