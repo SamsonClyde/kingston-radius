@@ -12380,5 +12380,18 @@
     "price": "$17",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788286206743,
+    "title": "Chest Fever: 50th Anniversary Of The Last Waltz",
+    "date": "2026-10-13",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
