@@ -12485,5 +12485,18 @@
     "price": "$39-$65",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788287653657,
+    "title": "Hope Rocks Festival",
+    "date": "2026-09-26",
+    "time": "11:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$3-$13",
+    "free": false,
+    "_manual": true
   }
 ]
