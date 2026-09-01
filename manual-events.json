@@ -11148,5 +11148,18 @@
     "price": "$39",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788271590975,
+    "title": "Groove Merchants (Talking Heads Cover Band)",
+    "date": "2026-10-02",
+    "time": "20:00",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "price": "$36/$42",
+    "free": false,
+    "_manual": true
   }
 ]
