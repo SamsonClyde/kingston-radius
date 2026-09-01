@@ -4063,7 +4063,7 @@
   },
   {
     "id": 1787074326833,
-    "title": "Windham Festival Chamber Orchestra (Classical)",
+    "title": "Windham Festival Chamber Orchestra (classical)",
     "date": "2026-11-28",
     "time": "19:00",
     "venue": "Orpheum Preforming Arts Center (Catskill Mountain Foundation)",
@@ -4072,7 +4072,8 @@
     "mapsUrl": "https://maps.app.goo.gl/8SaKNQ6G3qhXU6hD6",
     "price": "$28",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787074474552,
