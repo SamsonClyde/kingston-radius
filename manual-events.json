@@ -12133,5 +12133,18 @@
     "price": "Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788285229778,
+    "title": "Nancy Donnelly Jazz Duo",
+    "date": "2026-09-10",
+    "time": "17:30",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "Donation",
+    "free": false,
+    "_manual": true
   }
 ]
