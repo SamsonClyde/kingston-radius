@@ -12615,5 +12615,18 @@
     "price": "$40",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788289341338,
+    "title": "True North Jazz Project",
+    "date": "2027-02-13",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$29-$34",
+    "free": false,
+    "_manual": true
   }
 ]
