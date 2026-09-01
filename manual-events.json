@@ -12537,5 +12537,18 @@
     "price": "$29-$45",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788288424580,
+    "title": "The Machine (Pink Floyd Cover Band Unplugged)",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$45-$61",
+    "free": false,
+    "_manual": true
   }
 ]
