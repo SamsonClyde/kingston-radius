@@ -4008,7 +4008,7 @@
   },
   {
     "id": 1787073553190,
-    "title": "The Moss Ensemble (Classical)",
+    "title": "The Moss Ensemble (classical)",
     "date": "2026-09-19",
     "time": "19:00",
     "venue": "Doctorow Center (Catskill Mountain Foundation)",
@@ -4017,7 +4017,8 @@
     "mapsUrl": "https://maps.app.goo.gl/LnFs5qhwS73VKaBh9",
     "price": "Pay what you can",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787073722066,
