@@ -4022,7 +4022,7 @@
   },
   {
     "id": 1787073722066,
-    "title": "The Music of Amy Beach (Classical)",
+    "title": "The Music of Amy Beach (classical)",
     "date": "2026-10-17",
     "time": "14:00",
     "venue": "Doctorow Center (Catskill Mountain Foundation)",
@@ -4031,7 +4031,8 @@
     "mapsUrl": "https://maps.app.goo.gl/LnFs5qhwS73VKaBh9",
     "price": "$28",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787073823364,
