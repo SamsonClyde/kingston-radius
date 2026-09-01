@@ -12354,5 +12354,18 @@
     "price": "$40",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788286109834,
+    "title": "Heavy Traffic Band (Traffic Cover Band)",
+    "date": "2026-10-04",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$23",
+    "free": false,
+    "_manual": true
   }
 ]
