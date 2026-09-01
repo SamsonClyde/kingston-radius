@@ -11443,5 +11443,18 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1788278769508,
+    "title": "95 Bulls, Dauber, These People (solo)",
+    "date": "2026-09-05",
+    "time": "17:00",
+    "venue": "Art Omi",
+    "venueUrl": "https://artomi.org/events/",
+    "location": "Ghent, NY",
+    "mapsUrl": "https://maps.app.goo.gl/nyUTeCEHK9JP3exA8",
+    "price": "Free/RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
