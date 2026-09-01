@@ -1922,5 +1922,9 @@
   "The Falcon||2026-09-04||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1788286595857
+  },
+  "The Half Moon||2026-09-04||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286599619
   }
 }
