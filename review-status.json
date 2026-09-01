@@ -1801,5 +1801,9 @@
   "The Eleven||2026-09-05||18:00": {
     "status": "rejected",
     "hiddenAt": 1788279378954
+  },
+  "Bard College Conservatory||2026-10-02||": {
+    "status": "rejected",
+    "hiddenAt": 1788283971215
   }
 }
