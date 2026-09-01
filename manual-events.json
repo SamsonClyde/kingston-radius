@@ -11755,5 +11755,18 @@
     "price": "$24",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788280328580,
+    "title": "Aris",
+    "date": "2026-09-09",
+    "time": "18:00",
+    "venue": "The Eleven",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/aqdL8wtJdNAHwLoB7",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
