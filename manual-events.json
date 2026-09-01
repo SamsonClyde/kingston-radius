@@ -12550,5 +12550,18 @@
     "price": "$45-$61",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788288493178,
+    "title": "Rock This Town Orchestra Christmas Spectacular (Night One)",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$34-$50",
+    "free": false,
+    "_manual": true
   }
 ]
