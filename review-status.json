@@ -1939,5 +1939,10 @@
     "status": "rejected",
     "hiddenAt": 1788286659670
   },
-  "Tompkins Corners Cultural Center||2026-10-09||19:30": "approved"
+  "Tompkins Corners Cultural Center||2026-10-09||19:30": "approved",
+  "Towne Crier Café||2026-09-11||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286723106
+  },
+  "Towne Crier Café||2026-09-11||18:30": "approved"
 }
