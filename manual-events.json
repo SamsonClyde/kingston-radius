@@ -7283,15 +7283,15 @@
   {
     "id": 229,
     "date": "2026-09-05",
-    "title": "Women's Drumsong Orchestra of the Hudson Valley",
-    "venue": "Rail Trail Cafe",
-    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/womens-drum-song-of-the-hudson-valley",
-    "location": "Rosendale, NY",
-    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
-    "time": "14:00",
-    "price": "$10",
+    "title": "New Planets",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "19:00",
+    "price": "$17",
     "free": false,
-    "_source": "manual",
+    "_source": "scraped",
     "_manual": true
   },
   {
