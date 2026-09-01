@@ -5118,7 +5118,7 @@
   },
   {
     "id": 1787136603796,
-    "title": "Kaleidoscope Chamber Collective (Classical)",
+    "title": "Kaleidoscope Chamber Collective (classical)",
     "date": "2026-10-25",
     "time": "15:00",
     "venue": "Hudson Hall",
@@ -5127,7 +5127,8 @@
     "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
     "price": "$55",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787136704133,
