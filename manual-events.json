@@ -898,14 +898,14 @@
   },
   {
     "id": 3,
-    "date": "2026-08-12",
-    "title": "Brian Mitchell & Friends",
+    "date": "2026-09-03",
+    "title": "Peter Einhorn Jazz Duo",
     "venue": "Colony Woodstock",
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "time": "19:00",
-    "price": "Donation",
+    "time": "17:30",
+    "price": "See website",
     "free": false,
     "_source": "email",
     "_manual": true
