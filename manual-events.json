@@ -11651,5 +11651,18 @@
     "price": "$13",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788279901525,
+    "title": "Driftwood, w/s/g, The Mallett Brothers",
+    "date": "2026-10-24",
+    "time": "20:00",
+    "venue": "Lark Hall",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
+    "price": "$27",
+    "free": false,
+    "_manual": true
   }
 ]
