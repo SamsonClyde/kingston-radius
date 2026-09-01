@@ -12432,5 +12432,18 @@
     "price": "$23",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788286429536,
+    "title": "John Gullo's Rolling Stones",
+    "date": "2026-11-28",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$29",
+    "free": false,
+    "_manual": true
   }
 ]
