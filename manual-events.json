@@ -4221,7 +4221,7 @@
   },
   {
     "id": 1787075767583,
-    "title": "The Romantic Arc (Classical)",
+    "title": "The Romantic Arc (classical)",
     "date": "2026-09-20",
     "time": "11:00",
     "venue": "Bard Fisher Center",
@@ -4230,7 +4230,8 @@
     "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
     "price": "ReserveFree",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 188,
