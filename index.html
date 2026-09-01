@@ -1713,6 +1713,13 @@ function shortHash(str) {
   return (h >>> 0).toString(36);
 }
 
+function formatEventBlurb(e) {
+  const d = parseDate(e.date);
+  const dateStr = d.toLocaleDateString('default', {month:'short', day:'numeric'});
+  const timeStr = formatTime(e.time);
+  return `${e.title}\n${e.venue}\n${dateStr}${timeStr ? ', ' + timeStr : ''}`;
+}
+
 async function shareEvent(e) {
   const key = eventKey(e);
   const url = new URL(window.location.href);
@@ -1721,10 +1728,7 @@ async function shareEvent(e) {
   url.searchParams.set('e', shortHash(key));
   const shareUrl = url.toString();
 
-  const d = parseDate(e.date);
-  const dateStr = d.toLocaleDateString('default', {month:'short', day:'numeric'});
-  const timeStr = formatTime(e.time);
-  const shareText = `${e.title} — ${e.venue} — ${dateStr}${timeStr ? ' at ' + timeStr : ''}`;
+  const shareText = formatEventBlurb(e);
 
   if (navigator.share) {
     try {
@@ -1744,10 +1748,7 @@ async function shareEvent(e) {
 }
 
 async function copyEventBlurb(e) {
-  const d = parseDate(e.date);
-  const dateStr = d.toLocaleDateString('default', {month:'short', day:'numeric'});
-  const timeStr = formatTime(e.time);
-  const blurb = `${e.title}\n${e.venue}\n${dateStr}${timeStr ? ', ' + timeStr : ''}`;
+  const blurb = formatEventBlurb(e);
   try {
     await navigator.clipboard.writeText(blurb);
     showToast('Copied!');
