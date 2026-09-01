@@ -912,14 +912,14 @@
   },
   {
     "id": 5,
-    "date": "2026-08-13",
-    "title": "Jamie Thomas",
+    "date": "2026-09-04",
+    "title": "The Niall Connolly Band & Sean Kiely",
     "venue": "Colony Woodstock",
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "time": "17:30",
-    "price": "Donation",
+    "time": "18:00",
+    "price": "$20",
     "free": false,
     "_source": "email",
     "_manual": true
