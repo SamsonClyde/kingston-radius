@@ -12172,5 +12172,18 @@
     "price": "Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788285374321,
+    "title": "The Bob Cats",
+    "date": "2026-09-16",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "Donation",
+    "free": false,
+    "_manual": true
   }
 ]
