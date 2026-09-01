@@ -11508,5 +11508,18 @@
     "price": "$36",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788279490757,
+    "title": "HEX: The Cover Up 2 Goth Night",
+    "date": "2026-09-11",
+    "time": "21:00",
+    "venue": "Lark Hall",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
