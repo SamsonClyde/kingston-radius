@@ -11456,5 +11456,18 @@
     "price": "Free/RSVP",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788279135422,
+    "title": "Caity Gallagher",
+    "date": "2026-09-04",
+    "time": "18:00",
+    "venue": "The Eleven",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/aqdL8wtJdNAHwLoB7",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
