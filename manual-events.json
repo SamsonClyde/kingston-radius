@@ -11226,5 +11226,18 @@
     "price": "$45-$75",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788273113460,
+    "title": "Planet Granite Music & Dance Festival: The Alpaca Gnomes, North Country Band, The Slide Stops, Hitch and the Giddyup, Jason Ingriselli & Miles North, Carrie Linsky (Caravan of Thieves), Bugs on a Log",
+    "date": "2026-09-20",
+    "time": "12:00",
+    "venue": "The Granite",
+    "venueUrl": "https://thegranitechurch.org/event/planet-granite-music-dance-festival/",
+    "location": "Redding, CT",
+    "mapsUrl": "https://maps.app.goo.gl/kSHTGjagtzHyUjNX8",
+    "price": "$45-$75",
+    "free": false,
+    "_manual": true
   }
 ]
