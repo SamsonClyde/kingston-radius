@@ -11944,12 +11944,13 @@
     "date": "2026-10-09",
     "time": "18:00",
     "venue": "The Eleven",
-    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "venueUrl": "https://topsoftrees.com/home?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
     "location": "Albany, NY",
     "mapsUrl": "https://maps.app.goo.gl/aqdL8wtJdNAHwLoB7",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788281532244,
