@@ -430,6 +430,19 @@
   },
   {
     "id": 34,
+    "date": "2026-10-02",
+    "title": "The Limeliters in The Grace Note",
+    "venue": "Stissing Center",
+    "venueUrl": "https://www.thestissingcenter.org/events",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NGxaff71QdhYoLhYA",
+    "time": "7:30 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 35,
     "date": "2026-10-03",
     "title": "Stayin' Alive: One Night of the Bee Gees",
     "venue": "Bardavon",
@@ -442,7 +455,7 @@
     "_source": "email"
   },
   {
-    "id": 35,
+    "id": 36,
     "date": "2026-10-03",
     "title": "Zydeco & Cajun Cedric Watson and Ethan Moody",
     "venue": "The Local Saugerties",
@@ -455,7 +468,7 @@
     "_source": "email"
   },
   {
-    "id": 36,
+    "id": 37,
     "date": "2026-10-04",
     "title": "Bard East/West Ensemble Conducted by Jindong Cai",
     "venue": "Tempo Arts",
@@ -468,7 +481,7 @@
     "_source": "email"
   },
   {
-    "id": 37,
+    "id": 38,
     "date": "2026-10-06",
     "title": "MHA of Dutchess County: The Sound of Nashville",
     "venue": "Bardavon",
@@ -481,7 +494,7 @@
     "_source": "email"
   },
   {
-    "id": 38,
+    "id": 39,
     "date": "2026-10-08",
     "title": "An Evening with Murray Hill in Conversation with Bridget Everett",
     "venue": "Stissing Center",
@@ -494,7 +507,7 @@
     "_source": "email"
   },
   {
-    "id": 39,
+    "id": 40,
     "date": "2026-10-09",
     "title": "HUG: Devendra Banhart",
     "venue": "MASS MoCA",
@@ -507,7 +520,7 @@
     "_source": "email"
   },
   {
-    "id": 40,
+    "id": 41,
     "date": "2026-10-10",
     "title": "Hacia Cuando: An Opera",
     "venue": "MASS MoCA",
@@ -520,7 +533,7 @@
     "_source": "email"
   },
   {
-    "id": 41,
+    "id": 42,
     "date": "2026-10-10",
     "title": "Hacia Cuando: An Opera",
     "venue": "MASS MoCA",
@@ -533,7 +546,7 @@
     "_source": "email"
   },
   {
-    "id": 42,
+    "id": 43,
     "date": "2026-10-15",
     "title": "Honky Tonk Dance Party with The Talking Hearts",
     "venue": "Tempo Arts",
@@ -546,7 +559,7 @@
     "_source": "email"
   },
   {
-    "id": 43,
+    "id": 44,
     "date": "2026-10-17",
     "title": "MET: Macbeth (Verdi)",
     "venue": "Bardavon",
@@ -559,7 +572,7 @@
     "_source": "email"
   },
   {
-    "id": 44,
+    "id": 45,
     "date": "2026-10-18",
     "title": "Roz Chast & Jason Adam Katzenstein",
     "venue": "MASS MoCA",
@@ -572,7 +585,7 @@
     "_source": "email"
   },
   {
-    "id": 45,
+    "id": 46,
     "date": "2026-10-18",
     "title": "Classical Crossroads – Baroque to Tango",
     "venue": "Tempo Arts",
@@ -585,7 +598,7 @@
     "_source": "email"
   },
   {
-    "id": 46,
+    "id": 47,
     "date": "2026-10-20",
     "title": "Earl Sweatshirt + MIKE",
     "venue": "MASS MoCA",
@@ -598,7 +611,7 @@
     "_source": "email"
   },
   {
-    "id": 47,
+    "id": 48,
     "date": "2026-10-22",
     "title": "Neko Case: Neon Grey Midnight Green Tour",
     "venue": "Bardavon",
@@ -611,7 +624,7 @@
     "_source": "email"
   },
   {
-    "id": 48,
+    "id": 49,
     "date": "2026-10-30",
     "title": "Rasputina with Dust Bowl Faeries",
     "venue": "Tempo Arts",
@@ -624,7 +637,7 @@
     "_source": "email"
   },
   {
-    "id": 49,
+    "id": 50,
     "date": "2026-10-30",
     "title": "Ballet Nepantla's Mistica",
     "venue": "MASS MoCA",
@@ -637,7 +650,7 @@
     "_source": "email"
   },
   {
-    "id": 50,
+    "id": 51,
     "date": "2026-11-14",
     "title": "Endea Owens & The Cookout",
     "venue": "MASS MoCA",
@@ -650,7 +663,7 @@
     "_source": "email"
   },
   {
-    "id": 51,
+    "id": 52,
     "date": "2026-11-21",
     "title": "The Pirates of Penzance",
     "venue": "Bardavon",
@@ -663,7 +676,7 @@
     "_source": "email"
   },
   {
-    "id": 52,
+    "id": 53,
     "date": "2026-11-21",
     "title": "Mirrored Pool",
     "venue": "MASS MoCA",
@@ -676,7 +689,7 @@
     "_source": "email"
   },
   {
-    "id": 53,
+    "id": 54,
     "date": "2026-12-06",
     "title": "Candice Guardino",
     "venue": "Bardavon",
@@ -689,7 +702,20 @@
     "_source": "email"
   },
   {
-    "id": 54,
+    "id": 55,
+    "date": "2026-12-06",
+    "title": "Candice Guardino: Italian Bred",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+St+Poughkeepsie+NY",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 56,
     "date": "2026-12-20",
     "title": "MET ENCORE: Samson et Dalila (Saint-Saëns)",
     "venue": "Bardavon",
