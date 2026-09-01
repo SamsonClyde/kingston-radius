@@ -11161,5 +11161,18 @@
     "price": "$36/$42",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788271685253,
+    "title": "Tab Benoit, Ghalia Volt",
+    "date": "2026-10-17",
+    "time": "20:00",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "price": "$42+",
+    "free": false,
+    "_manual": true
   }
 ]
