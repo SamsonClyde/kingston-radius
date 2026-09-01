@@ -11973,9 +11973,21 @@
     "venueUrl": "https://www.instagram.com/rewindkingston/",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/qj7Z5WR4M1M8up1q9",
-    "price": "$10/$20",
+    "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
+  },
+  {
+    "id": 1788282103100,
+    "title": "The Twisted Kilt",
+    "date": "2026-09-05",
+    "time": "17:00",
+    "venue": "The Greenhouse Cidery",
+    "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
+    "location": "Chatham, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NyUuj5Az6xsTLD119",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
