@@ -306,7 +306,9 @@
     padding: 0;
     font-family: 'DM Sans', sans-serif;
     cursor: pointer;
+    text-decoration: none;
   }
+  .venue-name:visited { color: var(--red); }
   .venue-name:hover { text-decoration: underline; }
   .venue-link {
     font-size: 0.82rem;
@@ -1804,6 +1806,20 @@ function jumpToSharedEvent() {
   }, 60);
 }
 
+function applyVenueParam() {
+  const params = new URLSearchParams(window.location.search);
+  const venue = params.get('venue');
+  if (!venue) return;
+
+  _activeVenue = venue;
+  _currentPage = 1;
+  const sel = document.getElementById('venue-select');
+  if (sel) sel.value = venue;
+
+  history.replaceState(null, '', window.location.pathname);
+  renderEvents();
+}
+
 function buildEventCard(e, isAdmin) {
   const d        = parseDate(e.date);
   const dayName  = d.toLocaleString('default', {weekday:'short'});
@@ -1882,7 +1898,7 @@ function buildEventCard(e, isAdmin) {
           : `<span class="event-title">${esc(e.title)}</span>`}
       </div>
       <div class="event-venue-row">
-        <button class="venue-name" data-action="filter-venue" data-venue="${esc(e.venue)}" title="See all ${esc(e.venue)} listings">${esc(e.venue)}</button>
+        <a class="venue-name" href="index.html?venue=${encodeURIComponent(e.venue)}" target="_blank" rel="noopener" title="See all ${esc(e.venue)} listings">${esc(e.venue)}</a>
         ${e.mapsUrl  ? `<a class="city-link"  href="${esc(e.mapsUrl)}"  target="_blank" rel="noopener">${esc(e.location)}</a>` : `<span class="city-link">${esc(e.location)}</span>`}
       </div>
       <div class="event-bottom-row">
@@ -2521,6 +2537,9 @@ loadFromServer().then(() => {
   populateVenueSelect();
   updateBadge();
   updateManageVenueBtn();
+
+  // If this page was opened via a venue link, filter to that venue right away
+  applyVenueParam();
 
   if (sessionStorage.getItem('kr_authed')) {
     showAdminContent();
