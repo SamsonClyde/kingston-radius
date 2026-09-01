@@ -11213,5 +11213,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788272853455,
+    "title": "Planet Granite Music & Dance Festival: Chris Luquette Band, Cole Quest and the City Pickers, The Talking Hearts, Timothy, Bugs on a Log, Hilary Hawke Band, Wires and Wood, Kentucky Girls",
+    "date": "2026-09-19",
+    "time": "12:00",
+    "venue": "The Granite",
+    "venueUrl": "https://thegranitechurch.org/event/planet-granite-music-dance-festival/",
+    "location": "Redding, CT",
+    "mapsUrl": "https://maps.app.goo.gl/kSHTGjagtzHyUjNX8",
+    "price": "$45-$75",
+    "free": false,
+    "_manual": true
   }
 ]
