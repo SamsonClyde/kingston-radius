@@ -11586,5 +11586,18 @@
     "price": "$7",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788279701658,
+    "title": "Monkey & The Crowbar",
+    "date": "2026-09-26",
+    "time": "18:00",
+    "venue": "Lark Hall",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
