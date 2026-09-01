@@ -11291,5 +11291,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788277504731,
+    "title": "Fleischmanns Village Festival - Joe Colwell, Lali & The Pops, Jaketown Road, Sue's Garage, Garth Kravits, Simone's Bicycle Wreck, Adam Fitch, Alivia George",
+    "date": "2026-09-06",
+    "time": "23:00",
+    "venue": "Fleischmanns Village Festival",
+    "venueUrl": "https://www.instagram.com/visitfleischmannsny/",
+    "location": "Fleischmanns, NY",
+    "mapsUrl": "https://maps.app.goo.gl/aPEM3cxgfb6TsgjM9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
