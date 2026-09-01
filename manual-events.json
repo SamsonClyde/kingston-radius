@@ -12289,5 +12289,18 @@
     "price": "$17",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788285722517,
+    "title": "Peg N' Awl",
+    "date": "2026-09-27",
+    "time": "17:30",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "Donation",
+    "free": false,
+    "_manual": true
   }
 ]
