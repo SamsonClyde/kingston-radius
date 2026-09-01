@@ -11200,5 +11200,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788272260204,
+    "title": "Music, Stay Tuned!",
+    "date": "2026-09-05",
+    "time": "13:00",
+    "venue": "Tomato Fest",
+    "venueUrl": "https://hudsonvalleyseed.com/products/tomato-fest-sat-9-5-1pm-to-4pm",
+    "location": "Accord, NY",
+    "mapsUrl": "https://maps.app.goo.gl/tXt4TiNTgVkh2WRq7",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
