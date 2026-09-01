@@ -1704,18 +1704,27 @@ function showToast(msg) {
   window._toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
 }
 
+// ── SHARE ─────────────────────────────────────────────────────────────────────
+function shortHash(str) {
+  let h = 5381;
+  for (let i = 0; i < str.length; i++) {
+    h = ((h << 5) + h + str.charCodeAt(i)) | 0; // djb2
+  }
+  return (h >>> 0).toString(36);
+}
+
 async function shareEvent(e) {
   const key = eventKey(e);
   const url = new URL(window.location.href);
   url.hash = '';
   url.search = '';
-  url.searchParams.set('event', btoa(key));
+  url.searchParams.set('e', shortHash(key));
   const shareUrl = url.toString();
 
   const d = parseDate(e.date);
-  const dateStr = d.toLocaleDateString('default', {weekday:'short', month:'short', day:'numeric'});
+  const dateStr = d.toLocaleDateString('default', {month:'short', day:'numeric'});
   const timeStr = formatTime(e.time);
-  const shareText = `${e.title} — ${e.venue}, ${e.location} — ${dateStr}${timeStr ? ' at ' + timeStr : ''}`;
+  const shareText = `${e.title} — ${e.venue} — ${dateStr}${timeStr ? ' at ' + timeStr : ''}`;
 
   if (navigator.share) {
     try {
@@ -1736,7 +1745,7 @@ async function shareEvent(e) {
 
 async function copyEventBlurb(e) {
   const d = parseDate(e.date);
-  const dateStr = d.toLocaleDateString('default', {weekday:'short', month:'short', day:'numeric'});
+  const dateStr = d.toLocaleDateString('default', {month:'short', day:'numeric'});
   const timeStr = formatTime(e.time);
   const blurb = `${e.title}\n${e.venue}\n${dateStr}${timeStr ? ', ' + timeStr : ''}`;
   try {
@@ -1749,17 +1758,22 @@ async function copyEventBlurb(e) {
 
 function jumpToSharedEvent() {
   const params = new URLSearchParams(window.location.search);
-  const sharedKey = params.get('event');
-  if (!sharedKey) return;
-  let decoded;
-  try { decoded = atob(sharedKey); } catch { return; }
+  const sharedHash = params.get('e') || params.get('event'); // 'event' kept for old links
+  if (!sharedHash) return;
 
   const today = new Date(); today.setHours(0,0,0,0);
   const upcoming = getApprovedEvents()
     .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue))
     .sort((a,b) => (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
-  const idx = upcoming.findIndex(e => eventKey(e) === decoded);
+
+  // New short-hash links match directly; old base64 links still decode as a fallback
+  let idx = upcoming.findIndex(e => shortHash(eventKey(e)) === sharedHash);
+  let decoded = null;
+  if (idx === -1) {
+    try { decoded = atob(sharedHash); idx = upcoming.findIndex(e => eventKey(e) === decoded); } catch {}
+  }
   if (idx === -1) return; // event not found, in the past, or hidden — just show the normal homepage
+  if (!decoded) decoded = eventKey(upcoming[idx]);
 
   // Reset to default view so the shared event is guaranteed visible
   _activeFilter = 'all';
