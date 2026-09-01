@@ -1930,5 +1930,9 @@
   "The Half Moon||2026-09-09||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788286602349
+  },
+  "Tompkins Corners Cultural Center||2026-09-29||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286605190
   }
 }
