@@ -11989,5 +11989,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788282134109,
+    "title": "Northern Comfort",
+    "date": "2026-09-12",
+    "time": "17:00",
+    "venue": "The Greenhouse Cidery",
+    "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
+    "location": "Chatham, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NyUuj5Az6xsTLD119",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
