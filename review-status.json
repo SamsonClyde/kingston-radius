@@ -9,7 +9,10 @@
   "Assembly Kingston||2026-09-18||20:00": "approved",
   "Assembly Kingston||2026-09-19||20:00": "approved",
   "Assembly Kingston||2026-09-20||19:00": "approved",
-  "Assembly Kingston||2026-09-25||20:00": "approved",
+  "Assembly Kingston||2026-09-25||20:00": {
+    "status": "rejected",
+    "hiddenAt": 1788271478043
+  },
   "Assembly Kingston||2026-09-26||20:00": "approved",
   "Assembly Kingston||2026-10-02||20:00": "approved",
   "Assembly Kingston||2026-10-03||20:00": "approved",
