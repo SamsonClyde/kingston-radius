@@ -11408,5 +11408,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788278356992,
+    "title": "Mike Herman",
+    "date": "2026-11-13",
+    "time": "18:00",
+    "venue": "Indian Ladder Farms",
+    "venueUrl": "https://www.indianladderfarms.com/events-calendar/",
+    "location": "Altamont, NY",
+    "mapsUrl": "https://www.indianladderfarms.com/events-calendar/",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
