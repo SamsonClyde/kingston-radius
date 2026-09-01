@@ -11174,5 +11174,18 @@
     "price": "$42+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788271733236,
+    "title": "Deerhoof",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "price": "$27+",
+    "free": false,
+    "_manual": true
   }
 ]
