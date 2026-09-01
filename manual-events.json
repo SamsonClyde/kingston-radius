@@ -11265,5 +11265,18 @@
     "price": "$28-$60single/$60-$150pass",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788273826444,
+    "title": "Kaia Kater, Jefferson Hamer & Liz Hanley, Olivia Ellen Lloyd",
+    "date": "2026-10-04",
+    "time": "12:30",
+    "venue": "The Country Living Fair",
+    "venueUrl": "https://countrylivingfairs.com/the-fair#what-to-expect",
+    "location": "Rhinebeck, NY",
+    "mapsUrl": "https://maps.app.goo.gl/Wjrar3vCGhvDyY269",
+    "price": "$28-$60single/$60-$150pass",
+    "free": false,
+    "_manual": true
   }
 ]
