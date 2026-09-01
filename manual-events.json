@@ -11304,5 +11304,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788277796400,
+    "title": "The High Nooners",
+    "date": "2026-09-05",
+    "time": "16:00",
+    "venue": "The Baldwin",
+    "venueUrl": "https://www.instagram.com/liquidmercantile/",
+    "location": "Pine Bush, NY",
+    "mapsUrl": "https://maps.app.goo.gl/WhfYUq8ysYeaa6reA",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
