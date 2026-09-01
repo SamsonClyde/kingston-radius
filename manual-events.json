@@ -11729,5 +11729,18 @@
     "price": "$24",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788280182282,
+    "title": "The 6th Annual Last Waltz on Lark Street",
+    "date": "2026-11-25",
+    "time": "19:30",
+    "venue": "Lark Hall",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
+    "price": "$30",
+    "free": false,
+    "_manual": true
   }
 ]
