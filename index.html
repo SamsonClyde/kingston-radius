@@ -33,13 +33,29 @@
     --muted: #888880;
     --border: #E8E6E0;
     --tag-bg: #F0EEE8;
+    --header-bg: #1A1A18;
+    color-scheme: light;
   }
+  [data-theme="dark"] {
+    --red: #E2604A;
+    --red-dark: #C0392B;
+    --bg: #171613;
+    --card: #211F1B;
+    --text: #EDEAE2;
+    --muted: #9B968C;
+    --border: #37342D;
+    --tag-bg: #29271F;
+    --header-bg: #100F0D;
+    color-scheme: dark;
+  }
+  [data-theme="dark"] .event-card { box-shadow: none; }
+  [data-theme="dark"] .day-num { color: var(--red); }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
 
   /* ── HEADER ── */
   header {
-    background: var(--text);
+    background: var(--header-bg);
     color: #fff;
     padding: 0 24px;
     display: flex;
@@ -50,7 +66,8 @@
     top: 0;
     z-index: 100;
   }
-  .logo { font-family: 'DM Serif Display', serif; font-size: 1.3rem; letter-spacing: 0.01em; }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 1.3rem; letter-spacing: 0.01em; color: #fff; text-decoration: none; }
+  .logo:hover { opacity: 0.85; }
   .logo span { color: var(--red); }
   nav { display: flex; gap: 6px; }
   nav a {
@@ -104,7 +121,7 @@
     white-space: nowrap;
   }
   .filter-btn:hover { border-color: var(--text); }
-  .filter-btn.active { background: var(--text); color: #fff; border-color: var(--text); }
+  .filter-btn.active { background: var(--text); color: var(--bg); border-color: var(--text); }
   .filter-btn.red-btn { border-color: var(--red); color: var(--red); }
   .filter-btn.red-btn.active { background: var(--red); color: #fff; }
   .filter-sep { width: 1px; height: 20px; background: var(--border); margin: 0 4px; }
@@ -172,7 +189,7 @@
     left: 50%;
     transform: translateX(-50%);
     background: var(--text);
-    color: #fff;
+    color: var(--bg);
     padding: 10px 18px;
     border-radius: 8px;
     font-family: 'DM Sans', sans-serif;
@@ -282,7 +299,13 @@
     font-size: 0.82rem;
     font-weight: 600;
     color: var(--red);
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
   }
+  .venue-name:hover { text-decoration: underline; }
   .venue-link {
     font-size: 0.82rem;
     font-weight: 600;
@@ -360,7 +383,7 @@
     position: absolute;
     top: 8px; right: 8px;
     background: var(--text);
-    color: #fff;
+    color: var(--bg);
     border: none;
     border-radius: 4px;
     font-size: 0.72rem;
@@ -398,7 +421,7 @@
   .inline-edit-form input:focus, .inline-edit-form select:focus { outline: none; border-color: var(--text); }
   .inline-edit-actions { display: flex; gap: 6px; width: 100%; margin-top: 2px; }
   .btn-inline-save {
-    background: var(--text); color: #fff; border: none; border-radius: 5px;
+    background: var(--text); color: var(--bg); border: none; border-radius: 5px;
     padding: 6px 14px; font-size: 0.8rem; font-weight: 500; cursor: pointer;
     font-family: 'DM Sans', sans-serif;
   }
@@ -562,7 +585,7 @@
   }
   .btn-approve:hover { opacity: 0.85; }
   .btn-save {
-    background: var(--text); color: #fff; border: none; border-radius: 5px;
+    background: var(--text); color: var(--bg); border: none; border-radius: 5px;
     padding: 5px 14px; font-size: 0.75rem; font-family: 'DM Sans', sans-serif;
     font-weight: 600; cursor: pointer; transition: opacity 0.15s;
   }
@@ -619,7 +642,7 @@
     white-space: nowrap;
   }
   .admin-tab:hover { border-color: var(--text); }
-  .admin-tab.active { background: var(--text); color: #fff; border-color: var(--text); }
+  .admin-tab.active { background: var(--text); color: var(--bg); border-color: var(--text); }
 
   /* ── CONTENT PAGES ── */
   .page { display: none; }
@@ -704,7 +727,7 @@
   .btn-primary {
     width: 100%;
     background: var(--text);
-    color: #fff;
+    color: var(--bg);
     border: none;
     border-radius: 6px;
     padding: 10px;
@@ -875,16 +898,26 @@
     window._wantsAdmin = true;
     // Don't replaceState here - let the main script handle it after DOM is ready
   }
+  // Apply theme before first paint to avoid a flash of the wrong theme
+  (function() {
+    var saved = localStorage.getItem('kr_theme');
+    var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  })();
 </script>
 </head>
 <body>
 
 <header>
-  <div class="logo">Kingston<span>Radius</span></div>
+  <a href="index.html" class="logo" id="home-logo-link" style="text-decoration:none;">Kingston<span>Radius</span></a>
   <nav>
     <a href="#" class="active" data-page="music">Music</a>
     <a href="about.html">About</a>
     <a href="#" data-page="admin" id="admin-nav-link" style="display:none;">Admin<span id="review-badge"></span></a>
+    <button id="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode" style="background:none;border:1px solid rgba(255,255,255,0.25);border-radius:20px;width:30px;height:30px;margin-left:16px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;color:#fff;vertical-align:middle;">
+      <svg id="theme-icon-sun" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg id="theme-icon-moon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+    </button>
   </nav>
 </header>
 
@@ -920,7 +953,6 @@
       <button class="filter-btn" id="sort-venue-btn" onclick="setSortMode('venue')" style="padding:4px 10px;font-size:0.75rem;">Venue</button>
       <input type="text" id="keyword-search" placeholder="Search…" style="border:1.5px solid var(--border);background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.8rem;padding:4px 12px;border-radius:20px;margin-left:6px;width:150px;transition:border-color 0.15s;">
     </div>
-    <span style="font-size:0.72rem;color:var(--muted);">Click title to visit venue site &nbsp;·&nbsp; Click city to open in Google Maps</span>
     <button id="venue-delete-mode-btn" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;" onclick="toggleVenueDeleteMode()">Manage venues</button>
   </div>
   <div id="venue-delete-bar" style="display:none;padding:8px 0 4px;gap:6px;flex-wrap:wrap;" class="filter-row">
@@ -1834,7 +1866,7 @@ function buildEventCard(e, isAdmin) {
           : `<span class="event-title">${esc(e.title)}</span>`}
       </div>
       <div class="event-venue-row">
-        <span class="venue-name">${esc(e.venue)}</span>
+        <button class="venue-name" data-action="filter-venue" data-venue="${esc(e.venue)}" title="See all ${esc(e.venue)} listings">${esc(e.venue)}</button>
         ${e.mapsUrl  ? `<a class="city-link"  href="${esc(e.mapsUrl)}"  target="_blank" rel="noopener">${esc(e.location)}</a>` : `<span class="city-link">${esc(e.location)}</span>`}
       </div>
       <div class="event-bottom-row">
@@ -2046,6 +2078,18 @@ document.addEventListener('click', async (ev) => {
     const all = getAllEvents();
     const e   = all.find(ev => eventKey(ev) === key);
     if (e) await copyEventBlurb(e);
+    return;
+  }
+
+  // Filter to one venue's listings
+  if (action === 'filter-venue') {
+    const venue = btn.dataset.venue;
+    _activeVenue = venue;
+    _currentPage = 1;
+    const sel = document.getElementById('venue-select');
+    if (sel) sel.value = venue;
+    renderEvents();
+    document.querySelector('main')?.scrollIntoView({behavior:'smooth', block:'start'});
     return;
   }
 
@@ -2470,6 +2514,36 @@ loadFromServer().then(() => {
 
   // Jump to a specific event if this page was opened via a share link
   jumpToSharedEvent();
+});
+
+// ── DARK MODE TOGGLE ──────────────────────────────────────────────────────────
+function updateThemeIcons() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const sun = document.getElementById('theme-icon-sun');
+  const moon = document.getElementById('theme-icon-moon');
+  if (sun)  sun.style.display  = isDark ? 'block' : 'none';
+  if (moon) moon.style.display = isDark ? 'none'  : 'block';
+}
+updateThemeIcons();
+
+document.getElementById('theme-toggle-btn')?.addEventListener('click', () => {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('kr_theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('kr_theme', 'dark');
+  }
+  updateThemeIcons();
+});
+
+// Follow system theme changes live, but only if the user hasn't manually chosen one
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  if (localStorage.getItem('kr_theme')) return; // respect manual override
+  if (e.matches) document.documentElement.setAttribute('data-theme', 'dark');
+  else document.documentElement.removeAttribute('data-theme');
+  updateThemeIcons();
 });
 
 </script>
