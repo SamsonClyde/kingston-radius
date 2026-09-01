@@ -12406,5 +12406,31 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788286284617,
+    "title": "Carsie Blanton",
+    "date": "2026-10-30",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$40",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1788286333780,
+    "title": "The Pink Floyd Project",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$23",
+    "free": false,
+    "_manual": true
   }
 ]
