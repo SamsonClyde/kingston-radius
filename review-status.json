@@ -1910,5 +1910,9 @@
   "Maverick Concerts||2026-09-04||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788286536925
+  },
+  "Rosendale Theater||2026-09-06||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286556600
   }
 }
