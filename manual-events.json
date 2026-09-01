@@ -11716,5 +11716,18 @@
     "price": "$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788280151840,
+    "title": "Nicole Atkins, John Gallagher Jr.",
+    "date": "2026-11-24",
+    "time": "20:00",
+    "venue": "Lark Hall",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
+    "price": "$24",
+    "free": false,
+    "_manual": true
   }
 ]
