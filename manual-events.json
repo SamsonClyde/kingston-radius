@@ -12067,5 +12067,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788283668542,
+    "title": "Out on the Farm: All-Ages Queer Upstate NY Fall Festival",
+    "date": "2026-09-26",
+    "time": "14:00",
+    "venue": "Bad Seed",
+    "venueUrl": "https://www.badseedhardcider.com/events/",
+    "location": "Highland, NY",
+    "mapsUrl": "https://maps.google.com/?q=87+Burroughs+Dr+Highland+NY",
+    "price": "$15adv/$20door",
+    "free": false,
+    "_manual": true
   }
 ]
