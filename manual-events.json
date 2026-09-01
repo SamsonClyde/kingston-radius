@@ -11187,5 +11187,18 @@
     "price": "$27+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788271974413,
+    "title": "The Veggies, N.F.D.P.",
+    "date": "2026-09-12",
+    "time": "19:00",
+    "venue": "2 Alices Coffee Lounge",
+    "venueUrl": "https://www.instagram.com/2alicescoffeelounge",
+    "location": "Cornwall-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/WytdjbR2X6D7qEJk6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
