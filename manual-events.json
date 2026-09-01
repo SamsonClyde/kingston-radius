@@ -11239,5 +11239,18 @@
     "price": "$45-$75",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788273614321,
+    "title": "The Secret Sisters, Jordan Tice Trio, Taylor Ashton",
+    "date": "2026-10-02",
+    "time": "12:30",
+    "venue": "The Country Living Fair",
+    "venueUrl": "https://countrylivingfairs.com/the-fair#what-to-expect",
+    "location": "Rhinebeck, NY",
+    "mapsUrl": "https://maps.app.goo.gl/Wjrar3vCGhvDyY269",
+    "price": "$28-$60single/$60-$150pass",
+    "free": false,
+    "_manual": true
   }
 ]
