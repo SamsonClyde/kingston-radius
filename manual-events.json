@@ -3020,7 +3020,7 @@
   },
   {
     "id": 1787068789630,
-    "title": "Kid Charlemagne (Steely Dan Cover Band",
+    "title": "Kid Charlemagne (Steely Dan Cover Band)",
     "date": "2026-09-17",
     "time": "20:00",
     "venue": "Daryl's House Club",
@@ -3029,7 +3029,8 @@
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
     "price": "$34-$45",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787068873534,
@@ -12458,58 +12459,6 @@
     "price": "See website",
     "free": false,
     "_source": "scraped",
-    "_manual": true
-  },
-  {
-    "id": 1788287109508,
-    "title": "Judy Collins",
-    "date": "2026-11-13",
-    "time": "19:30",
-    "venue": "Bardavon",
-    "venueUrl": "https://www.bardavon.org/",
-    "location": "Poughkeepsie, NY",
-    "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
-    "price": "$55-$75",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1788287166629,
-    "title": "Chanticleer",
-    "date": "2027-01-23",
-    "time": "20:00",
-    "venue": "Bardavon",
-    "venueUrl": "https://www.bardavon.org/",
-    "location": "Poughkeepsie, NY",
-    "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
-    "price": "$39-$65",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1788287653657,
-    "title": "Hope Rocks Festival",
-    "date": "2026-09-26",
-    "time": "11:00",
-    "venue": "Bearsville Theater",
-    "venueUrl": "https://bearsvilletheater.com/",
-    "location": "Woodstock, NY",
-    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
-    "price": "$3-$13",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1788287748363,
-    "title": "Leslie Mendelson",
-    "date": "2026-10-23",
-    "time": "20:00",
-    "venue": "Bearsville Theater",
-    "venueUrl": "https://bearsvilletheater.com/",
-    "location": "Woodstock, NY",
-    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
-    "price": "$34",
-    "free": false,
     "_manual": true
   }
 ]
