@@ -5132,7 +5132,7 @@
   },
   {
     "id": 1787136704133,
-    "title": "Aryeh Nussbaum Cohen (Classical)",
+    "title": "Aryeh Nussbaum Cohen (classical)",
     "date": "2026-11-08",
     "time": "15:00",
     "venue": "Hudson Hall",
@@ -5141,7 +5141,8 @@
     "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
     "price": "$40",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787136767510,
@@ -6294,7 +6295,7 @@
   },
   {
     "id": 1787347995761,
-    "title": "String Quartet Brooklyn Rider: Chiaroscuro (Classical)",
+    "title": "String Quartet Brooklyn Rider: Chiaroscuro (classical)",
     "date": "2026-10-30",
     "time": "20:00",
     "venue": "The Local Saugerties",
@@ -6303,7 +6304,8 @@
     "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
     "price": "$46",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787348024270,
