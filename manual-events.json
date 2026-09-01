@@ -4036,7 +4036,7 @@
   },
   {
     "id": 1787073823364,
-    "title": "Twelfth Night Ensemble with Yi-heng Yang (Classical)",
+    "title": "Twelfth Night Ensemble with Yi-heng Yang (classical)",
     "date": "2026-10-24",
     "time": "19:00",
     "venue": "Doctorow Center (Catskill Mountain Foundation)",
@@ -4045,7 +4045,8 @@
     "mapsUrl": "https://maps.app.goo.gl/LnFs5qhwS73VKaBh9",
     "price": "$28",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787074244810,
