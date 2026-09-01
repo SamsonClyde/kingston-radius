@@ -1926,5 +1926,9 @@
   "The Half Moon||2026-09-04||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788286599619
+  },
+  "The Half Moon||2026-09-09||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286602349
   }
 }
