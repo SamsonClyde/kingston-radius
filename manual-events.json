@@ -11340,10 +11340,11 @@
     "venue": "Indian Ladder Farms",
     "venueUrl": "https://www.indianladderfarms.com/events-calendar/",
     "location": "Altamont, NY",
-    "mapsUrl": "https://www.indianladderfarms.com/events-calendar/",
+    "mapsUrl": "https://maps.app.goo.gl/jpA91USiPrfPdQfL7",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788278174798,
