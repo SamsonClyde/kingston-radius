@@ -11950,5 +11950,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788281532244,
+    "title": "Tops of Trees, Songs of Change Benefit",
+    "date": "2026-10-18",
+    "time": "19:00",
+    "venue": "The Eleven",
+    "venueUrl": "https://topsoftrees.com/home?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/aqdL8wtJdNAHwLoB7",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
