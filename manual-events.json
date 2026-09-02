@@ -700,7 +700,7 @@
   },
   {
     "id": 1786454694652,
-    "title": "Steady Sun",
+    "title": "Steady Sun, Larry Locust",
     "date": "2026-09-10",
     "time": "20:00",
     "venue": "Avalon Lounge",
@@ -709,7 +709,8 @@
     "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
     "price": "$15",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1786454760914,
