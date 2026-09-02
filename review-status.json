@@ -1964,5 +1964,9 @@
   "Unicorn Bar||2026-10-31||9:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788286814183
+  },
+  "Avalon Lounge||2026-09-02||7:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788344930905
   }
 }
