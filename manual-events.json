@@ -12678,5 +12678,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788346560346,
+    "title": "O mágnum mystérium: The Great Mystery, Erehwon Ensemble (classical)",
+    "date": "2027-04-18",
+    "time": "16:00",
+    "venue": "Old Dutch Church",
+    "venueUrl": "https://www.erehwon-ensemble.com/upcoming-concerts",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yuvCVGBQVs4zNbK3A",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
