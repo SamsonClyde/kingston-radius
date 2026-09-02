@@ -700,7 +700,7 @@
   },
   {
     "id": 1786454694652,
-    "title": "Steady Sun, Larry Locust",
+    "title": "Steady Sun",
     "date": "2026-09-10",
     "time": "20:00",
     "venue": "Avalon Lounge",
@@ -709,8 +709,7 @@
     "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
     "price": "$15",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1786454760914,
@@ -12651,6 +12650,19 @@
     "location": "Pawling, NY",
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
     "price": "$40-$55",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1788346292505,
+    "title": "Gray Monitor, A Whole Nother, Low Measure",
+    "date": "2026-09-11",
+    "time": "20:30",
+    "venue": "El Dorado Bar",
+    "venueUrl": "https://www.instagram.com/eldoradobar_troy/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/QwhaMLfRyAoqbWLt9",
+    "price": "$10",
     "free": false,
     "_manual": true
   }
