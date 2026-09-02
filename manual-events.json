@@ -12665,5 +12665,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788346347457,
+    "title": "Trusselina, Architrave, Bad Dream Adventure",
+    "date": "2026-09-19",
+    "time": "20:30",
+    "venue": "El Dorado Bar",
+    "venueUrl": "https://www.instagram.com/eldoradobar_troy/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/QwhaMLfRyAoqbWLt9",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
