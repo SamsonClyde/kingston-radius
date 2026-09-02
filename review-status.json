@@ -1984,5 +1984,9 @@
   "Avalon Lounge||2026-09-12||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788345108111
+  },
+  "Avalon Lounge||2026-09-13||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788345239755
   }
 }
