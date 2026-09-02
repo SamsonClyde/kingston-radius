@@ -12691,5 +12691,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788372064363,
+    "title": "Native Bee Jubilee - Live Music",
+    "date": "2026-09-13",
+    "time": "10:00",
+    "venue": "Esopus Green",
+    "venueUrl": "https://www.esopus.gov/events-calendar/",
+    "location": "Port Ewen, NY",
+    "mapsUrl": "https://maps.app.goo.gl/6jpkgdCGaaEE8U2S8",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
