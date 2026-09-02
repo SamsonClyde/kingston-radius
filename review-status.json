@@ -1996,5 +1996,9 @@
   "Bardavon||2026-11-13||7:30 PM": {
     "status": "rejected",
     "hiddenAt": 1788345251502
+  },
+  "Bardavon||2026-12-19||7:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788345270005
   }
 }
