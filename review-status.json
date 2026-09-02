@@ -1617,10 +1617,6 @@
   },
   "Assembly Kingston||2026-12-09||20:00": "approved",
   "Keegan Ales||2026-08-30||14:00": "approved",
-  "Keegan Ales||2026-09-01||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788106057301
-  },
   "Keegan Ales||2026-09-04||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788106092827
