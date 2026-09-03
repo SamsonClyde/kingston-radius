@@ -1403,7 +1403,7 @@
   },
   {
     "id": 1787019284898,
-    "title": "Drivin' N' Cryin'",
+    "title": "Drivin' N' Cryin' with Lenny Kaye",
     "date": "2026-09-10",
     "time": "19:00",
     "venue": "Colony Woodstock",
@@ -1412,7 +1412,8 @@
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$29adv/$45adv/$35door/$50door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787019334786,
