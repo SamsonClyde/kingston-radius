@@ -8811,7 +8811,7 @@
   },
   {
     "id": 1787512414784,
-    "title": "Brazilian Night - Gil Oliviera & Friends",
+    "title": "Laura Zarougian",
     "date": "2026-09-24",
     "time": "18:00",
     "venue": "Rose Hill",
@@ -8820,8 +8820,7 @@
     "mapsUrl": "https://maps.app.goo.gl/MbCoQ2LNKwQe5QMN6",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787537327160,
@@ -12791,6 +12790,19 @@
     "id": 1788433458933,
     "title": "Bluegrass Night - Dave DeCotiis",
     "date": "2026-10-22",
+    "time": "15:00",
+    "venue": "Rose Hill",
+    "venueUrl": "https://www.pickrosehillfarm.com/events?view=calendar&month=09-2026",
+    "location": "Red Hook, NY",
+    "mapsUrl": "https://maps.app.goo.gl/MbCoQ2LNKwQe5QMN6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1788433574208,
+    "title": "Brazilian Night - Gil Oliviera & Friends",
+    "date": "2026-10-29",
     "time": "15:00",
     "venue": "Rose Hill",
     "venueUrl": "https://www.pickrosehillfarm.com/events?view=calendar&month=09-2026",
