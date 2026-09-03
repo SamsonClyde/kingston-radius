@@ -8811,7 +8811,7 @@
   },
   {
     "id": 1787512414784,
-    "title": "Brazil Night (Gil Oliviera & Friends)",
+    "title": "Laura Zarougian",
     "date": "2026-09-24",
     "time": "18:00",
     "venue": "Rose Hill",
@@ -8820,8 +8820,7 @@
     "mapsUrl": "https://maps.app.goo.gl/MbCoQ2LNKwQe5QMN6",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787537327160,
@@ -12731,6 +12730,32 @@
     "venueUrl": "https://www.tubbyskingston.com/calendar/tubbys-djs-at-rough-draft",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/LLZ4sLnaNhZtSSar9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1788432940744,
+    "title": "Gather & Swing Square Dance - Music: Supernaturals, Calling: Lance Olds",
+    "date": "2026-09-18",
+    "time": "19:00",
+    "venue": "Time & Space Limited",
+    "venueUrl": "https://timeandspace.org/events/#live",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "price": "$10/$20",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1788433347243,
+    "title": "Laura Zarougian",
+    "date": "2026-10-01",
+    "time": "15:00",
+    "venue": "Rose Hill",
+    "venueUrl": "https://www.pickrosehillfarm.com/events?view=calendar&month=09-2026",
+    "location": "Red Hook, NY",
+    "mapsUrl": "https://maps.app.goo.gl/MbCoQ2LNKwQe5QMN6",
     "price": "See website",
     "free": false,
     "_manual": true
