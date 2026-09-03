@@ -1786,5 +1786,9 @@
     "status": "rejected",
     "hiddenAt": 1788108087049
   },
-  "Unicorn Bar||2026-11-14||21:00": "approved"
+  "Unicorn Bar||2026-11-14||21:00": "approved",
+  "Colony Woodstock||2026-09-04||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788395091340
+  }
 }
