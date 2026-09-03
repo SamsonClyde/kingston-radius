@@ -12733,5 +12733,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788432940744,
+    "title": "Gather & Swing Square Dance - Music: Supernaturals, Calling: Lance Olds",
+    "date": "2026-09-18",
+    "time": "19:00",
+    "venue": "Time & Space Limited",
+    "venueUrl": "https://timeandspace.org/events/#live",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "price": "$10/$20",
+    "free": false,
+    "_manual": true
   }
 ]
