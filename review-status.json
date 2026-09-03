@@ -665,6 +665,10 @@
   "Tubby's||2026-08-25||20:00": "approved",
   "Tubby's||2026-08-27||16:00": "approved",
   "Tubby's||2026-08-28||20:00": "approved",
+  "Tubby's||2026-09-02||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787309471612
+  },
   "Tubby's||2026-09-02||20:00": "approved",
   "Tubby's||2026-09-03||7:00 pm": {
     "status": "rejected",
@@ -1430,6 +1434,14 @@
   "Unicorn Bar||2026-08-27||19:30": "approved",
   "Unicorn Bar||2026-08-28||7:30 pm": "approved",
   "Unicorn Bar||2026-08-29||21:00": "approved",
+  "Unicorn Bar||2026-09-02||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787590986860
+  },
+  "Unicorn Bar||2026-09-02||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787590991686
+  },
   "Unicorn Bar||2026-09-03||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787591003654
@@ -1783,8 +1795,16 @@
     "status": "rejected",
     "hiddenAt": 1788399215304
   },
+  "Avalon Lounge||2026-09-02||7:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788399222019
+  },
   "Avalon Lounge||2026-09-03||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788399226059
+  },
+  "Avalon Lounge||2026-09-10||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788430973664
   }
 }
