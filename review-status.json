@@ -2010,5 +2010,9 @@
   "Tompkins Corners Cultural Center||2026-09-29||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788431630309
+  },
+  "Tompkins Corners Cultural Center||2026-10-09||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788431633180
   }
 }
