@@ -913,7 +913,7 @@
   },
   {
     "id": 1787004883436,
-    "title": "The Niall Connolly Band & Sean  Kiely",
+    "title": "The Niall Connolly Band & Sean Kiely",
     "date": "2026-09-04",
     "time": "18:00",
     "venue": "Colony Woodstock",
@@ -1403,7 +1403,7 @@
   },
   {
     "id": 1787019284898,
-    "title": "Drivin' N' Cryin' with Lenny Kaye",
+    "title": "Drivin' N' Cryin'",
     "date": "2026-09-10",
     "time": "19:00",
     "venue": "Colony Woodstock",
@@ -1412,8 +1412,7 @@
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$29adv/$45adv/$35door/$50door",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787019334786,
@@ -12707,5 +12706,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 280,
+    "date": "2026-09-15",
+    "title": "Laura Stevenson  + The Stevenson Ranch Davidians",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/laura-stevenson-the-stevenson-ranch-davidians",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "$8",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
