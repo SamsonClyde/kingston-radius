@@ -12759,5 +12759,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788433377834,
+    "title": "Billy Pearson",
+    "date": "2026-10-08",
+    "time": "15:00",
+    "venue": "Rose Hill",
+    "venueUrl": "https://www.pickrosehillfarm.com/events?view=calendar&month=09-2026",
+    "location": "Red Hook, NY",
+    "mapsUrl": "https://maps.app.goo.gl/MbCoQ2LNKwQe5QMN6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
