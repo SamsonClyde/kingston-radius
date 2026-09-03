@@ -1834,5 +1834,9 @@
   "Bardavon||2026-11-13||7:30 PM": {
     "status": "rejected",
     "hiddenAt": 1788431075466
+  },
+  "Bardavon||2026-12-06||": {
+    "status": "rejected",
+    "hiddenAt": 1788431078786
   }
 }
