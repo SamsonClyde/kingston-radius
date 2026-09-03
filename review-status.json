@@ -1842,5 +1842,9 @@
   "Bardavon||2026-12-19||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788431081466
+  },
+  "Colony Woodstock||2026-09-03||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788431094849
   }
 }
