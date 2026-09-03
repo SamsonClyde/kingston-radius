@@ -9151,7 +9151,7 @@
   },
   {
     "id": 246,
-    "date": "2026-09-10",
+    "date": "2025-09-10",
     "title": "Shannon Lay, Shana Falana, Meernaa",
     "venue": "The Outlier Inn",
     "venueUrl": "https://www.outlierinn.com/events/outlier-concerts-and-chosen-family-present",
@@ -9160,7 +9160,7 @@
     "time": "19:30",
     "price": "Sold out",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
