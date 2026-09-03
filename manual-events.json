@@ -12694,7 +12694,7 @@
   },
   {
     "id": 1788398208048,
-    "title": "The Roadies, Grampa Joe’s Washboard Band, David Harrison, Sophia Lanuza, Spellbinder Orchestra, Northwest Passage, The Local Jam, Len Nelson, Jim Gallagher, Rick Greenop, Dirty Mae, Warren Sieme, Rob Johnson, Cathy Young, Finding Alice, Frank Migliori, Stray Wolves, Laura Evans Duo, Hammerheadz, Born to Boone, The Heard, John Burton, Diana Hickman Band, Nowhere @ Home, Vinny’s Basement, Faith & Forgotten Souls, Alex Lynn, The Big Ohm, Starlight Trio, The Roulettes, The Decoys , Late for the Show, Brian Edwards, Larry Scanlon, Elija Stone, Catawampus, Sean Ryan, Rick & Marilyn, The Boroughs, Side Street Radio, Sad Matt!, Dracula Daughter, Dutchess Funk, Hide & Shine, Ame Arcana, The Last Machine Operators",
+    "title": "The Roadies, Grampa Joe’s Washboard Band, David Harrison, Sophia Lanuza, Spellbinder Orchestra, Northwest Passage, The Local Jam, Len Nelson, Jim Gallagher, Rick Greenop, Dirty Mae, Warren Sieme, Rob Johnson, Cathy Young, Finding Alice, Frank Migliori, Stray Wolves, Laura Evans Duo, Hammerheadz, Born to Boone, The Heard, John Burton, Diana Hickman Band, Nowhere @ Home, Vinny’s Basement, Faith & Forgotten Souls, Alex Lynn, The Big Ohm, Starlight Trio, The Roulettes, The Decoys, Late for the Show, Brian Edwards, Larry Scanlon, Elija Stone, Catawampus, Sean Ryan, Rick & Marilyn, The Boroughs, Side Street Radio, Sad Matt!, Dracula Daughter, Dutchess Funk, Hide & Shine, Ame Arcana, The Last Machine Operators",
     "date": "2026-09-19",
     "time": "11:00",
     "venue": "Rhinebeck Porchfest",
@@ -12703,6 +12703,7 @@
     "mapsUrl": "https://maps.app.goo.gl/tVdcKtidW1D2iHsUA",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
