@@ -1974,5 +1974,9 @@
   "Stissing Center||2026-09-18||7:30 PM": {
     "status": "rejected",
     "hiddenAt": 1788431569607
+  },
+  "Stissing Center||2026-10-02||7:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788431574839
   }
 }
