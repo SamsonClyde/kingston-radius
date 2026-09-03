@@ -1946,5 +1946,13 @@
   "Colony Woodstock||2026-09-24||": {
     "status": "rejected",
     "hiddenAt": 1788431534273
+  },
+  "Colony Woodstock||2026-09-25||": {
+    "status": "rejected",
+    "hiddenAt": 1788431536801
+  },
+  "Keegan Ales||2026-09-05||2:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788431540162
   }
 }
