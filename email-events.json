@@ -1,58 +1,6 @@
 [
   {
     "id": 1,
-    "date": "2026-09-02",
-    "title": "Mary Zintz",
-    "venue": "Colony Woodstock",
-    "venueUrl": "https://www.colonywoodstock.com/shows",
-    "location": "Woodstock, NY",
-    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "time": "5:30 PM",
-    "price": "See website",
-    "free": false,
-    "_source": "email"
-  },
-  {
-    "id": 2,
-    "date": "2026-09-02",
-    "title": "Pizza Party, Henry Ferland, and Miles Cederquist",
-    "venue": "Colony Woodstock",
-    "venueUrl": "https://www.colonywoodstock.com/shows",
-    "location": "Woodstock, NY",
-    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "time": "7:00 PM",
-    "price": "$20",
-    "free": false,
-    "_source": "email"
-  },
-  {
-    "id": 3,
-    "date": "2026-09-02",
-    "title": "Open Mic w/ Ryder Cooley",
-    "venue": "Avalon Lounge",
-    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
-    "location": "Catskill, NY",
-    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
-    "time": "7:00 PM",
-    "price": "Free",
-    "free": true,
-    "_source": "email"
-  },
-  {
-    "id": 4,
-    "date": "2026-09-02",
-    "title": "Pizza Party, Henry Ferland, and Miles Cederquist",
-    "venue": "Colony Woodstock",
-    "venueUrl": "https://www.colonywoodstock.com/shows",
-    "location": "Woodstock, NY",
-    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "time": "",
-    "price": "See website",
-    "free": false,
-    "_source": "email"
-  },
-  {
-    "id": 5,
     "date": "2026-09-03",
     "title": "Peter Einhorn Jazz Duo",
     "venue": "Colony Woodstock",
@@ -65,7 +13,7 @@
     "_source": "email"
   },
   {
-    "id": 6,
+    "id": 2,
     "date": "2026-09-03",
     "title": "Regina Bonelli",
     "venue": "Colony Woodstock",
@@ -78,7 +26,7 @@
     "_source": "email"
   },
   {
-    "id": 7,
+    "id": 3,
     "date": "2026-09-03",
     "title": "Story Slam: Roommates",
     "venue": "Avalon Lounge",
@@ -91,7 +39,7 @@
     "_source": "email"
   },
   {
-    "id": 8,
+    "id": 4,
     "date": "2026-09-03",
     "title": "Regina Bonelli",
     "venue": "Colony Woodstock",
@@ -104,7 +52,20 @@
     "_source": "email"
   },
   {
-    "id": 9,
+    "id": 5,
+    "date": "2026-09-03",
+    "title": "Rae The Band",
+    "venue": "The Grand",
+    "venueUrl": "#",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "8:00 PM",
+    "price": "$10",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 6,
     "date": "2026-09-04",
     "title": "The Niall Connolly Band & Sean Kiely",
     "venue": "Colony Woodstock",
@@ -117,7 +78,7 @@
     "_source": "email"
   },
   {
-    "id": 10,
+    "id": 7,
     "date": "2026-09-04",
     "title": "Mary Gauthier",
     "venue": "Colony Woodstock",
@@ -130,7 +91,7 @@
     "_source": "email"
   },
   {
-    "id": 11,
+    "id": 8,
     "date": "2026-09-04",
     "title": "Late Night DJ Duo with Father Figure",
     "venue": "Colony Woodstock",
@@ -143,7 +104,7 @@
     "_source": "email"
   },
   {
-    "id": 12,
+    "id": 9,
     "date": "2026-09-04",
     "title": "Mary Gauthier w/ special guest Jaimee Harris",
     "venue": "Colony Woodstock",
@@ -156,7 +117,20 @@
     "_source": "email"
   },
   {
-    "id": 13,
+    "id": 10,
+    "date": "2026-09-04",
+    "title": "Sotto Voce & Cousin Oven",
+    "venue": "The Grand",
+    "venueUrl": "#",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "9:00 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 11,
     "date": "2026-09-05",
     "title": "Naked",
     "venue": "Colony Woodstock",
@@ -169,7 +143,7 @@
     "_source": "email"
   },
   {
-    "id": 14,
+    "id": 12,
     "date": "2026-09-05",
     "title": "New Planets",
     "venue": "Colony Woodstock",
@@ -182,7 +156,7 @@
     "_source": "email"
   },
   {
-    "id": 15,
+    "id": 13,
     "date": "2026-09-05",
     "title": "New Planets",
     "venue": "Colony Woodstock",
@@ -195,7 +169,7 @@
     "_source": "email"
   },
   {
-    "id": 16,
+    "id": 14,
     "date": "2026-09-05",
     "title": "LATE NIGHT MAJOR MAYHEM KARAOKE with Sabrina",
     "venue": "Colony Woodstock",
@@ -205,6 +179,32 @@
     "time": "9:00 PM",
     "price": "See website",
     "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 15,
+    "date": "2026-09-05",
+    "title": "The 4:30 Movie",
+    "venue": "The Grand",
+    "venueUrl": "#",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "4:30 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 16,
+    "date": "2026-09-05",
+    "title": "DJ Lounge Night",
+    "venue": "The Grand",
+    "venueUrl": "#",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "8:00 PM",
+    "price": "Free",
+    "free": true,
     "_source": "email"
   },
   {
@@ -482,6 +482,19 @@
   },
   {
     "id": 38,
+    "date": "2026-09-18",
+    "title": "House of Hamill",
+    "venue": "Stissing Center",
+    "venueUrl": "https://www.thestissingcenter.org/events",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NGxaff71QdhYoLhYA",
+    "time": "7:30 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 39,
     "date": "2026-09-19",
     "title": "The Firebird Retold by The ReMemberers",
     "venue": "Tempo Arts",
@@ -494,7 +507,7 @@
     "_source": "email"
   },
   {
-    "id": 39,
+    "id": 40,
     "date": "2026-09-19",
     "title": "Classical Indian Sitar Abhik Mukherjee",
     "venue": "The Local Saugerties",
@@ -507,7 +520,7 @@
     "_source": "email"
   },
   {
-    "id": 40,
+    "id": 41,
     "date": "2026-09-20",
     "title": "Widow's Weeds",
     "venue": "Stissing Center",
@@ -520,7 +533,7 @@
     "_source": "email"
   },
   {
-    "id": 41,
+    "id": 42,
     "date": "2026-09-23",
     "title": "Five O'Clock Somewhere",
     "venue": "Colony Woodstock",
@@ -533,7 +546,7 @@
     "_source": "email"
   },
   {
-    "id": 42,
+    "id": 43,
     "date": "2026-09-24",
     "title": "Bruce Katz Band",
     "venue": "Colony Woodstock",
@@ -546,7 +559,7 @@
     "_source": "email"
   },
   {
-    "id": 43,
+    "id": 44,
     "date": "2026-09-25",
     "title": "Meg Lui & Keenan O'Meara",
     "venue": "Tempo Arts",
@@ -559,7 +572,7 @@
     "_source": "email"
   },
   {
-    "id": 44,
+    "id": 45,
     "date": "2026-09-25",
     "title": "OFF Broadway Ryan Shaw & Ray Angry",
     "venue": "The Local Saugerties",
@@ -572,7 +585,7 @@
     "_source": "email"
   },
   {
-    "id": 45,
+    "id": 46,
     "date": "2026-09-25",
     "title": "Madison Cunningham",
     "venue": "MASS MoCA",
@@ -585,7 +598,7 @@
     "_source": "email"
   },
   {
-    "id": 46,
+    "id": 47,
     "date": "2026-09-25",
     "title": "I'm Your Man: A Tribute to Leonard Cohen ft. Robert Burke Warren",
     "venue": "Colony Woodstock",
@@ -598,7 +611,7 @@
     "_source": "email"
   },
   {
-    "id": 47,
+    "id": 48,
     "date": "2026-09-26",
     "title": "Full-Day Swing Dance Intensive",
     "venue": "Tempo Arts",
@@ -611,7 +624,7 @@
     "_source": "email"
   },
   {
-    "id": 48,
+    "id": 49,
     "date": "2026-09-26",
     "title": "Swing Dance Ball with Eyal Vilner Swing Band",
     "venue": "Tempo Arts",
@@ -624,7 +637,7 @@
     "_source": "email"
   },
   {
-    "id": 49,
+    "id": 50,
     "date": "2026-09-26",
     "title": "The Blues Alexis P. Suter Band",
     "venue": "The Local Saugerties",
@@ -637,7 +650,7 @@
     "_source": "email"
   },
   {
-    "id": 50,
+    "id": 51,
     "date": "2026-09-27",
     "title": "KingstonClassical presents Twin Spirits",
     "venue": "Tempo Arts",
@@ -650,7 +663,7 @@
     "_source": "email"
   },
   {
-    "id": 51,
+    "id": 52,
     "date": "2026-09-27",
     "title": "Jazz Vocal Trailblazer Thana Alexa",
     "venue": "The Local Saugerties",
@@ -663,7 +676,7 @@
     "_source": "email"
   },
   {
-    "id": 52,
+    "id": 53,
     "date": "2026-09-30",
     "title": "Los Vega Son Jarocho",
     "venue": "Tempo Arts",
@@ -676,7 +689,7 @@
     "_source": "email"
   },
   {
-    "id": 53,
+    "id": 54,
     "date": "2026-10-02",
     "title": "Steve Bernstein ResoNation Trio",
     "venue": "Tempo Arts",
@@ -689,7 +702,7 @@
     "_source": "email"
   },
   {
-    "id": 54,
+    "id": 55,
     "date": "2026-10-02",
     "title": "Guitar Master Kaki King",
     "venue": "The Local Saugerties",
@@ -702,7 +715,7 @@
     "_source": "email"
   },
   {
-    "id": 55,
+    "id": 56,
     "date": "2026-10-02",
     "title": "FreshGrass Presents: Lucinda Williams and her band",
     "venue": "MASS MoCA",
@@ -715,7 +728,7 @@
     "_source": "email"
   },
   {
-    "id": 56,
+    "id": 57,
     "date": "2026-10-02",
     "title": "The Limeliters in The Grace Note",
     "venue": "Stissing Center",
@@ -728,7 +741,7 @@
     "_source": "email"
   },
   {
-    "id": 57,
+    "id": 58,
     "date": "2026-10-03",
     "title": "Stayin' Alive: One Night of the Bee Gees",
     "venue": "Bardavon",
@@ -741,7 +754,7 @@
     "_source": "email"
   },
   {
-    "id": 58,
+    "id": 59,
     "date": "2026-10-03",
     "title": "Zydeco & Cajun Cedric Watson and Ethan Moody",
     "venue": "The Local Saugerties",
@@ -754,7 +767,7 @@
     "_source": "email"
   },
   {
-    "id": 59,
+    "id": 60,
     "date": "2026-10-04",
     "title": "Bard East/West Ensemble Conducted by Jindong Cai",
     "venue": "Tempo Arts",
@@ -767,7 +780,7 @@
     "_source": "email"
   },
   {
-    "id": 60,
+    "id": 61,
     "date": "2026-10-06",
     "title": "MHA of Dutchess County: The Sound of Nashville",
     "venue": "Bardavon",
@@ -780,7 +793,7 @@
     "_source": "email"
   },
   {
-    "id": 61,
+    "id": 62,
     "date": "2026-10-08",
     "title": "An Evening with Murray Hill in Conversation with Bridget Everett",
     "venue": "Stissing Center",
@@ -793,7 +806,7 @@
     "_source": "email"
   },
   {
-    "id": 62,
+    "id": 63,
     "date": "2026-10-09",
     "title": "HUG: Devendra Banhart",
     "venue": "MASS MoCA",
@@ -806,7 +819,7 @@
     "_source": "email"
   },
   {
-    "id": 63,
+    "id": 64,
     "date": "2026-10-10",
     "title": "Hacia Cuando: An Opera",
     "venue": "MASS MoCA",
@@ -819,7 +832,7 @@
     "_source": "email"
   },
   {
-    "id": 64,
+    "id": 65,
     "date": "2026-10-10",
     "title": "Hacia Cuando: An Opera",
     "venue": "MASS MoCA",
@@ -832,7 +845,7 @@
     "_source": "email"
   },
   {
-    "id": 65,
+    "id": 66,
     "date": "2026-10-15",
     "title": "Honky Tonk Dance Party with The Talking Hearts",
     "venue": "Tempo Arts",
@@ -845,7 +858,7 @@
     "_source": "email"
   },
   {
-    "id": 66,
+    "id": 67,
     "date": "2026-10-17",
     "title": "MET: Macbeth (Verdi)",
     "venue": "Bardavon",
@@ -858,7 +871,7 @@
     "_source": "email"
   },
   {
-    "id": 67,
+    "id": 68,
     "date": "2026-10-18",
     "title": "Roz Chast & Jason Adam Katzenstein",
     "venue": "MASS MoCA",
@@ -871,7 +884,7 @@
     "_source": "email"
   },
   {
-    "id": 68,
+    "id": 69,
     "date": "2026-10-18",
     "title": "Classical Crossroads – Baroque to Tango",
     "venue": "Tempo Arts",
@@ -884,7 +897,7 @@
     "_source": "email"
   },
   {
-    "id": 69,
+    "id": 70,
     "date": "2026-10-20",
     "title": "Earl Sweatshirt + MIKE",
     "venue": "MASS MoCA",
@@ -897,7 +910,7 @@
     "_source": "email"
   },
   {
-    "id": 70,
+    "id": 71,
     "date": "2026-10-22",
     "title": "Neko Case: Neon Grey Midnight Green Tour",
     "venue": "Bardavon",
@@ -910,7 +923,7 @@
     "_source": "email"
   },
   {
-    "id": 71,
+    "id": 72,
     "date": "2026-10-30",
     "title": "Rasputina with Dust Bowl Faeries",
     "venue": "Tempo Arts",
@@ -923,7 +936,7 @@
     "_source": "email"
   },
   {
-    "id": 72,
+    "id": 73,
     "date": "2026-10-30",
     "title": "Ballet Nepantla's Mistica",
     "venue": "MASS MoCA",
@@ -936,7 +949,7 @@
     "_source": "email"
   },
   {
-    "id": 73,
+    "id": 74,
     "date": "2026-11-13",
     "title": "Judy Collins - Sweet Judy Blue Eyes Farewell Tour",
     "venue": "Bardavon",
@@ -949,7 +962,7 @@
     "_source": "email"
   },
   {
-    "id": 74,
+    "id": 75,
     "date": "2026-11-14",
     "title": "Endea Owens & The Cookout",
     "venue": "MASS MoCA",
@@ -962,7 +975,7 @@
     "_source": "email"
   },
   {
-    "id": 75,
+    "id": 76,
     "date": "2026-11-21",
     "title": "The Pirates of Penzance",
     "venue": "Bardavon",
@@ -975,7 +988,7 @@
     "_source": "email"
   },
   {
-    "id": 76,
+    "id": 77,
     "date": "2026-11-21",
     "title": "Mirrored Pool",
     "venue": "MASS MoCA",
@@ -988,7 +1001,7 @@
     "_source": "email"
   },
   {
-    "id": 77,
+    "id": 78,
     "date": "2026-12-06",
     "title": "Candice Guardino",
     "venue": "Bardavon",
@@ -1001,7 +1014,7 @@
     "_source": "email"
   },
   {
-    "id": 78,
+    "id": 79,
     "date": "2026-12-06",
     "title": "Candice Guardino: Italian Bred",
     "venue": "Bardavon",
@@ -1014,7 +1027,7 @@
     "_source": "email"
   },
   {
-    "id": 79,
+    "id": 80,
     "date": "2026-12-19",
     "title": "Paula Poundstone",
     "venue": "Bardavon",
@@ -1027,7 +1040,7 @@
     "_source": "email"
   },
   {
-    "id": 80,
+    "id": 81,
     "date": "2026-12-20",
     "title": "MET ENCORE: Samson et Dalila (Saint-Saëns)",
     "venue": "Bardavon",
