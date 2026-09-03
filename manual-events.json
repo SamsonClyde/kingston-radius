@@ -8811,7 +8811,7 @@
   },
   {
     "id": 1787512414784,
-    "title": "Laura Zarougian",
+    "title": "Brazilian Night - Gil Oliviera & Friends",
     "date": "2026-09-24",
     "time": "18:00",
     "venue": "Rose Hill",
@@ -8820,7 +8820,8 @@
     "mapsUrl": "https://maps.app.goo.gl/MbCoQ2LNKwQe5QMN6",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787537327160,
