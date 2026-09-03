@@ -912,18 +912,18 @@
     "_manual": true
   },
   {
-    "id": 5,
-    "date": "2026-09-04",
+    "id": 1787004883436,
     "title": "The Niall Connolly Band & Sean Kiely",
+    "date": "2026-09-04",
+    "time": "18:00",
     "venue": "Colony Woodstock",
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "time": "18:00",
-    "price": "$20",
+    "price": "Donation",
     "free": false,
-    "_source": "email",
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 6,
