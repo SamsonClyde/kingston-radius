@@ -12825,5 +12825,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788441741396,
+    "title": "Hammered Hulls, New Vision, Spain, Low Fiction",
+    "date": "2026-09-12",
+    "time": "08:00",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
