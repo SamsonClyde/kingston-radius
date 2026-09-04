@@ -1,4 +1,4 @@
-// netlify/functions/events-save.js
+            // netlify/functions/events-save.js
 // Writes to the `data` branch — never touches `main`, never triggers a deploy.
 // Accepts any combination of: manualEvents, scrapedEvents, emailEvents, reviewStatus, customVenues
 exports.handler = async (event) => {
@@ -32,32 +32,35 @@ exports.handler = async (event) => {
 
   async function writeFile(path, data) {
     const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${DATA_BRANCH}`;
-    let sha = null;
-    try {
-      const getResp = await fetch(apiUrl, { headers: apiHeaders });
-      if (getResp.ok) sha = (await getResp.json()).sha;
-    } catch {}
-    const content = Buffer.from(JSON.stringify(data, null, 2)).toString('base64');
-    const putBody = JSON.stringify({
-      message: `[admin] Update ${path}`,
-      content,
-      branch: DATA_BRANCH,
-      ...(sha ? { sha } : {}),
-    });
     const putUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-    let putResp = await fetch(putUrl, { method: 'PUT', headers: apiHeaders, body: putBody });
-    if (putResp.status === 409) {
-      const retryGet  = await fetch(apiUrl, { headers: apiHeaders });
-      const retryData = await retryGet.json();
-      const retryBody = JSON.stringify({
+    const content = Buffer.from(JSON.stringify(data, null, 2)).toString('base64');
+    const MAX_ATTEMPTS = 5;
+
+    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+      let sha = null;
+      try {
+        const getResp = await fetch(apiUrl, { headers: apiHeaders });
+        if (getResp.ok) sha = (await getResp.json()).sha;
+      } catch {}
+
+      const putBody = JSON.stringify({
         message: `[admin] Update ${path}`,
-        content, branch: DATA_BRANCH, sha: retryData.sha,
+        content,
+        branch: DATA_BRANCH,
+        ...(sha ? { sha } : {}),
       });
-      putResp = await fetch(putUrl, { method: 'PUT', headers: apiHeaders, body: retryBody });
-    }
-    if (!putResp.ok) {
+      const putResp = await fetch(putUrl, { method: 'PUT', headers: apiHeaders, body: putBody });
+
+      if (putResp.ok) return; // success
+
+      // 409 = someone else wrote to this file between our GET and PUT — retry with a fresh SHA
+      if (putResp.status === 409 && attempt < MAX_ATTEMPTS) {
+        await new Promise(r => setTimeout(r, 150 * attempt)); // small increasing backoff
+        continue;
+      }
+
       const txt = await putResp.text();
-      throw new Error(`GitHub write failed for ${path}: ${putResp.status} ${txt}`);
+      throw new Error(`GitHub write failed for ${path} after ${attempt} attempt(s): ${putResp.status} ${txt}`);
     }
   }
 
