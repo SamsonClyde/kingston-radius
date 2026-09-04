@@ -2053,5 +2053,10 @@
     "status": "rejected",
     "hiddenAt": 1788519113228
   },
-  "The Falcon||2026-11-12||19:30": "approved"
+  "The Falcon||2026-11-12||19:30": "approved",
+  "Towne Crier Café||2026-09-27||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788519268056
+  },
+  "Towne Crier Café||2026-09-27||19:00": "approved"
 }
