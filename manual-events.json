@@ -13007,5 +13007,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788485201327,
+    "title": "Stephen Clair Band",
+    "date": "2026-09-04",
+    "time": "18:00",
+    "venue": "Little Stony Point",
+    "venueUrl": "https://littlestonypoint.org/",
+    "location": "Cold Spring, NY",
+    "mapsUrl": "https://maps.app.goo.gl/Nkzr7N8JYub5zLXSA",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
