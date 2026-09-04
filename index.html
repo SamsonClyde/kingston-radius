@@ -1281,7 +1281,7 @@ function getCustomVenueTemplates() {
 async function saveCustomVenueTemplates(obj) {
   _customVenuesCache = obj;
   localStorage.setItem(CUSTOM_VENUES_KEY, JSON.stringify(obj));
-  await _saveToServer({ customVenues: obj });
+  return await _saveToServer({ customVenues: obj });
 }
 function getAllVenueTemplates() { return { ...VENUE_TEMPLATES, ...getCustomVenueTemplates() }; }
 
@@ -1306,19 +1306,26 @@ function getReviewStatus()  {
 }
 
 async function _saveToServer(payload) {
-  try {
-    const resp = await fetch('/.netlify/functions/events-save', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'X-Admin-Secret': ADMIN_SECRET },
-      body: JSON.stringify(payload),
-    });
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    _lastSaveTime = Date.now();
-    return true;
-  } catch (e) {
-    console.warn('Save failed:', e);
-    return false;
+  const MAX_ATTEMPTS = 3;
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      const resp = await fetch('/.netlify/functions/events-save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Admin-Secret': ADMIN_SECRET },
+        body: JSON.stringify(payload),
+      });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      _lastSaveTime = Date.now();
+      return true;
+    } catch (e) {
+      console.warn(`Save attempt ${attempt} failed:`, e);
+      if (attempt < MAX_ATTEMPTS) {
+        await new Promise(r => setTimeout(r, 400 * attempt)); // brief backoff before retry
+      }
+    }
   }
+  console.error('Save failed after all retries — data was NOT persisted to the server.');
+  return false;
 }
 
 async function saveManualEvents(evts, reviewStatusOverride) {
@@ -1330,14 +1337,14 @@ async function saveManualEvents(evts, reviewStatusOverride) {
     localStorage.setItem(REVIEW_STATUS_KEY, JSON.stringify(reviewStatusOverride));
     payload.reviewStatus = reviewStatusOverride;
   }
-  await _saveToServer(payload);
+  return await _saveToServer(payload);
 }
 
 async function saveReviewStatus(obj) {
   _reviewStatusCache = obj;
   _lastSaveTime = Date.now();
   localStorage.setItem(REVIEW_STATUS_KEY, JSON.stringify(obj));
-  await _saveToServer({ reviewStatus: obj });
+  return await _saveToServer({ reviewStatus: obj });
 }
 
 async function loadFromServer() {
@@ -2171,17 +2178,21 @@ document.addEventListener('click', async (ev) => {
 
     const manual = getManualEvents();
     const idx    = manual.findIndex(m => eventKey(m) === key || m.id === orig.id);
+    let ok;
     if (!orig._manual) {
       const status = getReviewStatus();
       status[key]  = { status: 'rejected', hiddenAt: Date.now() };
       _reviewStatusCache = status;
       if (idx >= 0) manual[idx] = record; else manual.push(record);
-      await saveManualEvents(manual, status);
+      ok = await saveManualEvents(manual, status);
     } else {
       if (idx >= 0) manual[idx] = record; else manual.push(record);
-      await saveManualEvents(manual);
+      ok = await saveManualEvents(manual);
     }
     btn.textContent = 'Save'; btn.disabled = false;
+    if (!ok) {
+      alert('This edit is showing on your screen, but saving it to the server failed after several attempts. It\'s safe to click Save again — reload the page in a minute to confirm it synced.');
+    }
     const ie = document.getElementById('ie-' + key);
     if (ie) ie.style.display = 'none';
     renderEvents(); buildMonthButtons(); populateVenueSelect();
@@ -2262,11 +2273,19 @@ document.getElementById('add-event-btn')?.addEventListener('click', async () => 
   if (drive > 0) DRIVE_TIMES[venue] = drive;
   const manual = getManualEvents();
   manual.push({ id: Date.now(), title, date, time, venue, venueUrl, location, mapsUrl, price, free: false, _manual: true });
-  await saveManualEvents(manual);
+  const ok = await saveManualEvents(manual);
   btn.textContent = 'Add Event'; btn.disabled = false;
   ['f-title','f-date','f-time'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
-  const msg = document.getElementById('add-success');
-  if (msg) { msg.style.display = 'block'; setTimeout(() => msg.style.display = 'none', 2500); }
+  if (ok) {
+    const msg = document.getElementById('add-success');
+    if (msg) { msg.style.display = 'block'; setTimeout(() => msg.style.display = 'none', 2500); }
+  } else {
+    // The event is saved locally (you'll see it below) but did NOT reach the server after
+    // several attempts. Do not click Add Event again for this same show — that would create
+    // a duplicate. It will keep retrying to sync automatically; check back in a minute, or
+    // reload the page later to confirm it made it through.
+    alert('This event is showing on your screen, but saving it to the server failed after several attempts. Please don\'t re-enter it — just wait a minute and reload the page to check it synced. If it still hasn\'t after a few minutes, let me know.');
+  }
   renderEvents(); buildMonthButtons(); populateVenueSelect();
 });
 
