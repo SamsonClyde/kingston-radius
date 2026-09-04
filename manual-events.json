@@ -13085,5 +13085,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788485736831,
+    "title": "Ma'am",
+    "date": "2026-09-05",
+    "time": "20:00",
+    "venue": "Return Brewing",
+    "venueUrl": "https://www.instagram.com/returnbrewing/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YDngVHEAKTL39QGy9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
