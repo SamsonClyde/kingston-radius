@@ -13098,5 +13098,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788485801404,
+    "title": "Retrosex",
+    "date": "2026-09-12",
+    "time": "19:00",
+    "venue": "Return Brewing",
+    "venueUrl": "https://www.instagram.com/returnbrewing/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YDngVHEAKTL39QGy9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
