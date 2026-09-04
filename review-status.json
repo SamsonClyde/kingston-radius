@@ -2078,5 +2078,10 @@
   "Bard College Conservatory||2026-10-31||9:30 pm": {
     "status": "rejected",
     "hiddenAt": 1788489957194
-  }
+  },
+  "Rail Trail Cafe||2026-09-27||5:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788490035047
+  },
+  "Rail Trail Cafe||2026-09-27||17:00": "approved"
 }
