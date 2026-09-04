@@ -13020,5 +13020,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788485358031,
+    "title": "The Hoot - Gotham River, DNR Party, Luster, Kat Lee Rivers, Freddie & Friends, The Condiments, BMF Americana Band",
+    "date": "2026-09-13",
+    "time": "12:00",
+    "venue": "Little Stony Point",
+    "venueUrl": "https://littlestonypoint.org/",
+    "location": "Cold Spring, NY",
+    "mapsUrl": "https://maps.app.goo.gl/Nkzr7N8JYub5zLXSA",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
