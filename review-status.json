@@ -2035,5 +2035,9 @@
     "status": "rejected",
     "hiddenAt": 1788490035047
   },
-  "Rail Trail Cafe||2026-09-27||17:00": "approved"
+  "Rail Trail Cafe||2026-09-27||17:00": "approved",
+  "Unicorn Bar||2026-10-08||6:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788491347803
+  }
 }
