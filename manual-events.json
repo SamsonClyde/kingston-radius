@@ -12890,5 +12890,18 @@
     "price": "$95",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788482760862,
+    "title": "Hudson Jazz Festival - Dafnis Prieto, Sí o Sí Quartet",
+    "date": "2026-10-02",
+    "time": "19:00",
+    "venue": "Hudson Hall",
+    "venueUrl": "https://hudsonhall.org/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
+    "price": "$40-$123pass$200table+pass",
+    "free": false,
+    "_manual": true
   }
 ]
