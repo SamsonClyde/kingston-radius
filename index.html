@@ -1077,6 +1077,7 @@ const STORAGE_KEY       = 'kr_manual_events';
 const REVIEW_STATUS_KEY = 'kr_review_status';
 const SCRAPED_KEY       = 'kr_scraped_events';
 const EMAIL_KEY         = 'kr_email_events';
+const CUSTOM_VENUES_KEY = 'kr_custom_venues';
 const MAX_HIDDEN        = 50;
 
 const DRIVE_TIMES = {
@@ -1275,9 +1276,13 @@ const VENUE_TEMPLATES = {
 };
 
 function getCustomVenueTemplates() {
-  try { return JSON.parse(localStorage.getItem('kr_custom_venues') || '{}'); } catch { return {}; }
+  return _customVenuesCache ?? _getLocal(CUSTOM_VENUES_KEY, {});
 }
-function saveCustomVenueTemplates(obj) { localStorage.setItem('kr_custom_venues', JSON.stringify(obj)); }
+async function saveCustomVenueTemplates(obj) {
+  _customVenuesCache = obj;
+  localStorage.setItem(CUSTOM_VENUES_KEY, JSON.stringify(obj));
+  await _saveToServer({ customVenues: obj });
+}
 function getAllVenueTemplates() { return { ...VENUE_TEMPLATES, ...getCustomVenueTemplates() }; }
 
 // ── DATA LAYER ────────────────────────────────────────────────────────────────
@@ -1285,6 +1290,7 @@ let _manualEventsCache  = null;
 let _scrapedEventsCache = null;
 let _emailEventsCache   = null;
 let _reviewStatusCache  = null;
+let _customVenuesCache  = null;
 let _lastSaveTime       = 0;
 
 function _getLocal(key, fallback) {
@@ -1347,16 +1353,22 @@ async function loadFromServer() {
       _reviewStatusCache = (data.reviewStatus && typeof data.reviewStatus === 'object')
                            ? data.reviewStatus : {};
     }
+    if (secsSinceSave > 90 || _customVenuesCache === null) {
+      _customVenuesCache = (data.customVenues && typeof data.customVenues === 'object')
+                           ? data.customVenues : {};
+    }
     localStorage.setItem(STORAGE_KEY,  JSON.stringify(_manualEventsCache));
     localStorage.setItem(SCRAPED_KEY,  JSON.stringify(_scrapedEventsCache));
     localStorage.setItem(EMAIL_KEY,    JSON.stringify(_emailEventsCache));
     localStorage.setItem(REVIEW_STATUS_KEY, JSON.stringify(_reviewStatusCache));
+    localStorage.setItem(CUSTOM_VENUES_KEY, JSON.stringify(_customVenuesCache));
   } catch (e) {
     console.warn('Load failed, using localStorage:', e);
     _manualEventsCache  = _getLocal(STORAGE_KEY, []);
     _scrapedEventsCache = _getLocal(SCRAPED_KEY, []);
     _emailEventsCache   = _getLocal(EMAIL_KEY, []);
     _reviewStatusCache  = _getLocal(REVIEW_STATUS_KEY, {});
+    _customVenuesCache  = _getLocal(CUSTOM_VENUES_KEY, {});
   }
 }
 
