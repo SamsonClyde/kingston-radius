@@ -12955,5 +12955,18 @@
     "price": "$5car",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788484062026,
+    "title": "Summer Jam - The Nolanauts",
+    "date": "2026-09-03",
+    "time": "18:30",
+    "venue": "Village of Kinderhook",
+    "venueUrl": "https://www.villageofkinderhookny.gov/news_detail_T19_R448.php",
+    "location": "Kinderhook NY",
+    "mapsUrl": "https://maps.app.goo.gl/STqJDhsqhauzsBhMA",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
