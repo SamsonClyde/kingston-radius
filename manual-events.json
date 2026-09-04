@@ -12994,5 +12994,18 @@
     "price": "$15-$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788484990797,
+    "title": "Newburgh Porchfest",
+    "date": "2026-10-03",
+    "time": "12:00",
+    "venue": "Newburgh Porchfest",
+    "venueUrl": "https://www.instagram.com/newburghporchfest/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agJ3vdGhLiRtnqTW7",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
