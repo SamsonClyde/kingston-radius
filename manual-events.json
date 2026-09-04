@@ -13229,5 +13229,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788489517697,
+    "title": "Music In The Stacks - Pulso De Barro, Veena & Devesh Chandra, Jaguarpunch",
+    "date": "2026-09-27",
+    "time": "13:00",
+    "venue": "Hudson Area Library",
+    "venueUrl": "https://www.instagram.com/hudsonarealibraryny/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/wQ8L9mzNzAyZMESj6",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
