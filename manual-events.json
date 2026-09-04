@@ -13150,5 +13150,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788487865497,
+    "title": "Weirdos In The Woods Day One - Shakoor Hakeem + Peyton Pleninger, The Adam Siegel Quartet, Biotonic, Blacks’ Myths.",
+    "date": "2026-09-04",
+    "time": "16:00",
+    "venue": "The Tavern",
+    "venueUrl": "https://www.weirdosinthewoods.art/event-list",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cnCcaEUgbrMj1ai26",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
