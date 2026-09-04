@@ -1,6 +1,6 @@
 // netlify/functions/events-save.js
 // Writes to the `data` branch — never touches `main`, never triggers a deploy.
-// Accepts any combination of: manualEvents, scrapedEvents, emailEvents, reviewStatus
+// Accepts any combination of: manualEvents, scrapedEvents, emailEvents, reviewStatus, customVenues
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method not allowed' };
@@ -68,6 +68,8 @@ exports.handler = async (event) => {
     if (Array.isArray(body.emailEvents))   writes.push(writeFile('email-events.json',   body.emailEvents));
     if (body.reviewStatus && typeof body.reviewStatus === 'object')
       writes.push(writeFile('review-status.json', body.reviewStatus));
+    if (body.customVenues && typeof body.customVenues === 'object')
+      writes.push(writeFile('custom-venues.json', body.customVenues));
     if (writes.length === 0) return { statusCode: 400, body: 'No data to save' };
     await Promise.all(writes);
     return { statusCode: 200, body: JSON.stringify({ ok: true }) };
