@@ -1352,10 +1352,12 @@ async function loadFromServer() {
     const resp = await fetch('/.netlify/functions/events-load');
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const data = await resp.json();
-    _manualEventsCache  = Array.isArray(data.manualEvents)  ? data.manualEvents  : [];
     _scrapedEventsCache = Array.isArray(data.scrapedEvents) ? data.scrapedEvents : [];
     _emailEventsCache   = Array.isArray(data.emailEvents)   ? data.emailEvents   : [];
     const secsSinceSave = (Date.now() - _lastSaveTime) / 1000;
+    if (secsSinceSave > 90 || _manualEventsCache === null) {
+      _manualEventsCache = Array.isArray(data.manualEvents) ? data.manualEvents : [];
+    }
     if (secsSinceSave > 90 || _reviewStatusCache === null) {
       _reviewStatusCache = (data.reviewStatus && typeof data.reviewStatus === 'object')
                            ? data.reviewStatus : {};
