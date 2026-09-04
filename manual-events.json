@@ -13124,5 +13124,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788486853902,
+    "title": "Music On The Lawn",
+    "date": "2026-09-16",
+    "time": "17:00",
+    "venue": "Albany Institute",
+    "venueUrl": "https://www.instagram.com/albanyinstitute/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/TWb2PUTLDoTs9n1J8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
