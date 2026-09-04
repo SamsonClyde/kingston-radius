@@ -376,10 +376,6 @@
   "The Falcon||2026-08-28||19:30": "approved",
   "The Falcon||2026-08-29||19:30": "approved",
   "The Falcon||2026-08-30||19:30": "approved",
-  "The Falcon||2026-09-03||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076169388
-  },
   "The Falcon||2026-09-03||19:30": "approved",
   "The Falcon||2026-09-04||See website": {
     "status": "rejected",
@@ -641,10 +637,6 @@
     "hiddenAt": 1787187621779
   },
   "Keegan Ales||2026-09-02||19:00": "approved",
-  "Keegan Ales||2026-09-03||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787187628372
-  },
   "Keegan Ales||2026-09-11||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787187676068
@@ -666,10 +658,6 @@
   "Tubby's||2026-08-27||16:00": "approved",
   "Tubby's||2026-08-28||20:00": "approved",
   "Tubby's||2026-09-02||20:00": "approved",
-  "Tubby's||2026-09-03||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787309517592
-  },
   "Tubby's||2026-09-03||20:00": "approved",
   "Tubby's||2026-09-04||7:00 pm": {
     "status": "rejected",
@@ -1430,14 +1418,6 @@
   "Unicorn Bar||2026-08-27||19:30": "approved",
   "Unicorn Bar||2026-08-28||7:30 pm": "approved",
   "Unicorn Bar||2026-08-29||21:00": "approved",
-  "Unicorn Bar||2026-09-03||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787591003654
-  },
-  "Unicorn Bar||2026-09-03||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787591012089
-  },
   "Unicorn Bar||2026-09-04||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787591016390
@@ -1727,10 +1707,6 @@
     "status": "rejected",
     "hiddenAt": 1788107764272
   },
-  "Towne Crier Café||2026-09-03||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788107767859
-  },
   "Towne Crier Café||2026-09-06||11:30 am": {
     "status": "rejected",
     "hiddenAt": 1788107829491
@@ -1782,10 +1758,6 @@
   "Assembly||2026-09-05||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788399215304
-  },
-  "Avalon Lounge||2026-09-03||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788399226059
   },
   "Avalon Lounge||2026-09-10||8:00 PM": {
     "status": "rejected",
@@ -1842,22 +1814,6 @@
   "Bardavon||2026-12-19||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788431081466
-  },
-  "Colony Woodstock||2026-09-03||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431094849
-  },
-  "Colony Woodstock||2026-09-03||5:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431101273
-  },
-  "Colony Woodstock||2026-09-03||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431108449
-  },
-  "Colony Woodstock||2026-09-03||": {
-    "status": "rejected",
-    "hiddenAt": 1788431113425
   },
   "Colony Woodstock||2026-09-04||6:00 PM": {
     "status": "rejected",
@@ -1982,10 +1938,6 @@
   "The Falcon||2026-09-04||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1788431587664
-  },
-  "The Grand||2026-09-03||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431600253
   },
   "The Grand||2026-09-04||9:00 PM": {
     "status": "rejected",
