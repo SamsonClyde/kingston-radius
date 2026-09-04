@@ -12981,5 +12981,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788484612072,
+    "title": "Malerie Day, Hunter Hughes (House Show - Address Comes with RSVP)",
+    "date": "2026-09-18",
+    "time": "",
+    "venue": "Cottage Sessions",
+    "venueUrl": "https://www.instagram.com/malerie_day/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://www.instagram.com/malerie_day/",
+    "price": "$15-$35",
+    "free": false,
+    "_manual": true
   }
 ]
