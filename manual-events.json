@@ -12942,5 +12942,18 @@
     "price": "$5car",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788483443643,
+    "title": "Macy McKnight",
+    "date": "2026-09-06",
+    "time": "17:30",
+    "venue": "Hudson Valley Cold Pressed Oils",
+    "venueUrl": "https://hudsonvalleycoldpressedoils.com/events/?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
+    "location": "Pleasant Valley, NY",
+    "mapsUrl": "https://maps.app.goo.gl/twkNfHojVa4L4HRE9",
+    "price": "$5car",
+    "free": false,
+    "_manual": true
   }
 ]
