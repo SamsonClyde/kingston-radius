@@ -9322,7 +9322,7 @@
   },
   {
     "id": 1787573949932,
-    "title": "Jake Wildhorn",
+    "title": "Dos Belos",
     "date": "2026-09-18",
     "time": "21:00",
     "venue": "The Grand",
@@ -9331,7 +9331,8 @@
     "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
     "price": "$10",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787573988320,
