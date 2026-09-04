@@ -13256,5 +13256,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1788539068426,
+    "title": "Carly Flowerr",
+    "date": "2026-09-04",
+    "time": "17:00",
+    "venue": "Twin Star Orchards",
+    "venueUrl": "https://www.instagram.com/twinstarorchards?igsi=MWsybHFzc2VxNmV5",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/t2rfBvwFYn4M7Vpw5",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
