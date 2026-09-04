@@ -9,7 +9,7 @@ exports.handler = async () => {
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ manualEvents: [], scrapedEvents: [], emailEvents: [], reviewStatus: {} }),
+      body: JSON.stringify({ manualEvents: [], scrapedEvents: [], emailEvents: [], reviewStatus: {}, customVenues: {} }),
     };
   }
 
@@ -50,12 +50,12 @@ exports.handler = async () => {
       fileMap[item.path] = item.sha;
     }
 
-    const files = ['manual-events.json', 'scraped-events.json', 'email-events.json', 'review-status.json'];
+    const files = ['manual-events.json', 'scraped-events.json', 'email-events.json', 'review-status.json', 'custom-venues.json'];
     const results = await Promise.all(
       files.map(f => fileMap[f] ? fetchBlob(fileMap[f]) : Promise.resolve(null))
     );
 
-    const [manualRaw, scrapedRaw, emailRaw, statusRaw] = results;
+    const [manualRaw, scrapedRaw, emailRaw, statusRaw, customVenuesRaw] = results;
 
     return {
       statusCode: 200,
@@ -68,6 +68,7 @@ exports.handler = async () => {
         scrapedEvents: Array.isArray(scrapedRaw) ? scrapedRaw : [],
         emailEvents:   Array.isArray(emailRaw)   ? emailRaw   : [],
         reviewStatus:  (statusRaw && typeof statusRaw === 'object') ? statusRaw : {},
+        customVenues:  (customVenuesRaw && typeof customVenuesRaw === 'object') ? customVenuesRaw : {},
       }),
     };
   } catch (e) {
@@ -75,7 +76,7 @@ exports.handler = async () => {
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ manualEvents: [], scrapedEvents: [], emailEvents: [], reviewStatus: {} }),
+      body: JSON.stringify({ manualEvents: [], scrapedEvents: [], emailEvents: [], reviewStatus: {}, customVenues: {} }),
     };
   }
 };
