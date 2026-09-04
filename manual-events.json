@@ -13176,5 +13176,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788488221919,
+    "title": "Weirdos In The Woods Day Three - spreading performance, music, strange encounters, and social activity across the property before ending in the barn after dark",
+    "date": "2026-09-06",
+    "time": "16:00",
+    "venue": "Rosekill Art Farm",
+    "venueUrl": "https://www.weirdosinthewoods.art/event-list",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/BNNkY2kUH4VP8u599",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
