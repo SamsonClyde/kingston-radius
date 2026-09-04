@@ -2074,5 +2074,9 @@
   "Woodstock Playhouse||2026-09-05||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788432681678
+  },
+  "Bard College Conservatory||2026-10-31||9:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788489957194
   }
 }
