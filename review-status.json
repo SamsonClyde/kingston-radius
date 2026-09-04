@@ -9,7 +9,10 @@
   "Assembly Kingston||2026-09-18||20:00": "approved",
   "Assembly Kingston||2026-09-19||20:00": "approved",
   "Assembly Kingston||2026-09-20||19:00": "approved",
-  "Assembly Kingston||2026-09-25||20:00": "approved",
+  "Assembly Kingston||2026-09-25||20:00": {
+    "status": "rejected",
+    "hiddenAt": 1788271478043
+  },
   "Assembly Kingston||2026-09-26||20:00": "approved",
   "Assembly Kingston||2026-10-02||20:00": "approved",
   "Assembly Kingston||2026-10-03||20:00": "approved",
@@ -1751,316 +1754,231 @@
     "hiddenAt": 1788108087049
   },
   "Unicorn Bar||2026-11-14||21:00": "approved",
-  "Colony Woodstock||2026-09-04||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788395091340
-  },
   "Assembly||2026-09-05||7:00 pm": {
     "status": "rejected",
-    "hiddenAt": 1788399215304
-  },
-  "Avalon Lounge||2026-09-10||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788430973664
-  },
-  "Avalon Lounge||2026-09-11||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788430981015
-  },
-  "Avalon Lounge||2026-09-12||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788430987758
-  },
-  "Avalon Lounge||2026-09-13||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788430992270
-  },
-  "Avalon Lounge||2026-09-17||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788430999982
-  },
-  "Bard College Conservatory||2026-10-02||": {
-    "status": "rejected",
-    "hiddenAt": 1788431008750
-  },
-  "Bard College Conservatory||2026-10-03||5:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431012094
-  },
-  "Bard College Conservatory||2026-10-03||": {
-    "status": "rejected",
-    "hiddenAt": 1788431017462
-  },
-  "Bard College Conservatory||2026-10-04||5:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431054028
-  },
-  "Bard College Conservatory||2026-10-10||": {
-    "status": "rejected",
-    "hiddenAt": 1788431065587
-  },
-  "Bard College Conservatory||2026-10-19||": {
-    "status": "rejected",
-    "hiddenAt": 1788431071595
-  },
-  "Bardavon||2026-11-13||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431075466
-  },
-  "Bardavon||2026-12-06||": {
-    "status": "rejected",
-    "hiddenAt": 1788431078786
-  },
-  "Bardavon||2026-12-19||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431081466
-  },
-  "Colony Woodstock||2026-09-04||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431144180
-  },
-  "Colony Woodstock||2026-09-04||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431237873
-  },
-  "Colony Woodstock||2026-09-04||10:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431241898
-  },
-  "Colony Woodstock||2026-09-04||": {
-    "status": "rejected",
-    "hiddenAt": 1788431248313
-  },
-  "Colony Woodstock||2026-09-05||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431252160
-  },
-  "Colony Woodstock||2026-09-05||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431254880
-  },
-  "Colony Woodstock||2026-09-05||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431256985
-  },
-  "Colony Woodstock||2026-09-05||": {
-    "status": "rejected",
-    "hiddenAt": 1788431264145
-  },
-  "Colony Woodstock||2026-09-05||9:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431267800
-  },
-  "Colony Woodstock||2026-09-06||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431275408
-  },
-  "Colony Woodstock||2026-09-06||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431406714
-  },
-  "Colony Woodstock||2026-09-06||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431411937
-  },
-  "Colony Woodstock||2026-09-06||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431414953
-  },
-  "Colony Woodstock||2026-09-06||": {
-    "status": "rejected",
-    "hiddenAt": 1788431422672
-  },
-  "Colony Woodstock||2026-09-07||": {
-    "status": "rejected",
-    "hiddenAt": 1788431426464
-  },
-  "Colony Woodstock||2026-09-10||": {
-    "status": "rejected",
-    "hiddenAt": 1788431482693
-  },
-  "Colony Woodstock||2026-09-11||": {
-    "status": "rejected",
-    "hiddenAt": 1788431519329
-  },
-  "Colony Woodstock||2026-09-12||": {
-    "status": "rejected",
-    "hiddenAt": 1788431522690
-  },
-  "Colony Woodstock||2026-09-13||": {
-    "status": "rejected",
-    "hiddenAt": 1788431525579
-  },
-  "Colony Woodstock||2026-09-18||": {
-    "status": "rejected",
-    "hiddenAt": 1788431529706
-  },
-  "Colony Woodstock||2026-09-23||": {
-    "status": "rejected",
-    "hiddenAt": 1788431532313
-  },
-  "Colony Woodstock||2026-09-24||": {
-    "status": "rejected",
-    "hiddenAt": 1788431534273
-  },
-  "Colony Woodstock||2026-09-25||": {
-    "status": "rejected",
-    "hiddenAt": 1788431536801
-  },
-  "Keegan Ales||2026-09-05||2:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431540162
-  },
-  "Keegan Ales||2026-09-06||11:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1788431542449
-  },
-  "Keegan Ales||2026-09-08||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431544680
-  },
-  "Maverick Concerts||2026-09-04||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431547384
-  },
-  "Rosendale Theater||2026-09-06||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431552720
-  },
-  "Stissing Center||2026-09-18||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431569607
-  },
-  "Stissing Center||2026-10-02||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431574839
-  },
-  "The Falcon||2026-09-04||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431587664
-  },
-  "The Grand||2026-09-04||9:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431604550
-  },
-  "The Grand||2026-09-05||4:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431608030
-  },
-  "The Grand||2026-09-05||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788431616302
-  },
-  "The Half Moon||2026-09-04||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431621659
-  },
-  "The Half Moon||2026-09-09||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431624734
-  },
-  "Tompkins Corners Cultural Center||2026-09-29||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431630309
-  },
-  "Tompkins Corners Cultural Center||2026-10-09||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431633180
-  },
-  "Towne Crier Café||2026-09-11||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431653652
-  },
-  "Towne Crier Café||2026-09-19||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431666739
-  },
-  "Tubby's||2026-09-09||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431671099
-  },
-  "Tubby's||2026-09-15||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431773381
-  },
-  "Tubby's||2026-09-15||20:00": "approved",
-  "Tubby's||2026-09-21||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788432113829
-  },
-  "Tubby's||2026-09-22||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788432119226
-  },
-  "Tubby's||2026-09-24||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788432196398
-  },
-  "Tubby's||2026-09-24||18:00": "approved",
-  "Tubby's||2026-10-01||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788432463379
-  },
-  "Tubby's||2026-10-01||20:00": "approved",
-  "Unicorn Bar||2026-09-09||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788432500110
-  },
-  "Unicorn Bar||2026-09-11||9:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788432503536
-  },
-  "Unicorn Bar||2026-10-10||9:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788432507503
-  },
-  "Unicorn Bar||2026-10-16||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788432609859
-  },
-  "Unicorn Bar||2026-10-16||19:00": "approved",
-  "Unicorn Bar||2026-10-31||9:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788432676543
-  },
-  "Woodstock Playhouse||2026-09-05||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788432681678
-  },
-  "Bard College Conservatory||2026-10-31||9:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788489957194
-  },
-  "Rail Trail Cafe||2026-09-27||5:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788490035047
-  },
-  "Rail Trail Cafe||2026-09-27||17:00": "approved",
-  "Unicorn Bar||2026-10-08||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788491347803
+    "hiddenAt": 1788271078974
   },
   "The Eleven||2026-09-05||18:00": {
     "status": "rejected",
-    "hiddenAt": 1788492978034
+    "hiddenAt": 1788279378954
   },
-  "The Falcon||2026-11-05||See website": {
+  "Bard College Conservatory||2026-10-02||": {
     "status": "rejected",
-    "hiddenAt": 1788519070629
+    "hiddenAt": 1788283971215
   },
-  "The Falcon||2026-11-05||19:30": "approved",
-  "The Falcon||2026-11-12||See website": {
+  "Bard College Conservatory||2026-10-03||": {
     "status": "rejected",
-    "hiddenAt": 1788519113228
+    "hiddenAt": 1788284001998
   },
-  "The Falcon||2026-11-12||19:30": "approved",
-  "Towne Crier Café||2026-09-27||7:00 pm": {
+  "Bard College Conservatory||2026-10-10||": {
     "status": "rejected",
-    "hiddenAt": 1788519268056
+    "hiddenAt": 1788284032443
   },
-  "Towne Crier Café||2026-09-27||19:00": "approved",
-  "Unicorn Bar||2026-09-15||7:00 pm": {
+  "Bard College Conservatory||2026-10-19||": {
     "status": "rejected",
-    "hiddenAt": 1788519274872
+    "hiddenAt": 1788284036156
+  },
+  "Bardavon||2026-12-06||": {
+    "status": "rejected",
+    "hiddenAt": 1788284241991
+  },
+  "Colony Woodstock||2026-09-02||17:30": "approved",
+  "Colony Woodstock||2026-09-03||19:00": "approved",
+  "Colony Woodstock||2026-09-03||17:30": "approved",
+  "Colony Woodstock||2026-09-04||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788293441674
+  },
+  "Colony Woodstock||2026-09-04||6:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788284782741
+  },
+  "Colony Woodstock||2026-09-04||18:00": "approved",
+  "Colony Woodstock||2026-09-04||7:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788284790953
+  },
+  "Colony Woodstock||2026-09-04||10:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788284819520
+  },
+  "Colony Woodstock||2026-09-04||22:00": "approved",
+  "Colony Woodstock||2026-09-05||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788284878539
+  },
+  "Colony Woodstock||2026-09-05||19:00": "approved",
+  "Colony Woodstock||2026-09-05||6:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788284911158
+  },
+  "Colony Woodstock||2026-09-05||18:00": "approved",
+  "Colony Woodstock||2026-09-05||7:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788285031379
+  },
+  "Colony Woodstock||2026-09-06||6:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788285065162
+  },
+  "Colony Woodstock||2026-09-06||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788285067770
+  },
+  "Colony Woodstock||2026-09-06||6:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788285071290
+  },
+  "Colony Woodstock||2026-09-06||7:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788285076937
+  },
+  "Keegan Ales||2026-09-05||2:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286512381
+  },
+  "Keegan Ales||2026-09-05||14:00": "approved",
+  "Keegan Ales||2026-09-06||11:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1788286518905
+  },
+  "Maverick Concerts||2026-09-04||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286536925
+  },
+  "Rosendale Theater||2026-09-06||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286556600
+  },
+  "Stissing Center||2026-10-02||7:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788286584601
+  },
+  "The Falcon||2026-09-04||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286595857
+  },
+  "The Half Moon||2026-09-04||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286599619
+  },
+  "The Half Moon||2026-09-09||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286602349
+  },
+  "Tompkins Corners Cultural Center||2026-09-29||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286605190
+  },
+  "Tompkins Corners Cultural Center||2026-10-09||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286659670
+  },
+  "Tompkins Corners Cultural Center||2026-10-09||19:30": "approved",
+  "Towne Crier Café||2026-09-11||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286723106
+  },
+  "Towne Crier Café||2026-09-11||18:30": "approved",
+  "Towne Crier Café||2026-09-19||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286772134
+  },
+  "Towne Crier Café||2026-09-19||20:00": "approved",
+  "Unicorn Bar||2026-09-09||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286782788
+  },
+  "Unicorn Bar||2026-09-11||9:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286787106
+  },
+  "Unicorn Bar||2026-10-10||9:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286809779
+  },
+  "Unicorn Bar||2026-10-31||9:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788286814183
+  },
+  "Avalon Lounge||2026-09-10||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788345037441
+  },
+  "Avalon Lounge||2026-09-11||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788345087688
+  },
+  "Avalon Lounge||2026-09-12||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788345108111
+  },
+  "Avalon Lounge||2026-09-13||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788345239755
+  },
+  "Avalon Lounge||2026-09-17||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788345246069
+  },
+  "Bardavon||2026-11-13||7:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788345251502
+  },
+  "Bardavon||2026-12-19||7:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788345270005
+  },
+  "Colony Woodstock||2026-09-04||": {
+    "status": "rejected",
+    "hiddenAt": 1788345292997
+  },
+  "Colony Woodstock||2026-09-05||": {
+    "status": "rejected",
+    "hiddenAt": 1788345300212
+  },
+  "Colony Woodstock||2026-09-05||9:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788345303818
+  },
+  "Colony Woodstock||2026-09-06||": {
+    "status": "rejected",
+    "hiddenAt": 1788345306180
+  },
+  "Colony Woodstock||2026-09-07||": {
+    "status": "rejected",
+    "hiddenAt": 1788345310204
+  },
+  "Colony Woodstock||2026-09-10||": {
+    "status": "rejected",
+    "hiddenAt": 1788345330593
+  },
+  "Colony Woodstock||2026-09-11||": {
+    "status": "rejected",
+    "hiddenAt": 1788345334994
+  },
+  "Colony Woodstock||2026-09-12||": {
+    "status": "rejected",
+    "hiddenAt": 1788345339418
+  },
+  "Colony Woodstock||2026-09-13||": {
+    "status": "rejected",
+    "hiddenAt": 1788345342543
+  },
+  "Colony Woodstock||2026-09-18||": {
+    "status": "rejected",
+    "hiddenAt": 1788345348050
+  },
+  "Colony Woodstock||2026-09-23||": {
+    "status": "rejected",
+    "hiddenAt": 1788345360760
+  },
+  "Colony Woodstock||2026-09-24||": {
+    "status": "rejected",
+    "hiddenAt": 1788345364903
+  },
+  "Colony Woodstock||2026-09-25||": {
+    "status": "rejected",
+    "hiddenAt": 1788345368344
   }
 }
