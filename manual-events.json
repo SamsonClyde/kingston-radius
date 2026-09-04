@@ -13111,5 +13111,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788485921790,
+    "title": "Summer Fridays - Alex Castle at The Print House",
+    "date": "2026-09-04",
+    "time": "20:00",
+    "venue": "Fleischmanns Village Festival",
+    "venueUrl": "https://www.instagram.com/visitfleischmannsny/",
+    "location": "Fleischmanns, NY",
+    "mapsUrl": "https://maps.app.goo.gl/aPEM3cxgfb6TsgjM9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
