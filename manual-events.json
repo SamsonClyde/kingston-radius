@@ -13163,5 +13163,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788488074953,
+    "title": "Weirdos In The Woods Day Two - things will be fired, measured, listened to, assembled, performed, tested, read, built, and invented in real time",
+    "date": "2026-09-05",
+    "time": "16:00",
+    "venue": "Three Phase Center",
+    "venueUrl": "https://www.weirdosinthewoods.art/event-list",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/RCmp4rVg4r3iGSNe6",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
