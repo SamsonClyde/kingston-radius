@@ -5946,7 +5946,7 @@
   },
   {
     "id": 1787345929249,
-    "title": "Johnny Mullenax, Henry Ferland",
+    "title": "Country-Rock Guitarist Johnny Mullenax",
     "date": "2026-09-04",
     "time": "20:00",
     "venue": "The Lemon Squeeze",
@@ -5955,8 +5955,7 @@
     "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
     "price": "$16",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787345966377,
@@ -5973,7 +5972,7 @@
   },
   {
     "id": 1787345998467,
-    "title": "Escaper, Trippy Sitter",
+    "title": "Escaper w/ opener Trippy Sitter",
     "date": "2026-10-09",
     "time": "20:00",
     "venue": "The Lemon Squeeze",
@@ -5982,8 +5981,7 @@
     "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
     "price": "$16",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787346042874,
@@ -9324,7 +9322,7 @@
   },
   {
     "id": 1787573949932,
-    "title": "Jake Wildhorn",
+    "title": "Dos Belos",
     "date": "2026-09-18",
     "time": "21:00",
     "venue": "The Grand",
@@ -9333,7 +9331,8 @@
     "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
     "price": "$10",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787573988320,
@@ -9685,14 +9684,14 @@
   },
   {
     "id": 337,
-    "date": "2026-09-25",
-    "title": "Gratefully Yours (Grateful Dead Cover Band)",
-    "venue": "Towne Crier Café",
-    "venueUrl": "https://townecrier.com/",
-    "location": "Beacon, NY",
-    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
-    "time": "20:00",
-    "price": "$20",
+    "date": "2026-09-27",
+    "title": "Mole in the Ground",
+    "venue": "Rail Trail Cafe",
+    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/mole-in-the-ground",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+    "time": "17:00",
+    "price": "$10",
     "free": false,
     "_source": "scraped",
     "_manual": true
@@ -13189,6 +13188,58 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/BNNkY2kUH4VP8u599",
     "price": "$20",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1788488631667,
+    "title": "The Mops",
+    "date": "2026-09-20",
+    "time": "20:00",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1788489178080,
+    "title": "Verbatim Text Sound Expo Day One - Keith Fullerton Whitman with collaborator Eliot Cardinaux, Norman Douglas, Thom Eichelberger Young + Barrett White, Jeffrey Lependorf + Eric Keenaghan + James Ilgenfritz + Sam Wenc, Bow and Arrow (Lea Bertucci + Michael Beharie), Laura Ortman, Erik Kramer + Atticus von Holten + Don Lyons, Anne Waldman + Devin Brahja Waldman, Manuel J. Perez III,  Emma Mistele + Sam Boston, djdrummernk, Brian Dewan, Casper Lee, Tracy Grinnell, Dave Snyder, Katy Mongeau + Shredded Nerve, Silvina Lopez Medin, Joe Hall, Elisa Harkins, Karen Schoemer (Both Days Artists)",
+    "date": "2026-10-02",
+    "time": "18:00",
+    "venue": "Sugar Maple (Catskill Mountain Foundation)",
+    "venueUrl": "https://www.instagram.com/verbatim_text_sound_expo/",
+    "location": "Maplecrest, NY",
+    "mapsUrl": "https://maps.app.goo.gl/s888kP3BbAtvoPnK7",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1788489237814,
+    "title": "Verbatim Text Sound Expo Day Two - Keith Fullerton Whitman with collaborator Eliot Cardinaux, Norman Douglas, Thom Eichelberger Young + Barrett White, Jeffrey Lependorf + Eric Keenaghan + James Ilgenfritz + Sam Wenc, Bow and Arrow (Lea Bertucci + Michael Beharie), Laura Ortman, Erik Kramer + Atticus von Holten + Don Lyons, Anne Waldman + Devin Brahja Waldman, Manuel J. Perez III,  Emma Mistele + Sam Boston, djdrummernk, Brian Dewan, Casper Lee, Tracy Grinnell, Dave Snyder, Katy Mongeau + Shredded Nerve, Silvina Lopez Medin, Joe Hall, Elisa Harkins, Karen Schoemer (Both Days Artists)",
+    "date": "2026-10-03",
+    "time": "11:00",
+    "venue": "Sugar Maple (Catskill Mountain Foundation)",
+    "venueUrl": "https://www.instagram.com/verbatim_text_sound_expo/",
+    "location": "Maplecrest, NY",
+    "mapsUrl": "https://maps.app.goo.gl/s888kP3BbAtvoPnK7",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1788489517697,
+    "title": "Music In The Stacks - Pulso De Barro, Veena & Devesh Chandra, Jaguarpunch",
+    "date": "2026-09-27",
+    "time": "13:00",
+    "venue": "Hudson Area Library",
+    "venueUrl": "https://www.instagram.com/hudsonarealibraryny/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/wQ8L9mzNzAyZMESj6",
+    "price": "Free",
     "free": false,
     "_manual": true
   }
