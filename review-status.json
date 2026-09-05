@@ -1947,5 +1947,9 @@
   "Keegan Ales||2026-09-19||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788607071338
+  },
+  "Pearl Moon||2026-09-06||11:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1788607073490
   }
 }
