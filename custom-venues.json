@@ -544,5 +544,11 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/9ELG2fBz827zrtCC6",
     "drive": 7
+  },
+  "Return Brewing Outpost (Catskill)": {
+    "venueUrl": "https://www.instagram.com/returnbrewing/",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/UJFQe4Mtw6ByPMre8",
+    "drive": 40
   }
 }
