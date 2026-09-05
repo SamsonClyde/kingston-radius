@@ -13308,5 +13308,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788572160128,
+    "title": "Andrea Maddox & The Hey Y'alls",
+    "date": "2026-09-25",
+    "time": "20:00",
+    "venue": "Tinker Street Tavern",
+    "venueUrl": "https://www.instagram.com/tinkerstreettavern/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/3CHPZ32vyEMKDYXLA",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
