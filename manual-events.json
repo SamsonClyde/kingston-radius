@@ -13482,5 +13482,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788607047289,
+    "title": "Dromfest - Sweet Harm, R.B. Korbet, Purple Ivy Shadows, Beth Kaplan, Hypnolovewheel",
+    "date": "2026-09-06",
+    "time": "11:30",
+    "venue": "Left Bank Cider",
+    "venueUrl": "https://www.instagram.com/leftbankciders/",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/tTxBZEPA4wjgxaUY8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
