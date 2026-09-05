@@ -13347,5 +13347,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788572448429,
+    "title": "Benefit For Celina - Bates, Inlimerance, Yankee Girl, Will They Won't They",
+    "date": "2026-09-11",
+    "time": "19:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "price": "$10/$15",
+    "free": false,
+    "_manual": true
   }
 ]
