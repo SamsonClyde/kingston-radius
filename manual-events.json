@@ -13469,5 +13469,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788606880961,
+    "title": "Dromfest - Tiny Blue Ghost, Stuyvesant, Barbara Manning, Moviola",
+    "date": "2026-09-05",
+    "time": "12:00",
+    "venue": "Return Brewing Outpost (Catskill)",
+    "venueUrl": "https://www.instagram.com/returnbrewing/",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/UJFQe4Mtw6ByPMre8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
