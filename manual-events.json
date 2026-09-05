@@ -13295,5 +13295,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788571990135,
+    "title": "Tony Bruno & Friends",
+    "date": "2026-09-19",
+    "time": "20:30",
+    "venue": "Tinker Street Tavern",
+    "venueUrl": "https://www.instagram.com/tinkerstreettavern/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/3CHPZ32vyEMKDYXLA",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
