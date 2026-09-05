@@ -1979,5 +1979,9 @@
   "The Grand||2026-09-05||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788607139990
+  },
+  "Towne Crier Café||2026-09-10||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788607142397
   }
 }
