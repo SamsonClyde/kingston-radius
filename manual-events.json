@@ -10229,13 +10229,14 @@
     "title": "Heart of Midtown Festival",
     "date": "2026-09-19",
     "time": "12:00",
-    "venue": "Heart Of Midtown Stage",
+    "venue": "Cece Coakley, Benét, Sabrina Song, Ginger Winn, Naomi Pierre, Pulso De Barro, Vael Sarela Y Su Orchestra, Callie Mackenzie, Alessandra Gonzalez, Abi Ho & The Counting Sheep, Patchwork, Colton Thorn, Elijah Love, Andalucia Project, Sean Ryan, Attention Scam, Kemly Derby, Jimmy Blackwell, Jackie Leiras, White Noise, Open Mic with Robyn Hager",
     "venueUrl": "https://www.rewindkingston.com/heart-of-midtown",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/pi7ppWExPizyiv5w5",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787595670041,
