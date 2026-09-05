@@ -13366,7 +13366,7 @@
   {
     "id": 1788574881351,
     "title": "Lucero, Matt Pond Pa, MC Lars, Pete Bernhard, Alexis Krauss DJ Set, Skorts, Doug Gillard, The Mammals, Only Sun, Gerry Leonard’s Spooky Ghost, Chris Maxwell, Joni Mitchell Tribute, Alessandra Gonzalez, All My Friends, AM Gold, Bad Ups, Beccs, Blair Baldwin, Bourbon Sprawl, Brandi & The Alexanders, Captain’s Daughter, Caroline Scruggs, Cathedral Ceilings, Champagne Poneys, Couch Surfer, Daniel Villegas, Dassi Rosenkrantz, Dust Bowl Faeries, El Front, Elizabeth Clark, Emerald Ground Water, First President of Japan, Friar Jon, Gamelan Kingston, GSX, Haunted Cat, Hazy Rhythm Wonder Band, The Jaguar, Jack Grace, Jack Manley, Jak Lizard, Jared Saltiel, Jasmine Jang, Kate Prascher, Killer Film, Ladies of the Valley, Lunar Figurine, Modern Natives, Meg Lui, Mundy, Outer Shapes, Rachael Sage & The Sequins, Ratboy Jr., Roseann Fino, Route One, Sheila & The Deep End, Shiloh The Messenger, Stress Dolls, Sweet Harm, Terruhwrist, The Deflators, The Lousekateers, The Schwegs, Wednesday Knudsen, Whiskey Treaty Roadshow, DJs: Mathew Cullen, Eric EQ, SVB, Shaman Vybez (All Days/All Venues)",
-    "date": "2026-09-09",
+    "date": "2026-10-09",
     "time": "12:00",
     "venue": "O+ Festival",
     "venueUrl": "https://www.instagram.com/opositivefest/",
@@ -13374,7 +13374,8 @@
     "mapsUrl": "https://maps.app.goo.gl/9ELG2fBz827zrtCC6",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788574897364,
