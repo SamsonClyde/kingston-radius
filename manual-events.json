@@ -13616,5 +13616,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788657581240,
+    "title": "NY Funk Alliance",
+    "date": "2026-09-26",
+    "time": "19:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "price": "$10/RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
