@@ -1820,9 +1820,10 @@
     "venueUrl": "https://www.bardavon.org/",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/jC2VFr3GrpBVxt7h7",
-    "price": "$50/$73/$95/$118/$125/$160/$184/$208",
+    "price": "$50-$208",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787059169661,
