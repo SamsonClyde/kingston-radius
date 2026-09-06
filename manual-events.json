@@ -13747,5 +13747,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788662568864,
+    "title": "New York School of Music",
+    "date": "2026-09-18",
+    "time": "20:00",
+    "venue": "Newburgh Brewing",
+    "venueUrl": "https://newburghbrewing.com/events",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vXzDY4qTqet4zp2DA",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
