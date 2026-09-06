@@ -9129,7 +9129,7 @@
   {
     "id": 318,
     "date": "2026-09-26",
-    "title": "Something in the Hills - DAMON & NAOMI, BOW AND ARROW (LEA BERTUCCI AND MICHAEL BEHARIE), AARON ROCHE, ALI CARTER, DONNA ALLEN, ERICA DAWN LYLE, FROWN TOWN, KEVIN LOUIS LAREAU, KRYSSI AND WEDNESDAY, MUSEUM LEGS, ROWAN NEWBY, STRAWBERRY RUNNERS, ZANNIE",
+    "title": "Something in the Hills - Damon & Naomi, Bow & Arrow, Aaron Roche, Ali Carter, Donna Allen, Erica Dawn Lyle, Frown Town, Kevin Louis Lareau, Kryssi and Wednesday, Museum Legs, Rowan Newby, Straberry Runners, Zannie",
     "venue": "The Half Moon",
     "venueUrl": "https://somethinginthehills.com/",
     "location": "Hudson, NY",
@@ -9137,7 +9137,7 @@
     "time": "14:00",
     "price": "$29adv/$39later",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
