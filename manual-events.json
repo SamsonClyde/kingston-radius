@@ -13916,5 +13916,18 @@
     "price": "$19",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788664174491,
+    "title": "Dolly Parton Tribute Show",
+    "date": "2026-09-27",
+    "time": "18:00",
+    "venue": "O+ Exchange",
+    "venueUrl": "https://opositivefestival.org/events/dolly-parton-tribute-show/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9ELG2fBz827zrtCC6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
