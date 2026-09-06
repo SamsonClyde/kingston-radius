@@ -13538,5 +13538,18 @@
     "price": "$10/RSVP",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788657289827,
+    "title": "9 Feet Down",
+    "date": "2026-09-12",
+    "time": "19:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "price": "$10/RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
