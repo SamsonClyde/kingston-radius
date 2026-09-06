@@ -562,5 +562,11 @@
     "location": "Maplecrest, NY",
     "mapsUrl": "https://maps.app.goo.gl/s888kP3BbAtvoPnK7",
     "drive": 50
+  },
+  "PS21 Chatham": {
+    "venueUrl": "https://ps21chatham.org/",
+    "location": "Chatham, NY",
+    "mapsUrl": "https://maps.app.goo.gl/zhQscGQXkbzsF4WJ9",
+    "drive": 65
   }
 }
