@@ -13864,5 +13864,18 @@
     "price": "$19",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788663799722,
+    "title": "Swamp Dogg, Front Business",
+    "date": "2026-11-01",
+    "time": "19:00",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
