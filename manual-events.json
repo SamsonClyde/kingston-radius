@@ -13477,12 +13477,13 @@
     "date": "2026-09-05",
     "time": "12:00",
     "venue": "Return Brewing Outpost (Catskill)",
-    "venueUrl": "https://www.instagram.com/returnbrewing/",
+    "venueUrl": "https://dromedary-records.com/its-time-dromfest-26/",
     "location": "Catskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/UJFQe4Mtw6ByPMre8",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788607047289,
