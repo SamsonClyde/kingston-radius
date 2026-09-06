@@ -1820,10 +1820,9 @@
     "venueUrl": "https://www.bardavon.org/",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/jC2VFr3GrpBVxt7h7",
-    "price": "$50-$208",
+    "price": "$50/$73/$95/$118/$125/$160/$184/$208",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787059169661,
@@ -4654,10 +4653,10 @@
     "venueUrl": "https://www.liveatthefalcon.com",
     "location": "Marlboro, NY",
     "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    "time": "19:30",
+    "time": "See website",
     "price": "See website",
     "free": false,
-    "_source": "manual",
+    "_source": "scraped",
     "_manual": true
   },
   {
@@ -8141,15 +8140,14 @@
     "id": 1787507924884,
     "title": "Puppy Pals Live - The Action-Packed Comedic Stunt Dog Show (Not Music But.....)",
     "date": "2026-09-26",
-    "time": "11:00",
+    "time": "23:00",
     "venue": "Paramount Hudson Valley Theater",
     "venueUrl": "https://paramounthudsonvalley.com/events/",
     "location": "Peekskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
     "price": "$36",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787507985536,
@@ -8740,15 +8738,14 @@
     "id": 1787511926274,
     "title": "Grape Stomping Festival Sept 26 & 27, Oct 3 & 4 (Live Music)",
     "date": "2026-09-27",
-    "time": "11:00",
+    "time": "23:00",
     "venue": "Robibero Winery",
     "venueUrl": "https://www.robiberofamilyvineyards.com/events",
     "location": "New Paltz, NY",
     "mapsUrl": "https://www.robiberofamilyvineyards.com/events",
     "price": "$25adv/$40door",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787511951854,
@@ -8767,15 +8764,14 @@
     "id": 1787512026427,
     "title": "Harvest Festival - Oct 17 & 18 (Live Music)",
     "date": "2026-10-18",
-    "time": "11:00",
+    "time": "23:00",
     "venue": "Robibero Winery",
     "venueUrl": "https://www.robiberofamilyvineyards.com/events",
     "location": "New Paltz, NY",
     "mapsUrl": "https://www.robiberofamilyvineyards.com/events",
     "price": "$25adv/$40door",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787512295553,
@@ -9132,7 +9128,7 @@
   {
     "id": 318,
     "date": "2026-09-26",
-    "title": "Something in the Hills - Damon & Naomi, Bow & Arrow, Aaron Roche, Ali Carter, Donna Allen, Erica Dawn Lyle, Frown Town, Kevin Louis Lareau, Kryssi and Wednesday, Museum Legs, Rowan Newby, Straberry Runners, Zannie",
+    "title": "Something in the Hills - DAMON & NAOMI, BOW AND ARROW (LEA BERTUCCI AND MICHAEL BEHARIE), AARON ROCHE, ALI CARTER, DONNA ALLEN, ERICA DAWN LYLE, FROWN TOWN, KEVIN LOUIS LAREAU, KRYSSI AND WEDNESDAY, MUSEUM LEGS, ROWAN NEWBY, STRAWBERRY RUNNERS, ZANNIE",
     "venue": "The Half Moon",
     "venueUrl": "https://somethinginthehills.com/",
     "location": "Hudson, NY",
@@ -9140,7 +9136,7 @@
     "time": "14:00",
     "price": "$29adv/$39later",
     "free": false,
-    "_source": "manual",
+    "_source": "scraped",
     "_manual": true
   },
   {
@@ -10987,13 +10983,13 @@
   },
   {
     "id": 254,
-    "date": "2026-09-11",
-    "title": "Jay Collins & Northern Resistance",
-    "venue": "The Falcon",
-    "venueUrl": "https://www.liveatthefalcon.com",
-    "location": "Marlboro, NY",
-    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    "time": "19:30",
+    "date": "2026-09-13",
+    "title": "Marji Zintz & Mike LaRocco – Salon Stage",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "23:30",
     "price": "See website",
     "free": false,
     "_source": "scraped",
@@ -11007,10 +11003,10 @@
     "venueUrl": "https://townecrier.com/",
     "location": "Beacon, NY",
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
-    "time": "11:30",
+    "time": "23:30",
     "price": "See website",
     "free": false,
-    "_source": "manual",
+    "_source": "scraped",
     "_manual": true
   },
   {
@@ -11319,15 +11315,14 @@
     "id": 1788277504731,
     "title": "Fleischmanns Village Festival - Joe Colwell, Lali & The Pops, Jaketown Road, Sue's Garage, Garth Kravits, Simone's Bicycle Wreck, Adam Fitch, Alivia George",
     "date": "2026-09-06",
-    "time": "11:00",
+    "time": "23:00",
     "venue": "Fleischmanns Village Festival",
     "venueUrl": "https://www.instagram.com/visitfleischmannsny/",
     "location": "Fleischmanns, NY",
     "mapsUrl": "https://maps.app.goo.gl/aPEM3cxgfb6TsgjM9",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788277796400,
@@ -12420,7 +12415,7 @@
   },
   {
     "id": 1788286239749,
-    "title": "Sister Sparrow & The Dirty Birds",
+    "title": "Sister Sparrow & The Dirty Bir",
     "date": "2026-10-17",
     "time": "19:00",
     "venue": "Colony Woodstock",
@@ -12429,8 +12424,7 @@
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$35",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788286284617,
@@ -13510,15 +13504,14 @@
     "id": 1788657119871,
     "title": "Tree of Life Quartet with Anna Womack",
     "date": "2026-09-06",
-    "time": "11:00",
+    "time": "23:00",
     "venue": "Pearl Moon",
     "venueUrl": "https://pearlmoonwoodstock.com/events",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788657194034,
@@ -13563,15 +13556,14 @@
     "id": 1788657355931,
     "title": "Bernstein Bard Trio",
     "date": "2026-09-13",
-    "time": "11:00",
+    "time": "23:00",
     "venue": "Pearl Moon",
     "venueUrl": "https://pearlmoonwoodstock.com/events",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788657385098,
@@ -13616,15 +13608,14 @@
     "id": 1788657549754,
     "title": "Donnely & Einhorn",
     "date": "2026-09-20",
-    "time": "11:00",
+    "time": "23:00",
     "venue": "Pearl Moon",
     "venueUrl": "https://pearlmoonwoodstock.com/events",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788657581240,
