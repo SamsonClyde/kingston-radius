@@ -13981,5 +13981,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788716912378,
+    "title": "For The Record - The Wall Street Jam, The Help Helps, Achieves Most, Johnson & Co",
+    "date": "2026-09-24",
+    "time": "17:00",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
