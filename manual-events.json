@@ -13773,5 +13773,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788662875715,
+    "title": "Chris O'Driscoll, Normal Human Michael, The Lowliest One, Ever-Peacock",
+    "date": "2026-09-06",
+    "time": "19:00",
+    "venue": "Night Swim",
+    "venueUrl": "https://www.instagram.com/p/Dcr3MBEN9cY/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sZe9CAVM8vJMB9UL6",
+    "price": "$5",
+    "free": false,
+    "_manual": true
   }
 ]
