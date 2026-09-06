@@ -6767,7 +6767,8 @@
     "mapsUrl": "https://maps.app.goo.gl/SttEGBLzqFEAu41cA",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787399121297,
