@@ -8767,14 +8767,15 @@
     "id": 1787512026427,
     "title": "Harvest Festival - Oct 17 & 18 (Live Music)",
     "date": "2026-10-18",
-    "time": "23:00",
+    "time": "11:00",
     "venue": "Robibero Winery",
     "venueUrl": "https://www.robiberofamilyvineyards.com/events",
     "location": "New Paltz, NY",
     "mapsUrl": "https://www.robiberofamilyvineyards.com/events",
     "price": "$25adv/$40door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787512295553,
