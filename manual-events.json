@@ -13492,11 +13492,12 @@
     "date": "2026-09-06",
     "time": "11:30",
     "venue": "Left Bank Cider",
-    "venueUrl": "https://www.instagram.com/leftbankciders/",
+    "venueUrl": "https://dromedary-records.com/its-time-dromfest-26/",
     "location": "Catskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/tTxBZEPA4wjgxaUY8",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
