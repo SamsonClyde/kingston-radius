@@ -13929,5 +13929,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788716689998,
+    "title": "Fleur bleu.e, Rachel's Papers",
+    "date": "2026-09-09",
+    "time": "17:00",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
