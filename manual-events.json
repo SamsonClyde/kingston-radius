@@ -13890,5 +13890,18 @@
     "price": "$19",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788663956549,
+    "title": "Vethaken, We Used to Cut The Grass, Ampevene, she's having a meltdown",
+    "date": "2026-11-12",
+    "time": "19:00",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "price": "$16",
+    "free": false,
+    "_manual": true
   }
 ]
