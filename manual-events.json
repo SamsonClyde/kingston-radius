@@ -13799,5 +13799,18 @@
     "price": "$19",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788663236327,
+    "title": "Brat, U.S. Bastards, Vaexus, Guts",
+    "date": "2026-10-03",
+    "time": "18:30",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "price": "$23",
+    "free": false,
+    "_manual": true
   }
 ]
