@@ -13610,14 +13610,15 @@
     "id": 1788657549754,
     "title": "Donnely & Einhorn",
     "date": "2026-09-20",
-    "time": "23:00",
+    "time": "11:00",
     "venue": "Pearl Moon",
     "venueUrl": "https://pearlmoonwoodstock.com/events",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788657581240,
