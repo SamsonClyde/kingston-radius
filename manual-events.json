@@ -13812,5 +13812,18 @@
     "price": "$23",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788663362549,
+    "title": "Deathrock Dani Presents: Matinee for Lebanon - You are Not Brave Enough, Drawn By Blood, Marinette, Decryption, Iced Over, Fear of Being Rained On",
+    "date": "2026-10-04",
+    "time": "15:00",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "price": "$19",
+    "free": false,
+    "_manual": true
   }
 ]
