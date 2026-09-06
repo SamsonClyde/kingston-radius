@@ -14085,5 +14085,18 @@
     "price": "$49-$89",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788717205701,
+    "title": "The Weight Band",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "price": "$49-$89",
+    "free": false,
+    "_manual": true
   }
 ]
