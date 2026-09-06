@@ -568,5 +568,11 @@
     "location": "Chatham, NY",
     "mapsUrl": "https://maps.app.goo.gl/zhQscGQXkbzsF4WJ9",
     "drive": 65
+  },
+  "Hardscrabble": {
+    "venueUrl": "https://www.hardscrabbleday.org/",
+    "location": "Red Hook, NY",
+    "mapsUrl": "https://maps.app.goo.gl/EUKSujHxRaBkZzQ66",
+    "drive": 20
   }
 }
