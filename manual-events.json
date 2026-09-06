@@ -4654,10 +4654,10 @@
     "venueUrl": "https://www.liveatthefalcon.com",
     "location": "Marlboro, NY",
     "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    "time": "See website",
+    "time": "19:30",
     "price": "See website",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
