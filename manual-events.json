@@ -10924,7 +10924,7 @@
     "time": "20:00",
     "price": "See website",
     "free": false,
-    "_source": "email",
+    "_source": "manual",
     "_manual": true
   },
   {
