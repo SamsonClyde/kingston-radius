@@ -13968,5 +13968,18 @@
     "price": "$64-$84",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788716822055,
+    "title": "Corevalay",
+    "date": "2026-10-07",
+    "time": "17:00",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
