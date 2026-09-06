@@ -13504,14 +13504,15 @@
     "id": 1788657119871,
     "title": "Tree of Life Quartet with Anna Womack",
     "date": "2026-09-06",
-    "time": "23:00",
+    "time": "11:00",
     "venue": "Pearl Moon",
     "venueUrl": "https://pearlmoonwoodstock.com/events",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788657194034,
