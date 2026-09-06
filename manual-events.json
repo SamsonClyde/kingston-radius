@@ -13694,5 +13694,18 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788660899193,
+    "title": "The Big Shoe, Brule County Bad Boys, Saints In The City (Bruce Springsteen Cover Band)",
+    "date": "2026-09-19",
+    "time": "17:00",
+    "venue": "Hardscrabble",
+    "venueUrl": "https://www.hardscrabbleday.org/",
+    "location": "Red Hook, NY",
+    "mapsUrl": "https://maps.app.goo.gl/EUKSujHxRaBkZzQ66",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
