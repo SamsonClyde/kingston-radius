@@ -374,10 +374,6 @@
   "The Falcon||2026-09-03||19:30": "approved",
   "The Falcon||2026-09-04||19:30": "approved",
   "The Falcon||2026-09-05||19:30": "approved",
-  "The Falcon||2026-09-06||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076231236
-  },
   "The Falcon||2026-09-06||19:30": "approved",
   "The Falcon||2026-09-09||See website": {
     "status": "rejected",
@@ -862,15 +858,7 @@
   "Rail Trail Cafe||2026-09-04||17:00": "approved",
   "Rail Trail Cafe||2026-09-05||14:00": "approved",
   "Rail Trail Cafe||2026-09-05||17:00": "approved",
-  "Rail Trail Cafe||2026-09-06||1:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787484754697
-  },
   "Rail Trail Cafe||2026-09-06||13:00": "approved",
-  "Rail Trail Cafe||2026-09-06||5:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787484775803
-  },
   "Rail Trail Cafe||2026-09-06||17:00": "approved",
   "Rail Trail Cafe||2026-09-07||1:00 pm": {
     "status": "rejected",
@@ -989,10 +977,6 @@
   "Tempo Arts||2026-08-27||8:15 PM": {
     "status": "rejected",
     "hiddenAt": 1787538952589
-  },
-  "Tempo Arts||2026-09-06||4:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1787539058791
   },
   "Tempo Arts||2026-09-06||16:00": "approved",
   "Tempo Arts||2026-09-18||8:00 PM": {
@@ -1124,10 +1108,6 @@
   "The Snyder Estate||2026-10-31||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787541896207
-  },
-  "Bardavon||2026-09-06||": {
-    "status": "rejected",
-    "hiddenAt": 1787572434621
   },
   "Bardavon||2026-09-18||": {
     "status": "rejected",
@@ -1307,10 +1287,6 @@
   "Towne Crier Café||2026-09-04||18:30": "approved",
   "Towne Crier Café||2026-09-05||8:00 pm": "approved",
   "Towne Crier Café||2026-09-05||18:00": "approved",
-  "Towne Crier Café||2026-09-06||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787576629541
-  },
   "Towne Crier Café||2026-09-06||19:00": "approved",
   "Towne Crier Café||2026-09-11||8:00 pm": {
     "status": "rejected",
@@ -1630,10 +1606,6 @@
     "status": "rejected",
     "hiddenAt": 1788107764272
   },
-  "Towne Crier Café||2026-09-06||11:30 am": {
-    "status": "rejected",
-    "hiddenAt": 1788107829491
-  },
   "Towne Crier Café||2026-09-06||23:30": "approved",
   "Towne Crier Café||2026-10-16||8:00 pm": {
     "status": "rejected",
@@ -1704,27 +1676,7 @@
   "Colony Woodstock||2026-09-04||22:00": "approved",
   "Colony Woodstock||2026-09-05||19:00": "approved",
   "Colony Woodstock||2026-09-05||18:00": "approved",
-  "Colony Woodstock||2026-09-06||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788285065162
-  },
-  "Colony Woodstock||2026-09-06||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788285067770
-  },
-  "Colony Woodstock||2026-09-06||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788285071290
-  },
-  "Colony Woodstock||2026-09-06||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788285076937
-  },
   "Keegan Ales||2026-09-05||14:00": "approved",
-  "Keegan Ales||2026-09-06||11:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1788286518905
-  },
   "Maverick Concerts||2026-09-04||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788286536925
@@ -1807,10 +1759,6 @@
   "Bardavon||2026-12-19||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788345270005
-  },
-  "Colony Woodstock||2026-09-06||": {
-    "status": "rejected",
-    "hiddenAt": 1788345306180
   },
   "Colony Woodstock||2026-09-07||": {
     "status": "rejected",
