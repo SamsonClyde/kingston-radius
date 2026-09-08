@@ -1866,5 +1866,9 @@
   "The Falcon||2026-11-12||See website": {
     "status": "rejected",
     "hiddenAt": 1788864319334
+  },
+  "Towne Crier Café||2026-09-10||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788864321941
   }
 }
