@@ -14393,5 +14393,18 @@
     "price": "$30-40adv/$40-50door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788896309088,
+    "title": "Ballake Sissoko & Piers Faccini",
+    "date": "2026-10-03",
+    "time": "20:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/ballake_sissoko_and_piers_faccini/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "price": "$42",
+    "free": false,
+    "_manual": true
   }
 ]
