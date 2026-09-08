@@ -14289,5 +14289,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788894728339,
+    "title": "Andrea Maddox & The Hey Y'Alls (Mechanical Bull)",
+    "date": "2026-09-18",
+    "time": "18:00",
+    "venue": "RMV Cellars",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
+    "location": "West Park, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YKDAq1q7vWCf2mNd9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
