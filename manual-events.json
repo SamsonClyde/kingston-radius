@@ -14380,5 +14380,18 @@
     "price": "$30-40adv/$40-50door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788895959518,
+    "title": "NYTOS: Avakians' Cool Yule",
+    "date": "2026-12-13",
+    "time": "19:30",
+    "venue": "Stissing Center",
+    "venueUrl": "https://stissingcenter.org/events/",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
+    "price": "$30-40adv/$40-50door",
+    "free": false,
+    "_manual": true
   }
 ]
