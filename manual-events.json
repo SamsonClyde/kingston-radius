@@ -14124,5 +14124,18 @@
     "price": "$15+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788870618378,
+    "title": "Paw Paw Festival - Day One: Ghosts of Jupiter, Mono Means One, The Spoonlights, Eugene Tyler Band, John Ferrara, Meara",
+    "date": "2026-09-26",
+    "time": "13:00",
+    "venue": "Magic Forest Farm",
+    "venueUrl": "https://www.nypawpawfest.com/",
+    "location": "Coeyman Hollow, NY",
+    "mapsUrl": "https://maps.app.goo.gl/MiqFDXAH3KbatCYA9",
+    "price": "$45day/$82both",
+    "free": false,
+    "_manual": true
   }
 ]
