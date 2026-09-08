@@ -574,5 +574,11 @@
     "location": "Red Hook, NY",
     "mapsUrl": "https://maps.app.goo.gl/EUKSujHxRaBkZzQ66",
     "drive": 20
+  },
+  "Stone Ridge Orchard": {
+    "venueUrl": "https://www.stoneridgeorchard.com/events.html",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/bw5dyCL5iXxqjCz98",
+    "drive": 20
   }
 }
