@@ -8653,7 +8653,7 @@
   },
   {
     "id": 1787510696281,
-    "title": "Sin Against Sin, Palehorse, Schorched Earth Policy, Gemstar",
+    "title": "Outta Pocket - Sin Against Sin, Palehorse, Schorched Earth Policy, Gemstar",
     "date": "2026-09-19",
     "time": "19:00",
     "venue": "Reason & Ruckus",
@@ -8662,7 +8662,8 @@
     "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
     "price": "$20",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787510833372,
