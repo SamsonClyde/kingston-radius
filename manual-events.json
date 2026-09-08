@@ -8653,7 +8653,7 @@
   },
   {
     "id": 1787510696281,
-    "title": "Outta Pocket - Sin Against Sin, Palehorse, Schorched Earth Policy, Gemstar",
+    "title": "Sin Against Sin, Palehorse, Schorched Earth Policy, Gemstar",
     "date": "2026-09-19",
     "time": "19:00",
     "venue": "Reason & Ruckus",
@@ -8662,8 +8662,7 @@
     "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
     "price": "$20",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787510833372,
@@ -14262,6 +14261,19 @@
     "location": "Rosendale, NY",
     "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
     "price": "$10",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1788894372181,
+    "title": "Milton Trio",
+    "date": "2026-09-11",
+    "time": "17:00",
+    "venue": "RMV Cellars",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
+    "location": "West Park, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YKDAq1q7vWCf2mNd9",
+    "price": "See website",
     "free": false,
     "_manual": true
   }
