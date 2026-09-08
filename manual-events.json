@@ -14341,5 +14341,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788895390008,
+    "title": "Nu Bossa",
+    "date": "2026-09-11",
+    "time": "18:30",
+    "venue": "Rough Draft Books",
+    "venueUrl": "https://www.roughdraftny.com/events/2026/5/15/live-music-with-nu-bossa-hs77w",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LLZ4sLnaNhZtSSar9",
+    "price": "$10/Donation",
+    "free": false,
+    "_manual": true
   }
 ]
