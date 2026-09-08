@@ -598,5 +598,11 @@
     "location": "Saugerties, NY",
     "mapsUrl": "https://maps.app.goo.gl/kpHgxgDmBgDZ8dRc8",
     "drive": 20
+  },
+  "Orpheum": {
+    "venueUrl": "https://www.catskillmtn.org/performances/",
+    "location": "Tannersville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/8SaKNQ6G3qhXU6hD6",
+    "drive": 38
   }
 }
