@@ -14222,7 +14222,7 @@
   },
   {
     "id": 1788893601355,
-    "title": "Ltraccord",
+    "title": "Lyraccord",
     "date": "2026-09-19",
     "time": "17:00",
     "venue": "Rail Trail Cafe",
@@ -14231,6 +14231,7 @@
     "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
     "price": "$10",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
