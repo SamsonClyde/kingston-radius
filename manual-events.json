@@ -14176,5 +14176,18 @@
     "price": "$10adv/$15door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788889503297,
+    "title": "Saugerties Garlic Festival - Live Music Day Two",
+    "date": "2026-09-27",
+    "time": "22:00",
+    "venue": "HV Garlic Festival",
+    "venueUrl": "https://www.hvgf.org/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kpHgxgDmBgDZ8dRc8",
+    "price": "$10adv/$15door",
+    "free": false,
+    "_manual": true
   }
 ]
