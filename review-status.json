@@ -1842,5 +1842,9 @@
   "Colony Woodstock||2026-09-13||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788864292086
+  },
+  "Keegan Ales||2026-09-13||11:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1788864300794
   }
 }
