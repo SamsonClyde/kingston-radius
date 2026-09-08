@@ -14354,5 +14354,18 @@
     "price": "$10/Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788895823237,
+    "title": "Holly Miranda & Amber Rubarth",
+    "date": "2026-11-06",
+    "time": "19:30",
+    "venue": "Stissing Center",
+    "venueUrl": "https://stissingcenter.org/events/",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
