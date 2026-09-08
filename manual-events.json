@@ -14189,5 +14189,18 @@
     "price": "$10adv/$15door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788890031747,
+    "title": "Magical Mystery Doors",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "venue": "Paramount Hudson Valley Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
