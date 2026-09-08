@@ -604,5 +604,11 @@
     "location": "Tannersville, NY",
     "mapsUrl": "https://maps.app.goo.gl/8SaKNQ6G3qhXU6hD6",
     "drive": 38
+  },
+  "Doctorow Center": {
+    "venueUrl": "https://www.catskillmtn.org/performances/",
+    "location": "Hunter, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LnFs5qhwS73VKaBh9",
+    "drive": 45
   }
 }
