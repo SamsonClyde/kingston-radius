@@ -14406,5 +14406,18 @@
     "price": "$42",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788896447350,
+    "title": "Jay Ungar’s 80th Birthday Concert",
+    "date": "2026-11-15",
+    "time": "14:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/jay_ungars_80th_birthday_concert/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "price": "$50-$110",
+    "free": false,
+    "_manual": true
   }
 ]
