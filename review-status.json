@@ -1858,5 +1858,9 @@
   "Rosendale Theater||2026-09-22||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1788864313491
+  },
+  "The Falcon||2026-11-05||See website": {
+    "status": "rejected",
+    "hiddenAt": 1788864316642
   }
 }
