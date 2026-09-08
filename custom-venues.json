@@ -580,5 +580,11 @@
     "location": "Stone Ridge, NY",
     "mapsUrl": "https://maps.app.goo.gl/bw5dyCL5iXxqjCz98",
     "drive": 20
+  },
+  "Magic Forest Farm": {
+    "venueUrl": "https://www.nypawpawfest.com/",
+    "location": "Coeyman Hollow, NY",
+    "mapsUrl": "https://maps.app.goo.gl/MiqFDXAH3KbatCYA9",
+    "drive": 58
   }
 }
