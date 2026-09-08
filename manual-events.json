@@ -8202,13 +8202,14 @@
     "title": "Outlander in Concert: Echoes Through The Highlands",
     "date": "2026-10-08",
     "time": "20:00",
-    "venue": "Paramount Hudson Valley Theater",
+    "venue": "Paramount Theater",
     "venueUrl": "https://paramounthudsonvalley.com/events/",
     "location": "Peekskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
     "price": "$69-$108",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787508249772,
