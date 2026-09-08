@@ -14481,16 +14481,28 @@
     "venueUrl": "https://www.liveatthefalcon.com/",
     "location": "Marlboro, NY",
     "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    "price": "See website",
+    "price": "$16",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788897281499,
     "title": "Moon Mullins, Jackie West",
     "date": "2026-09-11",
     "time": "21:00",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com/",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1788897354971,
+    "title": "What?",
+    "date": "2026-09-17",
+    "time": "19:30",
     "venue": "The Falcon",
     "venueUrl": "https://www.liveatthefalcon.com/",
     "location": "Marlboro, NY",
