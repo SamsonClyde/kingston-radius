@@ -592,5 +592,11 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://www.instagram.com/p/Dcwfu66OnqD/",
     "drive": 0
+  },
+  "HV Garlic Festival": {
+    "venueUrl": "https://www.hvgf.org/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kpHgxgDmBgDZ8dRc8",
+    "drive": 20
   }
 }
