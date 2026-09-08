@@ -1914,5 +1914,9 @@
   "Unicorn Bar||2026-09-15||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788864397590
+  },
+  "Colony Woodstock||2026-09-10||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788878701101
   }
 }
