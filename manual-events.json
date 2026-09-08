@@ -14481,9 +14481,10 @@
     "venueUrl": "https://www.liveatthefalcon.com/",
     "location": "Marlboro, NY",
     "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    "price": "$16",
+    "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788897281499,
