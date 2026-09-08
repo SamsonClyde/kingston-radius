@@ -14150,5 +14150,18 @@
     "price": "$45day/$82both",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788871007345,
+    "title": "Nick Dittmeier & The Sawdusters, Andrea Maddox & The Hey Y'alls, Brendan McDonough (House Show DM for Address, byob)",
+    "date": "2026-09-17",
+    "time": "18:30",
+    "venue": "Hopenanny House Concert",
+    "venueUrl": "https://www.instagram.com/p/Dcwfu66OnqD/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://www.instagram.com/p/Dcwfu66OnqD/",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
