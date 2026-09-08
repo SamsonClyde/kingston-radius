@@ -4136,7 +4136,7 @@
   },
   {
     "id": 1787075121723,
-    "title": "Boojum With What?",
+    "title": "Boojum, What?",
     "date": "2026-09-10",
     "time": "20:00",
     "venue": "The Ellis",
@@ -4145,7 +4145,8 @@
     "mapsUrl": "https://maps.app.goo.gl/r8BMC6j6N8u7Y8Y97",
     "price": "$16",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787075207827,
