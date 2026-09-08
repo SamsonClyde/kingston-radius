@@ -14111,5 +14111,18 @@
     "price": "$78-$118",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788869841451,
+    "title": "Hudson Valley Sustainable Fashion Week[end] - Day Two: Live Music",
+    "date": "2026-09-26",
+    "time": "11:00",
+    "venue": "Stone Ridge Orchard",
+    "venueUrl": "https://www.hvsfw.org/weekend",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/bw5dyCL5iXxqjCz98",
+    "price": "$15+",
+    "free": false,
+    "_manual": true
   }
 ]
