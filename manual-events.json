@@ -14445,5 +14445,18 @@
     "price": "$16",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788896970372,
+    "title": "Black Star Ensemble - Weird Fishes Costume Ball (Radiohead)",
+    "date": "2026-10-16",
+    "time": "20:00",
+    "venue": "The Ellis",
+    "venueUrl": "https://www.theellisnewburgh.com/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/r8BMC6j6N8u7Y8Y97",
+    "price": "$16",
+    "free": false,
+    "_manual": true
   }
 ]
