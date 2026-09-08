@@ -14137,5 +14137,18 @@
     "price": "$45day/$82both",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788870698471,
+    "title": "Paw Paw Festival - Day Two: Leon Trout, Andy Barbera's Pinker Spandrel, Laura Leigh, SM INK, Tumblin' Gap",
+    "date": "2026-09-27",
+    "time": "13:00",
+    "venue": "Magic Forest Farm",
+    "venueUrl": "https://www.nypawpawfest.com/",
+    "location": "Coeyman Hollow, NY",
+    "mapsUrl": "https://maps.app.goo.gl/MiqFDXAH3KbatCYA9",
+    "price": "$45day/$82both",
+    "free": false,
+    "_manual": true
   }
 ]
