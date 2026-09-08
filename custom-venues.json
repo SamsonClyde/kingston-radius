@@ -592,5 +592,11 @@
     "location": "Hunter, NY",
     "mapsUrl": "https://maps.app.goo.gl/LnFs5qhwS73VKaBh9",
     "drive": 45
+  },
+  "Paramount": {
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "drive": 82
   }
 }
