@@ -8104,42 +8104,39 @@
     "title": "Dionne Warwick",
     "date": "2026-09-17",
     "time": "20:00",
-    "venue": "Paramount Theater",
+    "venue": "Paramount Hudson Valley Theater",
     "venueUrl": "https://paramounthudsonvalley.com/events/",
     "location": "Peekskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
     "price": "$84-$130",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787507740498,
     "title": "The Fab Four: HELP! (Beatles Cover Band)",
     "date": "2026-09-19",
     "time": "19:00",
-    "venue": "Paramount Theater",
+    "venue": "Paramount Hudson Valley Theater",
     "venueUrl": "https://paramounthudsonvalley.com/events/",
     "location": "Peekskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
     "price": "$54-$68",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787507843863,
     "title": "Broadway’s Rock of Ages Band",
     "date": "2026-09-25",
     "time": "20:00",
-    "venue": "Paramount Theater",
+    "venue": "Paramount Hudson Valley Theater",
     "venueUrl": "https://paramounthudsonvalley.com/events/",
     "location": "Peekskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
     "price": "$52-$69",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787507924884,
