@@ -14296,12 +14296,24 @@
     "date": "2026-09-18",
     "time": "18:00",
     "venue": "RMV Cellars",
-    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars#calendar-1b1c7b7c-0bb8-42d1-a9f0-b699bc5065d7-event-efbc41ff-3547-455a-b762-68aa27174e89",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
     "location": "West Park, NY",
     "mapsUrl": "https://maps.app.goo.gl/YKDAq1q7vWCf2mNd9",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
+  },
+  {
+    "id": 1788894846069,
+    "title": "Miles Brothers Band",
+    "date": "2026-09-19",
+    "time": "17:00",
+    "venue": "RMV Cellars",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
+    "location": "West Park, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YKDAq1q7vWCf2mNd9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
