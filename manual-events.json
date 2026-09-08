@@ -14419,5 +14419,18 @@
     "price": "$50-$110",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788896532536,
+    "title": "Tides & Rain, The Belle Curves",
+    "date": "2026-09-13",
+    "time": "15:30",
+    "venue": "The Baldwin",
+    "venueUrl": "https://www.instagram.com/liquidmercantile/",
+    "location": "Pine Bush, NY",
+    "mapsUrl": "https://maps.app.goo.gl/WhfYUq8ysYeaa6reA",
+    "price": "$50-$110",
+    "free": false,
+    "_manual": true
   }
 ]
