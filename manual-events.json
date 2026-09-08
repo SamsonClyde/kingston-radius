@@ -14163,5 +14163,18 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1788889479594,
+    "title": "Saugerties Garlic Festival - Live Music Day One",
+    "date": "2026-09-26",
+    "time": "10:00",
+    "venue": "HV Garlic Festival",
+    "venueUrl": "https://www.hvgf.org/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kpHgxgDmBgDZ8dRc8",
+    "price": "$10adv/$15door",
+    "free": false,
+    "_manual": true
   }
 ]
