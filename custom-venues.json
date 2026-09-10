@@ -604,5 +604,11 @@
     "location": "Big Indian, NY",
     "mapsUrl": "https://maps.app.goo.gl/gXyqajxMGJxe6d7E9",
     "drive": 40
+  },
+  "HRMM Solaris Cruise": {
+    "venueUrl": "https://www.hrmm.org/solaris-cruises.html",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/BeMvKWTL7bdDv5uB6",
+    "drive": 10
   }
 }
