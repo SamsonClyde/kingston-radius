@@ -14430,7 +14430,7 @@
   },
   {
     "id": 1788896447350,
-    "title": "Jay Ungar’s 80th Birthday Concert",
+    "title": "Jay Ungar’s 80th Birthday Concert - The Jay Ungar & Molly Mason Family Band, Natalie Merchant, Tony Trischka, Fiddle Fever, Vanaver Caravan, Swingology, David Amram, Joe Newberry, The Mammals, Stawberry Hill Fiddlers",
     "date": "2026-11-15",
     "time": "14:00",
     "venue": "Tempo Arts",
@@ -14439,7 +14439,8 @@
     "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
     "price": "$50-$110",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788896532536,
