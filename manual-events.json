@@ -14570,5 +14570,18 @@
     "price": "Free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789037147502,
+    "title": "Shandaken Summer Concert Series - Wyld Blu",
+    "date": "2026-09-27",
+    "time": "13:00",
+    "venue": "Big Indian Park",
+    "venueUrl": "https://www.facebook.com/people/Shandaken-Summer-Concert-Series/61578791698967/",
+    "location": "Big Indian, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gXyqajxMGJxe6d7E9",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
