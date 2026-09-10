@@ -1884,5 +1884,9 @@
   "The Eleven||2026-11-04||18:00": {
     "status": "rejected",
     "hiddenAt": 1789064665567
+  },
+  "Assembly Kingston||2026-10-30||20:00": {
+    "status": "rejected",
+    "hiddenAt": 1789071591626
   }
 }
