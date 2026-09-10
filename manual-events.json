@@ -14831,5 +14831,18 @@
     "price": "$72/$151",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789071761790,
+    "title": "Uptown Honky Tonk  - Kelsey Waldon, The Ulsterados, Two Step Lesson (With Tori Tornado)",
+    "date": "2026-11-11",
+    "time": "20:00",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "price": "$10lesson/$25show",
+    "free": false,
+    "_manual": true
   }
 ]
