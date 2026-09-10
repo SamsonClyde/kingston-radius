@@ -13226,16 +13226,17 @@
   },
   {
     "id": 1788488631667,
-    "title": "The Mops",
+    "title": "Live Jazz Brunch with Paul Connors",
     "date": "2026-09-20",
-    "time": "20:00",
+    "time": "11:00",
     "venue": "The Grand",
     "venueUrl": "https://thegrandcroton.com/happening",
     "location": "Croton-On-Hudson, NY",
     "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788489178080,
@@ -14712,45 +14713,6 @@
     "location": "Albany, NY",
     "mapsUrl": "https://maps.app.goo.gl/aqdL8wtJdNAHwLoB7",
     "price": "See website",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789038897108,
-    "title": "Night Zero",
-    "date": "2026-10-30",
-    "time": "20:00",
-    "venue": "Lark Hall",
-    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
-    "location": "Albany, NY",
-    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
-    "price": "$24",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789038942378,
-    "title": "Lee Emi, Cal in Red",
-    "date": "2026-11-13",
-    "time": "20:00",
-    "venue": "Lark Hall",
-    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
-    "location": "Albany, NY",
-    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
-    "price": "$30",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789038984912,
-    "title": "Hayley Jane Band & Organ Fairchild",
-    "date": "2026-12-11",
-    "time": "20:00",
-    "venue": "Lark Hall",
-    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
-    "location": "Albany, NY",
-    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
-    "price": "$24",
     "free": false,
     "_manual": true
   }
