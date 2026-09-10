@@ -11701,7 +11701,7 @@
   },
   {
     "id": 1788279901525,
-    "title": "Driftwood, The Mallett Brothers",
+    "title": "Driftwood, w/s/g, The Mallett Brothers",
     "date": "2026-10-24",
     "time": "20:00",
     "venue": "Lark Hall",
@@ -11710,8 +11710,7 @@
     "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
     "price": "$27",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788279926475,
@@ -11793,7 +11792,7 @@
   },
   {
     "id": 1788280215392,
-    "title": "Fireside Collective, The Rollin' Dust",
+    "title": "Fireside Collective",
     "date": "2026-12-12",
     "time": "20:00",
     "venue": "Lark Hall",
@@ -11802,8 +11801,7 @@
     "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
     "price": "$24",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788280328580,
@@ -14792,6 +14790,32 @@
     "location": "Croton-On-Hudson, NY",
     "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
     "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789071299476,
+    "title": "Willie Nile",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "venue": "Lark Hall",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
+    "price": "$36",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789071504616,
+    "title": "St. Vincent",
+    "date": "2026-10-30",
+    "time": "20:00",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "price": "$72/$151",
     "free": false,
     "_manual": true
   }
