@@ -592,5 +592,11 @@
     "location": "Peekskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
     "drive": 82
+  },
+  "Glenbrook Park": {
+    "venueUrl": "https://www.shandaken.gov/events/2026-09-19/",
+    "location": "Shandaken, NY",
+    "mapsUrl": "https://maps.app.goo.gl/2dNKwC2zJukUPC9h7",
+    "drive": 37
   }
 }
