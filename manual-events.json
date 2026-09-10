@@ -14909,5 +14909,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789072817123,
+    "title": "Community Day with Live Music",
+    "date": "2026-09-26",
+    "time": "11:00",
+    "venue": "Southlands Foundation",
+    "venueUrl": "https://www.instagram.com/southlandsfoundation/",
+    "location": "Rhinebeck, NY",
+    "mapsUrl": "https://maps.app.goo.gl/z9uKkQYXpPrtEoGL9",
+    "price": "Free",
+    "free": false,
+    "_manual": true
   }
 ]
