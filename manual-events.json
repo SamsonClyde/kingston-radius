@@ -14701,5 +14701,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789038723746,
+    "title": "Women Are Making Music - A Showcase Celebrating Women In Music",
+    "date": "2026-10-07",
+    "time": "18:00",
+    "venue": "The Eleven",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/aqdL8wtJdNAHwLoB7",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
