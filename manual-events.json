@@ -14779,5 +14779,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789039367190,
+    "title": "Tribute to Buena Vista Social Club with Pasofino Social Club",
+    "date": "2026-10-09",
+    "time": "21:00",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
