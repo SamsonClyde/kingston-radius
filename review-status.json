@@ -360,10 +360,6 @@
   "The Falcon||2026-09-04||19:30": "approved",
   "The Falcon||2026-09-05||19:30": "approved",
   "The Falcon||2026-09-06||19:30": "approved",
-  "The Falcon||2026-09-09||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076246291
-  },
   "The Falcon||2026-09-10||See website": {
     "status": "rejected",
     "hiddenAt": 1787076261076
@@ -1147,10 +1143,6 @@
     "hiddenAt": 1787573023978
   },
   "Old Dutch Church||2026-10-25||16:00": "approved",
-  "Tompkins Corners Cultural Center||2026-09-09||3:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787575544378
-  },
   "Tompkins Corners Cultural Center||2026-09-12||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1787575916308
@@ -1319,10 +1311,6 @@
   "Unicorn Bar||2026-08-28||7:30 pm": "approved",
   "Unicorn Bar||2026-08-29||21:00": "approved",
   "Unicorn Bar||2026-09-05||21:00": "approved",
-  "Unicorn Bar||2026-09-09||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787591080493
-  },
   "Unicorn Bar||2026-09-10||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787591086271
@@ -1719,10 +1707,6 @@
     "status": "rejected",
     "hiddenAt": 1788431574839
   },
-  "The Half Moon||2026-09-09||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431624734
-  },
   "Tompkins Corners Cultural Center||2026-09-29||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788431630309
@@ -1738,10 +1722,6 @@
   "Towne Crier Café||2026-09-19||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788431666739
-  },
-  "Tubby's||2026-09-09||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788431671099
   },
   "Tubby's||2026-09-15||7:00 pm": {
     "status": "rejected",
@@ -1766,10 +1746,6 @@
     "hiddenAt": 1788432463379
   },
   "Tubby's||2026-10-01||20:00": "approved",
-  "Unicorn Bar||2026-09-09||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788432500110
-  },
   "Unicorn Bar||2026-09-11||9:30 pm": {
     "status": "rejected",
     "hiddenAt": 1788432503536
@@ -1806,10 +1782,6 @@
   "Bardavon||2026-12-19||": {
     "status": "rejected",
     "hiddenAt": 1788864241410
-  },
-  "Colony Woodstock||2026-09-09||5:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788864245957
   },
   "Colony Woodstock||2026-09-10||5:30 PM": {
     "status": "rejected",
