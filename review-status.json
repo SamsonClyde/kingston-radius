@@ -1902,5 +1902,9 @@
   "The Eleven||2026-12-09||18:00": {
     "status": "rejected",
     "hiddenAt": 1789038445370
+  },
+  "The Eleven||2027-02-03||18:00": {
+    "status": "rejected",
+    "hiddenAt": 1789038452222
   }
 }
