@@ -598,5 +598,11 @@
     "location": "Shandaken, NY",
     "mapsUrl": "https://maps.app.goo.gl/2dNKwC2zJukUPC9h7",
     "drive": 37
+  },
+  "Big Indian Park": {
+    "venueUrl": "https://nysmusic.com/2026/06/10/shandaken-summer-concert-series-returns-for-2026/",
+    "location": "Big Indian, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gXyqajxMGJxe6d7E9",
+    "drive": 40
   }
 }
