@@ -634,5 +634,11 @@
     "location": "Walden, NY",
     "mapsUrl": "https://maps.app.goo.gl/YbcXyk1sFRprPyrL6",
     "drive": 46
+  },
+  "NY Boat Co.": {
+    "venueUrl": "https://www.instagram.com/nyboatco",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/ijS98tCRXUH7tYoe8",
+    "drive": 72
   }
 }
