@@ -628,5 +628,11 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/ps6vfaVpB7t3YK6z8",
     "drive": 2
+  },
+  "Angry Orchard Cider House": {
+    "venueUrl": "https://www.angryorchard.com/cider-house/cidery-events",
+    "location": "Walden, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YbcXyk1sFRprPyrL6",
+    "drive": 46
   }
 }
