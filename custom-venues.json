@@ -622,5 +622,11 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/KrcaVh7m4HG4irQw6",
     "drive": 10
+  },
+  "KPM": {
+    "venueUrl": "https://kingstonpopmuseum.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/ps6vfaVpB7t3YK6z8",
+    "drive": 2
   }
 }
