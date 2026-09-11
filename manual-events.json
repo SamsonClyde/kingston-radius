@@ -15120,7 +15120,7 @@
   },
   {
     "id": 1789137419243,
-    "title": "Andhi O'neill",
+    "title": "Andhi O'Neill",
     "date": "2026-09-11",
     "time": "18:30",
     "venue": "NY Boat Co.",
@@ -15129,7 +15129,8 @@
     "mapsUrl": "https://maps.app.goo.gl/ijS98tCRXUH7tYoe8",
     "price": "$5-$35",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789137438458,
