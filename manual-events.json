@@ -15013,5 +15013,18 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789136080846,
+    "title": "The Penstock Woodwind Quintet (classical)",
+    "date": "2026-10-03",
+    "time": "11:00",
+    "venue": "Town of Ulster Library",
+    "venueUrl": "https://www.instagram.com/tofu_library/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KrcaVh7m4HG4irQw6",
+    "price": "RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
