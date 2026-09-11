@@ -15046,11 +15046,12 @@
     "date": "2026-09-19",
     "time": "12:00",
     "venue": "Twin Star Orchards",
-    "venueUrl": "https://www.instagram.com/twinstarorchards?igsi=MWsybHFzc2VxNmV5",
+    "venueUrl": "https://www.simpletix.com/e/korea-festival-2026-tickets-280682?_gl=1*vkmbpv*_ga*MTE0MTA3NTc5Ny4xNzg5MTM2NjMw*_ga_LMRK6KEX9D*czE3ODkxMzY2MzAkbzEkZzEkdDE3ODkxMzY3NTMkajYwJGwwJGgw",
     "location": "New Paltz, NY",
     "mapsUrl": "https://maps.app.goo.gl/t2rfBvwFYn4M7Vpw5",
-    "price": "See website",
+    "price": "$10-$77",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
