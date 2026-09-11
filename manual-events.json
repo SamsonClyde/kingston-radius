@@ -15065,5 +15065,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789137088146,
+    "title": "Dan Flynn",
+    "date": "2026-10-09",
+    "time": "17:00",
+    "venue": "Angry Orchard Cider House",
+    "venueUrl": "https://www.angryorchard.com/cider-house/cidery-events",
+    "location": "Walden, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YbcXyk1sFRprPyrL6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
