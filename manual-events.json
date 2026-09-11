@@ -13320,7 +13320,7 @@
   },
   {
     "id": 1788571953201,
-    "title": "The Woodsmen",
+    "title": "Woodsmen",
     "date": "2026-09-18",
     "time": "20:00",
     "venue": "Tinker Street Tavern",
@@ -13329,8 +13329,7 @@
     "mapsUrl": "https://maps.app.goo.gl/3CHPZ32vyEMKDYXLA",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788571990135,
@@ -14934,6 +14933,71 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/BFAXmCUTonKerRib7",
     "price": "$5/FreeForMembers",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789134822900,
+    "title": "Funk Junkies",
+    "date": "2026-09-25",
+    "time": "20:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "price": "$25/$30",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789135277403,
+    "title": "Gaspare Randazzo",
+    "date": "2026-09-26",
+    "time": "20:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "price": "$20-$55",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789135379138,
+    "title": "TimesSquare",
+    "date": "2026-11-08",
+    "time": "23:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "price": "RSVP",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789135452740,
+    "title": "Unforgettable Fire (U2 Cover Band)",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "price": "$32-$48",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789135616314,
+    "title": "Bruce Molsky",
+    "date": "2026-09-12",
+    "time": "19:30",
+    "venue": "Tompkins Corners Cultural Center",
+    "venueUrl": "https://www.tompkinscorners.org/music.html",
+    "location": "Putnam Valley, NY",
+    "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
+    "price": "$25",
     "free": false,
     "_manual": true
   }
