@@ -15117,5 +15117,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789137419243,
+    "title": "Andhi O'neill",
+    "date": "2026-09-11",
+    "time": "18:30",
+    "venue": "NY Boat Co.",
+    "venueUrl": "https://www.instagram.com/nyboatco",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/ijS98tCRXUH7tYoe8",
+    "price": "$5-$35",
+    "free": false,
+    "_manual": true
   }
 ]
