@@ -14961,5 +14961,18 @@
     "price": "$20-$55",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789135379138,
+    "title": "TimesSquare",
+    "date": "2026-11-08",
+    "time": "23:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "price": "RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
