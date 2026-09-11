@@ -375,10 +375,6 @@
   "The Falcon||2026-09-04||19:30": "approved",
   "The Falcon||2026-09-05||19:30": "approved",
   "The Falcon||2026-09-06||19:30": "approved",
-  "The Falcon||2026-09-10||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076261076
-  },
   "The Falcon||2026-09-10||19:30": "approved",
   "The Falcon||2026-09-13||See website": {
     "status": "rejected",
@@ -635,10 +631,6 @@
   "Tubby's||2026-09-02||20:00": "approved",
   "Tubby's||2026-09-03||20:00": "approved",
   "Tubby's||2026-09-04||20:00": "approved",
-  "Tubby's||2026-09-10||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787309800588
-  },
   "Tubby's||2026-09-10||20:00": "approved",
   "Tubby's||2026-09-11||7:00 pm": {
     "status": "rejected",
@@ -1076,10 +1068,6 @@
     "status": "rejected",
     "hiddenAt": 1787541411536
   },
-  "The Outlier Inn||2026-09-10||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787541684182
-  },
   "The Outlier Inn||2026-09-10||19:30": "approved",
   "The Outlier Inn||2026-10-10||3:00 pm": {
     "status": "rejected",
@@ -1330,10 +1318,6 @@
   "Unicorn Bar||2026-08-28||7:30 pm": "approved",
   "Unicorn Bar||2026-08-29||21:00": "approved",
   "Unicorn Bar||2026-09-05||21:00": "approved",
-  "Unicorn Bar||2026-09-10||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787591086271
-  },
   "Unicorn Bar||2026-09-11||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787591093219
@@ -1704,10 +1688,6 @@
     "status": "rejected",
     "hiddenAt": 1788286814183
   },
-  "Avalon Lounge||2026-09-10||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788345037441
-  },
   "Avalon Lounge||2026-09-11||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788345087688
@@ -1731,10 +1711,6 @@
   "Bardavon||2026-12-19||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788345270005
-  },
-  "Colony Woodstock||2026-09-10||": {
-    "status": "rejected",
-    "hiddenAt": 1788345330593
   },
   "Colony Woodstock||2026-09-11||": {
     "status": "rejected",
@@ -1815,10 +1791,6 @@
   "The Falcon||2026-11-12||See website": {
     "status": "rejected",
     "hiddenAt": 1788658908081
-  },
-  "Towne Crier Café||2026-09-10||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788658915729
   },
   "Towne Crier Café||2026-09-12||6:00 pm": {
     "status": "rejected",
