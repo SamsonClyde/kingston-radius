@@ -185,10 +185,6 @@
     "status": "rejected",
     "hiddenAt": 1786963780976
   },
-  "Assembly Kingston||2026-09-11||10:30 am": {
-    "status": "rejected",
-    "hiddenAt": 1786963820431
-  },
   "Assembly Kingston||2026-09-12||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963825549
@@ -608,10 +604,6 @@
     "hiddenAt": 1787187621779
   },
   "Keegan Ales||2026-09-02||19:00": "approved",
-  "Keegan Ales||2026-09-11||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787187676068
-  },
   "Keegan Ales||2026-09-11||19:00": "approved",
   "Keegan Ales||2026-11-21||3:00 pm": {
     "status": "rejected",
@@ -632,10 +624,6 @@
   "Tubby's||2026-09-03||20:00": "approved",
   "Tubby's||2026-09-04||20:00": "approved",
   "Tubby's||2026-09-10||20:00": "approved",
-  "Tubby's||2026-09-11||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787309820244
-  },
   "Tubby's||2026-09-11||20:00": "approved",
   "Tubby's||2026-09-12||7:00 pm": {
     "status": "rejected",
@@ -790,10 +778,6 @@
   },
   "Levon Helm Studios||2027-04-29||20:00": "approved",
   "Love, Velma||2026-08-28||21:00": "approved",
-  "Love, Velma||2026-09-11||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787345249308
-  },
   "Love, Velma||2026-09-11||20:00": "approved",
   "Love, Velma||2026-09-25||7:30 pm": {
     "status": "rejected",
@@ -849,10 +833,6 @@
   "Rail Trail Cafe||2026-09-06||13:00": "approved",
   "Rail Trail Cafe||2026-09-06||17:00": "approved",
   "Rail Trail Cafe||2026-09-07||13:00": "approved",
-  "Rail Trail Cafe||2026-09-11||5:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787484824213
-  },
   "Rail Trail Cafe||2026-09-11||17:30": "approved",
   "Rail Trail Cafe||2026-09-12||5:00 pm": {
     "status": "rejected",
@@ -1267,10 +1247,6 @@
   "Towne Crier Café||2026-09-05||8:00 pm": "approved",
   "Towne Crier Café||2026-09-05||18:00": "approved",
   "Towne Crier Café||2026-09-06||19:00": "approved",
-  "Towne Crier Café||2026-09-11||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787576671584
-  },
   "Towne Crier Café||2026-09-11||20:00": "approved",
   "Towne Crier Café||2026-09-12||8:00 pm": {
     "status": "rejected",
@@ -1321,10 +1297,6 @@
   "Unicorn Bar||2026-08-28||7:30 pm": "approved",
   "Unicorn Bar||2026-08-29||21:00": "approved",
   "Unicorn Bar||2026-09-05||21:00": "approved",
-  "Unicorn Bar||2026-09-11||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787591093219
-  },
   "Unicorn Bar||2026-09-11||9:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787591107859
@@ -1504,10 +1476,6 @@
     "status": "rejected",
     "hiddenAt": 1788106613504
   },
-  "Stissing Center||2026-09-11||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788106618418
-  },
   "Stissing Center||2026-10-08||7:30 PM": {
     "status": "rejected",
     "hiddenAt": 1788106622037
@@ -1539,10 +1507,6 @@
     "hiddenAt": 1788107020769
   },
   "The Ashokan Center||2026-10-18||12:00": "approved",
-  "The Falcon||2026-09-11||See website": {
-    "status": "rejected",
-    "hiddenAt": 1788107336898
-  },
   "The Falcon||2026-09-11||19:30": "approved",
   "The Lace Mill||2026-09-02||6:00 pm": {
     "status": "rejected",
@@ -1669,20 +1633,12 @@
     "hiddenAt": 1788286659670
   },
   "Tompkins Corners Cultural Center||2026-10-09||19:30": "approved",
-  "Towne Crier Café||2026-09-11||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788286723106
-  },
   "Towne Crier Café||2026-09-11||18:30": "approved",
   "Towne Crier Café||2026-09-19||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788286772134
   },
   "Towne Crier Café||2026-09-19||20:00": "approved",
-  "Unicorn Bar||2026-09-11||9:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788286787106
-  },
   "Unicorn Bar||2026-10-10||9:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788286809779
@@ -1690,10 +1646,6 @@
   "Unicorn Bar||2026-10-31||9:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788286814183
-  },
-  "Avalon Lounge||2026-09-11||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788345087688
   },
   "Avalon Lounge||2026-09-12||8:00 PM": {
     "status": "rejected",
@@ -1714,10 +1666,6 @@
   "Bardavon||2026-12-19||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788345270005
-  },
-  "Colony Woodstock||2026-09-11||": {
-    "status": "rejected",
-    "hiddenAt": 1788345334994
   },
   "Colony Woodstock||2026-09-12||": {
     "status": "rejected",
