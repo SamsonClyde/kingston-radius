@@ -15286,5 +15286,18 @@
     "price": "RSVP",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789210285769,
+    "title": "Mitch Katz Album Release Party – Salon Stage",
+    "date": "2026-09-26",
+    "time": "18:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
