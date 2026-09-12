@@ -15182,5 +15182,18 @@
     "price": "$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789208952522,
+    "title": "Peter Himmelman",
+    "date": "2026-10-25",
+    "time": "19:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "$30",
+    "free": false,
+    "_manual": true
   }
 ]
