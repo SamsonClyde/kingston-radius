@@ -15273,5 +15273,18 @@
     "price": "RSVP",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789210233049,
+    "title": "Gerry Giordano & Stephen Powers with The Club House Band – Salon Stage",
+    "date": "2026-09-20",
+    "time": "18:30",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "RSVP",
+    "free": false,
+    "_manual": true
   }
 ]
