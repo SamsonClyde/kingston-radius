@@ -12864,15 +12864,14 @@
     "id": 1788441741396,
     "title": "Hammered Hulls, New Vision, Spain, Low Fiction",
     "date": "2026-09-12",
-    "time": "20:00",
+    "time": "08:00",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
     "price": "$20",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788472032370,
@@ -15342,7 +15341,7 @@
   },
   {
     "id": 1789211345602,
-    "title": "Halloween Cover Band Battle Night One -  Nirvana, Firehose, Ween, the Cranberries, Wire, The Fall, Green Day",
+    "title": "Halloween Cover Band Battle Night One -  Nirvana, Firehose, Ween, the Cranberries, Wire, the Fall, Green Day",
     "date": "2026-10-29",
     "time": "19:00",
     "venue": "Tubby's",
@@ -15351,13 +15350,25 @@
     "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
     "price": "$10",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789211456987,
     "title": "Halloween Cover Band Battle Night Two - Twin Temples, Gorillaz, Squeeze, The Kinks, Kate Bush, Gary Stewart, Hole, The Stooges, Pavement",
     "date": "2026-10-30",
+    "time": "19:00",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "price": "$10",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789211605446,
+    "title": "Halloween Cover Band Battle Night Three - Heart, Silver Jews, Eagles, Raincoats, Velvet Underground & Nico, Neil Young, Waylon Jennings, White Stripes, Beastie Boys",
+    "date": "2026-10-31",
     "time": "19:00",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar",
