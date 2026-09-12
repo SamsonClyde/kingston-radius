@@ -11018,9 +11018,9 @@
     "location": "Beacon, NY",
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
     "time": "23:30",
-    "price": "RSVP",
+    "price": "See website",
     "free": false,
-    "_source": "manual",
+    "_source": "scraped",
     "_manual": true
   },
   {
@@ -12864,15 +12864,14 @@
     "id": 1788441741396,
     "title": "Hammered Hulls, New Vision, Spain, Low Fiction",
     "date": "2026-09-12",
-    "time": "20:00",
+    "time": "08:00",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
     "price": "$20",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788472032370,
@@ -15220,6 +15219,45 @@
     "location": "Beacon, NY",
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
     "price": "$30",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789209873435,
+    "title": "Showcase: Zack Hobbes-Skill, Sam Gleason – Salon Stage",
+    "date": "2026-09-13",
+    "time": "18:30",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789209928296,
+    "title": "Lauren Magarelli & Jonno Hull – Salon Stage",
+    "date": "2026-09-18",
+    "time": "18:30",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "RSVP",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789210091953,
+    "title": "Showcase: Zack Hobbes-Skill, Sam Gleason – Salon Stage",
+    "date": "2026-09-13",
+    "time": "18:30",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "RSVP",
     "free": false,
     "_manual": true
   }
