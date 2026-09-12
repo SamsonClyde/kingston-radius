@@ -15416,5 +15416,18 @@
     "price": "$15adv/$20door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789212216132,
+    "title": "Alela Diane, Alexa Rose",
+    "date": "2026-09-19",
+    "time": "19:00",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "price": "$29",
+    "free": false,
+    "_manual": true
   }
 ]
