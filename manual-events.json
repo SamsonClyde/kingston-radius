@@ -11018,9 +11018,9 @@
     "location": "Beacon, NY",
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
     "time": "23:30",
-    "price": "See website",
+    "price": "RSVP",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
