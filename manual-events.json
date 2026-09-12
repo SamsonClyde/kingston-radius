@@ -12864,15 +12864,14 @@
     "id": 1788441741396,
     "title": "Hammered Hulls, New Vision, Spain, Low Fiction",
     "date": "2026-09-12",
-    "time": "20:00",
+    "time": "08:00",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
     "price": "$20",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788472032370,
@@ -15376,6 +15375,19 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
     "price": "$10",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789211728626,
+    "title": "Mvtant, Pink Stiletto,  Djs: Hueman, Midna Mayhem, a. Netboy",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "price": "$22",
     "free": false,
     "_manual": true
   }
