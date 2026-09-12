@@ -15351,5 +15351,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789211456987,
+    "title": "Halloween Cover Band Battle Night Two - Twin Temples, Gorillaz, Squeeze, The Kinks, Kate Bush, Gary Stewart, Hole, The Stooges, Pavement",
+    "date": "2026-10-30",
+    "time": "19:00",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
