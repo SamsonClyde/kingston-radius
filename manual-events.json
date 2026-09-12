@@ -15342,7 +15342,7 @@
   },
   {
     "id": 1789211345602,
-    "title": "Halloween Cover Band Battle Night One -  Nirvana, Firehose, Ween, the Cranberries, Wire, the Fall, Green Day",
+    "title": "Halloween Cover Band Battle Night One -  Nirvana, Firehose, Ween, the Cranberries, Wire, The Fall, Green Day",
     "date": "2026-10-29",
     "time": "19:00",
     "venue": "Tubby's",
@@ -15351,7 +15351,8 @@
     "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
     "price": "$10",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789211456987,
