@@ -15403,5 +15403,18 @@
     "price": "$19",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789212132839,
+    "title": "David Liebe Hart",
+    "date": "2026-09-17",
+    "time": "19:00",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "price": "$15adv/$20door",
+    "free": false,
+    "_manual": true
   }
 ]
