@@ -12864,15 +12864,14 @@
     "id": 1788441741396,
     "title": "Hammered Hulls, New Vision, Spain, Low Fiction",
     "date": "2026-09-12",
-    "time": "20:00",
+    "time": "08:00",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
     "price": "$20",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788472032370,
@@ -15047,13 +15046,12 @@
     "date": "2026-09-19",
     "time": "12:00",
     "venue": "Twin Star Orchards",
-    "venueUrl": "https://www.simpletix.com/e/korea-festival-2026-tickets-280682?_gl=1*1ps0snf*_ga*MTg4NDQyNzk0Ni4xNzg5MTQyNDU5*_ga_LMRK6KEX9D*czE3ODkxNDI0NTgkbzEkZzAkdDE3ODkxNDI0NTgkajYwJGwwJGgw&fbclid=PAb21jcAURBSlwZG9mAmV4dG4DYWVtAjExAHNydGMGYXBwX2lkDzU2NzA2NzM0MzM1MjQyNwABp_A6vYXN4ejq_NhJed0PDQE8QkMn_Zw4bAcmA3B7ZtUnV9mFhh2hYTbwl6KB_aem_Td_QIsxACLbEYqy4O-jktg",
+    "venueUrl": "https://www.instagram.com/twinstarorchards?igsi=MWsybHFzc2VxNmV5",
     "location": "New Paltz, NY",
     "mapsUrl": "https://maps.app.goo.gl/t2rfBvwFYn4M7Vpw5",
-    "price": "$5youth/$30-$77",
+    "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789137035924,
@@ -15122,7 +15120,7 @@
   },
   {
     "id": 1789137419243,
-    "title": "Andhi O'Neill",
+    "title": "Andhi O'neill",
     "date": "2026-09-11",
     "time": "18:30",
     "venue": "NY Boat Co.",
@@ -15131,8 +15129,7 @@
     "mapsUrl": "https://maps.app.goo.gl/ijS98tCRXUH7tYoe8",
     "price": "$5-$35",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789137438458,
@@ -15157,6 +15154,19 @@
     "location": "Peekskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/ijS98tCRXUH7tYoe8",
     "price": "$5-$35",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789208841150,
+    "title": "Gratefully Yours",
+    "date": "2026-09-25",
+    "time": "20:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "$20",
     "free": false,
     "_manual": true
   }
