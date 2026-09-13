@@ -1406,10 +1406,6 @@
   "Keegan Ales||2026-08-30||14:00": "approved",
   "Keegan Ales||2026-09-04||19:00": "approved",
   "Keegan Ales||2026-09-05||19:00": "approved",
-  "MASS MoCA||2026-09-12||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788106369579
-  },
   "MASS MoCA||2026-09-25||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788106374923
@@ -1615,10 +1611,6 @@
     "status": "rejected",
     "hiddenAt": 1788286814183
   },
-  "Avalon Lounge||2026-09-12||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788345108111
-  },
   "Avalon Lounge||2026-09-13||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788345239755
@@ -1634,10 +1626,6 @@
   "Bardavon||2026-12-19||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788345270005
-  },
-  "Colony Woodstock||2026-09-12||": {
-    "status": "rejected",
-    "hiddenAt": 1788345339418
   },
   "Colony Woodstock||2026-09-13||": {
     "status": "rejected",
@@ -1775,182 +1763,5 @@
   "Assembly Kingston||2026-10-30||20:00": {
     "status": "rejected",
     "hiddenAt": 1789071591626
-  },
-  "Assembly||2026-10-23||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789296362218
-  },
-  "Assembly Kingston||2026-10-23||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789296477742
-  },
-  "Assembly Kingston||2026-10-23||20:00": "approved",
-  "Assembly Kingston||2026-11-11||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789296517858
-  },
-  "Bard College Conservatory||2026-09-30||": {
-    "status": "rejected",
-    "hiddenAt": 1789296523162
-  },
-  "Bard College Conservatory||2026-10-24||": {
-    "status": "rejected",
-    "hiddenAt": 1789296528921
-  },
-  "Bard College Conservatory||2026-10-25||": {
-    "status": "rejected",
-    "hiddenAt": 1789296536418
-  },
-  "Colony Woodstock||2026-09-13||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789296554809
-  },
-  "Colony Woodstock||2026-09-13||5:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1789296571392
-  },
-  "Colony Woodstock||2026-09-13||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1789296575224
-  },
-  "Hudson River Cruises||2026-10-23||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789296823141
-  },
-  "Keegan Ales||2026-09-13||11:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1789296841894
-  },
-  "Keegan Ales||2026-09-15||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789296846188
-  },
-  "Keegan Ales||2026-09-18||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789297446641
-  },
-  "Keegan Ales||2026-09-24||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789297449919
-  },
-  "Keegan Ales||2026-09-25||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789297451705
-  },
-  "Keegan Ales||2026-09-26||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789297453937
-  },
-  "Keegan Ales||2026-10-16||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789297456128
-  },
-  "Lydia's Cafe||2026-09-19||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789297811921
-  },
-  "MASS MoCA||2026-09-17||5:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1789297814689
-  },
-  "MASS MoCA||2026-09-19||10:30 AM": {
-    "status": "rejected",
-    "hiddenAt": 1789297816809
-  },
-  "Maverick Concerts||2026-09-13||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789297829728
-  },
-  "Rail Trail Cafe||2026-10-02||9:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1789297832296
-  },
-  "Rail Trail Cafe||2026-10-09||5:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789297901205
-  },
-  "The Falcon||2026-09-17||See website": {
-    "status": "rejected",
-    "hiddenAt": 1789297921956
-  },
-  "The Local Saugerties||2026-09-13||1:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1789297946069
-  },
-  "Tompkins Corners Cultural Center||2027-03-09||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789297965091
-  },
-  "Tompkins Corners Cultural Center||2027-03-10||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789297971783
-  },
-  "Tompkins Corners Cultural Center||2027-03-08||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789297977995
-  },
-  "Towne Crier Café||2026-09-13||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789297985469
-  },
-  "Towne Crier Café||2026-09-17||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789297988184
-  },
-  "Tubby's||2026-10-29||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298002676
-  },
-  "Tubby's||2026-10-30||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298004922
-  },
-  "Tubby's||2026-10-31||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298006925
-  },
-  "Tubby's||2026-11-07||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298012129
-  },
-  "Tubby's||2026-11-13||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298015613
-  },
-  "Unicorn Bar||2026-09-24||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298018547
-  },
-  "Unicorn Bar||2026-10-02||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298021755
-  },
-  "Unicorn Bar||2026-10-02||9:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298024064
-  },
-  "Unicorn Bar||2026-10-07||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298025790
-  },
-  "Unicorn Bar||2026-10-08||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298027858
-  },
-  "Unicorn Bar||2026-10-09||9:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298030793
-  },
-  "Unicorn Bar||2026-10-21||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298033336
-  },
-  "Unicorn Bar||2026-10-22||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298035526
-  },
-  "Unicorn Bar||2026-10-23||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789298037919
   }
 }
