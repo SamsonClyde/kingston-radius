@@ -12864,15 +12864,14 @@
     "id": 1788441741396,
     "title": "Hammered Hulls, New Vision, Spain, Low Fiction",
     "date": "2026-09-12",
-    "time": "20:00",
+    "time": "08:00",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
     "price": "$20",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788472032370,
@@ -15441,6 +15440,19 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
     "price": "$15adv/$20door",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789295621306,
+    "title": "DJ Wippoorwill",
+    "date": "2026-10-10",
+    "time": "15:00",
+    "venue": "West Kill Brewing (West Kill)",
+    "venueUrl": "https://www.westkillbrewing.com",
+    "location": "West Kill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kbES8MnTT7ZEeE9M6",
+    "price": "See website",
     "free": false,
     "_manual": true
   }
