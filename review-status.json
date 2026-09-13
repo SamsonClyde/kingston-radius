@@ -1896,5 +1896,9 @@
   "Towne Crier Café||2026-09-17||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1789297988184
+  },
+  "Tubby's||2026-10-29||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789298002676
   }
 }
