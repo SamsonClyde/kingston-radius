@@ -640,5 +640,11 @@
     "location": "Peekskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/ijS98tCRXUH7tYoe8",
     "drive": 72
+  },
+  "Hudson River Cruises": {
+    "venueUrl": "https://hudsonrivercruises.com/special-event-cruises/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/4L8smxqtu8XCyNuK8",
+    "drive": 5
   }
 }
