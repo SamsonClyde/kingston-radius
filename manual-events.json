@@ -15455,5 +15455,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789295797554,
+    "title": "Dubwa",
+    "date": "2026-10-09",
+    "time": "17:00",
+    "venue": "West Kill Supply (Kingston)",
+    "venueUrl": "https://www.westkillbrewing.com",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/FDYVgTuBWmmjw1tS6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
