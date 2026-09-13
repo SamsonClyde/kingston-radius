@@ -1868,5 +1868,9 @@
   "Rail Trail Cafe||2026-10-09||5:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789297901205
+  },
+  "The Falcon||2026-09-17||See website": {
+    "status": "rejected",
+    "hiddenAt": 1789297921956
   }
 }
