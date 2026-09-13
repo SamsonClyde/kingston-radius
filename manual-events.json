@@ -15605,12 +15605,13 @@
     "title": "Left Bank Cider Harvest Party - Sam Lisbeth",
     "date": "2026-10-10",
     "time": "12:00",
-    "venue": "Left Bank Cider",
+    "venue": "Heather Ridge Farm",
     "venueUrl": "https://www.instagram.com/leftbankciders/",
     "location": "Preston Hollow, NY",
     "mapsUrl": "https://maps.app.goo.gl/4wVFY6oS11K2CNyF9",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
