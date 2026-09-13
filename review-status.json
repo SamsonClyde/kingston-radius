@@ -1860,5 +1860,9 @@
   "Maverick Concerts||2026-09-13||4:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789297829728
+  },
+  "Rail Trail Cafe||2026-10-02||9:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1789297832296
   }
 }
