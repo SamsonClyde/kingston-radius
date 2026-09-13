@@ -15573,5 +15573,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789297365556,
+    "title": "The Haveners",
+    "date": "2026-10-03",
+    "time": "19:00",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
