@@ -15468,5 +15468,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789296274373,
+    "title": "Heroism and Celebration - Beethoven, Egmont Overture​, Bizet, L'Arlésienne Suites Nos. 1 & 2, Beethoven, Symphony No. 7 (classical)",
+    "date": "2026-09-26",
+    "time": "19:30",
+    "venue": "Woodstock Playghouse",
+    "venueUrl": "https://www.woodstockplayhouse.org/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dEza9uo94sms4MMt9",
+    "price": "$10student/$40",
+    "free": false,
+    "_manual": true
   }
 ]
