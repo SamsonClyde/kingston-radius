@@ -15560,5 +15560,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789297328788,
+    "title": "Yard Sale",
+    "date": "2026-09-26",
+    "time": "19:00",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
