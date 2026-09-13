@@ -15481,5 +15481,19 @@
     "price": "$10student/$40",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 381,
+    "date": "2026-10-23",
+    "title": "The Rocky Horror Picture Show: Live & Loud",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/the-rocky-horror-picture-show-live-amp-loud-1",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "$35",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
