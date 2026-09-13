@@ -14275,7 +14275,7 @@
   {
     "id": 1788893705958,
     "title": "Accordion in the Trees: Peter Wetzler",
-    "date": "2026-10-04",
+    "date": "2026-10-09",
     "time": "17:00",
     "venue": "Rail Trail Cafe",
     "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music",
@@ -14283,7 +14283,8 @@
     "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
     "price": "$10",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788894372181,
