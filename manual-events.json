@@ -16900,9 +16900,10 @@
     "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
-    "price": "$15adv/$20",
+    "price": "$15adv/$20door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789411373770,
