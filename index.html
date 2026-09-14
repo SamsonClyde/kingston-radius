@@ -953,6 +953,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="filter-row" id="month-filter-row">
     <span class="filter-label">Month</span>
     <select id="month-select" class="venue-select"></select>
+    <button id="day-nav-btn" class="filter-btn" style="padding:4px 14px;font-family:'DM Serif Display',serif;font-size:1rem;font-weight:400;">Tomorrow</button>
   </div>
   <div class="filter-row">
     <span class="filter-label">Venue</span>
@@ -965,7 +966,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span style="font-size:0.72rem;color:var(--muted);margin-right:4px;">Sort:</span>
       <button class="filter-btn active" id="sort-date-btn" onclick="setSortMode('date')" style="padding:4px 10px;font-size:0.75rem;">Date</button>
       <button class="filter-btn" id="sort-venue-btn" onclick="setSortMode('venue')" style="padding:4px 10px;font-size:0.75rem;">Venue</button>
-      <input type="text" id="keyword-search" placeholder="Search…" style="border:1.5px solid var(--border);background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.8rem;padding:4px 12px;border-radius:20px;margin-left:6px;width:150px;transition:border-color 0.15s;">
+      <input type="search" id="keyword-search" name="kr-search" placeholder="Search…" autocomplete="off" data-lpignore="true" data-1p-ignore style="border:1.5px solid var(--border);background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.8rem;padding:4px 12px;border-radius:20px;margin-left:6px;width:150px;transition:border-color 0.15s;">
     </div>
     <button id="venue-delete-mode-btn" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;" onclick="toggleVenueDeleteMode()">Manage venues</button>
   </div>
@@ -1565,6 +1566,24 @@ function updateBadge() {
 
 // ── MONTH BUTTONS ─────────────────────────────────────────────────────────────
 let _activeMonth = null;
+let _activeDayOffset = null; // null = inactive; 1 = tomorrow, 2 = day after, etc.
+
+function updateDayNavBtn() {
+  const btn = document.getElementById('day-nav-btn');
+  if (!btn) return;
+  btn.textContent = _activeDayOffset === null ? 'Tomorrow' : 'Next Day';
+  btn.classList.toggle('active', _activeDayOffset !== null);
+}
+
+document.getElementById('day-nav-btn')?.addEventListener('click', () => {
+  _activeDayOffset = (_activeDayOffset || 0) + 1;
+  _activeMonth = null; // a specific day and a specific month are mutually exclusive
+  _currentPage = 1;
+  updateDayNavBtn();
+  buildMonthButtons();
+  renderEvents();
+});
+
 function buildMonthButtons() {
   const select = document.getElementById('month-select');
   if (!select) return;
@@ -1584,7 +1603,9 @@ function buildMonthButtons() {
   select.value = _activeMonth || '';
   select.onchange = () => {
     _activeMonth = select.value || null;
+    _activeDayOffset = null; // switching months exits day-by-day mode
     _currentPage = 1;
+    updateDayNavBtn();
     renderEvents();
   };
 }
@@ -1644,7 +1665,17 @@ function renderEvents() {
       });
     }
   }
-  if (_activeMonth) events = events.filter(e => e.date?.startsWith(_activeMonth));
+  if (_activeDayOffset !== null) {
+    const target = new Date(); target.setHours(0,0,0,0);
+    target.setDate(target.getDate() + _activeDayOffset);
+    const y = target.getFullYear();
+    const m = String(target.getMonth()+1).padStart(2,'0');
+    const d = String(target.getDate()).padStart(2,'0');
+    const targetStr = `${y}-${m}-${d}`;
+    events = events.filter(e => e.date === targetStr);
+  } else if (_activeMonth) {
+    events = events.filter(e => e.date?.startsWith(_activeMonth));
+  }
   if (_activeVenue) events = events.filter(e => e.venue === _activeVenue);
   if (_searchKeyword) {
     events = events.filter(e =>
@@ -1814,11 +1845,13 @@ function jumpToSharedEvent() {
   // Reset to default view so the shared event is guaranteed visible
   _activeFilter = 'all';
   _activeMonth = null;
+  _activeDayOffset = null;
   _activeVenue = null;
   _searchKeyword = '';
   _sortMode = 'date';
   const searchBox = document.getElementById('keyword-search');
   if (searchBox) searchBox.value = '';
+  updateDayNavBtn();
   document.querySelectorAll('[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
   document.getElementById('sort-date-btn')?.classList.add('active');
   document.getElementById('sort-venue-btn')?.classList.remove('active');
