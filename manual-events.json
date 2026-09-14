@@ -7219,9 +7219,10 @@
     "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.app.goo.gl/N47HrwNKXyeNq9dZ7",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787454997900,
