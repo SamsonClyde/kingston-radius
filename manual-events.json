@@ -5120,9 +5120,10 @@
     "venueUrl": "https://www.pocketbookhudson.com/",
     "location": "Hudson, NY",
     "mapsUrl": "https://maps.app.goo.gl/SwBvLVomLadCwgSC9",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787105063455,
