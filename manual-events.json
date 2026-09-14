@@ -14976,9 +14976,10 @@
     "venueUrl": "https://www.instagram.com/southlandsfoundation/",
     "location": "Rhinebeck, NY",
     "mapsUrl": "https://maps.app.goo.gl/z9uKkQYXpPrtEoGL9",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789073175771,
