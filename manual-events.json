@@ -10960,9 +10960,10 @@
     "venueUrl": "https://www.keeganales.com/events/",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 32,
