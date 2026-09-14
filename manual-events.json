@@ -15776,5 +15776,18 @@
     "price": "$17adv/$20door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789390796123,
+    "title": "Your Favorite Person, Great Lakes, Dance Break Interlude",
+    "date": "2026-10-11",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.viewcy.com/event/karyn_kuhl_and_the_ga",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$12",
+    "free": false,
+    "_manual": true
   }
 ]
