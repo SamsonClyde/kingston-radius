@@ -6504,7 +6504,7 @@
   },
   {
     "id": 1787349028365,
-    "title": "Teri Roiger w/ Jazz Passengers",
+    "title": "Teri Roiger with Jazz Passengers",
     "date": "2026-09-26",
     "time": "19:00",
     "venue": "Lydia's Cafe",
@@ -6513,7 +6513,8 @@
     "mapsUrl": "https://maps.app.goo.gl/j6zX42zVbeShdQ6H8",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787349050147,
