@@ -3066,17 +3066,16 @@
   },
   {
     "id": 1787068998877,
-    "title": "Garfunkel to Graceland - A Tribute to Paul Simon",
+    "title": "Forever Tina (Tina Turner Cover Band)",
     "date": "2026-09-19",
     "time": "20:00",
     "venue": "Daryl's House Club",
     "venueUrl": "https://darylshouseclub.com/shows/",
     "location": "Pawling, NY",
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "$29-$40",
+    "price": "$40-$50",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787069038262,
@@ -16547,6 +16546,19 @@
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$40",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789404170320,
+    "title": "Glenn Roth",
+    "date": "2026-10-03",
+    "time": "12:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "rsvp",
     "free": false,
     "_manual": true
   }
