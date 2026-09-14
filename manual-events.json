@@ -16346,12 +16346,13 @@
     "title": "Soundshare & Potluck",
     "date": "2026-09-29",
     "time": "18:00",
-    "venue": "Create x Wave Farm x Soundshare",
+    "venue": "Wave Farm Radio Studio",
     "venueUrl": "https://www.createcouncil.org/all-events/soundshare-9-29/",
     "location": "Catskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/o76Dv9DF2UJ6NGdh8",
     "price": "rsvp required",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
