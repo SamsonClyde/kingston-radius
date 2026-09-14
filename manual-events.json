@@ -16346,14 +16346,13 @@
     "title": "Soundshare & Potluck",
     "date": "2026-09-29",
     "time": "18:00",
-    "venue": "Wave Farm Radio Studio",
+    "venue": "Create x Wave Farm x Soundshare",
     "venueUrl": "https://www.createcouncil.org/all-events/soundshare-9-29/",
     "location": "Catskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/o76Dv9DF2UJ6NGdh8",
     "price": "rsvp required",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789399573835,
@@ -16949,6 +16948,19 @@
     "venueUrl": "https://www.instagram.com/firstfridaypk/",
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.app.goo.gl/fneU8VAa4rCPuua57",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789412513006,
+    "title": "Octoberfest",
+    "date": "2026-09-26",
+    "time": "12:00",
+    "venue": "Croton-On-Hudson",
+    "venueUrl": "https://www.instagram.com/p/DdROzemR45x/",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fF84NK32ZK2wiWGz5",
     "price": "See website",
     "free": false,
     "_manual": true
