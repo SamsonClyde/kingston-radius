@@ -11010,9 +11010,9 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
     "time": "19:30",
-    "price": "RSVP/$20-$35",
+    "price": "rsvp $20-$35",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
