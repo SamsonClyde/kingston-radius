@@ -694,5 +694,11 @@
     "location": "Catskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/QGMYx8yWnm42T1yr6",
     "drive": 33
+  },
+  "Grey Fox": {
+    "venueUrl": "https://greyfoxbluegrass.com/",
+    "location": "Oak Hill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/DJUK5uR7LdcZKJVZ6",
+    "drive": 50
   }
 }
