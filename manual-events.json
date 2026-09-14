@@ -1796,9 +1796,10 @@
     "venueUrl": "https://www.bardavon.org/",
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
-    "price": "$62/$73/$96",
+    "price": "$62-$96",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787058896926,
