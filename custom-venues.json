@@ -61,7 +61,7 @@
   },
   "Green Growler": {
     "venueUrl": "https://www.thegreengrowler.com/events",
-    "location": "Croton-On-Hudson, NY",
+    "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/GWWFznRhKUNYef138",
     "drive": 84
   },
@@ -707,16 +707,10 @@
     "mapsUrl": "https://maps.app.goo.gl/fneU8VAa4rCPuua57",
     "drive": 32
   },
-  "Croton-On-Hudson": {
-    "venueUrl": "https://www.instagram.com/p/DdROzemR45x/",
-    "location": "Croton-On-Hudson, NY",
-    "mapsUrl": "https://maps.app.goo.gl/fF84NK32ZK2wiWGz5",
-    "drive": 84
-  },
-  "Green Kill": {
-    "venueUrl": "https://greenkill.substack.com/p/upcoming-events-calendar",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=229+Green+Kill+Ave+Kingston+NY",
-    "drive": 0
+  "The Chapel Restoration": {
+    "venueUrl": "https://www.eventbrite.com/e/cameron-brown-and-dannies-calypso-tickets-1986838740156?aff=ebdiglgoogleliveevents&source=ev#organizer-card",
+    "location": "Cold Spring, NY",
+    "mapsUrl": "https://maps.app.goo.gl/boPY8ZmdA2TMLbzu9",
+    "drive": 59
   }
 }
