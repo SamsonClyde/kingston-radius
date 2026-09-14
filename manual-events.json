@@ -15627,5 +15627,18 @@
     "price": "Donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789388646514,
+    "title": "Joe Adee & The Lugnuts",
+    "date": "2026-09-25",
+    "time": "19:00",
+    "venue": "The Tin Barn",
+    "venueUrl": "https://www.instagram.com/thetinbarn/",
+    "location": "Clermont, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NVBq7Y5xBLDHp39U9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
