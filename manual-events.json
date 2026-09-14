@@ -6358,9 +6358,10 @@
     "venueUrl": "https://www.thelocalsaugerties.com/calendar",
     "location": "Saugerties, NY",
     "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787348205814,
