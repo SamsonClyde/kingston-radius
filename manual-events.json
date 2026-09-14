@@ -14987,9 +14987,10 @@
     "venueUrl": "https://www.silkfcty.com/event-list",
     "location": "Newburgh, NY",
     "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
-    "price": "RSVP",
+    "price": "rsvp",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789135452740,
