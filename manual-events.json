@@ -16418,5 +16418,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789399956091,
+    "title": "Bluegrass Festival Day Five",
+    "date": "2027-07-18",
+    "time": "12:00",
+    "venue": "Grey Fox",
+    "venueUrl": "https://greyfoxbluegrass.com/",
+    "location": "Oak Hill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/DJUK5uR7LdcZKJVZ6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
