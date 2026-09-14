@@ -17017,5 +17017,18 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789415087848,
+    "title": "Inbal Segev, Yalin Chi (classical)",
+    "date": "2026-10-18",
+    "time": "16:00",
+    "venue": "The Chapel Restoration",
+    "venueUrl": "https://chapelrestoration.org/calendar/",
+    "location": "Cold Spring, NY",
+    "mapsUrl": "https://maps.app.goo.gl/boPY8ZmdA2TMLbzu9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
