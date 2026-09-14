@@ -658,5 +658,11 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/Sq89aH7sh8BRAa8GA",
     "drive": 5
+  },
+  "The Tin Barn": {
+    "venueUrl": "https://www.instagram.com/thetinbarn/",
+    "location": "Germantown, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NVBq7Y5xBLDHp39U9",
+    "drive": 29
   }
 }
