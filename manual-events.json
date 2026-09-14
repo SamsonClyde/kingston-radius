@@ -1755,10 +1755,9 @@
     "venueUrl": "https://www.bardavon.org/",
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
-    "price": "$91-$112",
+    "price": "$91/102/$112",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787058239505,
@@ -1769,10 +1768,9 @@
     "venueUrl": "https://www.bardavon.org/",
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
-    "price": "$42-$100",
+    "price": "$42/$61/$64/$75/$77/$84/$100",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787058498558,
@@ -1783,10 +1781,9 @@
     "venueUrl": "https://www.bardavon.org/",
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
-    "price": "$119-$276",
+    "price": "$119/$172/$224/$276",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787058599212,
@@ -1797,10 +1794,9 @@
     "venueUrl": "https://www.bardavon.org/",
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
-    "price": "$62-$96",
+    "price": "$62/$73/$96",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787058896926,
@@ -16220,6 +16216,32 @@
     "location": "Annandale-on-Hudson, NY",
     "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
     "price": "$15",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789395163887,
+    "title": "Chris Fleming",
+    "date": "2026-10-24",
+    "time": "20:00",
+    "venue": "UPAC",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/jC2VFr3GrpBVxt7h7",
+    "price": "$51-$187",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789396261951,
+    "title": "Puppy Pals Live – The Action-Packed Comedic Stunt Dog Show",
+    "date": "2027-01-24",
+    "time": "17:30",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
+    "price": "$39-$50",
     "free": false,
     "_manual": true
   }
