@@ -3066,16 +3066,17 @@
   },
   {
     "id": 1787068998877,
-    "title": "Forever Tina (Tina Turner Cover Band)",
+    "title": "Garfunkel to Graceland - A Tribute to Paul Simon",
     "date": "2026-09-19",
     "time": "20:00",
     "venue": "Daryl's House Club",
     "venueUrl": "https://darylshouseclub.com/shows/",
     "location": "Pawling, NY",
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "$40-$50",
+    "price": "$29-$40",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787069038262,
@@ -3326,16 +3327,17 @@
   },
   {
     "id": 1787069985372,
-    "title": "The Kenn Morr Duo",
+    "title": "The Bargain",
     "date": "2026-10-11",
     "time": "12:00",
     "venue": "Daryl's House Club",
     "venueUrl": "https://darylshouseclub.com/shows/",
     "location": "Pawling, NY",
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "RSVP Brunch",
+    "price": "rsvp brunch",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787070066479,
@@ -12578,7 +12580,7 @@
   },
   {
     "id": 1788288317252,
-    "title": "NY to Boston & Midnight Toker: Tribute to Boston AND Steve Miller Band",
+    "title": "NY to Boston & Midnight Toker: Tribute to Boston and Steve Miller Band",
     "date": "2026-10-24",
     "time": "20:00",
     "venue": "Daryl's House Club",
@@ -12587,7 +12589,8 @@
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
     "price": "$29-$45",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788288424580,
@@ -16546,71 +16549,6 @@
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$40",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404170320,
-    "title": "Glenn Roth",
-    "date": "2026-10-03",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404262121,
-    "title": "Don Jovi",
-    "date": "2026-10-07",
-    "time": "19:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "$29/$45",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404375845,
-    "title": "Kristina Koller",
-    "date": "2026-10-17",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404434347,
-    "title": "Brittany Ann Tranbaugh",
-    "date": "2026-09-18",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404484010,
-    "title": "The Kenn Morr Duo",
-    "date": "2026-10-24",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
     "free": false,
     "_manual": true
   }
