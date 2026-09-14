@@ -16978,5 +16978,18 @@
     "price": "$29",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789414795381,
+    "title": "The Wynotte Sisters",
+    "date": "2026-12-20",
+    "time": "17:00",
+    "venue": "The Chapel Restoration",
+    "venueUrl": "https://chapelrestoration.org/calendar/",
+    "location": "Cold Spring, NY",
+    "mapsUrl": "https://maps.app.goo.gl/boPY8ZmdA2TMLbzu9",
+    "price": "$29",
+    "free": false,
+    "_manual": true
   }
 ]
