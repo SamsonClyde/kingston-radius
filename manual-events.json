@@ -848,7 +848,7 @@
   },
   {
     "id": 1786455571882,
-    "title": "Babehoven",
+    "title": "Babehoven, Jane Lai",
     "date": "2026-10-08",
     "time": "20:00",
     "venue": "Avalon Lounge",
@@ -857,7 +857,8 @@
     "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
     "price": "$17",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1786455625352,
@@ -15723,45 +15724,6 @@
     "price": "See website",
     "free": false,
     "_source": "scraped",
-    "_manual": true
-  },
-  {
-    "id": 1789390383870,
-    "title": "Brandon Wolcott (Smirk)",
-    "date": "2026-09-18",
-    "time": "21:00",
-    "venue": "Avalon Lounge",
-    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
-    "location": "Catskill, NY",
-    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
-    "price": "$6",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789390523127,
-    "title": "Party Musick - Scotia & DJ Guy",
-    "date": "2026-09-25",
-    "time": "21:00",
-    "venue": "Avalon Lounge",
-    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
-    "location": "Catskill, NY",
-    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
-    "price": "$10",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789390602028,
-    "title": "Upstate Composers Orchestra",
-    "date": "2026-10-04",
-    "time": "19:30",
-    "venue": "Avalon Lounge",
-    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
-    "location": "Catskill, NY",
-    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
-    "price": "$20",
-    "free": false,
     "_manual": true
   }
 ]
