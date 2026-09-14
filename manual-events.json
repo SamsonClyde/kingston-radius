@@ -16395,7 +16395,7 @@
   },
   {
     "id": 1789399899110,
-    "title": "Bluegrass Festival Day Three",
+    "title": "Bluegrass Festival Day Threee",
     "date": "2027-07-16",
     "time": "12:00",
     "venue": "Grey Fox",
@@ -16404,8 +16404,7 @@
     "mapsUrl": "https://maps.app.goo.gl/DJUK5uR7LdcZKJVZ6",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789399934122,
@@ -16430,6 +16429,19 @@
     "location": "Oak Hill, NY",
     "mapsUrl": "https://maps.app.goo.gl/DJUK5uR7LdcZKJVZ6",
     "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789402692726,
+    "title": "The Coryell/Butterfield Blues Project",
+    "date": "2026-09-26",
+    "time": "18:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "donation",
     "free": false,
     "_manual": true
   }
