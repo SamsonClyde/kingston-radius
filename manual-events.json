@@ -16314,5 +16314,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789398492340,
+    "title": "Country Mountain Music Jam - Andy Cooney Band, Hillbilly Parade, Sonny Rock Band, Fat Nicky & The Snacks, The New York Cowboys",
+    "date": "2026-09-26",
+    "time": "13:00",
+    "venue": "Meadowbrooks Farm",
+    "venueUrl": "https://www.facebook.com/meadowbrook.farms.5",
+    "location": "Leeds, NY",
+    "mapsUrl": "https://maps.app.goo.gl/i79Ro3G5fnWsGyxx6",
+    "price": "$20park",
+    "free": false,
+    "_manual": true
   }
 ]
