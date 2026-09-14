@@ -17069,5 +17069,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789415293551,
+    "title": "God's Puppets",
+    "date": "2026-12-12",
+    "time": "19:00",
+    "venue": "The Chapel Restoration",
+    "venueUrl": "https://chapelrestoration.org/calendar/",
+    "location": "Cold Spring, NY",
+    "mapsUrl": "https://maps.app.goo.gl/boPY8ZmdA2TMLbzu9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
