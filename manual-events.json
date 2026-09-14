@@ -15815,5 +15815,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789391023201,
+    "title": "Jessica Pavone, Anna Johnson",
+    "date": "2026-10-20",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.viewcy.com/event/karyn_kuhl_and_the_ga",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$15adv/$20door",
+    "free": false,
+    "_manual": true
   }
 ]
