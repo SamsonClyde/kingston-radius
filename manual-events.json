@@ -7183,9 +7183,10 @@
     "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
     "location": "New Paltz, NY",
     "mapsUrl": "https://maps.app.goo.gl/wttxmc4veyLzkc1s6",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787454212746,
