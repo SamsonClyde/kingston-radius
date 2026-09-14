@@ -16821,5 +16821,18 @@
     "price": "$29-$45",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789405511340,
+    "title": "Poppa Chubby",
+    "date": "2027-01-22",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$34-$55",
+    "free": false,
+    "_manual": true
   }
 ]
