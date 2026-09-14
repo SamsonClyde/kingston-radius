@@ -17043,5 +17043,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789415216036,
+    "title": "Sheryl Staples, Yalin Chi (classical)",
+    "date": "2026-11-15",
+    "time": "16:00",
+    "venue": "The Chapel Restoration",
+    "venueUrl": "https://chapelrestoration.org/calendar/",
+    "location": "Cold Spring, NY",
+    "mapsUrl": "https://maps.app.goo.gl/boPY8ZmdA2TMLbzu9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
