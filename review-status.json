@@ -1950,5 +1950,9 @@
   "Tubby's||2026-10-31||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1789389719856
+  },
+  "Tubby's||2026-11-07||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789389736467
   }
 }
