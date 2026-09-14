@@ -16873,5 +16873,18 @@
     "price": "$34-$45",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789405752785,
+    "title": "Ladies Of The 80's",
+    "date": "2027-02-12",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$40-$55",
+    "free": false,
+    "_manual": true
   }
 ]
