@@ -16288,5 +16288,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789397082251,
+    "title": "Harvest Festival: Great Pumpkin Harvest - Bourbon Sprawl, Wood Flower",
+    "date": "2026-10-04",
+    "time": "12:00",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
