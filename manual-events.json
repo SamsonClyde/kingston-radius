@@ -5914,9 +5914,9 @@
     "location": "Ellenville, NY",
     "mapsUrl": "https://maps.app.goo.gl/1N7G54TEiuvAWsch9",
     "time": "19:00",
-    "price": "Members only",
+    "price": "members only",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
