@@ -17029,5 +17029,18 @@
     "price": "rsvp required",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789413702966,
+    "title": "Kaia Dedek & Joe Colwell",
+    "date": "2026-10-17",
+    "time": "16:00",
+    "venue": "HRMM Solaris Cruise",
+    "venueUrl": "https://www.hrmm.org/solaris-cruises.html",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/BeMvKWTL7bdDv5uB6",
+    "price": "$38",
+    "free": false,
+    "_manual": true
   }
 ]
