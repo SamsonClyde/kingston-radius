@@ -3066,16 +3066,17 @@
   },
   {
     "id": 1787068998877,
-    "title": "Forever Tina (Tina Turner Cover Band)",
+    "title": "Garfunkel to Graceland - A Tribute to Paul Simon",
     "date": "2026-09-19",
     "time": "20:00",
     "venue": "Daryl's House Club",
     "venueUrl": "https://darylshouseclub.com/shows/",
     "location": "Pawling, NY",
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "$40-$50",
+    "price": "$29-$40",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787069038262,
@@ -3326,16 +3327,17 @@
   },
   {
     "id": 1787069985372,
-    "title": "The Kenn Morr Duo",
+    "title": "The Bargain",
     "date": "2026-10-11",
     "time": "12:00",
     "venue": "Daryl's House Club",
     "venueUrl": "https://darylshouseclub.com/shows/",
     "location": "Pawling, NY",
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "RSVP Brunch",
+    "price": "rsvp brunch",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787070066479,
@@ -3899,7 +3901,7 @@
   {
     "id": 1787072118407,
     "title": "Romeo Delight (Van Halen Cover Band)",
-    "date": "2026-11-30",
+    "date": "2026-12-30",
     "time": "19:00",
     "venue": "Daryl's House Club",
     "venueUrl": "https://darylshouseclub.com/shows/",
@@ -3907,7 +3909,8 @@
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
     "price": "$34-$45",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787072168088,
@@ -12578,7 +12581,7 @@
   },
   {
     "id": 1788288317252,
-    "title": "NY to Boston & Midnight Toker: Tribute to Boston AND Steve Miller Band",
+    "title": "NY to Boston & Midnight Toker: Tribute to Boston and Steve Miller Band",
     "date": "2026-10-24",
     "time": "20:00",
     "venue": "Daryl's House Club",
@@ -12587,7 +12590,8 @@
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
     "price": "$29-$45",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788288424580,
@@ -16546,175 +16550,6 @@
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$40",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404170320,
-    "title": "Glenn Roth",
-    "date": "2026-10-03",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404262121,
-    "title": "Don Jovi",
-    "date": "2026-10-07",
-    "time": "19:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "$29/$45",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404375845,
-    "title": "Kristina Koller",
-    "date": "2026-10-17",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404434347,
-    "title": "Brittany Ann Tranbaugh",
-    "date": "2026-09-18",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404484010,
-    "title": "The Kenn Morr Duo",
-    "date": "2026-10-24",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404544407,
-    "title": "Paul Byrne & The Bleeders",
-    "date": "2026-10-31",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404595319,
-    "title": "Grateful Duo",
-    "date": "2026-11-01",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404644626,
-    "title": "Brother Other",
-    "date": "2026-11-07",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404678857,
-    "title": "David Powers",
-    "date": "2026-11-18",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404733563,
-    "title": "Jim Pospisil",
-    "date": "2026-11-15",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404787772,
-    "title": "Gareth Pearson, Bunny Barnes",
-    "date": "2026-11-21",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404845378,
-    "title": "Way Behind The Sun",
-    "date": "2026-11-28",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789404997915,
-    "title": "Ryan Zimmerman",
-    "date": "2026-11-29",
-    "time": "12:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp",
     "free": false,
     "_manual": true
   }
