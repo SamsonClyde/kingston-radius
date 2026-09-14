@@ -11093,9 +11093,10 @@
     "venueUrl": "https://www.hopsonthehudson.com/copy-of-modern-makers-market-2024",
     "location": "Verplanck, NY",
     "mapsUrl": "https://maps.app.goo.gl/YveYZPHrVpQKabSy9",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788138126291,
