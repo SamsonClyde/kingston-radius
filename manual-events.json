@@ -15056,9 +15056,10 @@
     "venueUrl": "https://www.instagram.com/tofu_library/",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/KrcaVh7m4HG4irQw6",
-    "price": "RSVP",
+    "price": "rsvp",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789136384597,
