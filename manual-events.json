@@ -13303,9 +13303,10 @@
     "venueUrl": "https://www.instagram.com/hudsonarealibraryny/",
     "location": "Hudson, NY",
     "mapsUrl": "https://maps.app.goo.gl/wQ8L9mzNzAyZMESj6",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 453,
