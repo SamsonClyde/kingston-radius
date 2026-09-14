@@ -6609,7 +6609,7 @@
   },
   {
     "id": 1787349274405,
-    "title": "Elsa Nillson",
+    "title": "Elsa Nillson, Dani Gurgel",
     "date": "2026-11-21",
     "time": "19:00",
     "venue": "Lydia's Cafe",
@@ -6618,7 +6618,8 @@
     "mapsUrl": "https://maps.app.goo.gl/j6zX42zVbeShdQ6H8",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787349330974,
