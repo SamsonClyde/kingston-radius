@@ -16678,5 +16678,18 @@
     "price": "rsvp",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789404787772,
+    "title": "Gareth Pearson, Bunny Barnes",
+    "date": "2026-11-21",
+    "time": "12:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "rsvp",
+    "free": false,
+    "_manual": true
   }
 ]
