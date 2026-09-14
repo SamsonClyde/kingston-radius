@@ -688,5 +688,11 @@
     "location": "Catskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/o76Dv9DF2UJ6NGdh8",
     "drive": 30
+  },
+  "Historic Catskill Point": {
+    "venueUrl": "https://www.concertinthecatskills.com/",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/QGMYx8yWnm42T1yr6",
+    "drive": 33
   }
 }
