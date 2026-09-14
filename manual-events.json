@@ -16834,5 +16834,18 @@
     "price": "$34-$55",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789405577359,
+    "title": "Night of Nicks: The Music of Stevie Nicks",
+    "date": "2027-01-23",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "price": "$40-$55",
+    "free": false,
+    "_manual": true
   }
 ]
