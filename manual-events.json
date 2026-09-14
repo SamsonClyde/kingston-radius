@@ -16965,5 +16965,18 @@
     "price": "$29",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789414766183,
+    "title": "An Evening of Songs and Storytelling - Andrew Revkin",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "venue": "The Chapel Restoration",
+    "venueUrl": "https://chapelrestoration.org/calendar/",
+    "location": "Cold Spring, NY",
+    "mapsUrl": "https://maps.app.goo.gl/boPY8ZmdA2TMLbzu9",
+    "price": "$29",
+    "free": false,
+    "_manual": true
   }
 ]
