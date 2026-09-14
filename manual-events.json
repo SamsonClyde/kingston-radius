@@ -16346,13 +16346,25 @@
     "title": "Soundshare & Potluck",
     "date": "2026-09-29",
     "time": "18:00",
-    "venue": "Wave Farm Radio Studio",
+    "venue": "Create x Wave Farm x Soundshare",
     "venueUrl": "https://www.createcouncil.org/all-events/soundshare-9-29/",
     "location": "Catskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/o76Dv9DF2UJ6NGdh8",
     "price": "rsvp required",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
+  },
+  {
+    "id": 1789399573835,
+    "title": "Parmalee, Kelsey Hart",
+    "date": "2027-05-30",
+    "time": "19:30",
+    "venue": "Historic Catskill Point",
+    "venueUrl": "https://www.concertinthecatskills.com/",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/QGMYx8yWnm42T1yr6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
