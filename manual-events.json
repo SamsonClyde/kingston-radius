@@ -16886,5 +16886,18 @@
     "price": "$40-$55",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789405882307,
+    "title": "DCxPC Live Presents: Brotality \"Jaw of Earth\" Tour",
+    "date": "2026-12-19",
+    "time": "17:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "price": "$15adv/$20",
+    "free": false,
+    "_manual": true
   }
 ]
