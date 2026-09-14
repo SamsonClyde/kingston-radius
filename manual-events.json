@@ -15971,5 +15971,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789391997077,
+    "title": "James Katz Duo",
+    "date": "2026-09-19",
+    "time": "15:00",
+    "venue": "Bad Seed",
+    "venueUrl": "https://www.badseedhardcider.com/events/",
+    "location": "Highland, NY",
+    "mapsUrl": "https://maps.google.com/?q=87+Burroughs+Dr+Highland+NY",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
