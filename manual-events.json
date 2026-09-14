@@ -3066,16 +3066,17 @@
   },
   {
     "id": 1787068998877,
-    "title": "Forever Tina (Tina Turner Cover Band)",
+    "title": "Garfunkel to Graceland - A Tribute to Paul Simon",
     "date": "2026-09-19",
     "time": "20:00",
     "venue": "Daryl's House Club",
     "venueUrl": "https://darylshouseclub.com/shows/",
     "location": "Pawling, NY",
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "$40-$50",
+    "price": "$29-$40",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787069038262,
