@@ -14101,9 +14101,10 @@
     "venueUrl": "https://www.bethelwoodscenter.org/events",
     "location": "Bethel, NY",
     "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
-    "price": "Sold Out",
+    "price": "sold out",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788717135389,
