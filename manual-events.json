@@ -1952,9 +1952,10 @@
     "venueUrl": "https://basilicahudson.org/events/",
     "location": "Hudson, NY",
     "mapsUrl": "https://maps.app.goo.gl/LF5dv1FSGKd1SxNFA",
-    "price": "Sold Out",
+    "price": "sold out",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787060448215,
