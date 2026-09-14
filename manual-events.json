@@ -15958,5 +15958,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789391882545,
+    "title": "DJ Ace Royal",
+    "date": "2026-09-26",
+    "time": "22:00",
+    "venue": "Bacchus",
+    "venueUrl": "https://bacchusnewpaltz.com/music-events",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/wttxmc4veyLzkc1s6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
