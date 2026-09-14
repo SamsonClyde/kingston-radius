@@ -15945,5 +15945,18 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789391865170,
+    "title": "Pour la Terre",
+    "date": "2026-09-25",
+    "time": "22:00",
+    "venue": "Bacchus",
+    "venueUrl": "https://bacchusnewpaltz.com/music-events",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/wttxmc4veyLzkc1s6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
