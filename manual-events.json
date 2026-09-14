@@ -16991,5 +16991,18 @@
     "price": "$29",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789414875801,
+    "title": "Julia Den Boer (classical)",
+    "date": "2026-09-27",
+    "time": "16:00",
+    "venue": "The Chapel Restoration",
+    "venueUrl": "https://chapelrestoration.org/calendar/",
+    "location": "Cold Spring, NY",
+    "mapsUrl": "https://maps.app.goo.gl/boPY8ZmdA2TMLbzu9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
