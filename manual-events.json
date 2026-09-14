@@ -16004,12 +16004,13 @@
     "date": "2026-10-24",
     "time": "19:00",
     "venue": "Bard Fisher Center",
-    "venueUrl": "https://fishercenter.bard.edu/events/the-american-spirit/",
+    "venueUrl": "https://fishercenter.bard.edu/series/bard-conservatory-orchestra-conducted-by-leon-botstein/",
     "location": "Annandale-on-Hudson, NY",
     "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
     "price": "$10",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789393377110,
