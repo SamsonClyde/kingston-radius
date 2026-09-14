@@ -17095,5 +17095,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789415729195,
+    "title": "The Bad Plus (Membership Required)",
+    "date": "2026-11-13",
+    "time": "19:00",
+    "venue": "Love, Velma",
+    "venueUrl": "https://www.lovevelma.com/calendar",
+    "location": "Ellenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1N7G54TEiuvAWsch9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
