@@ -664,5 +664,11 @@
     "location": "Clermont, NY",
     "mapsUrl": "https://maps.app.goo.gl/NVBq7Y5xBLDHp39U9",
     "drive": 30
+  },
+  "Mountain King Brewing": {
+    "venueUrl": "https://www.greatnortherncatskills.com/events/oktoberfest-at-mountain-king-brewing",
+    "location": "Windham, NY",
+    "mapsUrl": "https://maps.app.goo.gl/SAFgW2PXH3bAPit58",
+    "drive": 52
   }
 }
