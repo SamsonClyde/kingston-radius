@@ -7024,9 +7024,10 @@
     "venueUrl": "https://maverickconcerts.org/",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.app.goo.gl/R5aNs4FxbD2kdjpP7",
-    "price": "Free/RSVP",
+    "price": "free/rsvp",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787441795659,
