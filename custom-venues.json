@@ -700,5 +700,11 @@
     "location": "Oak Hill, NY",
     "mapsUrl": "https://maps.app.goo.gl/DJUK5uR7LdcZKJVZ6",
     "drive": 50
+  },
+  "Mural Square Poughkeepsie": {
+    "venueUrl": "https://www.instagram.com/firstfridaypk/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fneU8VAa4rCPuua57",
+    "drive": 32
   }
 }
