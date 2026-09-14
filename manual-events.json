@@ -16522,5 +16522,18 @@
     "price": "$29",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789403431304,
+    "title": "Lez Zeppelin",
+    "date": "2026-12-12",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
