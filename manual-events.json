@@ -14995,9 +14995,10 @@
     "venueUrl": "https://www.instagram.com/mustangsbouldering/",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/BFAXmCUTonKerRib7",
-    "price": "$5/FreeForMembers",
+    "price": "$5/free for members",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789134822900,
