@@ -16327,5 +16327,18 @@
     "price": "$20park",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789398890923,
+    "title": "Beer Bourbon & Bacon Festival",
+    "date": "2026-10-10",
+    "time": "11:00",
+    "venue": "Meadowbrooks Farm",
+    "venueUrl": "https://www.facebook.com/meadowbrook.farms.5",
+    "location": "Leeds, NY",
+    "mapsUrl": "https://maps.app.goo.gl/i79Ro3G5fnWsGyxx6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
