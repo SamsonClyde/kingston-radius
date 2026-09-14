@@ -16088,5 +16088,18 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789393918598,
+    "title": "Bard College Community Orchestra",
+    "date": "2026-11-23",
+    "time": "19:30",
+    "venue": "Bard Fisher Center",
+    "venueUrl": "https://fishercenter.bard.edu/events/bcco-2026-11-23/",
+    "location": "Annandale-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
+    "price": "free/rsvp",
+    "free": false,
+    "_manual": true
   }
 ]
