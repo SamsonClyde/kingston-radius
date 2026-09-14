@@ -9403,9 +9403,10 @@
     "venueUrl": "https://thegrandcroton.com/happening",
     "location": "Croton-On-Hudson, NY",
     "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787574036450,
