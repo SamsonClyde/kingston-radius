@@ -6753,9 +6753,10 @@
     "venueUrl": "https://marlborolibrary.org/event/hudson-valley-chamber-musicians-concert-tues-nov-10-6pm/",
     "location": "Marlboro, NY",
     "mapsUrl": "https://maps.app.goo.gl/avcU8nD3nmGFRfpK7",
-    "price": "RSVP",
+    "price": "rsvp",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787399016561,
