@@ -712,5 +712,11 @@
     "location": "Croton-On-Hudson, NY",
     "mapsUrl": "https://maps.app.goo.gl/fF84NK32ZK2wiWGz5",
     "drive": 84
+  },
+  "Green Kill": {
+    "venueUrl": "https://greenkill.substack.com/p/upcoming-events-calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=229+Green+Kill+Ave+Kingston+NY",
+    "drive": 0
   }
 }
