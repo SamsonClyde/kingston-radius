@@ -16938,5 +16938,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789412045384,
+    "title": "First Friday - Corey Glover",
+    "date": "2026-10-02",
+    "time": "18:00",
+    "venue": "Mural Square Poughkeepsie",
+    "venueUrl": "https://www.instagram.com/firstfridaypk/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fneU8VAa4rCPuua57",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
