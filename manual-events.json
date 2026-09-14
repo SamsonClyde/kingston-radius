@@ -15081,9 +15081,10 @@
     "venueUrl": "https://kingstonpopmuseum.com/acidjazz/",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/ps6vfaVpB7t3YK6z8",
-    "price": "RSVP",
+    "price": "rsvp",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789136578514,
