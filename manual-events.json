@@ -8004,9 +8004,10 @@
     "venueUrl": "https://www.nofuntroy.com/events",
     "location": "Troy, NY",
     "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
-    "price": "Sold Out",
+    "price": "sold out",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787500750665,
