@@ -2289,9 +2289,10 @@
     "venueUrl": "https://bearsvilletheater.com/",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
-    "price": "Sold Out",
+    "price": "sold out",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787062363992,
