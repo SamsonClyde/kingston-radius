@@ -13670,9 +13670,10 @@
     "venueUrl": "https://pearlmoonwoodstock.com/events",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
-    "price": "$10/RSVP",
+    "price": "$10/rsvp",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788657495436,
