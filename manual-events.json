@@ -12447,7 +12447,7 @@
   },
   {
     "id": 1788286239749,
-    "title": "Sister Sparrow & The Dirty Birds",
+    "title": "Sister Sparrow & The Dirty Bir",
     "date": "2026-10-17",
     "time": "19:00",
     "venue": "Colony Woodstock",
@@ -12456,12 +12456,11 @@
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$35",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788286284617,
-    "title": "Carsie Blanton, The Burning Hell",
+    "title": "Carsie Blanton",
     "date": "2026-10-30",
     "time": "19:00",
     "venue": "Colony Woodstock",
@@ -12470,8 +12469,7 @@
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$40",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788286333780,
@@ -16397,7 +16395,7 @@
   },
   {
     "id": 1789399899110,
-    "title": "Bluegrass Festival Day Three",
+    "title": "Bluegrass Festival Day Threee",
     "date": "2027-07-16",
     "time": "12:00",
     "venue": "Grey Fox",
@@ -16406,8 +16404,7 @@
     "mapsUrl": "https://maps.app.goo.gl/DJUK5uR7LdcZKJVZ6",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789399934122,
@@ -16432,6 +16429,84 @@
     "location": "Oak Hill, NY",
     "mapsUrl": "https://maps.app.goo.gl/DJUK5uR7LdcZKJVZ6",
     "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789402692726,
+    "title": "The Coryell/Butterfield Blues Project",
+    "date": "2026-09-26",
+    "time": "18:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "donation",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789403025347,
+    "title": "DCxPC Live Present: (Folk) Punk Night - Clovers Curfew, Blair Baldwin, Blood & Stomach Pills",
+    "date": "2026-10-08",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$23",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789403109905,
+    "title": "Sunny Days! - Songs of the Muppets",
+    "date": "2026-10-18",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$23",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789403193036,
+    "title": "Big Yellow Taxi - The Music of Joni Mitchell",
+    "date": "2026-10-23",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$29",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789403241680,
+    "title": "Honky Tonk Last Sunday - Hudson Valley Flyers",
+    "date": "2026-10-25",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$17",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789403325917,
+    "title": "Tinsley Ellis",
+    "date": "2026-11-15",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$29",
     "free": false,
     "_manual": true
   }
