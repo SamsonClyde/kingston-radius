@@ -3723,10 +3723,9 @@
     "venueUrl": "https://darylshouseclub.com/shows/",
     "location": "Pawling, NY",
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "rsvp brunch",
+    "price": "RSVP Brunch",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787071422261,
@@ -17041,6 +17040,19 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/BeMvKWTL7bdDv5uB6",
     "price": "$38",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789414202464,
+    "title": "O+",
+    "date": "2026-10-09",
+    "time": "17:30",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "price": "See website",
     "free": false,
     "_manual": true
   }
