@@ -706,5 +706,11 @@
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.app.goo.gl/fneU8VAa4rCPuua57",
     "drive": 32
+  },
+  "Croton-On-Hudson": {
+    "venueUrl": "https://www.instagram.com/p/DdROzemR45x/",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fF84NK32ZK2wiWGz5",
+    "drive": 84
   }
 }
