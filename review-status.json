@@ -1996,5 +1996,9 @@
     "status": "rejected",
     "hiddenAt": 1789389993967
   },
-  "Unicorn Bar||2026-10-09||21:00": "approved"
+  "Unicorn Bar||2026-10-09||21:00": "approved",
+  "Unicorn Bar||2026-10-21||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789389999781
+  }
 }
