@@ -1755,9 +1755,10 @@
     "venueUrl": "https://www.bardavon.org/",
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
-    "price": "$91/102/$112",
+    "price": "$91-$112",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787058239505,
@@ -16216,19 +16217,6 @@
     "location": "Annandale-on-Hudson, NY",
     "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
     "price": "$15",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1789395163887,
-    "title": "Chris Fleming",
-    "date": "2026-10-24",
-    "time": "20:00",
-    "venue": "UPAC",
-    "venueUrl": "https://www.bardavon.org/",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/jC2VFr3GrpBVxt7h7",
-    "price": "$51-$187",
     "free": false,
     "_manual": true
   }
