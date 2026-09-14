@@ -14650,9 +14650,10 @@
     "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
     "location": "Albany, NY",
     "mapsUrl": "https://maps.app.goo.gl/aqdL8wtJdNAHwLoB7",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789038203644,
