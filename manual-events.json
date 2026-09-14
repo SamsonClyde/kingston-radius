@@ -16509,5 +16509,18 @@
     "price": "$29",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789403379047,
+    "title": "The Big Takeover",
+    "date": "2026-11-27",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$29",
+    "free": false,
+    "_manual": true
   }
 ]
