@@ -16032,11 +16032,12 @@
     "date": "2026-11-08",
     "time": "12:00",
     "venue": "Bard Fisher Center",
-    "venueUrl": "https://fishercenter.bard.edu/events/the-american-spirit/",
+    "venueUrl": "https://fishercenter.bard.edu/events/concerto-competition-fall-26/",
     "location": "Annandale-on-Hudson, NY",
     "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
     "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
