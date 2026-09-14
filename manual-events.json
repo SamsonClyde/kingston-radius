@@ -15984,5 +15984,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789393120954,
+    "title": "The American Spirit (classical)",
+    "date": "2026-10-17",
+    "time": "19:00",
+    "venue": "Bard Fisher Center",
+    "venueUrl": "https://fishercenter.bard.edu/events/the-american-spirit/",
+    "location": "Annandale-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
+    "price": "$15/$42",
+    "free": false,
+    "_manual": true
   }
 ]
