@@ -1827,5 +1827,9 @@
   "Keegan Ales||2026-10-16||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789389021538
+  },
+  "Lydia's Cafe||2026-09-19||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789389029082
   }
 }
