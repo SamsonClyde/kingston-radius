@@ -8948,9 +8948,10 @@
     "venueUrl": "https://www.liquidbreathwork.com/sound-healing-near-me/class/inner-peace-sound-journey-with-kristin-hoffmann--high-falls--ny--2026-09-19",
     "location": "High Falls, NY",
     "mapsUrl": "https://maps.app.goo.gl/rmFCUExbfkpc8QLP7",
-    "price": "Sold Out",
+    "price": "sold out",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787538734302,
