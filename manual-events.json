@@ -16395,7 +16395,7 @@
   },
   {
     "id": 1789399899110,
-    "title": "Bluegrass Festival Day Threee",
+    "title": "Bluegrass Festival Day Three",
     "date": "2027-07-16",
     "time": "12:00",
     "venue": "Grey Fox",
@@ -16404,7 +16404,8 @@
     "mapsUrl": "https://maps.app.goo.gl/DJUK5uR7LdcZKJVZ6",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789399934122,
