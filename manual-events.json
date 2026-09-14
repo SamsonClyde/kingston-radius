@@ -17003,5 +17003,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789412989725,
+    "title": "Gus Mancini’s Sonic Sould Band",
+    "date": "2026-09-27",
+    "time": "20:00",
+    "venue": "Green Kill",
+    "venueUrl": "https://greenkill.substack.com/p/upcoming-events-calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=229+Green+Kill+Ave+Kingston+NY",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
