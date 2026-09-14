@@ -15750,5 +15750,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789390602028,
+    "title": "Upstate Composers Orchestra",
+    "date": "2026-10-04",
+    "time": "19:30",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
