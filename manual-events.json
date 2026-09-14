@@ -15724,5 +15724,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1789390383870,
+    "title": "Brandon Wolcott (Smirk)",
+    "date": "2026-09-18",
+    "time": "21:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$6",
+    "free": false,
+    "_manual": true
   }
 ]
