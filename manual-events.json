@@ -7198,9 +7198,10 @@
     "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/cjXnAPfsLHZ7XD8c9",
-    "price": "$6/Donation",
+    "price": "$6/donation",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787454295741,
