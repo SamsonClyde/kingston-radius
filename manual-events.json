@@ -8784,9 +8784,10 @@
     "venueUrl": "https://www.robiberofamilyvineyards.com/events",
     "location": "New Paltz, NY",
     "mapsUrl": "https://www.robiberofamilyvineyards.com/events",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787511926274,
