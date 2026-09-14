@@ -15331,9 +15331,10 @@
     "venueUrl": "https://townecrier.com/",
     "location": "Beacon, NY",
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
-    "price": "RSVP",
+    "price": "rsvp",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789210337140,
