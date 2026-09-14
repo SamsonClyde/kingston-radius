@@ -16269,13 +16269,12 @@
     "date": "2026-09-20",
     "time": "12:00",
     "venue": "Bethel Woods",
-    "venueUrl": "https://www.bethelwoodscenter.org/harvest-festival",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
     "location": "Bethel, NY",
     "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789397037037,
@@ -16283,13 +16282,12 @@
     "date": "2026-09-27",
     "time": "14:00",
     "venue": "Bethel Woods",
-    "venueUrl": "https://www.bethelwoodscenter.org/harvest-festival",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
     "location": "Bethel, NY",
     "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789397082251,
@@ -16300,6 +16298,19 @@
     "venueUrl": "https://www.bethelwoodscenter.org/events",
     "location": "Bethel, NY",
     "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789398057972,
+    "title": "Oktoberfest - Whiskey Creek",
+    "date": "2026-09-19",
+    "time": "15:00",
+    "venue": "Mountain King Brewing",
+    "venueUrl": "https://www.greatnortherncatskills.com/events/oktoberfest-at-mountain-king-brewing",
+    "location": "Windham, NY",
+    "mapsUrl": "https://maps.app.goo.gl/SAFgW2PXH3bAPit58",
     "price": "See website",
     "free": false,
     "_manual": true
