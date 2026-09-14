@@ -15737,5 +15737,18 @@
     "price": "$6",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789390523127,
+    "title": "Party Musick - Scotia & DJ Guy",
+    "date": "2026-09-25",
+    "time": "21:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
