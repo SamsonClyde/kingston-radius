@@ -13492,9 +13492,10 @@
     "venueUrl": "https://www.lovevelma.com/calendar",
     "location": "Ellenville, NY",
     "mapsUrl": "https://maps.app.goo.gl/1N7G54TEiuvAWsch9",
-    "price": "See website",
+    "price": "members only",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788606377784,
