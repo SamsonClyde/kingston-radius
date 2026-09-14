@@ -16166,5 +16166,18 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789394579064,
+    "title": "Beethoven and Brahms: Part 2",
+    "date": "2027-04-11",
+    "time": "14:00",
+    "venue": "Bard Fisher Center",
+    "venueUrl": "https://fishercenter.bard.edu/series/beethoven-and-brahms-part-2/",
+    "location": "Annandale-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
