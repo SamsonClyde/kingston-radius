@@ -1503,9 +1503,10 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "price": "On Sale Sept 8",
+    "price": "donation",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787020107525,
