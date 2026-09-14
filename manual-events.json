@@ -13791,9 +13791,10 @@
     "venueUrl": "https://www.hardscrabbleday.org/",
     "location": "Red Hook, NY",
     "mapsUrl": "https://maps.app.goo.gl/EUKSujHxRaBkZzQ66",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788661639342,
