@@ -15710,5 +15710,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 328,
+    "date": "2026-10-09",
+    "title": "Bachelorex Party- The Wedding Funeral",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://www.viewcy.com/event/bachelorex_party_a_b",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "time": "21:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
