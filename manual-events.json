@@ -15660,9 +15660,10 @@
     "venueUrl": "https://www.instagram.com/friendsofhistorickingston?stkn=aXJydW9hMHZwcm11",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/Sq89aH7sh8BRAa8GA",
-    "price": "Donation",
+    "price": "donation",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789388646514,
