@@ -1847,5 +1847,9 @@
   "Rail Trail Cafe||2026-10-09||5:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789389043233
+  },
+  "St. James Methodist Church||2026-09-14||6:45 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789389180010
   }
 }
