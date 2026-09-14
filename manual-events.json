@@ -4245,7 +4245,7 @@
     "venueUrl": "https://fishercenter.bard.edu/events/",
     "location": "Annandale-on-Hudson, NY",
     "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
-    "price": "ReserveFree",
+    "price": "rsvp free",
     "free": false,
     "_manual": true,
     "_source": "manual"
