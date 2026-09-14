@@ -16218,5 +16218,18 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789395163887,
+    "title": "Chris Fleming",
+    "date": "2026-10-24",
+    "time": "20:00",
+    "venue": "UPAC",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/jC2VFr3GrpBVxt7h7",
+    "price": "$51-$187",
+    "free": false,
+    "_manual": true
   }
 ]
