@@ -9954,15 +9954,14 @@
     "id": 1787578183278,
     "title": "The Richard Baratta Latin Jazz Quartet - Salon Stage",
     "date": "2026-09-20",
-    "time": "11:30",
+    "time": "23:30",
     "venue": "Towne Crier Café",
     "venueUrl": "https://townecrier.com/",
     "location": "Beacon, NY",
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
     "price": "RSVP",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787578216474,
@@ -15694,6 +15693,20 @@
     "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
     "time": "19:30",
     "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
+  },
+  {
+    "id": 268,
+    "date": "2026-09-26",
+    "title": "Strangehouse presents: Nightwave with DJ Tryst",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "time": "21:00",
+    "price": "$13",
     "free": false,
     "_source": "scraped",
     "_manual": true
