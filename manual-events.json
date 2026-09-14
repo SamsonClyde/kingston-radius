@@ -13137,9 +13137,10 @@
     "venueUrl": "https://littlestonypoint.org/",
     "location": "Cold Spring, NY",
     "mapsUrl": "https://maps.app.goo.gl/Nkzr7N8JYub5zLXSA",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788485736831,
