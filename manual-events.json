@@ -14616,9 +14616,10 @@
     "venueUrl": "https://www.facebook.com/people/Shandaken-Summer-Concert-Series/61578791698967/",
     "location": "Big Indian, NY",
     "mapsUrl": "https://maps.app.goo.gl/gXyqajxMGJxe6d7E9",
-    "price": "Free",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789037787280,
