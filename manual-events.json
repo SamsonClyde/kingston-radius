@@ -16470,5 +16470,18 @@
     "price": "$23",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789403193036,
+    "title": "Big Yellow Taxi - The Music of Joni Mitchell",
+    "date": "2026-10-23",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$29",
+    "free": false,
+    "_manual": true
   }
 ]
