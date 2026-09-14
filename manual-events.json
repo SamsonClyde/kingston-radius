@@ -16535,5 +16535,18 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789403474987,
+    "title": "NYE Party - Chris Wells and The Silver Spaceship",
+    "date": "2026-12-31",
+    "time": "21:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$40",
+    "free": false,
+    "_manual": true
   }
 ]
