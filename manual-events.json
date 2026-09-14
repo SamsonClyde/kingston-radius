@@ -16925,5 +16925,18 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789411691831,
+    "title": "The Ambulance Review, Grief Group, Hunter",
+    "date": "2026-10-16",
+    "time": "20:00",
+    "venue": "El Dorado Bar",
+    "venueUrl": "https://www.instagram.com/eldoradobar_troy/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/QwhaMLfRyAoqbWLt9",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
