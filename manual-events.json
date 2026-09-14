@@ -16483,5 +16483,18 @@
     "price": "$29",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789403241680,
+    "title": "Honky Tonk Last Sunday - Hudson Valley Flyers",
+    "date": "2026-10-25",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "price": "$17",
+    "free": false,
+    "_manual": true
   }
 ]
