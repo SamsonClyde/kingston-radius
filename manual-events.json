@@ -7423,9 +7423,9 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
     "time": "21:30",
-    "price": "Free",
+    "price": "free",
     "free": true,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
