@@ -16140,5 +16140,18 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789394217721,
+    "title": "TŌN + ABT Studio Company (classical & dance)",
+    "date": "2027-02-28",
+    "time": "15:00",
+    "venue": "Bard Fisher Center",
+    "venueUrl": "https://fishercenter.bard.edu/series/ton-abt-studio-company/",
+    "location": "Annandale-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
