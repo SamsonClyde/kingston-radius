@@ -77,7 +77,7 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
     "time": "16:00",
-    "price": "Free",
+    "price": "free",
     "free": false,
     "_source": "manual",
     "_manual": true
