@@ -18446,5 +18446,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789482609369,
+    "title": "Sharon Isbin, Concerto Málaga",
+    "date": "2027-04-01",
+    "time": "19:30",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
