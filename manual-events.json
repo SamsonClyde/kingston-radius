@@ -9024,7 +9024,7 @@
   {
     "id": 22,
     "date": "2026-09-30",
-    "title": "Los Vega Son Jarocho",
+    "title": "Los Vega Son Jarocho, Pulso De Barro",
     "venue": "Tempo Arts",
     "venueUrl": "https://tempokingston.org/calendar/",
     "location": "Kingston, NY",
@@ -9032,7 +9032,7 @@
     "time": "20:00",
     "price": "$25-$50",
     "free": false,
-    "_source": "email",
+    "_source": "manual",
     "_manual": true
   },
   {
