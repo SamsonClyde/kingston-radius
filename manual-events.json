@@ -17302,5 +17302,18 @@
     "price": "$88-$200",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789476317414,
+    "title": "The Billy Joel Legacy (Billy Joel Cover Band)",
+    "date": "2026-09-26",
+    "time": "20:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$117-$230",
+    "free": false,
+    "_manual": true
   }
 ]
