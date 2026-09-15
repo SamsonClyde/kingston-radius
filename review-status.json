@@ -2129,5 +2129,9 @@
   "Stissing Center||2026-10-04||3:00 PM": {
     "status": "rejected",
     "hiddenAt": 1789483036469
+  },
+  "The Falcon||2026-09-20||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789483054854
   }
 }
