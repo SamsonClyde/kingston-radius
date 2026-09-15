@@ -17276,5 +17276,18 @@
     "price": "$133-$222",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789476209733,
+    "title": "Liz Phair",
+    "date": "2026-09-24",
+    "time": "19:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$105-$227",
+    "free": false,
+    "_manual": true
   }
 ]
