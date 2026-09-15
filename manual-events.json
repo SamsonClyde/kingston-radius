@@ -17809,5 +17809,18 @@
     "price": "$146",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789479679458,
+    "title": "Jesse Cook",
+    "date": "2026-11-20",
+    "time": "20:00",
+    "venue": "The Egg - Swyer Theatre",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$93-$193",
+    "free": false,
+    "_manual": true
   }
 ]
