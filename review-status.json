@@ -2120,5 +2120,10 @@
   "Keegan Ales||2026-10-01||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1789482964793
-  }
+  },
+  "Rail Trail Cafe||2026-09-27||1:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1789483022345
+  },
+  "Rail Trail Cafe||2026-09-27||13:00": "approved"
 }
