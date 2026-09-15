@@ -2154,5 +2154,9 @@
     "status": "rejected",
     "hiddenAt": 1789483215420
   },
-  "Trinity Lutheran Church||2026-09-18||19:00": "approved"
+  "Trinity Lutheran Church||2026-09-18||19:00": "approved",
+  "Tubby's||2026-09-25||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789483233134
+  }
 }
