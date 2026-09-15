@@ -2100,5 +2100,9 @@
   "Bard College Conservatory||2026-10-31||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789482848912
+  },
+  "Bearsville Theater||2026-09-18||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789482853754
   }
 }
