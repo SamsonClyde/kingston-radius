@@ -17575,5 +17575,18 @@
     "price": "$135-$209",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789477719226,
+    "title": "Into The Light",
+    "date": "2026-12-05",
+    "time": "16:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$90-$119",
+    "free": false,
+    "_manual": true
   }
 ]
