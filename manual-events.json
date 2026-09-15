@@ -17354,5 +17354,18 @@
     "price": "$147",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789476655081,
+    "title": "Soccer Mommy, Snail Mail",
+    "date": "2026-10-06",
+    "time": "19:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$112-$177",
+    "free": false,
+    "_manual": true
   }
 ]
