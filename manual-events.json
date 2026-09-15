@@ -17393,5 +17393,18 @@
     "price": "$152",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789476817464,
+    "title": "Compagnie Herve Koubi",
+    "date": "2026-10-17",
+    "time": "19:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$105-$133",
+    "free": false,
+    "_manual": true
   }
 ]
