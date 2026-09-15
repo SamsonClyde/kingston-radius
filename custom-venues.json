@@ -724,5 +724,11 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/4pzhqqHvFLyBLUqg9",
     "drive": 2
+  },
+  "The Egg": {
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "drive": 51
   }
 }
