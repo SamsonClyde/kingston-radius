@@ -17328,5 +17328,18 @@
     "price": "$194-$200",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789476447291,
+    "title": "Cortex, Adrian Younge, J. Rocc",
+    "date": "2026-10-02",
+    "time": "20:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$128-$189",
+    "free": false,
+    "_manual": true
   }
 ]
