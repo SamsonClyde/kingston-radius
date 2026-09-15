@@ -17445,5 +17445,18 @@
     "price": "$124-$245",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789477048008,
+    "title": "Lucy Darling",
+    "date": "2026-11-03",
+    "time": "19:30",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$270-$485",
+    "free": false,
+    "_manual": true
   }
 ]
