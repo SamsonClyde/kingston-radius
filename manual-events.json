@@ -18290,5 +18290,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789482285734,
+    "title": "Thomas Piercy",
+    "date": "2027-01-12",
+    "time": "12:00",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
