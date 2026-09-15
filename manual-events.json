@@ -17253,7 +17253,7 @@
   },
   {
     "id": 1789476062334,
-    "title": "Whitney Cummings (stand up)",
+    "title": "Whitney Cummings",
     "date": "2026-09-20",
     "time": "19:00",
     "venue": "The Egg",
@@ -17262,8 +17262,7 @@
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "$74-$223",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789476107370,
@@ -17710,7 +17709,7 @@
   {
     "id": 1789479092725,
     "title": "Burnout Paradise",
-    "date": "2026-10-16",
+    "date": "2026-09-16",
     "time": "19:00",
     "venue": "The Egg - Swyer Theatre",
     "venueUrl": "https://theegg.org/events/",
@@ -17718,8 +17717,7 @@
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "$99-$145",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789479129322,
@@ -17775,7 +17773,7 @@
   },
   {
     "id": 1789479383342,
-    "title": "The Weight Band (The Band Cover Band)",
+    "title": "Burnout Paradise",
     "date": "2026-10-18",
     "time": "19:00",
     "venue": "The Egg - Swyer Theatre",
@@ -17784,7 +17782,19 @@
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "$99",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
+  },
+  {
+    "id": 1789479596919,
+    "title": "Gary Gulman",
+    "date": "2026-10-23",
+    "time": "20:00",
+    "venue": "The Egg - Swyer Theatre",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$99-$148",
+    "free": false,
+    "_manual": true
   }
 ]
