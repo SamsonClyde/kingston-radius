@@ -17731,5 +17731,18 @@
     "price": "$112-$193",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789479176529,
+    "title": "Burnout Paradise",
+    "date": "2026-10-17",
+    "time": "19:00",
+    "venue": "The Egg - Swyer Theatre",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$93-$139",
+    "free": false,
+    "_manual": true
   }
 ]
