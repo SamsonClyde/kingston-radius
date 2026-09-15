@@ -17549,5 +17549,18 @@
     "price": "$114-$241",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789477617634,
+    "title": "Jim Henson's Labyrinth - In Concert",
+    "date": "2026-11-23",
+    "time": "19:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$125-$241",
+    "free": false,
+    "_manual": true
   }
 ]
