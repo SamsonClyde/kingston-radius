@@ -17773,7 +17773,7 @@
   },
   {
     "id": 1789479383342,
-    "title": "Burnout Paradise",
+    "title": "The Weight Band (The Band Cover Band)",
     "date": "2026-10-18",
     "time": "19:00",
     "venue": "The Egg - Swyer Theatre",
@@ -17782,6 +17782,7 @@
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "$99",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
