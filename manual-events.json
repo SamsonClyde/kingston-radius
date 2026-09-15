@@ -17341,5 +17341,18 @@
     "price": "$128-$189",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789476519797,
+    "title": "The Carole King and James Taylor Story (Cover Band)",
+    "date": "2026-10-05",
+    "time": "19:30",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$147",
+    "free": false,
+    "_manual": true
   }
 ]
