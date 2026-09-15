@@ -17497,5 +17497,18 @@
     "price": "$67-$161",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789477351132,
+    "title": "Megan Falley - Andrea Gibsons Love Letter from the Afterlife",
+    "date": "2026-11-15",
+    "time": "19:30",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$135-$759",
+    "free": false,
+    "_manual": true
   }
 ]
