@@ -17653,5 +17653,18 @@
     "price": "$142-$170",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789478050243,
+    "title": "The High Kings",
+    "date": "2027-03-10",
+    "time": "19:30",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$117-$1000",
+    "free": false,
+    "_manual": true
   }
 ]
