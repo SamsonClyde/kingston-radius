@@ -18485,5 +18485,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789482676805,
+    "title": "Hilltown Ramblers",
+    "date": "2027-04-13",
+    "time": "12:00",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
