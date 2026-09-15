@@ -2108,5 +2108,9 @@
   "Bearsville Theater||2026-09-20||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789482860303
+  },
+  "Colony Woodstock||2026-09-18||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789482958321
   }
 }
