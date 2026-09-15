@@ -17484,5 +17484,18 @@
     "price": "$87-$161",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789477293541,
+    "title": "Maria Bamford",
+    "date": "2026-11-13",
+    "time": "19:30",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$67-$161",
+    "free": false,
+    "_manual": true
   }
 ]
