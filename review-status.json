@@ -2149,5 +2149,10 @@
   "Towne Crier Café||2026-09-20||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1789483110083
-  }
+  },
+  "Trinity Lutheran Church||2026-09-18||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789483215420
+  },
+  "Trinity Lutheran Church||2026-09-18||19:00": "approved"
 }
