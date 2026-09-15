@@ -736,5 +736,11 @@
     "location": "Albany, NY",
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "drive": 51
+  },
+  "The Troy Savings Bank Music Hall": {
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "drive": 61
   }
 }
