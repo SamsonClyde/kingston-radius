@@ -18564,5 +18564,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1789504455784,
+    "title": "Bluegrass at Lye Parklet - Catskill Mountain String Band",
+    "date": "2026-09-17",
+    "time": "18:00",
+    "venue": "Lye Parklet",
+    "venueUrl": "https://www.instagram.com/p/DdUOg-gICiE/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/hzuqdLivChqouNHv8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
