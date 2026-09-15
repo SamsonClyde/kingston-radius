@@ -17627,5 +17627,18 @@
     "price": "$154-$162",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789477938121,
+    "title": "Jim Breuer (stand up)",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$117-$286",
+    "free": false,
+    "_manual": true
   }
 ]
