@@ -18108,5 +18108,18 @@
     "price": "sold out",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789481863905,
+    "title": "Passion & Power: Brahms & Elgar",
+    "date": "2026-11-07",
+    "time": "15:00",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
