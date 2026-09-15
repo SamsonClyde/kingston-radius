@@ -17185,5 +17185,18 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1789472812882,
+    "title": "Woods, Star Moles",
+    "date": "2026-09-25",
+    "time": "08:00",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "price": "$30",
+    "free": false,
+    "_manual": true
   }
 ]
