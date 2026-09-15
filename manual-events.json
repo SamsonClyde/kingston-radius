@@ -18433,5 +18433,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789482561729,
+    "title": "The Emperor & Sibelius",
+    "date": "2027-03-21",
+    "time": "15:00",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
