@@ -17848,5 +17848,18 @@
     "price": "$108-$362",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789479819349,
+    "title": "Pure Prairie League",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "venue": "The Egg - Swyer Theatre",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$111-$240",
+    "free": false,
+    "_manual": true
   }
 ]
