@@ -17289,5 +17289,18 @@
     "price": "$105-$227",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789476254400,
+    "title": "Jessica Kirson",
+    "date": "2026-09-25",
+    "time": "19:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$88-$200",
+    "free": false,
+    "_manual": true
   }
 ]
