@@ -17437,7 +17437,7 @@
   },
   {
     "id": 1789476974043,
-    "title": "Blade Runner",
+    "title": "Blade Runner Live",
     "date": "2026-10-29",
     "time": "19:00",
     "venue": "The Egg",
@@ -17446,7 +17446,8 @@
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "$124-$245",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789477048008,
