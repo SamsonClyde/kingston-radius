@@ -17601,5 +17601,18 @@
     "price": "$150-$235",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789477821405,
+    "title": "Sara Evans",
+    "date": "2026-12-10",
+    "time": "19:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$115-$153",
+    "free": false,
+    "_manual": true
   }
 ]
