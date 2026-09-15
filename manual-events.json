@@ -17266,7 +17266,7 @@
   },
   {
     "id": 1789476107370,
-    "title": "Pat Metheny, Side Eye III+",
+    "title": "Pat Metheny",
     "date": "2026-09-23",
     "time": "19:00",
     "venue": "The Egg",
@@ -17275,8 +17275,7 @@
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "$133-$222",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789476209733,
@@ -17665,6 +17664,19 @@
     "location": "Albany, NY",
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "$117-$1000",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789478625474,
+    "title": "múm/Sova",
+    "date": "2026-09-25",
+    "time": "20:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$45+",
     "free": false,
     "_manual": true
   }
