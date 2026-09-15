@@ -18550,5 +18550,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 277,
+    "date": "2026-09-27",
+    "title": "Peter and Joakim",
+    "venue": "Rail Trail Cafe",
+    "venueUrl": "https://www.railtrailcaferosendale.com/art-and-music/peter-and-joakim",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.google.com/?q=Rail%20Trail%20Cafe%20Rosendale%2C%20NY",
+    "time": "13:00",
+    "price": "$10",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
