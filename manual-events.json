@@ -17211,5 +17211,18 @@
     "price": "rsvp",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789475535625,
+    "title": "Emerson Lake and Palmer",
+    "date": "2026-09-15",
+    "time": "19:30",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$168",
+    "free": false,
+    "_manual": true
   }
 ]
