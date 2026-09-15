@@ -712,5 +712,11 @@
     "location": "Cold Spring, NY",
     "mapsUrl": "https://maps.app.goo.gl/boPY8ZmdA2TMLbzu9",
     "drive": 59
+  },
+  "Eng's Chinese": {
+    "venueUrl": "https://www.instagram.com/engsrestaurant/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/4pzhqqHvFLyBLUqg9",
+    "drive": 2
   }
 }
