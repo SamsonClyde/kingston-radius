@@ -17198,5 +17198,18 @@
     "price": "$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789474803524,
+    "title": "Matt Munisteri Trio",
+    "date": "2026-09-17",
+    "time": "19:30",
+    "venue": "Eng's Chinese",
+    "venueUrl": "https://www.instagram.com/engsrestaurant/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/4pzhqqHvFLyBLUqg9",
+    "price": "rsvp",
+    "free": false,
+    "_manual": true
   }
 ]
