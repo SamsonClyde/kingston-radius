@@ -2104,5 +2104,9 @@
   "Bearsville Theater||2026-09-18||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789482853754
+  },
+  "Bearsville Theater||2026-09-20||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789482860303
   }
 }
