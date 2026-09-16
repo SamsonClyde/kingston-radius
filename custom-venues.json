@@ -754,5 +754,11 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/NDYDWUJJ8GLabmDZ7",
     "drive": 1
+  },
+  "Happy Valley Arcade": {
+    "venueUrl": "https://happyvalleybeacon.com/events",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LAGZJ318ZdvL9AvC6",
+    "drive": 43
   }
 }
