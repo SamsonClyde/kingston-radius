@@ -2209,5 +2209,9 @@
   "Keegan Ales||2026-09-22||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1789600940642
+  },
+  "Christ the King Episcopal Church||2026-11-01||": {
+    "status": "rejected",
+    "hiddenAt": 1789601396972
   }
 }
