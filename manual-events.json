@@ -18642,5 +18642,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789598571130,
+    "title": "Desmond Teague Quintet (if it rains, we'll be at Darkside Records)",
+    "date": "2026-09-19",
+    "time": "16:00",
+    "venue": "Kaal Rock Park",
+    "venueUrl": "https://www.facebook.com/kaalrockparkconcerts",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/N47HrwNKXyeNq9dZ7",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
