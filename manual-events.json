@@ -18629,5 +18629,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789593946971,
+    "title": "Jill McCracken, Bluestone Quarry, Paleheap",
+    "date": "2026-10-01",
+    "time": "20:00",
+    "venue": "Night Swim",
+    "venueUrl": "https://www.instagram.com/nightswimkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sZe9CAVM8vJMB9UL6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
