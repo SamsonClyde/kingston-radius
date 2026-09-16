@@ -18590,5 +18590,18 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789593701964,
+    "title": "Chris Shrift & The Rock N Roll Boys, Peretsky, Drink Baby",
+    "date": "2026-09-19",
+    "time": "20:00",
+    "venue": "Night Swim",
+    "venueUrl": "https://www.instagram.com/nightswimkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sZe9CAVM8vJMB9UL6",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
