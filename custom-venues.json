@@ -766,5 +766,11 @@
     "location": "Port Ewen, NY",
     "mapsUrl": "https://maps.app.goo.gl/wPM59J4EHEGvwDao6",
     "drive": 6
+  },
+  "Rosendale Theater": {
+    "venueUrl": "https://rosendaletheatre.org/film-series/live-music/",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sBeJVt37EKPoU8uy6",
+    "drive": 13
   }
 }
