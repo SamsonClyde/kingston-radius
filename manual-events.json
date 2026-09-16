@@ -18668,5 +18668,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789599429840,
+    "title": "Library Card-a-Palooza - Dan Pitt, AM Gold, Damn Horse!!!, The Jowls, Jef Brown, Klezmer Berl's Hotsie Totsie Orkestra!",
+    "date": "2026-09-19",
+    "time": "12:00",
+    "venue": "Esopus Library",
+    "venueUrl": "https://www.facebook.com/esopuslibrary/",
+    "location": "Port Ewen, NY",
+    "mapsUrl": "https://maps.app.goo.gl/wPM59J4EHEGvwDao6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
