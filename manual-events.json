@@ -18787,8 +18787,9 @@
     "venueUrl": "https://rosendaletheatre.org/special_events/concert-adventure-jack-manley/",
     "location": "Rosendale, NY",
     "mapsUrl": "https://maps.app.goo.gl/sBeJVt37EKPoU8uy6",
-    "price": "See website",
+    "price": "$35",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
