@@ -2217,5 +2217,9 @@
   "Rosendale Theater||2026-10-09||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789601859579
+  },
+  "Unicorn Bar||2026-10-16||10:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789601866939
   }
 }
