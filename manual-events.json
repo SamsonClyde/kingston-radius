@@ -957,14 +957,14 @@
   },
   {
     "id": 8,
-    "date": "2026-09-17",
-    "title": "Third Thursday Artist Happy Hour with CCoA - The Owen Davis Jazz Trio",
-    "venue": "The Grand",
-    "venueUrl": "https://thegrandcroton.com/happening",
-    "location": "Croton-on-Hudson, NY",
-    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "date": "2026-09-05",
+    "title": "Naked",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "time": "18:00",
-    "price": "See website",
+    "price": "$20",
     "free": false,
     "_source": "email",
     "_manual": true
@@ -9079,14 +9079,14 @@
   },
   {
     "id": 27,
-    "date": "2026-10-18",
-    "title": "Classical Crossroads – Baroque to Tango",
-    "venue": "Tempo Arts",
-    "venueUrl": "https://tempokingston.org/calendar/",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
-    "time": "16:00",
-    "price": "$25-$50",
+    "date": "2026-09-20",
+    "title": "Paul Connors on Piano Brunch",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "11:00",
+    "price": "See website",
     "free": false,
     "_source": "email",
     "_manual": true
@@ -9361,7 +9361,7 @@
   },
   {
     "id": 1787573892995,
-    "title": "Django Rheinhardt Tribute - Yvonnick Prené, Ilan Eisenzweig",
+    "title": "Yvonnick Prene",
     "date": "2026-09-16",
     "time": "19:30",
     "venue": "The Grand",
@@ -9370,8 +9370,7 @@
     "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787573917325,
