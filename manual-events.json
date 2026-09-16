@@ -18603,5 +18603,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789593788517,
+    "title": "The Arborline, Sabrina Trueheart, Chloe Cannon",
+    "date": "2026-10-17",
+    "time": "20:00",
+    "venue": "Night Swim",
+    "venueUrl": "https://www.instagram.com/nightswimkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sZe9CAVM8vJMB9UL6",
+    "price": "$8adv/$10door",
+    "free": false,
+    "_manual": true
   }
 ]
