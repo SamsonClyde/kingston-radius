@@ -18728,14 +18728,15 @@
     "id": 1789601230588,
     "title": "International Folk Series - Garnet Rogers (Canada)",
     "date": "2027-03-07",
-    "time": "12:00",
+    "time": "",
     "venue": "Christ The King Episcopal Church",
     "venueUrl": "https://www.ctkstoneridge.org/concerts",
     "location": "Stone Ridge, NY",
     "mapsUrl": "https://maps.app.goo.gl/q6jtfdbuENU6ZqT36",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789601262309,
