@@ -18577,5 +18577,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789593577511,
+    "title": "Andalucia Project Presents: Aaron J. Morales, Alejandra Maciel, Will Kelly, Damian Valverde, Xondra",
+    "date": "2026-09-25",
+    "time": "18:30",
+    "venue": "Tilda's Kitchen",
+    "venueUrl": "https://www.instagram.com/andaluciaprojectny/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NDYDWUJJ8GLabmDZ7",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
