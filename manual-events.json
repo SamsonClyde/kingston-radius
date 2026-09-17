@@ -18867,5 +18867,18 @@
     "price": "$13",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789642007902,
+    "title": "DJ Dental Work, Spotlight, Big Lettuce",
+    "date": "2026-10-22",
+    "time": "20:00",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "price": "$11",
+    "free": false,
+    "_manual": true
   }
 ]
