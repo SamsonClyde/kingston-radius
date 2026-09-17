@@ -18958,5 +18958,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789643028735,
+    "title": "Cowboys in the Campfire",
+    "date": "2026-10-31",
+    "time": "20:00",
+    "venue": "Park Theater",
+    "venueUrl": "https://parktheaterhudson.com/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/rumcuWciwQhFjQRr8",
+    "price": "$33",
+    "free": false,
+    "_manual": true
   }
 ]
