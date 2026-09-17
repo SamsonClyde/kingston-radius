@@ -15919,12 +15919,13 @@
     "date": "2026-10-22",
     "time": "20:00",
     "venue": "Avalon Lounge",
-    "venueUrl": "https://www.viewcy.com/event/karyn_kuhl_and_the_ga",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
     "location": "Catskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
     "price": "$18",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789391184418,
