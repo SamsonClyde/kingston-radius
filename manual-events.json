@@ -14613,16 +14613,17 @@
   },
   {
     "id": 1789036729310,
-    "title": "Balkan Festival",
+    "title": "Balkan Festival - Romski Boji, Driftwood Chorus, MacNcheese, Bourbon & Breastmilk, Niva",
     "date": "2026-09-19",
-    "time": "12:00",
+    "time": "15:00",
     "venue": "Glenbrook Park",
     "venueUrl": "https://www.shandaken.gov/events/2026-09-19/",
     "location": "Shandaken, NY",
     "mapsUrl": "https://maps.app.goo.gl/2dNKwC2zJukUPC9h7",
-    "price": "See website",
+    "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789037089768,
