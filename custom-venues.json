@@ -772,5 +772,11 @@
     "location": "Rosendale, NY",
     "mapsUrl": "https://maps.app.goo.gl/sBeJVt37EKPoU8uy6",
     "drive": 13
+  },
+  "Paramount Theater": {
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "drive": 82
   }
 }
