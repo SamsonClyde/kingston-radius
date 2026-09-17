@@ -18828,5 +18828,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789641295646,
+    "title": "Evan Watson",
+    "date": "2026-10-02",
+    "time": "18:00",
+    "venue": "Newburgh Brewing",
+    "venueUrl": "https://newburghbrewing.com/events",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vXzDY4qTqet4zp2DA",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
