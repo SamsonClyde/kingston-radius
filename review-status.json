@@ -2093,7 +2093,10 @@
     "status": "rejected",
     "hiddenAt": 1789483022345
   },
-  "Rail Trail Cafe||2026-09-27||13:00": "approved",
+  "Rail Trail Cafe||2026-09-27||13:00": {
+    "status": "rejected",
+    "hiddenAt": 1789643517043
+  },
   "Stissing Center||2026-10-04||3:00 PM": {
     "status": "rejected",
     "hiddenAt": 1789483036469
