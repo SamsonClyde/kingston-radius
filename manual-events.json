@@ -18802,5 +18802,18 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1789641107487,
+    "title": "Asoleo N°5 - El Michels Affair, Matthew Cullen, DJ Harlan",
+    "date": "2026-09-27",
+    "time": "17:00",
+    "venue": "Mirador",
+    "venueUrl": "https://www.instagram.com/miradorkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fFdKACjcf86gXeXj6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
