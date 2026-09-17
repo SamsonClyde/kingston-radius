@@ -18932,5 +18932,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789642757972,
+    "title": "Resonance Studios Charity Concert",
+    "date": "2026-11-29",
+    "time": "13:00",
+    "venue": "Paramount Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
