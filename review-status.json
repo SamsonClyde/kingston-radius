@@ -182,10 +182,6 @@
     "status": "rejected",
     "hiddenAt": 1786963780976
   },
-  "Assembly Kingston||2026-09-17||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786963829605
-  },
   "Assembly Kingston||2026-09-18||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963836020
@@ -601,10 +597,6 @@
   "Tubby's||2026-09-12||20:00": "approved",
   "Tubby's||2026-09-14||20:00": "approved",
   "Tubby's||2026-09-16||20:00": "approved",
-  "Tubby's||2026-09-17||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787309957398
-  },
   "Tubby's||2026-09-17||20:00": "approved",
   "Tubby's||2026-09-18||7:00 pm": {
     "status": "rejected",
@@ -1068,10 +1060,6 @@
   },
   "Old Dutch Church||2026-10-25||16:00": "approved",
   "Tompkins Corners Cultural Center||2026-09-12||19:30": "approved",
-  "Tompkins Corners Cultural Center||2026-09-17||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787575933974
-  },
   "Tompkins Corners Cultural Center||2026-09-18||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1787575986193
@@ -1222,10 +1210,6 @@
   "Unicorn Bar||2026-09-11||9:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787591107859
-  },
-  "Unicorn Bar||2026-09-17||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787591190879
   },
   "Unicorn Bar||2026-09-17||19:00": "approved",
   "Unicorn Bar||2026-09-18||7:00 pm": {
