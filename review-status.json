@@ -1932,5 +1932,9 @@
     "status": "rejected",
     "hiddenAt": 1789769391510
   },
-  "The Half Moon||2026-10-30||19:00": "approved"
+  "The Half Moon||2026-10-30||19:00": "approved",
+  "The Local Saugerties||2026-10-03||": {
+    "status": "rejected",
+    "hiddenAt": 1789769418288
+  }
 }
