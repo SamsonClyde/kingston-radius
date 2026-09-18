@@ -19145,5 +19145,19 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 20,
+    "date": "2026-09-20",
+    "title": "Jack Wright Quartet with Jonah Gelbart, Evan Lipson & Mike Pride",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/calendar/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "time": "20:00",
+    "price": "$17-$32",
+    "free": false,
+    "_source": "email",
+    "_manual": true
   }
 ]
