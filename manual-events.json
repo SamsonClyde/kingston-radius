@@ -19006,14 +19006,15 @@
     "id": 1789643620970,
     "title": "Tommydidit",
     "date": "2026-09-18",
-    "time": "",
+    "time": "22:00",
     "venue": "Reason & Ruckus",
     "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
     "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789643769708,
