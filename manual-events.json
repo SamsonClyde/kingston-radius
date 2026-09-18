@@ -19237,5 +19237,19 @@
     "price": "$55-$85",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 390,
+    "date": "2026-10-30",
+    "title": "Dent May",
+    "venue": "The Half Moon",
+    "venueUrl": "https://www.thehalfmoonhudson.com/events/lfwmenyb45ns7jj-n6clk-d5pxc-f2g8r-n9k2y-6ysah-rcxp9-cr5zn-5323g-6a3rl",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/2xtXkdDVa2REhf9VA",
+    "time": "19:00",
+    "price": "$17",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
