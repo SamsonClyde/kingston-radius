@@ -1710,5 +1710,9 @@
   "Bardavon||2026-12-19||": {
     "status": "rejected",
     "hiddenAt": 1789731080581
+  },
+  "Bearsville Theater||2026-09-18||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789731085481
   }
 }
