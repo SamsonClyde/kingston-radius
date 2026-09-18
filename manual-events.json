@@ -19050,5 +19050,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789728663075,
+    "title": "Tommy Emmanuel, CGP, Jack Schneider",
+    "date": "2027-02-03",
+    "time": "19:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$171+",
+    "free": false,
+    "_manual": true
   }
 ]
