@@ -17395,7 +17395,7 @@
   },
   {
     "id": 1789476770876,
-    "title": "Melvin Seals, JGB",
+    "title": "Melvin Seals",
     "date": "2026-10-14",
     "time": "19:30",
     "venue": "The Egg",
@@ -17404,8 +17404,7 @@
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "$152",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789476817464,
@@ -17448,7 +17447,7 @@
   },
   {
     "id": 1789476974043,
-    "title": "Blade Runner Live",
+    "title": "Blade Runner",
     "date": "2026-10-29",
     "time": "19:00",
     "venue": "The Egg",
@@ -17457,8 +17456,7 @@
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "$124-$245",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789477048008,
@@ -19036,6 +19034,19 @@
     "venueUrl": "https://www.roughdraftny.com/events",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/LLZ4sLnaNhZtSSar9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789728594269,
+    "title": "Rachel Yamagata",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "See website",
     "free": false,
     "_manual": true
