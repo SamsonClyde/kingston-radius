@@ -1243,6 +1243,11 @@ const DRIVE_TIMES = {
   "The Deck at Peekskill Brewery":                   75,
   "Field Library":                                   75,
   "High Voltage Kitchen & Bar":                      50,
+  "PS21 Chatham":                                     65,
+  "Round Barn at Churchtown Dairy":                   42,
+  "The Living Room at Full Circle":                   35,
+  "NoFun":                                             60,
+  "Time & Space Limited":                             40,
 };
 
 const KINGSTON_VENUES = new Set([]);
@@ -1494,15 +1499,17 @@ function getAllHidden() {
 async function approveEvent(e) {
   const status = getReviewStatus();
   status[eventKey(e)] = 'approved';
-  await saveReviewStatus(status);
+  const ok = await saveReviewStatus(status);
   renderAdminUnreviewed(); renderEvents(); updateBadge();
+  return ok;
 }
 
 async function hideEvent(e) {
   const status = getReviewStatus();
   status[eventKey(e)] = { status: 'rejected', hiddenAt: Date.now() };
-  await saveReviewStatus(status);
+  const ok = await saveReviewStatus(status);
   await pruneHidden();
+  return ok;
 }
 
 async function pruneHidden() {
@@ -1527,21 +1534,24 @@ async function restoreEvent(e) {
   } else {
     status[eventKey(e)] = 'approved';
   }
-  await saveReviewStatus(status);
+  const ok = await saveReviewStatus(status);
   renderAdminHidden(); renderAdminUnreviewed(); renderEvents(); updateBadge();
+  return ok;
 }
 
 async function deleteEventPermanently(e) {
   const k      = eventKey(e);
   const status = getReviewStatus();
   status[k]    = 'purged';
+  let ok;
   if (e._manual) {
     const manual = getManualEvents().filter(m => eventKey(m) !== k);
-    await saveManualEvents(manual, status);
+    ok = await saveManualEvents(manual, status);
   } else {
-    await saveReviewStatus(status);
+    ok = await saveReviewStatus(status);
   }
   renderAdminHidden(); renderEvents(); updateBadge();
+  return ok;
 }
 
 // ── UTILS ─────────────────────────────────────────────────────────────────────
@@ -2022,7 +2032,6 @@ function renderAdminUnreviewed() {
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px;">
             <span class="source-tag ${sourceClass}">${sourceLabel}</span>
             <div style="display:flex;gap:6px;">
-              <button class="btn-approve" data-action="approve-event" data-key="${k}">✓ Approve</button>
               <button class="btn-reject-small" data-action="hide-event" data-key="${k}">Hide</button>
             </div>
           </div>
@@ -2121,7 +2130,10 @@ document.addEventListener('click', async (ev) => {
   if (action === 'approve-event') {
     const all = getAllEvents();
     const e   = all.find(ev => eventKey(ev) === key);
-    if (e) await approveEvent(e);
+    if (e) {
+      const ok = await approveEvent(e);
+      if (!ok) alert('This approval is showing on your screen, but saving it to the server failed after several attempts. It\'s safe to click Approve again — reload the page in a minute to confirm it synced.');
+    }
     return;
   }
 
@@ -2153,14 +2165,19 @@ document.addEventListener('click', async (ev) => {
     status[newKey] = 'approved';
 
     _reviewStatusCache = status;
-    await saveManualEvents(manual, status);
+    const ok = await saveManualEvents(manual, status);
     renderAdminUnreviewed(); renderEvents(); buildMonthButtons(); populateVenueSelect(); updateBadge();
+    if (!ok) alert('This approval is showing on your screen, but saving it to the server failed after several attempts. It\'s safe to click Approve with Edits again — reload the page in a minute to confirm it synced.');
     return;
   }
   if (action === 'hide-event') {
     const all = getAllEvents();
     const e   = all.find(ev => eventKey(ev) === key);
-    if (e) { await hideEvent(e); renderAdminUnreviewed(); renderAdminHidden(); renderEvents(); updateBadge(); }
+    if (e) {
+      const ok = await hideEvent(e);
+      renderAdminUnreviewed(); renderAdminHidden(); renderEvents(); updateBadge();
+      if (!ok) alert('This is showing as hidden on your screen, but saving it to the server failed after several attempts. It\'s safe to click Hide again — reload the page in a minute to confirm it synced.');
+    }
     return;
   }
 
@@ -2168,14 +2185,20 @@ document.addEventListener('click', async (ev) => {
   if (action === 'restore-event') {
     const all = getAllEvents();
     const e   = all.find(ev => eventKey(ev) === key);
-    if (e) await restoreEvent(e);
+    if (e) {
+      const ok = await restoreEvent(e);
+      if (!ok) alert('This is showing as restored on your screen, but saving it to the server failed after several attempts. It\'s safe to click Restore again — reload the page in a minute to confirm it synced.');
+    }
     return;
   }
   if (action === 'delete-event') {
     if (!confirm('Permanently delete this event? It will not reappear from the scraper.')) return;
     const all = getAllEvents();
     const e   = all.find(ev => eventKey(ev) === key);
-    if (e) await deleteEventPermanently(e);
+    if (e) {
+      const ok = await deleteEventPermanently(e);
+      if (!ok) alert('This is showing as deleted on your screen, but saving it to the server failed after several attempts. It\'s safe to click Remove again — reload the page in a minute to confirm it synced.');
+    }
     return;
   }
 
