@@ -141,7 +141,7 @@
   {
     "id": 386,
     "date": "2026-09-19",
-    "title": "Donna The Buffalo, Michael Glabicki (of Rusted Root) Duo",
+    "title": "Donna The Buffalo",
     "venue": "Assembly Kingston",
     "venueUrl": "https://www.assemblykingston.com/events/donna-the-buffalo",
     "location": "Kingston, NY",
@@ -149,7 +149,7 @@
     "time": "20:00",
     "price": "$36/$48",
     "free": false,
-    "_source": "manual",
+    "_source": "scraped",
     "_manual": true
   },
   {
@@ -351,7 +351,7 @@
   {
     "id": 481,
     "date": "2026-11-08",
-    "title": "Willi Carlisle, Sparrow Smith & the Resonant Rogues",
+    "title": "Willi Carlisle",
     "venue": "Assembly Kingston",
     "venueUrl": "https://www.assemblykingston.com/events/willi-carlisle",
     "location": "Kingston, NY",
@@ -359,7 +359,7 @@
     "time": "20:00",
     "price": "$25",
     "free": false,
-    "_source": "manual",
+    "_source": "scraped",
     "_manual": true
   },
   {
@@ -407,7 +407,7 @@
   {
     "id": 498,
     "date": "2026-11-20",
-    "title": "Rising Appalachia, Viv & Riley",
+    "title": "Rising Appalachia",
     "venue": "Assembly Kingston",
     "venueUrl": "https://www.assemblykingston.com/events/rising-appalachia-1",
     "location": "Kingston, NY",
@@ -415,7 +415,7 @@
     "time": "20:00",
     "price": "$49",
     "free": false,
-    "_source": "manual",
+    "_source": "scraped",
     "_manual": true
   },
   {
@@ -11264,7 +11264,7 @@
   },
   {
     "id": 1788271733236,
-    "title": "Deerhoof, New Orthodox, Raven Chacon",
+    "title": "Deerhoof",
     "date": "2026-11-07",
     "time": "20:00",
     "venue": "Assembly Kingston",
@@ -11273,8 +11273,7 @@
     "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
     "price": "$27+",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788271974413,
@@ -19079,6 +19078,32 @@
     "location": "Hudson, NY",
     "mapsUrl": "https://maps.app.goo.gl/YDngVHEAKTL39QGy9",
     "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789767487880,
+    "title": "Lifehouse (Best of Acoustic)",
+    "date": "2026-10-16",
+    "time": "20:00",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "price": "$36+",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789767774103,
+    "title": "Low Cut Connie",
+    "date": "2026-12-29",
+    "time": "20:00",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "price": "$35",
     "free": false,
     "_manual": true
   }
