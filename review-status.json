@@ -1626,5 +1626,9 @@
   "The Egg||2026-12-18||20:00": {
     "status": "rejected",
     "hiddenAt": 1789694486666
+  },
+  "Rail Trail Cafe||2026-09-27||13:00": {
+    "status": "rejected",
+    "hiddenAt": 1789695424915
   }
 }
