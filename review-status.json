@@ -1626,5 +1626,9 @@
   "The Egg - Swyer Theatre||2026-11-21||21:30": {
     "status": "rejected",
     "hiddenAt": 1789728381111
+  },
+  "The Egg||2026-11-22||19:00": {
+    "status": "rejected",
+    "hiddenAt": 1789728399943
   }
 }
