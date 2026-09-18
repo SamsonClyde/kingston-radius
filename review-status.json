@@ -1666,5 +1666,9 @@
   "The Egg||2026-12-19||20:00": {
     "status": "rejected",
     "hiddenAt": 1789730247182
+  },
+  "Assembly Kingston||2026-11-11||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789731028349
   }
 }
