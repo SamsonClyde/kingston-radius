@@ -141,7 +141,7 @@
   {
     "id": 386,
     "date": "2026-09-19",
-    "title": "Donna The Buffalo, Michael Glabicki (of Rusted Root) Duo",
+    "title": "Donna The Buffalo",
     "venue": "Assembly Kingston",
     "venueUrl": "https://www.assemblykingston.com/events/donna-the-buffalo",
     "location": "Kingston, NY",
@@ -149,7 +149,7 @@
     "time": "20:00",
     "price": "$36/$48",
     "free": false,
-    "_source": "manual",
+    "_source": "scraped",
     "_manual": true
   },
   {
@@ -19078,6 +19078,19 @@
     "location": "Hudson, NY",
     "mapsUrl": "https://maps.app.goo.gl/YDngVHEAKTL39QGy9",
     "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789767487880,
+    "title": "Lifehouse (Best of Acoustic)",
+    "date": "2026-10-16",
+    "time": "20:00",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "price": "$36+",
     "free": false,
     "_manual": true
   }
