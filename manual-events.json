@@ -19132,5 +19132,18 @@
     "price": "$12",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789768434891,
+    "title": "Make the Yuletide Gay! - Paige Turner",
+    "date": "2026-12-19",
+    "time": "20:00",
+    "venue": "Rosendale Theater",
+    "venueUrl": "https://rosendaletheatre.org/film-series/live-music/",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sBeJVt37EKPoU8uy6",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
