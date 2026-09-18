@@ -1726,5 +1726,9 @@
     "status": "rejected",
     "hiddenAt": 1789731094374
   },
-  "Assembly Kingston||2026-10-14||7:00 pm": "approved"
+  "Assembly Kingston||2026-10-14||7:00 pm": "approved",
+  "Assembly Kingston||2026-10-30||20:00": {
+    "status": "rejected",
+    "hiddenAt": 1789767520447
+  }
 }
