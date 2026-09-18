@@ -19063,5 +19063,18 @@
     "price": "$171+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789729010531,
+    "title": "Oktoberfest Pre-party - Otto's German Band",
+    "date": "2026-09-27",
+    "time": "13:00",
+    "venue": "Return Brewing",
+    "venueUrl": "https://www.instagram.com/returnbrewing/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YDngVHEAKTL39QGy9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
