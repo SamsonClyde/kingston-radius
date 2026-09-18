@@ -19185,5 +19185,18 @@
     "price": "$25-$50",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789768937278,
+    "title": "Classical Crossroads – Baroque to Tango",
+    "date": "2026-10-18",
+    "time": "16:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "price": "$25-$50",
+    "free": false,
+    "_manual": true
   }
 ]
