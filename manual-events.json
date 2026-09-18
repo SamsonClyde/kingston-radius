@@ -351,7 +351,7 @@
   {
     "id": 481,
     "date": "2026-11-08",
-    "title": "Willi Carlisle",
+    "title": "Willi Carlisle, Sparrow Smith & the Resonant Rogues",
     "venue": "Assembly Kingston",
     "venueUrl": "https://www.assemblykingston.com/events/willi-carlisle",
     "location": "Kingston, NY",
@@ -359,7 +359,7 @@
     "time": "20:00",
     "price": "$25",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
