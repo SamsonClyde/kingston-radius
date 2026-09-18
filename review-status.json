@@ -1562,5 +1562,9 @@
   "Unicorn Bar||2026-10-31||9:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788432676543
+  },
+  "The Egg||2026-09-20||19:00": {
+    "status": "rejected",
+    "hiddenAt": 1789727826246
   }
 }
