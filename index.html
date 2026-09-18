@@ -2288,7 +2288,11 @@ document.addEventListener('click', async (ev) => {
     if (!confirm('Hide this event from the site?')) return;
     const all = getAllEvents();
     const e   = all.find(ev => eventKey(ev) === key);
-    if (e) { await hideEvent(e); renderEvents(); buildMonthButtons(); populateVenueSelect(); updateBadge(); }
+    if (e) {
+      const ok = await hideEvent(e);
+      renderEvents(); buildMonthButtons(); populateVenueSelect(); updateBadge();
+      if (!ok) alert('This is showing as hidden on your screen, but saving it to the server failed after several attempts. It\'s safe to click "Hide from site" again — reload the page in a minute to confirm it synced.');
+    }
     return;
   }
 });
@@ -2409,8 +2413,9 @@ async function hideVenueFromFront(venueName) {
     if (e.venue === venueName && parseDate(e.date) >= today)
       status[eventKey(e)] = { status: 'rejected', hiddenAt: Date.now() };
   });
-  await saveReviewStatus(status);
+  const ok = await saveReviewStatus(status);
   renderEvents(); populateVenueSelect(); buildMonthButtons(); buildVenueDeleteList(); updateBadge();
+  if (!ok) alert(`"${venueName}" is showing as hidden on your screen, but saving it to the server failed after several attempts. It's safe to try again — reload the page in a minute to confirm it synced.`);
 }
 
 function updateManageVenueBtn() {
