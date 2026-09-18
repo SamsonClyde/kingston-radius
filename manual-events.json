@@ -19198,5 +19198,18 @@
     "price": "$25-$50",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789768993167,
+    "title": "Sonic Mandala ~ Healing Groove Meditation with HU VIBRATIONAL",
+    "date": "2026-10-24",
+    "time": "19:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "price": "$22-$37",
+    "free": false,
+    "_manual": true
   }
 ]
