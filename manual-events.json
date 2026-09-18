@@ -19119,5 +19119,18 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789768381070,
+    "title": "Concert: Adventure + Jack Manley",
+    "date": "2026-10-09",
+    "time": "20:00",
+    "venue": "Rosendale Theater",
+    "venueUrl": "https://rosendaletheatre.org/film-series/live-music/",
+    "location": "Rosendale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sBeJVt37EKPoU8uy6",
+    "price": "$12",
+    "free": false,
+    "_manual": true
   }
 ]
