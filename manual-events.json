@@ -17396,7 +17396,7 @@
   },
   {
     "id": 1789476770876,
-    "title": "Melvin Seals",
+    "title": "Melvin Seals, JGB",
     "date": "2026-10-14",
     "time": "19:30",
     "venue": "The Egg",
@@ -17405,7 +17405,8 @@
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "$152",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789476817464,
