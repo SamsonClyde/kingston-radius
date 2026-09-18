@@ -1718,5 +1718,9 @@
   "Bearsville Theater||2026-09-20||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789731089881
+  },
+  "Christ the King Episcopal Church||2026-11-01||": {
+    "status": "rejected",
+    "hiddenAt": 1789731094374
   }
 }
