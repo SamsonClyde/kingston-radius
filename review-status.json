@@ -1567,88 +1567,12 @@
     "status": "rejected",
     "hiddenAt": 1789727826246
   },
-  "Rail Trail Cafe||2026-09-27||13:00": {
+  "Assembly||2026-09-19||7:00 pm": {
     "status": "rejected",
-    "hiddenAt": 1789727881290
+    "hiddenAt": 1789727846326
   },
-  "The Egg||2026-09-25||19:00": {
+  "Assembly||2026-10-23||7:00 pm": {
     "status": "rejected",
-    "hiddenAt": 1789727902294
-  },
-  "The Egg - Swyer Theatre||2026-10-15||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1789727942013
-  },
-  "The Egg - Swyer Theatre||2026-10-17||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1789727948189
-  },
-  "The Egg - Swyer Theatre||2026-10-18||15:00": {
-    "status": "rejected",
-    "hiddenAt": 1789727959682
-  },
-  "The Egg - Swyer Theatre||2026-10-18||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1789727969460
-  },
-  "The Egg - Swyer Theatre||2026-10-17||15:00": {
-    "status": "rejected",
-    "hiddenAt": 1789727980348
-  },
-  "The Egg||2026-10-17||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1789727994193
-  },
-  "The Egg||2026-11-03||19:30": {
-    "status": "rejected",
-    "hiddenAt": 1789728305004
-  },
-  "The Egg||2026-11-13||19:30": {
-    "status": "rejected",
-    "hiddenAt": 1789728324530
-  },
-  "The Egg||2026-11-20||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1789728335020
-  },
-  "The Egg - Swyer Theatre||2026-11-14||20:00": {
-    "status": "rejected",
-    "hiddenAt": 1789728350217
-  },
-  "The Egg||2026-11-15||19:30": {
-    "status": "rejected",
-    "hiddenAt": 1789728359063
-  },
-  "The Egg - Swyer Theatre||2026-11-21||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1789728372399
-  },
-  "The Egg - Swyer Theatre||2026-11-21||21:30": {
-    "status": "rejected",
-    "hiddenAt": 1789728381111
-  },
-  "The Egg||2026-11-22||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1789728399943
-  },
-  "The Egg||2026-11-23||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1789728417138
-  },
-  "The Egg||2026-12-03||19:30": {
-    "status": "rejected",
-    "hiddenAt": 1789728432988
-  },
-  "The Egg||2026-12-05||16:00": {
-    "status": "rejected",
-    "hiddenAt": 1789728441458
-  },
-  "The Egg||2026-12-18||20:00": {
-    "status": "rejected",
-    "hiddenAt": 1789728494600
-  },
-  "The Egg||2026-12-19||20:00": {
-    "status": "rejected",
-    "hiddenAt": 1789728510069
+    "hiddenAt": 1789728756823
   }
 }
