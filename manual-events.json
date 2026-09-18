@@ -19251,5 +19251,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 368,
+    "date": "2026-10-23",
+    "title": "Peppino D'Agostino",
+    "venue": "Tompkins Corners Cultural Center",
+    "venueUrl": "https://www.eventbrite.com/e/2001246717805?aff=oddtdtcreator",
+    "location": "Putnam Valley, NY",
+    "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
+    "time": "19:30",
+    "price": "$29",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
