@@ -2133,6 +2133,7 @@ document.addEventListener('click', async (ev) => {
     if (e) {
       const ok = await approveEvent(e);
       if (!ok) alert('This approval is showing on your screen, but saving it to the server failed after several attempts. It\'s safe to click Approve again — reload the page in a minute to confirm it synced.');
+      else showToast('Approved and saved ✓');
     }
     return;
   }
@@ -2168,6 +2169,7 @@ document.addEventListener('click', async (ev) => {
     const ok = await saveManualEvents(manual, status);
     renderAdminUnreviewed(); renderEvents(); buildMonthButtons(); populateVenueSelect(); updateBadge();
     if (!ok) alert('This approval is showing on your screen, but saving it to the server failed after several attempts. It\'s safe to click Approve with Edits again — reload the page in a minute to confirm it synced.');
+    else showToast('Approved and saved ✓');
     return;
   }
   if (action === 'hide-event') {
@@ -2177,6 +2179,7 @@ document.addEventListener('click', async (ev) => {
       const ok = await hideEvent(e);
       renderAdminUnreviewed(); renderAdminHidden(); renderEvents(); updateBadge();
       if (!ok) alert('This is showing as hidden on your screen, but saving it to the server failed after several attempts. It\'s safe to click Hide again — reload the page in a minute to confirm it synced.');
+      else showToast('Hidden and saved ✓');
     }
     return;
   }
@@ -2188,6 +2191,7 @@ document.addEventListener('click', async (ev) => {
     if (e) {
       const ok = await restoreEvent(e);
       if (!ok) alert('This is showing as restored on your screen, but saving it to the server failed after several attempts. It\'s safe to click Restore again — reload the page in a minute to confirm it synced.');
+      else showToast('Restored and saved ✓');
     }
     return;
   }
@@ -2198,6 +2202,7 @@ document.addEventListener('click', async (ev) => {
     if (e) {
       const ok = await deleteEventPermanently(e);
       if (!ok) alert('This is showing as deleted on your screen, but saving it to the server failed after several attempts. It\'s safe to click Remove again — reload the page in a minute to confirm it synced.');
+      else showToast('Deleted and saved ✓');
     }
     return;
   }
@@ -2292,6 +2297,7 @@ document.addEventListener('click', async (ev) => {
       const ok = await hideEvent(e);
       renderEvents(); buildMonthButtons(); populateVenueSelect(); updateBadge();
       if (!ok) alert('This is showing as hidden on your screen, but saving it to the server failed after several attempts. It\'s safe to click "Hide from site" again — reload the page in a minute to confirm it synced.');
+      else showToast('Hidden and saved ✓');
     }
     return;
   }
@@ -2416,6 +2422,7 @@ async function hideVenueFromFront(venueName) {
   const ok = await saveReviewStatus(status);
   renderEvents(); populateVenueSelect(); buildMonthButtons(); buildVenueDeleteList(); updateBadge();
   if (!ok) alert(`"${venueName}" is showing as hidden on your screen, but saving it to the server failed after several attempts. It's safe to try again — reload the page in a minute to confirm it synced.`);
+  else showToast(`"${venueName}" hidden and saved ✓`);
 }
 
 function updateManageVenueBtn() {
