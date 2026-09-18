@@ -19159,5 +19159,18 @@
     "free": false,
     "_source": "email",
     "_manual": true
+  },
+  {
+    "id": 1789768820911,
+    "title": "Eleni Govetas Kompanía, Duo al Rouh",
+    "date": "2026-10-01",
+    "time": "20:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "price": "$22-$37",
+    "free": false,
+    "_manual": true
   }
 ]
