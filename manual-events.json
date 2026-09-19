@@ -8797,7 +8797,7 @@
   },
   {
     "id": 1787511926274,
-    "title": "Grape Stomping Festival Sept 26 & 27, Oct 3 & 4 (Live Music)",
+    "title": "Grape Stomping Festival Sept 26 & 27 (Live Music)",
     "date": "2026-09-27",
     "time": "23:00",
     "venue": "Robibero Winery",
@@ -8806,7 +8806,8 @@
     "mapsUrl": "https://www.robiberofamilyvineyards.com/events",
     "price": "$25adv/$40door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787511951854,
