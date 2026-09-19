@@ -185,6 +185,10 @@
     "status": "rejected",
     "hiddenAt": 1786963780976
   },
+  "Assembly Kingston||2026-09-18||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1786963836020
+  },
   "Assembly Kingston||2026-09-19||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963840336
@@ -345,6 +349,10 @@
   },
   "The Falcon||2026-09-10||19:30": "approved",
   "The Falcon||2026-09-13||19:30": "approved",
+  "The Falcon||2026-09-18||See website": {
+    "status": "rejected",
+    "hiddenAt": 1787076308372
+  },
   "The Falcon||2026-09-18||19:30": "approved",
   "The Falcon||2026-09-19||See website": {
     "status": "rejected",
@@ -589,6 +597,10 @@
   "Tubby's||2026-09-14||20:00": "approved",
   "Tubby's||2026-09-16||20:00": "approved",
   "Tubby's||2026-09-17||20:00": "approved",
+  "Tubby's||2026-09-18||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787309983922
+  },
   "Tubby's||2026-09-18||20:00": "approved",
   "Tubby's||2026-09-19||4:00 pm": {
     "status": "rejected",
@@ -773,6 +785,10 @@
   "Rail Trail Cafe||2026-09-12||17:00": "approved",
   "Rail Trail Cafe||2026-09-13||13:00": "approved",
   "Rail Trail Cafe||2026-09-13||17:00": "approved",
+  "Rail Trail Cafe||2026-09-18||5:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787484896889
+  },
   "Rail Trail Cafe||2026-09-18||17:00": "approved",
   "Rail Trail Cafe||2026-09-19||5:00 pm": {
     "status": "rejected",
@@ -863,6 +879,10 @@
     "hiddenAt": 1787538952589
   },
   "Tempo Arts||2026-09-06||16:00": "approved",
+  "Tempo Arts||2026-09-18||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1787539133008
+  },
   "Tempo Arts||2026-09-18||20:00": "approved",
   "Tempo Arts||2026-09-19||8:00 PM": {
     "status": "rejected",
@@ -977,6 +997,10 @@
     "status": "rejected",
     "hiddenAt": 1787541896207
   },
+  "Bardavon||2026-09-18||": {
+    "status": "rejected",
+    "hiddenAt": 1787572439707
+  },
   "Bardavon||2026-10-03||": {
     "status": "rejected",
     "hiddenAt": 1787572443212
@@ -1038,6 +1062,10 @@
   "Tompkins Corners Cultural Center||2026-09-18||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1787575986193
+  },
+  "Tompkins Corners Cultural Center||2026-09-18||19:30": {
+    "status": "rejected",
+    "hiddenAt": 1789769666884
   },
   "Tompkins Corners Cultural Center||2026-09-23||7:30 pm": {
     "status": "rejected",
@@ -1137,6 +1165,10 @@
   "Towne Crier Café||2026-09-06||19:00": "approved",
   "Towne Crier Café||2026-09-11||20:00": "approved",
   "Towne Crier Café||2026-09-12||20:00": "approved",
+  "Towne Crier Café||2026-09-18||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787576742567
+  },
   "Towne Crier Café||2026-09-18||20:00": "approved",
   "Towne Crier Café||2026-09-25||8:00 pm": {
     "status": "rejected",
@@ -1182,6 +1214,10 @@
     "hiddenAt": 1787591107859
   },
   "Unicorn Bar||2026-09-17||19:00": "approved",
+  "Unicorn Bar||2026-09-18||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1787591237543
+  },
   "Unicorn Bar||2026-09-18||19:00": "approved",
   "Unicorn Bar||2026-09-19||7:00 pm": {
     "status": "rejected",
@@ -1402,6 +1438,10 @@
     "status": "rejected",
     "hiddenAt": 1788107871922
   },
+  "Unicorn Bar||2026-09-18||9:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1788107935256
+  },
   "Unicorn Bar||2026-09-18||21:30": "approved",
   "Unicorn Bar||2026-09-23||7:30 pm": {
     "status": "rejected",
@@ -1461,6 +1501,10 @@
     "status": "rejected",
     "hiddenAt": 1788431081466
   },
+  "Colony Woodstock||2026-09-18||": {
+    "status": "rejected",
+    "hiddenAt": 1788431529706
+  },
   "Colony Woodstock||2026-09-23||": {
     "status": "rejected",
     "hiddenAt": 1788431532313
@@ -1472,6 +1516,10 @@
   "Colony Woodstock||2026-09-25||": {
     "status": "rejected",
     "hiddenAt": 1788431536801
+  },
+  "Stissing Center||2026-09-18||7:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1788431569607
   },
   "Stissing Center||2026-10-02||7:30 PM": {
     "status": "rejected",
@@ -1657,6 +1705,10 @@
     "status": "rejected",
     "hiddenAt": 1789731068677
   },
+  "Bardavon||2026-09-18||7:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1789731073240
+  },
   "Bardavon||2026-11-13||": {
     "status": "rejected",
     "hiddenAt": 1789731077380
@@ -1690,6 +1742,14 @@
     "status": "rejected",
     "hiddenAt": 1789767955878
   },
+  "Colony Woodstock||2026-09-18||6:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1789767967455
+  },
+  "Colony Woodstock||2026-09-18||7:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1789767980694
+  },
   "Colony Woodstock||2026-09-19||6:00 PM": {
     "status": "rejected",
     "hiddenAt": 1789767999110
@@ -1705,6 +1765,10 @@
   "Hudson River Cruises||2026-10-23||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789768046996
+  },
+  "Keegan Ales||2026-09-18||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789768062739
   },
   "Keegan Ales||2026-09-19||7:00 pm": {
     "status": "rejected",
@@ -1823,6 +1887,10 @@
     "status": "rejected",
     "hiddenAt": 1789769238032
   },
+  "The Grand||2026-09-18||9:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1789769249938
+  },
   "The Grand||2026-09-19||4:30 PM": {
     "status": "rejected",
     "hiddenAt": 1789769252765
@@ -1897,16 +1965,8 @@
     "status": "rejected",
     "hiddenAt": 1789769608231
   },
-  "Bacchus||2026-09-19||22:00": {
+  "NoFun||2026-09-23||20:00": {
     "status": "rejected",
-    "hiddenAt": 1789786485944
-  },
-  "NoFun||2026-09-21||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1789813545755
-  },
-  "NoFun||2026-09-22||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1789813552327
+    "hiddenAt": 1789813612713
   }
 }
