@@ -870,6 +870,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hidden-card-info { flex:1; min-width:200px; }
   .hidden-card-title { font-weight:600; font-size:0.88rem; margin-bottom:3px; }
   .hidden-card-meta { font-size:0.76rem; color:var(--muted); }
+  .note-section { margin-bottom:24px; }
+  .note-section h3 { font-size:0.95rem; margin:0 0 4px; }
+  .note-desc { font-size:0.78rem; color:var(--muted); margin:0 0 10px; max-width:600px; }
+  .note-item { background:var(--card); border:1px solid var(--border); border-radius:8px;
+    padding:10px 14px; margin-bottom:6px; font-size:0.82rem; line-height:1.5; }
+  .note-item ul { margin:4px 0 0; padding-left:18px; }
+  .note-item li { margin-bottom:2px; }
   .hidden-card-actions { display:flex; gap:6px; flex-shrink:0; }
   .btn-restore { background:none; color:var(--text); border:1.5px solid var(--border);
     border-radius:6px; padding:6px 14px; font-family:'DM Sans',sans-serif; font-size:0.8rem; cursor:pointer; }
@@ -1034,6 +1041,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button class="admin-tab-btn active" data-tab="unreviewed">Unreviewed <span id="unreviewed-count"></span></button>
       <button class="admin-tab-btn" data-tab="hidden">Hidden</button>
       <button class="admin-tab-btn" data-tab="add">+ Add New</button>
+      <button class="admin-tab-btn" data-tab="notes">Notes <span id="notes-count"></span></button>
     </div>
 
     <!-- Unreviewed -->
@@ -1044,6 +1052,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Hidden -->
     <div class="admin-tab-panel" id="tab-hidden">
       <div id="hidden-list"><div class="empty-state">Loading…</div></div>
+    </div>
+
+    <!-- Notes -->
+    <div class="admin-tab-panel" id="tab-notes">
+      <div id="notes-list"><div class="empty-state">Loading…</div></div>
     </div>
 
     <!-- Add New -->
@@ -2083,6 +2096,161 @@ function renderAdminUnreviewed() {
 }
 
 // ── RENDER ADMIN HIDDEN ───────────────────────────────────────────────────────
+// ── DATA HEALTH NOTES ───────────────────────────────────────────────────────
+function _bigrams(s) {
+  s = (s || '').toLowerCase().replace(/[^a-z0-9\s]/g, '');
+  const b = [];
+  for (let i = 0; i < s.length - 1; i++) b.push(s.slice(i, i + 2));
+  return b;
+}
+function _similarity(a, b) {
+  const A = _bigrams(a), B = _bigrams(b);
+  if (!A.length || !B.length) return 0;
+  let matches = 0;
+  const bCopy = [...B];
+  for (const bg of A) {
+    const idx = bCopy.indexOf(bg);
+    if (idx !== -1) { matches++; bCopy.splice(idx, 1); }
+  }
+  return (2 * matches) / (A.length + B.length);
+}
+function _noteKey(venue, date, time) {
+  return `${(venue||'').trim().toLowerCase()}||${date}||${normTimeForNotes(time)}`;
+}
+function normTimeForNotes(t) {
+  if (!t) return '';
+  t = t.trim().toLowerCase().replace('.', '');
+  const m = t.match(/(\d{1,2}):(\d{2})\s*(am|pm)?/);
+  if (!m) return t;
+  let h = parseInt(m[1]); const mn = m[2]; const ap = m[3];
+  if (ap === 'pm' && h !== 12) h += 12;
+  if (ap === 'am' && h === 12) h = 0;
+  return `${String(h).padStart(2,'0')}:${mn}`;
+}
+
+function renderAdminNotes() {
+  const container = document.getElementById('notes-list');
+  if (!container) return;
+  const today = new Date(); today.setHours(0,0,0,0);
+  // Deliberately using raw getManualEvents() for duplicate checks, NOT getApprovedEvents() —
+  // getAllEvents() already silently merges entries that share an identical raw venue+date+time
+  // key, so checking the merged data would hide exactly the kind of redundant-entry problem
+  // this tab exists to catch. We want to see what's really sitting in the file.
+  const rawManual = getManualEvents();
+  const upcoming  = getApprovedEvents();
+  let totalIssues = 0;
+  let html = '';
+
+  // 1. Exact duplicates (same venue+date+time, 2+ raw entries — regardless of whether
+  // they'd currently render as one card or not)
+  const keyGroups = {};
+  rawManual.forEach(e => {
+    const k = _noteKey(e.venue, e.date, e.time);
+    (keyGroups[k] = keyGroups[k] || []).push(e);
+  });
+  const exactDupes = Object.values(keyGroups).filter(g => g.length > 1);
+  if (exactDupes.length) {
+    totalIssues += exactDupes.length;
+    html += `<div class="note-section"><h3>⚠️ Duplicate listings (${exactDupes.length})</h3>
+      <p class="note-desc">Same venue, date, and time appearing more than once in your data. If these are really different shows (e.g. two acts sharing a bill), no action needed — otherwise, hide or delete the extra one.</p>`;
+    exactDupes.forEach(g => {
+      html += `<div class="note-item"><strong>${esc(g[0].venue)}</strong> — ${g[0].date} ${g[0].time ? formatTime(g[0].time) : ''}<ul>` +
+        g.map(e => `<li>${esc(e.title)} <span style="color:var(--muted)">(id: ${e.id})</span></li>`).join('') + `</ul></div>`;
+    });
+    html += `</div>`;
+  }
+
+  // 2. Possible duplicates from time-format mismatches (same venue+date, similar title, different raw time)
+  const byVenueDate = {};
+  rawManual.forEach(e => {
+    const k = `${(e.venue||'').trim().toLowerCase()}||${e.date}`;
+    (byVenueDate[k] = byVenueDate[k] || []).push(e);
+  });
+  const fuzzyPairs = [];
+  Object.values(byVenueDate).forEach(group => {
+    if (group.length < 2) return;
+    for (let i = 0; i < group.length; i++) {
+      for (let j = i+1; j < group.length; j++) {
+        const t1 = normTimeForNotes(group[i].time), t2 = normTimeForNotes(group[j].time);
+        if (t1 === t2) continue; // already caught above as an exact duplicate
+        const sim = _similarity(group[i].title, group[j].title);
+        if (sim > 0.6) fuzzyPairs.push([group[i], group[j], sim]);
+      }
+    }
+  });
+  if (fuzzyPairs.length) {
+    totalIssues += fuzzyPairs.length;
+    html += `<div class="note-section"><h3>🕐 Possibly the same show, different time format (${fuzzyPairs.length})</h3>
+      <p class="note-desc">Same venue and date, similar titles, but listed at different times. Could be a genuine early/late or matinee show — or the same show entered twice with inconsistent time formatting. Worth a quick check.</p>`;
+    fuzzyPairs.forEach(([a,b]) => {
+      html += `<div class="note-item"><strong>${esc(a.venue)}</strong> — ${a.date}<ul>
+        <li>${esc(a.title)} (${a.time ? formatTime(a.time) : '?'})</li>
+        <li>${esc(b.title)} (${b.time ? formatTime(b.time) : '?'})</li>
+      </ul></div>`;
+    });
+    html += `</div>`;
+  }
+
+  // 3. Stale past events sitting in manual-events.json
+  const stalePast = rawManual.filter(e => {
+    const d = parseDate(e.date);
+    return d && d < today;
+  });
+  if (stalePast.length) {
+    totalIssues += stalePast.length;
+    html += `<div class="note-section"><h3>🗓️ Past events still in your data (${stalePast.length})</h3>
+      <p class="note-desc">These already happened and no longer show on the site, but they're still sitting in manual-events.json taking up space. Safe to remove whenever you want to tidy up.</p>
+      <div class="note-item">${stalePast.slice(0,15).map(e => `${esc(e.title)} — ${e.date}`).join('<br>')}${stalePast.length > 15 ? `<br><em>+ ${stalePast.length - 15} more</em>` : ''}</div></div>`;
+  }
+
+  // 4. Venues missing a drive time (checking the raw object directly — getDriveTime()
+  // silently defaults to 45 for unknown venues, which would hide this check)
+  const venuesNoTime = [...new Set(upcoming.filter(e => DRIVE_TIMES[e.venue] === undefined).map(e => e.venue))];
+  if (venuesNoTime.length) {
+    totalIssues += venuesNoTime.length;
+    html += `<div class="note-section"><h3>📍 Venues with no drive time set (${venuesNoTime.length})</h3>
+      <p class="note-desc">The distance filter (30/60/90 mins) won't work correctly for these until a drive time is added.</p>
+      <div class="note-item">${venuesNoTime.map(esc).join(', ')}</div></div>`;
+  }
+
+  // 5. Listings missing key info
+  const missingInfo = upcoming.filter(e => !e.mapsUrl || !e.venueUrl || !e.location);
+  if (missingInfo.length) {
+    totalIssues += missingInfo.length;
+    html += `<div class="note-section"><h3>ℹ️ Listings missing info (${missingInfo.length})</h3>
+      <p class="note-desc">Missing a maps link, venue link, or location — the matching part of the card won't be clickable for these.</p>
+      <div class="note-item">${missingInfo.slice(0,15).map(e => {
+        const missing = [!e.venueUrl && 'venue link', !e.mapsUrl && 'maps link', !e.location && 'location'].filter(Boolean).join(', ');
+        return `${esc(e.title)} (${esc(e.venue)}) — missing ${missing}`;
+      }).join('<br>')}${missingInfo.length > 15 ? `<br><em>+ ${missingInfo.length - 15} more</em>` : ''}</div></div>`;
+  }
+
+  // 6. Similar venue names that might be typos/duplicates
+  const uniqueVenues = [...new Set(getAllEvents().map(e => e.venue).filter(Boolean))];
+  const venuePairs = [];
+  for (let i = 0; i < uniqueVenues.length; i++) {
+    for (let j = i+1; j < uniqueVenues.length; j++) {
+      if (uniqueVenues[i] === uniqueVenues[j]) continue;
+      const sim = _similarity(uniqueVenues[i], uniqueVenues[j]);
+      if (sim > 0.6) venuePairs.push([uniqueVenues[i], uniqueVenues[j]]);
+    }
+  }
+  if (venuePairs.length) {
+    totalIssues += venuePairs.length;
+    html += `<div class="note-section"><h3>🏷️ Similar venue names — possible typos (${venuePairs.length})</h3>
+      <p class="note-desc">These might be the same venue entered two different ways, which splits their drive time and templates across two names.</p>
+      <div class="note-item">${venuePairs.map(([a,b]) => `"${esc(a)}" vs "${esc(b)}"`).join('<br>')}</div></div>`;
+  }
+
+  if (totalIssues === 0) {
+    container.innerHTML = '<div class="empty-state">✓ No issues found — everything looks clean.</div>';
+  } else {
+    container.innerHTML = html;
+  }
+  const badge = document.getElementById('notes-count');
+  if (badge) badge.textContent = totalIssues > 0 ? totalIssues : '';
+}
+
 function renderAdminHidden() {
   const container = document.getElementById('hidden-list');
   if (!container) return;
@@ -2114,6 +2282,7 @@ function initAdminTabs() {
       document.getElementById('tab-' + btn.dataset.tab)?.classList.add('active');
       if (btn.dataset.tab === 'unreviewed') renderAdminUnreviewed();
       if (btn.dataset.tab === 'hidden')     renderAdminHidden();
+      if (btn.dataset.tab === 'notes')      renderAdminNotes();
       if (btn.dataset.tab === 'add')        { populateVenueTemplateDropdown(); loadSavedVenue(); }
     });
   });
