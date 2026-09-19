@@ -2083,5 +2083,9 @@
   "Tubby's||2026-11-07||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789815455216
+  },
+  "Tubby's||2026-11-13||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789815465368
   }
 }
