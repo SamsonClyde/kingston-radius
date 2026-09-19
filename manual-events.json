@@ -957,15 +957,15 @@
   },
   {
     "id": 8,
-    "date": "2026-09-19",
-    "title": "Claudia Bruce (Album Release)",
-    "venue": "Time & Space Limited",
-    "venueUrl": "https://timeandspace.org/events/#live",
-    "location": "Hudson, NY",
-    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
-    "time": "15:30",
-    "price": "Free",
-    "free": true,
+    "date": "2026-09-17",
+    "title": "Third Thursday Artist Happy Hour with CCoA - The Owen Davis Jazz Trio",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "18:00",
+    "price": "See website",
+    "free": false,
     "_source": "email",
     "_manual": true
   },
@@ -9989,7 +9989,7 @@
     "id": 1787578183278,
     "title": "The Richard Baratta Latin Jazz Quartet - Salon Stage",
     "date": "2026-09-20",
-    "time": "23:30",
+    "time": "11:30",
     "venue": "Towne Crier Café",
     "venueUrl": "https://townecrier.com/",
     "location": "Beacon, NY",
@@ -11147,7 +11147,7 @@
   },
   {
     "id": 1788138396419,
-    "title": "Hudson Valley Flamenco Festival",
+    "title": "Hudson Valley Flamenco Festival - Verano",
     "date": "2026-10-02",
     "time": "19:00",
     "venue": "The Living Room at Full Circle",
@@ -11156,11 +11156,12 @@
     "mapsUrl": "https://maps.app.goo.gl/TfiXUNFin7ELp3u38",
     "price": "$35-$55",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788138422115,
-    "title": "Hudson Valley Flamenco Festival",
+    "title": "Hudson Valley Flamenco Festival - Kati García, Renart Trio Envision Spanish Dance",
     "date": "2026-10-03",
     "time": "19:00",
     "venue": "The Living Room at Full Circle",
@@ -11169,7 +11170,8 @@
     "mapsUrl": "https://maps.app.goo.gl/TfiXUNFin7ELp3u38",
     "price": "$35-$55",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788138523718,
@@ -19264,20 +19266,6 @@
     "price": "$29",
     "free": false,
     "_source": "scraped",
-    "_manual": true
-  },
-  {
-    "id": 72,
-    "date": "2026-10-29",
-    "title": "Julius Eastman: Beyond Categories - A Concert-Lecture in Honor of His Birthday with Omri Riss Chbarbi",
-    "venue": "Time & Space Limited",
-    "venueUrl": "https://timeandspace.org/events/julius-eastman-beyond-categories/",
-    "location": "Hudson, NY",
-    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
-    "time": "19:00",
-    "price": "$10",
-    "free": false,
-    "_source": "email",
     "_manual": true
   }
 ]
