@@ -19265,5 +19265,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 72,
+    "date": "2026-10-29",
+    "title": "Julius Eastman: Beyond Categories - A Concert-Lecture in Honor of His Birthday with Omri Riss Chbarbi",
+    "venue": "Time & Space Limited",
+    "venueUrl": "https://timeandspace.org/events/julius-eastman-beyond-categories/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "time": "19:00",
+    "price": "$10",
+    "free": false,
+    "_source": "email",
+    "_manual": true
   }
 ]
