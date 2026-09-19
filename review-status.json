@@ -1928,5 +1928,9 @@
   "NoFun||2026-09-27||6:00 PM": {
     "status": "rejected",
     "hiddenAt": 1789814193295
+  },
+  "PS21 Chatham||2026-09-19||7:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1789814247749
   }
 }
