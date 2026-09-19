@@ -2283,6 +2283,8 @@ document.addEventListener('click', async (ev) => {
     btn.textContent = 'Save'; btn.disabled = false;
     if (!ok) {
       alert('This edit is showing on your screen, but saving it to the server failed after several attempts. It\'s safe to click Save again — reload the page in a minute to confirm it synced.');
+    } else {
+      showToast('Saved ✓');
     }
     const ie = document.getElementById('ie-' + key);
     if (ie) ie.style.display = 'none';
