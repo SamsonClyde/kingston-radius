@@ -1968,5 +1968,9 @@
   "The Living Room at Full Circle||2026-10-03||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1789988068869
+  },
+  "The Living Room at Full Circle||2026-10-15||6:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1789988071836
   }
 }
