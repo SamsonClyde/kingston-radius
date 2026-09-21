@@ -19146,5 +19146,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789986800385,
+    "title": "Field + Supply Fall Market Day Three - The High Nooners, Jack Grace, Muddy Ruckus",
+    "date": "2026-10-11",
+    "time": "23:00",
+    "venue": "Hutton Brickyards",
+    "venueUrl": "https://fieldandsupply.com/pages/fall-mrkt-2026",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+North+St+Kingston+NY",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
