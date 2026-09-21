@@ -19250,5 +19250,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789987969941,
+    "title": "Don't Be The Wurst, Mr. Big Head, Justin Cole and The Lower 48",
+    "date": "2026-10-10",
+    "time": "11:30",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
