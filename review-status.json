@@ -2020,5 +2020,9 @@
   "Tompkins Corners Cultural Center||2027-03-13||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1789988198919
+  },
+  "Tompkins Corners Cultural Center||2027-03-19||4:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789988203399
   }
 }
