@@ -1856,5 +1856,9 @@
   "Hutton Brickyards||2026-10-09||10:00 am": {
     "status": "rejected",
     "hiddenAt": 1789986833540
+  },
+  "Keegan Ales||2026-09-22||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789986837310
   }
 }
