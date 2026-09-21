@@ -11080,7 +11080,7 @@
   },
   {
     "id": 1788138422115,
-    "title": "Hudson Valley Flamenco Festival",
+    "title": "Hudson Valley Flamenco Festival - Kati García-Renart Trio Envision Spanish Dance",
     "date": "2026-10-03",
     "time": "19:00",
     "venue": "The Living Room at Full Circle",
@@ -11089,7 +11089,8 @@
     "mapsUrl": "https://maps.app.goo.gl/TfiXUNFin7ELp3u38",
     "price": "$35-$55",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788138523718,
