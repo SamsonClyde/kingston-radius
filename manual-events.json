@@ -19263,5 +19263,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789987992964,
+    "title": "Bitter Sweet Descent",
+    "date": "2026-10-17",
+    "time": "17:00",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
