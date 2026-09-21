@@ -772,5 +772,11 @@
     "location": "Peekskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
     "drive": 82
+  },
+  "Rushing Duck": {
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "drive": 55
   }
 }
