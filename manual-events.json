@@ -19120,5 +19120,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1789986661953,
+    "title": "Field + Supply Fall Market Day One -  Nate Martel Band, Erin Harpe, Big Luxe",
+    "date": "2026-10-09",
+    "time": "11:00",
+    "venue": "Hutton Brickyards",
+    "venueUrl": "https://fieldandsupply.com/pages/fall-mrkt-2026",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+North+St+Kingston+NY",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
