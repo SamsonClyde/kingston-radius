@@ -1920,5 +1920,9 @@
   "Rail Trail Cafe||2026-10-04||9:00 am": {
     "status": "rejected",
     "hiddenAt": 1789987027139
+  },
+  "Rosendale Theater||2026-10-09||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789987048587
   }
 }
