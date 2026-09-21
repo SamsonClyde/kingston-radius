@@ -1924,5 +1924,9 @@
   "Rosendale Theater||2026-10-09||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789987048587
+  },
+  "Stissing Center||2026-10-04||3:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1789987053338
   }
 }
