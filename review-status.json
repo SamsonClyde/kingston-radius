@@ -2059,5 +2059,10 @@
     "status": "rejected",
     "hiddenAt": 1789988407211
   },
-  "Unicorn Bar||2026-10-17||8:30 pm": "approved"
+  "Unicorn Bar||2026-10-17||8:30 pm": "approved",
+  "WildHeart: Center for Performance and Embodiment Practice||2026-09-26||11:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1789988680520
+  },
+  "WildHeart||2026-09-26||23:00": "approved"
 }
