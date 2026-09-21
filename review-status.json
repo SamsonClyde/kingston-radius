@@ -1848,5 +1848,9 @@
   "Bard College Conservatory||2026-10-31||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789986366534
+  },
+  "Christ the King Episcopal Church||2026-11-01||": {
+    "status": "rejected",
+    "hiddenAt": 1789986370357
   }
 }
