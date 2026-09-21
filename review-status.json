@@ -1832,5 +1832,9 @@
   "Assembly Kingston||2026-12-29||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789986086559
+  },
+  "Athens Cultural Center||2026-09-24||6:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1789986294951
   }
 }
