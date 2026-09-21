@@ -4575,14 +4575,14 @@
   },
   {
     "id": 372,
-    "date": "2026-10-23",
-    "title": "RoseAnn Fino, Dante DeFelice",
-    "venue": "The Falcon",
-    "venueUrl": "https://www.liveatthefalcon.com",
-    "location": "Marlboro, NY",
-    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    "time": "19:30",
-    "price": "See website",
+    "date": "2026-10-30",
+    "title": "Steve Forbert",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "20:00",
+    "price": "$35",
     "free": false,
     "_source": "scraped",
     "_manual": true
@@ -11066,7 +11066,7 @@
   },
   {
     "id": 1788138396419,
-    "title": "Hudson Valley Flamenco Festival - Verano",
+    "title": "Hudson Valley Flamenco Festival",
     "date": "2026-10-02",
     "time": "19:00",
     "venue": "The Living Room at Full Circle",
@@ -11075,12 +11075,11 @@
     "mapsUrl": "https://maps.app.goo.gl/TfiXUNFin7ELp3u38",
     "price": "$35-$55",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788138422115,
-    "title": "Hudson Valley Flamenco Festival - Kati García-Renart Trio Envision Spanish Dance",
+    "title": "Hudson Valley Flamenco Festival",
     "date": "2026-10-03",
     "time": "19:00",
     "venue": "The Living Room at Full Circle",
@@ -11089,8 +11088,7 @@
     "mapsUrl": "https://maps.app.goo.gl/TfiXUNFin7ELp3u38",
     "price": "$35-$55",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788138523718,
@@ -14746,7 +14744,7 @@
   },
   {
     "id": 1789039320976,
-    "title": "Sasha Dobson, Dave Hill, Jeff Hill, Brian Chase",
+    "title": "Sasha Dobson with Dave Hill, Jeff Hill, Brian Chase",
     "date": "2026-10-07",
     "time": "20:00",
     "venue": "The Grand",
@@ -14755,8 +14753,7 @@
     "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
     "price": "See website",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1789039367190,
@@ -19147,6 +19144,136 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=200+North+St+Kingston+NY",
     "price": "$20",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789986800385,
+    "title": "Field + Supply Fall Market Day Three - The High Nooners, Jack Grace, Muddy Ruckus",
+    "date": "2026-10-11",
+    "time": "23:00",
+    "venue": "Hutton Brickyards",
+    "venueUrl": "https://fieldandsupply.com/pages/fall-mrkt-2026",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+North+St+Kingston+NY",
+    "price": "$20",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789987539077,
+    "title": "Gary, Jewel Thief, The Glow",
+    "date": "2026-10-09",
+    "time": "20:00",
+    "venue": "Night Swim",
+    "venueUrl": "https://www.instagram.com/nightswimkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sZe9CAVM8vJMB9UL6",
+    "price": "$20",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789987746976,
+    "title": "Bitter Sweet Descent",
+    "date": "2026-09-22",
+    "time": "19:00",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789987782103,
+    "title": "The Honk Committee, Low Flying Planes",
+    "date": "2026-09-26",
+    "time": "17:00",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789987803773,
+    "title": "The Azures",
+    "date": "2026-09-29",
+    "time": "19:00",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789987823270,
+    "title": "The Bottom Most",
+    "date": "2026-10-02",
+    "time": "18:00",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789987864524,
+    "title": "The Electric Chords",
+    "date": "2026-10-03",
+    "time": "17:00",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789987896891,
+    "title": "DJ Bang Van",
+    "date": "2026-10-04",
+    "time": "11:30",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789987969941,
+    "title": "Don't Be The Wurst, Mr. Big Head, Justin Cole and The Lower 48",
+    "date": "2026-10-10",
+    "time": "11:30",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1789987992964,
+    "title": "Bitter Sweet Descent",
+    "date": "2026-10-17",
+    "time": "17:00",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "price": "See website",
     "free": false,
     "_manual": true
   }
