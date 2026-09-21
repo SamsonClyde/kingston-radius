@@ -19237,5 +19237,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1789987896891,
+    "title": "DJ Bang Van",
+    "date": "2026-10-04",
+    "time": "11:30",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
