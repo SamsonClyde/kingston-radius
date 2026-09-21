@@ -185,10 +185,6 @@
     "status": "rejected",
     "hiddenAt": 1786963780976
   },
-  "Assembly Kingston||2026-09-20||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786963844832
-  },
   "Assembly Kingston||2026-09-25||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963852432
@@ -353,10 +349,6 @@
   "The Falcon||2026-09-19||See website": {
     "status": "rejected",
     "hiddenAt": 1787076316320
-  },
-  "The Falcon||2026-09-20||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076335415
   },
   "The Falcon||2026-09-20||19:30": "approved",
   "The Falcon||2026-09-24||See website": {
@@ -1742,10 +1734,6 @@
   "Towne Crier Café||2026-09-19||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789389542147
-  },
-  "Towne Crier Café||2026-09-20||11:30 am": {
-    "status": "rejected",
-    "hiddenAt": 1789389592009
   },
   "Towne Crier Café||2026-10-23||8:00 pm": {
     "status": "rejected",
