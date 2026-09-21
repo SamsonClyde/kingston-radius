@@ -19276,5 +19276,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 377,
+    "date": "2026-10-31",
+    "title": "Back to the Garden 1969: A ‘Hippie Halloween’ & 17th Anniversary Show",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "20:00",
+    "price": "$40",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
