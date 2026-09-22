@@ -19753,5 +19753,18 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790093340139,
+    "title": "Tom Chapin & Friends",
+    "date": "2027-03-13",
+    "time": "20:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
