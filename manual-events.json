@@ -7377,16 +7377,16 @@
   },
   {
     "id": 288,
-    "date": "2026-09-18",
-    "title": "Hip Hop Dance party with DJ Leah Beth",
-    "venue": "Unicorn Bar",
-    "venueUrl": "https://unicornkingston.com/calendar",
+    "date": "2026-10-09",
+    "title": "DJ Rausch & Friends",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/dj-rausch-amp-friends-free",
     "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
-    "time": "21:30",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "19:00",
     "price": "free",
     "free": true,
-    "_source": "manual",
+    "_source": "scraped",
     "_manual": true
   },
   {
