@@ -19348,5 +19348,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1790086619732,
+    "title": "Eugene Tyler Band",
+    "date": "2026-10-02",
+    "time": "18:30",
+    "venue": "Rough Draft Books",
+    "venueUrl": "https://www.roughdraftny.com/events/2026/3/13/euegene-tyler-band-sssgy",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LLZ4sLnaNhZtSSar9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
