@@ -19818,5 +19818,18 @@
     "price": "rsvp",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790093657784,
+    "title": "Lydia Adams Davis & Neil Okeson – Salon Stage",
+    "date": "2026-10-18",
+    "time": "18:30",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "rsvp",
+    "free": false,
+    "_manual": true
   }
 ]
