@@ -1893,5 +1893,9 @@
   "Athens Cultural Center||2026-09-24||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790117506428
+  },
+  "Bard College Conservatory||2026-10-01||": {
+    "status": "rejected",
+    "hiddenAt": 1790117540067
   }
 }
