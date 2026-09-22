@@ -19415,5 +19415,18 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790089834447,
+    "title": "Belfry Bizarre: Halloween at The Ellis",
+    "date": "2026-10-31",
+    "time": "20:00",
+    "venue": "The Ellis",
+    "venueUrl": "https://www.theellisnewburgh.com/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/r8BMC6j6N8u7Y8Y97",
+    "price": "$22",
+    "free": false,
+    "_manual": true
   }
 ]
