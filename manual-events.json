@@ -19766,5 +19766,18 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790093459959,
+    "title": "Jerry Lee – Salon Stage",
+    "date": "2026-10-02",
+    "time": "18:30",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "rsvp",
+    "free": false,
+    "_manual": true
   }
 ]
