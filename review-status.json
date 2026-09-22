@@ -1885,5 +1885,9 @@
   "Westwind Orchard||2026-09-26||17:00": {
     "status": "rejected",
     "hiddenAt": 1790095092265
+  },
+  "Assembly Kingston||2026-12-29||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790117499444
   }
 }
