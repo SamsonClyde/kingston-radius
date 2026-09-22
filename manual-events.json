@@ -19610,5 +19610,18 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790092377474,
+    "title": "Guilty Pleasure",
+    "date": "2026-10-09",
+    "time": "19:00",
+    "venue": "The Tin Barn",
+    "venueUrl": "https://www.instagram.com/thetinbarn/",
+    "location": "Clermont, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NVBq7Y5xBLDHp39U9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
