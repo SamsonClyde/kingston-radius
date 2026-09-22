@@ -6156,7 +6156,7 @@
   },
   {
     "id": 1787347507827,
-    "title": "Jazz Trumpet Trailblazer: Adam O’Farrill’s Elephant",
+    "title": "Jazz Trumpet Trailblazer: Adam O’Farrill’s ELEPHANT",
     "date": "2026-10-04",
     "time": "17:00",
     "venue": "The Local Saugerties",
@@ -6165,8 +6165,7 @@
     "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
     "price": "$24",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787347535571,
@@ -19344,6 +19343,20 @@
     "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
     "time": "19:00",
     "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
+  },
+  {
+    "id": 257,
+    "date": "2026-10-02",
+    "title": "Jerry Lee – Salon Stage",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "18:30",
+    "price": "rsvp",
     "free": false,
     "_source": "scraped",
     "_manual": true
