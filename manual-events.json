@@ -19883,5 +19883,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790094337283,
+    "title": "DJ Rausch & Friends",
+    "date": "2026-10-09",
+    "time": "19:00",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
