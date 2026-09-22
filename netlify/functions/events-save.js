@@ -1,6 +1,7 @@
-            // netlify/functions/events-save.js
+// netlify/functions/events-save.js
 // Writes to the `data` branch — never touches `main`, never triggers a deploy.
-// Accepts any combination of: manualEvents, scrapedEvents, emailEvents, reviewStatus, customVenues
+// Accepts any combination of: manualEvents, scrapedEvents, emailEvents, reviewStatus,
+// reviewStatusPatch, customVenues, hiddenTitles
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method not allowed' };
@@ -64,6 +65,57 @@ exports.handler = async (event) => {
     }
   }
 
+  // Merges a small set of key changes into whatever the file *currently* contains on
+  // GitHub, rather than blindly overwriting it with a client's full local snapshot.
+  // This is what actually prevents one browser tab/device from silently erasing
+  // another's changes — each save only ever touches the specific keys it changed,
+  // re-reading the freshest content on every retry attempt.
+  // A patch value of `null` deletes that key.
+  async function writeFileMerged(path, patch) {
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${DATA_BRANCH}`;
+    const putUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+    const MAX_ATTEMPTS = 5;
+
+    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+      let sha = null;
+      let current = {};
+      try {
+        const getResp = await fetch(apiUrl, { headers: apiHeaders });
+        if (getResp.ok) {
+          const json = await getResp.json();
+          sha = json.sha;
+          try { current = JSON.parse(Buffer.from(json.content, 'base64').toString('utf-8')); }
+          catch { current = {}; }
+        }
+      } catch {}
+
+      const merged = { ...current };
+      for (const [key, value] of Object.entries(patch)) {
+        if (value === null) delete merged[key];
+        else merged[key] = value;
+      }
+
+      const content = Buffer.from(JSON.stringify(merged, null, 2)).toString('base64');
+      const putBody = JSON.stringify({
+        message: `[admin] Merge update to ${path}`,
+        content,
+        branch: DATA_BRANCH,
+        ...(sha ? { sha } : {}),
+      });
+      const putResp = await fetch(putUrl, { method: 'PUT', headers: apiHeaders, body: putBody });
+
+      if (putResp.ok) return;
+
+      if (putResp.status === 409 && attempt < MAX_ATTEMPTS) {
+        await new Promise(r => setTimeout(r, 150 * attempt));
+        continue; // next loop iteration re-fetches fresh content + sha before retrying
+      }
+
+      const txt = await putResp.text();
+      throw new Error(`GitHub merged write failed for ${path} after ${attempt} attempt(s): ${putResp.status} ${txt}`);
+    }
+  }
+
   try {
     const writes = [];
     if (Array.isArray(body.manualEvents))  writes.push(writeFile('manual-events.json',  body.manualEvents));
@@ -71,8 +123,12 @@ exports.handler = async (event) => {
     if (Array.isArray(body.emailEvents))   writes.push(writeFile('email-events.json',   body.emailEvents));
     if (body.reviewStatus && typeof body.reviewStatus === 'object')
       writes.push(writeFile('review-status.json', body.reviewStatus));
+    if (body.reviewStatusPatch && typeof body.reviewStatusPatch === 'object')
+      writes.push(writeFileMerged('review-status.json', body.reviewStatusPatch));
     if (body.customVenues && typeof body.customVenues === 'object')
       writes.push(writeFile('custom-venues.json', body.customVenues));
+    if (Array.isArray(body.hiddenTitles))
+      writes.push(writeFile('hidden-titles.json', body.hiddenTitles));
     if (writes.length === 0) return { statusCode: 400, body: 'No data to save' };
     await Promise.all(writes);
     return { statusCode: 200, body: JSON.stringify({ ok: true }) };
