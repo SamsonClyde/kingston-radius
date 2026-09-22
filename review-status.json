@@ -2009,5 +2009,9 @@
   "Stissing Center||2026-10-18||3:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790117679237
+  },
+  "The Grand||2026-10-01||": {
+    "status": "rejected",
+    "hiddenAt": 1790117682150
   }
 }
