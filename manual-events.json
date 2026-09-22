@@ -19571,5 +19571,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790091703409,
+    "title": "Hillside Fusion",
+    "date": "2026-11-20",
+    "time": "19:00",
+    "venue": "The Lemon Squeeze",
+    "venueUrl": "https://thelemonsqueezenewpaltz.com/events/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
+    "price": "$11",
+    "free": false,
+    "_manual": true
   }
 ]
