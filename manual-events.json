@@ -19361,5 +19361,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790087013514,
+    "title": "O+ Festival - Blair Baldwin, All My Friends, first president of japan, The Schwegs, Killer Film",
+    "date": "2026-10-09",
+    "time": "19:00",
+    "venue": "Snapper McGee's",
+    "venueUrl": "https://www.instagram.com/snappermagees/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cjXnAPfsLHZ7XD8c9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
