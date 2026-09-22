@@ -19374,5 +19374,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790087079343,
+    "title": "O+ Festival - Modern Natives, Outer Shapes, The Bad Ups, AM Gold",
+    "date": "2026-10-10",
+    "time": "19:45",
+    "venue": "Snapper McGee's",
+    "venueUrl": "https://www.instagram.com/snappermagees/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cjXnAPfsLHZ7XD8c9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
