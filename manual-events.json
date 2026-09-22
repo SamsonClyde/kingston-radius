@@ -6156,7 +6156,7 @@
   },
   {
     "id": 1787347507827,
-    "title": "Jazz Trumpet Trailblazer: Adam O’Farrill’s ELEPHANT",
+    "title": "Jazz Trumpet Trailblazer: Adam O’Farrill’s Elephant",
     "date": "2026-10-04",
     "time": "17:00",
     "venue": "The Local Saugerties",
@@ -6165,7 +6165,8 @@
     "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
     "price": "$24",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787347535571,
