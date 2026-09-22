@@ -19558,5 +19558,18 @@
     "price": "$11",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790091662669,
+    "title": "Halloween Party - Mindchurch",
+    "date": "2026-10-31",
+    "time": "19:00",
+    "venue": "The Lemon Squeeze",
+    "venueUrl": "https://thelemonsqueezenewpaltz.com/events/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
