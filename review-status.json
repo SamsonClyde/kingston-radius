@@ -1989,5 +1989,9 @@
   "PS21 Chatham||2026-11-01||3:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790117662839
+  },
+  "Rail Trail Cafe||2026-09-25||4:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790117667359
   }
 }
