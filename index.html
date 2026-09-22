@@ -213,6 +213,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     transition: opacity 0.25s;
   }
   .kr-toast.show { opacity: 1; }
+  .kr-modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+    z-index: 10000; display: none; align-items: center; justify-content: center;
+  }
+  .kr-modal-overlay.show { display: flex; }
+  .kr-modal-box {
+    background: var(--card); border-radius: 10px; padding: 22px 24px;
+    max-width: 360px; width: calc(100% - 40px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    font-family: 'DM Sans', sans-serif;
+  }
+  .kr-modal-msg { font-size: 0.9rem; color: var(--text); margin-bottom: 18px; line-height: 1.5; }
+  .kr-modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+  .kr-modal-btn { padding: 7px 16px; border-radius: 6px; font-family: 'DM Sans', sans-serif;
+    font-size: 0.84rem; cursor: pointer; border: 1px solid var(--border); background: none; color: var(--text); }
+  .kr-modal-btn-confirm { background: var(--red); border-color: var(--red); color: #fff; }
   .loading-spinner {
     width: 28px; height: 28px; margin: 0 auto;
     border: 3px solid var(--border);
@@ -980,11 +996,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input type="search" id="keyword-search" name="kr-search" placeholder="Search…" autocomplete="off" data-lpignore="true" data-1p-ignore style="border:1.5px solid var(--border);background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.8rem;padding:4px 12px;border-radius:20px;margin-left:6px;width:150px;transition:border-color 0.15s;">
     </div>
     <button id="venue-delete-mode-btn" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;" onclick="toggleVenueDeleteMode()">Manage venues</button>
+    <button id="title-hide-mode-btn" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;" onclick="toggleTitleHideMode()">Hide by title</button>
   </div>
   <div id="venue-delete-bar" style="display:none;padding:8px 0 4px;gap:6px;flex-wrap:wrap;" class="filter-row">
     <span style="font-size:0.72rem;color:var(--red);font-weight:600;">Select a venue to hide all its events:</span>
     <div id="venue-delete-list" style="display:flex;gap:6px;flex-wrap:wrap;"></div>
     <button onclick="toggleVenueDeleteMode()" style="font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;margin-left:auto;">Done</button>
+  </div>
+  <div id="title-hide-bar" style="display:none;padding:8px 0 4px;gap:6px;flex-wrap:wrap;align-items:center;" class="filter-row">
+    <span style="font-size:0.72rem;color:var(--red);font-weight:600;">Hide any show whose title contains:</span>
+    <input type="text" id="title-hide-input" placeholder="e.g. Burnout Paradise" style="font-size:0.78rem;border:1.5px solid var(--border);background:transparent;color:var(--text);border-radius:4px;padding:4px 10px;font-family:'DM Sans',sans-serif;">
+    <button onclick="addHiddenTitle()" style="font-size:0.72rem;background:var(--red);border:none;border-radius:4px;padding:4px 10px;cursor:pointer;color:#fff;font-family:'DM Sans',sans-serif;">Add</button>
+    <div id="title-hide-list" style="display:flex;gap:6px;flex-wrap:wrap;width:100%;"></div>
+    <button onclick="toggleTitleHideMode()" style="font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;margin-left:auto;">Done</button>
   </div>
 </div>
 
@@ -1120,6 +1144,7 @@ const REVIEW_STATUS_KEY = 'kr_review_status';
 const SCRAPED_KEY       = 'kr_scraped_events';
 const EMAIL_KEY         = 'kr_email_events';
 const CUSTOM_VENUES_KEY = 'kr_custom_venues';
+const HIDDEN_TITLES_KEY = 'kr_hidden_titles';
 const MAX_HIDDEN        = 50;
 
 const DRIVE_TIMES = {
@@ -1396,12 +1421,26 @@ async function saveCustomVenueTemplates(obj) {
 }
 function getAllVenueTemplates() { return { ...VENUE_TEMPLATES, ...getCustomVenueTemplates() }; }
 
+function getHiddenTitles() {
+  return _hiddenTitlesCache ?? _getLocal(HIDDEN_TITLES_KEY, []);
+}
+async function saveHiddenTitlesList(arr) {
+  _hiddenTitlesCache = arr;
+  localStorage.setItem(HIDDEN_TITLES_KEY, JSON.stringify(arr));
+  return await _saveToServer({ hiddenTitles: arr });
+}
+function isTitleHidden(title) {
+  const t = (title || '').toLowerCase();
+  return getHiddenTitles().some(kw => t.includes(kw.toLowerCase()));
+}
+
 // ── DATA LAYER ────────────────────────────────────────────────────────────────
 let _manualEventsCache  = null;
 let _scrapedEventsCache = null;
 let _emailEventsCache   = null;
 let _reviewStatusCache  = null;
 let _customVenuesCache  = null;
+let _hiddenTitlesCache  = null;
 let _lastSaveTime       = 0;
 
 function _getLocal(key, fallback) {
@@ -1477,11 +1516,15 @@ async function loadFromServer() {
       _customVenuesCache = (data.customVenues && typeof data.customVenues === 'object')
                            ? data.customVenues : {};
     }
+    if (secsSinceSave > 90 || _hiddenTitlesCache === null) {
+      _hiddenTitlesCache = Array.isArray(data.hiddenTitles) ? data.hiddenTitles : [];
+    }
     localStorage.setItem(STORAGE_KEY,  JSON.stringify(_manualEventsCache));
     localStorage.setItem(SCRAPED_KEY,  JSON.stringify(_scrapedEventsCache));
     localStorage.setItem(EMAIL_KEY,    JSON.stringify(_emailEventsCache));
     localStorage.setItem(REVIEW_STATUS_KEY, JSON.stringify(_reviewStatusCache));
     localStorage.setItem(CUSTOM_VENUES_KEY, JSON.stringify(_customVenuesCache));
+    localStorage.setItem(HIDDEN_TITLES_KEY, JSON.stringify(_hiddenTitlesCache));
   } catch (e) {
     console.warn('Load failed, using localStorage:', e);
     _manualEventsCache  = _getLocal(STORAGE_KEY, []);
@@ -1489,6 +1532,7 @@ async function loadFromServer() {
     _emailEventsCache   = _getLocal(EMAIL_KEY, []);
     _reviewStatusCache  = _getLocal(REVIEW_STATUS_KEY, {});
     _customVenuesCache  = _getLocal(CUSTOM_VENUES_KEY, {});
+    _hiddenTitlesCache  = _getLocal(HIDDEN_TITLES_KEY, []);
   }
 }
 
@@ -1726,7 +1770,7 @@ function populateVenueSelect() {
   const today = new Date(); today.setHours(0,0,0,0);
   const venues = [...new Set(
     getApprovedEvents()
-      .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue))
+      .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue) && !isTitleHidden(e.title))
       .map(e => e.venue)
   )].sort();
   sel.innerHTML = '<option value="">All venues</option>' +
@@ -1752,7 +1796,7 @@ function renderEvents() {
   if (!container) return;
   const today = new Date(); today.setHours(0,0,0,0);
   let events = getApprovedEvents()
-    .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue));
+    .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue) && !isTitleHidden(e.title));
 
   if (_activeFilter !== 'all') {
     if (_activeFilter === '0') {
@@ -1874,6 +1918,33 @@ function showToast(msg) {
   window._toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
 }
 
+// Custom in-page confirmation — deliberately NOT the native browser confirm().
+// That native dialog turned out to be silently interceptable (by a browser
+// extension or similar), causing hides to appear to do nothing with zero
+// error. This is fully our own DOM/JS, so there's nothing external that can
+// swallow the click before we see it.
+function showConfirmModal(message) {
+  return new Promise(resolve => {
+    const overlay = document.getElementById('kr-modal-overlay');
+    const msgEl   = document.getElementById('kr-modal-msg');
+    const cancelBtn  = document.getElementById('kr-modal-cancel');
+    const confirmBtn = document.getElementById('kr-modal-confirm');
+    if (!overlay || !msgEl || !cancelBtn || !confirmBtn) { resolve(true); return; }
+    msgEl.textContent = message;
+    overlay.classList.add('show');
+    const cleanup = (result) => {
+      overlay.classList.remove('show');
+      cancelBtn.onclick = null;
+      confirmBtn.onclick = null;
+      overlay.onclick = null;
+      resolve(result);
+    };
+    cancelBtn.onclick  = () => cleanup(false);
+    confirmBtn.onclick = () => cleanup(true);
+    overlay.onclick    = (e) => { if (e.target === overlay) cleanup(false); };
+  });
+}
+
 // ── SHARE ─────────────────────────────────────────────────────────────────────
 function shortHash(str) {
   let h = 5381;
@@ -1934,7 +2005,7 @@ function jumpToSharedEvent() {
 
   const today = new Date(); today.setHours(0,0,0,0);
   const upcoming = getApprovedEvents()
-    .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue))
+    .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue) && !isTitleHidden(e.title))
     .sort((a,b) => (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
 
   // New short-hash links match directly; old base64 links still decode as a fallback
@@ -2429,7 +2500,6 @@ document.addEventListener('click', async (ev) => {
     return;
   }
   if (action === 'delete-event') {
-    if (!confirm('Permanently delete this event? It will not reappear from the scraper.')) return;
     const all = getAllEvents();
     const e   = all.find(ev => eventKey(ev) === key);
     if (e) {
@@ -2525,14 +2595,13 @@ document.addEventListener('click', async (ev) => {
     return;
   }
   if (action === 'inline-reject') {
-    if (!confirm('Hide this event from the site?')) return;
     const all = getAllEvents();
     const e   = all.find(ev => eventKey(ev) === key);
     if (e) {
       const ok = await hideEvent(e);
       renderEvents(); buildMonthButtons(); populateVenueSelect(); updateBadge();
       if (!ok) alert('This is showing as hidden on your screen, but saving it to the server failed after several attempts. It\'s safe to click "Hide from site" again — reload the page in a minute to confirm it synced.');
-      else showToast('Hidden and saved ✓');
+      else showToast('Hidden and saved ✓ — undo anytime from the admin Hidden tab');
     }
     return;
   }
@@ -2637,7 +2706,7 @@ function buildVenueDeleteList() {
   const container = document.getElementById('venue-delete-list');
   if (!container) return;
   container.innerHTML = venues.map(v =>
-    `<button onclick="hideVenueFromFront('${v.replace(/'/g, "\'")}')"
+    `<button onclick="hideVenueFromFront('${v.replace(/'/g, "\\'")}')"
       style="font-size:0.78rem;background:none;border:1.5px solid #e74c3c;color:#e74c3c;
              border-radius:20px;padding:4px 12px;cursor:pointer;font-family:'DM Sans',sans-serif;
              white-space:nowrap;">${v} ✕</button>`
@@ -2645,7 +2714,8 @@ function buildVenueDeleteList() {
 }
 
 async function hideVenueFromFront(venueName) {
-  if (!confirm(`Remove "${venueName}" from the venue list and hide its events?`)) return;
+  const ok1 = await showConfirmModal(`Remove "${venueName}" from the venue list and hide its events?`);
+  if (!ok1) return;
   _hiddenVenues.add(venueName);
   saveHiddenVenues();
   const status = getReviewStatus();
@@ -2660,9 +2730,64 @@ async function hideVenueFromFront(venueName) {
   else showToast(`"${venueName}" hidden and saved ✓`);
 }
 
+// ── HIDE BY TITLE KEYWORD ───────────────────────────────────────────────────
+// Unlike hidden venues (localStorage-only), this persists server-side via
+// hidden-titles.json so it works across devices and survives a cleared cache —
+// and because isTitleHidden() is checked at render-time for every event, it
+// automatically catches any future scraped/emailed show matching the keyword too,
+// not just what's currently on the site today.
+function toggleTitleHideMode() {
+  const bar = document.getElementById('title-hide-bar');
+  if (!bar) return;
+  const visible = bar.style.display !== 'none';
+  bar.style.display = visible ? 'none' : 'flex';
+  if (!visible) buildTitleHideList();
+}
+
+function buildTitleHideList() {
+  const container = document.getElementById('title-hide-list');
+  if (!container) return;
+  const keywords = getHiddenTitles();
+  container.innerHTML = keywords.map(kw =>
+    `<button onclick="removeHiddenTitle('${kw.replace(/'/g, "\\'")}')"
+      style="font-size:0.78rem;background:none;border:1.5px solid #e74c3c;color:#e74c3c;
+             border-radius:20px;padding:4px 12px;cursor:pointer;font-family:'DM Sans',sans-serif;
+             white-space:nowrap;">${esc(kw)} ✕</button>`
+  ).join('') || '<span style="font-size:0.76rem;color:var(--muted);">No hidden keywords yet.</span>';
+}
+
+async function addHiddenTitle() {
+  const input = document.getElementById('title-hide-input');
+  const kw = input?.value.trim();
+  if (!kw) return;
+  const keywords = getHiddenTitles();
+  if (keywords.some(k => k.toLowerCase() === kw.toLowerCase())) {
+    input.value = '';
+    return;
+  }
+  keywords.push(kw);
+  const ok = await saveHiddenTitlesList(keywords);
+  input.value = '';
+  buildTitleHideList();
+  renderEvents(); buildMonthButtons(); populateVenueSelect(); updateBadge();
+  if (!ok) alert(`"${kw}" is hiding matching shows on your screen, but saving it to the server failed after several attempts. It's safe to try again — reload the page in a minute to confirm it synced.`);
+  else showToast(`Now hiding shows with "${kw}" in the title ✓`);
+}
+
+async function removeHiddenTitle(kw) {
+  const keywords = getHiddenTitles().filter(k => k !== kw);
+  const ok = await saveHiddenTitlesList(keywords);
+  buildTitleHideList();
+  renderEvents(); buildMonthButtons(); populateVenueSelect(); updateBadge();
+  if (!ok) alert(`Un-hiding "${kw}" is showing on your screen, but saving it to the server failed after several attempts. It's safe to try again — reload the page in a minute to confirm it synced.`);
+  else showToast(`"${kw}" removed from hidden titles ✓`);
+}
+
 function updateManageVenueBtn() {
   const btn = document.getElementById('venue-delete-mode-btn');
   if (btn) btn.style.display = sessionStorage.getItem('kr_authed') ? '' : 'none';
+  const titleBtn = document.getElementById('title-hide-mode-btn');
+  if (titleBtn) titleBtn.style.display = sessionStorage.getItem('kr_authed') ? '' : 'none';
 }
 
 // ── VENUE TEMPLATE DROPDOWN ───────────────────────────────────────────────────
@@ -2688,9 +2813,11 @@ function populateVenueTemplateDropdown() {
     if (delBtn) delBtn.style.display = custom[name] ? '' : 'none';
   };
   if (delBtn) {
-    delBtn.onclick = () => {
+    delBtn.onclick = async () => {
       const name = sel.value;
-      if (!name || !confirm(`Delete template for "${name}"?`)) return;
+      if (!name) return;
+      const ok = await showConfirmModal(`Delete template for "${name}"?`);
+      if (!ok) return;
       const c = getCustomVenueTemplates();
       delete c[name];
       saveCustomVenueTemplates(c);
@@ -2946,5 +3073,14 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
 });
 
 </script>
+<div id="kr-modal-overlay" class="kr-modal-overlay">
+  <div class="kr-modal-box">
+    <div class="kr-modal-msg" id="kr-modal-msg"></div>
+    <div class="kr-modal-actions">
+      <button class="kr-modal-btn" id="kr-modal-cancel">Cancel</button>
+      <button class="kr-modal-btn kr-modal-btn-confirm" id="kr-modal-confirm">Confirm</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
