@@ -2116,5 +2116,9 @@
   "The Egg||2026-11-20||19:00": {
     "status": "rejected",
     "hiddenAt": 1790083682519
+  },
+  "The Egg||2026-11-23||19:00": {
+    "status": "rejected",
+    "hiddenAt": 1790083693888
   }
 }
