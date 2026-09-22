@@ -19701,5 +19701,18 @@
     "price": "$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790093137695,
+    "title": "Box of Rain (Grateful Dead Cover Band)",
+    "date": "2027-02-05",
+    "time": "20:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "$30",
+    "free": false,
+    "_manual": true
   }
 ]
