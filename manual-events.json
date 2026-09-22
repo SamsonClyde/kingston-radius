@@ -17545,9 +17545,10 @@
     "venueUrl": "https://theegg.org/events/",
     "location": "Albany, NY",
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
-    "price": "$117-$1000",
+    "price": "$50-$73",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789478625474,
