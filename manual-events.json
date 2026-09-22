@@ -19402,5 +19402,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790089721195,
+    "title": "Hudsonfest II Cancer Benefit - Ayanna Martine, Red 40, Time Surfers, Stumble Street, Moped Rider, Phenomenon, Symfinity, Libricide, Siren Fall, Storm The Valley, Drip Sounds, MC Host Afro Benny",
+    "date": "2026-10-03",
+    "time": "12:00",
+    "venue": "The Ellis",
+    "venueUrl": "https://www.theellisnewburgh.com/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/r8BMC6j6N8u7Y8Y97",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
