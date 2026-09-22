@@ -1862,5 +1862,17 @@
   "Tubby's||2026-09-25||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789483233134
+  },
+  "Keegan Ales||2026-10-10||5:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790087170143
+  },
+  "Assembly Kingston||2026-10-14||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790087170143
+  },
+  "Unicorn Bar||2026-10-17||8:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790087170143
   }
 }
