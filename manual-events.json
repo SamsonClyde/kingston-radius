@@ -5987,7 +5987,7 @@
   },
   {
     "id": 1787345998467,
-    "title": "Escaper, Trippy Sitter",
+    "title": "Escaper w/ opener Trippy Sitter",
     "date": "2026-10-09",
     "time": "20:00",
     "venue": "The Lemon Squeeze",
@@ -5996,8 +5996,7 @@
     "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
     "price": "$16",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1787346042874,
@@ -19525,6 +19524,19 @@
     "id": 1790091423296,
     "title": "Sasha Dobson",
     "date": "2026-10-10",
+    "time": "19:00",
+    "venue": "The Lemon Squeeze",
+    "venueUrl": "https://thelemonsqueezenewpaltz.com/events/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
+    "price": "$21",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1790091522160,
+    "title": "The Deadbeats",
+    "date": "2026-10-16",
     "time": "19:00",
     "venue": "The Lemon Squeeze",
     "venueUrl": "https://thelemonsqueezenewpaltz.com/events/",
