@@ -19332,5 +19332,19 @@
     "price": "$31-$63",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 290,
+    "date": "2026-10-09",
+    "title": "2026 O+ Festival: Friday – Parade Kick off, Honky Tonk Night with Two Step Dance Lesson, Champagne Poneys & Bourbon Sprawl!",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/event/2018-o-festival-parade-kick-off-forefathers-featuring-paul-rivers-bailey-key-q-bottoms-dixieland-jazz-band/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "time": "19:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
