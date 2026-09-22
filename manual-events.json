@@ -9557,7 +9557,7 @@
   },
   {
     "id": 351,
-    "date": "2026-09-27",
+    "date": "2026-10-04",
     "title": "Big Band Swing - Outdoor Fall Benefit",
     "venue": "Tompkins Corners Cultural Center",
     "venueUrl": "https://www.eventbrite.com/e/1998436627750?aff=oddtdtcreator",
@@ -9566,7 +9566,7 @@
     "time": "14:00",
     "price": "$25",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
@@ -11067,7 +11067,7 @@
   },
   {
     "id": 1788138396419,
-    "title": "Hudson Valley Flamenco Festival",
+    "title": "Hudson Valley Flamenco Festival - Verano",
     "date": "2026-10-02",
     "time": "19:00",
     "venue": "The Living Room at Full Circle",
@@ -11076,11 +11076,12 @@
     "mapsUrl": "https://maps.app.goo.gl/TfiXUNFin7ELp3u38",
     "price": "$35-$55",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788138422115,
-    "title": "Hudson Valley Flamenco Festival",
+    "title": "Hudson Valley Flamenco Festival - Kati García-Renart Trio “Envision Spanish Dance”",
     "date": "2026-10-03",
     "time": "19:00",
     "venue": "The Living Room at Full Circle",
@@ -11089,7 +11090,8 @@
     "mapsUrl": "https://maps.app.goo.gl/TfiXUNFin7ELp3u38",
     "price": "$35-$55",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1788138523718,
@@ -19595,32 +19597,6 @@
     "location": "New Paltz, NY",
     "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
     "price": "$11",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1790092166258,
-    "title": "Local Waves",
-    "date": "2026-12-09",
-    "time": "19:30",
-    "venue": "The Local Saugerties",
-    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
-    "location": "Saugerties, NY",
-    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
-    "price": "free",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1790092377474,
-    "title": "Guilty Pleasure",
-    "date": "2026-10-09",
-    "time": "19:00",
-    "venue": "The Tin Barn",
-    "venueUrl": "https://www.instagram.com/thetinbarn/",
-    "location": "Clermont, NY",
-    "mapsUrl": "https://maps.app.goo.gl/NVBq7Y5xBLDHp39U9",
-    "price": "See website",
     "free": false,
     "_manual": true
   }
