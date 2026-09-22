@@ -19319,5 +19319,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1790083967461,
+    "title": "Ally the Piper: Holiday Session Acoustic Tour",
+    "date": "2026-12-13",
+    "time": "19:30",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "price": "$31-$63",
+    "free": false,
+    "_manual": true
   }
 ]
