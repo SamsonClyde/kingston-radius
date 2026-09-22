@@ -2125,5 +2125,9 @@
   "Tubby's||2026-10-09||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790117887320
+  },
+  "Unicorn Bar||2026-10-16||10:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790117891824
   }
 }
