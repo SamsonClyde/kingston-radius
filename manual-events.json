@@ -10505,7 +10505,7 @@
   },
   {
     "id": 1787596526680,
-    "title": "Rodrigo Alcover Band",
+    "title": "The Gabagooligans",
     "date": "2026-10-17",
     "time": "15:00",
     "venue": "West Kill Brewing (West Kill)",
@@ -10514,7 +10514,8 @@
     "mapsUrl": "https://maps.app.goo.gl/kbES8MnTT7ZEeE9M6",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787596554824,
