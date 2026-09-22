@@ -2197,5 +2197,9 @@
     "status": "rejected",
     "hiddenAt": 1790085741248
   },
-  "Tubby's||2026-10-09||19:00": "approved"
+  "Tubby's||2026-10-09||19:00": "approved",
+  "Woodstock Playhouse||2026-09-26||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790085782206
+  }
 }
