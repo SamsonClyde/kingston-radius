@@ -19974,5 +19974,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790096458028,
+    "title": "Oktettafest - Emily Beck, Treasure Mountain",
+    "date": "2026-10-03",
+    "time": "18:00",
+    "venue": "Tetta's Market",
+    "venueUrl": "https://www.instagram.com/tettas.market/",
+    "location": "Olivebridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/m8fbkTqwRHXE5t4p7",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
