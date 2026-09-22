@@ -4379,14 +4379,14 @@
   },
   {
     "id": 266,
-    "date": "2026-10-03",
-    "title": "David Ray & Bruce T. Carroll – Salon Stage",
+    "date": "2026-09-06",
+    "title": "Willa Vincitore and The Traveling Riverside Blues Band",
     "venue": "Towne Crier Café",
     "venueUrl": "https://townecrier.com/",
     "location": "Beacon, NY",
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
-    "time": "18:00",
-    "price": "rsvp",
+    "time": "19:00",
+    "price": "$25",
     "free": false,
     "_source": "scraped",
     "_manual": true
@@ -6156,7 +6156,7 @@
   },
   {
     "id": 1787347507827,
-    "title": "Jazz Trumpet Trailblazer: Adam O’Farrill’s ELEPHANT",
+    "title": "Jazz Trumpet Trailblazer: Adam O’Farrill’s Elephant",
     "date": "2026-10-04",
     "time": "17:00",
     "venue": "The Local Saugerties",
@@ -6165,7 +6165,8 @@
     "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
     "price": "$24",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1787347535571,
@@ -7377,16 +7378,16 @@
   },
   {
     "id": 288,
-    "date": "2026-10-09",
-    "title": "DJ Rausch & Friends",
-    "venue": "Tubby's",
-    "venueUrl": "https://www.tubbyskingston.com/calendar/dj-rausch-amp-friends-free",
+    "date": "2026-09-18",
+    "title": "Hip Hop Dance party with DJ Leah Beth",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
     "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
-    "time": "19:00",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "time": "21:30",
     "price": "free",
     "free": true,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
@@ -15435,13 +15436,14 @@
     "title": "Heroism and Celebration - Beethoven, Egmont Overture​, Bizet, L'Arlésienne Suites Nos. 1 & 2, Beethoven, Symphony No. 7 (classical)",
     "date": "2026-09-26",
     "time": "19:30",
-    "venue": "Woodstock Playghouse",
+    "venue": "Woodstock Playhouse",
     "venueUrl": "https://www.woodstockplayhouse.org/",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.app.goo.gl/dEza9uo94sms4MMt9",
     "price": "$10student/$40",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 381,
@@ -19343,20 +19345,6 @@
     "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
     "time": "19:00",
     "price": "See website",
-    "free": false,
-    "_source": "scraped",
-    "_manual": true
-  },
-  {
-    "id": 257,
-    "date": "2026-10-02",
-    "title": "Jerry Lee – Salon Stage",
-    "venue": "Towne Crier Café",
-    "venueUrl": "https://townecrier.com/",
-    "location": "Beacon, NY",
-    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
-    "time": "18:30",
-    "price": "rsvp",
     "free": false,
     "_source": "scraped",
     "_manual": true
