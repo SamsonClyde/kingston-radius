@@ -19948,5 +19948,18 @@
     "price": "$25adv/$30door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790095763432,
+    "title": "An Evening of Elegance & Enchantment- Schubert: Symphony No. 5, Rimsky-Korsakov: Scheherazade",
+    "date": "2026-11-07",
+    "time": "19:30",
+    "venue": "Woodstock Playghouse",
+    "venueUrl": "https://www.woodstockplayhouse.org/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dEza9uo94sms4MMt9",
+    "price": "$40",
+    "free": false,
+    "_manual": true
   }
 ]
