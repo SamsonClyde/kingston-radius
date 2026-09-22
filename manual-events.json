@@ -20000,5 +20000,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790096892121,
+    "title": "Reject Fest - The Car Bomb Parade, Trouble Bound, Wayward Brigade, Stronghold, W70",
+    "date": "2026-10-17",
+    "time": "19:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "price": "$10adv/$15door",
+    "free": false,
+    "_manual": true
   }
 ]
