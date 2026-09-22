@@ -19031,7 +19031,7 @@
   },
   {
     "id": 1789768993167,
-    "title": "Sonic Mandala ~ Healing Groove Meditation with HU VIBRATIONAL",
+    "title": "Sonic Mandala ~ Healing Groove Meditation with Hu Vibrational",
     "date": "2026-10-24",
     "time": "19:00",
     "venue": "Tempo Arts",
@@ -19040,7 +19040,8 @@
     "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
     "price": "$22-$37",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1789769048725,
@@ -19398,32 +19399,6 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/cjXnAPfsLHZ7XD8c9",
     "price": "See website",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1790087455536,
-    "title": "American String Quartet",
-    "date": "2026-12-06",
-    "time": "15:00",
-    "venue": "Stissing Center",
-    "venueUrl": "https://stissingcenter.org/events/",
-    "location": "Pine Plains, NY",
-    "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
-    "price": "$40-$50",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1790087515895,
-    "title": "Windborne",
-    "date": "2026-12-18",
-    "time": "19:30",
-    "venue": "Stissing Center",
-    "venueUrl": "https://stissingcenter.org/events/",
-    "location": "Pine Plains, NY",
-    "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
-    "price": "$30-$40adv/$40-$50door",
     "free": false,
     "_manual": true
   }
