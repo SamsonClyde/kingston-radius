@@ -778,5 +778,11 @@
     "location": "Chester, NY",
     "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
     "drive": 55
+  },
+  "Lil' Deb's Oasis": {
+    "venueUrl": "https://www.instagram.com/lildebsoasis/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/92dF57xS3iVZLEXD6",
+    "drive": 40
   }
 }
