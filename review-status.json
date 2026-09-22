@@ -225,18 +225,6 @@
     "status": "rejected",
     "hiddenAt": 1786963910184
   },
-  "Assembly||2026-09-04||12:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1786963914759
-  },
-  "Assembly||2026-09-05||12:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1786963919081
-  },
-  "Assembly||2026-09-12||12:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1786963923453
-  },
   "Assembly Kingston||2026-11-20||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963997539
@@ -262,10 +250,6 @@
     "hiddenAt": 1787020680726
   },
   "The Ashokan Center||2026-08-28||19:00": "approved",
-  "The Ashokan Center||2026-09-20||": {
-    "status": "rejected",
-    "hiddenAt": 1787053009307
-  },
   "The Ashokan Center||2026-09-20||12:00": "approved",
   "The Ashokan Center||2026-10-09||": {
     "status": "rejected",
@@ -309,10 +293,6 @@
   "Colony Woodstock||2026-08-23||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1787057432941
-  },
-  "Hudson River Maritime Museum||2026-09-04||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787075842470
   },
   "The Falcon||2026-08-19||19:30": "approved",
   "The Falcon||2026-08-20||19:30": "approved",
@@ -507,10 +487,6 @@
     "status": "rejected",
     "hiddenAt": 1787078599701
   },
-  "Hudson River Maritime Museum||2026-09-05||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787078677635
-  },
   "Bearsville Theater||2026-08-21||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787159119024
@@ -551,10 +527,6 @@
   },
   "Keegan Ales||2026-08-28||19:00": "approved",
   "Keegan Ales||2026-08-29||20:00": "approved",
-  "Keegan Ales||2026-09-02||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787187621779
-  },
   "Keegan Ales||2026-09-02||19:00": "approved",
   "Keegan Ales||2026-09-11||19:00": "approved",
   "Keegan Ales||2026-11-21||3:00 pm": {
@@ -928,14 +900,6 @@
     "status": "rejected",
     "hiddenAt": 1787541876002
   },
-  "The Snyder Estate||2026-08-30||3:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787541890940
-  },
-  "The Snyder Estate||2026-09-13||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787541893547
-  },
   "The Snyder Estate||2026-10-31||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787541896207
@@ -1136,10 +1100,6 @@
   "Unicorn Bar||2026-08-28||7:30 pm": "approved",
   "Unicorn Bar||2026-08-29||21:00": "approved",
   "Unicorn Bar||2026-09-05||21:00": "approved",
-  "Unicorn Bar||2026-09-11||9:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787591107859
-  },
   "Unicorn Bar||2026-09-17||19:00": "approved",
   "Unicorn Bar||2026-09-18||19:00": "approved",
   "Unicorn Bar||2026-09-19||19:00": "approved",
@@ -1212,10 +1172,6 @@
   "Colony Woodstock||2026-08-29||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787699673424
-  },
-  "Colony Woodstock||2026-08-30||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787699677049
   },
   "Hudson River Maritime Museum||2026-09-26||2:00 pm": {
     "status": "rejected",
