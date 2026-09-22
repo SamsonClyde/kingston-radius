@@ -1985,5 +1985,9 @@
   "PS21 Chatham||2026-10-31||7:30 PM": {
     "status": "rejected",
     "hiddenAt": 1790117653575
+  },
+  "PS21 Chatham||2026-11-01||3:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1790117662839
   }
 }
