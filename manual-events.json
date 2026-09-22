@@ -11662,7 +11662,7 @@
   },
   {
     "id": 1788279901525,
-    "title": "Driftwood, The Mallett Brothers",
+    "title": "Driftwood, w/s/g, The Mallett Brothers",
     "date": "2026-10-24",
     "time": "20:00",
     "venue": "Lark Hall",
@@ -11671,8 +11671,7 @@
     "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
     "price": "$27",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788279926475,
@@ -19401,6 +19400,58 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/cjXnAPfsLHZ7XD8c9",
     "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1790089721195,
+    "title": "Hudsonfest II Cancer Benefit - Ayanna Martine, Red 40, Time Surfers, Stumble Street, Moped Rider, Phenomenon, Symfinity, Libricide, Siren Fall, Storm The Valley, Drip Sounds, MC Host Afro Benny",
+    "date": "2026-10-03",
+    "time": "12:00",
+    "venue": "The Ellis",
+    "venueUrl": "https://www.theellisnewburgh.com/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/r8BMC6j6N8u7Y8Y97",
+    "price": "free",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1790089834447,
+    "title": "Belfry Bizarre: Halloween at The Ellis",
+    "date": "2026-10-31",
+    "time": "20:00",
+    "venue": "The Ellis",
+    "venueUrl": "https://www.theellisnewburgh.com/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/r8BMC6j6N8u7Y8Y97",
+    "price": "$22",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1790090377375,
+    "title": "Sicard Hollow",
+    "date": "2026-10-09",
+    "time": "20:00",
+    "venue": "Lark Hall",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
+    "price": "$24+",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1790090516401,
+    "title": "A Grateful Thanksgiving with The Deadbeats",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "venue": "Lark Hall",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
+    "price": "$13+",
     "free": false,
     "_manual": true
   }
