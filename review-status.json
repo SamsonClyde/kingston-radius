@@ -1993,5 +1993,9 @@
   "Rail Trail Cafe||2026-09-25||4:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790117667359
+  },
+  "Rail Trail Cafe||2026-10-04||9:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1790117671317
   }
 }
