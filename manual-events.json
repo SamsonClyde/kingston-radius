@@ -20130,5 +20130,18 @@
     "price": "$62-$153",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790160628630,
+    "title": "Gillian Welch and David Rawlings Play Grateful Dead",
+    "date": "2026-12-15",
+    "time": "20:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$92-$215",
+    "free": false,
+    "_manual": true
   }
 ]
