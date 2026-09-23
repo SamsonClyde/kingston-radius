@@ -20208,5 +20208,18 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790204211752,
+    "title": "Andhi O'Neill, Polish John, Tick Check",
+    "date": "2026-09-26",
+    "time": "19:00",
+    "venue": "Green Growler",
+    "venueUrl": "https://www.instagram.com/the.green.growler/",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GWWFznRhKUNYef138",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
