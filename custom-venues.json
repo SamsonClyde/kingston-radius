@@ -820,5 +820,11 @@
     "location": "Albany, NY",
     "mapsUrl": "https://maps.app.goo.gl/9UQWycj7wLQVxmHe6",
     "drive": 51
+  },
+  "Cavalli Hudson Valley": {
+    "venueUrl": "https://www.instagram.com/cavallihudsonvalley/",
+    "location": "Coxsackie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/4TgZnBHzaB47siKg6",
+    "drive": 39
   }
 }
