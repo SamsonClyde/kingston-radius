@@ -20273,5 +20273,18 @@
     "price": "$23",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790206373167,
+    "title": "Take Steps, Sowing, Autoignition, Sue, Torpedo Lane",
+    "date": "2026-10-10",
+    "time": "14:00",
+    "venue": "Ophelia's",
+    "venueUrl": "https://www.instagram.com/asylumalbany/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9UQWycj7wLQVxmHe6",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
