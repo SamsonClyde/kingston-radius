@@ -20221,5 +20221,31 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790204991901,
+    "title": "House Tour - Music by 2 Note",
+    "date": "2026-10-10",
+    "time": "23:00",
+    "venue": "The Dr Oliver Bronson House",
+    "venueUrl": "https://www.instagram.com/droliverbronsonhouse/?g=5",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/wN7CWwfgMTBdy2TX8",
+    "price": "free/rsvp",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1790205180811,
+    "title": "House Tour - Music by 2 Note",
+    "date": "2026-10-10",
+    "time": "11:00",
+    "venue": "The Dr Oliver Bronson House",
+    "venueUrl": "https://www.instagram.com/droliverbronsonhouse/?g=5",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/wN7CWwfgMTBdy2TX8",
+    "price": "free/rsvp",
+    "free": false,
+    "_manual": true
   }
 ]
