@@ -20247,5 +20247,31 @@
     "price": "free/rsvp",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790206102433,
+    "title": "Scalp, Torn Out, Carnwennan, Age of Pain",
+    "date": "2026-09-26",
+    "time": "19:00",
+    "venue": "Ophelia's",
+    "venueUrl": "https://www.instagram.com/asylumalbany/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9UQWycj7wLQVxmHe6",
+    "price": "$23",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1790206245144,
+    "title": "Scalp, Torn Out, Carnwennan, Age of Pain",
+    "date": "2026-09-26",
+    "time": "19:00",
+    "venue": "Ophelia's",
+    "venueUrl": "https://www.instagram.com/asylumalbany/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9UQWycj7wLQVxmHe6",
+    "price": "$23",
+    "free": false,
+    "_manual": true
   }
 ]
