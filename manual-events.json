@@ -20052,5 +20052,18 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790159830461,
+    "title": "Oktoberfest",
+    "date": "2026-10-10",
+    "time": "14:00",
+    "venue": "RMV Cellars",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
+    "location": "West Park, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YKDAq1q7vWCf2mNd9",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
