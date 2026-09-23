@@ -796,5 +796,11 @@
     "location": "New Paltz, NY",
     "mapsUrl": "https://maps.app.goo.gl/UxtL3uvDoYHidUS4A",
     "drive": 22
+  },
+  "Ether Hudson": {
+    "venueUrl": "https://www.instagram.com/etherhudson/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/ecPwYio7k5AFK4qs8",
+    "drive": 40
   }
 }
