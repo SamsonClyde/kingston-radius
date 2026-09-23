@@ -20195,5 +20195,18 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790161613339,
+    "title": "The Shivers, Alex Dupree, Nic Panken, DJ Ben Jones",
+    "date": "2026-09-26",
+    "time": "19:00",
+    "venue": "Old Dutch Church",
+    "venueUrl": "https://www.radiokingston.org/events/the-shivers-nic-panken-et-alex-dupree-a-old-dutch-church/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yuvCVGBQVs4zNbK3A",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
