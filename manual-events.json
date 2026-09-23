@@ -20091,5 +20091,18 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790160429562,
+    "title": "The John Lodge Celebration: An Evening Of Moody Blues Magic",
+    "date": "2026-11-30",
+    "time": "20:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "price": "$40-$166",
+    "free": false,
+    "_manual": true
   }
 ]
