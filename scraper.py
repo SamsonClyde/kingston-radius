@@ -64,6 +64,12 @@ KH_VENUE_OVERRIDES = {
         "maps": "https://maps.google.com/?q=Tempo+Kingston+NY",
         "city": "Kingston, NY",
     },
+    "assembly": {
+        "name": "Assembly Kingston",
+        "url": "https://www.assemblykingston.com/",
+        "maps": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+        "city": "Kingston, NY",
+    },
     "wildhart": {
         "name": "WildHeart: Center for Performance and Embodiment Practice",
         "url": "https://www.wearewildarts.org/",
@@ -1130,8 +1136,17 @@ def scrape_kingston_happenings():
             print(f"  KH event error ({href}): {e}")
         time.sleep(0.5)
 
+    # Dedup by venue+date+time rather than exact title text — Kingston Happenings
+    # sometimes lists the same real show twice with slightly different title
+    # wording (e.g. "X ~ Special Release Show" vs just "X"), which an exact-title
+    # check doesn't catch.
     seen = set()
-    unique = [e for e in events if e["title"] not in seen and not seen.add(e["title"])]
+    unique = []
+    for e in events:
+        k = (e.get("venue","").strip().lower(), e.get("date",""), e.get("time","").strip().lower())
+        if k not in seen:
+            seen.add(k)
+            unique.append(e)
     print(f"Kingston Happenings: {len(unique)} events")
     return unique
 
@@ -2681,6 +2696,146 @@ def scrape_love_velma():
     return events
 
 
+
+# ─── KINOSAITO (fixed — was pointing to wrong domain: kinosaitoarts.org) ──────
+def scrape_kinosaito():
+    events = []
+    try:
+        r = requests.get("https://www.kinosaito.org/performances", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for item in soup.select("h3, .sqs-block-html"):
+            try:
+                text_block = clean(item.get_text())
+                m = re.search(r"(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\.?\s+(\d{4})", text_block, re.I)
+                if not m:
+                    continue
+                date_str = fmt_date(m.group(2)[:3], m.group(1), int(m.group(3)))
+                if not date_str:
+                    continue
+                title_el = item.find_previous(["h2", "h3"]) or item
+                title = clean(title_el.get_text())
+                title = re.sub(r"\s*\|.*$", "", title)
+                if not title or len(title) < 3 or "kinosaito" in title.lower():
+                    continue
+                tm = re.search(r"\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b", text_block, re.I)
+                time_str = fmt_time(tm.group(0)) if tm else ""
+                if title and date_str and is_music_event(title, text_block):
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "KinoSaito", "venueUrl": "https://www.kinosaito.org/performances",
+                        "location": "Verplanck, NY", "mapsUrl": "https://maps.app.goo.gl/yTg4gbgoEr1tabQt5",
+                        "price": "See website", "free": False})
+            except Exception as e:
+                print(f"  KinoSaito item error: {e}")
+    except Exception as e:
+        print(f"KinoSaito error: {e}")
+    print(f"KinoSaito: {len(events)} events")
+    return events
+
+# ─── KAATSBAAN CULTURAL PARK ───────────────────────────────────────────────────
+def scrape_kaatsbaan():
+    events = []
+    try:
+        r = requests.get("https://kaatsbaan.org/2026-festival-events", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for item in soup.select(".eventlist-event, article, .sqs-block-summary-v2-item"):
+            try:
+                title_el = item.select_one("h1, h2, h3, .eventlist-title, .summary-title")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3:
+                    continue
+                text = clean(item.get_text())
+                m = re.search(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(\d{4})", text, re.I)
+                date_str = fmt_date(m.group(1)[:3], m.group(2), int(m.group(3))) if m else ""
+                tm = re.search(r"\b([1-9]|1[0-2]):\d{2}\s*[AP]M\b", text, re.I)
+                time_str = fmt_time(tm.group(0)) if tm else ""
+                link_el = item.select_one("a[href]")
+                event_url = link_el["href"] if link_el else "https://kaatsbaan.org/2026-festival-events"
+                if event_url.startswith("/"): event_url = "https://kaatsbaan.org" + event_url
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "Kaatsbaan", "venueUrl": event_url,
+                        "location": "Tivoli, NY", "mapsUrl": "https://maps.app.goo.gl/bkAWTZ4NoBL8f4b29",
+                        "price": "See website", "free": False})
+            except Exception as e:
+                print(f"  Kaatsbaan item error: {e}")
+    except Exception as e:
+        print(f"Kaatsbaan error: {e}")
+    print(f"Kaatsbaan: {len(events)} events")
+    return events
+
+# ─── MJN CONVENTION CENTER (Poughkeepsie) ─────────────────────────────────────
+def scrape_mjn_center():
+    events = []
+    try:
+        r = requests.get("https://mjncenter.org/events", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        # Each event: a heading link followed by a date/time text line
+        for h2 in soup.select("h2"):
+            try:
+                link = h2.select_one("a[href*='/events/']")
+                title = clean(h2.get_text())
+                if not title or len(title) < 3:
+                    continue
+                # Search nearby text (parent block) for the date line
+                parent = h2.find_parent()
+                context_text = clean(parent.get_text()) if parent else ""
+                m = re.search(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})(?:st|nd|rd|th)?(?:\s*[-–&]\s*\d{1,2}(?:st|nd|rd|th)?)?", context_text, re.I)
+                if not m:
+                    continue
+                date_str = fmt_date(m.group(1)[:3], m.group(2), None)
+                if not date_str:
+                    continue
+                tm = re.search(r"\b([1-9]|1[0-2]):\d{2}\s*[ap]m\b", context_text, re.I)
+                time_str = fmt_time(tm.group(0)) if tm else ""
+                event_url = link["href"] if link else "https://mjncenter.org/events"
+                if event_url.startswith("/"): event_url = "https://mjncenter.org" + event_url
+                if is_music_event(title, context_text):
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "MJN Convention Center", "venueUrl": event_url,
+                        "location": "Poughkeepsie, NY", "mapsUrl": "https://maps.app.goo.gl/a53KZKRM3SAspejd6",
+                        "price": "See website", "free": False})
+            except Exception as e:
+                print(f"  MJN Center item error: {e}")
+    except Exception as e:
+        print(f"MJN Center error: {e}")
+    print(f"MJN Convention Center: {len(events)} events")
+    return events
+
+# ─── WESTWIND ORCHARD (Accord) ─────────────────────────────────────────────────
+def scrape_westwind_orchard():
+    events = []
+    try:
+        r = requests.get("https://www.westwindorchard.com/events", headers=HEADERS, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        for item in soup.select(".eventlist-event, article, .sqs-block-summary-v2-item"):
+            try:
+                title_el = item.select_one("h1, h2, h3, .eventlist-title, .summary-title")
+                title = clean(title_el.get_text()) if title_el else ""
+                if not title or len(title) < 3:
+                    continue
+                text = clean(item.get_text())
+                if "closed for private event" in title.lower():
+                    continue
+                m = re.search(r"(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2}),?\s+(\d{4})", text, re.I)
+                date_str = fmt_date(m.group(1)[:3], m.group(2), int(m.group(3))) if m else ""
+                tm = re.search(r"\b([1-9]|1[0-2]):\d{2}\s*[AP]M\b", text, re.I)
+                time_str = fmt_time(tm.group(0)) if tm else ""
+                link_el = item.select_one("a[href*='/events/']")
+                event_url = link_el["href"] if link_el else "https://www.westwindorchard.com/events"
+                if event_url.startswith("/"): event_url = "https://www.westwindorchard.com" + event_url
+                if title and date_str:
+                    events.append({"title": title, "date": date_str, "time": time_str,
+                        "venue": "Westwind Orchard", "venueUrl": event_url,
+                        "location": "Accord, NY", "mapsUrl": "https://maps.app.goo.gl/i58bW9eeGFi6RZy18",
+                        "price": "See website", "free": False})
+            except Exception as e:
+                print(f"  Westwind Orchard item error: {e}")
+    except Exception as e:
+        print(f"Westwind Orchard error: {e}")
+    print(f"Westwind Orchard: {len(events)} events")
+    return events
+
+
 def main():
     all_events = []
     all_events += scrape_tubbys()
@@ -2740,7 +2895,11 @@ def main():
     # Peekskill
     all_events += scrape_paramount()
     all_events += scrape_gleasons()
-    all_events += scrape_generic_tribe("https://kinosaitoarts.org/events/","KinoSaito Arts Center","Peekskill, NY","https://maps.google.com/?q=600+Washington+St+Verplanck+NY")
+    all_events += scrape_kinosaito()
+    all_events += scrape_kaatsbaan()
+    all_events += scrape_mjn_center()
+    all_events += scrape_westwind_orchard()
+    all_events += scrape_generic_tribe("https://www.lydias-cafe.com/events/","Lydia's Cafe","Stone Ridge, NY","https://maps.app.goo.gl/j6zX42zVbeShdQ6H8")
     all_events += scrape_generic_tribe("https://peekskillcoffee.com/events/","Peekskill Coffee House","Peekskill, NY","https://maps.google.com/?q=101+S+Division+St+Peekskill+NY")
     all_events += scrape_generic_tribe("https://factorybarandgrill.com/events/","Factory Bar & Grill","Peekskill, NY","https://maps.google.com/?q=Factory+Bar+Grill+Peekskill+NY")
     all_events += scrape_generic_tribe("https://www.deckpeekskill.com/events","The Deck at Peekskill Brewery","Peekskill, NY","https://maps.google.com/?q=47+S+Water+St+Peekskill+NY")
