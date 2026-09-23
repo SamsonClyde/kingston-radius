@@ -20286,5 +20286,18 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790206536919,
+    "title": "Fall Fest",
+    "date": "2026-11-07",
+    "time": "14:00",
+    "venue": "Cavalli Hudson Valley",
+    "venueUrl": "https://www.instagram.com/cavallihudsonvalley/",
+    "location": "Coxsackie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/4TgZnBHzaB47siKg6",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
