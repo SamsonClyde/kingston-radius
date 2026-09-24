@@ -5586,16 +5586,16 @@
   },
   {
     "id": 321,
-    "date": "2026-09-16",
-    "title": "Ruby of Thanks (Album Release Woodsist), Blue Ranger",
+    "date": "2026-10-08",
+    "title": "Bob Dylan Entire Studio Discography Dj Nights Vol 2",
     "venue": "Tubby's",
-    "venueUrl": "https://www.tubbyskingston.com/calendar/ruby-of-thanks-album-release-woodsist-blue-ranger",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/bob-dylan-entire-studio-discography-dj-nights-vol-2-free",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
-    "time": "20:00",
-    "price": "$17adv",
-    "free": false,
-    "_source": "manual",
+    "time": "16:00",
+    "price": "free",
+    "free": true,
+    "_source": "scraped",
     "_manual": true
   },
   {
