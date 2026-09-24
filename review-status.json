@@ -2226,5 +2226,9 @@
   "Tempo Arts||2027-09-30||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790245753510
+  },
+  "The Grand||2026-09-24||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1790245767683
   }
 }
