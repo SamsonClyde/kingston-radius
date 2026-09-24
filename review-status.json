@@ -2137,5 +2137,9 @@
   "Assembly Kingston||2026-12-09||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790245545028
+  },
+  "Bard College Conservatory||2026-10-09||2:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790245547623
   }
 }
