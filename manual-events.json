@@ -351,7 +351,7 @@
   {
     "id": 481,
     "date": "2026-11-08",
-    "title": "Willi Carlisle, Sparrow Smith & the Resonant Rogues",
+    "title": "Willi Carlisle",
     "venue": "Assembly Kingston",
     "venueUrl": "https://www.assemblykingston.com/events/willi-carlisle",
     "location": "Kingston, NY",
@@ -359,7 +359,7 @@
     "time": "20:00",
     "price": "$25",
     "free": false,
-    "_source": "manual",
+    "_source": "scraped",
     "_manual": true
   },
   {
@@ -11184,7 +11184,7 @@
   },
   {
     "id": 1788271733236,
-    "title": "Deerhoof, New Orthodox, Raven Chacon",
+    "title": "Deerhoof",
     "date": "2026-11-07",
     "time": "20:00",
     "venue": "Assembly Kingston",
@@ -11193,8 +11193,7 @@
     "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
     "price": "$27+",
     "free": false,
-    "_manual": true,
-    "_source": "manual"
+    "_manual": true
   },
   {
     "id": 1788271974413,
@@ -20407,6 +20406,19 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
     "price": "$54",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1790248526903,
+    "title": "Pro Wrestling + Live Music - King in Yellow",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "price": "$35-$69",
     "free": false,
     "_manual": true
   }
