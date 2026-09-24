@@ -2253,5 +2253,9 @@
     "status": "rejected",
     "hiddenAt": 1790246457643
   },
-  "The Grand||2026-11-05||19:00": "approved"
+  "The Grand||2026-11-05||19:00": "approved",
+  "Tompkins Corners Cultural Center||2026-10-04||2:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790246515516
+  }
 }
