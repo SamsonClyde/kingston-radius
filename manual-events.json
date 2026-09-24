@@ -20477,5 +20477,19 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 492,
+    "date": "2026-12-04",
+    "title": "Moon Mullins",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/moon-mullins-1",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
