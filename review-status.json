@@ -2377,5 +2377,10 @@
   "Tubby's||2026-12-08||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790283866678
-  }
+  },
+  "Tubby's||2026-12-09||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790283881585
+  },
+  "Tubby's||2026-12-09||20:00": "approved"
 }
