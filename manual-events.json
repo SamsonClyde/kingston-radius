@@ -20325,5 +20325,19 @@
     "price": "$10-$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 502,
+    "date": "2026-12-12",
+    "title": "Levin, DiMicco & A Good Drummer",
+    "venue": "Lydia's Cafe",
+    "venueUrl": "https://www.lydias-cafe.com/event/levin-dimicco-a-good-drummer/",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/j6zX42zVbeShdQ6H8",
+    "time": "19:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
