@@ -2269,5 +2269,10 @@
   "Tompkins Corners Cultural Center||2027-03-21||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1790246573396
-  }
+  },
+  "Towne Crier Café||2026-10-09||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790246707974
+  },
+  "Towne Crier Café||2026-10-09||20:00": "approved"
 }
