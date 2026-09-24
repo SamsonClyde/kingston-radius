@@ -551,10 +551,6 @@
   "Tubby's||2026-09-17||20:00": "approved",
   "Tubby's||2026-09-18||20:00": "approved",
   "Tubby's||2026-09-19||16:00": "approved",
-  "Tubby's||2026-09-23||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787310077394
-  },
   "Tubby's||2026-09-23||20:00": "approved",
   "Tubby's||2026-09-26||4:00 pm": {
     "status": "rejected",
@@ -958,10 +954,6 @@
   },
   "Old Dutch Church||2026-10-25||16:00": "approved",
   "Tompkins Corners Cultural Center||2026-09-12||19:30": "approved",
-  "Tompkins Corners Cultural Center||2026-09-23||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787576002038
-  },
   "Tompkins Corners Cultural Center||2026-09-27||2:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787576032418
@@ -1302,10 +1294,6 @@
     "hiddenAt": 1788107871922
   },
   "Unicorn Bar||2026-09-18||21:30": "approved",
-  "Unicorn Bar||2026-09-23||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788107980603
-  },
   "Unicorn Bar||2026-09-26||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788107987158
@@ -1405,10 +1393,6 @@
   "Colony Woodstock||2026-09-13||": {
     "status": "rejected",
     "hiddenAt": 1788345342543
-  },
-  "Colony Woodstock||2026-09-23||": {
-    "status": "rejected",
-    "hiddenAt": 1788345360760
   },
   "Colony Woodstock||2026-09-24||": {
     "status": "rejected",
@@ -1826,10 +1810,6 @@
     "status": "rejected",
     "hiddenAt": 1790087170143
   },
-  "NoFun||2026-09-23||20:00": {
-    "status": "rejected",
-    "hiddenAt": 1790090996611
-  },
   "Westwind Orchard||2026-09-26||17:00": {
     "status": "rejected",
     "hiddenAt": 1790095092265
@@ -1898,10 +1878,6 @@
     "status": "rejected",
     "hiddenAt": 1790117613849
   },
-  "NoFun||2026-09-23||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790117617608
-  },
   "NoFun||2026-09-24||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790117621288
@@ -1969,10 +1945,6 @@
   "The Grand||2026-10-18||": {
     "status": "rejected",
     "hiddenAt": 1790117706493
-  },
-  "The Half Moon||2026-09-23||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790117709851
   },
   "The Half Moon||2026-10-07||8:00 pm": {
     "status": "rejected",
