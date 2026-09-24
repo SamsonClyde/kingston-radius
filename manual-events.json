@@ -407,7 +407,7 @@
   {
     "id": 498,
     "date": "2026-11-20",
-    "title": "Rising Appalachia",
+    "title": "Rising Appalachia, Viv & Riley",
     "venue": "Assembly Kingston",
     "venueUrl": "https://www.assemblykingston.com/events/rising-appalachia-1",
     "location": "Kingston, NY",
@@ -415,7 +415,7 @@
     "time": "20:00",
     "price": "$49",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
