@@ -1433,10 +1433,6 @@
     "status": "rejected",
     "hiddenAt": 1788657017620
   },
-  "Rosendale Theater||2026-09-22||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788658723747
-  },
   "The Falcon||2026-11-05||See website": {
     "status": "rejected",
     "hiddenAt": 1788658904353
@@ -1876,10 +1872,6 @@
   "Kingston, NY||2026-09-25||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790117608154
-  },
-  "NoFun||2026-09-22||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790117613849
   },
   "NoFun||2026-09-24||8:00 PM": {
     "status": "rejected",
