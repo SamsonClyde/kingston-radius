@@ -2315,5 +2315,9 @@
     "status": "rejected",
     "hiddenAt": 1790247231006
   },
-  "Unicorn Bar||2026-11-20||19:30": "approved"
+  "Unicorn Bar||2026-11-20||19:30": "approved",
+  "Westwind Orchard||2026-09-25||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790247234123
+  }
 }
