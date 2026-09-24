@@ -1,7 +1,7 @@
 // netlify/functions/events-save.js
 // Writes to the `data` branch — never touches `main`, never triggers a deploy.
 // Accepts any combination of: manualEvents, scrapedEvents, emailEvents, reviewStatus,
-// reviewStatusPatch, customVenues, hiddenTitles
+// reviewStatusPatch, customVenues, hiddenTitles, posterImage ({filename, contentBase64})
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method not allowed' };
@@ -116,7 +116,62 @@ exports.handler = async (event) => {
     }
   }
 
+  // Uploads a binary file (already base64-encoded by the client) to the data
+  // branch and returns its permanent raw-content URL. Used for poster images —
+  // same GitHub Contents API mechanism as writeFile, just skipping the JSON
+  // stringify step since the client sends already-encoded binary content.
+  async function uploadBinaryFile(path, base64Content) {
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${DATA_BRANCH}`;
+    const putUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+    const MAX_ATTEMPTS = 5;
+
+    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+      let sha = null;
+      try {
+        const getResp = await fetch(apiUrl, { headers: apiHeaders });
+        if (getResp.ok) sha = (await getResp.json()).sha;
+      } catch {}
+
+      const putBody = JSON.stringify({
+        message: `[admin] Upload ${path}`,
+        content: base64Content,
+        branch: DATA_BRANCH,
+        ...(sha ? { sha } : {}),
+      });
+      const putResp = await fetch(putUrl, { method: 'PUT', headers: apiHeaders, body: putBody });
+
+      if (putResp.ok) {
+        return `https://raw.githubusercontent.com/${owner}/${repo}/${DATA_BRANCH}/${path}`;
+      }
+      if (putResp.status === 409 && attempt < MAX_ATTEMPTS) {
+        await new Promise(r => setTimeout(r, 150 * attempt));
+        continue;
+      }
+      const txt = await putResp.text();
+      throw new Error(`GitHub upload failed for ${path} after ${attempt} attempt(s): ${putResp.status} ${txt}`);
+    }
+  }
+
+  function sanitizeFilename(name) {
+    const dot = name.lastIndexOf('.');
+    const base = (dot > 0 ? name.slice(0, dot) : name)
+      .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60);
+    const ext = (dot > 0 ? name.slice(dot + 1) : 'jpg').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 5) || 'jpg';
+    return `${Date.now()}-${base || 'poster'}.${ext}`;
+  }
+
   try {
+    let posterUrl = null;
+    if (body.posterImage && body.posterImage.contentBase64) {
+      const MAX_BYTES = 8 * 1024 * 1024; // 8 MB
+      const approxBytes = Math.ceil(body.posterImage.contentBase64.length * 3 / 4);
+      if (approxBytes > MAX_BYTES) {
+        return { statusCode: 400, body: 'Image too large (8 MB max)' };
+      }
+      const filename = sanitizeFilename(body.posterImage.filename || 'poster.jpg');
+      posterUrl = await uploadBinaryFile(`posters/${filename}`, body.posterImage.contentBase64);
+    }
+
     const writes = [];
     if (Array.isArray(body.manualEvents))  writes.push(writeFile('manual-events.json',  body.manualEvents));
     if (Array.isArray(body.scrapedEvents)) writes.push(writeFile('scraped-events.json', body.scrapedEvents));
@@ -129,9 +184,9 @@ exports.handler = async (event) => {
       writes.push(writeFile('custom-venues.json', body.customVenues));
     if (Array.isArray(body.hiddenTitles))
       writes.push(writeFile('hidden-titles.json', body.hiddenTitles));
-    if (writes.length === 0) return { statusCode: 400, body: 'No data to save' };
-    await Promise.all(writes);
-    return { statusCode: 200, body: JSON.stringify({ ok: true }) };
+    if (writes.length === 0 && !posterUrl) return { statusCode: 400, body: 'No data to save' };
+    if (writes.length > 0) await Promise.all(writes);
+    return { statusCode: 200, body: JSON.stringify({ ok: true, ...(posterUrl ? { posterUrl } : {}) }) };
   } catch (e) {
     return { statusCode: 500, body: e.message };
   }
