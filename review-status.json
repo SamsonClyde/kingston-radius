@@ -2141,5 +2141,9 @@
   "Bard College Conservatory||2026-10-09||2:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790245547623
+  },
+  "Hudson River Cruises||2026-10-31||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790245550490
   }
 }
