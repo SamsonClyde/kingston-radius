@@ -20519,5 +20519,19 @@
     "free": true,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 512,
+    "date": "2026-12-19",
+    "title": "Spencer Zahn",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/spencer-zahn",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
