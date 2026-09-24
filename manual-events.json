@@ -20301,7 +20301,7 @@
     "_manual": true
   },
   {
-    "id": 1790206983931,
+    "id": 1790207073570,
     "title": "(dm for address) Intrinsic Spin, Polar Identity, Lucky Star USA, Sabrina Trueheart, RUBY",
     "date": "2026-10-12",
     "time": "19:00",
@@ -20311,7 +20311,9 @@
     "mapsUrl": "https://scontent-lga3-2.cdninstagram.com/v/t51.82787-15/805752568_17907049824518975_6784890574121833570_n.jpg?stp=dst-jpg_e35_s1080x825_tt6&_nc_cat=101&ccb=7-5&_nc_sid=18de74&efg=eyJlZmciOiJGRUVELmlnX3NoaW1fcmVhZC4xMDgweDgyNS5DMyJ9&_nc_ohc=CeWWRUNQshIQ7kNvwGKtggD&_nc_oc=AdqhgoHUPGyMpH3q_6D-sNNTGEx7LrXq9fZ83ig2xlApK238Afl65L4tksaf4g-HkeoYsgzdfPTyDywZfQfKL-Vh&_nc_zt=23&_nc_ht=scontent-lga3-2.cdninstagram.com&_nc_gid=YLvzwl9boD1ATKj_J0rXuA&_nc_ss=7b6a8&oh=00_AQJRsXyRF9hCHHjEOiUzjowYlPLILSZxNcfwt7JP6YtYPQ&oe=6ABA36CE&ig_cache_key=Mzk4Mzk4MzAwODg0MzQ0NDI1MQ%3D%3D.2-ccb7-5",
     "price": "$10-$15",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790292124889-1000088645.jpg"
   },
   {
     "id": 1790207073570,
