@@ -2342,5 +2342,9 @@
   "Westwind Orchard||2026-10-17||4:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790247292540
+  },
+  "Bard College Conservatory||2026-10-09||": {
+    "status": "rejected",
+    "hiddenAt": 1790278446914
   }
 }
