@@ -2113,5 +2113,9 @@
   "Assembly Kingston||2026-11-13||12:00 am": {
     "status": "rejected",
     "hiddenAt": 1790245508244
+  },
+  "Assembly Kingston||2026-11-14||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790245526933
   }
 }
