@@ -211,7 +211,7 @@
   {
     "id": 420,
     "date": "2026-10-03",
-    "title": "Margaret Glaspy",
+    "title": "Margaret Glaspy, Julia Zivic",
     "venue": "Assembly Kingston",
     "venueUrl": "https://www.assemblykingston.com/events/margaret-glaspy",
     "location": "Kingston, NY",
@@ -219,7 +219,7 @@
     "time": "20:00",
     "price": "$30",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true
   },
   {
