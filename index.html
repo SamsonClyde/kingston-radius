@@ -1761,7 +1761,27 @@ function esc(s) {
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-function getDriveTime(venue) { return DRIVE_TIMES[venue] ?? 45; }
+// Checks DRIVE_TIMES first, then falls back to a custom venue template's own
+// "drive" field. This is what actually closes the gap between saving a drive
+// time on a venue template (which persists correctly to custom-venues.json)
+// and it being picked up by the distance filter — previously a template's
+// drive time was invisible here entirely, silently breaking the 30/60/90 min
+// filter for that venue until someone manually copied the number over.
+function getDriveTime(venue) {
+  if (DRIVE_TIMES[venue] !== undefined) return DRIVE_TIMES[venue];
+  const custom = getCustomVenueTemplates()[venue];
+  if (custom && custom.drive) return custom.drive;
+  return 45;
+}
+// Same lookup, but returns undefined when truly unset (no 45-min fallback) —
+// for pre-filling an editable drive-time field, where a blank should mean
+// "nothing recorded yet," not a real default value.
+function getKnownDriveTime(venue) {
+  if (DRIVE_TIMES[venue] !== undefined) return DRIVE_TIMES[venue];
+  const custom = getCustomVenueTemplates()[venue];
+  if (custom && custom.drive) return custom.drive;
+  return undefined;
+}
 
 // ── BADGE ─────────────────────────────────────────────────────────────────────
 function updateBadge() {
@@ -2168,7 +2188,7 @@ function buildEventCard(e, isAdmin) {
         <div style="display:flex;gap:8px;">
           <div style="flex:1;">
             <label style="font-size:0.68rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px;">Drive (min)</label>
-            <input type="number" class="ie-drive" value="${DRIVE_TIMES[e.venue]??''}" placeholder="Drive (min)">
+            <input type="number" class="ie-drive" value="${getKnownDriveTime(e.venue)??''}" placeholder="Drive (min)">
           </div>
           <div style="flex:1;">
             <label style="font-size:0.68rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px;">Price</label>
@@ -2277,7 +2297,7 @@ function renderAdminUnreviewed() {
             </div>
             <div>
               <label style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;">Drive Time (min)</label>
-              <input type="number" class="ur-drive" data-key="${k}" value="${DRIVE_TIMES[e.venue]??''}" placeholder="e.g. 22" style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);box-sizing:border-box;">
+              <input type="number" class="ur-drive" data-key="${k}" value="${getKnownDriveTime(e.venue)??''}" placeholder="e.g. 22" style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);box-sizing:border-box;">
             </div>
             <div>
               <label style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px;">Price</label>
@@ -2401,9 +2421,11 @@ function renderAdminNotes() {
       <div class="note-item">${stalePast.slice(0,15).map(e => `${esc(e.title)} — ${e.date}`).join('<br>')}${stalePast.length > 15 ? `<br><em>+ ${stalePast.length - 15} more</em>` : ''}</div></div>`;
   }
 
-  // 4. Venues missing a drive time (checking the raw object directly — getDriveTime()
-  // silently defaults to 45 for unknown venues, which would hide this check)
-  const venuesNoTime = [...new Set(upcoming.filter(e => DRIVE_TIMES[e.venue] === undefined).map(e => e.venue))];
+  // 4. Venues missing a drive time — checks both DRIVE_TIMES and custom venue
+  // templates (via getKnownDriveTime, which returns undefined rather than a
+  // default when truly unset; getDriveTime() itself defaults to 45, which
+  // would hide this check).
+  const venuesNoTime = [...new Set(upcoming.filter(e => getKnownDriveTime(e.venue) === undefined).map(e => e.venue))];
   if (venuesNoTime.length) {
     totalIssues += venuesNoTime.length;
     html += `<div class="note-section"><h3>📍 Venues with no drive time set (${venuesNoTime.length})</h3>
