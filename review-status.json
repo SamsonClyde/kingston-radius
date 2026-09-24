@@ -2206,5 +2206,9 @@
   "Lydia's Cafe||2026-12-31||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790245696535
+  },
+  "Tempo Arts||2026-10-01||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790245719378
   }
 }
