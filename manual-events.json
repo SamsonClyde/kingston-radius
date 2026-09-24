@@ -20395,5 +20395,18 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 1790248335376,
+    "title": "Woodstock Film Festival - Lunatic Dreamers: The Felice Brothers (film & music)",
+    "date": "2026-10-14",
+    "time": "19:00",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "price": "$54",
+    "free": false,
+    "_manual": true
   }
 ]
