@@ -20421,5 +20421,19 @@
     "price": "$35-$69",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 450,
+    "date": "2026-11-12",
+    "title": "Live Well, Spite Store, Jelly Kelly",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/live-well-spite-store-jelly-kelly",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "_manual": true
   }
 ]
