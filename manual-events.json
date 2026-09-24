@@ -20353,5 +20353,19 @@
     "free": false,
     "_source": "email",
     "_manual": true
+  },
+  {
+    "id": 67,
+    "date": "2026-11-05",
+    "title": "Steve Gunn",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/calendar",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "19:00",
+    "price": "See website",
+    "free": false,
+    "_source": "email",
+    "_manual": true
   }
 ]
