@@ -2331,5 +2331,9 @@
   "Westwind Orchard||2026-10-04||11:00 am": {
     "status": "rejected",
     "hiddenAt": 1790247275750
+  },
+  "Westwind Orchard||2026-10-09||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790247279638
   }
 }
