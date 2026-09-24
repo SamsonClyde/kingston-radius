@@ -2169,5 +2169,9 @@
   "Lydia's Cafe||2026-10-17||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790245590632
+  },
+  "Lydia's Cafe||2026-10-24||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790245593762
   }
 }
