@@ -2149,5 +2149,9 @@
   "Keegan Ales||2026-09-29||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1790245553352
+  },
+  "Keegan Ales||2026-10-11||2:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790245557150
   }
 }
