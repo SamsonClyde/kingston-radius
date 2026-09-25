@@ -20692,5 +20692,19 @@
     "price": "$15+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790334982996,
+    "title": "Sammy Rae & The Friends",
+    "date": "2027-02-18",
+    "time": "20:00",
+    "venue": "Basilica",
+    "venueUrl": "https://basilicahudson.org/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LF5dv1FSGKd1SxNFA",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
