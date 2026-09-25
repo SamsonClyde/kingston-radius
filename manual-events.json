@@ -20740,5 +20740,19 @@
     "price": "$62",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790368884599,
+    "title": "A Big Band Holiday to Remember - Remember Jones",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "posterUrl": "",
+    "price": "$45-$85",
+    "free": false,
+    "_manual": true
   }
 ]
