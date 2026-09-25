@@ -2,7 +2,7 @@ name: Scrape Events
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # 4am EDT (UTC-4) — runs once daily
+    - cron: '0 4 * * *'  # 12am/midnight EDT (UTC-4) — runs once daily
   workflow_dispatch:
 
 jobs:
