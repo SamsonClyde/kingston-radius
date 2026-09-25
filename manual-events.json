@@ -20622,5 +20622,19 @@
     "price": "$18",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790334023985,
+    "title": "Whait, Bow & Arrow, K8A",
+    "date": "2026-11-22",
+    "time": "19:30",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "posterUrl": "",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
