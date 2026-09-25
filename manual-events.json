@@ -14158,7 +14158,8 @@
     "price": "$45day/$82both",
     "free": false,
     "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790375837524-1000088665.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790375837524-1000088665.jpg",
+    "_source": "manual"
   },
   {
     "id": 1788871007345,
