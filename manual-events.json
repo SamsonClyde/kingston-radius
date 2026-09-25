@@ -848,7 +848,7 @@
   },
   {
     "id": 1786455571882,
-    "title": "Babehoven",
+    "title": "Babehoven, Jane Lai",
     "date": "2026-10-08",
     "time": "20:00",
     "venue": "Avalon Lounge",
@@ -857,7 +857,9 @@
     "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
     "price": "$17",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1786455625352,
