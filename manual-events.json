@@ -20535,5 +20535,20 @@
     "free": false,
     "_source": "scraped",
     "_manual": true
+  },
+  {
+    "id": 332,
+    "date": "2026-10-09",
+    "title": "Echo in the Glen - DJ Ethical Drift",
+    "venue": "Glen Falls House",
+    "venueUrl": "https://glenfallshouse.com/event-calendar/echo-in-the-glen",
+    "location": "Round Top, NY",
+    "mapsUrl": "https://maps.google.com/?q=810+Route+296+Round+Top+NY",
+    "time": "23:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "",
+    "_manual": true
   }
 ]
