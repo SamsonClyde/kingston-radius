@@ -20754,5 +20754,19 @@
     "price": "$45-$85",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790369625116,
+    "title": "Oktoberfest - Live Music",
+    "date": "2026-10-03",
+    "time": "12:00",
+    "venue": "Catskill Brewery",
+    "venueUrl": "https://www.catskillbrewery.com/events/",
+    "location": "Livingston Manor, NY",
+    "mapsUrl": "https://maps.app.goo.gl/JDRk9QZUC2tE1rED9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790369500446-10-3-oktoberfest-instagram-post-45-819x1024.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
