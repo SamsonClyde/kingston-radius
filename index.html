@@ -2676,6 +2676,7 @@ document.addEventListener('change', async (ev) => {
             ? `Uploaded and saved ✓ — <a href="#" data-action="remove-poster-inline" style="color:var(--red);">Remove</a>`
             : `Uploaded, but saving it failed — try again, or it'll save when you hit Save below.`;
         }
+        if (autosaveOk) renderEvents(); // so the poster icon shows up right away, without a reload
       }
     }
   } else {
