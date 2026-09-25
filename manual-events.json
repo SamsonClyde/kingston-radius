@@ -20636,5 +20636,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790334213780,
+    "title": "Tani Tabbal Quartet",
+    "date": "2026-10-18",
+    "time": "16:00",
+    "venue": "The Lace Mill",
+    "venueUrl": "https://thelacemillarts.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/8k3T7UXQT5Lzeqke9",
+    "posterUrl": "",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
