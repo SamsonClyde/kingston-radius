@@ -163,10 +163,10 @@ exports.handler = async (event) => {
   try {
     let posterUrl = null;
     if (body.posterImage && body.posterImage.contentBase64) {
-      const MAX_BYTES = 8 * 1024 * 1024; // 8 MB
+      const MAX_BYTES = 4.5 * 1024 * 1024; // 4.5 MB — base64 adds ~30% overhead, and Netlify's real request limit is 6MB
       const approxBytes = Math.ceil(body.posterImage.contentBase64.length * 3 / 4);
       if (approxBytes > MAX_BYTES) {
-        return { statusCode: 400, body: 'Image too large (8 MB max)' };
+        return { statusCode: 400, body: 'Image too large (4.5 MB max)' };
       }
       const filename = sanitizeFilename(body.posterImage.filename || 'poster.jpg');
       posterUrl = await uploadBinaryFile(`posters/${filename}`, body.posterImage.contentBase64);
