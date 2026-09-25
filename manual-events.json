@@ -14143,7 +14143,8 @@
     "mapsUrl": "https://maps.app.goo.gl/MiqFDXAH3KbatCYA9",
     "price": "$45day/$82both",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790374848967-1000088665.jpg"
   },
   {
     "id": 1788870698471,
