@@ -20726,5 +20726,19 @@
     "price": "$67-$109",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790368637377,
+    "title": "Steve Earle, Joelton Mayfield",
+    "date": "2026-10-24",
+    "time": "20:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "posterUrl": "",
+    "price": "$62",
+    "free": false,
+    "_manual": true
   }
 ]
