@@ -2656,6 +2656,28 @@ document.addEventListener('change', async (ev) => {
       const keyAttr = isInline ? '' : ` data-key="${esc(input.dataset.key||'')}"`;
       statusEl.innerHTML = `Uploaded ✓ — <a href="#" data-action="${removeAction}"${keyAttr} style="color:var(--red);">Remove</a>`;
     }
+    // Immediately persist the poster to the server the moment the upload succeeds,
+    // rather than waiting for a separate Save click. This closes a real bug where
+    // mobile browsers (which can suspend/background a tab while the Photos picker
+    // is open) were losing the in-progress edit state between "upload finishes" and
+    // "user taps Save" — the upload itself always worked, but the handoff to Save
+    // didn't survive on some phones. Saving it here removes that gap entirely: only
+    // applies to inline-edit on an event that already exists in manual-events.json
+    // (an Unreviewed item doesn't have a manual record yet until it's approved).
+    if (isInline) {
+      const key = saveBtn?.dataset.key;
+      const manual = getManualEvents();
+      const idx = manual.findIndex(m => eventKey(m) === key || m.id === (getAllEvents().find(e => eventKey(e)===key)?.id));
+      if (idx >= 0) {
+        manual[idx] = { ...manual[idx], posterUrl: result.url };
+        const autosaveOk = await saveManualEvents(manual);
+        if (statusEl) {
+          statusEl.innerHTML = autosaveOk
+            ? `Uploaded and saved ✓ — <a href="#" data-action="remove-poster-inline" style="color:var(--red);">Remove</a>`
+            : `Uploaded, but saving it failed — try again, or it'll save when you hit Save below.`;
+        }
+      }
+    }
   } else {
     if (statusEl) statusEl.textContent = '';
     alert(result.error);
@@ -2681,6 +2703,15 @@ document.addEventListener('click', async (ev) => {
     const urlInput = scope?.querySelector('.ie-posterUrl');
     if (urlInput) urlInput.value = '';
     const statusEl = scope?.querySelector('.ie-poster-status');
+    if (statusEl) statusEl.textContent = 'Removing…';
+    const saveBtn = scope?.querySelector('[data-action="inline-save"]');
+    const removeKey = saveBtn?.dataset.key;
+    const manual = getManualEvents();
+    const idx = manual.findIndex(m => eventKey(m) === removeKey || m.id === (getAllEvents().find(e => eventKey(e)===removeKey)?.id));
+    if (idx >= 0) {
+      manual[idx] = { ...manual[idx], posterUrl: '' };
+      await saveManualEvents(manual);
+    }
     if (statusEl) statusEl.innerHTML = '';
     return;
   }
