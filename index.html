@@ -2486,10 +2486,12 @@ function renderAdminNotes() {
   if (exactDupes.length) {
     totalIssues += exactDupes.length;
     html += `<div class="note-section"><h3>⚠️ Duplicate listings (${exactDupes.length})</h3>
-      <p class="note-desc">Same venue, date, and time appearing more than once in your data. If these are really different shows (e.g. two acts sharing a bill), no action needed — otherwise, hide or delete the extra one.</p>`;
+      <p class="note-desc">Same venue, date, and time appearing more than once in your data. If these are really different shows (e.g. two acts sharing a bill), no action needed — otherwise, merge them down to one.</p>`;
     exactDupes.forEach(g => {
+      const ids = g.map(e => e.id);
       html += `<div class="note-item"><strong>${esc(g[0].venue)}</strong> — ${g[0].date} ${g[0].time ? formatTime(g[0].time) : ''}<ul>` +
-        g.map(e => `<li>${esc(e.title)} <span style="color:var(--muted)">(id: ${e.id})</span></li>`).join('') + `</ul></div>`;
+        g.map(e => `<li>${esc(e.title)} <span style="color:var(--muted)">(id: ${e.id})</span></li>`).join('') +
+        `</ul><button data-action="merge-duplicates" data-ids='${esc(JSON.stringify(ids))}' style="font-size:0.76rem;background:var(--red);border:none;border-radius:5px;padding:5px 12px;cursor:pointer;color:#fff;font-family:'DM Sans',sans-serif;">Merge to one</button></div>`;
     });
     html += `</div>`;
   }
@@ -2664,16 +2666,26 @@ document.addEventListener('change', async (ev) => {
     // didn't survive on some phones. Saving it here removes that gap entirely: only
     // applies to inline-edit on an event that already exists in manual-events.json
     // (an Unreviewed item doesn't have a manual record yet until it's approved).
+    //
+    // Applies the poster to EVERY manual record sharing this exact venue+date+time,
+    // not just the one being edited. getAllEvents() collapses same-key duplicates
+    // down to a single displayed card, so if only one copy got the poster, it would
+    // show up or not depending on which duplicate happens to "win" that collapse —
+    // writing it to all of them makes that irrelevant.
     if (isInline) {
       const key = saveBtn?.dataset.key;
       const manual = getManualEvents();
-      const idx = manual.findIndex(m => eventKey(m) === key || m.id === (getAllEvents().find(e => eventKey(e)===key)?.id));
-      if (idx >= 0) {
-        manual[idx] = { ...manual[idx], posterUrl: result.url };
-        const autosaveOk = await saveManualEvents(manual);
+      let matchCount = 0;
+      const updated = manual.map(m => {
+        if (eventKey(m) === key) { matchCount++; return { ...m, posterUrl: result.url }; }
+        return m;
+      });
+      if (matchCount > 0) {
+        const autosaveOk = await saveManualEvents(updated);
         if (statusEl) {
+          const savedNote = matchCount > 1 ? ` (saved to all ${matchCount} duplicate listings)` : '';
           statusEl.innerHTML = autosaveOk
-            ? `Uploaded and saved ✓ — <a href="#" data-action="remove-poster-inline" style="color:var(--red);">Remove</a>`
+            ? `Uploaded and saved ✓${savedNote} — <a href="#" data-action="remove-poster-inline" style="color:var(--red);">Remove</a>`
             : `Uploaded, but saving it failed — try again, or it'll save when you hit Save below.`;
         }
         if (autosaveOk) renderEvents(); // so the poster icon shows up right away, without a reload
@@ -2698,6 +2710,52 @@ document.addEventListener('click', async (ev) => {
     return;
   }
 
+  if (action === 'merge-duplicates') {
+    const ids = JSON.parse(btn.dataset.ids || '[]');
+    if (ids.length < 2) return;
+    const confirmed = await showConfirmModal(`Merge these ${ids.length} duplicate listings into one? Any info missing on one copy (like a poster) will be filled in from another. This can't be undone.`);
+    if (!confirmed) return;
+
+    const manual = getManualEvents();
+    const dupes = manual.filter(m => ids.includes(m.id));
+    if (dupes.length < 2) {
+      alert('Could not find all of these duplicate records anymore — your data may have already changed. Try reopening the Notes tab and merging again.');
+      return;
+    }
+
+    // Keep whichever one is currently the live-displayed card for this slot, so
+    // its identity doesn't unexpectedly change from what's already visible.
+    const displayed = getAllEvents().find(e => eventKey(e) === eventKey(dupes[0]));
+    const baseId = displayed?.id ?? dupes[0].id;
+    const base = dupes.find(d => d.id === baseId) || dupes[0];
+
+    // Fill-the-gaps merge: for each field, keep the base record's own value if
+    // it has one; otherwise take the first non-empty value found among the
+    // other duplicates. Never silently overwrites a value that's already there.
+    const merged = { ...base };
+    const fieldsToFill = ['title','date','time','venue','venueUrl','location','mapsUrl','posterUrl','price'];
+    for (const f of fieldsToFill) {
+      if (!merged[f]) {
+        const found = dupes.find(d => d[f]);
+        if (found) merged[f] = found[f];
+      }
+    }
+    merged.id = baseId;
+    merged._manual = true;
+
+    const remaining = manual.filter(m => !ids.includes(m.id));
+    remaining.push(merged);
+    const ok = await saveManualEvents(remaining);
+    if (ok) {
+      showToast('Merged into one listing ✓');
+      renderAdminNotes();
+      renderEvents();
+    } else {
+      alert('Merging is showing on your screen, but saving it to the server failed after several attempts. It\'s safe to try again — reload the page in a minute to confirm it synced.');
+    }
+    return;
+  }
+
   if (action === 'remove-poster-inline') {
     ev.preventDefault();
     const scope = btn.closest('.inline-edit');
@@ -2708,12 +2766,12 @@ document.addEventListener('click', async (ev) => {
     const saveBtn = scope?.querySelector('[data-action="inline-save"]');
     const removeKey = saveBtn?.dataset.key;
     const manual = getManualEvents();
-    const idx = manual.findIndex(m => eventKey(m) === removeKey || m.id === (getAllEvents().find(e => eventKey(e)===removeKey)?.id));
-    if (idx >= 0) {
-      manual[idx] = { ...manual[idx], posterUrl: '' };
-      await saveManualEvents(manual);
-    }
+    // Clears the poster from every duplicate sharing this key, matching how
+    // uploading applies it to all of them too.
+    const updated = manual.map(m => eventKey(m) === removeKey ? { ...m, posterUrl: '' } : m);
+    await saveManualEvents(updated);
     if (statusEl) statusEl.innerHTML = '';
+    renderEvents();
     return;
   }
 
@@ -2869,7 +2927,12 @@ document.addEventListener('click', async (ev) => {
     if (drive !== null) DRIVE_TIMES[record.venue] = drive;
 
     const manual = getManualEvents();
-    const idx    = manual.findIndex(m => eventKey(m) === key || m.id === orig.id);
+    // Find the SAME record `orig` was resolved from — by id first, whenever orig
+    // has one. Falling back to a plain key search here (when duplicates share a
+    // key) could land on a *different* underlying record than orig, overwriting
+    // the wrong array slot and leaving two entries with the same id.
+    let idx = orig.id ? manual.findIndex(m => m.id === orig.id) : -1;
+    if (idx < 0) idx = manual.findIndex(m => eventKey(m) === key);
     let ok;
     if (!orig._manual) {
       if (idx >= 0) manual[idx] = record; else manual.push(record);
@@ -2879,6 +2942,18 @@ document.addEventListener('click', async (ev) => {
     } else {
       if (idx >= 0) manual[idx] = record; else manual.push(record);
       ok = await saveManualEvents(manual);
+    }
+    // Sync just the poster (not title/date/venue/etc.) to any OTHER duplicates
+    // sharing this same key, so it shows regardless of which duplicate
+    // getAllEvents() happens to display. Other fields stay scoped to this one
+    // record only — a title fix here shouldn't silently change a different copy.
+    if (ok) {
+      const afterSave = getManualEvents();
+      const dupesNeedingSync = afterSave.filter(m => eventKey(m) === key && m.id !== record.id && m.posterUrl !== posterUrl);
+      if (dupesNeedingSync.length > 0) {
+        const synced = afterSave.map(m => (eventKey(m) === key && m.id !== record.id) ? { ...m, posterUrl } : m);
+        await saveManualEvents(synced);
+      }
     }
     btn.textContent = 'Save'; btn.disabled = false;
     if (!ok) {
