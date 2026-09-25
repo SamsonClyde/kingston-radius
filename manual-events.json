@@ -20594,5 +20594,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790333818573,
+    "title": "Martin Bisi Band, John and Dan",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "posterUrl": "",
+    "price": "$18",
+    "free": false,
+    "_manual": true
   }
 ]
