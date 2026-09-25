@@ -20580,5 +20580,19 @@
     "price": "$18",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790333744502,
+    "title": "Josephine All Night (DJ)",
+    "date": "2026-10-24",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
