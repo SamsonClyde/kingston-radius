@@ -326,10 +326,6 @@
   "The Falcon||2026-09-13||19:30": "approved",
   "The Falcon||2026-09-18||19:30": "approved",
   "The Falcon||2026-09-20||19:30": "approved",
-  "The Falcon||2026-09-24||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076353711
-  },
   "The Falcon||2026-09-24||19:30": "approved",
   "The Falcon||2026-09-25||See website": {
     "status": "rejected",
@@ -1094,10 +1090,6 @@
   "Unicorn Bar||2026-09-17||19:00": "approved",
   "Unicorn Bar||2026-09-18||19:00": "approved",
   "Unicorn Bar||2026-09-19||19:00": "approved",
-  "Unicorn Bar||2026-09-24||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787591350358
-  },
   "Unicorn Bar||2026-09-25||9:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787591381752
@@ -1389,10 +1381,6 @@
     "status": "rejected",
     "hiddenAt": 1788345270005
   },
-  "Colony Woodstock||2026-09-24||": {
-    "status": "rejected",
-    "hiddenAt": 1788345364903
-  },
   "Colony Woodstock||2026-09-25||": {
     "status": "rejected",
     "hiddenAt": 1788345368344
@@ -1437,10 +1425,6 @@
   "Towne Crier Café||2026-09-27||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788659147603
-  },
-  "Tubby's||2026-09-24||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788659192128
   },
   "Tubby's||2026-10-01||7:00 pm": {
     "status": "rejected",
@@ -1505,10 +1489,6 @@
   "Hudson River Cruises||2026-10-23||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789388972540
-  },
-  "Keegan Ales||2026-09-24||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789388980588
   },
   "Keegan Ales||2026-09-25||7:00 pm": {
     "status": "rejected",
@@ -1616,10 +1596,6 @@
   "Tubby's||2026-11-13||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789389740770
-  },
-  "Unicorn Bar||2026-09-24||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789389744300
   },
   "Unicorn Bar||2026-09-26||9:00 pm": {
     "status": "rejected",
@@ -1809,10 +1785,6 @@
     "status": "rejected",
     "hiddenAt": 1790117499444
   },
-  "Athens Cultural Center||2026-09-24||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790117506428
-  },
   "Bard College Conservatory||2026-10-01||": {
     "status": "rejected",
     "hiddenAt": 1790117540067
@@ -1864,10 +1836,6 @@
   "Kingston, NY||2026-09-25||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790117608154
-  },
-  "NoFun||2026-09-24||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790117621288
   },
   "NoFun||2026-09-25||8:00 PM": {
     "status": "rejected",
@@ -1992,10 +1960,6 @@
   "Time & Space Limited||2026-11-01||2:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790117856929
-  },
-  "Towne Crier Café||2026-09-24||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790117859593
   },
   "Towne Crier Café||2026-09-25||6:30 pm": {
     "status": "rejected",
@@ -2213,10 +2177,6 @@
   "Tempo Arts||2027-09-30||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790245753510
-  },
-  "The Grand||2026-09-24||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790245767683
   },
   "The Grand||2026-09-25||": {
     "status": "rejected",
