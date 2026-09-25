@@ -2352,5 +2352,9 @@
     "status": "rejected",
     "hiddenAt": 1790283922036
   },
-  "Tubby's||2026-12-19||20:00": "approved"
+  "Tubby's||2026-12-19||20:00": "approved",
+  "Bardavon||2026-12-12||": {
+    "status": "rejected",
+    "hiddenAt": 1790333142701
+  }
 }
