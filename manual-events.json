@@ -20608,5 +20608,19 @@
     "price": "$18",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790333939592,
+    "title": "Dru Cutler, Leo Lovechild, The Dirt Whisperers",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "posterUrl": "",
+    "price": "$18",
+    "free": false,
+    "_manual": true
   }
 ]
