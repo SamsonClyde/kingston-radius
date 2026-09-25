@@ -2637,11 +2637,17 @@ document.addEventListener('change', async (ev) => {
   const scope = isInline ? input.closest('.inline-edit') : input.closest('.unreviewed-card');
   const urlInput  = scope?.querySelector(isInline ? '.ie-posterUrl' : '.ur-posterUrl');
   const statusEl  = scope?.querySelector(isInline ? '.ie-poster-status' : '.ur-poster-status');
+  // Block Save/Approve while the upload is still in flight — clicking it early would
+  // read the poster field before this write finishes, silently saving with no poster.
+  const saveBtn = scope?.querySelector(isInline ? '[data-action="inline-save"]' : '[data-action="approve-edited-event"]');
+  const saveBtnOriginalText = saveBtn?.textContent;
 
   if (statusEl) statusEl.textContent = 'Uploading…';
   input.disabled = true;
+  if (saveBtn) { saveBtn.disabled = true; saveBtn.textContent = 'Uploading image…'; }
   const result = await uploadPosterImage(file);
   input.disabled = false;
+  if (saveBtn) { saveBtn.disabled = false; saveBtn.textContent = saveBtnOriginalText; }
   input.value = '';
   if (result.ok) {
     if (urlInput) urlInput.value = result.url;
@@ -2920,10 +2926,15 @@ document.getElementById('f-poster-file')?.addEventListener('change', async (ev) 
   if (!file) return;
   const statusEl = document.getElementById('f-poster-status');
   const urlInput = document.getElementById('f-poster');
+  const saveBtn  = document.getElementById('add-event-btn');
+  const saveBtnOriginalText = saveBtn?.textContent;
+
   if (statusEl) statusEl.textContent = 'Uploading…';
   ev.target.disabled = true;
+  if (saveBtn) { saveBtn.disabled = true; saveBtn.textContent = 'Uploading image…'; }
   const result = await uploadPosterImage(file);
   ev.target.disabled = false;
+  if (saveBtn) { saveBtn.disabled = false; saveBtn.textContent = saveBtnOriginalText; }
   ev.target.value = '';
   if (result.ok) {
     if (urlInput) urlInput.value = result.url;
