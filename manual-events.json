@@ -14207,7 +14207,9 @@
     "mapsUrl": "https://maps.app.goo.gl/kpHgxgDmBgDZ8dRc8",
     "price": "$10adv/$15door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1788890031747,
