@@ -21148,5 +21148,19 @@
     "price": "$34-$55",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790422876284,
+    "title": "The Stranger (Billy Joel Cover)",
+    "date": "2027-02-26",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "posterUrl": "",
+    "price": "$50-$76",
+    "free": false,
+    "_manual": true
   }
 ]
