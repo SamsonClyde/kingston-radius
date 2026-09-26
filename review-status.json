@@ -2333,5 +2333,9 @@
   "Keegan Ales||2026-10-31||9:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790419699298
+  },
+  "MASS MoCA||2026-10-10||2:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1790419702836
   }
 }
