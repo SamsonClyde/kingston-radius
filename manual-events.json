@@ -20913,5 +20913,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790419307016,
+    "title": "Alessandra & Friends",
+    "date": "2026-10-11",
+    "time": "18:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
