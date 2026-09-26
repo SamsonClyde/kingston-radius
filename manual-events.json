@@ -20799,5 +20799,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790418212773,
+    "title": "A Groove Gathering",
+    "date": "2026-10-02",
+    "time": "19:00",
+    "venue": "Rough Cut Brewing",
+    "venueUrl": "https://www.roughcutbrewing.com/",
+    "location": "Kerhonkson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LeJkY6emdgUGdVCV9",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
