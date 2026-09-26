@@ -21106,5 +21106,19 @@
     "price": "$29-$40",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790422675138,
+    "title": "Takin' It To The Streets (The Doobie Brothers Cover Band)",
+    "date": "2027-01-21",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "posterUrl": "",
+    "price": "$34-$45",
+    "free": false,
+    "_manual": true
   }
 ]
