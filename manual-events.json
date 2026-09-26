@@ -20969,5 +20969,19 @@
     "price": "$35-$125",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790419986708,
+    "title": "The Tower House Sanctuary Ribbon-Cutting Celebration - Katya Grineva",
+    "date": "2026-09-27",
+    "time": "13:00",
+    "venue": "Tower House Sanctuary",
+    "venueUrl": "https://www.towerhousesanctuary.com/events",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/VY5hFtJt6MAjt4JR7",
+    "posterUrl": "",
+    "price": "$35-$125",
+    "free": false,
+    "_manual": true
   }
 ]
