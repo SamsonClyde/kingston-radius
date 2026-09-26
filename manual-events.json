@@ -20983,5 +20983,20 @@
     "price": "$35-$125",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 497,
+    "date": "2026-12-12",
+    "title": "Hanukkah Special - Michael Winograd & the Honorable Mentshn",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "19:30",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "",
+    "_manual": true
   }
 ]
