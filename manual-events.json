@@ -9571,7 +9571,7 @@
   },
   {
     "id": 351,
-    "date": "2026-09-27",
+    "date": "2026-10-04",
     "title": "Big Band Swing - Outdoor Fall Benefit",
     "venue": "Tompkins Corners Cultural Center",
     "venueUrl": "https://www.eventbrite.com/e/1998436627750?aff=oddtdtcreator",
@@ -9580,8 +9580,9 @@
     "time": "14:00",
     "price": "$25",
     "free": false,
-    "_source": "scraped",
-    "_manual": true
+    "_source": "manual",
+    "_manual": true,
+    "posterUrl": ""
   },
   {
     "id": 210,
