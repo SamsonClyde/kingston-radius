@@ -5691,7 +5691,8 @@
     "price": "sold out",
     "free": false,
     "_source": "manual",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790456668075-1000088707.jpg"
   },
   {
     "id": 403,
