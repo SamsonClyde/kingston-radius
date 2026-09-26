@@ -2362,5 +2362,9 @@
     "status": "rejected",
     "hiddenAt": 1790420153099
   },
-  "The Falcon||2026-12-12||19:30": "approved"
+  "The Falcon||2026-12-12||19:30": "approved",
+  "Tompkins Corners Cultural Center||2027-03-24||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790420172304
+  }
 }
