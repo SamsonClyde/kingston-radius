@@ -2345,5 +2345,9 @@
   "Saugerties, NY||2026-09-26||1:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790419996553
+  },
+  "Stissing Center||2026-10-10||7:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1790420039396
   }
 }
