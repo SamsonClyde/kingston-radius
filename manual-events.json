@@ -38,7 +38,8 @@
     "mapsUrl": "https://maps.google.com/?q=236+Lower+Whitfield+Rd+Accord+NY",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790435083874-1000088682.jpg"
   },
   {
     "id": 296,
