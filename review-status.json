@@ -2337,5 +2337,9 @@
   "MASS MoCA||2026-10-10||2:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790419702836
+  },
+  "Rail Trail Cafe||2026-09-26||12:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790419706082
   }
 }
