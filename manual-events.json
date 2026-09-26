@@ -20869,5 +20869,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790418757098,
+    "title": "LIsa Markley Trio",
+    "date": "2026-10-08",
+    "time": "17:30",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
