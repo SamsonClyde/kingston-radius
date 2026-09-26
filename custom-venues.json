@@ -826,5 +826,11 @@
     "location": "Coxsackie, NY",
     "mapsUrl": "https://maps.app.goo.gl/4TgZnBHzaB47siKg6",
     "drive": 39
+  },
+  "Rough Cut Brewing": {
+    "venueUrl": "https://www.roughcutbrewing.com/",
+    "location": "Kerhonkson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LeJkY6emdgUGdVCV9",
+    "drive": 31
   }
 }
