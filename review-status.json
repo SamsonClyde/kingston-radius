@@ -2313,5 +2313,9 @@
     "status": "rejected",
     "hiddenAt": 1790333308558
   },
-  "Glen Falls House||2026-10-09||23:00": "approved"
+  "Glen Falls House||2026-10-09||23:00": "approved",
+  "Assembly Kingston||2026-11-14||12:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1790419599053
+  }
 }
