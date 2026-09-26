@@ -14133,7 +14133,7 @@
   },
   {
     "id": 1788869841451,
-    "title": "Hudson Valley Sustainable Fashion Week[end] - Day Two: Live Music",
+    "title": "(canceled due to weather) Hudson Valley Sustainable Fashion Week[end] - Day Two: Live Music",
     "date": "2026-09-26",
     "time": "11:00",
     "venue": "Stone Ridge Orchard",
@@ -14142,7 +14142,9 @@
     "mapsUrl": "https://maps.app.goo.gl/bw5dyCL5iXxqjCz98",
     "price": "$15+",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1788870618378,
