@@ -20899,5 +20899,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790419281238,
+    "title": "The Fates",
+    "date": "2026-10-10",
+    "time": "18:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
