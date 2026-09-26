@@ -20785,5 +20785,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790418182238,
+    "title": "Oktoberfest - Live Wire Panic, Professor Louie & The Crowmatrix",
+    "date": "2026-09-26",
+    "time": "13:00",
+    "venue": "Rough Cut Brewing",
+    "venueUrl": "https://www.roughcutbrewing.com/",
+    "location": "Kerhonkson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LeJkY6emdgUGdVCV9",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
