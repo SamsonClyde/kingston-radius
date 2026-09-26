@@ -20067,7 +20067,7 @@
   },
   {
     "id": 1790097171775,
-    "title": "Baba Andrew Lamb Trio, Caroline Davis",
+    "title": "(canceled due to weather) Baba Andrew Lamb Trio, Caroline Davis",
     "date": "2026-09-27",
     "time": "19:00",
     "venue": "Reason & Ruckus",
@@ -20076,7 +20076,9 @@
     "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
     "price": "$20",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1790159830461,
