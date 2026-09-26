@@ -7204,7 +7204,7 @@
   },
   {
     "id": 1787454616046,
-    "title": "New York State of Ska: The Abruptors, Girth Control, Ben Basile, The Doomstompers",
+    "title": "(moved to Darkside due to weather) New York State of Ska: The Abruptors, Girth Control, Ben Basile, The Doomstompers",
     "date": "2026-09-26",
     "time": "16:00",
     "venue": "Kaal Rock Park",
@@ -7214,7 +7214,8 @@
     "price": "free",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1787454997900,
