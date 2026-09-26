@@ -13157,7 +13157,7 @@
   {
     "id": 1788487105849,
     "title": "Music & Arts Festival",
-    "date": "2026-09-26",
+    "date": "2026-10-03",
     "time": "12:00",
     "venue": "Nyack Neighborhood",
     "venueUrl": "https://nyackneighborhoodmusicandartsfestival.org",
@@ -13165,7 +13165,9 @@
     "mapsUrl": "https://maps.app.goo.gl/dWYXZWTYGuhoVswi7",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1788487865497,
