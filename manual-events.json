@@ -20771,5 +20771,19 @@
     "_manual": true,
     "_source": "manual",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790372697253-1000088647.jpg"
+  },
+  {
+    "id": 1790417857733,
+    "title": "Bennett Harris Acoustic Blues Duo",
+    "date": "2026-10-01",
+    "time": "17:30",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
