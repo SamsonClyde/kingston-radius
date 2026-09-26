@@ -15612,7 +15612,7 @@
   {
     "id": 1789339201307,
     "title": "Nick Malkin, to the light, Mossy Undertones",
-    "date": "2026-09-26",
+    "date": "2026-10-18",
     "time": "17:00",
     "venue": "Frog Alley Park",
     "venueUrl": "https://www.instagram.com/friendsofhistorickingston?stkn=aXJydW9hMHZwcm11",
@@ -15621,7 +15621,8 @@
     "price": "donation",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1789388646514,
