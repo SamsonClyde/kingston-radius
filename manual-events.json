@@ -20998,5 +20998,19 @@
     "_source": "scraped",
     "posterUrl": "",
     "_manual": true
+  },
+  {
+    "id": 1790420362740,
+    "title": "Taper's Choice",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "posterUrl": "",
+    "price": "$31",
+    "free": false,
+    "_manual": true
   }
 ]
