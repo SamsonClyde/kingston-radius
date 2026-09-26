@@ -2341,5 +2341,9 @@
   "Rail Trail Cafe||2026-09-26||12:30 pm": {
     "status": "rejected",
     "hiddenAt": 1790419706082
+  },
+  "Saugerties, NY||2026-09-26||1:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790419996553
   }
 }
