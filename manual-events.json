@@ -20813,5 +20813,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790418418036,
+    "title": "The Carl Mateo Band",
+    "date": "2026-10-03",
+    "time": "18:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
