@@ -21195,5 +21195,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1790504601556,
+    "title": "Sleepy Hollow Music Festival - Everclear, The Smithereens with Marshall Crenshaw, Fastball, Rachel B. Hawkins, SoulShine (Allman Brothers Cover Band), Anthony Giaccio & the Assortments, Rachel Ana Dobken, Imposters, The Altogether, School of Rock Briarcliff Manor, DJ Panda",
+    "date": "2026-10-03",
+    "time": "12:00",
+    "venue": "Kingsland Point Park",
+    "venueUrl": "https://visitsleepyhollow.com/sleepy-hollow-music-festival/",
+    "location": "Sleepy Hollow, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YU4t3LkBcTDJJMDQ6",
+    "posterUrl": "",
+    "price": "$55adv/$63",
+    "free": false,
+    "_manual": true
   }
 ]
