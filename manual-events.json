@@ -21178,5 +21178,19 @@
     "price": "$50-$76",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790476226491,
+    "title": "Cate Le Bon, Destroyer, Woods",
+    "date": "2026-09-27",
+    "time": "19:00",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
