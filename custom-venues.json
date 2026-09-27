@@ -856,5 +856,11 @@
     "location": "Teaneck, NJ",
     "mapsUrl": "https://maps.app.goo.gl/wt8i77W2LXLsBAEQ6",
     "drive": 80
+  },
+  "The Belvedere Inn": {
+    "venueUrl": "https://www.instagram.com/thebelvedereinn/",
+    "location": "Stamford, NY",
+    "mapsUrl": "https://maps.app.goo.gl/ZBoswHRanp9PYVXT9",
+    "drive": 72
   }
 }
