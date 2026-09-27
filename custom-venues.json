@@ -862,5 +862,11 @@
     "location": "Stamford, NY",
     "mapsUrl": "https://maps.app.goo.gl/ZBoswHRanp9PYVXT9",
     "drive": 72
+  },
+  "Windham Centre": {
+    "venueUrl": "https://www.catskillmtn.org/performances/",
+    "location": "Windham, NY",
+    "mapsUrl": "https://maps.app.goo.gl/zHkz4a8XQywhdBag6",
+    "drive": 50
   }
 }
