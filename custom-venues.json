@@ -844,5 +844,11 @@
     "location": "Sleepy Hollow, NY",
     "mapsUrl": "https://maps.app.goo.gl/YU4t3LkBcTDJJMDQ6",
     "drive": 80
+  },
+  "Spiral Park House": {
+    "venueUrl": "https://spiralhousepark.org/events/fall-festival/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/CzBHtFzbMLJGPNkF6",
+    "drive": 18
   }
 }
