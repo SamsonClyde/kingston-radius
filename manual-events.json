@@ -21251,5 +21251,19 @@
     "price": "$19",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790506020658,
+    "title": "DCxPC - Modern Natives, Uncle Frank Says No!, E.R.I.E., Shortwave Radio Band",
+    "date": "2026-10-27",
+    "time": "20:00",
+    "venue": "El Dorado Bar",
+    "venueUrl": "https://www.instagram.com/eldoradobar_troy/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/QwhaMLfRyAoqbWLt9",
+    "posterUrl": "",
+    "price": "$6adv/$12door",
+    "free": false,
+    "_manual": true
   }
 ]
