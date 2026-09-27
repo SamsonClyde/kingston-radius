@@ -21223,5 +21223,19 @@
     "price": "$20-$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790505501707,
+    "title": "DCxPC - All My Friends, Faith 2 Fear, Shark Arms, Shark Noises",
+    "date": "2026-10-17",
+    "time": "22:00",
+    "venue": "Snug Harbor",
+    "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/UxtL3uvDoYHidUS4A",
+    "posterUrl": "",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
