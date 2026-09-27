@@ -2350,5 +2350,9 @@
   "Assembly Kingston||2026-09-27||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790503756167
+  },
+  "Rail Trail Cafe||2026-09-27||12:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790503761648
   }
 }
