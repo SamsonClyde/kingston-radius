@@ -2346,5 +2346,9 @@
   "Big Indian Park||2026-09-27||13:00": {
     "status": "rejected",
     "hiddenAt": 1790447053210
+  },
+  "Assembly Kingston||2026-09-27||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790503756167
   }
 }
