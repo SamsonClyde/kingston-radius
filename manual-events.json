@@ -21237,5 +21237,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790505848814,
+    "title": "Chemical-X, I.D.K, Trouble Bound, Rest Assured?, Fat Bangs",
+    "date": "2026-10-24",
+    "time": "19:00",
+    "venue": "Debonair Music Hall",
+    "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
+    "location": "Teaneck, NJ",
+    "mapsUrl": "https://maps.app.goo.gl/wt8i77W2LXLsBAEQ6",
+    "posterUrl": "",
+    "price": "$19",
+    "free": false,
+    "_manual": true
   }
 ]
