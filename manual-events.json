@@ -21209,5 +21209,19 @@
     "price": "$55adv/$63",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790504958257,
+    "title": "Fall Festival - Megan Gugliotta, Maia Jarrett & Nico Bald & Micah Kelleher & Noah Jarrett, Ancient Phoenicians, Harrison Nir",
+    "date": "2026-10-03",
+    "time": "13:00",
+    "venue": "Spiral Park House",
+    "venueUrl": "https://spiralhousepark.org/events/fall-festival/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/CzBHtFzbMLJGPNkF6",
+    "posterUrl": "",
+    "price": "$20-$30",
+    "free": false,
+    "_manual": true
   }
 ]
