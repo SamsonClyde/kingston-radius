@@ -21265,5 +21265,19 @@
     "price": "$6adv/$12door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790506390825,
+    "title": "Trundlebones",
+    "date": "2026-10-10",
+    "time": "20:00",
+    "venue": "The Belvedere Inn",
+    "venueUrl": "https://www.instagram.com/thebelvedereinn/",
+    "location": "Stamford, NY",
+    "mapsUrl": "https://maps.app.goo.gl/ZBoswHRanp9PYVXT9",
+    "posterUrl": "",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
