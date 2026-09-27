@@ -21279,5 +21279,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790506662623,
+    "title": "Orphee Musique Concert I",
+    "date": "2026-11-14",
+    "time": "16:00",
+    "venue": "Doctorow Center",
+    "venueUrl": "https://www.catskillmtn.org/performances/",
+    "location": "Hunter, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LnFs5qhwS73VKaBh9",
+    "posterUrl": "",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
