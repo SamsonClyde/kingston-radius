@@ -188,10 +188,6 @@
     "status": "rejected",
     "hiddenAt": 1786963852432
   },
-  "Assembly Kingston||2026-09-26||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786963857529
-  },
   "Assembly Kingston||2026-10-02||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963875202
@@ -543,10 +539,6 @@
   "Tubby's||2026-09-18||20:00": "approved",
   "Tubby's||2026-09-19||16:00": "approved",
   "Tubby's||2026-09-23||20:00": "approved",
-  "Tubby's||2026-09-26||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787310084198
-  },
   "Tubby's||2026-09-27||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787310110062
@@ -641,10 +633,6 @@
     "hiddenAt": 1787344947407
   },
   "Levon Helm Studios||2026-09-25||20:00": "approved",
-  "Levon Helm Studios||2026-09-26||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787345081501
-  },
   "Levon Helm Studios||2026-09-26||20:00": "approved",
   "Levon Helm Studios||2027-04-29||8:00 pm": {
     "status": "rejected",
@@ -706,10 +694,6 @@
   "Rail Trail Cafe||2026-09-18||17:00": "approved",
   "Rail Trail Cafe||2026-09-19||17:00": "approved",
   "Rail Trail Cafe||2026-09-20||13:00": "approved",
-  "Rail Trail Cafe||2026-09-26||5:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787484944196
-  },
   "Rail Trail Cafe||2026-09-26||17:00": "approved",
   "Rail Trail Cafe||2026-10-04||5:00 pm": {
     "status": "rejected",
@@ -781,14 +765,6 @@
     "hiddenAt": 1787539567591
   },
   "Tempo Arts||2026-09-26||20:00": "approved",
-  "Tempo Arts||2026-09-26||10:00 AM": {
-    "status": "rejected",
-    "hiddenAt": 1787539607285
-  },
-  "Tempo Arts||2026-09-26||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1787539640537
-  },
   "Tempo Arts||2026-09-27||3:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787539682407
@@ -848,10 +824,6 @@
     "hiddenAt": 1787540606047
   },
   "The Falcon||2026-11-06||19:30": "approved",
-  "The Half Moon||2026-09-26||2:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787540988350
-  },
   "The Half Moon||2026-09-26||14:00": "approved",
   "The Half Moon||2026-10-04||1:00 pm": {
     "status": "rejected",
@@ -1227,10 +1199,6 @@
     "hiddenAt": 1788107721425
   },
   "The Lace Mill||2026-09-02||18:00": "approved",
-  "The Local Saugerties||2026-09-26||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788107756452
-  },
   "The Local Saugerties||2026-09-27||5:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788107759677
@@ -1729,10 +1697,6 @@
     "status": "rejected",
     "hiddenAt": 1790087170143
   },
-  "Westwind Orchard||2026-09-26||17:00": {
-    "status": "rejected",
-    "hiddenAt": 1790095092265
-  },
   "Assembly Kingston||2026-12-29||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790117499444
@@ -1789,10 +1753,6 @@
     "status": "rejected",
     "hiddenAt": 1790117608154
   },
-  "NoFun||2026-09-26||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790117640584
-  },
   "NoFun||2026-09-27||6:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790117642958
@@ -1800,10 +1760,6 @@
   "NoFun||2026-09-27||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790117645471
-  },
-  "PS21 Chatham||2026-09-26||2:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790117649408
   },
   "PS21 Chatham||2026-10-31||7:30 PM": {
     "status": "rejected",
@@ -1884,10 +1840,6 @@
   "The Local Saugerties||2026-10-04||5:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790117840436
-  },
-  "Time & Space Limited||2026-09-26||2:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790117842953
   },
   "Time & Space Limited||2026-10-03||1:00 PM": {
     "status": "rejected",
@@ -2117,10 +2069,6 @@
   "Tempo Arts||2027-09-30||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790245753510
-  },
-  "The Grand||2026-09-26||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790246213106
   },
   "The Grand||2026-09-26||20:00": "approved",
   "The Grand||2026-09-27||11:00 AM": {
