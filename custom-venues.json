@@ -838,5 +838,11 @@
     "location": "Saugerties, NY",
     "mapsUrl": "https://maps.app.goo.gl/VY5hFtJt6MAjt4JR7",
     "drive": 17
+  },
+  "Kingsland Point Park": {
+    "venueUrl": "https://visitsleepyhollow.com/sleepy-hollow-music-festival/",
+    "location": "Sleepy Hollow, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YU4t3LkBcTDJJMDQ6",
+    "drive": 80
   }
 }
