@@ -850,5 +850,11 @@
     "location": "Saugerties, NY",
     "mapsUrl": "https://maps.app.goo.gl/CzBHtFzbMLJGPNkF6",
     "drive": 18
+  },
+  "Debonair Music Hall": {
+    "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
+    "location": "Teaneck, NJ",
+    "mapsUrl": "https://maps.app.goo.gl/wt8i77W2LXLsBAEQ6",
+    "drive": 80
   }
 }
