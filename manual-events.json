@@ -21311,5 +21311,19 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790517831390,
+    "title": "Matt Munisteri",
+    "date": "2026-10-15",
+    "time": "19:30",
+    "venue": "ENG's Chinese",
+    "venueUrl": "https://www.instagram.com/engsrestaurant/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/4pzhqqHvFLyBLUqg9",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
