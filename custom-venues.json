@@ -874,5 +874,11 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=229+Green+Kill+Ave+Kingston+NY",
     "drive": 0
+  },
+  "Upper Depot Brewing": {
+    "venueUrl": "https://www.upperdepot.com/hudson-oktoberfest-2026/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/idL8bN1wXvthQx5b8",
+    "drive": 39
   }
 }
