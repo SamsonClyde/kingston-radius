@@ -21362,5 +21362,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790593833249,
+    "title": "Flannel Fest - Bits & Peices",
+    "date": "2026-10-10",
+    "time": "17:00",
+    "venue": "The Greenhouse Cidery",
+    "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
+    "location": "Chatham, NY",
+    "mapsUrl": "https://maps.app.goo.gl/DzCNXHirqPit3UBK7",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
