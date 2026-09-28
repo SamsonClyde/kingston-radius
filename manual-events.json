@@ -21420,5 +21420,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790594266854,
+    "title": "Apple-Palooza - Toddler Jams, Denim Joe",
+    "date": "2026-10-04",
+    "time": "11:00",
+    "venue": "Greig Farm",
+    "venueUrl": "https://www.thegreigfarm.com/events-calendar",
+    "location": "Red Hook, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NBadsndo1Dez5WdSA",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
