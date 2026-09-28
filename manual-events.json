@@ -21444,5 +21444,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790614792651,
+    "title": "Oktoberfest",
+    "date": "2026-10-03",
+    "time": "12:00",
+    "venue": "Upper Depot Brewing",
+    "venueUrl": "https://www.upperdepot.com/hudson-oktoberfest-2026/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/idL8bN1wXvthQx5b8",
+    "posterUrl": "",
+    "price": "$18",
+    "free": false,
+    "_manual": true
   }
 ]
