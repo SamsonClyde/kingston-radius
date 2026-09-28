@@ -16370,7 +16370,8 @@
     "price": "rsvp required",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790596290783-1000088795.jpg"
   },
   {
     "id": 1789399573835,
