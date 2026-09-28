@@ -21447,7 +21447,7 @@
   },
   {
     "id": 1790614792651,
-    "title": "Oktoberfest",
+    "title": "Oktoberfest - Mo Lowda & the Humble, Jungle Love, Dylan Doyle Band, Athron",
     "date": "2026-10-03",
     "time": "12:00",
     "venue": "Upper Depot Brewing",
@@ -21457,6 +21457,7 @@
     "posterUrl": "",
     "price": "$18",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
