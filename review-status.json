@@ -2279,5 +2279,9 @@
   "Towne Crier Café||2026-11-06||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790593307515
+  },
+  "Lil' Deb's Oasis||2026-09-28||17:00": {
+    "status": "rejected",
+    "hiddenAt": 1790596535766
   }
 }
