@@ -21473,5 +21473,19 @@
     "price": "$10adv/$15door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790620587976,
+    "title": "Xasthur, Temple of the Witch, King In Yellow, Ethical Drift",
+    "date": "2026-10-01",
+    "time": "19:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "posterUrl": "",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
