@@ -868,5 +868,11 @@
     "location": "Windham, NY",
     "mapsUrl": "https://maps.app.goo.gl/zHkz4a8XQywhdBag6",
     "drive": 50
+  },
+  "Green Kill": {
+    "venueUrl": "https://greenkill.substack.com/p/upcoming-events-calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=229+Green+Kill+Ave+Kingston+NY",
+    "drive": 0
   }
 }
