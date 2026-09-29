@@ -3691,19 +3691,6 @@
     "_manual": true
   },
   {
-    "id": 1787071270541,
-    "title": "Crystal Bowersox",
-    "date": "2026-11-18",
-    "time": "19:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "price": "$29-$40",
-    "free": false,
-    "_manual": true
-  },
-  {
     "id": 1787071319301,
     "title": "Story Songs of the 70's (Covers)",
     "date": "2026-11-19",
@@ -21136,20 +21123,6 @@
     "_manual": true
   },
   {
-    "id": 1790422468318,
-    "title": "Crystal Bowersox",
-    "date": "2026-11-18",
-    "time": "19:00",
-    "venue": "Daryl's House Club",
-    "venueUrl": "https://darylshouseclub.com/shows/",
-    "location": "Pawling, NY",
-    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "posterUrl": "",
-    "price": "$29-$40",
-    "free": false,
-    "_manual": true
-  },
-  {
     "id": 1790422675138,
     "title": "Takin' It To The Streets (The Doobie Brothers Cover Band)",
     "date": "2027-01-21",
@@ -21618,6 +21591,20 @@
     "mapsUrl": "https://maps.app.goo.gl/jpA91USiPrfPdQfL7",
     "posterUrl": "",
     "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1790422468318,
+    "title": "Crystal Bowersox",
+    "date": "2026-11-18",
+    "time": "19:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "posterUrl": "",
+    "price": "$29-$40",
     "free": false,
     "_manual": true
   }
