@@ -22422,5 +22422,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790704476540,
+    "title": "Weeeds, Gary, Sock, Cymbals",
+    "date": "2026-10-24",
+    "time": "",
+    "venue": "The Half Moon",
+    "venueUrl": "https://www.instagram.com/gary_the_band/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/2xtXkdDVa2REhf9VA",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
