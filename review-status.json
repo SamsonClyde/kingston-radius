@@ -645,7 +645,10 @@
     "status": "rejected",
     "hiddenAt": 1787345373010
   },
-  "Love, Velma||2027-02-13||20:00": "approved",
+  "Love, Velma||2027-02-13||20:00": {
+    "status": "rejected",
+    "hiddenAt": 1790682478500
+  },
   "MASS MoCA||2026-08-29||20:00": "approved",
   "MASS MoCA||2026-10-18||7:00 PM": {
     "status": "rejected",
