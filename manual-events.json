@@ -12015,19 +12015,6 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790593876806-1000052120-orig.png"
   },
   {
-    "id": 1788282321203,
-    "title": "The Chasetails",
-    "date": "2026-10-17",
-    "time": "17:00",
-    "venue": "The Greenhouse Cidery",
-    "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
-    "location": "Chatham, NY",
-    "mapsUrl": "https://maps.app.goo.gl/NyUuj5Az6xsTLD119",
-    "price": "See website",
-    "free": false,
-    "_manual": true
-  },
-  {
     "id": 1788283668542,
     "title": "Out on the Farm: All-Ages Queer Upstate NY Fall Festival",
     "date": "2026-09-26",
@@ -21300,20 +21287,6 @@
     "_source": "manual"
   },
   {
-    "id": 1790594015097,
-    "title": "The Chasetails",
-    "date": "2026-10-17",
-    "time": "17:00",
-    "venue": "The Greenhouse Cidery",
-    "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
-    "location": "Chatham, NY",
-    "mapsUrl": "https://maps.app.goo.gl/DzCNXHirqPit3UBK7",
-    "posterUrl": "",
-    "price": "See website",
-    "free": false,
-    "_manual": true
-  },
-  {
     "id": 1790594051194,
     "title": "Funky Pirates: Adults Only",
     "date": "2026-10-31",
@@ -21558,6 +21531,20 @@
     "id": 1790593973096,
     "title": "Rob Fleming",
     "date": "2026-10-03",
+    "time": "17:00",
+    "venue": "The Greenhouse Cidery",
+    "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
+    "location": "Chatham, NY",
+    "mapsUrl": "https://maps.app.goo.gl/DzCNXHirqPit3UBK7",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1790594015097,
+    "title": "The Chasetails",
+    "date": "2026-10-17",
     "time": "17:00",
     "venue": "The Greenhouse Cidery",
     "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
