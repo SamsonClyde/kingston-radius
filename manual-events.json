@@ -21934,5 +21934,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790693072902,
+    "title": "Buffalo Stack",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "venue": "Park Theater",
+    "venueUrl": "https://parktheaterhudson.com/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/rumcuWciwQhFjQRr8",
+    "posterUrl": "",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
