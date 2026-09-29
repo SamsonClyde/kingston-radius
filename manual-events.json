@@ -21892,5 +21892,19 @@
     "price": "$19",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790692323750,
+    "title": "Hispanic Heritage Festival",
+    "date": "2026-10-11",
+    "time": "12:00",
+    "venue": "Paramount Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "posterUrl": "",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
