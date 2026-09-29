@@ -22281,5 +22281,19 @@
     "price": "$5",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790699094306,
+    "title": "New Paltz Fashion Market - Live Music",
+    "date": "2026-10-04",
+    "time": "12:00",
+    "venue": "New Life Market",
+    "venueUrl": "https://www.instagram.com/newlifemarkets/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/CacigHZNUhDXaPqV9",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
