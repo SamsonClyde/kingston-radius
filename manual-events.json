@@ -21687,5 +21687,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790688606037,
+    "title": "Jazz Night with Mark Phillips & Friends",
+    "date": "2026-10-25",
+    "time": "17:00",
+    "venue": "Roe Jan Brewing Co",
+    "venueUrl": "https://roejanbrewing.com/",
+    "location": "Hillsdale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gFZHMJd4BnhB6pwZ6",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
