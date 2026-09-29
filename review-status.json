@@ -2263,5 +2263,10 @@
   "Towne Crier Café||2026-11-06||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790593307515
-  }
+  },
+  "Assembly Kingston||2026-11-04||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790680673990
+  },
+  "Assembly Kingston||2026-11-04||20:00": "approved"
 }
