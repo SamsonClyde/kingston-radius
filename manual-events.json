@@ -11988,20 +11988,6 @@
     "_manual": true
   },
   {
-    "id": 1788282271436,
-    "title": "Bits & Pieces",
-    "date": "2026-10-10",
-    "time": "17:00",
-    "venue": "The Greenhouse Cidery",
-    "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
-    "location": "Chatham, NY",
-    "mapsUrl": "https://maps.app.goo.gl/NyUuj5Az6xsTLD119",
-    "price": "See website",
-    "free": false,
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790593876806-1000052120-orig.png"
-  },
-  {
     "id": 1788283668542,
     "title": "Out on the Farm: All-Ages Queer Upstate NY Fall Festival",
     "date": "2026-09-26",
@@ -21192,21 +21178,6 @@
     "_manual": true
   },
   {
-    "id": 1790593833249,
-    "title": "Flannel Fest - Bits & Peices",
-    "date": "2026-10-10",
-    "time": "17:00",
-    "venue": "The Greenhouse Cidery",
-    "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
-    "location": "Chatham, NY",
-    "mapsUrl": "https://maps.app.goo.gl/DzCNXHirqPit3UBK7",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790593876806-1000052120-orig.png",
-    "price": "See website",
-    "free": false,
-    "_manual": true,
-    "_source": "manual"
-  },
-  {
     "id": 1790594051194,
     "title": "Funky Pirates: Adults Only",
     "date": "2026-10-31",
@@ -21515,5 +21486,20 @@
     "price": "$62",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790593833249,
+    "title": "Flannel Fest - Bits & Peices",
+    "date": "2026-10-10",
+    "time": "17:00",
+    "venue": "The Greenhouse Cidery",
+    "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
+    "location": "Chatham, NY",
+    "mapsUrl": "https://maps.app.goo.gl/DzCNXHirqPit3UBK7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790593876806-1000052120-orig.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true,
+    "_source": "manual"
   }
 ]
