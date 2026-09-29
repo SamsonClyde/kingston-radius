@@ -9132,7 +9132,8 @@
     "price": "$10-$30",
     "free": false,
     "_source": "scraped",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790703669104-ffff24-happy-squirrel-square-1-e1728422669213.webp"
   },
   {
     "id": 318,
