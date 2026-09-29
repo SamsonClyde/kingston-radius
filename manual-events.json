@@ -21501,5 +21501,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1790682262793,
+    "title": "O+ Festival: Saturday – El Front, Catheral Ceilings, Sweet Harm, Doug Gillard, MC Lars",
+    "date": "2026-10-10",
+    "time": "17:00",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
