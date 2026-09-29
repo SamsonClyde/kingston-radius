@@ -21603,5 +21603,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790688366615,
+    "title": "Duo Andalucia",
+    "date": "2026-10-10",
+    "time": "19:00",
+    "venue": "Roe Jan Brewing Co",
+    "venueUrl": "https://roejanbrewing.com/",
+    "location": "Hillsdale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gFZHMJd4BnhB6pwZ6",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
