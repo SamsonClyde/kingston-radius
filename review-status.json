@@ -2336,5 +2336,9 @@
   "NoFun||2026-10-04||4:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790680905540
+  },
+  "Unicorn Bar||2026-10-14||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790680909117
   }
 }
