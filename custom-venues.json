@@ -880,5 +880,11 @@
     "location": "Hudson, NY",
     "mapsUrl": "https://maps.app.goo.gl/idL8bN1wXvthQx5b8",
     "drive": 39
+  },
+  "Roe Jan Brewing Co": {
+    "venueUrl": "https://roejanbrewing.com/",
+    "location": "Hillsdale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gFZHMJd4BnhB6pwZ6",
+    "drive": 59
   }
 }
