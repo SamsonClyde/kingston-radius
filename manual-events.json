@@ -21845,7 +21845,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790689914654-image-2.webp",
     "price": "$25",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1790689871924,
