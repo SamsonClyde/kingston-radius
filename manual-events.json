@@ -21520,5 +21520,20 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 385,
+    "date": "2026-11-04",
+    "title": "Vieux Farka Touré",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/vieux-farka-tour-presents-a-benefit-for-the-ali-farka-tour-foundation",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "$32/$42",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "",
+    "_manual": true
   }
 ]
