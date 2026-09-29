@@ -22493,5 +22493,19 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790705411690,
+    "title": "Fall Festival - Evil Genius",
+    "date": "2026-10-10",
+    "time": "12:00",
+    "venue": "Belleayre",
+    "venueUrl": "https://www.instagram.com/belleayre",
+    "location": "Belleayre, NY",
+    "mapsUrl": "https://maps.app.goo.gl/TtAP9SbuCkZnRvkLA",
+    "posterUrl": "",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
