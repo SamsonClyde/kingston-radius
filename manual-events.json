@@ -15607,7 +15607,7 @@
   {
     "id": 445,
     "date": "2026-11-22",
-    "title": "Alex Hamburger Quartet",
+    "title": "Alex Hamburger Quartet, Illari",
     "venue": "The Falcon",
     "venueUrl": "https://www.liveatthefalcon.com",
     "location": "Marlboro, NY",
@@ -15615,8 +15615,9 @@
     "time": "19:30",
     "price": "See website",
     "free": false,
-    "_source": "scraped",
-    "_manual": true
+    "_source": "manual",
+    "_manual": true,
+    "posterUrl": ""
   },
   {
     "id": 459,
