@@ -892,5 +892,11 @@
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.app.goo.gl/ZAfnAWaBY2zFznZA7",
     "drive": 35
+  },
+  "New Life Market": {
+    "venueUrl": "https://www.instagram.com/newlifemarkets/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/CacigHZNUhDXaPqV9",
+    "drive": 25
   }
 }
