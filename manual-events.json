@@ -22052,5 +22052,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790696450479,
+    "title": "Woodstock Roots, New Orleans Soul & Brian Mitchel",
+    "date": "2026-10-10",
+    "time": "19:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
