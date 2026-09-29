@@ -7898,7 +7898,7 @@
   },
   {
     "id": 1787500424924,
-    "title": "Deceits, Computer Kill",
+    "title": "Deceits, Computer Kill, Bloodx3",
     "date": "2026-10-01",
     "time": "19:00",
     "venue": "NoFun",
@@ -7908,7 +7908,8 @@
     "price": "$25",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1787500461929,
