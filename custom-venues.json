@@ -916,5 +916,11 @@
     "location": "Lee, MA",
     "mapsUrl": "https://maps.app.goo.gl/PFSNx7iV5Ejqtx5q6",
     "drive": 75
+  },
+  "Belleayre": {
+    "venueUrl": "https://www.instagram.com/belleayre",
+    "location": "Belleayre, NY",
+    "mapsUrl": "https://maps.app.goo.gl/TtAP9SbuCkZnRvkLA",
+    "drive": 48
   }
 }
