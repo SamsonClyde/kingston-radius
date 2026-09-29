@@ -6745,7 +6745,8 @@
     "price": "rsvp",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790687670078-program-icons-2026-1.jpg"
   },
   {
     "id": 1787399016561,
