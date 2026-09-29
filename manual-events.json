@@ -21535,5 +21535,19 @@
     "_source": "scraped",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790680712249-bdbe18c6-deeb-4c80-a2fa-fc61a18ee6e3.jpg",
     "_manual": true
+  },
+  {
+    "id": 1790681297677,
+    "title": "Kaia Dedek & Joe Colwell",
+    "date": "2026-10-17",
+    "time": "16:00",
+    "venue": "HRMM Solaris Cruise",
+    "venueUrl": "https://www.hrmm.org/solaris-cruises.html",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/BeMvKWTL7bdDv5uB6",
+    "posterUrl": "",
+    "price": "$38",
+    "free": false,
+    "_manual": true
   }
 ]
