@@ -910,5 +910,11 @@
     "location": "Ghent, NY",
     "mapsUrl": "https://maps.app.goo.gl/Sf7Fc5nK6vUtU7PX7",
     "drive": 57
+  },
+  "CTSB": {
+    "venueUrl": "https://www.instagram.com/ctsbtv",
+    "location": "Lee, MA",
+    "mapsUrl": "https://maps.app.goo.gl/PFSNx7iV5Ejqtx5q6",
+    "drive": 75
   }
 }
