@@ -21589,5 +21589,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790688312972,
+    "title": "Jack Grace",
+    "date": "2026-10-09",
+    "time": "19:00",
+    "venue": "Roe Jan Brewing Co",
+    "venueUrl": "https://roejanbrewing.com/",
+    "location": "Hillsdale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gFZHMJd4BnhB6pwZ6",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
