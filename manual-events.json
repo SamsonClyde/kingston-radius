@@ -21563,5 +21563,19 @@
     "price": "rsvp",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790681620655,
+    "title": "Jazz Night on the River",
+    "date": "2026-10-07",
+    "time": "18:00",
+    "venue": "Hutton Brickyards",
+    "venueUrl": "https://www.huttonbrickyards.com/events-happenings",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+North+St+Kingston+NY",
+    "posterUrl": "",
+    "price": "rsvp",
+    "free": false,
+    "_manual": true
   }
 ]
