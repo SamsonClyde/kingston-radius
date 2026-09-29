@@ -886,5 +886,11 @@
     "location": "Hillsdale, NY",
     "mapsUrl": "https://maps.app.goo.gl/gFZHMJd4BnhB6pwZ6",
     "drive": 59
+  },
+  "Cunneen-Hacket": {
+    "venueUrl": "https://cunneen-hackett.org/calendar/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/ZAfnAWaBY2zFznZA7",
+    "drive": 35
   }
 }
