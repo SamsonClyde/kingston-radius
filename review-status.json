@@ -2320,5 +2320,9 @@
   "NoFun||2026-09-30||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790680866385
+  },
+  "NoFun||2026-10-01||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1790680880550
   }
 }
