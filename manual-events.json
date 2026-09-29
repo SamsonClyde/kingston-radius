@@ -22546,8 +22546,9 @@
     "location": "Albany, NY",
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "posterUrl": "",
-    "price": "See website",
+    "price": "$38+",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
