@@ -21982,5 +21982,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790696290831,
+    "title": "Jay Collins and Northern Resistance",
+    "date": "2026-10-02",
+    "time": "19:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
