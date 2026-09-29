@@ -22436,5 +22436,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790704747184,
+    "title": "Live Taping in Studio: Gary, Vaguely Pagan",
+    "date": "2026-10-05",
+    "time": "18:00",
+    "venue": "CTSB",
+    "venueUrl": "https://www.instagram.com/ctsbtv",
+    "location": "Lee, MA",
+    "mapsUrl": "https://maps.app.goo.gl/PFSNx7iV5Ejqtx5q6",
+    "posterUrl": "",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
