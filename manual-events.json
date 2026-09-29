@@ -8530,7 +8530,7 @@
   },
   {
     "id": 1787510055133,
-    "title": "Black Mountain Symphony",
+    "title": "Black Mountain Symphony, Phil Roebuck",
     "date": "2026-10-23",
     "time": "20:00",
     "venue": "Park Theater",
@@ -8539,7 +8539,9 @@
     "mapsUrl": "https://maps.app.goo.gl/rumcuWciwQhFjQRr8",
     "price": "$22/$27",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1787510098552,
