@@ -22295,5 +22295,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790699529263,
+    "title": "Peter and The Wolf",
+    "date": "2026-11-29",
+    "time": "15:00",
+    "venue": "Stissing Center",
+    "venueUrl": "https://stissingcenter.org/events/",
+    "location": "Pine Plains, NY",
+    "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
+    "posterUrl": "",
+    "price": "$40-$50",
+    "free": false,
+    "_manual": true
   }
 ]
