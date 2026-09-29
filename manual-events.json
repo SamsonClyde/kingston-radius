@@ -22365,5 +22365,19 @@
     "price": "$37adv/$46door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790700107225,
+    "title": "Baklava Express",
+    "date": "2026-11-20",
+    "time": "19:30",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "posterUrl": "",
+    "price": "$22-$37",
+    "free": false,
+    "_manual": true
   }
 ]
