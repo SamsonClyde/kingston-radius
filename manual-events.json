@@ -22584,5 +22584,19 @@
     "price": "$13+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790707574292,
+    "title": "G. Gordon Gritty, Nervous Guys, RBNX",
+    "date": "2026-10-10",
+    "time": "21:00",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com/",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
