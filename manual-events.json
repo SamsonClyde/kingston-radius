@@ -21968,5 +21968,19 @@
     "price": "$22adv/$27door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790696262451,
+    "title": "The Glass Hours",
+    "date": "2026-09-30",
+    "time": "18:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
