@@ -12001,19 +12001,6 @@
     "_manual": true
   },
   {
-    "id": 1788282230749,
-    "title": "Rob Fleming & Raya Malcolm",
-    "date": "2026-10-03",
-    "time": "17:00",
-    "venue": "The Greenhouse Cidery",
-    "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
-    "location": "Chatham, NY",
-    "mapsUrl": "https://maps.app.goo.gl/NyUuj5Az6xsTLD119",
-    "price": "See website",
-    "free": false,
-    "_manual": true
-  },
-  {
     "id": 1788282271436,
     "title": "Bits & Pieces",
     "date": "2026-10-10",
@@ -21313,20 +21300,6 @@
     "_source": "manual"
   },
   {
-    "id": 1790593973096,
-    "title": "Rob Fleming",
-    "date": "2026-10-03",
-    "time": "17:00",
-    "venue": "The Greenhouse Cidery",
-    "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
-    "location": "Chatham, NY",
-    "mapsUrl": "https://maps.app.goo.gl/DzCNXHirqPit3UBK7",
-    "posterUrl": "",
-    "price": "See website",
-    "free": false,
-    "_manual": true
-  },
-  {
     "id": 1790594015097,
     "title": "The Chasetails",
     "date": "2026-10-17",
@@ -21579,6 +21552,20 @@
     "price": "$40",
     "free": false,
     "_source": "scraped",
+    "_manual": true
+  },
+  {
+    "id": 1790593973096,
+    "title": "Rob Fleming",
+    "date": "2026-10-03",
+    "time": "17:00",
+    "venue": "The Greenhouse Cidery",
+    "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
+    "location": "Chatham, NY",
+    "mapsUrl": "https://maps.app.goo.gl/DzCNXHirqPit3UBK7",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
     "_manual": true
   }
 ]
