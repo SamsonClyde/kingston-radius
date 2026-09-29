@@ -6796,9 +6796,11 @@
     "venueUrl": "https://massmoca.org/performances/",
     "location": "North Adams, MA",
     "mapsUrl": "https://maps.app.goo.gl/SttEGBLzqFEAu41cA",
-    "price": "$59-$99",
+    "price": "sold out",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1787399216887,
