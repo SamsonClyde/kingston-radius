@@ -21531,5 +21531,19 @@
     "price": "$26adv",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790687205515,
+    "title": "Perfume Genius & Kate Wallich: The Lesson",
+    "date": "2027-02-06",
+    "time": "19:00",
+    "venue": "MASS MoCA",
+    "venueUrl": "https://massmoca.org/performances/",
+    "location": "North Adams, MA",
+    "mapsUrl": "https://maps.app.goo.gl/SttEGBLzqFEAu41cA",
+    "posterUrl": "",
+    "price": "$36adv",
+    "free": false,
+    "_manual": true
   }
 ]
