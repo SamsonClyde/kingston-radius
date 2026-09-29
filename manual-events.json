@@ -22552,5 +22552,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1790707079479,
+    "title": "DJs LiuLiu Liminal & Midna Mayhem",
+    "date": "2026-10-30",
+    "time": "21:00",
+    "venue": "The Ellis",
+    "venueUrl": "https://www.theellisnewburgh.com/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/r8BMC6j6N8u7Y8Y97",
+    "posterUrl": "",
+    "price": "$20adv/$25door",
+    "free": false,
+    "_manual": true
   }
 ]
