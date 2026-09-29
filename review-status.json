@@ -2268,5 +2268,9 @@
     "status": "rejected",
     "hiddenAt": 1790680673990
   },
-  "Assembly Kingston||2026-11-04||20:00": "approved"
+  "Assembly Kingston||2026-11-04||20:00": "approved",
+  "Bardavon||2026-10-22||7:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1790680680563
+  }
 }
