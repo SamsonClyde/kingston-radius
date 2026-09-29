@@ -904,5 +904,11 @@
     "location": "Cold Spring, NY",
     "mapsUrl": "https://maps.app.goo.gl/cbK7G5DYe463juop8",
     "drive": 56
+  },
+  "Hawthorn Valley Waldorf School": {
+    "venueUrl": "https://hawthornevalley.org/harvest-festival/",
+    "location": "Ghent, NY",
+    "mapsUrl": "https://maps.app.goo.gl/Sf7Fc5nK6vUtU7PX7",
+    "drive": 57
   }
 }
