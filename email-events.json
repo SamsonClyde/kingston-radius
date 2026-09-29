@@ -1,6 +1,19 @@
 [
   {
     "id": 1,
+    "date": "2026-09-29",
+    "title": "haha Laughing / Spray Bottle Fever / Capital City Crook$",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "$12",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 2,
     "date": "2026-09-30",
     "title": "Los Vega Son Jarocho",
     "venue": "Tempo Arts",
@@ -13,7 +26,7 @@
     "_source": "email"
   },
   {
-    "id": 2,
+    "id": 3,
     "date": "2026-09-30",
     "title": "Los Vega Son Jarocho with Pulso de Barro",
     "venue": "Tempo Arts",
@@ -26,7 +39,33 @@
     "_source": "email"
   },
   {
-    "id": 3,
+    "id": 4,
+    "date": "2026-09-30",
+    "title": "Brian Mitchell & Friends",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$20",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 5,
+    "date": "2026-09-30",
+    "title": "No Fun Karaoke Night",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 6,
     "date": "2026-10-01",
     "title": "Pete Donnelly",
     "venue": "The Grand",
@@ -39,7 +78,7 @@
     "_source": "email"
   },
   {
-    "id": 4,
+    "id": 7,
     "date": "2026-10-01",
     "title": "Eleni Govetas Kompanía with Duo al Rouh",
     "venue": "Tempo Arts",
@@ -52,7 +91,33 @@
     "_source": "email"
   },
   {
-    "id": 5,
+    "id": 8,
+    "date": "2026-10-01",
+    "title": "Sonny Rock's Pro Jam #54",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 9,
+    "date": "2026-10-01",
+    "title": "Deceits / Computer Kill / Bloodx3",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "$20",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 10,
     "date": "2026-10-02",
     "title": "Steve Bernstein ResoNation Trio",
     "venue": "Tempo Arts",
@@ -65,7 +130,7 @@
     "_source": "email"
   },
   {
-    "id": 6,
+    "id": 11,
     "date": "2026-10-02",
     "title": "Guitar Master Kaki King",
     "venue": "The Local Saugerties",
@@ -78,7 +143,7 @@
     "_source": "email"
   },
   {
-    "id": 7,
+    "id": 12,
     "date": "2026-10-02",
     "title": "FreshGrass Presents: Lucinda Williams and her band",
     "venue": "MASS MoCA",
@@ -91,7 +156,7 @@
     "_source": "email"
   },
   {
-    "id": 8,
+    "id": 13,
     "date": "2026-10-02",
     "title": "The Limeliters in The Grace Note",
     "venue": "Stissing Center",
@@ -104,7 +169,7 @@
     "_source": "email"
   },
   {
-    "id": 9,
+    "id": 14,
     "date": "2026-10-02",
     "title": "8th Annual Hudson Valley Flamenco Festival - Verano",
     "venue": "The Living Room at Full Circle",
@@ -117,7 +182,46 @@
     "_source": "email"
   },
   {
-    "id": 10,
+    "id": 15,
+    "date": "2026-10-02",
+    "title": "In the Garden - Jose Lopez & Chosen Style",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "6:00 PM",
+    "price": "$20",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 16,
+    "date": "2026-10-02",
+    "title": "Carolyn Wonderland ft. Cindy Cashdollar & Shelley King",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$35",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 17,
+    "date": "2026-10-02",
+    "title": "UNSANE / Life Abuse / Prize",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "$20",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 18,
     "date": "2026-10-03",
     "title": "Stayin' Alive: One Night of the Bee Gees",
     "venue": "Bardavon",
@@ -130,7 +234,7 @@
     "_source": "email"
   },
   {
-    "id": 11,
+    "id": 19,
     "date": "2026-10-03",
     "title": "Zydeco & Cajun Cedric Watson and Ethan Moody",
     "venue": "The Local Saugerties",
@@ -143,7 +247,7 @@
     "_source": "email"
   },
   {
-    "id": 12,
+    "id": 20,
     "date": "2026-10-03",
     "title": "Zydeco & Cajun Cedric Watson and Ethan Moody",
     "venue": "The Local Saugerties",
@@ -156,7 +260,7 @@
     "_source": "email"
   },
   {
-    "id": 13,
+    "id": 21,
     "date": "2026-10-03",
     "title": "Hudson Valley Flamenco Festival - Kati García-Renart Trio Envision Spanish Dance",
     "venue": "The Living Room at Full Circle",
@@ -169,7 +273,7 @@
     "_source": "email"
   },
   {
-    "id": 14,
+    "id": 22,
     "date": "2026-10-03",
     "title": "Così fan tutte",
     "venue": "Time & Space Limited",
@@ -182,7 +286,7 @@
     "_source": "email"
   },
   {
-    "id": 15,
+    "id": 23,
     "date": "2026-10-03",
     "title": "Pumpkin Patch Dance Party",
     "venue": "Stissing Center",
@@ -195,7 +299,7 @@
     "_source": "email"
   },
   {
-    "id": 16,
+    "id": 24,
     "date": "2026-10-03",
     "title": "Ballake Sissoko and Piers Faccini",
     "venue": "Tempo Arts",
@@ -208,7 +312,33 @@
     "_source": "email"
   },
   {
-    "id": 17,
+    "id": 25,
+    "date": "2026-10-03",
+    "title": "In the Garden - The Carl Mateo Band",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "6:00 PM",
+    "price": "$20",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 26,
+    "date": "2026-10-03",
+    "title": "BRAT / U.S. Bastards / Vaexus / GUTS",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "$18",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 27,
     "date": "2026-10-04",
     "title": "Bard East/West Ensemble Conducted by Jindong Cai",
     "venue": "Tempo Arts",
@@ -221,7 +351,7 @@
     "_source": "email"
   },
   {
-    "id": 18,
+    "id": 28,
     "date": "2026-10-04",
     "title": "Writers & Readers Series: Single Girls",
     "venue": "Stissing Center",
@@ -234,7 +364,7 @@
     "_source": "email"
   },
   {
-    "id": 19,
+    "id": 29,
     "date": "2026-10-04",
     "title": "Jazz Trumpet Trailblazer Adam O'Farrill's ELEPHANT",
     "venue": "The Local Saugerties",
@@ -247,7 +377,33 @@
     "_source": "email"
   },
   {
-    "id": 20,
+    "id": 30,
+    "date": "2026-10-04",
+    "title": "Heavy Traffic Band - A Tribute to Steve Winwood & Traffic",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$20",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 31,
+    "date": "2026-10-04",
+    "title": "A Matinee for Lebanon",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "4:00 PM",
+    "price": "$15",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 32,
     "date": "2026-10-06",
     "title": "MHA of Dutchess County: The Sound of Nashville",
     "venue": "Bardavon",
@@ -260,7 +416,7 @@
     "_source": "email"
   },
   {
-    "id": 21,
+    "id": 33,
     "date": "2026-10-07",
     "title": "Sasha Dobson",
     "venue": "The Grand",
@@ -273,7 +429,7 @@
     "_source": "email"
   },
   {
-    "id": 22,
+    "id": 34,
     "date": "2026-10-07",
     "title": "Wednesday Swing with the Bad Penny Pleasuremakers",
     "venue": "Tempo Arts",
@@ -286,7 +442,7 @@
     "_source": "email"
   },
   {
-    "id": 23,
+    "id": 35,
     "date": "2026-10-08",
     "title": "An Evening with Murray Hill in Conversation with Bridget Everett",
     "venue": "Stissing Center",
@@ -299,7 +455,7 @@
     "_source": "email"
   },
   {
-    "id": 24,
+    "id": 36,
     "date": "2026-10-08",
     "title": "The Raul Midón Experience",
     "venue": "The Local Saugerties",
@@ -312,7 +468,7 @@
     "_source": "email"
   },
   {
-    "id": 25,
+    "id": 37,
     "date": "2026-10-09",
     "title": "HUG: Devendra Banhart",
     "venue": "MASS MoCA",
@@ -325,7 +481,7 @@
     "_source": "email"
   },
   {
-    "id": 26,
+    "id": 38,
     "date": "2026-10-09",
     "title": "Tribute to Buena Vista Social Club",
     "venue": "The Grand",
@@ -338,7 +494,7 @@
     "_source": "email"
   },
   {
-    "id": 27,
+    "id": 39,
     "date": "2026-10-09",
     "title": "Forever Muscle Shoals Chrissi Poland & Friends",
     "venue": "The Local Saugerties",
@@ -351,7 +507,7 @@
     "_source": "email"
   },
   {
-    "id": 28,
+    "id": 40,
     "date": "2026-10-10",
     "title": "Hacia Cuando: An Opera",
     "venue": "MASS MoCA",
@@ -364,7 +520,7 @@
     "_source": "email"
   },
   {
-    "id": 29,
+    "id": 41,
     "date": "2026-10-10",
     "title": "Hacia Cuando: An Opera",
     "venue": "MASS MoCA",
@@ -377,7 +533,7 @@
     "_source": "email"
   },
   {
-    "id": 30,
+    "id": 42,
     "date": "2026-10-10",
     "title": "In Conversation: Daniela Rivera",
     "venue": "MASS MoCA",
@@ -390,7 +546,7 @@
     "_source": "email"
   },
   {
-    "id": 31,
+    "id": 43,
     "date": "2026-10-10",
     "title": "Skye Consort and Emma Björling: A Rare Musical Experience",
     "venue": "Stissing Center",
@@ -403,7 +559,7 @@
     "_source": "email"
   },
   {
-    "id": 32,
+    "id": 44,
     "date": "2026-10-10",
     "title": "Ukrainian Music from Odesa Kommuna Lux",
     "venue": "The Local Saugerties",
@@ -416,7 +572,7 @@
     "_source": "email"
   },
   {
-    "id": 33,
+    "id": 45,
     "date": "2026-10-15",
     "title": "Honky Tonk Dance Party with The Talking Hearts",
     "venue": "Tempo Arts",
@@ -429,7 +585,7 @@
     "_source": "email"
   },
   {
-    "id": 34,
+    "id": 46,
     "date": "2026-10-15",
     "title": "Community Potluck",
     "venue": "The Living Room at Full Circle",
@@ -442,7 +598,7 @@
     "_source": "email"
   },
   {
-    "id": 35,
+    "id": 47,
     "date": "2026-10-15",
     "title": "Todd Barry",
     "venue": "The Grand",
@@ -455,7 +611,7 @@
     "_source": "email"
   },
   {
-    "id": 36,
+    "id": 48,
     "date": "2026-10-16",
     "title": "Scary Burton",
     "venue": "The Living Room at Full Circle",
@@ -468,7 +624,7 @@
     "_source": "email"
   },
   {
-    "id": 37,
+    "id": 49,
     "date": "2026-10-17",
     "title": "MET: Macbeth (Verdi)",
     "venue": "Bardavon",
@@ -481,7 +637,7 @@
     "_source": "email"
   },
   {
-    "id": 38,
+    "id": 50,
     "date": "2026-10-18",
     "title": "Roz Chast & Jason Adam Katzenstein",
     "venue": "MASS MoCA",
@@ -494,7 +650,7 @@
     "_source": "email"
   },
   {
-    "id": 39,
+    "id": 51,
     "date": "2026-10-18",
     "title": "Classical Crossroads – Baroque to Tango",
     "venue": "Tempo Arts",
@@ -507,7 +663,7 @@
     "_source": "email"
   },
   {
-    "id": 40,
+    "id": 52,
     "date": "2026-10-18",
     "title": "No Regrets",
     "venue": "The Grand",
@@ -520,7 +676,7 @@
     "_source": "email"
   },
   {
-    "id": 41,
+    "id": 53,
     "date": "2026-10-18",
     "title": "Resistance Literature: Caliban and the Witch",
     "venue": "Time & Space Limited",
@@ -533,7 +689,7 @@
     "_source": "email"
   },
   {
-    "id": 42,
+    "id": 54,
     "date": "2026-10-18",
     "title": "Selected Shorts - A Touch of Magic",
     "venue": "Stissing Center",
@@ -546,7 +702,7 @@
     "_source": "email"
   },
   {
-    "id": 43,
+    "id": 55,
     "date": "2026-10-20",
     "title": "Earl Sweatshirt + MIKE",
     "venue": "MASS MoCA",
@@ -559,7 +715,7 @@
     "_source": "email"
   },
   {
-    "id": 44,
+    "id": 56,
     "date": "2026-10-22",
     "title": "Neko Case: Neon Grey Midnight Green Tour",
     "venue": "Bardavon",
@@ -572,7 +728,20 @@
     "_source": "email"
   },
   {
-    "id": 45,
+    "id": 57,
+    "date": "2026-10-22",
+    "title": "Neko Case: Neon Grey Midnight Green Tour",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+St+Poughkeepsie+NY",
+    "time": "7:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 58,
     "date": "2026-10-23",
     "title": "Rhett Miller Live at The Living Room",
     "venue": "The Living Room at Full Circle",
@@ -585,7 +754,7 @@
     "_source": "email"
   },
   {
-    "id": 46,
+    "id": 59,
     "date": "2026-10-29",
     "title": "Julius Eastman: Beyond Categories",
     "venue": "Time & Space Limited",
@@ -598,7 +767,7 @@
     "_source": "email"
   },
   {
-    "id": 47,
+    "id": 60,
     "date": "2026-10-30",
     "title": "Rasputina with Dust Bowl Faeries",
     "venue": "Tempo Arts",
@@ -611,7 +780,7 @@
     "_source": "email"
   },
   {
-    "id": 48,
+    "id": 61,
     "date": "2026-10-30",
     "title": "Ballet Nepantla's Mistica",
     "venue": "MASS MoCA",
@@ -624,7 +793,7 @@
     "_source": "email"
   },
   {
-    "id": 49,
+    "id": 62,
     "date": "2026-10-31",
     "title": "François Chaignaud & Aymeric Hainaux: Mirlitons",
     "venue": "PS21 Chatham",
@@ -637,7 +806,7 @@
     "_source": "email"
   },
   {
-    "id": 50,
+    "id": 63,
     "date": "2026-11-01",
     "title": "Peter Pan.Syndrome",
     "venue": "Time & Space Limited",
@@ -650,7 +819,7 @@
     "_source": "email"
   },
   {
-    "id": 51,
+    "id": 64,
     "date": "2026-11-01",
     "title": "François Chaignaud & Aymeric Hainaux: Mirlitons",
     "venue": "PS21 Chatham",
@@ -663,7 +832,7 @@
     "_source": "email"
   },
   {
-    "id": 52,
+    "id": 65,
     "date": "2026-11-04",
     "title": "FREE FILM: Cult Classics Repo Man",
     "venue": "Bardavon",
@@ -676,7 +845,20 @@
     "_source": "email"
   },
   {
-    "id": 53,
+    "id": 66,
+    "date": "2026-11-04",
+    "title": "FREE FILM: Repo Man (1984)",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+St+Poughkeepsie+NY",
+    "time": "",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 67,
     "date": "2026-11-05",
     "title": "Steve Gunn",
     "venue": "The Grand",
@@ -689,7 +871,7 @@
     "_source": "email"
   },
   {
-    "id": 54,
+    "id": 68,
     "date": "2026-11-13",
     "title": "Judy Collins - Sweet Judy Blue Eyes Farewell Tour",
     "venue": "Bardavon",
@@ -702,7 +884,7 @@
     "_source": "email"
   },
   {
-    "id": 55,
+    "id": 69,
     "date": "2026-11-13",
     "title": "Judy Collins - Sweet Judy Blue Eyes: Farewell Tour",
     "venue": "Bardavon",
@@ -715,7 +897,7 @@
     "_source": "email"
   },
   {
-    "id": 56,
+    "id": 70,
     "date": "2026-11-14",
     "title": "Endea Owens & The Cookout",
     "venue": "MASS MoCA",
@@ -728,7 +910,7 @@
     "_source": "email"
   },
   {
-    "id": 57,
+    "id": 71,
     "date": "2026-11-19",
     "title": "Community Potluck",
     "venue": "The Living Room at Full Circle",
@@ -741,7 +923,7 @@
     "_source": "email"
   },
   {
-    "id": 58,
+    "id": 72,
     "date": "2026-11-21",
     "title": "The Pirates of Penzance",
     "venue": "Bardavon",
@@ -754,7 +936,7 @@
     "_source": "email"
   },
   {
-    "id": 59,
+    "id": 73,
     "date": "2026-11-21",
     "title": "Mirrored Pool",
     "venue": "MASS MoCA",
@@ -767,7 +949,7 @@
     "_source": "email"
   },
   {
-    "id": 60,
+    "id": 74,
     "date": "2026-12-06",
     "title": "Candice Guardino",
     "venue": "Bardavon",
@@ -780,7 +962,7 @@
     "_source": "email"
   },
   {
-    "id": 61,
+    "id": 75,
     "date": "2026-12-06",
     "title": "Candice Guardino: Italian Bred",
     "venue": "Bardavon",
@@ -793,7 +975,7 @@
     "_source": "email"
   },
   {
-    "id": 62,
+    "id": 76,
     "date": "2026-12-12",
     "title": "New Paltz Ballet Theatre: The Nutcracker",
     "venue": "Bardavon",
@@ -806,7 +988,7 @@
     "_source": "email"
   },
   {
-    "id": 63,
+    "id": 77,
     "date": "2026-12-13",
     "title": "New Paltz Ballet Theatre: The Nutcracker",
     "venue": "Bardavon",
@@ -819,7 +1001,7 @@
     "_source": "email"
   },
   {
-    "id": 64,
+    "id": 78,
     "date": "2026-12-17",
     "title": "Community Potluck",
     "venue": "The Living Room at Full Circle",
@@ -832,7 +1014,7 @@
     "_source": "email"
   },
   {
-    "id": 65,
+    "id": 79,
     "date": "2026-12-17",
     "title": "FREE FILM: Cult Classics Love Actually",
     "venue": "Bardavon",
@@ -845,7 +1027,20 @@
     "_source": "email"
   },
   {
-    "id": 66,
+    "id": 80,
+    "date": "2026-12-17",
+    "title": "FREE FILM: Love Actually (2003)",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+St+Poughkeepsie+NY",
+    "time": "",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 81,
     "date": "2026-12-19",
     "title": "Paula Poundstone",
     "venue": "Bardavon",
@@ -858,7 +1053,7 @@
     "_source": "email"
   },
   {
-    "id": 67,
+    "id": 82,
     "date": "2026-12-19",
     "title": "Paula Poundstone",
     "venue": "Bardavon",
@@ -871,9 +1066,35 @@
     "_source": "email"
   },
   {
-    "id": 68,
+    "id": 83,
     "date": "2026-12-20",
     "title": "MET ENCORE: Samson et Dalila (Saint-Saëns)",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+St+Poughkeepsie+NY",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 84,
+    "date": "2027-01-23",
+    "title": "Chanticleer",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+St+Poughkeepsie+NY",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 85,
+    "date": "2027-01-24",
+    "title": "Puppy Pals Live - The Action-Packed Comedic Stunt Dog Show",
     "venue": "Bardavon",
     "venueUrl": "https://www.bardavon.org/",
     "location": "Poughkeepsie, NY",
