@@ -22479,5 +22479,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1790705391682,
+    "title": "Fall Festival - Dog Party Band",
+    "date": "2026-10-04",
+    "time": "12:00",
+    "venue": "Belleayre",
+    "venueUrl": "https://www.instagram.com/belleayre",
+    "location": "Belleayre, NY",
+    "mapsUrl": "https://maps.app.goo.gl/TtAP9SbuCkZnRvkLA",
+    "posterUrl": "",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
