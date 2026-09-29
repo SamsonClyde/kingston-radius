@@ -21547,5 +21547,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1790688185604,
+    "title": "Bob Stump Band",
+    "date": "2026-10-02",
+    "time": "19:00",
+    "venue": "Roe Jan Brewing Co",
+    "venueUrl": "https://roejanbrewing.com/",
+    "location": "Hillsdale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gFZHMJd4BnhB6pwZ6",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
