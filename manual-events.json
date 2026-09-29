@@ -21533,7 +21533,7 @@
     "price": "$32/$42",
     "free": false,
     "_source": "scraped",
-    "posterUrl": "",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790680712249-bdbe18c6-deeb-4c80-a2fa-fc61a18ee6e3.jpg",
     "_manual": true
   }
 ]
