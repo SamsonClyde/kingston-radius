@@ -15061,7 +15061,8 @@
     "price": "rsvp",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790681982841-acid-jazz.webp"
   },
   {
     "id": 1789136578514,
