@@ -22351,5 +22351,19 @@
     "price": "$17-$37",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790700033341,
+    "title": "Pipo Romero",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "posterUrl": "",
+    "price": "$37adv/$46door",
+    "free": false,
+    "_manual": true
   }
 ]
