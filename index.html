@@ -1259,6 +1259,15 @@ const TOWN_COORDS = {  "kingston, ny": {lat: 41.9270, lng: -73.9974, side: 'w'},
   "round top, ny": {lat: 42.2689, lng: -74.0272, side: 'w'},
   "verplanck, ny": {lat: 41.2359, lng: -73.9635, side: 'e'},
   "west park, ny": {lat: 41.7834, lng: -73.9573, side: 'w'},
+  "coeyman hollow, ny": {lat: 42.4717, lng: -73.8944, side: 'w'}, // spelling variant of "coeymans hollow, ny"
+  "chester, ny": {lat: 41.3569, lng: -74.2769, side: 'w'},
+  "wallkill, ny": {lat: 41.4670, lng: -74.3670, side: 'w'},
+  "ephratah, ny": {lat: 43.0269, lng: -74.5531, side: 'w'},
+  "sleepy hollow, ny": {lat: 41.0857, lng: -73.8585, side: 'e'},
+  "teaneck, nj": {lat: 40.8925, lng: -74.0114, side: 'w'},
+  "stamford, ny": {lat: 42.4170, lng: -74.6170, side: 'w'},
+  "lee, ma": {lat: 42.3042, lng: -73.2481, side: 'e'},
+  "belleayre, ny": {lat: 42.1422, lng: -74.5108, side: 'w'},
 };
 
 const DRIVE_TIMES = {
@@ -2058,10 +2067,11 @@ function renderEvents() {
         if (_customLocation) {
           // A visitor has set their own zip code — use estimated distance from
           // there instead of the site's default (Kingston). An event whose town
-          // isn't in our known list returns null and is shown regardless, rather
-          // than risk wrongly hiding it over a data gap.
+          // has no coordinates yet is left out of every distance filter (it
+          // still shows under "All") rather than guessed at — better to say
+          // nothing than claim a distance we don't actually know.
           const d = getEstimatedDistanceFromCustomLocation(e);
-          return d === null || d <= maxMins;
+          return d !== null && d <= maxMins;
         }
         const d = getDriveTime(e.venue);
         return d === 0 || (e.location||'').toLowerCase().includes('kingston') || d <= maxMins;
@@ -2255,7 +2265,14 @@ function _estimateMinutesFromMiles(miles) {
   return Math.round((miles / mph) * 60);
 }
 function _townKey(location) {
-  return (location || '').trim().toLowerCase();
+  let key = (location || '').trim().toLowerCase();
+  // Normalize "town ny" (missing comma) to "town, ny" — real data has both
+  // forms in the wild (e.g. "Rhinebeck NY" vs "Rhinebeck, NY"), and without
+  // this they'd silently fail to match even when the town IS in our table.
+  // The negative lookbehind skips this when a comma is already there —
+  // without it, "kingston, ny" would wrongly become "kingston,, ny".
+  key = key.replace(/^(.+?)(?<!,)\s+(ny|ma|ct|nj|pa|vt)$/, '$1, $2');
+  return key;
 }
 // Classifies an arbitrary point (like a zip code's coordinates) as west or east
 // of the Hudson by finding the nearest town we've already classified, and using
@@ -2275,28 +2292,23 @@ function _nearestSide(lat, lng) {
 // rather than pretending the river isn't there.
 const RIVER_CROSSING_PENALTY_MIN = 20;
 
-// Returns estimated minutes from the custom location to this event's town. If
-// the town isn't in our known list, falls back to the venue's existing
-// Kingston-based drive time rather than assuming "unknown, show regardless" —
-// that fallback sounds safe but actually meant any venue in an unlisted town
-// showed up under EVERY distance filter, no matter how far it really was
-// (exactly what happened with Maplecrest and Walden before both were added).
-// Only returns null — meaning "show it, we have no idea" — if there's truly
-// no data on this venue at all.
+// Returns estimated minutes from the custom location to this event's town, or
+// null if the town isn't in TOWN_COORDS yet. The filter that calls this treats
+// null as "leave out of every distance filter" — simpler and more predictable
+// than guessing with a fallback number, and it makes gaps easy to spot: a show
+// that never shows up under 30/45/60/90 but does show under "All" means its
+// town still needs to be added to TOWN_COORDS.
 function getEstimatedDistanceFromCustomLocation(event) {
   if (!_customLocation) return null;
   const key = _townKey(event.location);
   const coords = TOWN_COORDS[key];
-  if (coords) {
-    const miles = _haversineMiles(_customLocation.lat, _customLocation.lng, coords.lat, coords.lng);
-    let minutes = _estimateMinutesFromMiles(miles);
-    if (_customLocation.side && coords.side && _customLocation.side !== coords.side) {
-      minutes += RIVER_CROSSING_PENALTY_MIN;
-    }
-    return minutes;
+  if (!coords) return null;
+  const miles = _haversineMiles(_customLocation.lat, _customLocation.lng, coords.lat, coords.lng);
+  let minutes = _estimateMinutesFromMiles(miles);
+  if (_customLocation.side && coords.side && _customLocation.side !== coords.side) {
+    minutes += RIVER_CROSSING_PENALTY_MIN;
   }
-  if (DRIVE_TIMES[event.venue] !== undefined) return DRIVE_TIMES[event.venue];
-  return null;
+  return minutes;
 }
 
 function showLocationModal() {
