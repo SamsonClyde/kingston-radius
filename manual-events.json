@@ -12739,7 +12739,7 @@
   },
   {
     "id": 1788433574208,
-    "title": "Brazilian Night - Gil Oliviera & Friends",
+    "title": "Brazilian Night - Trio Boreal",
     "date": "2026-10-29",
     "time": "15:00",
     "venue": "Rose Hill",
@@ -12748,7 +12748,9 @@
     "mapsUrl": "https://maps.app.goo.gl/MbCoQ2LNKwQe5QMN6",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1788435297856,
