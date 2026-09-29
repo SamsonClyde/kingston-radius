@@ -8776,7 +8776,8 @@
     "mapsUrl": "https://www.robiberofamilyvineyards.com/events",
     "price": "$25adv/$40door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790697884166-stomping-1777393866513-b-mhigb6.png"
   },
   {
     "id": 1787512026427,
