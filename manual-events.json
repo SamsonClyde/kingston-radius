@@ -22234,5 +22234,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790697761215,
+    "title": "Chris Jackson",
+    "date": "2026-10-24",
+    "time": "17:00",
+    "venue": "RMV Cellars",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
+    "location": "West Park, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YKDAq1q7vWCf2mNd9",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
