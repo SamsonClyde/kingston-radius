@@ -2236,17 +2236,22 @@ function _haversineMiles(lat1, lng1, lat2, lng2) {
   const a = Math.sin(dLat/2)**2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng/2)**2;
   return R * 2 * Math.asin(Math.sqrt(a));
 }
-// ~32mph flat is too slow for longer, highway-heavy routes (e.g. Kingston to
-// Albany is ~51 straight-line miles but a real ~55-60 min drive via the Thruway
-// — a flat 32mph would estimate ~96 min, nearly double). Short local trips are
-// genuinely slower per-mile (more stops, turns, back roads) than longer trips
-// that pick up highway miles, so this scales the assumed speed with distance
-// rather than using one number for everything.
+// Calibrated against two real, reported reference points rather than a guess:
+// Kingston-to-Albany (~51.5 straight-line mi, real ~55-60 min via the mostly-
+// highway Thruway) implies ~45mph is right for a favorable long route. But
+// Wingdale-to-Poughkeepsie (~18 straight-line mi, real ~45 min on winding rural
+// roads with no highway shortcut) implies something closer to ~24mph is right
+// for a typical *unfavorable* medium route — the original 38mph mid-tier was
+// calibrated too optimistically, assuming more routes look like the Albany
+// case than they actually do. These tiers lean toward the slower, rural-road
+// assumption, since that's more representative of most trips in this area, and
+// erring toward a slightly longer estimate is the safer direction for "will I
+// actually make it to this show" than erring short.
 function _estimateMinutesFromMiles(miles) {
   let mph;
-  if (miles <= 15) mph = 28;       // mostly local/back roads
-  else if (miles <= 40) mph = 38;  // a realistic mix of local + some highway
-  else mph = 48;                   // longer trips pick up sustained highway miles
+  if (miles <= 15) mph = 26;       // local/back roads
+  else if (miles <= 40) mph = 28;  // typically no highway shortcut available
+  else mph = 45;                   // longer trips more often pick up real highway miles
   return Math.round((miles / mph) * 60);
 }
 function _townKey(location) {
@@ -2773,6 +2778,32 @@ function renderAdminNotes() {
     html += `<div class="note-section"><h3>📍 Venues with no drive time set (${venuesNoTime.length})</h3>
       <p class="note-desc">The distance filter (30/60/90 mins) won't work correctly for these until a drive time is added.</p>
       <div class="note-item">${venuesNoTime.map(esc).join(', ')}</div></div>`;
+  }
+
+  // 4b. Towns missing coordinates for the zip-code distance feature (type
+  // "change" in search to use it). Grouped by town rather than venue, since
+  // fixing this means adding the town once to TOWN_COORDS, covering every
+  // venue in it at once — the same pattern used to fix Maplecrest and Walden.
+  // A venue whose town IS known but whose DRIVE_TIMES entry is missing still
+  // works fine here (getEstimatedDistanceFromCustomLocation falls back to
+  // DRIVE_TIMES automatically) — this specifically catches towns with no
+  // coordinate data at all, which is a different, separate gap.
+  const townsNoCoords = new Map(); // town -> Set of venue names
+  upcoming.forEach(e => {
+    const key = _townKey(e.location);
+    if (key && !TOWN_COORDS[key]) {
+      if (!townsNoCoords.has(e.location)) townsNoCoords.set(e.location, new Set());
+      townsNoCoords.get(e.location).add(e.venue);
+    }
+  });
+  if (townsNoCoords.size) {
+    totalIssues += townsNoCoords.size;
+    html += `<div class="note-section"><h3>🗺️ Towns missing coordinates for zip-code distances (${townsNoCoords.size})</h3>
+      <p class="note-desc">Used by the "type change to set your zip code" distance feature. A venue in one of these towns still falls back to its regular drive time from Kingston, but won't get an accurate estimate from a visitor's own zip code until the town is added.</p>`;
+    [...townsNoCoords.entries()].forEach(([town, venues]) => {
+      html += `<div class="note-item"><strong>${esc(town)}</strong> — ${[...venues].map(esc).join(', ')}</div>`;
+    });
+    html += `</div>`;
   }
 
   // 5. Listings missing key info
