@@ -22379,5 +22379,19 @@
     "price": "$22-$37",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790700169828,
+    "title": "Rose & The Bros",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "posterUrl": "",
+    "price": "$27-$53",
+    "free": false,
+    "_manual": true
   }
 ]
