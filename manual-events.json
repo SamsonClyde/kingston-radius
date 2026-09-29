@@ -21832,5 +21832,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1790689801685,
+    "title": "midrift., senior living, sunbloc",
+    "date": "2026-10-27",
+    "time": "19:00",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "posterUrl": "",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
