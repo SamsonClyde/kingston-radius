@@ -22393,5 +22393,19 @@
     "price": "$27-$53",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790703551044,
+    "title": "Scoot & Marlena",
+    "date": "2026-09-30",
+    "time": "20:00",
+    "venue": "BAR•BER",
+    "venueUrl": "https://www.instagram.com/stories/barberandbrewny/",
+    "location": "Cold Spring, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cbK7G5DYe463juop8",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
