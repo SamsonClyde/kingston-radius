@@ -22267,5 +22267,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790698784494,
+    "title": "Miles Cederquist, Christopher Davenport",
+    "date": "2026-09-29",
+    "time": "20:30",
+    "venue": "Snug Harbor",
+    "venueUrl": "https://www.facebook.com/snugsnewpaltz?utm_source=ig&utm_medium=social&utm_content=link_in_bio&_rdr",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/UxtL3uvDoYHidUS4A",
+    "posterUrl": "",
+    "price": "$5",
+    "free": false,
+    "_manual": true
   }
 ]
