@@ -1175,6 +1175,72 @@ const CUSTOM_VENUES_KEY = 'kr_custom_venues';
 const HIDDEN_TITLES_KEY = 'kr_hidden_titles';
 const MAX_HIDDEN        = 50;
 
+// Approximate town-centroid coordinates for towns used throughout Kingston Radius'
+// venue data. Used for estimating distance from a visitor's zip code — not for
+// precision, just a reasonable "how far is this roughly" estimate.
+const TOWN_COORDS = {
+  "kingston, ny": {lat: 41.9270, lng: -73.9974},
+  "woodstock, ny": {lat: 42.0409, lng: -74.1179},
+  "saugerties, ny": {lat: 42.0776, lng: -73.9515},
+  "new paltz, ny": {lat: 41.7476, lng: -74.0857},
+  "rosendale, ny": {lat: 41.8365, lng: -74.0776},
+  "stone ridge, ny": {lat: 41.8151, lng: -74.1207},
+  "accord, ny": {lat: 41.7929, lng: -74.2318},
+  "high falls, ny": {lat: 41.8087, lng: -74.1385},
+  "highland, ny": {lat: 41.7160, lng: -73.9613},
+  "marlboro, ny": {lat: 41.6034, lng: -73.9799},
+  "milton, ny": {lat: 41.6551, lng: -73.9724},
+  "gardiner, ny": {lat: 41.6795, lng: -74.1746},
+  "cottekill, ny": {lat: 41.8556, lng: -74.0654},
+  "west kill, ny": {lat: 42.2079, lng: -74.3335},
+  "tannersville, ny": {lat: 42.1959, lng: -74.1274},
+  "hunter, ny": {lat: 42.2137, lng: -74.2202},
+  "windham, ny": {lat: 42.3009, lng: -74.2493},
+  "catskill, ny": {lat: 42.2168, lng: -73.8643},
+  "cairo, ny": {lat: 42.2929, lng: -74.0074},
+  "livingston manor, ny": {lat: 41.9012, lng: -74.8288},
+  "big indian, ny": {lat: 42.0687, lng: -74.4271},
+  "shandaken, ny": {lat: 42.0637, lng: -74.3821},
+  "phoenicia, ny": {lat: 42.0834, lng: -74.3168},
+  "olivebridge, ny": {lat: 41.9376, lng: -74.2160},
+  "hudson, ny": {lat: 42.2528, lng: -73.7904},
+  "chatham, ny": {lat: 42.3670, lng: -73.5993},
+  "claverack, ny": {lat: 42.2167, lng: -73.7196},
+  "livingston, ny": {lat: 42.1276, lng: -73.7418},
+  "germantown, ny": {lat: 42.1348, lng: -73.8654},
+  "athens, ny": {lat: 42.2529, lng: -73.8071},
+  "coxsackie, ny": {lat: 42.3540, lng: -73.7982},
+  "greenville, ny": {lat: 42.4106, lng: -74.0146},
+  "north adams, ma": {lat: 42.7009, lng: -73.1087},
+  "beacon, ny": {lat: 41.5048, lng: -73.9698},
+  "poughkeepsie, ny": {lat: 41.7004, lng: -73.9209},
+  "wappingers falls, ny": {lat: 41.5967, lng: -73.9126},
+  "red hook, ny": {lat: 41.9887, lng: -73.8776},
+  "rhinebeck, ny": {lat: 41.9273, lng: -73.9121},
+  "tivoli, ny": {lat: 42.0509, lng: -73.9165},
+  "annandale-on-hudson, ny": {lat: 42.0273, lng: -73.9143},
+  "hopewell junction, ny": {lat: 41.5806, lng: -73.7960},
+  "pawling, ny": {lat: 41.5615, lng: -73.5993},
+  "pine plains, ny": {lat: 41.9701, lng: -73.6771},
+  "millbrook, ny": {lat: 41.7859, lng: -73.6879},
+  "fishkill, ny": {lat: 41.5359, lng: -73.9007},
+  "newburgh, ny": {lat: 41.5034, lng: -74.0104},
+  "cornwall-on-hudson, ny": {lat: 41.4326, lng: -74.0176},
+  "washingtonville, ny": {lat: 41.4262, lng: -74.1638},
+  "peekskill, ny": {lat: 41.2901, lng: -73.9204},
+  "croton-on-hudson, ny": {lat: 41.2015, lng: -73.8929},
+  "putnam valley, ny": {lat: 41.4406, lng: -73.8221},
+  "cold spring, ny": {lat: 41.4195, lng: -73.9563},
+  "garrison, ny": {lat: 41.3798, lng: -73.9310},
+  "troy, ny": {lat: 42.7284, lng: -73.6918},
+  "albany, ny": {lat: 42.6526, lng: -73.7562},
+  "schenectady, ny": {lat: 42.8142, lng: -73.9396},
+  "bethel, ny": {lat: 41.7273, lng: -74.9024},
+  "ellenville, ny": {lat: 41.7176, lng: -74.3946},
+  "woodridge, ny": {lat: 41.7048, lng: -74.5985},
+  "kerhonkson, ny": {lat: 41.7743, lng: -74.2879},
+};
+
 const DRIVE_TIMES = {
   // Kingston (0 min)
   "Tubby's":                                          0,
@@ -1969,6 +2035,14 @@ function renderEvents() {
     } else {
       const maxMins = parseInt(_activeFilter);
       events = events.filter(e => {
+        if (_customLocation) {
+          // A visitor has set their own zip code — use estimated distance from
+          // there instead of the site's default (Kingston). An event whose town
+          // isn't in our known list returns null and is shown regardless, rather
+          // than risk wrongly hiding it over a data gap.
+          const d = getEstimatedDistanceFromCustomLocation(e);
+          return d === null || d <= maxMins;
+        }
         const d = getDriveTime(e.venue);
         return d === 0 || (e.location||'').toLowerCase().includes('kingston') || d <= maxMins;
       });
@@ -2125,6 +2199,104 @@ function showPosterModal(url) {
 
   closeBtn.onclick = close;
   overlay.onclick  = (e) => { if (e.target === overlay) close(); };
+  document.addEventListener('keydown', onKey);
+}
+
+// ── CUSTOM LOCATION (zip-code-based distance) ─────────────────────────────────
+// Lets a visitor see estimated distance from their own zip code instead of the
+// site's default (Kingston). This is a straight-line-distance ESTIMATE, not a
+// real routing calculation — deliberately free to run (no paid API), at the
+// cost of not accounting for actual roads/terrain.
+let _customLocation = JSON.parse(localStorage.getItem('kr_custom_location') || 'null');
+
+function _haversineMiles(lat1, lng1, lat2, lng2) {
+  const R = 3958.8; // Earth's radius in miles
+  const toRad = d => d * Math.PI / 180;
+  const dLat = toRad(lat2 - lat1), dLng = toRad(lng2 - lng1);
+  const a = Math.sin(dLat/2)**2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng/2)**2;
+  return R * 2 * Math.asin(Math.sqrt(a));
+}
+// ~32mph flat is too slow for longer, highway-heavy routes (e.g. Kingston to
+// Albany is ~51 straight-line miles but a real ~55-60 min drive via the Thruway
+// — a flat 32mph would estimate ~96 min, nearly double). Short local trips are
+// genuinely slower per-mile (more stops, turns, back roads) than longer trips
+// that pick up highway miles, so this scales the assumed speed with distance
+// rather than using one number for everything.
+function _estimateMinutesFromMiles(miles) {
+  let mph;
+  if (miles <= 15) mph = 28;       // mostly local/back roads
+  else if (miles <= 40) mph = 38;  // a realistic mix of local + some highway
+  else mph = 48;                   // longer trips pick up sustained highway miles
+  return Math.round((miles / mph) * 60);
+}
+function _townKey(location) {
+  return (location || '').trim().toLowerCase();
+}
+// Returns estimated minutes from the custom location to this event's town, or
+// null if the town isn't in our known list (in which case the event should be
+// shown rather than wrongly excluded).
+function getEstimatedDistanceFromCustomLocation(event) {
+  if (!_customLocation) return null;
+  const key = _townKey(event.location);
+  const coords = TOWN_COORDS[key];
+  if (!coords) return null;
+  const miles = _haversineMiles(_customLocation.lat, _customLocation.lng, coords.lat, coords.lng);
+  return _estimateMinutesFromMiles(miles);
+}
+
+function showLocationModal() {
+  const overlay = document.getElementById('kr-location-overlay');
+  const input   = document.getElementById('kr-zip-input');
+  const errorEl = document.getElementById('kr-zip-error');
+  const goBtn   = document.getElementById('kr-zip-go');
+  const cancelBtn = document.getElementById('kr-zip-cancel');
+  const resetBtn  = document.getElementById('kr-zip-reset');
+  if (!overlay) return;
+  errorEl.style.display = 'none';
+  input.value = _customLocation?.zip || '';
+  overlay.classList.add('show');
+  input.focus();
+
+  const close = () => { overlay.classList.remove('show'); document.removeEventListener('keydown', onKey); };
+  const onKey = (e) => { if (e.key === 'Escape') close(); if (e.key === 'Enter') goBtn.click(); };
+
+  const doLookup = async () => {
+    const zip = input.value.trim();
+    if (!/^\d{5}$/.test(zip)) {
+      errorEl.textContent = 'Enter a valid 5-digit zip code.';
+      errorEl.style.display = 'block';
+      return;
+    }
+    errorEl.style.display = 'none';
+    goBtn.textContent = 'Looking up…'; goBtn.disabled = true;
+    try {
+      const resp = await fetch(`https://api.zippopotam.us/us/${zip}`);
+      if (!resp.ok) throw new Error('not found');
+      const data = await resp.json();
+      const place = data.places?.[0];
+      if (!place) throw new Error('no place data');
+      _customLocation = { zip, lat: parseFloat(place.latitude), lng: parseFloat(place.longitude) };
+      localStorage.setItem('kr_custom_location', JSON.stringify(_customLocation));
+      close();
+      renderEvents();
+      showToast(`Showing distances from ${zip} ✓`);
+    } catch (e) {
+      errorEl.textContent = "Couldn't find that zip code — double-check it and try again.";
+      errorEl.style.display = 'block';
+    }
+    goBtn.textContent = 'Go'; goBtn.disabled = false;
+  };
+
+  goBtn.onclick = doLookup;
+  cancelBtn.onclick = close;
+  resetBtn.onclick = () => {
+    _customLocation = null;
+    localStorage.removeItem('kr_custom_location');
+    close();
+    renderEvents();
+    showToast('Back to distances from Kingston ✓');
+  };
+  overlay.onclick = (e) => { if (e.target === overlay) close(); };
   document.addEventListener('keydown', onKey);
 }
 
@@ -3304,7 +3476,15 @@ document.getElementById('quick-add-btn')?.addEventListener('click', async () => 
 // ── NAV ───────────────────────────────────────────────────────────────────────
 // ── KEYWORD SEARCH (live) ────────────────────────────────────────────────────
 document.getElementById('keyword-search')?.addEventListener('input', (e) => {
-  _searchKeyword = e.target.value.trim().toLowerCase();
+  const value = e.target.value.trim().toLowerCase();
+  if (value === 'change') {
+    e.target.value = '';
+    _searchKeyword = '';
+    showLocationModal();
+    renderEvents();
+    return;
+  }
+  _searchKeyword = value;
   _currentPage = 1;
   renderEvents();
 });
@@ -3482,6 +3662,21 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
 <div id="kr-poster-overlay" class="kr-poster-overlay">
   <button id="kr-poster-close" class="kr-poster-close" aria-label="Close" title="Close">✕</button>
   <img id="kr-poster-img" class="kr-poster-img" src="" alt="Show poster">
+</div>
+<div id="kr-location-overlay" class="kr-modal-overlay">
+  <div class="kr-modal-box">
+    <div class="kr-modal-msg">
+      <strong style="display:block;margin-bottom:8px;font-size:1rem;">Show distances from your location</strong>
+      <span style="color:var(--muted);font-size:0.85rem;">Enter your zip code, and the 30/45/60/90-min filters will estimate distance from there instead of Kingston. This is an estimate based on straight-line distance, not an exact drive time.</span>
+      <input type="text" id="kr-zip-input" inputmode="numeric" maxlength="5" placeholder="e.g. 12401" style="display:block;width:100%;margin-top:14px;border:1.5px solid var(--border);background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.95rem;padding:8px 12px;border-radius:6px;box-sizing:border-box;">
+      <div id="kr-zip-error" style="color:var(--red);font-size:0.8rem;margin-top:6px;display:none;"></div>
+    </div>
+    <div class="kr-modal-actions">
+      <button class="kr-modal-btn" id="kr-zip-reset" style="margin-right:auto;">Reset to Kingston</button>
+      <button class="kr-modal-btn" id="kr-zip-cancel">Cancel</button>
+      <button class="kr-modal-btn kr-modal-btn-confirm" id="kr-zip-go">Go</button>
+    </div>
+  </div>
 </div>
 </body>
 </html>
