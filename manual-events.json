@@ -22337,5 +22337,19 @@
     "price": "$30-$40adv/$40-$50door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790699943432,
+    "title": "Hearing Things",
+    "date": "2026-11-15",
+    "time": "20:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "posterUrl": "",
+    "price": "$17-$37",
+    "free": false,
+    "_manual": true
   }
 ]
