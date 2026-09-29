@@ -22408,5 +22408,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790704143320,
+    "title": "Harvest Festival - Live Music",
+    "date": "2026-10-10",
+    "time": "11:00",
+    "venue": "Hawthorn Valley Waldorf School",
+    "venueUrl": "https://hawthornevalley.org/harvest-festival/",
+    "location": "Ghent, NY",
+    "mapsUrl": "https://maps.app.goo.gl/Sf7Fc5nK6vUtU7PX7",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
