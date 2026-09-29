@@ -17207,7 +17207,8 @@
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "$112-$177",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790688938977-photobooth-jpg-980x551.jpeg"
   },
   {
     "id": 1789476719311,
