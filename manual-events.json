@@ -4575,20 +4575,6 @@
     "_manual": true
   },
   {
-    "id": 372,
-    "date": "2026-10-30",
-    "title": "Steve Forbert",
-    "venue": "Towne Crier Café",
-    "venueUrl": "https://townecrier.com/",
-    "location": "Beacon, NY",
-    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
-    "time": "20:00",
-    "price": "$35",
-    "free": false,
-    "_source": "scraped",
-    "_manual": true
-  },
-  {
     "id": 378,
     "date": "2026-10-03",
     "title": "RSTB 20 Night 2: The Reds Pinks and Purples, Simon Joyner & the Nervous Stars, Jeanines",
@@ -9795,19 +9781,6 @@
     "title": "The Strayaways",
     "date": "2026-10-29",
     "time": "19:00",
-    "venue": "Towne Crier Café",
-    "venueUrl": "https://townecrier.com/",
-    "location": "Beacon, NY",
-    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
-    "price": "$35",
-    "free": false,
-    "_manual": true
-  },
-  {
-    "id": 1787577693506,
-    "title": "Steve Forbert",
-    "date": "2026-10-30",
-    "time": "20:00",
     "venue": "Towne Crier Café",
     "venueUrl": "https://townecrier.com/",
     "location": "Beacon, NY",
@@ -21605,6 +21578,19 @@
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
     "posterUrl": "",
     "price": "$29-$40",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1787577693506,
+    "title": "Steve Forbert",
+    "date": "2026-10-30",
+    "time": "20:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "price": "$35",
     "free": false,
     "_manual": true
   }
