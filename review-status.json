@@ -2347,5 +2347,9 @@
   "Unicorn Bar||2026-10-17||5:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790680916012
+  },
+  "Stissing Center||2026-10-09||19:30": {
+    "status": "rejected",
+    "hiddenAt": 1790699416230
   }
 }
