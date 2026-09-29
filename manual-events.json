@@ -18720,7 +18720,8 @@
     "mapsUrl": "https://maps.app.goo.gl/iEdR65BZUXBAEyvK7",
     "price": "$20",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790691710358-fall-faire-2026-1200x1500.png"
   },
   {
     "id": 1789642741219,
