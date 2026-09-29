@@ -22467,7 +22467,7 @@
   },
   {
     "id": 1790705291703,
-    "title": "Fall Festival -",
+    "title": "Fall Festival - Rivals NY",
     "date": "2026-10-03",
     "time": "12:00",
     "venue": "Belleayre",
@@ -22477,6 +22477,7 @@
     "posterUrl": "",
     "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
