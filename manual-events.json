@@ -22521,5 +22521,19 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790705906285,
+    "title": "Rosie & The Ridge Runners",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "venue": "Music School",
+    "venueUrl": "https://www.instagram.com/nysmrosie/",
+    "location": "Walden, NY",
+    "mapsUrl": "https://maps.app.goo.gl/Jxtuhzoo46ey87Lc6",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
