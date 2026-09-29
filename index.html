@@ -1178,67 +1178,87 @@ const MAX_HIDDEN        = 50;
 // Approximate town-centroid coordinates for towns used throughout Kingston Radius'
 // venue data. Used for estimating distance from a visitor's zip code — not for
 // precision, just a reasonable "how far is this roughly" estimate.
-const TOWN_COORDS = {
-  "kingston, ny": {lat: 41.9270, lng: -73.9974},
-  "woodstock, ny": {lat: 42.0409, lng: -74.1179},
-  "saugerties, ny": {lat: 42.0776, lng: -73.9515},
-  "new paltz, ny": {lat: 41.7476, lng: -74.0857},
-  "rosendale, ny": {lat: 41.8365, lng: -74.0776},
-  "stone ridge, ny": {lat: 41.8151, lng: -74.1207},
-  "accord, ny": {lat: 41.7929, lng: -74.2318},
-  "high falls, ny": {lat: 41.8087, lng: -74.1385},
-  "highland, ny": {lat: 41.7160, lng: -73.9613},
-  "marlboro, ny": {lat: 41.6034, lng: -73.9799},
-  "milton, ny": {lat: 41.6551, lng: -73.9724},
-  "gardiner, ny": {lat: 41.6795, lng: -74.1746},
-  "cottekill, ny": {lat: 41.8556, lng: -74.0654},
-  "west kill, ny": {lat: 42.2079, lng: -74.3335},
-  "tannersville, ny": {lat: 42.1959, lng: -74.1274},
-  "hunter, ny": {lat: 42.2137, lng: -74.2202},
-  "windham, ny": {lat: 42.3009, lng: -74.2493},
-  "catskill, ny": {lat: 42.2168, lng: -73.8643},
-  "cairo, ny": {lat: 42.2929, lng: -74.0074},
-  "livingston manor, ny": {lat: 41.9012, lng: -74.8288},
-  "big indian, ny": {lat: 42.0687, lng: -74.4271},
-  "shandaken, ny": {lat: 42.0637, lng: -74.3821},
-  "phoenicia, ny": {lat: 42.0834, lng: -74.3168},
-  "olivebridge, ny": {lat: 41.9376, lng: -74.2160},
-  "hudson, ny": {lat: 42.2528, lng: -73.7904},
-  "chatham, ny": {lat: 42.3670, lng: -73.5993},
-  "claverack, ny": {lat: 42.2167, lng: -73.7196},
-  "livingston, ny": {lat: 42.1276, lng: -73.7418},
-  "germantown, ny": {lat: 42.1348, lng: -73.8654},
-  "athens, ny": {lat: 42.2529, lng: -73.8071},
-  "coxsackie, ny": {lat: 42.3540, lng: -73.7982},
-  "greenville, ny": {lat: 42.4106, lng: -74.0146},
-  "north adams, ma": {lat: 42.7009, lng: -73.1087},
-  "beacon, ny": {lat: 41.5048, lng: -73.9698},
-  "poughkeepsie, ny": {lat: 41.7004, lng: -73.9209},
-  "wappingers falls, ny": {lat: 41.5967, lng: -73.9126},
-  "red hook, ny": {lat: 41.9887, lng: -73.8776},
-  "rhinebeck, ny": {lat: 41.9273, lng: -73.9121},
-  "tivoli, ny": {lat: 42.0509, lng: -73.9165},
-  "annandale-on-hudson, ny": {lat: 42.0273, lng: -73.9143},
-  "hopewell junction, ny": {lat: 41.5806, lng: -73.7960},
-  "pawling, ny": {lat: 41.5615, lng: -73.5993},
-  "pine plains, ny": {lat: 41.9701, lng: -73.6771},
-  "millbrook, ny": {lat: 41.7859, lng: -73.6879},
-  "fishkill, ny": {lat: 41.5359, lng: -73.9007},
-  "newburgh, ny": {lat: 41.5034, lng: -74.0104},
-  "cornwall-on-hudson, ny": {lat: 41.4326, lng: -74.0176},
-  "washingtonville, ny": {lat: 41.4262, lng: -74.1638},
-  "peekskill, ny": {lat: 41.2901, lng: -73.9204},
-  "croton-on-hudson, ny": {lat: 41.2015, lng: -73.8929},
-  "putnam valley, ny": {lat: 41.4406, lng: -73.8221},
-  "cold spring, ny": {lat: 41.4195, lng: -73.9563},
-  "garrison, ny": {lat: 41.3798, lng: -73.9310},
-  "troy, ny": {lat: 42.7284, lng: -73.6918},
-  "albany, ny": {lat: 42.6526, lng: -73.7562},
-  "schenectady, ny": {lat: 42.8142, lng: -73.9396},
-  "bethel, ny": {lat: 41.7273, lng: -74.9024},
-  "ellenville, ny": {lat: 41.7176, lng: -74.3946},
-  "woodridge, ny": {lat: 41.7048, lng: -74.5985},
-  "kerhonkson, ny": {lat: 41.7743, lng: -74.2879},
+const TOWN_COORDS = {  "kingston, ny": {lat: 41.9270, lng: -73.9974, side: 'w'},
+  "woodstock, ny": {lat: 42.0409, lng: -74.1179, side: 'w'},
+  "saugerties, ny": {lat: 42.0776, lng: -73.9515, side: 'w'},
+  "new paltz, ny": {lat: 41.7476, lng: -74.0857, side: 'w'},
+  "rosendale, ny": {lat: 41.8365, lng: -74.0776, side: 'w'},
+  "stone ridge, ny": {lat: 41.8151, lng: -74.1207, side: 'w'},
+  "accord, ny": {lat: 41.7929, lng: -74.2318, side: 'w'},
+  "high falls, ny": {lat: 41.8087, lng: -74.1385, side: 'w'},
+  "highland, ny": {lat: 41.7160, lng: -73.9613, side: 'w'},
+  "marlboro, ny": {lat: 41.6034, lng: -73.9799, side: 'w'},
+  "milton, ny": {lat: 41.6551, lng: -73.9724, side: 'w'},
+  "gardiner, ny": {lat: 41.6795, lng: -74.1746, side: 'w'},
+  "cottekill, ny": {lat: 41.8556, lng: -74.0654, side: 'w'},
+  "west kill, ny": {lat: 42.2079, lng: -74.3335, side: 'w'},
+  "tannersville, ny": {lat: 42.1959, lng: -74.1274, side: 'w'},
+  "hunter, ny": {lat: 42.2137, lng: -74.2202, side: 'w'},
+  "windham, ny": {lat: 42.3009, lng: -74.2493, side: 'w'},
+  "catskill, ny": {lat: 42.2168, lng: -73.8643, side: 'w'},
+  "cairo, ny": {lat: 42.2929, lng: -74.0074, side: 'w'},
+  "livingston manor, ny": {lat: 41.9012, lng: -74.8288, side: 'w'},
+  "big indian, ny": {lat: 42.0687, lng: -74.4271, side: 'w'},
+  "shandaken, ny": {lat: 42.0637, lng: -74.3821, side: 'w'},
+  "phoenicia, ny": {lat: 42.0834, lng: -74.3168, side: 'w'},
+  "olivebridge, ny": {lat: 41.9376, lng: -74.2160, side: 'w'},
+  "hudson, ny": {lat: 42.2528, lng: -73.7904, side: 'e'},
+  "chatham, ny": {lat: 42.3670, lng: -73.5993, side: 'e'},
+  "claverack, ny": {lat: 42.2167, lng: -73.7196, side: 'e'},
+  "livingston, ny": {lat: 42.1276, lng: -73.7418, side: 'e'},
+  "germantown, ny": {lat: 42.1348, lng: -73.8654, side: 'e'},
+  "athens, ny": {lat: 42.2529, lng: -73.8071, side: 'w'},
+  "coxsackie, ny": {lat: 42.3540, lng: -73.7982, side: 'w'},
+  "greenville, ny": {lat: 42.4106, lng: -74.0146, side: 'w'},
+  "north adams, ma": {lat: 42.7009, lng: -73.1087, side: 'e'},
+  "beacon, ny": {lat: 41.5048, lng: -73.9698, side: 'e'},
+  "poughkeepsie, ny": {lat: 41.7004, lng: -73.9209, side: 'e'},
+  "wappingers falls, ny": {lat: 41.5967, lng: -73.9126, side: 'e'},
+  "red hook, ny": {lat: 41.9887, lng: -73.8776, side: 'e'},
+  "rhinebeck, ny": {lat: 41.9273, lng: -73.9121, side: 'e'},
+  "tivoli, ny": {lat: 42.0509, lng: -73.9165, side: 'e'},
+  "annandale-on-hudson, ny": {lat: 42.0273, lng: -73.9143, side: 'e'},
+  "hopewell junction, ny": {lat: 41.5806, lng: -73.7960, side: 'e'},
+  "pawling, ny": {lat: 41.5615, lng: -73.5993, side: 'e'},
+  "pine plains, ny": {lat: 41.9701, lng: -73.6771, side: 'e'},
+  "millbrook, ny": {lat: 41.7859, lng: -73.6879, side: 'e'},
+  "fishkill, ny": {lat: 41.5359, lng: -73.9007, side: 'e'},
+  "newburgh, ny": {lat: 41.5034, lng: -74.0104, side: 'w'},
+  "cornwall-on-hudson, ny": {lat: 41.4326, lng: -74.0176, side: 'w'},
+  "washingtonville, ny": {lat: 41.4262, lng: -74.1638, side: 'w'},
+  "peekskill, ny": {lat: 41.2901, lng: -73.9204, side: 'e'},
+  "croton-on-hudson, ny": {lat: 41.2015, lng: -73.8929, side: 'e'},
+  "putnam valley, ny": {lat: 41.4406, lng: -73.8221, side: 'e'},
+  "cold spring, ny": {lat: 41.4195, lng: -73.9563, side: 'e'},
+  "garrison, ny": {lat: 41.3798, lng: -73.9310, side: 'e'},
+  "troy, ny": {lat: 42.7284, lng: -73.6918, side: 'e'},
+  "albany, ny": {lat: 42.6526, lng: -73.7562, side: 'w'},
+  "schenectady, ny": {lat: 42.8142, lng: -73.9396, side: 'w'},
+  "bethel, ny": {lat: 41.7273, lng: -74.9024, side: 'w'},
+  "ellenville, ny": {lat: 41.7176, lng: -74.3946, side: 'w'},
+  "woodridge, ny": {lat: 41.7048, lng: -74.5985, side: 'w'},
+  "kerhonkson, ny": {lat: 41.7743, lng: -74.2879, side: 'w'},
+  "maplecrest, ny": {lat: 42.2759, lng: -74.1868, side: 'w'},
+  "walden, ny": {lat: 41.5612, lng: -74.1885, side: 'w'},
+  "altamont, ny": {lat: 42.7043, lng: -74.0304, side: 'w'},
+  "berne, ny": {lat: 42.6001, lng: -74.1568, side: 'w'},
+  "clermont, ny": {lat: 42.1512, lng: -73.8462, side: 'e'},
+  "coeymans hollow, ny": {lat: 42.4717, lng: -73.8944, side: 'w'},
+  "fleischmanns, ny": {lat: 42.1465, lng: -74.5638, side: 'w'},
+  "ghent, ny": {lat: 42.3287, lng: -73.6462, side: 'e'},
+  "hillsdale, ny": {lat: 42.1782, lng: -73.5115, side: 'e'},
+  "kinderhook, ny": {lat: 42.3901, lng: -73.6987, side: 'e'},
+  "leeds, ny": {lat: 42.2547, lng: -73.9008, side: 'w'},
+  "nyack, ny": {lat: 41.0909, lng: -73.9179, side: 'w'},
+  "oak hill, ny": {lat: 42.4098, lng: -74.1524, side: 'w'},
+  "pine bush, ny": {lat: 41.6009, lng: -74.296, side: 'w'},
+  "pleasant valley, ny": {lat: 41.7573, lng: -73.8329, side: 'e'},
+  "port ewen, ny": {lat: 41.8887, lng: -73.9932, side: 'w'},
+  "preston hollow, ny": {lat: 42.4314, lng: -74.2231, side: 'w'},
+  "redding, ct": {lat: 41.304, lng: -73.3826, side: 'e'},
+  "round top, ny": {lat: 42.2689, lng: -74.0272, side: 'w'},
+  "verplanck, ny": {lat: 41.2359, lng: -73.9635, side: 'e'},
+  "west park, ny": {lat: 41.7834, lng: -73.9573, side: 'w'},
 };
 
 const DRIVE_TIMES = {
@@ -2232,16 +2252,46 @@ function _estimateMinutesFromMiles(miles) {
 function _townKey(location) {
   return (location || '').trim().toLowerCase();
 }
-// Returns estimated minutes from the custom location to this event's town, or
-// null if the town isn't in our known list (in which case the event should be
-// shown rather than wrongly excluded).
+// Classifies an arbitrary point (like a zip code's coordinates) as west or east
+// of the Hudson by finding the nearest town we've already classified, and using
+// its side as a reasonable stand-in.
+function _nearestSide(lat, lng) {
+  let best = null, bestDist = Infinity;
+  for (const t of Object.values(TOWN_COORDS)) {
+    const d = _haversineMiles(lat, lng, t.lat, t.lng);
+    if (d < bestDist) { bestDist = d; best = t; }
+  }
+  return best?.side ?? null;
+}
+// Straight-line distance can badly understate real drive time across the
+// Hudson — there's no bridge every few miles, so crossing it almost always
+// means a real detour to the nearest one. This adds a flat time penalty
+// whenever the custom location and the venue's town are on opposite sides,
+// rather than pretending the river isn't there.
+const RIVER_CROSSING_PENALTY_MIN = 20;
+
+// Returns estimated minutes from the custom location to this event's town. If
+// the town isn't in our known list, falls back to the venue's existing
+// Kingston-based drive time rather than assuming "unknown, show regardless" —
+// that fallback sounds safe but actually meant any venue in an unlisted town
+// showed up under EVERY distance filter, no matter how far it really was
+// (exactly what happened with Maplecrest and Walden before both were added).
+// Only returns null — meaning "show it, we have no idea" — if there's truly
+// no data on this venue at all.
 function getEstimatedDistanceFromCustomLocation(event) {
   if (!_customLocation) return null;
   const key = _townKey(event.location);
   const coords = TOWN_COORDS[key];
-  if (!coords) return null;
-  const miles = _haversineMiles(_customLocation.lat, _customLocation.lng, coords.lat, coords.lng);
-  return _estimateMinutesFromMiles(miles);
+  if (coords) {
+    const miles = _haversineMiles(_customLocation.lat, _customLocation.lng, coords.lat, coords.lng);
+    let minutes = _estimateMinutesFromMiles(miles);
+    if (_customLocation.side && coords.side && _customLocation.side !== coords.side) {
+      minutes += RIVER_CROSSING_PENALTY_MIN;
+    }
+    return minutes;
+  }
+  if (DRIVE_TIMES[event.venue] !== undefined) return DRIVE_TIMES[event.venue];
+  return null;
 }
 
 function showLocationModal() {
@@ -2275,7 +2325,8 @@ function showLocationModal() {
       const data = await resp.json();
       const place = data.places?.[0];
       if (!place) throw new Error('no place data');
-      _customLocation = { zip, lat: parseFloat(place.latitude), lng: parseFloat(place.longitude) };
+      const lat = parseFloat(place.latitude), lng = parseFloat(place.longitude);
+      _customLocation = { zip, lat, lng, side: _nearestSide(lat, lng) };
       localStorage.setItem('kr_custom_location', JSON.stringify(_customLocation));
       close();
       renderEvents();
