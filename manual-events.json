@@ -22631,5 +22631,20 @@
     "_source": "email",
     "posterUrl": "",
     "_manual": true
+  },
+  {
+    "id": 74,
+    "date": "2026-10-23",
+    "title": "Nightmare Before Halloween",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/calendar",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "20:00",
+    "price": "See website",
+    "free": false,
+    "_source": "email",
+    "posterUrl": "",
+    "_manual": true
   }
 ]
