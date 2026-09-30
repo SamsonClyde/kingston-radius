@@ -22616,5 +22616,20 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 38,
+    "date": "2026-10-04",
+    "title": "Frank Corrado",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/calendar",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "23:00",
+    "price": "See website",
+    "free": false,
+    "_source": "email",
+    "posterUrl": "",
+    "_manual": true
   }
 ]
