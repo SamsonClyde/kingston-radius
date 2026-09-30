@@ -22745,5 +22745,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790766021346,
+    "title": "The Trapps Live",
+    "date": "2026-11-21",
+    "time": "19:30",
+    "venue": "The Living Room at Full Circle",
+    "venueUrl": "https://www.fcgardiner.com/events",
+    "location": "Gardiner, NY",
+    "mapsUrl": "https://maps.app.goo.gl/EYvm4H1WQLtFcgL2A",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
