@@ -22717,5 +22717,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790765914056,
+    "title": "The Dreaming Place",
+    "date": "2026-11-05",
+    "time": "19:30",
+    "venue": "The Living Room at Full Circle",
+    "venueUrl": "https://www.fcgardiner.com/events",
+    "location": "Gardiner, NY",
+    "mapsUrl": "https://maps.app.goo.gl/EYvm4H1WQLtFcgL2A",
+    "posterUrl": "",
+    "price": "$20-$40",
+    "free": false,
+    "_manual": true
   }
 ]
