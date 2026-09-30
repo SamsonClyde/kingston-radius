@@ -22731,5 +22731,19 @@
     "price": "$20-$40",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790765984928,
+    "title": "Nest Sessions hosted by Aubrey Haddard and Jose Lopez, Bakithi Kumalo",
+    "date": "2026-11-12",
+    "time": "19:00",
+    "venue": "The Living Room at Full Circle",
+    "venueUrl": "https://www.fcgardiner.com/events",
+    "location": "Gardiner, NY",
+    "mapsUrl": "https://maps.app.goo.gl/EYvm4H1WQLtFcgL2A",
+    "posterUrl": "",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
