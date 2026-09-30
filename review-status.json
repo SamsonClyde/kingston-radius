@@ -2335,5 +2335,10 @@
   "Stissing Center||2026-10-09||19:30": {
     "status": "rejected",
     "hiddenAt": 1790699416230
-  }
+  },
+  "Athens Cultural Center||2026-10-18||5:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790764521612
+  },
+  "Athens Cultural Center||2026-10-18||17:00": "approved"
 }
