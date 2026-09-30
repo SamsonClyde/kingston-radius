@@ -944,10 +944,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .mins-label-h2 .num { font-family:'DM Serif Display', serif; font-size:1.4rem; font-weight:400; line-height:1; }
   .mins-label-h2 .cap { display:flex; flex-direction:column; align-items:center; line-height:0.85; text-align:center; }
   .mins-label-h2 .cap span { font-size:0.48rem; text-transform:uppercase; letter-spacing:0.01em; opacity:0.85; }
-  .mobile-break { display: none; }
-  @media (max-width: 600px) {
-    .mobile-break { display: block; flex-basis: 100%; height: 0; }
-  }
 </style>
 <script>
   // Capture #admin hash before any other script can clear it
@@ -990,7 +986,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="filter-label">Distance</span>
     <button class="filter-btn active" data-filter="all"><span class="mins-label-h2"><span class="num">All</span></span></button>
     <button class="filter-btn" data-filter="0"><span class="mins-label-h2"><span class="num">Kingston</span><span class="cap"><span>only</span></span></span></button>
-    <span class="mobile-break"></span>
     <button class="filter-btn" data-filter="30"><span class="mins-label-h2"><span class="num">30</span><span class="cap"><span>mins</span><span>or</span><span>less</span></span></span></button>
     <button class="filter-btn" data-filter="45"><span class="mins-label-h2"><span class="num">45</span><span class="cap"><span>mins</span><span>or</span><span>less</span></span></span></button>
     <button class="filter-btn" data-filter="60"><span class="mins-label-h2"><span class="num">60</span><span class="cap"><span>mins</span><span>or</span><span>less</span></span></span></button>
@@ -2246,20 +2241,21 @@ function _haversineMiles(lat1, lng1, lat2, lng2) {
   const a = Math.sin(dLat/2)**2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng/2)**2;
   return R * 2 * Math.asin(Math.sqrt(a));
 }
-// Calibrated against two real, reported reference points rather than a guess:
+// Calibrated against three real, reported reference points rather than a guess:
 // Kingston-to-Albany (~51.5 straight-line mi, real ~55-60 min via the mostly-
-// highway Thruway) implies ~45mph is right for a favorable long route. But
-// Wingdale-to-Poughkeepsie (~18 straight-line mi, real ~45 min on winding rural
-// roads with no highway shortcut) implies something closer to ~24mph is right
-// for a typical *unfavorable* medium route — the original 38mph mid-tier was
-// calibrated too optimistically, assuming more routes look like the Albany
-// case than they actually do. These tiers lean toward the slower, rural-road
-// assumption, since that's more representative of most trips in this area, and
-// erring toward a slightly longer estimate is the safer direction for "will I
-// actually make it to this show" than erring short.
+// highway Thruway) implies ~45mph for a favorable long route. Wingdale-to-
+// Poughkeepsie (~18 straight-line mi, real ~45 min on winding rural roads with
+// no highway shortcut) implies ~24mph for a typical *unfavorable* medium route.
+// New Paltz-to-Kingston (~13.2 straight-line mi, real ~25 min via the direct
+// Rt 299/32 corridor) implies ~32mph for a well-connected *short* local route —
+// noticeably faster than the medium-distance rural case, since a short hop
+// between two well-connected core towns isn't automatically slower per-mile
+// than a longer one. Erring toward a slightly longer estimate is still the
+// safer direction generally, but 26mph was pushing genuinely close, common
+// trips like this one just over a filter threshold that should include them.
 function _estimateMinutesFromMiles(miles) {
   let mph;
-  if (miles <= 15) mph = 26;       // local/back roads
+  if (miles <= 15) mph = 30;       // short, often well-connected local routes
   else if (miles <= 40) mph = 28;  // typically no highway shortcut available
   else mph = 45;                   // longer trips more often pick up real highway miles
   return Math.round((miles / mph) * 60);
@@ -2311,6 +2307,19 @@ function getEstimatedDistanceFromCustomLocation(event) {
   return minutes;
 }
 
+function updateMyRadiusButton() {
+  const label = document.getElementById('my-radius-label');
+  const btn = document.getElementById('my-radius-btn');
+  if (!label || !btn) return;
+  if (_customLocation) {
+    label.innerHTML = '📍';
+    btn.title = `Showing distances from ${_customLocation.zip} — click to change or reset`;
+  } else {
+    label.innerHTML = `<span class="cap"><span>my</span></span><span class="num">Radius</span>`;
+    btn.title = 'Show distances from your own zip code';
+  }
+}
+
 function showLocationModal() {
   const overlay = document.getElementById('kr-location-overlay');
   const input   = document.getElementById('kr-zip-input');
@@ -2347,6 +2356,7 @@ function showLocationModal() {
       localStorage.setItem('kr_custom_location', JSON.stringify(_customLocation));
       close();
       renderEvents();
+      updateMyRadiusButton();
       showToast(`Showing distances from ${zip} ✓`);
     } catch (e) {
       errorEl.textContent = "Couldn't find that zip code — double-check it and try again.";
@@ -2362,6 +2372,7 @@ function showLocationModal() {
     localStorage.removeItem('kr_custom_location');
     close();
     renderEvents();
+    updateMyRadiusButton();
     showToast('Back to distances from Kingston ✓');
   };
   overlay.onclick = (e) => { if (e.target === overlay) close(); };
@@ -3609,6 +3620,9 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
   });
 });
 
+document.getElementById('my-radius-btn')?.addEventListener('click', showLocationModal);
+updateMyRadiusButton(); // reflect a zip code already saved from a previous visit
+
 // ── SECRET ADMIN via #admin ───────────────────────────────────────────────────
 function checkAdminHash() {
   if (window.location.hash === '#admin' || window._wantsAdmin) {
@@ -3761,7 +3775,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
   <div class="kr-modal-box">
     <div class="kr-modal-msg">
       <strong style="display:block;margin-bottom:8px;font-size:1rem;">Show distances from your location</strong>
-      <span style="color:var(--muted);font-size:0.85rem;">Enter your zip code, and the 30/45/60/90-min filters will estimate distance from there instead of Kingston. This is an estimate based on straight-line distance, not an exact drive time.</span>
+      <span style="color:var(--muted);font-size:0.85rem;">Enter your zip code & the 30/45/60/90-min filters will estimate distance from there instead of Kingston.</span>
       <input type="text" id="kr-zip-input" inputmode="numeric" maxlength="5" placeholder="e.g. 12401" style="display:block;width:100%;margin-top:14px;border:1.5px solid var(--border);background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.95rem;padding:8px 12px;border-radius:6px;box-sizing:border-box;">
       <div id="kr-zip-error" style="color:var(--red);font-size:0.8rem;margin-top:6px;display:none;"></div>
     </div>
