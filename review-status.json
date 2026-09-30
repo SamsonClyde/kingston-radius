@@ -2394,5 +2394,9 @@
   "The Living Room at Full Circle||2026-10-02||10:30 AM": {
     "status": "rejected",
     "hiddenAt": 1790764910450
+  },
+  "Time & Space Limited||2026-10-02||7:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1790764915471
   }
 }
