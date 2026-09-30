@@ -2348,5 +2348,9 @@
   "Keegan Ales||2026-10-03||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790764582465
+  },
+  "Kingston Pop Museum [KPM]||2026-10-02||6:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790764588966
   }
 }
