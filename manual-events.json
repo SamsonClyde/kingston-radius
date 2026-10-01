@@ -22876,5 +22876,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790853718371,
+    "title": "Bobcat",
+    "date": "2026-10-03",
+    "time": "20:00",
+    "venue": "Green Growler",
+    "venueUrl": "https://www.instagram.com/the.green.growler/",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GWWFznRhKUNYef138",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
