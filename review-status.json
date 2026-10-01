@@ -2520,5 +2520,10 @@
   "Tompkins Corners Cultural Center||2026-11-06||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1790852645732
-  }
+  },
+  "Unicorn Bar||2026-10-22||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790852714357
+  },
+  "Unicorn Bar||2026-10-22||19:30": "approved"
 }
