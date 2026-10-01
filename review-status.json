@@ -2439,5 +2439,9 @@
     "status": "rejected",
     "hiddenAt": 1790765664194
   },
-  "Tompkins Corners Cultural Center||2026-11-11||19:30": "approved"
+  "Tompkins Corners Cultural Center||2026-11-11||19:30": "approved",
+  "Bard College Conservatory||2026-11-01||": {
+    "status": "rejected",
+    "hiddenAt": 1790852445450
+  }
 }
