@@ -22862,5 +22862,19 @@
     "_source": "scraped",
     "posterUrl": "",
     "_manual": true
+  },
+  {
+    "id": 1790853682642,
+    "title": "Harvest Fest - The Big Takeover",
+    "date": "2026-10-03",
+    "time": "16:00",
+    "venue": "Arrowood Farms",
+    "venueUrl": "https://arrowoodfarms.com/free-music-and-events/",
+    "location": "Accord, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Lower+Whitfield+Rd+Accord+NY",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
