@@ -22818,5 +22818,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790850748678,
+    "title": "Josh Tower's Birthday - Groovepin & Friends, Atabeya, Paragon Barz, Dark Hippie",
+    "date": "2026-10-10",
+    "time": "21:00",
+    "venue": "Snug Harbor",
+    "venueUrl": "https://www.facebook.com/snugsnewpaltz?utm_source=ig&utm_medium=social&utm_content=link_in_bio&_rdr",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/UxtL3uvDoYHidUS4A",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
