@@ -1005,10 +1005,6 @@
   "Unicorn Bar||2026-09-17||19:00": "approved",
   "Unicorn Bar||2026-09-18||19:00": "approved",
   "Unicorn Bar||2026-09-19||19:00": "approved",
-  "Unicorn Bar||2026-09-30||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787591384423
-  },
   "Unicorn Bar||2026-10-01||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787591419109
@@ -1344,10 +1340,6 @@
   "Assembly Kingston||2026-11-11||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789346687517
-  },
-  "Bard College Conservatory||2026-09-30||": {
-    "status": "rejected",
-    "hiddenAt": 1789388901895
   },
   "Bard College Conservatory||2026-10-24||": {
     "status": "rejected",
