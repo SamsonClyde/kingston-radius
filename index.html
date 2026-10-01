@@ -989,7 +989,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="filter-row">
     <span class="filter-label">Distance</span>
     <button class="filter-btn active" data-filter="all"><span class="mins-label-h2"><span class="num">All</span></span></button>
-    <button class="filter-btn" data-filter="0"><span class="mins-label-h2"><span class="num">Kingston</span><span class="cap"><span>only</span></span></span></button>
+    <button class="filter-btn" id="kingston-only-btn" data-filter="0"><span class="mins-label-h2" id="kingston-only-label"><span class="num">Kingston</span><span class="cap"><span>only</span></span></span></button>
+    <button id="radius-pin-btn" title="Show distances from your own zip code" style="background:none;border:none;cursor:pointer;padding:4px;font-size:1.3rem;line-height:1;display:flex;align-items:center;">📍</button>
     <span class="mobile-break"></span>
     <button class="filter-btn" data-filter="30"><span class="mins-label-h2"><span class="num">30</span><span class="cap"><span>mins</span><span>or</span><span>less</span></span></span></button>
     <button class="filter-btn" data-filter="45"><span class="mins-label-h2"><span class="num">45</span><span class="cap"><span>mins</span><span>or</span><span>less</span></span></span></button>
@@ -2312,16 +2313,19 @@ function getEstimatedDistanceFromCustomLocation(event) {
   return minutes;
 }
 
-function updateMyRadiusButton() {
-  const label = document.getElementById('my-radius-label');
-  const btn = document.getElementById('my-radius-btn');
-  if (!label || !btn) return;
+function updateRadiusUI() {
+  const label = document.getElementById('kingston-only-label');
+  const btn = document.getElementById('kingston-only-btn');
+  const pin = document.getElementById('radius-pin-btn');
+  if (!label || !btn || !pin) return;
   if (_customLocation) {
-    label.innerHTML = '📍';
+    label.innerHTML = `<span class="num">My Radius</span>`;
     btn.title = `Showing distances from ${_customLocation.zip} — click to change or reset`;
+    pin.style.display = 'none';
   } else {
-    label.innerHTML = `<span class="cap"><span>my</span></span><span class="num">Radius</span>`;
-    btn.title = 'Show distances from your own zip code';
+    label.innerHTML = `<span class="num">Kingston</span><span class="cap"><span>only</span></span>`;
+    btn.title = '';
+    pin.style.display = 'flex';
   }
 }
 
@@ -2359,9 +2363,13 @@ function showLocationModal() {
       const lat = parseFloat(place.latitude), lng = parseFloat(place.longitude);
       _customLocation = { zip, lat, lng, side: _nearestSide(lat, lng) };
       localStorage.setItem('kr_custom_location', JSON.stringify(_customLocation));
+      // "Kingston Only" no longer makes sense once centered on a visitor's own
+      // zip, so default to the widest distance filter instead.
+      _activeFilter = '90';
+      document.querySelectorAll('[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === '90'));
       close();
       renderEvents();
-      updateMyRadiusButton();
+      updateRadiusUI();
       showToast(`Showing distances from ${zip} ✓`);
     } catch (e) {
       errorEl.textContent = "Couldn't find that zip code — double-check it and try again.";
@@ -2375,9 +2383,11 @@ function showLocationModal() {
   resetBtn.onclick = () => {
     _customLocation = null;
     localStorage.removeItem('kr_custom_location');
+    _activeFilter = 'all';
+    document.querySelectorAll('[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
     close();
     renderEvents();
-    updateMyRadiusButton();
+    updateRadiusUI();
     showToast('Back to distances from Kingston ✓');
   };
   overlay.onclick = (e) => { if (e.target === overlay) close(); };
@@ -3617,6 +3627,14 @@ document.querySelectorAll('nav a[data-page]').forEach(link => {
 // ── FILTER BUTTONS ────────────────────────────────────────────────────────────
 document.querySelectorAll('[data-filter]').forEach(btn => {
   btn.addEventListener('click', () => {
+    // Once a zip is set, this same button has become "My Radius" — reopen the
+    // zip popup (to change or reset it) instead of applying a Kingston-only
+    // filter, which wouldn't make sense anymore once centered on a visitor's
+    // own location.
+    if (btn.id === 'kingston-only-btn' && _customLocation) {
+      showLocationModal();
+      return;
+    }
     document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     _activeFilter = btn.dataset.filter;
@@ -3625,8 +3643,8 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
   });
 });
 
-document.getElementById('my-radius-btn')?.addEventListener('click', showLocationModal);
-updateMyRadiusButton(); // reflect a zip code already saved from a previous visit
+document.getElementById('radius-pin-btn')?.addEventListener('click', showLocationModal);
+updateRadiusUI(); // reflect a zip code already saved from a previous visit
 
 // ── SECRET ADMIN via #admin ───────────────────────────────────────────────────
 function checkAdminHash() {
