@@ -22773,5 +22773,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790816140598,
+    "title": "(house show, dm for address and rsvp) James Bird, Matthew Beck & Malerie Day",
+    "date": "2026-10-18",
+    "time": "18:00",
+    "venue": "Cottage Sessions",
+    "venueUrl": "https://www.instagram.com/malerie_day/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://www.instagram.com/malerie_day/",
+    "posterUrl": "",
+    "price": "$15-$35",
+    "free": false,
+    "_manual": true
   }
 ]
