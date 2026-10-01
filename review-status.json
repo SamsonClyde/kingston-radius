@@ -745,10 +745,6 @@
   "Tempo Arts||2026-09-25||20:00": "approved",
   "Tempo Arts||2026-09-26||20:00": "approved",
   "Tempo Arts||2026-09-27||15:00": "approved",
-  "Tempo Arts||2026-09-30||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1787539735521
-  },
   "Tempo Arts||2026-09-30||20:00": "approved",
   "Tempo Arts||2026-10-02||8:00 PM": {
     "status": "rejected",
@@ -2124,10 +2120,6 @@
     "status": "rejected",
     "hiddenAt": 1790333146596
   },
-  "Tempo Arts||2026-09-30||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790333154988
-  },
   "Tempo Arts||2026-10-01||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790333158491
@@ -2272,10 +2264,6 @@
     "status": "rejected",
     "hiddenAt": 1790680772980
   },
-  "Colony Woodstock||2026-09-30||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790680790425
-  },
   "Colony Woodstock||2026-10-01||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790680797625
@@ -2295,10 +2283,6 @@
   "Colony Woodstock||2026-10-04||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790680827814
-  },
-  "NoFun||2026-09-30||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790680866385
   },
   "NoFun||2026-10-01||8:00 PM": {
     "status": "rejected",
