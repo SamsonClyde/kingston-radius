@@ -2322,10 +2322,12 @@ function updateRadiusUI() {
     label.innerHTML = `<span class="num">My Radius</span>`;
     btn.title = `Showing distances from ${_customLocation.zip} — click to change or reset`;
     pin.style.display = 'none';
+    btn.classList.add('active');
   } else {
     label.innerHTML = `<span class="num">Kingston</span><span class="cap"><span>only</span></span>`;
     btn.title = '';
     pin.style.display = 'flex';
+    btn.classList.remove('active');
   }
 }
 
@@ -3635,7 +3637,12 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
       showLocationModal();
       return;
     }
-    document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+    // "My Radius" reflects an ongoing mode (a zip is set), not a one-off pick
+    // like 30 vs 45 — so it stays highlighted even when a different minute
+    // filter is chosen alongside it, rather than being cleared like the others.
+    document.querySelectorAll('[data-filter]').forEach(b => {
+      if (b.id !== 'kingston-only-btn' || !_customLocation) b.classList.remove('active');
+    });
     btn.classList.add('active');
     _activeFilter = btn.dataset.filter;
     _currentPage = 1;
