@@ -2508,5 +2508,9 @@
     "status": "rejected",
     "hiddenAt": 1790852605820
   },
-  "The Half Moon||2026-10-17||19:00": "approved"
+  "The Half Moon||2026-10-17||19:00": "approved",
+  "The Half Moon||2026-11-18||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790852636378
+  }
 }
