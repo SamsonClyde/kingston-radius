@@ -22801,5 +22801,19 @@
     "price": "$15-$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790816494510,
+    "title": "Block Party DJ: Sarah Van Buren, DJBNNYBRNS, Rager, Heavy Pleasure, Red Swan x DJ Mildred b2b, JD Samson",
+    "date": "2026-10-04",
+    "time": "",
+    "venue": "Lil' Deb's Oasis",
+    "venueUrl": "https://www.instagram.com/lildebsoasis/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/92dF57xS3iVZLEXD6",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
