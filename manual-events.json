@@ -22905,5 +22905,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790857353589,
+    "title": "Starlight Social - Live Music",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "venue": "The Living Room at Full Circle",
+    "venueUrl": "https://www.fcgardiner.com/events",
+    "location": "Gardiner, NY",
+    "mapsUrl": "https://maps.app.goo.gl/EYvm4H1WQLtFcgL2A",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
