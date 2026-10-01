@@ -2499,5 +2499,9 @@
   "Keegan Ales||2026-10-06||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1790852491422
+  },
+  "The Half Moon||2026-10-03||9:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790852498158
   }
 }
