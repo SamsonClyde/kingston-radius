@@ -934,5 +934,11 @@
     "location": "Woodstock, NY",
     "mapsUrl": "https://www.instagram.com/malerie_day/",
     "drive": 20
+  },
+  "Dog Park": {
+    "venueUrl": "https://www.instagram.com/fieldguides/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/pSSRMdhjbiquQy6J9",
+    "drive": 5
   }
 }
