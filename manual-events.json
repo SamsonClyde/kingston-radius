@@ -23311,5 +23311,19 @@
     "price": "$25-$45",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790968788026,
+    "title": "The Warp, The Weft + Decent Colors",
+    "date": "2026-10-24",
+    "time": "19:00",
+    "venue": "Industrial Arts",
+    "venueUrl": "https://www.industrialartsbrewing.com/pages/visit-us",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.app.goo.gl/SgAFjarmr4HVf61E7",
+    "posterUrl": "",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
