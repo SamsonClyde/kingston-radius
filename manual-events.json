@@ -23104,7 +23104,7 @@
     "id": 1790966871340,
     "title": "The Oz Noy Trio",
     "date": "2026-10-29",
-    "time": "",
+    "time": "18:30",
     "venue": "City Winery HV",
     "venueUrl": "https://www.instagram.com/citywineryhv/",
     "location": "Montgomery, NY",
@@ -23112,7 +23112,8 @@
     "posterUrl": "",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1790967011199,
