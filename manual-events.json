@@ -11243,9 +11243,9 @@
   },
   {
     "id": 1788273721063,
-    "title": "The Gibson Brothers, Mikaela Davis, Jordan Tice Trio",
+    "title": "Hilary Hawke, The Gibson Brothers, Mikaela Davis, Jordan Tice Trio",
     "date": "2026-10-03",
-    "time": "12:30",
+    "time": "11:30",
     "venue": "The Country Living Fair",
     "venueUrl": "https://countrylivingfairs.com/the-fair#what-to-expect",
     "location": "Rhinebeck, NY",
@@ -11253,7 +11253,8 @@
     "price": "$28-$60single/$60-$150pass",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1788273826444,
