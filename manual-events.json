@@ -23339,5 +23339,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790970378117,
+    "title": "Tim Love Lee's Resonant Reflections Part II",
+    "date": "2026-10-10",
+    "time": "13:00",
+    "venue": "Wassaic Project",
+    "venueUrl": "https://www.wassaicproject.org/events",
+    "location": "Wassaic, NY",
+    "mapsUrl": "https://maps.app.goo.gl/pEFUtPcaRnfFDQD58",
+    "posterUrl": "",
+    "price": "rsvp",
+    "free": false,
+    "_manual": true
   }
 ]
