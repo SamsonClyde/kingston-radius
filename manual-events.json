@@ -23044,7 +23044,7 @@
     "id": 1790966519938,
     "title": "Bob Schneider",
     "date": "2026-10-23",
-    "time": "",
+    "time": "19:30",
     "venue": "City Winery HV",
     "venueUrl": "https://www.instagram.com/citywineryhv/",
     "location": "Montgomery, NY",
@@ -23052,7 +23052,8 @@
     "posterUrl": "",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1790966758971,
