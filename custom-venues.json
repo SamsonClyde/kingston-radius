@@ -964,5 +964,11 @@
     "location": "Beacon, NY",
     "mapsUrl": "https://maps.app.goo.gl/SgAFjarmr4HVf61E7",
     "drive": 47
+  },
+  "Wassaic Project": {
+    "venueUrl": "https://www.wassaicproject.org/events",
+    "location": "Wassaic, NY",
+    "mapsUrl": "https://maps.app.goo.gl/pEFUtPcaRnfFDQD58",
+    "drive": 65
   }
 }
