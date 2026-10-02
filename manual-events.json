@@ -22935,5 +22935,20 @@
     "_source": "email",
     "posterUrl": "",
     "_manual": true
+  },
+  {
+    "id": 70,
+    "date": "2026-10-14",
+    "title": "Nico Soffiato & Friends",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "time": "19:00",
+    "price": "free",
+    "free": true,
+    "_source": "email",
+    "posterUrl": "",
+    "_manual": true
   }
 ]
