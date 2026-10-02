@@ -23325,5 +23325,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790968829867,
+    "title": "School of Rock - Fall Music Fest",
+    "date": "2026-10-30",
+    "time": "19:00",
+    "venue": "Industrial Arts",
+    "venueUrl": "https://www.industrialartsbrewing.com/pages/visit-us",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.app.goo.gl/SgAFjarmr4HVf61E7",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
