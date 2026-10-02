@@ -2598,5 +2598,9 @@
   "RMV Cellars||2026-10-10||2:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790962746944
+  },
+  "Stissing Center||2026-10-05||3:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1790962751975
   }
 }
