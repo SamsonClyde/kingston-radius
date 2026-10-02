@@ -23137,5 +23137,19 @@
     "price": "sold out",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790967133148,
+    "title": "John Violinist",
+    "date": "2026-10-09",
+    "time": "20:00",
+    "venue": "City Winery HV",
+    "venueUrl": "https://citywinery.com/pages/events/hudson-valley#",
+    "location": "Montgomery, NY",
+    "mapsUrl": "https://maps.app.goo.gl/eaFRDVZgzj3VpTpi8",
+    "posterUrl": "",
+    "price": "sold out",
+    "free": false,
+    "_manual": true
   }
 ]
