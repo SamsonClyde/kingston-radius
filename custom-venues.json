@@ -952,5 +952,11 @@
     "location": "Montgomery, NY",
     "mapsUrl": "https://maps.app.goo.gl/eaFRDVZgzj3VpTpi8",
     "drive": 50
+  },
+  "Lasting Joy": {
+    "venueUrl": "https://www.instagram.com/lastingjoybrewery/",
+    "location": "Tivoli, NY",
+    "mapsUrl": "https://maps.app.goo.gl/DmbLDvWcqiTovggw5",
+    "drive": 34
   }
 }
