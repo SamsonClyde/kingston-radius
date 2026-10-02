@@ -2515,5 +2515,10 @@
   "Avalon Lounge||2026-10-15||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790962147307
-  }
+  },
+  "Bard College Conservatory||2026-11-01||1:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790962293511
+  },
+  "Bard College Conservatory||2026-11-01||13:00": "approved"
 }
