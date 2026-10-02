@@ -23089,7 +23089,7 @@
     "id": 1790966831139,
     "title": "Pure Soul Presents Thriller Live",
     "date": "2026-10-27",
-    "time": "",
+    "time": "19:00",
     "venue": "City Winery HV",
     "venueUrl": "https://www.instagram.com/citywineryhv/",
     "location": "Montgomery, NY",
@@ -23097,7 +23097,8 @@
     "posterUrl": "",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1790966871340,
