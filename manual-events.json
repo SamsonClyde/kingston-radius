@@ -23212,5 +23212,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790967676834,
+    "title": "Demola Live!",
+    "date": "2026-11-25",
+    "time": "19:30",
+    "venue": "City Winery HV",
+    "venueUrl": "https://citywinery.com/pages/events/hudson-valley#",
+    "location": "Montgomery, NY",
+    "mapsUrl": "https://maps.app.goo.gl/eaFRDVZgzj3VpTpi8",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
