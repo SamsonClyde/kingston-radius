@@ -2590,5 +2590,9 @@
   "Greig Farm||2026-10-04||": {
     "status": "rejected",
     "hiddenAt": 1790962682099
+  },
+  "Keegan Ales||2026-10-04||4:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790962729619
   }
 }
