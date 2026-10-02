@@ -2594,5 +2594,9 @@
   "Keegan Ales||2026-10-04||4:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790962729619
+  },
+  "RMV Cellars||2026-10-10||2:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1790962746944
   }
 }
