@@ -2552,5 +2552,9 @@
   "Colony Woodstock||2026-10-09||": {
     "status": "rejected",
     "hiddenAt": 1790962455071
+  },
+  "Colony Woodstock||2026-10-10||": {
+    "status": "rejected",
+    "hiddenAt": 1790962460887
   }
 }
