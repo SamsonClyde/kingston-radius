@@ -22950,5 +22950,20 @@
     "_source": "email",
     "posterUrl": "",
     "_manual": true
+  },
+  {
+    "id": 396,
+    "date": "2026-11-01",
+    "title": "Guest Artist Recital: Gábor Farkas, Luosha Fang (Bitó Conservatory Building)",
+    "venue": "Bard College Conservatory",
+    "venueUrl": "https://www.bard.edu/inside/calendar/guest-artist-recital-gabor-farkas-piano-with-luosha-fang-violin-and-viola",
+    "location": "Annandale-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=61+Blithewood+Ave+Annandale-on-Hudson+NY",
+    "time": "13:00",
+    "price": "free & open to the public",
+    "free": true,
+    "_source": "scraped",
+    "posterUrl": "",
+    "_manual": true
   }
 ]
