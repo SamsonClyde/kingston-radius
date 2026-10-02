@@ -22995,5 +22995,20 @@
     "_source": "email",
     "posterUrl": "",
     "_manual": true
+  },
+  {
+    "id": 306,
+    "date": "2026-10-11",
+    "title": "Marji Zintz & Mike LaRocco – Salon Stage",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "time": "11:30",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "",
+    "_manual": true
   }
 ]
