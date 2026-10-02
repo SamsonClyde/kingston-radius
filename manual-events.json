@@ -23073,7 +23073,7 @@
     "id": 1790966796086,
     "title": "Joe Pug, Willie Watson",
     "date": "2026-10-22",
-    "time": "",
+    "time": "19:00",
     "venue": "City Winery HV",
     "venueUrl": "https://www.instagram.com/citywineryhv/",
     "location": "Montgomery, NY",
@@ -23081,7 +23081,8 @@
     "posterUrl": "",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1790966831139,
