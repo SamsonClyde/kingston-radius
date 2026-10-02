@@ -22980,5 +22980,20 @@
     "_source": "email",
     "posterUrl": "",
     "_manual": true
+  },
+  {
+    "id": 88,
+    "date": "2026-10-21",
+    "title": "The Bob Cats (Bob Dylan Covers)",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "19:00",
+    "price": "donation",
+    "free": false,
+    "_source": "email",
+    "posterUrl": "",
+    "_manual": true
   }
 ]
