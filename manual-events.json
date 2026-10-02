@@ -23053,5 +23053,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790966758971,
+    "title": "Upstate, The Jojos, Jose Lopez & Joanna Teters",
+    "date": "2026-10-15",
+    "time": "",
+    "venue": "City Winery HV",
+    "venueUrl": "https://www.instagram.com/citywineryhv/",
+    "location": "Montgomery, NY",
+    "mapsUrl": "https://maps.app.goo.gl/eaFRDVZgzj3VpTpi8",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
