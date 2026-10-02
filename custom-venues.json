@@ -946,5 +946,11 @@
     "location": "Saugerties, NY",
     "mapsUrl": "https://maps.app.goo.gl/hxwRzV1LDWkGx3gL8",
     "drive": 21
+  },
+  "City Winery HV": {
+    "venueUrl": "https://www.instagram.com/citywineryhv/",
+    "location": "Montgomery, NY",
+    "mapsUrl": "https://maps.app.goo.gl/eaFRDVZgzj3VpTpi8",
+    "drive": 50
   }
 }
