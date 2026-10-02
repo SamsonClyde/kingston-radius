@@ -23123,5 +23123,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790967069486,
+    "title": "Dave Davies: Kinks` Songs and Stories",
+    "date": "2026-10-06",
+    "time": "19:30",
+    "venue": "City Winery HV",
+    "venueUrl": "https://www.instagram.com/citywineryhv/",
+    "location": "Montgomery, NY",
+    "mapsUrl": "https://maps.app.goo.gl/eaFRDVZgzj3VpTpi8",
+    "posterUrl": "",
+    "price": "sold out",
+    "free": false,
+    "_manual": true
   }
 ]
