@@ -958,5 +958,11 @@
     "location": "Tivoli, NY",
     "mapsUrl": "https://maps.app.goo.gl/DmbLDvWcqiTovggw5",
     "drive": 34
+  },
+  "Industrial Arts": {
+    "venueUrl": "https://www.industrialartsbrewing.com/pages/visit-us",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.app.goo.gl/SgAFjarmr4HVf61E7",
+    "drive": 47
   }
 }
