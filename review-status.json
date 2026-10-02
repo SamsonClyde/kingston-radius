@@ -2502,5 +2502,9 @@
   "Avalon Lounge||2026-10-13||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790962086279
+  },
+  "Avalon Lounge||2026-10-14||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1790962089649
   }
 }
