@@ -23010,5 +23010,19 @@
     "_source": "scraped",
     "posterUrl": "",
     "_manual": true
+  },
+  {
+    "id": 1790964749533,
+    "title": "Poems with Music By Field Guides",
+    "date": "2026-10-17",
+    "time": "19:00",
+    "venue": "Dog Park",
+    "venueUrl": "https://www.instagram.com/fieldguides/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/pSSRMdhjbiquQy6J9",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
