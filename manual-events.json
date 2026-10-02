@@ -23025,5 +23025,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1790966147728,
+    "title": "Andalucia Project Presents - Alejandra & Aaron",
+    "date": "2026-10-04",
+    "time": "18:00",
+    "venue": "Rock Da Casbah",
+    "venueUrl": "https://www.instagram.com/andaluciaprojectny/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/hxwRzV1LDWkGx3gL8",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
