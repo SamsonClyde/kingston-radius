@@ -23023,6 +23023,7 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790965758040-screen-shot-2026-10-02-at-2-05-11-pm-1.png",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
