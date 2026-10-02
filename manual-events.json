@@ -859,7 +859,7 @@
     "venueUrl": "https://www.theavalonlounge.com/show-calendar",
     "location": "Catskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
-    "price": "$17",
+    "price": "sold out",
     "free": false,
     "_manual": true,
     "_source": "manual",
