@@ -23156,5 +23156,19 @@
     "price": "sold out",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790967361237,
+    "title": "Kofi B",
+    "date": "2026-11-04",
+    "time": "19:00",
+    "venue": "City Winery HV",
+    "venueUrl": "https://citywinery.com/pages/events/hudson-valley#",
+    "location": "Montgomery, NY",
+    "mapsUrl": "https://maps.app.goo.gl/eaFRDVZgzj3VpTpi8",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
