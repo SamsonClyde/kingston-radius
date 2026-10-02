@@ -2469,5 +2469,9 @@
     "status": "rejected",
     "hiddenAt": 1790852714357
   },
-  "Unicorn Bar||2026-10-22||19:30": "approved"
+  "Unicorn Bar||2026-10-22||19:30": "approved",
+  "Avalon Lounge||2026-10-02||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1790961865872
+  }
 }
