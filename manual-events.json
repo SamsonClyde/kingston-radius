@@ -23255,5 +23255,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1790968370971,
+    "title": "Oktoberfest - DJs",
+    "date": "2026-10-03",
+    "time": "12:00",
+    "venue": "Lasting Joy",
+    "venueUrl": "https://www.instagram.com/lastingjoybrewery/",
+    "location": "Tivoli, NY",
+    "mapsUrl": "https://maps.app.goo.gl/DmbLDvWcqiTovggw5",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
