@@ -23457,5 +23457,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791023845589,
+    "title": "Great Pumpkin Festival - Live Music 4pm",
+    "date": "2026-10-24",
+    "time": "10:00",
+    "venue": "1817 Cider House",
+    "venueUrl": "https://www.instagram.com/1817_cider_house/",
+    "location": "Milton, NY",
+    "mapsUrl": "https://maps.app.goo.gl/XfCsQQsdLwadoiUd8",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
