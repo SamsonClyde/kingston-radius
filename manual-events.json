@@ -23401,5 +23401,19 @@
     "price": "$5 cash only",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791023336539,
+    "title": "Benefit For Hudson Community Choir - Common Man",
+    "date": "2026-10-12",
+    "time": "19:00",
+    "venue": "BackBar",
+    "venueUrl": "https://www.facebook.com/backbarhudson/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vNsveLibaz7gbVNc6",
+    "posterUrl": "",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
