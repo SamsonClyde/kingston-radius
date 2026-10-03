@@ -23541,5 +23541,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791024198780,
+    "title": "Freeks Garage",
+    "date": "2026-10-16",
+    "time": "20:00",
+    "venue": "Tinker Street Tavern",
+    "venueUrl": "https://www.instagram.com/tinkerstreettavern/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/3CHPZ32vyEMKDYXLA",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
