@@ -2511,5 +2511,10 @@
     "status": "rejected",
     "hiddenAt": 1790963045640
   },
-  "Towne Crier Café||2026-10-11||11:30": "approved"
+  "Towne Crier Café||2026-10-11||11:30": "approved",
+  "Assembly Kingston||2026-10-30||9:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1791024496657
+  },
+  "Assembly Kingston||2026-10-30||21:00": "approved"
 }
