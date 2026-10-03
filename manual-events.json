@@ -23555,5 +23555,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791024243491,
+    "title": "Bennett Harris, No Place Nowhere",
+    "date": "2026-10-17",
+    "time": "15:00",
+    "venue": "Tinker Street Tavern",
+    "venueUrl": "https://www.instagram.com/tinkerstreettavern/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/3CHPZ32vyEMKDYXLA",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
