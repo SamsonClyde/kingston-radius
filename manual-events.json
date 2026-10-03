@@ -23499,5 +23499,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791024007900,
+    "title": "Copacetic Band",
+    "date": "2026-10-23",
+    "time": "22:00",
+    "venue": "Bacchus",
+    "venueUrl": "https://bacchusnewpaltz.com/music-events",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/wttxmc4veyLzkc1s6",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
