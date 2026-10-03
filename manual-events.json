@@ -23387,5 +23387,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791023151713,
+    "title": "Rosendale Pickle Festival - Live Music",
+    "date": "2026-10-18",
+    "time": "10:00",
+    "venue": "Ulster County Fairgrounds",
+    "venueUrl": "https://www.instagram.com/rosendalepicklefestival/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/eExFAHon5LhveLaL7",
+    "posterUrl": "",
+    "price": "$5 cash only",
+    "free": false,
+    "_manual": true
   }
 ]
