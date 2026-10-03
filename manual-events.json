@@ -23415,5 +23415,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791023629944,
+    "title": "Farmers & Artisan Market - Live music: Yard Sale",
+    "date": "2026-10-04",
+    "time": "13:00",
+    "venue": "1817 Cider House",
+    "venueUrl": "https://www.instagram.com/1817_cider_house/",
+    "location": "Milton, NY",
+    "mapsUrl": "https://maps.app.goo.gl/XfCsQQsdLwadoiUd8",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
