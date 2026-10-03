@@ -23429,5 +23429,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791023699549,
+    "title": "Oktoberfest - Live Music 4pm: Way Behind The Sun",
+    "date": "2026-10-10",
+    "time": "12:00",
+    "venue": "1817 Cider House",
+    "venueUrl": "https://www.instagram.com/1817_cider_house/",
+    "location": "Milton, NY",
+    "mapsUrl": "https://maps.app.goo.gl/XfCsQQsdLwadoiUd8",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
