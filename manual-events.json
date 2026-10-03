@@ -23569,5 +23569,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791024269453,
+    "title": "The Fates NYC",
+    "date": "2026-10-24",
+    "time": "20:30",
+    "venue": "Tinker Street Tavern",
+    "venueUrl": "https://www.instagram.com/tinkerstreettavern/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/3CHPZ32vyEMKDYXLA",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
