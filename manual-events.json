@@ -23598,5 +23598,20 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 373,
+    "date": "2026-10-31",
+    "title": "Halloween Takeover Weekend: UFO Invasion -  DJs: Forfex, Jams Bond, Mmkay Beats",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/halloween-takeover-weekend-lights-out-har76",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "9:00 pm",
+    "price": "$20",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "",
+    "_manual": true
   }
 ]
