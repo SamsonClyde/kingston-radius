@@ -1009,6 +1009,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <select id="venue-select" class="venue-select">
       <option value="">All venues</option>
     </select>
+    <button id="venue-share-btn" class="share-btn" onclick="shareVenue()" title="Share all of this venue's listings" aria-label="Share all of this venue's listings" style="display:none;gap:5px;padding:4px 8px;"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg><span style="font-size:0.72rem;font-weight:500;font-family:'DM Sans',sans-serif;">Share venue</span></button>
   </div>
   <div class="filter-row" style="padding-top:2px;padding-bottom:4px;justify-content:space-between;align-items:center;">
     <div style="display:flex;gap:4px;align-items:center;">
@@ -2053,6 +2054,7 @@ function setSortMode(mode) {
 }
 
 function renderEvents() {
+  updateVenueShareBtn();
   const container = document.getElementById('events-list');
   if (!container) return;
   const today = new Date(); today.setHours(0,0,0,0);
@@ -2514,17 +2516,67 @@ function jumpToSharedEvent() {
   }, 60);
 }
 
+function updateVenueShareBtn() {
+  const btn = document.getElementById('venue-share-btn');
+  if (btn) btn.style.display = _activeVenue ? 'inline-flex' : 'none';
+}
+
+// Shares a link that opens the site already filtered to this venue's listings
+// (handled on load by applyVenueParam).
+async function shareVenue() {
+  if (!_activeVenue) return;
+  const url = new URL(window.location.href);
+  url.hash = '';
+  url.search = '';
+  url.searchParams.set('venue', _activeVenue);
+  const shareUrl = url.toString();
+
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: `${_activeVenue} — Kingston Radius`,
+        text: `All upcoming shows at ${_activeVenue}`,
+        url: shareUrl,
+      });
+      return;
+    } catch (err) {
+      if (err && err.name === 'AbortError') return;
+      // fall through to clipboard on other errors
+    }
+  }
+  try {
+    await navigator.clipboard.writeText(shareUrl);
+    showToast('Venue link copied!');
+  } catch {
+    showToast('Could not copy link');
+  }
+}
+
 function applyVenueParam() {
   const params = new URLSearchParams(window.location.search);
-  const venue = params.get('venue');
-  if (!venue) return;
+  const requested = (params.get('venue') || '').trim();
+  if (!requested) return;
 
-  _activeVenue = venue;
-  _currentPage = 1;
-  const sel = document.getElementById('venue-select');
-  if (sel) sel.value = venue;
+  // Only filter to venues that actually have upcoming shows (matched ignoring
+  // case), so a stale or mistyped link can't leave the page filtered to nothing.
+  const today = new Date(); today.setHours(0,0,0,0);
+  const venues = [...new Set(
+    getApprovedEvents()
+      .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue) && !isTitleHidden(e.title))
+      .map(e => e.venue)
+  )];
+  const match = venues.find(v => v.toLowerCase() === requested.toLowerCase());
 
   history.replaceState(null, '', window.location.pathname);
+  if (!match) {
+    showToast('No upcoming shows found for that venue');
+    return;
+  }
+
+  _activeVenue = match;
+  _currentPage = 1;
+  const sel = document.getElementById('venue-select');
+  if (sel) sel.value = match;
   renderEvents();
 }
 
