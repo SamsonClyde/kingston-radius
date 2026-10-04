@@ -23670,5 +23670,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791110531657,
+    "title": "Croton Porchfest - The Howlers",
+    "date": "2026-10-18",
+    "time": "15:00",
+    "venue": "Green Growler",
+    "venueUrl": "https://www.instagram.com/the.green.growler/",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GWWFznRhKUNYef138",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
