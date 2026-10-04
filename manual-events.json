@@ -23684,5 +23684,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791110556305,
+    "title": "The Space Cats",
+    "date": "2026-10-23",
+    "time": "19:00",
+    "venue": "Green Growler",
+    "venueUrl": "https://www.instagram.com/the.green.growler/",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GWWFznRhKUNYef138",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
