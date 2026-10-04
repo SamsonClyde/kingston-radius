@@ -23713,5 +23713,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1791125198366,
+    "title": "The Travelers",
+    "date": "2026-10-04",
+    "time": "15:00",
+    "venue": "Bad Seed",
+    "venueUrl": "https://www.badseedhardcider.com/events/",
+    "location": "Highland, NY",
+    "mapsUrl": "https://maps.google.com/?q=87+Burroughs+Dr+Highland+NY",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
