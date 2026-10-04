@@ -23628,5 +23628,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1791074481442,
+    "title": "Leo Belsky",
+    "date": "2026-10-03",
+    "time": "21:00",
+    "venue": "BackBar",
+    "venueUrl": "https://www.facebook.com/backbarhudson/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vNsveLibaz7gbVNc6",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
