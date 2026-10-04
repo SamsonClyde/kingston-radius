@@ -23656,5 +23656,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791110469148,
+    "title": "Nick Chesnais Jazz Group",
+    "date": "2026-10-15",
+    "time": "19:00",
+    "venue": "Green Growler",
+    "venueUrl": "https://www.instagram.com/the.green.growler/",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GWWFznRhKUNYef138",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
