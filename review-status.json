@@ -2421,5 +2421,9 @@
   "Unicorn Bar||2026-10-23||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1791024664221
+  },
+  "Towne Crier Café||2026-10-16||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1791110141571
   }
 }
