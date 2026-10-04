@@ -23698,5 +23698,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791110863763,
+    "title": "Ethical Drift, Ginger Smalls",
+    "date": "2026-10-10",
+    "time": "20:00",
+    "venue": "Happy Valley Arcade",
+    "venueUrl": "https://happyvalleybeacon.com/events",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LAGZJ318ZdvL9AvC6",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
