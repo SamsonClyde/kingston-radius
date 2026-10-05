@@ -23756,5 +23756,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791197628323,
+    "title": "Ukulele Orchestra of Great Britain",
+    "date": "2027-04-04",
+    "time": "15:00",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
