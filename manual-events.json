@@ -23812,5 +23812,19 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791198453607,
+    "title": "LOTUS (Santana Cover Band)",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "posterUrl": "",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
