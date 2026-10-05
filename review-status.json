@@ -69,10 +69,6 @@
     "status": "rejected",
     "hiddenAt": 1786466075485
   },
-  "Assembly||2026-10-02||12:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1786466377885
-  },
   "Assembly||2026-10-07||12:00 am": {
     "status": "rejected",
     "hiddenAt": 1786466381868
@@ -180,10 +176,6 @@
     "status": "rejected",
     "hiddenAt": 1786963780976
   },
-  "Assembly Kingston||2026-09-25||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786963852432
-  },
   "Assembly Kingston||2026-10-07||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963885273
@@ -211,14 +203,6 @@
   "Assembly Kingston||2026-11-20||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963997539
-  },
-  "Assembly||2026-09-25||12:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1787003905427
-  },
-  "Assembly||2026-09-26||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787003934224
   },
   "Assembly Kingston||2026-11-28||8:00 pm": {
     "status": "rejected",
@@ -832,10 +816,6 @@
   },
   "Old Dutch Church||2026-10-25||16:00": "approved",
   "Tompkins Corners Cultural Center||2026-09-12||19:30": "approved",
-  "Tompkins Corners Cultural Center||2026-09-27||2:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787576032418
-  },
   "Tompkins Corners Cultural Center||2026-09-27||14:00": "approved",
   "Tompkins Corners Cultural Center||2026-10-04||7:30 pm": {
     "status": "rejected",
@@ -1070,10 +1050,6 @@
     "hiddenAt": 1788106622037
   },
   "Tempo Arts||2026-09-14||19:30": "approved",
-  "Tempo Arts||2026-09-25||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788106751296
-  },
   "Tempo Arts||2026-10-07||7:30 am": {
     "status": "rejected",
     "hiddenAt": 1788106844974
@@ -1163,10 +1139,6 @@
   "Bardavon||2026-12-19||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788345270005
-  },
-  "Bard College Conservatory||2026-10-03||5:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788656941815
   },
   "Bard College Conservatory||2026-10-04||": {
     "status": "rejected",
