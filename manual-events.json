@@ -23798,5 +23798,19 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791198399870,
+    "title": "Music Cottage Holiday Showcase",
+    "date": "2026-12-13",
+    "time": "17:30",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "posterUrl": "",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
