@@ -23826,5 +23826,19 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791198505065,
+    "title": "The Costellos Annual Christmas Show",
+    "date": "2026-12-20",
+    "time": "17:30",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "posterUrl": "",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
