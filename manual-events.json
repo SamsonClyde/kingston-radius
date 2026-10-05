@@ -23854,5 +23854,19 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791226605941,
+    "title": "Community Square Dance - Music by Burnt Turnip, Calling by Will Mentor",
+    "date": "2026-10-16",
+    "time": "19:00",
+    "venue": "Van Buren Hall",
+    "venueUrl": "https://www.instagram.com/columbiasquaredance?stkn=MTUweGUzY3cxYjRhdw==",
+    "location": "Kinderhook, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YveYZPHrVpQKabSy9",
+    "posterUrl": "",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
