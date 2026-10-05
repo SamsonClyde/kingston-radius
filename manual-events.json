@@ -23784,5 +23784,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791198343390,
+    "title": "An Irish Christmas - John Doyle, Cathie Ryan & Mick McAuley",
+    "date": "2026-12-06",
+    "time": "19:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "posterUrl": "",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
