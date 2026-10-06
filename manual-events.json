@@ -10152,7 +10152,8 @@
     "price": "See website",
     "free": false,
     "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791310730185-james-maldonado.webp"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791310730185-james-maldonado.webp",
+    "_source": "manual"
   },
   {
     "id": 1787595102469,
