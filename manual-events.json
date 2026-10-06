@@ -7537,7 +7537,8 @@
     "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
     "price": "$35adv/$45door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791307486361-brazillian-rhythms-comp-2.webp"
   },
   {
     "id": 1787493887803,
