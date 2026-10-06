@@ -19842,7 +19842,8 @@
     "price": "rsvp",
     "free": false,
     "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791308748225-faded-rose-promo-web.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791308748225-faded-rose-promo-web.jpg",
+    "_source": "manual"
   },
   {
     "id": 1790093657784,
