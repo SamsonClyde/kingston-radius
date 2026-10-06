@@ -13408,7 +13408,8 @@
     "mapsUrl": "https://maps.google.com/?q=160+Plochmann+Lane+Woodstock+NY",
     "price": "$48/$77",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791250156665-1000089061.jpg"
   },
   {
     "id": 1788606263912,
