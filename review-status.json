@@ -2357,5 +2357,9 @@
   "NoFun||2026-10-10||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791307327858
+  },
+  "Stissing Center||2026-10-16||6:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1791307419805
   }
 }
