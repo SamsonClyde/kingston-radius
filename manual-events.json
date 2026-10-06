@@ -1784,7 +1784,8 @@
     "price": "$119-$276",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791309363525-web-new-mha-sound-of-nashville-990x792.jpg"
   },
   {
     "id": 1787058599212,
