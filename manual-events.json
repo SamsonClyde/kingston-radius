@@ -23901,5 +23901,19 @@
     "price": "$10-$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791249201322,
+    "title": "Dervish",
+    "date": "2026-10-31",
+    "time": "15:00",
+    "venue": "The Ashokan Center",
+    "venueUrl": "https://ashokancenter.org/events/",
+    "location": "Olivebridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
+    "posterUrl": "",
+    "price": "$15-$35",
+    "free": false,
+    "_manual": true
   }
 ]
