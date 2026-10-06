@@ -199,7 +199,7 @@
   {
     "id": 416,
     "date": "2026-10-22",
-    "title": "June McDoom",
+    "title": "June McDoom, Lutalo",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar/june-mcdoom-1",
     "location": "Kingston, NY",
@@ -208,7 +208,8 @@
     "price": "$19adv",
     "free": false,
     "_source": "manual",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": ""
   },
   {
     "id": 420,
