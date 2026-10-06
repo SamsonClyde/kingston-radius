@@ -24119,5 +24119,19 @@
     "price": "$15adv/$20door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791310193426,
+    "title": "Todd Alsup's Piano Bar",
+    "date": "2026-10-23",
+    "time": "18:30",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791310193278-images-1.webp",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
