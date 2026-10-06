@@ -7538,7 +7538,8 @@
     "price": "$35adv/$45door",
     "free": false,
     "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791307486361-brazillian-rhythms-comp-2.webp"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791307486361-brazillian-rhythms-comp-2.webp",
+    "_source": "manual"
   },
   {
     "id": 1787493887803,
