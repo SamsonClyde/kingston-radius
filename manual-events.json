@@ -24105,5 +24105,19 @@
     "price": "rsvp",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791310141789,
+    "title": "Halloween Honky Tonk with Hudson Valley Flyers",
+    "date": "2026-10-17",
+    "time": "20:30",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791310128827-images.webp",
+    "price": "$15adv/$20door",
+    "free": false,
+    "_manual": true
   }
 ]
