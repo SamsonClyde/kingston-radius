@@ -24137,5 +24137,19 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791310634752,
+    "title": "T McCann",
+    "date": "2026-11-14",
+    "time": "15:00",
+    "venue": "West Kill Supply (Kingston)",
+    "venueUrl": "https://www.westkillbrewing.com",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/FDYVgTuBWmmjw1tS6",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
