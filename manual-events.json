@@ -24032,5 +24032,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791308927969,
+    "title": "Don Sparks – Salon Stage",
+    "date": "2026-10-17",
+    "time": "18:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791308922680-don-sparks-web.jpg",
+    "price": "rsvp",
+    "free": false,
+    "_manual": true
   }
 ]
