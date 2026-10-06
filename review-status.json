@@ -2333,5 +2333,9 @@
   "Colony Woodstock||2026-10-11||6:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791307273366
+  },
+  "Kingston, NY||2026-10-09||5:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1791307285190
   }
 }
