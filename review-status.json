@@ -2301,5 +2301,9 @@
   "Towne Crier Café||2026-11-14||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1791200090226
+  },
+  "Colony Woodstock||2026-10-07||5:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1791307185199
   }
 }
