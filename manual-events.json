@@ -9957,7 +9957,8 @@
     "price": "rsvp",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791308809884-steve-kirkman-michael-falco-web.jpg"
   },
   {
     "id": 198,
