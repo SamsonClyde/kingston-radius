@@ -23916,5 +23916,19 @@
     "price": "$15-$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791249752914,
+    "title": "Laurie Berkner",
+    "date": "2027-05-01",
+    "time": "11:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "posterUrl": "",
+    "price": "$38+",
+    "free": false,
+    "_manual": true
   }
 ]
