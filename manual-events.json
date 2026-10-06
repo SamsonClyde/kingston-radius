@@ -9406,7 +9406,7 @@
   },
   {
     "id": 1787574123939,
-    "title": "Bluegrass Night - Big Draw & friends!",
+    "title": "Bluegrass Night - Big Draw & Friends!",
     "date": "2026-10-14",
     "time": "20:00",
     "venue": "The Grand",
@@ -9416,7 +9416,8 @@
     "price": "$10",
     "free": false,
     "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791308197268-2nd-weds.webp"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791308197268-2nd-weds.webp",
+    "_source": "manual"
   },
   {
     "id": 1787574160427,
