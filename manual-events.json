@@ -24061,5 +24061,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1791309181464,
+    "title": "Rik Mercaldi – Salon Stage",
+    "date": "2026-10-23",
+    "time": "18:30",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791309181579-rik-mercaldi-crop-web.jpg",
+    "price": "rsvp",
+    "free": false,
+    "_manual": true
   }
 ]
