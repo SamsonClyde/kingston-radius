@@ -10151,7 +10151,8 @@
     "mapsUrl": "https://maps.app.goo.gl/i58bW9eeGFi6RZy18",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791310730185-james-maldonado.webp"
   },
   {
     "id": 1787595102469,
