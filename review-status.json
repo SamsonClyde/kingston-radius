@@ -805,10 +805,6 @@
   "Old Dutch Church||2026-10-25||16:00": "approved",
   "Tompkins Corners Cultural Center||2026-09-12||19:30": "approved",
   "Tompkins Corners Cultural Center||2026-09-27||14:00": "approved",
-  "Tompkins Corners Cultural Center||2026-10-05||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787576052979
-  },
   "Tompkins Corners Cultural Center||2026-10-15||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787576055562
@@ -2035,10 +2031,6 @@
     "hiddenAt": 1790764904192
   },
   "The Grand||2026-10-23||20:00": "approved",
-  "Time & Space Limited||2026-10-05||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790765571576
-  },
   "Time & Space Limited||2026-10-10||3:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790765575093
@@ -2238,10 +2230,6 @@
   "RMV Cellars||2026-10-10||2:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790962746944
-  },
-  "Stissing Center||2026-10-05||3:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790962751975
   },
   "Tempo Arts||2026-11-12||7:00 pm": {
     "status": "rejected",
