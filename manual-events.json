@@ -18379,7 +18379,8 @@
     "price": "See website",
     "free": false,
     "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791250449454-1000089065.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791250449454-1000089065.jpg",
+    "_source": "manual"
   },
   {
     "id": 1789482712971,
