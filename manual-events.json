@@ -23989,5 +23989,20 @@
     "_source": "email",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791307848209-unnamed.png",
     "_manual": true
+  },
+  {
+    "id": 100,
+    "date": "2026-12-08",
+    "title": "The LeeVees",
+    "venue": "The Grand",
+    "venueUrl": "https://events.ticketleap.com/tickets/thegrandcroton/the-leevees",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "20:00",
+    "price": "See website",
+    "free": false,
+    "_source": "email",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791307987648-669763fd-4d37-45aa-a904-98f7085d65c2.jpeg",
+    "_manual": true
   }
 ]
