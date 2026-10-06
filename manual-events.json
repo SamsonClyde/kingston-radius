@@ -23974,5 +23974,20 @@
     "_source": "scraped",
     "posterUrl": "",
     "_manual": true
+  },
+  {
+    "id": 41,
+    "date": "2026-10-11",
+    "title": "Live Jazz Brunch with Tom Grieve",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "11:00",
+    "price": "See website",
+    "free": false,
+    "_source": "email",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791307848209-unnamed.png",
+    "_manual": true
   }
 ]
