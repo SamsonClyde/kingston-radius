@@ -24015,5 +24015,19 @@
     "_source": "email",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791307987648-669763fd-4d37-45aa-a904-98f7085d65c2.jpeg",
     "_manual": true
+  },
+  {
+    "id": 1791308565476,
+    "title": "The Duke of Surl, DJ Jeff Pepsi, DJ Dollar Bin",
+    "date": "2026-11-14",
+    "time": "20:30",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791308565902-duke-10yearflier-v2.webp",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
