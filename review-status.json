@@ -2361,5 +2361,9 @@
   "Stissing Center||2026-10-16||6:30 PM": {
     "status": "rejected",
     "hiddenAt": 1791307419805
+  },
+  "Stissing Center||2026-10-17||7:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1791307506412
   }
 }
