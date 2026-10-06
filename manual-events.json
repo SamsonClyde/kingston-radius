@@ -1689,7 +1689,8 @@
     "price": "$20door/$25dinner",
     "free": false,
     "_source": "scraped",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791249101008-1000089056.jpg"
   },
   {
     "id": 1787056871550,
