@@ -16042,7 +16042,8 @@
     "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
     "price": "$10",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791415268773-reaching-waves-by-arthur-dove-768x639.jpg"
   },
   {
     "id": 1789393377110,
