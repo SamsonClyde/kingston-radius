@@ -24260,5 +24260,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791369628974,
+    "title": "Bong Nator, Urine, Blow 3x",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "venue": "Ophelia's",
+    "venueUrl": "https://www.instagram.com/asylumalbany/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9UQWycj7wLQVxmHe6",
+    "posterUrl": "",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
