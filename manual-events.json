@@ -24316,5 +24316,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791370732248,
+    "title": "String Noise, Tom Chiu",
+    "date": "2026-10-10",
+    "time": "19:00",
+    "venue": "Tremper",
+    "venueUrl": "https://www.instagram.com/tremperorg/",
+    "location": "Phoenicia, NY",
+    "mapsUrl": "https://maps.app.goo.gl/VKv1Z6wuHZUWvz5Y7",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
