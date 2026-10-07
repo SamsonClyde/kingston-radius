@@ -2416,5 +2416,9 @@
   "Bardavon||2027-01-24||17:30": {
     "status": "rejected",
     "hiddenAt": 1791334553086
+  },
+  "UPAC||2026-10-17||19:00": {
+    "status": "rejected",
+    "hiddenAt": 1791334622779
   }
 }
