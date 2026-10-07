@@ -14008,7 +14008,8 @@
     "price": "free",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791416936183-bethel-graphics-2026-horizonhappyhour-590x375-website-oct7-f.webp"
   },
   {
     "id": 1788716912378,
