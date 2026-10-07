@@ -458,7 +458,8 @@
     "price": "$42/$48/$54",
     "free": false,
     "_source": "scraped",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791335974455-1000089139.jpg"
   },
   {
     "id": 4,
