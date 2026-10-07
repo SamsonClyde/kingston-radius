@@ -23042,7 +23042,7 @@
     "time": "20:00",
     "price": "free",
     "free": true,
-    "_source": "email",
+    "_source": "manual",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791336229765-1000089146.jpg",
     "_manual": true
   },
