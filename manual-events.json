@@ -266,7 +266,7 @@
     "time": "13:00",
     "price": "$0/$150",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true,
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791335041666-1000089101.jpg"
   },
