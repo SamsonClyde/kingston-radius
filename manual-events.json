@@ -12459,7 +12459,8 @@
     "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
     "price": "$55-$75",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791334537317-1000089091.jpg"
   },
   {
     "id": 1788287166629,
