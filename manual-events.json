@@ -24232,5 +24232,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791369406641,
+    "title": "CD Players",
+    "date": "2026-10-24",
+    "time": "16:00",
+    "venue": "Angry Orchard Cider House",
+    "venueUrl": "https://www.angryorchard.com/cider-house/cidery-events",
+    "location": "Walden, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YbcXyk1sFRprPyrL6",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
