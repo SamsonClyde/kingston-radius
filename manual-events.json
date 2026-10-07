@@ -16183,7 +16183,8 @@
     "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
     "price": "$25",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791415630298-feb-27-abt-studio-company-photo-by-matt-dine-1638x2048.jpg"
   },
   {
     "id": 1789394217721,
