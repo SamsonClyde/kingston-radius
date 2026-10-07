@@ -14061,7 +14061,8 @@
     "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
     "price": "$44-$84",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791417525859-bwca-duane-betts-590x375-67d0dffaea.webp"
   },
   {
     "id": 1788717057271,
