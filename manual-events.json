@@ -16110,7 +16110,8 @@
     "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
     "price": "$25",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791415347989-ton-ij-1-1-1080x1080-1-768x768.jpg"
   },
   {
     "id": 1789393807819,
