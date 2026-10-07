@@ -1977,7 +1977,8 @@
     "price": "sold out",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791416045758-screen-shot-2026-10-07-at-7-33-15-pm.png"
   },
   {
     "id": 1787060448215,
