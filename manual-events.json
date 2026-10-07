@@ -24203,5 +24203,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791368752866,
+    "title": "Autumn Howl",
+    "date": "2026-10-24",
+    "time": "12:00",
+    "venue": "Urban Cowboy Lodge",
+    "venueUrl": "https://www.instagram.com/urbancowboylodge/",
+    "location": "Big Indian, NY",
+    "mapsUrl": "https://maps.app.goo.gl/2RzqXZmM9TBGowJY8",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
