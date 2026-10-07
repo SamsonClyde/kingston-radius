@@ -24346,5 +24346,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791393834229,
+    "title": "The Einhorn Quartet",
+    "date": "2026-10-10",
+    "time": "13:00",
+    "venue": "Twin Star Orchards",
+    "venueUrl": "https://www.instagram.com/twinstarorchards?igsi=MWsybHFzc2VxNmV5",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/t2rfBvwFYn4M7Vpw5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791393829309-1000089256.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
