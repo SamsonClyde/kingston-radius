@@ -2420,5 +2420,9 @@
   "UPAC||2026-10-17||19:00": {
     "status": "rejected",
     "hiddenAt": 1791334622779
+  },
+  "UPAC||2026-11-08||15:00": {
+    "status": "rejected",
+    "hiddenAt": 1791334634981
   }
 }
