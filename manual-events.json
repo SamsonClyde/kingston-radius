@@ -16235,7 +16235,9 @@
     "mapsUrl": "https://maps.app.goo.gl/jC2VFr3GrpBVxt7h7",
     "price": "$51-$187",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1789396261951,
