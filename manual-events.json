@@ -24274,5 +24274,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791369849119,
+    "title": "Old Saw, Saapato",
+    "date": "2026-11-08",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791369842243-ipntxiww.webp",
+    "price": "$18",
+    "free": false,
+    "_manual": true
   }
 ]
