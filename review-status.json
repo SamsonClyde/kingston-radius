@@ -2163,7 +2163,10 @@
     "status": "rejected",
     "hiddenAt": 1790962133780
   },
-  "Avalon Lounge||2026-10-14||19:00": "approved",
+  "Avalon Lounge||2026-10-14||19:00": {
+    "status": "rejected",
+    "hiddenAt": 1791336625251
+  },
   "Avalon Lounge||2026-10-15||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790962147307
