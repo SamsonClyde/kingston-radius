@@ -16071,7 +16071,8 @@
     "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
     "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791415400224-ziheng-xu-for-concerto-competition-2026-1536x1024.jpg"
   },
   {
     "id": 1789393666129,
