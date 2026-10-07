@@ -16043,7 +16043,8 @@
     "price": "$10",
     "free": false,
     "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791415268773-reaching-waves-by-arthur-dove-768x639.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791415268773-reaching-waves-by-arthur-dove-768x639.jpg",
+    "_source": "manual"
   },
   {
     "id": 1789393377110,
