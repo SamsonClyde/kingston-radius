@@ -24246,5 +24246,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791369428641,
+    "title": "Dan Brother",
+    "date": "2026-10-31",
+    "time": "12:00",
+    "venue": "Angry Orchard Cider House",
+    "venueUrl": "https://www.angryorchard.com/cider-house/cidery-events",
+    "location": "Walden, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YbcXyk1sFRprPyrL6",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
