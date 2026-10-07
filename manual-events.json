@@ -24218,5 +24218,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1791369033707,
+    "title": "Rock Academy - Showband",
+    "date": "2026-10-16",
+    "time": "18:00",
+    "venue": "Ralph's Bar & Bowling",
+    "venueUrl": "https://www.instagram.com/ralphsbarandbowling/",
+    "location": "Big Indian, NY",
+    "mapsUrl": "https://maps.app.goo.gl/8MMHni1Fzn6CMKDJ8",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
