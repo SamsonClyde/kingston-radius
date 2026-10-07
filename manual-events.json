@@ -20428,7 +20428,8 @@
     "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
     "price": "$35-$69",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791335869743-1000089129.jpg"
   },
   {
     "id": 450,
