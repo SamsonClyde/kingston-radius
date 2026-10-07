@@ -16155,7 +16155,8 @@
     "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
     "price": "$20",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791415521048-heinrich-nauen-park-in-dillborn-1923.jpeg"
   },
   {
     "id": 1789394045363,
