@@ -1018,5 +1018,11 @@
     "location": "Windham, NY",
     "mapsUrl": "https://maps.app.goo.gl/R9row5NSrNEMgud5A",
     "drive": 52
+  },
+  "Hunter Mountain": {
+    "venueUrl": "https://www.huntermtn.com/explore-the-resort/activities-and-events/colors-in-the-catskills.aspx?tc_1=3",
+    "location": "Hunter, NY",
+    "mapsUrl": "https://maps.app.goo.gl/3UPkmUeJDDHXRez19",
+    "drive": 45
   }
 }
