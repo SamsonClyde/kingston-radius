@@ -2416,7 +2416,7 @@
   },
   {
     "id": 1787062850470,
-    "title": "God Street Wine",
+    "title": "God Street Wine, Chris Barron",
     "date": "2026-11-01",
     "time": "18:00",
     "venue": "Bearsville Theater",
@@ -2425,7 +2425,9 @@
     "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
     "price": "$51/$77/$80bothdays",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1787062927776,
