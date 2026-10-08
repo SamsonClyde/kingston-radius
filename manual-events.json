@@ -24635,16 +24635,17 @@
   },
   {
     "id": 1791483884586,
-    "title": "OktoBEARfest -",
+    "title": "OktoBEARfest - Bernie's Orchestra, Ron & Cue",
     "date": "2026-10-10",
     "time": "12:00",
-    "venue": "Bearpen Mountain Sports - Bernie's Orchestra, Ron & Cue",
+    "venue": "Bearpen Mountain Sports",
     "venueUrl": "https://www.facebook.com/events/bearpen-mountain/oktobearfest-2026/1896000928042761/",
     "location": "Prattsville, NY",
     "mapsUrl": "https://maps.app.goo.gl/ETH2k4uK8G4q1kgh8",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791483814003-bearpen20mountain20oktoberfest-1.webp",
     "price": "free",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
