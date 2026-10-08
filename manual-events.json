@@ -24601,5 +24601,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791483246332,
+    "title": "Colors in the Catskills - Probable Cause",
+    "date": "2026-10-17",
+    "time": "12:00",
+    "venue": "Hunter Mountain",
+    "venueUrl": "https://www.huntermtn.com/explore-the-resort/activities-and-events/colors-in-the-catskills.aspx?tc_1=3",
+    "location": "Hunter, NY",
+    "mapsUrl": "https://maps.app.goo.gl/3UPkmUeJDDHXRez19",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791483241008-screen-shot-2026-10-08-at-2-10-48-pm.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
