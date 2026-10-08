@@ -24731,5 +24731,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791486704847,
+    "title": "Palenstock 2027 - Pitchfork Militia, Lost Cowboys, Spin Cycle Lava, Charlie Tolmie Band, Sansons/Passero Brothers Band",
+    "date": "2027-08-14",
+    "time": "12:00",
+    "venue": "Griffin House",
+    "venueUrl": "https://griffinhousecatskills.com/upcoming",
+    "location": "Palenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/q1dyidadkpeeV96B9",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
