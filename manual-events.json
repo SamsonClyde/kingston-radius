@@ -2499,7 +2499,8 @@
     "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
     "price": "$51/$72/$83",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791457157059-etix-the-203111780394678.jfif"
   },
   {
     "id": 1787063968184,
