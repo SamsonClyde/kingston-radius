@@ -20199,7 +20199,8 @@
     "price": "See website",
     "free": false,
     "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791456954281-etix-hamilton-206421789650292.jfif"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791456954281-etix-hamilton-206421789650292.jfif",
+    "_source": "manual"
   },
   {
     "id": 1790160357412,
