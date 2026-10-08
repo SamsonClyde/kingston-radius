@@ -19307,7 +19307,8 @@
     "mapsUrl": "https://maps.google.com/?q=200+North+St+Kingston+NY",
     "price": "$20",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791501503448-1000089390.jpg"
   },
   {
     "id": 1789986711967,
