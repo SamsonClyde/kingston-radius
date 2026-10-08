@@ -24418,5 +24418,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791418401386,
+    "title": "Ripley Green, Muscadine Bloodline, Jake Worthington, Hannah McFarland",
+    "date": "2027-07-23",
+    "time": "19:00",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "posterUrl": "",
+    "price": "$62+",
+    "free": false,
+    "_manual": true
   }
 ]
