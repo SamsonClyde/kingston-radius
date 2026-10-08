@@ -24675,5 +24675,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791485183546,
+    "title": "Harvest Festival - Live Music",
+    "date": "2026-10-18",
+    "time": "13:00",
+    "venue": "Thomas Cole National Historic Site",
+    "venueUrl": "https://thomascole.org/2026harvestfest/?mc_cid=84102801dc&mc_eid=812aa0b454",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/iuShoBABLcdaRM9x9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791485180788-screen-shot-2026-10-08-at-2-45-43-pm.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
