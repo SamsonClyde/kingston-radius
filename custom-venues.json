@@ -1048,5 +1048,11 @@
     "location": "Greenville, NY",
     "mapsUrl": "https://maps.app.goo.gl/RbaNWeYa3BwkFzUu6",
     "drive": 47
+  },
+  "Thomas Cole National Historic Site": {
+    "venueUrl": "https://thomascole.org/2026harvestfest/?mc_cid=84102801dc&mc_eid=812aa0b454",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/iuShoBABLcdaRM9x9",
+    "drive": 30
   }
 }
