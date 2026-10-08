@@ -1054,5 +1054,11 @@
     "location": "East Durham, NY",
     "mapsUrl": "https://maps.app.goo.gl/H86fSsfnbjWgqX2Z7",
     "drive": 43
+  },
+  "Griffin House": {
+    "venueUrl": "https://griffinhousecatskills.com/upcoming",
+    "location": "Palenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/q1dyidadkpeeV96B9",
+    "drive": 26
   }
 }
