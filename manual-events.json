@@ -21674,7 +21674,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791456083221-etix-steve-202671779906956.jfif",
     "price": "$62",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1790593833249,
