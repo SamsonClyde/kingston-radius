@@ -2513,7 +2513,8 @@
     "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
     "price": "$27/$45/$51",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791457301416-etix-deadgrass-204181784109874.jfif"
   },
   {
     "id": 1787064026887,
