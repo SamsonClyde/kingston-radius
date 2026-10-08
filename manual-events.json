@@ -14118,7 +14118,8 @@
     "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
     "price": "$49-$89",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791417728708-bwca-stewart-copeland-1440x660-d3c9700f77.webp"
   },
   {
     "id": 1788717205701,
