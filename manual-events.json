@@ -24745,5 +24745,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791486854474,
+    "title": "Sam Grisman Project & Skeleton Crewe, SAGE, Laura Leigh Band, Misty Mountain Ramblers, Danny Danko",
+    "date": "2026-10-24",
+    "time": "12:00",
+    "venue": "Griffin House",
+    "venueUrl": "https://griffinhousecatskills.com/upcoming",
+    "location": "Palenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/q1dyidadkpeeV96B9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791486753332-r.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
