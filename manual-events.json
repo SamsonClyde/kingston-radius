@@ -24661,5 +24661,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791484964705,
+    "title": "A Queen vs Elton John Candlelight Experience",
+    "date": "2026-10-16",
+    "time": "18:30",
+    "venue": "United Methodist Church Greenville Norton Hill",
+    "venueUrl": "https://www.asburyumc-greenvilleny.com/upcoming-events",
+    "location": "Greenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/RbaNWeYa3BwkFzUu6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791484920484-lumos-event-10-16-26.avif",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
