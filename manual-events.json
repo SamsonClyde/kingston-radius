@@ -2442,7 +2442,8 @@
     "price": "$38-$138",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791456873843-etix-god-204351790267725.jfif"
   },
   {
     "id": 1787063604390,
