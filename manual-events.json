@@ -24763,5 +24763,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791487415905,
+    "title": "MC Lyte",
+    "date": "2026-10-14",
+    "time": "19:00",
+    "venue": "City Winery HV",
+    "venueUrl": "https://citywinery.com/pages/events/hudson-valley#",
+    "location": "Montgomery, NY",
+    "mapsUrl": "https://maps.app.goo.gl/eaFRDVZgzj3VpTpi8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791487390075-image.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
