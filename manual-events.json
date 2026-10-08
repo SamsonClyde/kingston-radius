@@ -24404,5 +24404,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791418274402,
+    "title": "All You Need Is John",
+    "date": "2027-02-20",
+    "time": "20:00",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791418266911-bwca-john-lennon-590x375-cde3ad5c7f.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
