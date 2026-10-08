@@ -24777,5 +24777,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791487811336,
+    "title": "Daniel Lanois Trio",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "venue": "City Winery HV",
+    "venueUrl": "https://citywinery.com/pages/events/hudson-valley#",
+    "location": "Montgomery, NY",
+    "mapsUrl": "https://maps.app.goo.gl/eaFRDVZgzj3VpTpi8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791487804816-222a08bf-c68f-460d-b058-a73f4aeee248.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
