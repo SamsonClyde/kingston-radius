@@ -1012,5 +1012,11 @@
     "location": "East Durham, NY",
     "mapsUrl": "https://maps.app.goo.gl/BL31n83j4Bmu79wN8",
     "drive": 42
+  },
+  "Windham": {
+    "venueUrl": "https://www.movingwindhamforward.com/",
+    "location": "Windham, NY",
+    "mapsUrl": "https://maps.app.goo.gl/R9row5NSrNEMgud5A",
+    "drive": 52
   }
 }
