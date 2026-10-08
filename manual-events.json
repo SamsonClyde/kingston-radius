@@ -18725,7 +18725,8 @@
     "price": "See website",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1789601198197,
