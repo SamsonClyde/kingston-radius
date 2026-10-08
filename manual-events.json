@@ -2457,7 +2457,8 @@
     "price": "sold out",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791456902411-etix-jackie-203901783332308.jfif"
   },
   {
     "id": 1787063754560,
