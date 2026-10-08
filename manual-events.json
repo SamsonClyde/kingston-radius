@@ -24576,7 +24576,7 @@
   },
   {
     "id": 1791482869966,
-    "title": "Jimmy Sturr",
+    "title": "Colors in the Catskills - Jimmy Sturr",
     "date": "2026-10-10",
     "time": "12:00",
     "venue": "Hunter Mountain",
@@ -24586,7 +24586,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791482991178-screen-shot-2026-10-08-at-2-08-56-pm.png",
     "price": "$31",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1791483201558,
