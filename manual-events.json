@@ -14132,7 +14132,8 @@
     "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
     "price": "$49-$89",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791417772539-bwca-weight-band-1440x660-v1-1497bdaeb5.webp"
   },
   {
     "id": 1788717245195,
