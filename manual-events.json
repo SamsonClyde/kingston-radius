@@ -24421,7 +24421,7 @@
   },
   {
     "id": 1791418401386,
-    "title": "Ripley Green, Muscadine Bloodline, Jake Worthington, Hannah McFarland",
+    "title": "Riley Green, Muscadine Bloodline, Jake Worthington, Hannah McFarland",
     "date": "2027-07-23",
     "time": "19:00",
     "venue": "Bethel Woods",
@@ -24431,6 +24431,7 @@
     "posterUrl": "",
     "price": "$62+",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   }
 ]
