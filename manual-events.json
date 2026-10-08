@@ -14090,7 +14090,8 @@
     "price": "sold out",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791417641035-bwca-the-machine-590x375-916704efd4.webp"
   },
   {
     "id": 1788717135389,
