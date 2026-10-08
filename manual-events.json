@@ -1555,7 +1555,8 @@
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$29adv/$45adv/$30door/$45door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791493673923-1000089357.jpg"
   },
   {
     "id": 1787020387034,
