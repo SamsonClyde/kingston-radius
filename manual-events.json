@@ -14104,7 +14104,8 @@
     "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
     "price": "$64-$84",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791417675022-bwca-new-orleans-590x375-353f21ab4a.webp"
   },
   {
     "id": 1788717176956,
