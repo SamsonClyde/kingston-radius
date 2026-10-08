@@ -24615,5 +24615,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791483287503,
+    "title": "Colors in the Catskills - Becca Frame & The Tall Boys",
+    "date": "2026-10-18",
+    "time": "12:00",
+    "venue": "Hunter Mountain",
+    "venueUrl": "https://www.huntermtn.com/explore-the-resort/activities-and-events/colors-in-the-catskills.aspx?tc_1=3",
+    "location": "Hunter, NY",
+    "mapsUrl": "https://maps.app.goo.gl/3UPkmUeJDDHXRez19",
+    "posterUrl": "",
+    "price": "$31",
+    "free": false,
+    "_manual": true
   }
 ]
