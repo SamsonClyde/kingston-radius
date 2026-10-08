@@ -24496,5 +24496,19 @@
     "price": "$40",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791457673660,
+    "title": "Rhett Miller & The Christmas All-Stars",
+    "date": "2026-12-19",
+    "time": "20:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791457659337-etix-rhett-207551791284688.jfif",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
