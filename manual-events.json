@@ -2326,7 +2326,8 @@
     "price": "sold out",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791419835024-etix-sold-203271781276695.jfif"
   },
   {
     "id": 1787062363992,
