@@ -24647,5 +24647,19 @@
     "free": false,
     "_manual": true,
     "_source": "manual"
+  },
+  {
+    "id": 1791484719060,
+    "title": "Oktoberfest - Live Music",
+    "date": "2026-10-11",
+    "time": "11:00",
+    "venue": "Great Things Roasters",
+    "venueUrl": "https://www.facebook.com/photo/?fbid=1941376643886034&set=a.863516335005409",
+    "location": "Coxsackie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/awYWjGudwn82SWcw7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791484710301-801808317-1941376650552700-5255142517019765818-n.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
