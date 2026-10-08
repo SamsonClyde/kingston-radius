@@ -12431,7 +12431,7 @@
   },
   {
     "id": 1788286239749,
-    "title": "Sister Sparrow & The Dirty Bir",
+    "title": "Sister Sparrow & The Dirty Bird",
     "date": "2026-10-17",
     "time": "19:00",
     "venue": "Colony Woodstock",
@@ -12440,7 +12440,9 @@
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$35",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1788286284617,
