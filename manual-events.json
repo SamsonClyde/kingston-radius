@@ -24834,5 +24834,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791509243126,
+    "title": "Peter Einhorn Jazz Duo",
+    "date": "2026-10-15",
+    "time": "17:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
