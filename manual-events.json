@@ -1612,8 +1612,7 @@
     "price": "$35adv/$50adv/$40door/$50door",
     "free": false,
     "_manual": true,
-    "_source": "manual",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791511838374-1000089396.jpg"
+    "_source": "manual"
   },
   {
     "id": 244,
@@ -12489,8 +12488,7 @@
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$29",
     "free": false,
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791512029539-1000089412.jpg"
+    "_manual": true
   },
   {
     "id": 260,
@@ -16619,8 +16617,7 @@
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$29",
     "free": false,
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791511883916-1000089398.jpg"
+    "_manual": true
   },
   {
     "id": 1789403379047,
@@ -16633,8 +16630,7 @@
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$29",
     "free": false,
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791512015941-1000089410.jpg"
+    "_manual": true
   },
   {
     "id": 1789403431304,
@@ -16647,8 +16643,7 @@
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$35",
     "free": false,
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791512086447-1000089417.jpg"
+    "_manual": true
   },
   {
     "id": 1789403474987,
@@ -16661,8 +16656,7 @@
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "price": "$40",
     "free": false,
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791512104183-1000089421.jpg"
+    "_manual": true
   },
   {
     "id": 1789404170320,
@@ -21048,7 +21042,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791511924055-1000089404.jpg",
+    "posterUrl": "",
     "price": "$17",
     "free": false,
     "_manual": true
@@ -21062,7 +21056,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791511992806-1000089408.jpg",
+    "posterUrl": "",
     "price": "$23",
     "free": false,
     "_manual": true
@@ -22397,7 +22391,7 @@
     "venueUrl": "https://cunneen-hackett.org/calendar/",
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.app.goo.gl/ZAfnAWaBY2zFznZA7",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791512389119-1000089429.jpg",
+    "posterUrl": "",
     "price": "$30adv/$40door",
     "free": false,
     "_manual": true
@@ -24836,7 +24830,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791510756462-1000089340.jpg",
+    "posterUrl": "",
     "price": "donation",
     "free": false,
     "_manual": true
@@ -24850,7 +24844,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791510739013-1000089344.jpg",
+    "posterUrl": "",
     "price": "donation",
     "free": false,
     "_manual": true
@@ -24864,7 +24858,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791510789612-1000089346.jpg",
+    "posterUrl": "",
     "price": "See website",
     "free": false,
     "_manual": true
@@ -24878,7 +24872,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791510825514-1000089350.jpg",
+    "posterUrl": "",
     "price": "donation",
     "free": false,
     "_manual": true
@@ -24892,7 +24886,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791510883648-1000089353.jpg",
+    "posterUrl": "",
     "price": "donation",
     "free": false,
     "_manual": true
@@ -24906,7 +24900,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791510908034-1000089363.jpg",
+    "posterUrl": "",
     "price": "donation",
     "free": false,
     "_manual": true
@@ -24920,7 +24914,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791510948593-1000089365.jpg",
+    "posterUrl": "",
     "price": "$17",
     "free": false,
     "_manual": true
@@ -24934,7 +24928,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791510964704-1000089369.jpg",
+    "posterUrl": "",
     "price": "$17",
     "free": false,
     "_manual": true
@@ -24948,7 +24942,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791510997791-1000089371.jpg",
+    "posterUrl": "",
     "price": "donation",
     "free": false,
     "_manual": true
@@ -24962,7 +24956,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791511034931-1000089373.jpg",
+    "posterUrl": "",
     "price": "See website",
     "free": false,
     "_manual": true
@@ -24976,7 +24970,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791511049418-1000089383.jpg",
+    "posterUrl": "",
     "price": "$23",
     "free": false,
     "_manual": true
@@ -24990,7 +24984,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791511903069-1000089400.jpg",
+    "posterUrl": "",
     "price": "donation",
     "free": false,
     "_manual": true
@@ -25004,7 +24998,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791511971772-1000089406.jpg",
+    "posterUrl": "",
     "price": "$29",
     "free": false,
     "_manual": true
@@ -25018,7 +25012,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791512047575-1000089414.jpg",
+    "posterUrl": "",
     "price": "$29",
     "free": false,
     "_manual": true
@@ -25032,7 +25026,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791512075419-1000089416.jpg",
+    "posterUrl": "",
     "price": "See website",
     "free": false,
     "_manual": true
@@ -25046,7 +25040,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791512130162-1000089423.jpg",
+    "posterUrl": "",
     "price": "$29",
     "free": false,
     "_manual": true
@@ -25060,7 +25054,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791512141100-1000089425.jpg",
+    "posterUrl": "",
     "price": "$23",
     "free": false,
     "_manual": true
@@ -25074,8 +25068,22 @@
     "venueUrl": "https://cunneen-hackett.org/calendar/",
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.app.goo.gl/ZAfnAWaBY2zFznZA7",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791512356412-1000089427.jpg",
+    "posterUrl": "",
     "price": "$20adv/$30door",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1791541198534,
+    "title": "Yard Sale",
+    "date": "2026-11-08",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "",
+    "price": "$17",
     "free": false,
     "_manual": true
   }
