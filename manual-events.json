@@ -25185,5 +25185,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791543721241,
+    "title": "Crandall Library Gala - Carolyn Shapiro",
+    "date": "2026-10-16",
+    "time": "12:00",
+    "venue": "Crandall Public Library",
+    "venueUrl": "https://www.instagram.com/crandallpubliclibrary/",
+    "location": "Glens Falls, NY",
+    "mapsUrl": "https://maps.app.goo.gl/XMxjyeMQMR14P8QZA",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
