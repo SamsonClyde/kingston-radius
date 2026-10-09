@@ -1060,5 +1060,11 @@
     "location": "Palenville, NY",
     "mapsUrl": "https://maps.app.goo.gl/q1dyidadkpeeV96B9",
     "drive": 26
+  },
+  "Outpost BBQ": {
+    "venueUrl": "https://www.instagram.com/outpostbbqny/",
+    "location": "Kerhonkson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/idgQv6NEGKvpnf5z9",
+    "drive": 31
   }
 }
