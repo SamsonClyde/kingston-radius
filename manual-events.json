@@ -25227,5 +25227,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791544443332,
+    "title": "Josephine Foster & No Land",
+    "date": "2026-10-23",
+    "time": "18:30",
+    "venue": "Tremper",
+    "venueUrl": "https://www.instagram.com/tremperorg/",
+    "location": "Phoenicia, NY",
+    "mapsUrl": "https://maps.app.goo.gl/VKv1Z6wuHZUWvz5Y7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791544439481-screen-shot-2026-10-09-at-7-13-15-am.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
