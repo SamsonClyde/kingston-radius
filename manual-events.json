@@ -25114,5 +25114,19 @@
     "price": "$29",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791541618795,
+    "title": "Bernstein Bard Quartet Goes West",
+    "date": "2026-10-09",
+    "time": "18:30",
+    "venue": "Outpost BBQ",
+    "venueUrl": "https://www.instagram.com/outpostbbqny/",
+    "location": "Kerhonkson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/idgQv6NEGKvpnf5z9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791541613339-unnamed.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
