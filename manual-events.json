@@ -25058,5 +25058,19 @@
     "price": "$23",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791510467775,
+    "title": "Sinonó - Isabel Crespo Pardo, Lester St. Louis, Henry Fraser",
+    "date": "2026-10-24",
+    "time": "20:00",
+    "venue": "Cunneen-Hacket",
+    "venueUrl": "https://cunneen-hackett.org/calendar/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/ZAfnAWaBY2zFznZA7",
+    "posterUrl": "",
+    "price": "$20adv/$30door",
+    "free": false,
+    "_manual": true
   }
 ]
