@@ -24886,7 +24886,7 @@
     "venueUrl": "https://www.colonywoodstock.com/shows",
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
-    "posterUrl": "",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791548231301-1000089517.jpg",
     "price": "donation",
     "free": false,
     "_manual": true
