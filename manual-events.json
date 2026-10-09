@@ -25213,5 +25213,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791544270689,
+    "title": "(dm for address) Field Guides, Blue Ranger, Lefty Parker",
+    "date": "2026-10-22",
+    "time": "18:30",
+    "venue": "Wilkes House",
+    "venueUrl": "https://www.instagram.com/lefty.parker/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://www.instagram.com/lefty.parker/",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791544262321-unnamed-3.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
