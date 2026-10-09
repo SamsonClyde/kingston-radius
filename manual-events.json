@@ -25016,5 +25016,19 @@
     "price": "$29",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791510132907,
+    "title": "The Coryell/Butterfield Blues Project",
+    "date": "2026-12-09",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
