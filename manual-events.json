@@ -25131,7 +25131,7 @@
   },
   {
     "id": 1791541966318,
-    "title": "Ciderfest - Frank Migliorelli",
+    "title": "Ciderfest - Frank Migliorelli & The Dirt Nappers",
     "date": "2026-10-10",
     "time": "13:00",
     "venue": "Little Apple Cidery",
@@ -25141,7 +25141,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791541963126-unnamed.jpg",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1791542034371,
