@@ -25157,5 +25157,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791542808401,
+    "title": "DJ Will Hermes",
+    "date": "2026-10-09",
+    "time": "18:00",
+    "venue": "The Parlour",
+    "venueUrl": "https://www.instagram.com/theparlouron1main/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/ZQZqCGA7gysXWpmi7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791542801610-unnamed-1.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
