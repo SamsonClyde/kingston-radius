@@ -176,10 +176,6 @@
     "status": "rejected",
     "hiddenAt": 1786963780976
   },
-  "Assembly Kingston||2026-10-08||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786963888550
-  },
   "Assembly||2026-12-05||12:00 am": {
     "status": "rejected",
     "hiddenAt": 1786963896680
@@ -713,10 +709,6 @@
   },
   "Tempo Arts||2026-12-12||20:00": "approved",
   "The Falcon||2026-09-12||19:30": "approved",
-  "The Falcon||2026-10-08||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787540545918
-  },
   "The Falcon||2026-10-08||19:30": "approved",
   "The Falcon||2026-11-06||See website": {
     "status": "rejected",
@@ -1009,10 +1001,6 @@
     "status": "rejected",
     "hiddenAt": 1788106613504
   },
-  "Stissing Center||2026-10-08||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788106622037
-  },
   "Tempo Arts||2026-09-14||19:30": "approved",
   "Tempo Arts||2026-10-07||19:30": "approved",
   "The Ashokan Center||2026-10-18||": {
@@ -1125,10 +1113,6 @@
     "hiddenAt": 1788658908081
   },
   "Towne Crier Café||2026-09-13||23:30": "approved",
-  "Unicorn Bar||2026-10-08||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788659224320
-  },
   "Unicorn Bar||2026-10-16||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788659227434
@@ -1281,10 +1265,6 @@
     "hiddenAt": 1789389740770
   },
   "Unicorn Bar||2026-09-26||21:00": "approved",
-  "Unicorn Bar||2026-10-08||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789389898875
-  },
   "Unicorn Bar||2026-10-09||9:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789389993967
@@ -1447,10 +1427,6 @@
   "Hutton Brickyards||2026-10-09||10:00 am": {
     "status": "rejected",
     "hiddenAt": 1790117561258
-  },
-  "Keegan Ales||2026-10-08||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790117572418
   },
   "Keegan Ales||2026-10-09||5:30 pm": {
     "status": "rejected",
@@ -1714,10 +1690,6 @@
     "status": "rejected",
     "hiddenAt": 1790246784710
   },
-  "Tubby's||2026-10-08||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790246905135
-  },
   "Tubby's||2026-10-08||16:00": "approved",
   "Tubby's||2026-10-14||7:00 pm": {
     "status": "rejected",
@@ -1897,10 +1869,6 @@
   "Daryl's House Club||2026-11-18||12:00": {
     "status": "rejected",
     "hiddenAt": 1790422408009
-  },
-  "The Local Saugerties||2026-10-08||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790592472058
   },
   "The Local Saugerties||2026-10-09||8:00 PM": {
     "status": "rejected",
@@ -2132,10 +2100,6 @@
     "status": "rejected",
     "hiddenAt": 1790962391660
   },
-  "Colony Woodstock||2026-10-08||": {
-    "status": "rejected",
-    "hiddenAt": 1790962449647
-  },
   "Colony Woodstock||2026-10-09||": {
     "status": "rejected",
     "hiddenAt": 1790962455071
@@ -2185,10 +2149,6 @@
   "Tempo Arts||2026-11-13||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790962848239
-  },
-  "Towne Crier Café||2026-10-08||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790962915423
   },
   "Towne Crier Café||2026-10-11||11:30 am": {
     "status": "rejected",
@@ -2253,14 +2213,6 @@
     "status": "rejected",
     "hiddenAt": 1791307191503
   },
-  "Colony Woodstock||2026-10-08||5:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1791307194335
-  },
-  "Colony Woodstock||2026-10-08||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1791307254022
-  },
   "Colony Woodstock||2026-10-09||6:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791307260365
@@ -2284,10 +2236,6 @@
   "NoFun||2026-10-07||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791307308378
-  },
-  "NoFun||2026-10-08||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1791307312376
   },
   "NoFun||2026-10-09||8:00 PM": {
     "status": "rejected",
@@ -2318,10 +2266,6 @@
     "hiddenAt": 1791307585655
   },
   "The Falcon||2026-11-11||19:30": "approved",
-  "The Grand||2026-10-08||": {
-    "status": "rejected",
-    "hiddenAt": 1791307604763
-  },
   "The Grand||2026-10-10||4:30 PM": {
     "status": "rejected",
     "hiddenAt": 1791307625875
