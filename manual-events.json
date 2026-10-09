@@ -25002,5 +25002,19 @@
     "price": "$29",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791510093215,
+    "title": "The Last Waltz - Presented by Stagefright",
+    "date": "2026-12-05",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "",
+    "price": "$29",
+    "free": false,
+    "_manual": true
   }
 ]
