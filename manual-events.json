@@ -24960,5 +24960,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791509875155,
+    "title": "DJ Darkstar Presents: A Nightmare Before Christmas Soiree",
+    "date": "2026-11-13",
+    "time": "22:30",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "",
+    "price": "$23",
+    "free": false,
+    "_manual": true
   }
 ]
