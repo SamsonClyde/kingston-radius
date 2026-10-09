@@ -1084,5 +1084,11 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/nefAGxRD4pR2RKM68",
     "drive": 5
+  },
+  "Crandall Public Library": {
+    "venueUrl": "https://www.instagram.com/crandallpubliclibrary/",
+    "location": "Glens Falls, NY",
+    "mapsUrl": "https://maps.app.goo.gl/XMxjyeMQMR14P8QZA",
+    "drive": 100
   }
 }
