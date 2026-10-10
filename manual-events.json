@@ -19323,7 +19323,7 @@
     "id": 1789986711967,
     "title": "Field + Supply Fall Market Day Two -  Jasperoo, Saints of Swing, Brother Sal Blues Band",
     "date": "2026-10-10",
-    "time": "23:00",
+    "time": "11:00",
     "venue": "Hutton Brickyards",
     "venueUrl": "https://fieldandsupply.com/pages/fall-mrkt-2026",
     "location": "Kingston, NY",
@@ -19331,7 +19331,8 @@
     "price": "$20",
     "free": false,
     "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791501542175-1000089390.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791501542175-1000089390.jpg",
+    "_source": "manual"
   },
   {
     "id": 1789986800385,
