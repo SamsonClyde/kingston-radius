@@ -2357,5 +2357,10 @@
     "status": "rejected",
     "hiddenAt": 1791628387816
   },
-  "Tempo Arts||2026-11-14||20:00": "approved"
+  "Tempo Arts||2026-11-14||20:00": "approved",
+  "The Falcon||2026-11-25||See website": {
+    "status": "rejected",
+    "hiddenAt": 1791628453250
+  },
+  "The Falcon||2026-11-25||19:30": "approved"
 }
