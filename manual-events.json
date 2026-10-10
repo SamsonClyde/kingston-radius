@@ -25264,5 +25264,20 @@
     "_source": "scraped",
     "posterUrl": "",
     "_manual": true
+  },
+  {
+    "id": 447,
+    "date": "2027-03-23",
+    "title": "This Is The Kit",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/this-is-the-kit",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "",
+    "_manual": true
   }
 ]
