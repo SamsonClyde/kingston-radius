@@ -2299,5 +2299,10 @@
   "Time & Space Limited||2026-11-07||2:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791369233817
-  }
+  },
+  "Assembly Kingston||2026-12-04||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1791628114329
+  },
+  "Assembly Kingston||2026-12-04||20:00": "approved"
 }
