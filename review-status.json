@@ -2413,5 +2413,9 @@
   "Unicorn Bar||2026-10-28||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1791628861458
+  },
+  "Unicorn Bar||2026-11-13||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1791628865080
   }
 }
