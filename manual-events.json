@@ -25279,5 +25279,20 @@
     "_source": "scraped",
     "posterUrl": "",
     "_manual": true
+  },
+  {
+    "id": 278,
+    "date": "2026-10-24",
+    "title": "NIGHTWAVE with DJ TRYST",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "time": "21:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791628848793-images.webp",
+    "_manual": true
   }
 ]
