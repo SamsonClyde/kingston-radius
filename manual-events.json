@@ -25249,5 +25249,20 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 438,
+    "date": "2027-02-04",
+    "title": "Tara Clerkin Trio",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/tara-clerkin-trio-1",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "",
+    "_manual": true
   }
 ]
