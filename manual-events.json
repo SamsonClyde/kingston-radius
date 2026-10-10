@@ -3488,7 +3488,8 @@
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
     "price": "$34-$45",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791631035907-84-edp.jpg"
   },
   {
     "id": 1787070358044,
