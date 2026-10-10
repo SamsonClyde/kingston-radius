@@ -2328,5 +2328,9 @@
   "MASS MoCA||2026-10-17||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791628180392
+  },
+  "Rough Draft Books||2026-10-11||1:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1791628267533
   }
 }
