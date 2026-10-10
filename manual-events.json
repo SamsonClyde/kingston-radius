@@ -3389,7 +3389,8 @@
     "price": "rsvp brunch",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791630622107-04-edp.jpg"
   },
   {
     "id": 1787070066479,
@@ -21157,7 +21158,7 @@
     "venueUrl": "https://darylshouseclub.com/shows/",
     "location": "Pawling, NY",
     "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
-    "posterUrl": "",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791630622107-04-edp.jpg",
     "price": "rsvp",
     "free": false,
     "_manual": true
