@@ -2336,5 +2336,9 @@
   "Rough Draft Books||2026-10-15||5:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791628272394
+  },
+  "Rough Draft Books||2026-10-15||6:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1791628279733
   }
 }
