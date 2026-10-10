@@ -2386,5 +2386,10 @@
   "Tremper||2026-10-16||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1791628621878
-  }
+  },
+  "Tubby's||2027-02-04||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1791628679951
+  },
+  "Tubby's||2027-02-04||20:00": "approved"
 }
