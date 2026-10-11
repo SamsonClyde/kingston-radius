@@ -4210,7 +4210,8 @@
     "price": "pay what you can",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791755429636-1000089669.jpg"
   },
   {
     "id": 1787074808285,
