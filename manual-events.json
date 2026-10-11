@@ -3799,7 +3799,8 @@
     "price": "rsvp brunch",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791715157063-43-edp.jpg"
   },
   {
     "id": 1787071422261,
