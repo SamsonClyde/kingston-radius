@@ -180,10 +180,6 @@
     "status": "rejected",
     "hiddenAt": 1786963896680
   },
-  "Assembly Kingston||2026-10-10||1:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786963900953
-  },
   "Assembly Kingston||2026-10-16||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963905132
@@ -291,10 +287,6 @@
   "The Falcon||2026-10-02||19:30": "approved",
   "The Falcon||2026-10-04||19:30": "approved",
   "The Falcon||2026-10-09||19:30": "approved",
-  "The Falcon||2026-10-10||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076563875
-  },
   "The Falcon||2026-10-10||19:30": "approved",
   "The Falcon||2026-10-14||See website": {
     "status": "rejected",
@@ -615,15 +607,7 @@
     "hiddenAt": 1787484958151
   },
   "Rail Trail Cafe||2026-10-04||17:00": "approved",
-  "Rail Trail Cafe||2026-10-10||1:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787484990392
-  },
   "Rail Trail Cafe||2026-10-10||13:00": "approved",
-  "Rail Trail Cafe||2026-10-10||5:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787485004431
-  },
   "Rail Trail Cafe||2026-10-10||17:00": "approved",
   "Rail Trail Cafe||2026-10-11||10:30 am": {
     "status": "rejected",
@@ -718,10 +702,6 @@
     "hiddenAt": 1787541411536
   },
   "The Outlier Inn||2026-09-10||19:30": "approved",
-  "The Outlier Inn||2026-10-10||3:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787541871317
-  },
   "The Outlier Inn||2026-10-17||3:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787541876002
@@ -864,10 +844,6 @@
   "Towne Crier Café||2026-10-02||20:00": "approved",
   "Towne Crier Café||2026-10-03||20:00": "approved",
   "Towne Crier Café||2026-10-04||19:00": "approved",
-  "Towne Crier Café||2026-10-10||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787576966662
-  },
   "Towne Crier Café||2026-10-10||20:00": "approved",
   "Tubby's||2026-11-21||7:00 pm": {
     "status": "rejected",
@@ -967,15 +943,7 @@
   "Keegan Ales||2026-08-30||14:00": "approved",
   "Keegan Ales||2026-09-04||19:00": "approved",
   "Keegan Ales||2026-09-05||19:00": "approved",
-  "MASS MoCA||2026-10-10||1:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788106491552
-  },
   "MASS MoCA||2026-10-10||13:00": "approved",
-  "MASS MoCA||2026-10-10||4:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788106499293
-  },
   "MASS MoCA||2026-10-20||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788106506815
@@ -1026,10 +994,6 @@
     "status": "rejected",
     "hiddenAt": 1788271078974
   },
-  "Bard College Conservatory||2026-10-10||": {
-    "status": "rejected",
-    "hiddenAt": 1788284032443
-  },
   "Bard College Conservatory||2026-10-19||": {
     "status": "rejected",
     "hiddenAt": 1788284036156
@@ -1060,10 +1024,6 @@
   "Tompkins Corners Cultural Center||2026-10-09||19:30": "approved",
   "Towne Crier Café||2026-09-11||18:30": "approved",
   "Towne Crier Café||2026-09-19||20:00": "approved",
-  "Unicorn Bar||2026-10-10||9:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788286809779
-  },
   "Unicorn Bar||2026-10-31||9:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788286814183
@@ -1364,10 +1324,6 @@
     "hiddenAt": 1789483093108
   },
   "Trinity Lutheran Church||2026-09-18||19:00": "approved",
-  "Keegan Ales||2026-10-10||5:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790087170143
-  },
   "Assembly Kingston||2026-10-14||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790087170143
@@ -1476,10 +1432,6 @@
     "status": "rejected",
     "hiddenAt": 1790204011020
   },
-  "The Dr Oliver Bronson House||2026-10-10||23:00": {
-    "status": "rejected",
-    "hiddenAt": 1790205212325
-  },
   "Assembly Kingston||2026-10-16||12:00 am": {
     "status": "rejected",
     "hiddenAt": 1790245449006
@@ -1547,10 +1499,6 @@
   "Keegan Ales||2026-10-11||2:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790245557150
-  },
-  "Lydia's Cafe||2026-10-10||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790245585013
   },
   "Lydia's Cafe||2026-10-17||7:00 pm": {
     "status": "rejected",
@@ -1666,10 +1614,6 @@
     "hiddenAt": 1790247231006
   },
   "Unicorn Bar||2026-11-20||19:30": "approved",
-  "Westwind Orchard||2026-10-10||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790247284503
-  },
   "Westwind Orchard||2026-10-16||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1790247288029
@@ -1761,14 +1705,6 @@
     "status": "rejected",
     "hiddenAt": 1790419699298
   },
-  "MASS MoCA||2026-10-10||2:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790419702836
-  },
-  "Stissing Center||2026-10-10||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790420039396
-  },
   "Tempo Arts||2026-10-24||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790420054933
@@ -1806,15 +1742,7 @@
     "status": "rejected",
     "hiddenAt": 1790422408009
   },
-  "The Local Saugerties||2026-10-10||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790592489834
-  },
   "Towne Crier Café||2026-10-09||18:30": "approved",
-  "Towne Crier Café||2026-10-10||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790592584133
-  },
   "Unicorn Bar||2026-10-23||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1790593304208
@@ -1883,10 +1811,6 @@
     "hiddenAt": 1790764904192
   },
   "The Grand||2026-10-23||20:00": "approved",
-  "Time & Space Limited||2026-10-10||3:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790765575093
-  },
   "Time & Space Limited||2026-10-11||1:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790765577640
@@ -1983,10 +1907,6 @@
     "hiddenAt": 1790962068962
   },
   "Avalon Lounge||2026-10-09||20:00": "approved",
-  "Avalon Lounge||2026-10-10||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790962075430
-  },
   "Avalon Lounge||2026-10-11||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790962079447
@@ -2028,10 +1948,6 @@
     "status": "rejected",
     "hiddenAt": 1790962455071
   },
-  "Colony Woodstock||2026-10-10||": {
-    "status": "rejected",
-    "hiddenAt": 1790962460887
-  },
   "Colony Woodstock||2026-10-11||": {
     "status": "rejected",
     "hiddenAt": 1790962464253
@@ -2061,10 +1977,6 @@
   "Colony Woodstock||2026-10-25||": {
     "status": "rejected",
     "hiddenAt": 1790962663138
-  },
-  "RMV Cellars||2026-10-10||2:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790962746944
   },
   "Tempo Arts||2026-11-12||7:00 pm": {
     "status": "rejected",
@@ -2145,10 +2057,6 @@
     "status": "rejected",
     "hiddenAt": 1791307265420
   },
-  "Colony Woodstock||2026-10-10||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1791307269615
-  },
   "Colony Woodstock||2026-10-11||6:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791307273366
@@ -2160,10 +2068,6 @@
   "NoFun||2026-10-09||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791307322100
-  },
-  "NoFun||2026-10-10||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1791307327858
   },
   "Stissing Center||2026-10-16||6:30 PM": {
     "status": "rejected",
@@ -2186,14 +2090,6 @@
     "hiddenAt": 1791307585655
   },
   "The Falcon||2026-11-11||19:30": "approved",
-  "The Grand||2026-10-10||4:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1791307625875
-  },
-  "The Grand||2026-10-10||9:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1791307704697
-  },
   "The Grand||2026-10-11||11:00 AM": {
     "status": "rejected",
     "hiddenAt": 1791307864802
@@ -2231,10 +2127,6 @@
   "Time & Space Limited||2026-10-09||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791369167910
-  },
-  "Time & Space Limited||2026-10-10||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1791369201214
   },
   "Time & Space Limited||2026-10-22||7:00 PM": {
     "status": "rejected",
@@ -2292,10 +2184,6 @@
   "Rough Draft Books||2026-10-15||6:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791628279733
-  },
-  "Tempo Arts||2026-10-10||11:00 AM": {
-    "status": "rejected",
-    "hiddenAt": 1791628284414
   },
   "Tempo Arts||2026-10-25||2:00 PM": {
     "status": "rejected",
