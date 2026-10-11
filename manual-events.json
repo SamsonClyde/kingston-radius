@@ -25430,5 +25430,19 @@
     "price": "$12adv/$20door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791717289745,
+    "title": "Rebelmatic | WORLDSUCKS Tour - OCNY Vet Center with Sickbay and Hell's Teeth",
+    "date": "2026-11-20",
+    "time": "19:30",
+    "venue": "OCNY Veterans Center",
+    "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
+    "location": "New Windsor, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xSDs37HSHE42U5nW7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791717286616-1120-ticket-leap-page.webp",
+    "price": "$10adv/$15door",
+    "free": false,
+    "_manual": true
   }
 ]
