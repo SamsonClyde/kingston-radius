@@ -25402,5 +25402,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791717010579,
+    "title": "Burning Hag, The Car Bomb Parade, Life Abuse, Ice Queen, Metal",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "venue": "El Dorado Bar",
+    "venueUrl": "https://www.instagram.com/eldoradobar_troy/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/QwhaMLfRyAoqbWLt9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791716967618-1114-fb-banner.webp",
+    "price": "$6adv/$12door",
+    "free": false,
+    "_manual": true
   }
 ]
