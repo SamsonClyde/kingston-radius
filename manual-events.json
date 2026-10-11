@@ -21701,7 +21701,7 @@
     "venueUrl": "https://www.huttonbrickyards.com/events-happenings",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=200+North+St+Kingston+NY",
-    "posterUrl": "",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791756400676-1000089683.jpg",
     "price": "rsvp",
     "free": false,
     "_manual": true
