@@ -5266,7 +5266,8 @@
     "mapsUrl": "https://maps.google.com/?q=327+Warren+St+Hudson+NY",
     "price": "$29",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791756092442-1000089679.jpg"
   },
   {
     "id": 1787136888994,
