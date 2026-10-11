@@ -1090,5 +1090,11 @@
     "location": "Glens Falls, NY",
     "mapsUrl": "https://maps.app.goo.gl/XMxjyeMQMR14P8QZA",
     "drive": 100
+  },
+  "OCNY Veterans Center": {
+    "venueUrl": "https://dcxpclive.com/dcxpc-live-shows",
+    "location": "New Windsor, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xSDs37HSHE42U5nW7",
+    "drive": 42
   }
 }
