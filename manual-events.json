@@ -25478,5 +25478,19 @@
     "price": "$5-$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791800586711,
+    "title": "Autumn Season Showcase - Pour La Terre, Starling Annie, Yeah Universe, Raps from Elston, Whoah!",
+    "date": "2026-10-18",
+    "time": "17:00",
+    "venue": "The Lemon Squeeze",
+    "venueUrl": "https://thelemonsqueezenewpaltz.com/events/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791800584942-unnamed-2.jpg",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
