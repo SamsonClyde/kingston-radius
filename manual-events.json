@@ -20610,20 +20610,6 @@
     "_manual": true
   },
   {
-    "id": 389,
-    "date": "2026-10-21",
-    "title": "John Burdick Trio, Mark Lerner",
-    "venue": "Tubby's",
-    "venueUrl": "https://www.tubbyskingston.com/calendar/john-burdick-trio-mark-lerner",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
-    "time": "20:00",
-    "price": "$19",
-    "free": true,
-    "_source": "scraped",
-    "_manual": true
-  },
-  {
     "id": 500,
     "date": "2026-12-09",
     "title": "BCMC",
@@ -25597,20 +25583,6 @@
     "_manual": true
   },
   {
-    "id": 1791802538859,
-    "title": "John Burdick Trio, Mark Lerner Solo",
-    "date": "2026-10-21",
-    "time": "20:00",
-    "venue": "Tubby's",
-    "venueUrl": "https://www.tubbyskingston.com/calendar",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791802537112-unnamed-15.jpg",
-    "price": "$19",
-    "free": false,
-    "_manual": true
-  },
-  {
     "id": 1791802939023,
     "title": "Harvest Party - Live Music",
     "date": "2026-10-23",
@@ -25663,6 +25635,20 @@
     "mapsUrl": "https://maps.app.goo.gl/fneU8VAa4rCPuua57",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791803772772-screen-shot-2026-10-12-at-7-14-48-am.png",
     "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1791802538859,
+    "title": "John Burdick Trio, Mark Lerner Solo",
+    "date": "2026-10-21",
+    "time": "20:00",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791802537112-unnamed-15.jpg",
+    "price": "$19",
     "free": false,
     "_manual": true
   }
