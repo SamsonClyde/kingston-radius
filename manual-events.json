@@ -25464,5 +25464,19 @@
     "price": "$10adv/$15door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791800473938,
+    "title": "DCxPC - Nonresidents, New York Nicks, The Goons, Modern Natives, Will Romeo & The Born Sick, Gibbons (solo)",
+    "date": "2026-11-08",
+    "time": "17:00",
+    "venue": "Snapper McGee's",
+    "venueUrl": "https://www.instagram.com/dcxpc_live/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cjXnAPfsLHZ7XD8c9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791800419151-unnamed-1.jpg",
+    "price": "$5-$10",
+    "free": false,
+    "_manual": true
   }
 ]
