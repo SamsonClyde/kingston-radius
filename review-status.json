@@ -605,10 +605,6 @@
   "Rail Trail Cafe||2026-10-04||17:00": "approved",
   "Rail Trail Cafe||2026-10-10||13:00": "approved",
   "Rail Trail Cafe||2026-10-10||17:00": "approved",
-  "Rail Trail Cafe||2026-10-11||10:30 am": {
-    "status": "rejected",
-    "hiddenAt": 1787485020305
-  },
   "Rail Trail Cafe||2026-10-11||13:00": "approved",
   "Rail Trail Cafe||2026-10-11||17:00": "approved",
   "Rail Trail Cafe||2026-10-12||1:00 pm": {
@@ -1874,10 +1870,6 @@
     "hiddenAt": 1790852714357
   },
   "Unicorn Bar||2026-10-22||19:30": "approved",
-  "Avalon Lounge||2026-10-09||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790962068962
-  },
   "Avalon Lounge||2026-10-09||20:00": "approved",
   "Avalon Lounge||2026-10-13||8:00 PM": {
     "status": "rejected",
@@ -1911,10 +1903,6 @@
   "Bardavon||2026-10-24||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790962391660
-  },
-  "Colony Woodstock||2026-10-09||": {
-    "status": "rejected",
-    "hiddenAt": 1790962455071
   },
   "Colony Woodstock||2026-10-13||": {
     "status": "rejected",
