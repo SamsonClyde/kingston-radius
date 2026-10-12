@@ -25637,5 +25637,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791803228142,
+    "title": "Start Again, Stroma, The Eyetraps",
+    "date": "2026-11-13",
+    "time": "20:30",
+    "venue": "El Dorado Bar",
+    "venueUrl": "https://www.instagram.com/eldoradobar_troy/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/QwhaMLfRyAoqbWLt9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791803211636-screen-shot-2026-10-12-at-7-04-59-am.png",
+    "price": "$7adv/$12door",
+    "free": false,
+    "_manual": true
   }
 ]
