@@ -25609,5 +25609,19 @@
     "price": "$19",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791802939023,
+    "title": "Harvest Party - Live Music",
+    "date": "2026-10-23",
+    "time": "16:00",
+    "venue": "Bard Farm",
+    "venueUrl": "https://www.instagram.com/bardfarm/",
+    "location": "Bard College, NY",
+    "mapsUrl": "https://maps.app.goo.gl/f7eKvqDUF5jvLncc8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791802929709-unnamed-18.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
