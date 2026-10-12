@@ -1096,5 +1096,11 @@
     "location": "New Windsor, NY",
     "mapsUrl": "https://maps.app.goo.gl/xSDs37HSHE42U5nW7",
     "drive": 42
+  },
+  "Bard Farm": {
+    "venueUrl": "https://www.instagram.com/bardfarm/",
+    "location": "Bard College, NY",
+    "mapsUrl": "https://maps.app.goo.gl/f7eKvqDUF5jvLncc8",
+    "drive": 21
   }
 }
