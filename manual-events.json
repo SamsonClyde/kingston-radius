@@ -25651,5 +25651,19 @@
     "price": "$7adv/$12door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791803783629,
+    "title": "First Friday - Hip Hop Healing featuring Theory & Terruhwrist",
+    "date": "2026-11-06",
+    "time": "18:00",
+    "venue": "Mural Square Poughkeepsie",
+    "venueUrl": "https://www.instagram.com/firstfridaypk/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fneU8VAa4rCPuua57",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791803772772-screen-shot-2026-10-12-at-7-14-48-am.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
