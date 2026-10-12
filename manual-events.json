@@ -25524,5 +25524,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791801917567,
+    "title": "Roderik, Take The Flame, Arrow Through Me, Green Knuckle Material",
+    "date": "2026-10-18",
+    "time": "20:00",
+    "venue": "El Dorado Bar",
+    "venueUrl": "https://www.instagram.com/eldoradobar_troy/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/QwhaMLfRyAoqbWLt9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791801876306-unnamed-10.jpg",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
