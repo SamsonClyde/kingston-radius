@@ -5454,7 +5454,9 @@
     "mapsUrl": "https://maps.app.goo.gl/sZe9CAVM8vJMB9UL6",
     "price": "$20adv/$25door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 482,
