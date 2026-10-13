@@ -9203,7 +9203,8 @@
     "price": "$20-$35",
     "free": false,
     "_source": "scraped",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791922476564-th-honkytonk-viewcy-1080x608.webp"
   },
   {
     "id": 27,
