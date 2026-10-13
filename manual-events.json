@@ -26155,5 +26155,19 @@
     "price": "$10 suggested donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791921046302,
+    "title": "Sons of Mercury",
+    "date": "2026-10-13",
+    "time": "20:00",
+    "venue": "Snug Harbor",
+    "venueUrl": "https://www.facebook.com/snugsnewpaltz?utm_source=ig&utm_medium=social&utm_content=link_in_bio&_rdr",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/UxtL3uvDoYHidUS4A",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791921017476-847940908-1622798359338326-5677791225474594307-n.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
