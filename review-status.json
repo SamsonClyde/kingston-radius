@@ -607,10 +607,6 @@
   "Rail Trail Cafe||2026-10-10||17:00": "approved",
   "Rail Trail Cafe||2026-10-11||13:00": "approved",
   "Rail Trail Cafe||2026-10-11||17:00": "approved",
-  "Rail Trail Cafe||2026-10-12||1:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787485652515
-  },
   "Rough Draft Books||2026-08-28||6:30 PM": {
     "status": "rejected",
     "hiddenAt": 1787485847396
