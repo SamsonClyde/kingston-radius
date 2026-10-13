@@ -8438,7 +8438,8 @@
     "price": "$52/$64",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791905021173-bloodline-of-the-land-paramount-website-banner-updated-7-22-.webp"
   },
   {
     "id": 1787508798999,
