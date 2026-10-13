@@ -26204,5 +26204,19 @@
     "price": "$25-$50",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791923009266,
+    "title": "Holiday Cheer Concert with Newberry & Verch",
+    "date": "2026-12-16",
+    "time": "19:30",
+    "venue": "The Ashokan Center",
+    "venueUrl": "https://ashokancenter.org/events/",
+    "location": "Olivebridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791922993994-newberry-verch-holiday-3-sandlin-gaither.webp",
+    "price": "$20-$30",
+    "free": false,
+    "_manual": true
   }
 ]
