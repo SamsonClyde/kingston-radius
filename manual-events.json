@@ -19385,7 +19385,8 @@
     "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
     "price": "$25-$50",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791922496568-2026-10-17-halloween-honky-tonk-crawl-viewcy-2240px-wide-108.webp"
   },
   {
     "id": 1789768937278,
