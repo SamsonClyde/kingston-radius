@@ -19399,7 +19399,8 @@
     "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
     "price": "$25-$50",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791922536047-2026-10-18-classical-crossroads-baroque-to-tango-fb-light-bl.webp"
   },
   {
     "id": 1789768993167,
