@@ -25672,5 +25672,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791888603997,
+    "title": "Jawn Darme",
+    "date": "2026-10-23",
+    "time": "20:00",
+    "venue": "Happy Valley Arcade",
+    "venueUrl": "https://happyvalleybeacon.com/events",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LAGZJ318ZdvL9AvC6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791888579822-screen-shot-2026-10-13-at-6-48-36-am.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
