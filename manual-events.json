@@ -25789,5 +25789,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791902286761,
+    "title": "Tice & Bendy",
+    "date": "2026-10-24",
+    "time": "14:00",
+    "venue": "Newburgh Brewing",
+    "venueUrl": "https://newburghbrewing.com/events",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vXzDY4qTqet4zp2DA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791902277837-unnamed-5.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
