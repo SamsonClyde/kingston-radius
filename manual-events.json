@@ -25900,5 +25900,19 @@
     "price": "$20adv/$25door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791904679901,
+    "title": "Alzara Getz, Alejandra Maciel, Alessandra Gonzalez, Catherine Tso",
+    "date": "2026-10-14",
+    "time": "17:00",
+    "venue": "Rewind Kingston",
+    "venueUrl": "https://www.instagram.com/rewindkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/qj7Z5WR4M1M8up1q9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791904610991-unnamed-8.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
