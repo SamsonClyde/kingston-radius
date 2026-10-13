@@ -14025,9 +14025,11 @@
     "venueUrl": "https://www.nofuntroy.com/events",
     "location": "Troy, NY",
     "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
-    "price": "$19",
+    "price": "$15adv/$20door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1788663799722,
