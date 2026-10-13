@@ -14611,7 +14611,8 @@
     "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
     "price": "$30-40adv/$40-50door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791921731604-artworks-cqxttqnzfr9z5xfl-fr96pw-t500x500-383171906-1.webp"
   },
   {
     "id": 1788896309088,
