@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Posters — Kingston Radius</title>
+<title>Upcoming Shows — Kingston Radius</title>
 <meta name="description" content="Upcoming Hudson Valley shows, with their posters.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -51,14 +51,62 @@
   .pb-wrap { max-width: 640px; margin: 0 auto; padding: 28px 16px 60px; }
   .pb-head h1 { font-family: 'DM Serif Display', serif; font-size: 2.1rem; font-weight: 400; line-height: 1.1; }
   .pb-head p { font-family: 'Lora', serif; font-style: italic; color: var(--muted); font-size: 0.95rem; margin-top: 6px; }
-  .pb-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .pb-wrap.wall { max-width: 1000px; }
+  .pb-filters { display: flex; flex-direction: column; gap: 10px; margin: 18px 0 6px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .pb-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .pb-search { width: 100%; border: 1.5px solid var(--border); background: transparent; color: var(--text);
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; padding: 9px 16px; border-radius: 22px; }
+  .pb-search:focus { outline: none; border-color: var(--red); }
+  .pb-datebox { display: flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); flex: 1 1 150px; }
+  .pb-datebox input { flex: 1; min-width: 0; border: 1.5px solid var(--border); background: transparent; color: var(--text);
+    font-family: 'DM Sans', sans-serif; font-size: 0.8rem; padding: 5px 10px; border-radius: 20px; }
+  .pb-datebox input:focus { outline: none; border-color: var(--text); }
+  .pb-chip { background: none; border: 1.5px solid var(--border); color: var(--text); border-radius: 20px; padding: 5px 13px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; }
+  .pb-chip:hover { border-color: var(--red); color: var(--red); }
+  .pb-chip.active { background: var(--red); border-color: var(--red); color: #fff; }
+  .pb-toolbar { justify-content: space-between; }
+  .pb-seg { display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; color: var(--muted); }
+  .pb-seg .pb-chip { padding: 4px 11px; font-size: 0.75rem; }
+  .pb-clear { background: none; border: none; color: var(--red); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600; cursor: pointer; padding: 4px 2px; }
+  .pb-clear:hover { text-decoration: underline; }
   .pb-select {
-    flex: 1 1 140px; max-width: 100%; border: 1.5px solid var(--border); background: transparent; color: var(--text);
+    flex: 1 1 0; min-width: 0; max-width: 100%; border: 1.5px solid var(--border); background: transparent; color: var(--text);
     font-family: 'DM Sans', sans-serif; font-size: 0.8rem; padding: 6px 12px; border-radius: 20px; cursor: pointer;
   }
   .pb-select option { background: var(--card); color: var(--text); }
   .pb-select:focus { outline: none; border-color: var(--text); }
-  .pb-count { font-size: 0.78rem; color: var(--muted); margin: 10px 0 4px; }
+  .heart { background: none; border: none; color: var(--muted); cursor: pointer; padding: 4px; border-radius: 4px; display: inline-flex; line-height: 0; }
+  .heart:hover { color: var(--red); }
+  .heart svg { fill: none; }
+  .heart[aria-pressed="true"] { color: var(--red); }
+  .heart[aria-pressed="true"] svg { fill: currentColor; }
+  .pb-tile { position: relative; }
+  .pb-tile-heart { position: absolute; top: 8px; right: 8px; width: 32px; height: 32px; padding: 0; align-items: center; justify-content: center;
+    background: rgba(0,0,0,0.45); color: #fff; border-radius: 50%; }
+  .pb-tile-heart:hover { background: rgba(0,0,0,0.65); color: #fff; }
+  .pb-tile-heart[aria-pressed="true"] { color: #ff7a68; }
+  #pb-map { overflow: hidden; height: min(62vh, 520px); min-height: 340px; border-radius: 8px; border: 1px solid var(--border); background: var(--tag-bg); margin-top: 16px; }
+  [data-theme="dark"] #pb-map .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9); }
+  .pb-pin span { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%;
+    background: var(--red); color: #fff; font: 700 0.78rem 'DM Sans', sans-serif; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.4); }
+  .pb-pin.sel span { outline: 3px solid var(--text); }
+  #pb-map-note { font-size: 0.78rem; color: var(--muted); margin: 10px 0 0; }
+  #pb-map-towns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .pb-maprow { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); cursor: pointer; align-items: center; }
+  .pb-maprow:hover .pb-tile-title { color: var(--red); }
+  .pb-maprow img { width: 56px; height: 72px; object-fit: cover; border-radius: 4px; background: var(--tag-bg); flex: none; }
+  .pb-maprow .pb-tile-date { margin-top: 0; }
+  .pb-count { font-size: 0.78rem; color: var(--muted); margin: 10px 0 4px; display: flex; justify-content: space-between; align-items: center; }
+  /* Wall view: posters in columns, each at its own shape */
+  .pb-wall { column-count: 2; column-gap: 14px; margin-top: 20px; }
+  @media (min-width: 720px) { .pb-wall { column-count: 3; column-gap: 18px; } }
+  .pb-tile { break-inside: avoid; margin-bottom: 20px; }
+  .pb-tile .pb-poster { width: 100%; }
+  .pb-tile-date { margin-top: 8px; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); }
+  .pb-tile-title { font-family: 'DM Serif Display', serif; font-size: 1.05rem; line-height: 1.15; margin-top: 2px; overflow-wrap: anywhere; }
+  .pb-tile-venue { font-size: 0.74rem; color: var(--muted); margin-top: 2px; }
+  .pb-tile.pb-broken .pb-poster { display: none; }
 
   .pb-day { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.25rem; color: var(--red);
     margin: 38px 0 18px; padding-bottom: 8px; border-bottom: 2px solid var(--red); }
@@ -96,13 +144,29 @@
   .kr-toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--text); color: var(--bg);
     padding: 10px 18px; border-radius: 8px; font-size: 0.85rem; z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
   .kr-toast.show { opacity: 1; }
-  .kr-poster-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 10001; display: none; align-items: center; justify-content: center; padding: 40px 20px; }
+  .kr-poster-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.93); z-index: 10001; display: none; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; }
   .kr-poster-overlay.show { display: flex; }
-  .kr-poster-img { max-width: 100%; max-height: 100%; border-radius: 6px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); object-fit: contain; }
+  .kr-poster-cap { color: #fff; text-align: center; font-size: 0.85rem; margin-top: 12px; max-width: 90vw; line-height: 1.35; }
+  .kr-poster-cap b { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.1rem; display: block; }
+  .kr-poster-img { max-width: 100%; max-height: calc(100% - 118px); min-height: 0; border-radius: 6px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); object-fit: contain; }
   .kr-poster-close { position: fixed; top: 18px; right: 22px; width: 40px; height: 40px; border-radius: 50%;
     background: rgba(255,255,255,0.12); border: none; color: #fff; font-size: 1.2rem; line-height: 1; cursor: pointer;
     display: flex; align-items: center; justify-content: center; }
   .kr-poster-close:hover { background: rgba(255,255,255,0.25); }
+  .v-nav { position: fixed; top: 50%; transform: translateY(-50%); width: 44px; height: 64px; border: none; border-radius: 8px;
+    background: rgba(255,255,255,0.12); color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
+  .v-nav:hover { background: rgba(255,255,255,0.25); }
+  .v-prev { left: 8px; } .v-next { right: 8px; }
+  .v-bar { display: flex; align-items: center; gap: 6px; margin-top: 10px; }
+  .v-btn { background: rgba(255,255,255,0.12); border: none; color: #fff; border-radius: 20px; min-width: 40px; height: 36px; padding: 0 12px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+  .v-btn:hover { background: rgba(255,255,255,0.25); }
+  .v-bar .heart { color: #fff; padding: 0 12px; }
+  .v-bar .heart[aria-pressed="true"] { color: #ff7a68; }
+  .v-count { color: rgba(255,255,255,0.7); font-size: 0.78rem; margin-left: 6px; }
+  .v-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: transparent; }
+  .v-progress span { display: block; height: 100%; width: 0; background: var(--red); }
+  @media (max-width: 480px) { .v-nav { width: 36px; height: 52px; font-size: 1.6rem; } }
   @media (max-width: 480px) { header { padding: 0 14px; } }
 </style>
 <script>
@@ -125,24 +189,57 @@
   </button>
 </header>
 
-<div class="pb-wrap">
+<div class="pb-wrap" id="pb-wrap">
   <div class="pb-head">
-    <h1>Posters</h1>
-    <p>Upcoming shows, with their posters.</p>
+    <h1>Upcoming Shows</h1>
   </div>
   <div class="pb-filters">
-    <select id="pb-distance" class="pb-select" aria-label="Distance" style="display:none;"></select>
-    <select id="pb-month" class="pb-select" aria-label="Month"></select>
-    <select id="pb-venue" class="pb-select" aria-label="Venue"></select>
+    <input type="search" id="pb-search" class="pb-search" placeholder="Search shows, venues, towns…" autocomplete="off" aria-label="Search">
+    <div class="pb-row">
+      <select id="pb-distance" class="pb-select" aria-label="Distance" style="display:none;"></select>
+      <select id="pb-venue" class="pb-select" aria-label="Venue"></select>
+    </div>
+    <div class="pb-row">
+      <label class="pb-datebox">From <input type="date" id="pb-from"></label>
+      <label class="pb-datebox">To <input type="date" id="pb-to"></label>
+    </div>
+    <div class="pb-row" id="pb-chips">
+      <button class="pb-chip" data-quick="today">Today</button>
+      <button class="pb-chip" data-quick="weekend">This weekend</button>
+      <button class="pb-chip" data-quick="week">Next 7 days</button>
+      <button class="pb-chip" data-quick="month">Next 30 days</button>
+      <button class="pb-chip" id="pb-saved" aria-pressed="false">♥ Saved <span id="pb-saved-n"></span></button>
+    </div>
+    <div class="pb-row pb-toolbar">
+      <span class="pb-seg">Sort <button class="pb-chip" data-sort="date">Date</button><button class="pb-chip" data-sort="venue">Venue</button></span>
+      <span class="pb-seg">View <button class="pb-chip" data-view-mode="feed">Feed</button><button class="pb-chip" data-view-mode="wall">Wall</button><button class="pb-chip" data-view-mode="map">Map</button></span>
+    </div>
   </div>
-  <div class="pb-count" id="pb-count"></div>
+  <div class="pb-count"><span id="pb-count"></span><span><button class="pb-clear" id="pb-slideshow" type="button">▶ Slideshow</button> <button class="pb-clear" id="pb-surprise" type="button">Surprise me</button> <button class="pb-clear" id="pb-clear" type="button" style="display:none;">Clear filters</button></span></div>
+  <div id="pb-map-wrap" style="display:none;">
+    <div id="pb-map"></div>
+    <div id="pb-map-note"></div>
+    <div id="pb-map-towns"></div>
+    <div id="pb-map-panel"></div>
+  </div>
   <div id="pb-feed"><div style="text-align:center;padding:60px 20px;"><div class="loading-spinner"></div></div></div>
 </div>
 <div class="pb-foot"><a href="/">← All Kingston Radius listings</a></div>
 
-<div id="kr-poster-overlay" class="kr-poster-overlay">
+<div id="kr-poster-overlay" class="kr-poster-overlay" role="dialog" aria-modal="true" aria-label="Poster viewer">
+  <div class="v-progress"><span id="v-progress"></span></div>
   <button id="kr-poster-close" class="kr-poster-close" aria-label="Close" title="Close">✕</button>
+  <button id="v-prev" class="v-nav v-prev" aria-label="Previous poster">‹</button>
   <img id="kr-poster-img" class="kr-poster-img" src="" alt="Show poster">
+  <button id="v-next" class="v-nav v-next" aria-label="Next poster">›</button>
+  <div id="kr-poster-cap" class="kr-poster-cap"></div>
+  <div class="v-bar">
+    <button id="v-fav" class="v-btn heart" aria-label="Save this show" aria-pressed="false"></button>
+    <button id="v-play" class="v-btn" aria-label="Play slideshow">▶</button>
+    <button id="v-speed" class="v-btn" aria-label="Slideshow speed">6s</button>
+    <button id="v-full" class="v-btn" aria-label="Full screen" style="display:none;">⛶</button>
+    <span id="v-count" class="v-count"></span>
+  </div>
 </div>
 
 <script>
@@ -165,23 +262,52 @@ function lsGet(key, fallback) { try { return JSON.parse(localStorage.getItem(key
 // ── Data ──────────────────────────────────────────────────────────────────────
 let POSTS = [];          // upcoming, approved shows that have a poster
 let LOADED = false;
-const PB_STEP = 12;
-let _pbShown = PB_STEP, _pbMonth = '', _pbVenue = '', _pbDistance = 'all';
+const PB_STEP = 12, WALL_STEP = 24;
+const step = () => S.view === 'wall' ? WALL_STEP : PB_STEP;
+
+// ── Favorites (kept on this device only) ──────────────────────────────────────
+let FAVS = new Set();
+try { FAVS = new Set(JSON.parse(localStorage.getItem('kr_blog_favs') || '[]')); } catch {}
+function saveFavs() { try { localStorage.setItem('kr_blog_favs', JSON.stringify([...FAVS])); } catch {} }
+const HEART = '<svg viewBox="0 0 24 24" width="17" height="17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>';
+const heartBtn = (key, cls) => `<button class="heart ${cls||''}" data-fav="${esc(key)}" aria-pressed="${FAVS.has(key)}" title="Save this show" aria-label="Save this show">${HEART}</button>`;
+function toggleFav(key) {
+  if (FAVS.has(key)) FAVS.delete(key); else FAVS.add(key);
+  saveFavs();
+  document.querySelectorAll('[data-fav]').forEach(b => { if (b.dataset.fav === key) b.setAttribute('aria-pressed', FAVS.has(key)); });
+  updateSavedChip();
+  if (S.saved) render();
+}
+function updateSavedChip() {
+  const n = POSTS.filter(e => FAVS.has(eventKey(e))).length;
+  document.getElementById('pb-saved-n').textContent = n ? `(${n})` : '';
+}
+const S = { q: '', from: '', to: '', venue: '', dist: 'all', saved: false, sort: 'date', view: 'feed' };
+let _pbShown = PB_STEP;
 let DRIVE = null;        // venue -> minutes from Kingston (read from index.html so both pages always agree)
 let CUSTOM_DRIVE = {};   // drive times saved on custom venue templates
+let TOWNS = null;        // town -> {lat,lng}, also read from index.html
 
 // The drive-time table lives in index.html. Read it from there rather than keeping a second
 // copy, so editing a drive time on the main site updates this page too. If it can't be read,
 // the distance filter simply stays hidden.
 async function loadDriveTimes() {
+  const out = { drive: null, towns: null };
   try {
     const resp = await fetch('/index.html');
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    const m = (await resp.text()).match(/const DRIVE_TIMES = (\{[\s\S]*?\n\});/);
-    if (!m) throw new Error('DRIVE_TIMES not found');
-    const obj = new Function('return ' + m[1])();
-    return (obj && typeof obj === 'object') ? obj : null;
-  } catch (e) { console.warn('Drive times unavailable:', e); return null; }
+    const text = await resp.text();
+    const grab = name => {
+      try {
+        const m = text.match(new RegExp('const ' + name + ' = (\\{[\\s\\S]*?\\n\\});'));
+        const obj = m ? new Function('return ' + m[1])() : null;
+        return (obj && typeof obj === 'object') ? obj : null;
+      } catch (e) { return null; }
+    };
+    out.drive = grab('DRIVE_TIMES');
+    out.towns = grab('TOWN_COORDS');   // town -> lat/lng, used only by the Map view
+  } catch (e) { console.warn('Drive times / towns unavailable:', e); }
+  return out;
 }
 function knownDrive(venue) {
   if (DRIVE && DRIVE[venue] !== undefined) return DRIVE[venue];
@@ -208,7 +334,8 @@ async function load() {
     document.getElementById('pb-feed').innerHTML = '<div class="pb-empty">Couldn’t load the posters just now — please try again in a minute.</div>';
     return;
   }
-  DRIVE = await drivePromise;
+  const site = await drivePromise;
+  DRIVE = site.drive; TOWNS = site.towns;
   CUSTOM_DRIVE = (data.customVenues && typeof data.customVenues === 'object') ? data.customVenues : {};
   const manual  = Array.isArray(data.manualEvents)  ? data.manualEvents  : [];
   const scraped = Array.isArray(data.scrapedEvents) ? data.scrapedEvents : [];
@@ -234,69 +361,159 @@ async function load() {
   }).sort((a,b) => (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
 
   LOADED = true;
+  readUrl();
+  _pbShown = step();
+  setupControls();
   render();
 }
 
-// ── Render ────────────────────────────────────────────────────────────────────
-function fill(sel, html, value) { sel.innerHTML = html; sel.value = value; if (sel.value !== value) sel.value = ''; }
-
-function render() {
-  const feed = document.getElementById('pb-feed');
-  if (!LOADED) return;
-
-  const months = [...new Set(POSTS.map(e => e.date?.slice(0,7)).filter(Boolean))].sort();
-  fill(document.getElementById('pb-month'),
-    '<option value="">All months</option>' + months.map(m => {
-      const [y,mo] = m.split('-');
-      return `<option value="${m}">${new Date(+y, +mo-1).toLocaleString('default', {month:'long'})} ${y}</option>`;
-    }).join(''), _pbMonth);
-  const venues = [...new Set(POSTS.map(e => e.venue))].sort();
-  fill(document.getElementById('pb-venue'),
-    '<option value="">All venues</option>' + venues.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join(''), _pbVenue);
-  _pbMonth = document.getElementById('pb-month').value;
-  _pbVenue = document.getElementById('pb-venue').value;
-
-  const distSel = document.getElementById('pb-distance');
-  if (DRIVE) {
-    distSel.style.display = '';
-    fill(distSel, '<option value="all">Any distance</option><option value="0">Kingston only</option>' +
-      ['30','45','60','90'].map(n => `<option value="${n}">${n} mins or less</option>`).join(''), _pbDistance);
-    _pbDistance = distSel.value || 'all';
+// ── Filtering ─────────────────────────────────────────────────────────────────
+const ymd = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+function quickRange(kind) {
+  const t = new Date(); t.setHours(0,0,0,0);
+  const add = n => { const d = new Date(t); d.setDate(d.getDate() + n); return d; };
+  if (kind === 'today') return [ymd(t), ymd(t)];
+  if (kind === 'week')  return [ymd(t), ymd(add(6))];
+  if (kind === 'month') return [ymd(t), ymd(add(29))];
+  if (kind === 'weekend') {                 // Fri–Sun (or what's left of it)
+    const dow = t.getDay();                 // 0 Sun … 6 Sat
+    if (dow === 0) return [ymd(t), ymd(t)];
+    if (dow === 6) return [ymd(t), ymd(add(1))];
+    const toFri = (5 - dow + 7) % 7;
+    return [ymd(add(toFri)), ymd(add(toFri + 2))];
   }
+}
+function filtered() {
+  const q = S.q.trim().toLowerCase();
+  let ev = POSTS.filter(e => passesDistance(e, S.dist));
+  if (S.venue) ev = ev.filter(e => e.venue === S.venue);
+  if (S.from)  ev = ev.filter(e => e.date >= S.from);
+  if (S.to)    ev = ev.filter(e => e.date <= S.to);
+  if (S.saved) ev = ev.filter(e => FAVS.has(eventKey(e)));
+  if (q) ev = ev.filter(e => (e.title||'').toLowerCase().includes(q) || (e.venue||'').toLowerCase().includes(q) || (e.location||'').toLowerCase().includes(q));
+  ev = ev.slice();
+  if (S.sort === 'venue') ev.sort((a,b) => (a.venue||'').localeCompare(b.venue||'') || (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
+  return ev;   // POSTS is already date/time sorted
+}
+const filtersActive = () => !!(S.q || S.from || S.to || S.venue || S.saved || S.dist !== 'all');
 
-  let events = POSTS.filter(e => passesDistance(e, _pbDistance));
-  if (_pbMonth) events = events.filter(e => e.date?.startsWith(_pbMonth));
-  if (_pbVenue) events = events.filter(e => e.venue === _pbVenue);
+// ── URL <-> state (so a filtered view can be shared as a link) ───────────────
+function writeUrl() {
+  const p = new URLSearchParams();
+  if (S.q) p.set('q', S.q);
+  if (S.from) p.set('from', S.from);
+  if (S.to) p.set('to', S.to);
+  if (S.venue) p.set('venue', S.venue);
+  if (S.dist !== 'all') p.set('dist', S.dist);
+  if (S.sort !== 'date') p.set('sort', S.sort);
+  if (S.view !== 'feed') p.set('view', S.view);
+  const qs = p.toString();
+  try { history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '')); } catch {}
+}
+function readUrl() {
+  const p = new URLSearchParams(location.search);
+  S.q = p.get('q') || ''; S.from = p.get('from') || ''; S.to = p.get('to') || '';
+  S.venue = p.get('venue') || ''; S.dist = p.get('dist') || 'all';
+  S.sort = p.get('sort') === 'venue' ? 'venue' : 'date'; S.view = ['wall','map'].includes(p.get('view')) ? p.get('view') : 'feed';
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(S.from)) S.from = '';
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(S.to)) S.to = '';
+}
 
+// ── Controls ──────────────────────────────────────────────────────────────────
+function fill(sel, html, value) { sel.innerHTML = html; sel.value = value; if (sel.value !== value) sel.value = ''; }
+function setupControls() {
+  const venues = [...new Set(POSTS.map(e => e.venue))].sort();
+  const vSel = document.getElementById('pb-venue');
+  fill(vSel, '<option value="">All venues</option>' + venues.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join(''), S.venue);
+  S.venue = vSel.value;
+  const dSel = document.getElementById('pb-distance');
+  if (DRIVE) {
+    dSel.style.display = '';
+    fill(dSel, '<option value="all">Any distance</option><option value="0">Kingston only</option>' +
+      ['30','45','60','90'].map(n => `<option value="${n}">${n} mins or less</option>`).join(''), S.dist);
+    S.dist = dSel.value || 'all';
+  } else { S.dist = 'all'; }
+  document.getElementById('pb-search').value = S.q;
+  const today = ymd(new Date());
+  for (const id of ['pb-from','pb-to']) document.getElementById(id).min = today;
+  document.getElementById('pb-from').value = S.from;
+  document.getElementById('pb-to').value = S.to;
+}
+function syncControls() {
+  document.getElementById('pb-wrap').classList.toggle('wall', S.view !== 'feed');
+  document.querySelectorAll('[data-sort]').forEach(b => b.classList.toggle('active', b.dataset.sort === S.sort));
+  document.querySelectorAll('[data-view-mode]').forEach(b => b.classList.toggle('active', b.dataset.viewMode === S.view));
+  document.querySelectorAll('[data-quick]').forEach(b => {
+    const [f, t] = quickRange(b.dataset.quick);
+    b.classList.toggle('active', S.from === f && S.to === t);
+  });
+  const sv = document.getElementById('pb-saved'); sv.classList.toggle('active', S.saved); sv.setAttribute('aria-pressed', S.saved); updateSavedChip();
+  document.getElementById('pb-clear').style.display = filtersActive() ? '' : 'none';
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+function render() {
+  if (!LOADED) return;
+  syncControls(); writeUrl();
+  const feed = document.getElementById('pb-feed');
+  const events = filtered();
   document.getElementById('pb-count').textContent = events.length ? `${events.length} poster${events.length === 1 ? '' : 's'}` : '';
+  document.getElementById('pb-surprise').style.display = events.length ? '' : 'none';
+  document.getElementById('pb-slideshow').style.display = events.length ? '' : 'none';
+  const mapWrap = document.getElementById('pb-map-wrap');
   if (!events.length) {
-    feed.innerHTML = POSTS.length ? '<div class="pb-empty">No posters match those filters.</div>'
-                                  : '<div class="pb-empty">No posters up yet — check back soon.</div>';
+    mapWrap.style.display = 'none'; feed.style.display = '';
+    feed.innerHTML = !POSTS.length ? '<div class="pb-empty">No posters up yet — check back soon.</div>'
+      : (S.saved && !FAVS.size) ? '<div class="pb-empty">You haven’t saved any shows yet — tap the ♥ on a poster to keep it here.</div>'
+      : '<div class="pb-empty">No posters match those filters.</div>';
     return;
   }
-
+  if (S.view === 'map') { feed.style.display = 'none'; mapWrap.style.display = ''; renderMap(events); return; }
+  mapWrap.style.display = 'none'; feed.style.display = '';
   const shown = events.slice(0, _pbShown);
-  let lastDate = '', html = '';
-  for (const e of shown) {
-    if (e.date !== lastDate) {
-      lastDate = e.date;
-      html += `<h2 class="pb-day">${esc(parseDate(e.date).toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'}))}</h2>`;
+  let html = '';
+  if (S.view === 'wall') {
+    html = `<div class="pb-wall">${shown.map(tile).join('')}</div>`;
+  } else {
+    let last = '';
+    for (const e of shown) {
+      const head = S.sort === 'venue' ? e.venue : e.date;
+      if (head !== last) {
+        last = head;
+        html += `<h2 class="pb-day">${esc(S.sort === 'venue' ? e.venue : parseDate(e.date).toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'}))}</h2>`;
+      }
+      html += post(e);
     }
-    html += post(e);
   }
   if (events.length > shown.length) html += `<button class="pb-loadmore" id="pb-loadmore">Show more posters (${events.length - shown.length} more)</button>`;
   feed.innerHTML = html;
 }
 
+const shortDate = e => parseDate(e.date).toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
+function tile(e) {
+  const time = formatTime(e.time);
+  return `<div class="pb-tile">
+    <button type="button" class="pb-poster" data-view="${esc(e.posterUrl)}" data-key="${esc(eventKey(e))}" aria-label="View poster for ${esc(e.title)}">
+      <img src="${esc(e.posterUrl)}" alt="Poster for ${esc(e.title)}" loading="lazy" decoding="async"
+           onload="this.parentNode.style.setProperty('--ar', this.naturalWidth / this.naturalHeight)"
+           onerror="this.closest('.pb-tile').classList.add('pb-broken')">
+    </button>
+    <div class="pb-tile-date">${esc(shortDate(e))}${time ? ' · ' + esc(time) : ''}</div>
+    <div class="pb-tile-title">${esc(e.title)}</div>
+    <div class="pb-tile-venue">${esc(e.venue)}</div>
+    ${heartBtn(eventKey(e), 'pb-tile-heart')}
+  </div>`;
+}
+
 function post(e) {
   const key = eventKey(e);
   const price = (e.price && e.price !== 'See website') ? e.price : '';
-  const eyebrow = [formatTime(e.time), price].filter(Boolean).join(' · ');
+  const eyebrow = [S.sort === 'venue' ? shortDate(e) : '', formatTime(e.time), price].filter(Boolean).join(' · ');
   const dm = DRIVE ? knownDrive(e.venue) : undefined;
   const driveLine = dm === undefined ? '' : (dm === 0 ? 'In Kingston' : `${dm} min from Kingston`);
   const town = e.location ? (e.mapsUrl ? `<a href="${esc(e.mapsUrl)}" target="_blank" rel="noopener">${esc(e.location)}</a>` : esc(e.location)) : '';
   return `<article class="pb-post">
-    <button type="button" class="pb-poster" data-view="${esc(e.posterUrl)}" aria-label="View poster for ${esc(e.title)}">
+    <button type="button" class="pb-poster" data-view="${esc(e.posterUrl)}" data-key="${esc(key)}" aria-label="View poster for ${esc(e.title)}">
       <img src="${esc(e.posterUrl)}" alt="Poster for ${esc(e.title)}" loading="lazy" decoding="async"
            onload="this.parentNode.style.setProperty('--ar', this.naturalWidth / this.naturalHeight)"
            onerror="this.closest('.pb-post').classList.add('pb-broken')">
@@ -307,6 +524,7 @@ function post(e) {
     ${driveLine ? `<div class="pb-drive">${driveLine}</div>` : ''}
     <div class="pb-actions">
       ${e.venueUrl ? `<a class="pb-more" href="${esc(e.venueUrl)}" target="_blank" rel="noopener">More info →</a>` : ''}
+      ${heartBtn(key)}
       <button class="icon-btn" data-share="${esc(key)}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>
       <button class="icon-btn" data-copy="${esc(key)}" title="Copy show details" aria-label="Copy show details"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>
     </div>
@@ -334,22 +552,235 @@ async function shareEvent(e) {
   }
   try { await navigator.clipboard.writeText(shareUrl); showToast('Link copied!'); } catch { showToast('Could not copy link'); }
 }
-function showPoster(url) {
-  const overlay = document.getElementById('kr-poster-overlay'), img = document.getElementById('kr-poster-img');
-  img.src = url; overlay.classList.add('show');
-  const close = () => { overlay.classList.remove('show'); img.src = ''; document.removeEventListener('keydown', onKey); };
-  const onKey = ev => { if (ev.key === 'Escape') close(); };
-  document.getElementById('kr-poster-close').onclick = close;
-  overlay.onclick = ev => { if (ev.target === overlay) close(); };
-  document.addEventListener('keydown', onKey);
+// ── Poster viewer: browse, favorite, and (optionally) auto-play a slideshow ───
+const V = { list: [], i: 0, playing: false, ms: 6000, timer: null };
+const SPEEDS = [4000, 6000, 10000];
+const vEl = id => document.getElementById(id);
+function openViewer(list, i, play) {
+  if (!list.length) return;
+  V.list = list; V.i = Math.max(0, Math.min(i, list.length - 1));
+  vEl('kr-poster-overlay').classList.add('show');
+  document.body.style.overflow = 'hidden';
+  vEl('v-fav').innerHTML = HEART;
+  vEl('v-full').style.display = (vEl('kr-poster-overlay').requestFullscreen || vEl('kr-poster-overlay').webkitRequestFullscreen) ? '' : 'none';
+  vEl('v-speed').textContent = (V.ms / 1000) + 's';
+  const multi = list.length > 1;
+  for (const id of ['v-prev', 'v-next', 'v-play', 'v-speed']) vEl(id).style.display = multi ? '' : 'none';
+  showSlide();
+  setPlaying(!!play && multi);
+}
+function showSlide() {
+  const e = V.list[V.i]; if (!e) return;
+  const t = formatTime(e.time);
+  vEl('kr-poster-img').src = e.posterUrl;
+  vEl('kr-poster-img').alt = 'Poster for ' + e.title;
+  vEl('kr-poster-cap').innerHTML = `<b>${esc(e.title)}</b>${esc(e.venue)} · ${esc(shortDate(e))}${t ? ' · ' + esc(t) : ''}`;
+  vEl('v-fav').dataset.fav = eventKey(e);
+  vEl('v-fav').setAttribute('aria-pressed', FAVS.has(eventKey(e)));
+  vEl('v-count').textContent = V.list.length > 1 ? `${V.i + 1} / ${V.list.length}` : '';
+  if (V.list.length > 1) { const n = V.list[(V.i + 1) % V.list.length]; if (n) new Image().src = n.posterUrl; }  // preload next
+}
+function viewerGo(d) {
+  if (V.list.length < 2) return;
+  V.i = (V.i + d + V.list.length) % V.list.length;
+  showSlide();
+  if (V.playing) schedule();
+}
+function schedule() {
+  clearTimeout(V.timer);
+  const bar = vEl('v-progress');
+  bar.style.transition = 'none'; bar.style.width = '0'; void bar.offsetWidth;
+  bar.style.transition = `width ${V.ms}ms linear`; bar.style.width = '100%';
+  V.timer = setTimeout(() => viewerGo(1), V.ms);
+}
+function setPlaying(p) {
+  V.playing = p; clearTimeout(V.timer);
+  vEl('v-play').textContent = p ? '❚❚' : '▶';
+  vEl('v-play').setAttribute('aria-label', p ? 'Pause slideshow' : 'Play slideshow');
+  const bar = vEl('v-progress'); bar.style.transition = 'none'; bar.style.width = '0';
+  if (p) schedule();
+}
+function closeViewer() {
+  setPlaying(false);
+  try { if (document.fullscreenElement) document.exitFullscreen(); else if (document.webkitFullscreenElement) document.webkitExitFullscreen(); } catch {}
+  vEl('kr-poster-overlay').classList.remove('show');
+  vEl('kr-poster-img').src = '';
+  document.body.style.overflow = '';
+  if (S.saved) render();   // if "Saved" is on, reflect anything un-saved while browsing
+}
+vEl('kr-poster-close').addEventListener('click', closeViewer);
+vEl('kr-poster-overlay').addEventListener('click', ev => { if (ev.target === ev.currentTarget) closeViewer(); });
+vEl('v-prev').addEventListener('click', () => viewerGo(-1));
+vEl('v-next').addEventListener('click', () => viewerGo(1));
+vEl('v-play').addEventListener('click', () => setPlaying(!V.playing));
+vEl('v-speed').addEventListener('click', () => {
+  V.ms = SPEEDS[(SPEEDS.indexOf(V.ms) + 1) % SPEEDS.length];
+  vEl('v-speed').textContent = (V.ms / 1000) + 's';
+  if (V.playing) schedule();
+});
+vEl('v-full').addEventListener('click', () => {
+  const o = vEl('kr-poster-overlay');
+  try {
+    if (document.fullscreenElement || document.webkitFullscreenElement) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    else (o.requestFullscreen || o.webkitRequestFullscreen).call(o);
+  } catch {}
+});
+vEl('v-fav').addEventListener('click', () => { const k = vEl('v-fav').dataset.fav; if (k) toggleFav(k); });
+document.addEventListener('keydown', ev => {
+  if (!vEl('kr-poster-overlay').classList.contains('show')) return;
+  if (ev.key === 'Escape') closeViewer();
+  else if (ev.key === 'ArrowLeft') viewerGo(-1);
+  else if (ev.key === 'ArrowRight') viewerGo(1);
+  else if (ev.key === ' ') { ev.preventDefault(); if (V.list.length > 1) setPlaying(!V.playing); }
+});
+let _tx = null;
+vEl('kr-poster-overlay').addEventListener('touchstart', ev => { _tx = ev.touches.length === 1 ? ev.touches[0].clientX : null; }, { passive: true });
+vEl('kr-poster-overlay').addEventListener('touchend', ev => {
+  if (_tx === null) return;
+  const dx = ev.changedTouches[0].clientX - _tx; _tx = null;
+  if (Math.abs(dx) > 50) viewerGo(dx < 0 ? 1 : -1);
+}, { passive: true });
+// Open the viewer on a specific show, browsing through the currently filtered list
+function showPoster(url, key) {
+  const list = filtered();
+  const i = list.findIndex(x => eventKey(x) === key);
+  if (i >= 0) openViewer(list, i, false);
+  else { const e = POSTS.find(x => eventKey(x) === key); if (e) openViewer([e], 0, false); }
 }
 
-document.getElementById('pb-distance').addEventListener('change', ev => { _pbDistance = ev.target.value; _pbShown = PB_STEP; render(); });
-document.getElementById('pb-month').addEventListener('change', ev => { _pbMonth = ev.target.value; _pbShown = PB_STEP; render(); });
-document.getElementById('pb-venue').addEventListener('change', ev => { _pbVenue = ev.target.value; _pbShown = PB_STEP; render(); });
+// ── Map view (Leaflet + OpenStreetMap, loaded only when the Map view is first used) ──
+let MAP = null, MAP_LAYER = null, LEAFLET_P = null, MAP_GROUPS = new Map(), MAP_MARKERS = new Map(), SEL_TOWN = null;
+const KINGSTON_VIEW = [41.927, -73.997];
+function townKeyOf(location) {
+  const key = (location || '').trim().toLowerCase();
+  return key.replace(/^(.+?)(?<!,)\s+(ny|ma|ct|nj|pa|vt)$/, '$1, $2');
+}
+function loadLeaflet() {
+  if (window.L && window.L.map) return Promise.resolve();
+  if (LEAFLET_P) return LEAFLET_P;
+  LEAFLET_P = new Promise((resolve, reject) => {
+    const css = document.createElement('link');
+    css.rel = 'stylesheet'; css.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css';
+    document.head.appendChild(css);
+    const js = document.createElement('script');
+    js.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js';
+    js.onload = () => (window.L && window.L.map) ? resolve() : reject(new Error('Leaflet missing'));
+    js.onerror = () => reject(new Error('Leaflet failed to load'));
+    document.head.appendChild(js);
+  }).catch(err => { LEAFLET_P = null; throw err; });
+  return LEAFLET_P;
+}
+async function renderMap(events) {
+  const note = vEl('pb-map-note'), mapEl = vEl('pb-map'), towns = vEl('pb-map-towns');
+  MAP_GROUPS = new Map(); let unmapped = 0;
+  for (const e of events) {
+    const k = townKeyOf(e.location), c = TOWNS && TOWNS[k];
+    if (!c) { unmapped++; continue; }
+    if (!MAP_GROUPS.has(k)) MAP_GROUPS.set(k, { key: k, name: e.location, c, list: [] });
+    MAP_GROUPS.get(k).list.push(e);
+  }
+  const mapped = events.length - unmapped;
+  note.textContent = !TOWNS ? 'The map isn’t available right now.' :
+    `${mapped} show${mapped === 1 ? '' : 's'} in ${MAP_GROUPS.size} town${MAP_GROUPS.size === 1 ? '' : 's'}` +
+    (unmapped ? ` · ${unmapped} more ${unmapped === 1 ? 'is' : 'are'} in towns that aren’t on the map yet (see Feed or Wall)` : '') +
+    ' — tap a pin to see its shows.';
+  if (!MAP_GROUPS.size) { mapEl.style.display = 'none'; towns.innerHTML = ''; vEl('pb-map-panel').innerHTML = ''; return; }
+
+  try { await loadLeaflet(); }
+  catch (err) {
+    // Couldn't load the map library — fall back to a plain list of towns
+    mapEl.style.display = 'none';
+    towns.innerHTML = [...MAP_GROUPS.values()].sort((a, b) => a.name.localeCompare(b.name))
+      .map(g => `<button class="pb-chip" data-town="${esc(g.key)}">${esc(g.name)} (${g.list.length})</button>`).join('');
+    if (SEL_TOWN && MAP_GROUPS.has(SEL_TOWN)) showTown(SEL_TOWN); else vEl('pb-map-panel').innerHTML = '';
+    return;
+  }
+  towns.innerHTML = ''; mapEl.style.display = '';
+  if (!MAP) {
+    MAP = L.map('pb-map', { scrollWheelZoom: false });
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(MAP);
+    MAP_LAYER = L.layerGroup().addTo(MAP);
+    MAP.setView(KINGSTON_VIEW, 9);
+  }
+  MAP_LAYER.clearLayers(); MAP_MARKERS = new Map();
+  const pts = [];
+  for (const g of MAP_GROUPS.values()) {
+    const pt = [g.c.lat, g.c.lng]; pts.push(pt);
+    const n = g.list.length;
+    const icon = L.divIcon({ className: 'pb-pin', html: `<span>${n > 99 ? '99+' : n}</span>`, iconSize: [32, 32], iconAnchor: [16, 16] });
+    const m = L.marker(pt, { icon, title: `${g.name} — ${n} show${n === 1 ? '' : 's'}`, riseOnHover: true });
+    m.on('click', () => showTown(g.key));
+    m.addTo(MAP_LAYER); MAP_MARKERS.set(g.key, m);
+  }
+  setTimeout(() => {
+    MAP.invalidateSize();
+    if (pts.length === 1) MAP.setView(pts[0], 11);
+    else MAP.fitBounds(L.latLngBounds(pts), { padding: [34, 34], maxZoom: 11 });
+    markSelected();
+  }, 60);
+  if (SEL_TOWN && MAP_GROUPS.has(SEL_TOWN)) showTown(SEL_TOWN); else { SEL_TOWN = null; vEl('pb-map-panel').innerHTML = ''; }
+}
+function markSelected() {
+  for (const [k, m] of MAP_MARKERS) { const el = m._icon; if (el) el.classList.toggle('sel', k === SEL_TOWN); }
+}
+function showTown(key) {
+  const g = MAP_GROUPS.get(key); if (!g) return;
+  SEL_TOWN = key; markSelected();
+  vEl('pb-map-panel').innerHTML =
+    `<h2 class="pb-day" style="margin-top:22px;">${esc(g.name)} — ${g.list.length} show${g.list.length === 1 ? '' : 's'}</h2>` +
+    g.list.map((e, i) => `<div class="pb-maprow" data-maprow="${i}">
+      <img src="${esc(e.posterUrl)}" alt="" loading="lazy">
+      <div><div class="pb-tile-date">${esc(shortDate(e))}${formatTime(e.time) ? ' · ' + esc(formatTime(e.time)) : ''}</div>
+      <div class="pb-tile-title">${esc(e.title)}</div><div class="pb-tile-venue">${esc(e.venue)}</div></div></div>`).join('');
+}
+vEl('pb-map-panel').addEventListener('click', ev => {
+  const row = ev.target.closest('[data-maprow]'); if (!row || !SEL_TOWN) return;
+  const g = MAP_GROUPS.get(SEL_TOWN); if (g) openViewer(g.list, +row.dataset.maprow, false);
+});
+vEl('pb-map-towns').addEventListener('click', ev => {
+  const b = ev.target.closest('[data-town]'); if (b) { showTown(b.dataset.town); vEl('pb-map-panel').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+});
+
+const reset = () => { _pbShown = step(); };
+let _qTimer;
+document.getElementById('pb-search').addEventListener('input', ev => { clearTimeout(_qTimer); _qTimer = setTimeout(() => { S.q = ev.target.value; reset(); render(); }, 150); });
+document.getElementById('pb-distance').addEventListener('change', ev => { S.dist = ev.target.value; reset(); render(); });
+document.getElementById('pb-venue').addEventListener('change', ev => { S.venue = ev.target.value; reset(); render(); });
+document.getElementById('pb-from').addEventListener('change', ev => {
+  S.from = ev.target.value;
+  if (S.from && S.to && S.to < S.from) { S.to = S.from; document.getElementById('pb-to').value = S.to; }
+  reset(); render();
+});
+document.getElementById('pb-to').addEventListener('change', ev => {
+  S.to = ev.target.value;
+  if (S.from && S.to && S.to < S.from) { S.from = S.to; document.getElementById('pb-from').value = S.from; }
+  reset(); render();
+});
+document.getElementById('pb-chips').addEventListener('click', ev => {
+  const b = ev.target.closest('[data-quick]'); if (!b) return;
+  const [f, t] = quickRange(b.dataset.quick);
+  const already = S.from === f && S.to === t;          // tapping an active chip turns it off
+  S.from = already ? '' : f; S.to = already ? '' : t;
+  document.getElementById('pb-from').value = S.from; document.getElementById('pb-to').value = S.to;
+  reset(); render();
+});
+document.querySelectorAll('[data-sort]').forEach(b => b.addEventListener('click', () => { S.sort = b.dataset.sort; reset(); render(); }));
+document.querySelectorAll('[data-view-mode]').forEach(b => b.addEventListener('click', () => { S.view = b.dataset.viewMode; reset(); render(); }));
+document.getElementById('pb-clear').addEventListener('click', () => {
+  Object.assign(S, { q: '', from: '', to: '', venue: '', dist: 'all', saved: false });
+  setupControls(); reset(); render();
+});
+document.getElementById('pb-surprise').addEventListener('click', () => {
+  const ev = filtered(); if (!ev.length) return;
+  openViewer(ev, Math.floor(Math.random() * ev.length), false);
+});
+document.getElementById('pb-slideshow').addEventListener('click', () => openViewer(filtered(), 0, true));
+document.getElementById('pb-saved').addEventListener('click', () => { S.saved = !S.saved; reset(); render(); });
 document.getElementById('pb-feed').addEventListener('click', async ev => {
-  if (ev.target.closest('#pb-loadmore')) { _pbShown += PB_STEP; render(); return; }
-  const v = ev.target.closest('[data-view]');  if (v) { showPoster(v.dataset.view); return; }
+  if (ev.target.closest('#pb-loadmore')) { _pbShown += step(); render(); return; }
+  const f = ev.target.closest('[data-fav]'); if (f) { toggleFav(f.dataset.fav); return; }
+  const v = ev.target.closest('[data-view]');  if (v) { showPoster(v.dataset.view, v.dataset.key); return; }
   const s = ev.target.closest('[data-share]'); if (s) { const e = POSTS.find(x => eventKey(x) === s.dataset.share); if (e) await shareEvent(e); return; }
   const c = ev.target.closest('[data-copy]');  if (c) {
     const e = POSTS.find(x => eventKey(x) === c.dataset.copy);
