@@ -25757,5 +25757,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791901389580,
+    "title": "Claud & The Live Music",
+    "date": "2027-03-20",
+    "time": "20:00",
+    "venue": "MASS MoCA",
+    "venueUrl": "https://massmoca.org/performances/",
+    "location": "North Adams, MA",
+    "mapsUrl": "https://maps.app.goo.gl/SttEGBLzqFEAu41cA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791901364747-webcuts-wsp27-claud-and-the-live-music-600-x-600.jpg",
+    "price": "$32adv/$42door",
+    "free": false,
+    "_manual": true
   }
 ]
