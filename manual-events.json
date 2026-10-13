@@ -26050,5 +26050,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791906864775,
+    "title": "Michael Veitch Band, The Bluebirds, Big Deep",
+    "date": "2026-10-28",
+    "time": "18:00",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791906858929-w926-6.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
