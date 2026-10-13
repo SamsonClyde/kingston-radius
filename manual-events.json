@@ -7728,7 +7728,8 @@
     "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
     "price": "$30-40adv/$40-50 door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791921648854-slocanramblers.webp"
   },
   {
     "id": 1787498198187,
