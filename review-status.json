@@ -2221,5 +2221,9 @@
   "Unicorn Bar||2026-11-27||9:00 pm": {
     "status": "rejected",
     "hiddenAt": 1791714460527
+  },
+  "Assembly Kingston||2026-10-17||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1791897606112
   }
 }
