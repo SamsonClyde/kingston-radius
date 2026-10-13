@@ -19428,7 +19428,8 @@
     "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
     "price": "$15-$25",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791922605383-2026-10-27-supernatural-ballads-social-sing-with-shinbone-al.webp"
   },
   {
     "id": 1789769127593,
