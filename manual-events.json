@@ -25857,5 +25857,19 @@
     "price": "$10adv/$15door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791903487956,
+    "title": "BIMBOWEEN - Plants vs Zombies, DJ Dental Work, DJ P!nk P!xl",
+    "date": "2026-10-31",
+    "time": "20:00",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791903454020-image-2-1.webp",
+    "price": "$10adv/$15door",
+    "free": false,
+    "_manual": true
   }
 ]
