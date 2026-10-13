@@ -25714,5 +25714,19 @@
     "price": "$40",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791890017351,
+    "title": "A Woolen Affair - Bees in the Barn, Nic Panken, Hannah Lee Thompson & the Bleacher Creatures, Flying Sulsers, Pulso de Barro",
+    "date": "2026-10-16",
+    "time": "10:00",
+    "venue": "Hutton Brickyards",
+    "venueUrl": "https://www.woolenaffair.com/musicians",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+North+St+Kingston+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791890012684-screen-shot-2026-10-13-at-7-11-12-am.png",
+    "price": "$40",
+    "free": false,
+    "_manual": true
   }
 ]
