@@ -25700,5 +25700,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791889945827,
+    "title": "A Woolen Affair - Whistle and the Stack, Flying Sulsers, Lucky 5 Trio",
+    "date": "2026-10-15",
+    "time": "14:00",
+    "venue": "Hutton Brickyards",
+    "venueUrl": "https://www.woolenaffair.com/musicians",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+North+St+Kingston+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791889930228-screen-shot-2026-10-13-at-7-11-12-am.png",
+    "price": "$40",
+    "free": false,
+    "_manual": true
   }
 ]
