@@ -19414,7 +19414,8 @@
     "price": "$22-$37",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791922555476-sonic-mandela-with-hu-vibrational-viewcy-2240px-wide-1080x60.webp"
   },
   {
     "id": 1789769048725,
