@@ -9274,7 +9274,8 @@
     "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
     "price": "$25-$50",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791922652925-jasoncarter-viewcy-1080x701.jpg"
   },
   {
     "id": 256,
