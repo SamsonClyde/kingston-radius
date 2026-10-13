@@ -14010,10 +14010,11 @@
     "venueUrl": "https://www.nofuntroy.com/events",
     "location": "Troy, NY",
     "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
-    "price": "$16",
+    "price": "$12adv/$17door",
     "free": false,
     "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791902453453-screenshot-2026-08-26-at-1-58-22-pm.webp"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791902453453-screenshot-2026-08-26-at-1-58-22-pm.webp",
+    "_source": "manual"
   },
   {
     "id": 1788663642947,
