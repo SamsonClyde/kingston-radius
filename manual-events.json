@@ -25871,5 +25871,19 @@
     "price": "$10adv/$15door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791903572445,
+    "title": "Deaf Club, Prize, 100 Psychic Dreams, Violent Streets",
+    "date": "2026-12-11",
+    "time": "19:00",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791903570319-825310029-1081321631559799-1394541147440597265-n.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
