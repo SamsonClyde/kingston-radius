@@ -14643,7 +14643,8 @@
     "price": "$50-$110",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791922682984-jay-ungars-80th-birthday-concert-viewcy-2240px-wide-1080x608.jpg"
   },
   {
     "id": 1788896532536,
