@@ -8408,7 +8408,8 @@
     "price": "$42-$57",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791904964730-steviemacphoto-1920x1080-temp.webp"
   },
   {
     "id": 1787508600491,
