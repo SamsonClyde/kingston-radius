@@ -6673,7 +6673,7 @@
   },
   {
     "id": 1787349097413,
-    "title": "Jimmy Madison & Friends",
+    "title": "Friends",
     "date": "2026-10-17",
     "time": "19:00",
     "venue": "Lydia's Cafe",
@@ -6682,7 +6682,9 @@
     "mapsUrl": "https://maps.app.goo.gl/j6zX42zVbeShdQ6H8",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1787349135095,
