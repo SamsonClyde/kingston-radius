@@ -26064,5 +26064,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791906947896,
+    "title": "Andalucía Project",
+    "date": "2026-10-30",
+    "time": "19:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791906934464-w926-8.jpeg",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
