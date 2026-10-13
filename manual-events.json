@@ -19104,7 +19104,8 @@
     "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791905266988-ronald-mcdonald-house-2026-live-shot.jpeg"
   },
   {
     "id": 1789642757972,
