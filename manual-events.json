@@ -25980,5 +25980,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791906574042,
+    "title": "Tasi",
+    "date": "2026-10-16",
+    "time": "19:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791906564963-w926-1.jpeg",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
