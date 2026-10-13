@@ -1,19 +1,6 @@
 [
   {
     "id": 1,
-    "date": "2026-10-12",
-    "title": "The Scout",
-    "venue": "Time & Space Limited",
-    "venueUrl": "#",
-    "location": "Hudson, NY",
-    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
-    "time": "7:00 PM",
-    "price": "See website",
-    "free": false,
-    "_source": "email"
-  },
-  {
-    "id": 2,
     "date": "2026-10-13",
     "title": "Mol Sullivan / Keven Louis Lareau / Keta Ester",
     "venue": "Avalon Lounge",
@@ -26,7 +13,7 @@
     "_source": "email"
   },
   {
-    "id": 3,
+    "id": 2,
     "date": "2026-10-13",
     "title": "Chest Fever: 50th Anniversary Of The Last Waltz",
     "venue": "Colony Woodstock",
@@ -39,7 +26,7 @@
     "_source": "email"
   },
   {
-    "id": 4,
+    "id": 3,
     "date": "2026-10-13",
     "title": "Chest Fever: 50th Anniversary Of The Last Waltz",
     "venue": "Colony Woodstock",
@@ -49,6 +36,19 @@
     "time": "7:00 PM",
     "price": "$30",
     "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 4,
+    "date": "2026-10-13",
+    "title": "VCR Vortex VHS Night",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "7:00 PM",
+    "price": "Free",
+    "free": true,
     "_source": "email"
   },
   {
@@ -131,6 +131,19 @@
   },
   {
     "id": 11,
+    "date": "2026-10-14",
+    "title": "EYELET / Spiritkiller / Brick Windows / Torpedo Lane",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "$12",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 12,
     "date": "2026-10-15",
     "title": "Honky Tonk Dance Party with The Talking Hearts",
     "venue": "Tempo Arts",
@@ -143,7 +156,7 @@
     "_source": "email"
   },
   {
-    "id": 12,
+    "id": 13,
     "date": "2026-10-15",
     "title": "Community Potluck",
     "venue": "The Living Room at Full Circle",
@@ -156,7 +169,7 @@
     "_source": "email"
   },
   {
-    "id": 13,
+    "id": 14,
     "date": "2026-10-15",
     "title": "Todd Barry",
     "venue": "The Grand",
@@ -169,7 +182,7 @@
     "_source": "email"
   },
   {
-    "id": 14,
+    "id": 15,
     "date": "2026-10-15",
     "title": "Chris Morrissey / Sean Kiely / Niall Connolly",
     "venue": "Avalon Lounge",
@@ -182,7 +195,7 @@
     "_source": "email"
   },
   {
-    "id": 15,
+    "id": 16,
     "date": "2026-10-15",
     "title": "YidLife Crisis",
     "venue": "Bardavon",
@@ -195,7 +208,7 @@
     "_source": "email"
   },
   {
-    "id": 16,
+    "id": 17,
     "date": "2026-10-15",
     "title": "Happy Hour - Burning of Kingston 2026",
     "venue": "Rough Draft Books",
@@ -208,7 +221,7 @@
     "_source": "email"
   },
   {
-    "id": 17,
+    "id": 18,
     "date": "2026-10-15",
     "title": "Bar Trivia",
     "venue": "Rough Draft Books",
@@ -221,7 +234,7 @@
     "_source": "email"
   },
   {
-    "id": 18,
+    "id": 19,
     "date": "2026-10-15",
     "title": "Peter Einhorn Jazz Duo",
     "venue": "Colony Woodstock",
@@ -234,7 +247,7 @@
     "_source": "email"
   },
   {
-    "id": 19,
+    "id": 20,
     "date": "2026-10-15",
     "title": "Woodstock Film Festival presents: Fiercely Independent Band ft. Just Desserts",
     "venue": "Colony Woodstock",
@@ -247,7 +260,20 @@
     "_source": "email"
   },
   {
-    "id": 20,
+    "id": 21,
+    "date": "2026-10-15",
+    "title": "Halloweirdo Night",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "$10",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 22,
     "date": "2026-10-16",
     "title": "Scary Burton",
     "venue": "The Living Room at Full Circle",
@@ -260,7 +286,7 @@
     "_source": "email"
   },
   {
-    "id": 21,
+    "id": 23,
     "date": "2026-10-16",
     "title": "An Evening with Grace Smith House",
     "venue": "Stissing Center",
@@ -273,7 +299,20 @@
     "_source": "email"
   },
   {
-    "id": 22,
+    "id": 24,
+    "date": "2026-10-16",
+    "title": "Vow of Hatred / In Contempt / Pure Bliss / One Twenty Seven",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "7:00 PM",
+    "price": "$15",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 25,
     "date": "2026-10-17",
     "title": "MET: Macbeth (Verdi)",
     "venue": "Bardavon",
@@ -286,7 +325,7 @@
     "_source": "email"
   },
   {
-    "id": 23,
+    "id": 26,
     "date": "2026-10-17",
     "title": "Western Swing & Two-Step with King City Corral",
     "venue": "Tempo Arts",
@@ -299,7 +338,7 @@
     "_source": "email"
   },
   {
-    "id": 24,
+    "id": 27,
     "date": "2026-10-17",
     "title": "Macbeth (The Met: Live in HD)",
     "venue": "Time & Space Limited",
@@ -312,7 +351,7 @@
     "_source": "email"
   },
   {
-    "id": 25,
+    "id": 28,
     "date": "2026-10-17",
     "title": "The Voice of Cape Verde Lucibela",
     "venue": "The Local Saugerties",
@@ -325,7 +364,7 @@
     "_source": "email"
   },
   {
-    "id": 26,
+    "id": 29,
     "date": "2026-10-17",
     "title": "Massaranduba",
     "venue": "Stissing Center",
@@ -338,7 +377,7 @@
     "_source": "email"
   },
   {
-    "id": 27,
+    "id": 30,
     "date": "2026-10-17",
     "title": "Roz Chast & Jason Adam Katzenstein",
     "venue": "MASS MoCA",
@@ -351,7 +390,7 @@
     "_source": "email"
   },
   {
-    "id": 28,
+    "id": 31,
     "date": "2026-10-17",
     "title": "Strangehouse Presents: The Vampire Cabaret & Sideshow",
     "venue": "Colony Woodstock",
@@ -364,7 +403,20 @@
     "_source": "email"
   },
   {
-    "id": 29,
+    "id": 32,
+    "date": "2026-10-17",
+    "title": "Paul Collins' Beat plays the Best of The Nerves + The Beat",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "$20",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 33,
     "date": "2026-10-18",
     "title": "Roz Chast & Jason Adam Katzenstein",
     "venue": "MASS MoCA",
@@ -377,7 +429,7 @@
     "_source": "email"
   },
   {
-    "id": 30,
+    "id": 34,
     "date": "2026-10-18",
     "title": "Classical Crossroads – Baroque to Tango",
     "venue": "Tempo Arts",
@@ -390,7 +442,7 @@
     "_source": "email"
   },
   {
-    "id": 31,
+    "id": 35,
     "date": "2026-10-18",
     "title": "No Regrets",
     "venue": "The Grand",
@@ -403,7 +455,7 @@
     "_source": "email"
   },
   {
-    "id": 32,
+    "id": 36,
     "date": "2026-10-18",
     "title": "Resistance Literature: Caliban and the Witch",
     "venue": "Time & Space Limited",
@@ -416,7 +468,7 @@
     "_source": "email"
   },
   {
-    "id": 33,
+    "id": 37,
     "date": "2026-10-18",
     "title": "Selected Shorts - A Touch of Magic",
     "venue": "Stissing Center",
@@ -429,7 +481,7 @@
     "_source": "email"
   },
   {
-    "id": 34,
+    "id": 38,
     "date": "2026-10-18",
     "title": "Sunny Days! Songs of The Muppets",
     "venue": "Colony Woodstock",
@@ -442,7 +494,7 @@
     "_source": "email"
   },
   {
-    "id": 35,
+    "id": 39,
     "date": "2026-10-18",
     "title": "Lapin Coquin",
     "venue": "Colony Woodstock",
@@ -455,7 +507,7 @@
     "_source": "email"
   },
   {
-    "id": 36,
+    "id": 40,
     "date": "2026-10-18",
     "title": "Sunny Days! Songs of The Muppets",
     "venue": "Colony Woodstock",
@@ -468,7 +520,20 @@
     "_source": "email"
   },
   {
-    "id": 37,
+    "id": 41,
+    "date": "2026-10-18",
+    "title": "Stella and the Reptilians / Firstsex / Ella Kasper",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "6:00 PM",
+    "price": "$9",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 42,
     "date": "2026-10-20",
     "title": "Earl Sweatshirt + MIKE",
     "venue": "MASS MoCA",
@@ -481,7 +546,7 @@
     "_source": "email"
   },
   {
-    "id": 38,
+    "id": 43,
     "date": "2026-10-21",
     "title": "The Bob Cats",
     "venue": "Colony Woodstock",
@@ -494,7 +559,7 @@
     "_source": "email"
   },
   {
-    "id": 39,
+    "id": 44,
     "date": "2026-10-22",
     "title": "Neko Case: Neon Grey Midnight Green Tour",
     "venue": "Bardavon",
@@ -507,7 +572,7 @@
     "_source": "email"
   },
   {
-    "id": 40,
+    "id": 45,
     "date": "2026-10-22",
     "title": "Neko Case: Neon Grey Midnight Green Tour",
     "venue": "Bardavon",
@@ -520,7 +585,7 @@
     "_source": "email"
   },
   {
-    "id": 41,
+    "id": 46,
     "date": "2026-10-22",
     "title": "Josephine Foster with No Land",
     "venue": "Time & Space Limited",
@@ -533,7 +598,7 @@
     "_source": "email"
   },
   {
-    "id": 42,
+    "id": 47,
     "date": "2026-10-23",
     "title": "Rhett Miller Live at The Living Room",
     "venue": "The Living Room at Full Circle",
@@ -546,7 +611,7 @@
     "_source": "email"
   },
   {
-    "id": 43,
+    "id": 48,
     "date": "2026-10-23",
     "title": "Nightmare Before Halloween",
     "venue": "The Grand",
@@ -559,7 +624,7 @@
     "_source": "email"
   },
   {
-    "id": 44,
+    "id": 49,
     "date": "2026-10-23",
     "title": "Big Yellow Taxi",
     "venue": "Colony Woodstock",
@@ -572,7 +637,20 @@
     "_source": "email"
   },
   {
-    "id": 45,
+    "id": 50,
+    "date": "2026-10-23",
+    "title": "East Nash Grass",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "time": "8:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 51,
     "date": "2026-10-24",
     "title": "Sonic Mandala ~ Healing Groove Meditation with HU VIBRATIONAL",
     "venue": "Tempo Arts",
@@ -585,7 +663,7 @@
     "_source": "email"
   },
   {
-    "id": 46,
+    "id": 52,
     "date": "2026-10-24",
     "title": "The Lodger: A Story of the London Fog",
     "venue": "Bardavon",
@@ -598,7 +676,7 @@
     "_source": "email"
   },
   {
-    "id": 47,
+    "id": 53,
     "date": "2026-10-24",
     "title": "Rachel Sumner & Traveling Light",
     "venue": "Stissing Center",
@@ -611,7 +689,20 @@
     "_source": "email"
   },
   {
-    "id": 48,
+    "id": 54,
+    "date": "2026-10-24",
+    "title": "Alash Ensemble",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "time": "8:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 55,
     "date": "2026-10-25",
     "title": "Macbeth (The Met: Live in HD) - Encore",
     "venue": "Time & Space Limited",
@@ -624,7 +715,7 @@
     "_source": "email"
   },
   {
-    "id": 49,
+    "id": 56,
     "date": "2026-10-25",
     "title": "Honky Tonk Last Sunday",
     "venue": "Colony Woodstock",
@@ -637,7 +728,7 @@
     "_source": "email"
   },
   {
-    "id": 50,
+    "id": 57,
     "date": "2026-10-25",
     "title": "The Arts & Wellbeing Gathering",
     "venue": "Tempo Arts",
@@ -650,7 +741,20 @@
     "_source": "email"
   },
   {
-    "id": 51,
+    "id": 58,
+    "date": "2026-10-25",
+    "title": "Ma Rainey's Living Tradition of the Blues",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "time": "5:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 59,
     "date": "2026-10-26",
     "title": "Swing Dance Workshop with Ramona Staffeld",
     "venue": "Tempo Arts",
@@ -663,7 +767,7 @@
     "_source": "email"
   },
   {
-    "id": 52,
+    "id": 60,
     "date": "2026-10-27",
     "title": "Supernatural Ballads Social Sing with Shinbone Alley",
     "venue": "Tempo Arts",
@@ -676,7 +780,7 @@
     "_source": "email"
   },
   {
-    "id": 53,
+    "id": 61,
     "date": "2026-10-29",
     "title": "Julius Eastman: Beyond Categories",
     "venue": "Time & Space Limited",
@@ -689,7 +793,7 @@
     "_source": "email"
   },
   {
-    "id": 54,
+    "id": 62,
     "date": "2026-10-29",
     "title": "Lindy Hop Practice Session + Swing Social",
     "venue": "Tempo Arts",
@@ -702,7 +806,7 @@
     "_source": "email"
   },
   {
-    "id": 55,
+    "id": 63,
     "date": "2026-10-30",
     "title": "Rasputina with Dust Bowl Faeries",
     "venue": "Tempo Arts",
@@ -715,7 +819,7 @@
     "_source": "email"
   },
   {
-    "id": 56,
+    "id": 64,
     "date": "2026-10-30",
     "title": "Ballet Nepantla's Mistica",
     "venue": "MASS MoCA",
@@ -728,7 +832,7 @@
     "_source": "email"
   },
   {
-    "id": 57,
+    "id": 65,
     "date": "2026-10-30",
     "title": "Diana Hickman",
     "venue": "Stissing Center",
@@ -741,7 +845,7 @@
     "_source": "email"
   },
   {
-    "id": 58,
+    "id": 66,
     "date": "2026-10-31",
     "title": "François Chaignaud & Aymeric Hainaux: Mirlitons",
     "venue": "PS21 Chatham",
@@ -754,7 +858,7 @@
     "_source": "email"
   },
   {
-    "id": 59,
+    "id": 67,
     "date": "2026-11-01",
     "title": "Peter Pan.Syndrome",
     "venue": "Time & Space Limited",
@@ -767,7 +871,7 @@
     "_source": "email"
   },
   {
-    "id": 60,
+    "id": 68,
     "date": "2026-11-01",
     "title": "François Chaignaud & Aymeric Hainaux: Mirlitons",
     "venue": "PS21 Chatham",
@@ -780,7 +884,7 @@
     "_source": "email"
   },
   {
-    "id": 61,
+    "id": 69,
     "date": "2026-11-04",
     "title": "FREE FILM: Cult Classics Repo Man",
     "venue": "Bardavon",
@@ -793,7 +897,7 @@
     "_source": "email"
   },
   {
-    "id": 62,
+    "id": 70,
     "date": "2026-11-04",
     "title": "FREE FILM: Repo Man (1984)",
     "venue": "Bardavon",
@@ -806,7 +910,7 @@
     "_source": "email"
   },
   {
-    "id": 63,
+    "id": 71,
     "date": "2026-11-05",
     "title": "Steve Gunn",
     "venue": "The Grand",
@@ -819,7 +923,7 @@
     "_source": "email"
   },
   {
-    "id": 64,
+    "id": 72,
     "date": "2026-11-07",
     "title": "Full Circle Starlight Social",
     "venue": "The Living Room at Full Circle",
@@ -832,7 +936,7 @@
     "_source": "email"
   },
   {
-    "id": 65,
+    "id": 73,
     "date": "2026-11-07",
     "title": "Golden Boy",
     "venue": "Time & Space Limited",
@@ -845,7 +949,7 @@
     "_source": "email"
   },
   {
-    "id": 66,
+    "id": 74,
     "date": "2026-11-13",
     "title": "Judy Collins - Sweet Judy Blue Eyes Farewell Tour",
     "venue": "Bardavon",
@@ -858,7 +962,7 @@
     "_source": "email"
   },
   {
-    "id": 67,
+    "id": 75,
     "date": "2026-11-13",
     "title": "Judy Collins - Sweet Judy Blue Eyes: Farewell Tour",
     "venue": "Bardavon",
@@ -871,7 +975,7 @@
     "_source": "email"
   },
   {
-    "id": 68,
+    "id": 76,
     "date": "2026-11-14",
     "title": "Endea Owens & The Cookout",
     "venue": "MASS MoCA",
@@ -884,7 +988,7 @@
     "_source": "email"
   },
   {
-    "id": 69,
+    "id": 77,
     "date": "2026-11-17",
     "title": "The Fateful Hour",
     "venue": "Bardavon",
@@ -897,7 +1001,7 @@
     "_source": "email"
   },
   {
-    "id": 70,
+    "id": 78,
     "date": "2026-11-18",
     "title": "Exploding Definitions: A Storytelling Event",
     "venue": "Bardavon",
@@ -910,7 +1014,7 @@
     "_source": "email"
   },
   {
-    "id": 71,
+    "id": 79,
     "date": "2026-11-19",
     "title": "Community Potluck",
     "venue": "The Living Room at Full Circle",
@@ -923,7 +1027,7 @@
     "_source": "email"
   },
   {
-    "id": 72,
+    "id": 80,
     "date": "2026-11-21",
     "title": "The Pirates of Penzance",
     "venue": "Bardavon",
@@ -936,7 +1040,7 @@
     "_source": "email"
   },
   {
-    "id": 73,
+    "id": 81,
     "date": "2026-11-21",
     "title": "Mirrored Pool",
     "venue": "MASS MoCA",
@@ -949,7 +1053,7 @@
     "_source": "email"
   },
   {
-    "id": 74,
+    "id": 82,
     "date": "2026-12-06",
     "title": "Candice Guardino",
     "venue": "Bardavon",
@@ -962,7 +1066,7 @@
     "_source": "email"
   },
   {
-    "id": 75,
+    "id": 83,
     "date": "2026-12-06",
     "title": "Candice Guardino: Italian Bred",
     "venue": "Bardavon",
@@ -975,7 +1079,7 @@
     "_source": "email"
   },
   {
-    "id": 76,
+    "id": 84,
     "date": "2026-12-08",
     "title": "The LeeVees",
     "venue": "The Grand",
@@ -988,7 +1092,7 @@
     "_source": "email"
   },
   {
-    "id": 77,
+    "id": 85,
     "date": "2026-12-12",
     "title": "New Paltz Ballet Theatre: The Nutcracker",
     "venue": "Bardavon",
@@ -1001,7 +1105,7 @@
     "_source": "email"
   },
   {
-    "id": 78,
+    "id": 86,
     "date": "2026-12-13",
     "title": "New Paltz Ballet Theatre: The Nutcracker",
     "venue": "Bardavon",
@@ -1014,7 +1118,7 @@
     "_source": "email"
   },
   {
-    "id": 79,
+    "id": 87,
     "date": "2026-12-17",
     "title": "Community Potluck",
     "venue": "The Living Room at Full Circle",
@@ -1027,7 +1131,7 @@
     "_source": "email"
   },
   {
-    "id": 80,
+    "id": 88,
     "date": "2026-12-17",
     "title": "FREE FILM: Cult Classics Love Actually",
     "venue": "Bardavon",
@@ -1040,7 +1144,7 @@
     "_source": "email"
   },
   {
-    "id": 81,
+    "id": 89,
     "date": "2026-12-17",
     "title": "FREE FILM: Love Actually (2003)",
     "venue": "Bardavon",
@@ -1053,7 +1157,7 @@
     "_source": "email"
   },
   {
-    "id": 82,
+    "id": 90,
     "date": "2026-12-19",
     "title": "Paula Poundstone",
     "venue": "Bardavon",
@@ -1066,7 +1170,7 @@
     "_source": "email"
   },
   {
-    "id": 83,
+    "id": 91,
     "date": "2026-12-19",
     "title": "Paula Poundstone",
     "venue": "Bardavon",
@@ -1079,7 +1183,7 @@
     "_source": "email"
   },
   {
-    "id": 84,
+    "id": 92,
     "date": "2026-12-20",
     "title": "MET ENCORE: Samson et Dalila (Saint-Saëns)",
     "venue": "Bardavon",
@@ -1092,7 +1196,7 @@
     "_source": "email"
   },
   {
-    "id": 85,
+    "id": 93,
     "date": "2027-01-23",
     "title": "Chanticleer",
     "venue": "Bardavon",
@@ -1105,7 +1209,7 @@
     "_source": "email"
   },
   {
-    "id": 86,
+    "id": 94,
     "date": "2027-01-24",
     "title": "Puppy Pals Live - The Action-Packed Comedic Stunt Dog Show",
     "venue": "Bardavon",
