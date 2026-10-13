@@ -120,9 +120,15 @@
   .pb-maprow .pb-tile-date { margin-top: 0; }
   .pb-count { font-size: 0.78rem; color: var(--muted); margin: 10px 0 4px; display: flex; justify-content: space-between; align-items: center; }
   /* Wall view: posters in columns, each at its own shape */
-  .pb-wall { column-count: 2; column-gap: 14px; margin-top: 20px; }
-  @media (min-width: 720px) { .pb-wall { column-count: 3; column-gap: 18px; } }
-  .pb-tile { break-inside: avoid; margin-bottom: 20px; }
+  /* Posters sit in staggered columns: each day (or venue) gets a divider, and its shows read left to right,
+     then down. Alternate columns start a little lower so the rows never line up like a table. */
+  .pb-wall { display: flex; gap: 14px; align-items: flex-start; margin: 4px 0 8px; }
+  .pb-wallcol { flex: 1 1 0; min-width: 0; }
+  .pb-wallcol:nth-child(even) { padding-top: 34px; }
+  .pb-wall.pb-single .pb-wallcol:nth-child(even) { padding-top: 0; }
+  @media (min-width: 720px) { .pb-wall { gap: 18px; } .pb-wallcol:nth-child(even) { padding-top: 44px; } }
+  .pb-day .pb-daycount { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-left: 10px; }
+  .pb-tile { margin-bottom: 20px; }
   .pb-tile .pb-poster { width: 100%; }
   .pb-tile-date { margin-top: 8px; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); }
   .pb-tile-title { font-family: 'DM Serif Display', serif; font-size: 1.05rem; line-height: 1.15; margin-top: 2px; overflow-wrap: anywhere; }
@@ -239,7 +245,7 @@
       <span class="pb-seg">View <button class="pb-chip" data-view-mode="feed">Feed</button><button class="pb-chip" data-view-mode="wall">Wall</button><button class="pb-chip" data-view-mode="map">Map</button></span>
     </div>
   </div>
-  <div class="pb-count"><span id="pb-count"></span><span><button class="pb-clear" id="pb-slideshow" type="button">▶ Slideshow</button> <button class="pb-clear" id="pb-surprise" type="button">Surprise me</button> <button class="pb-clear" id="pb-clear" type="button" style="display:none;">Clear filters</button></span></div>
+  <div class="pb-count"><span id="pb-count"></span><span><button class="pb-clear" id="pb-slideshow" type="button">▶ Slideshow</button> <button class="pb-clear" id="pb-clear" type="button" style="display:none;">Clear filters</button></span></div>
   <div id="pb-map-wrap" style="display:none;">
     <div id="pb-map"></div>
     <div id="pb-map-note"></div>
@@ -507,7 +513,7 @@ async function load() {
     data = await resp.json();
   } catch (e) {
     console.warn('Load failed:', e);
-    document.getElementById('pb-feed').innerHTML = '<div class="pb-empty">Couldn’t load the posters just now — please try again in a minute.</div>';
+    document.getElementById('pb-feed').innerHTML = '<div class="pb-empty">Couldn’t load the shows just now — please try again in a minute.</div>';
     return;
   }
   const site = await drivePromise;
@@ -647,15 +653,14 @@ function render() {
   syncControls(); writeUrl();
   const feed = document.getElementById('pb-feed');
   const events = filtered();
-  document.getElementById('pb-count').textContent = events.length ? `${events.length} poster${events.length === 1 ? '' : 's'}` : '';
-  document.getElementById('pb-surprise').style.display = events.length ? '' : 'none';
+  document.getElementById('pb-count').textContent = events.length ? `${events.length} show${events.length === 1 ? '' : 's'}` : '';
   document.getElementById('pb-slideshow').style.display = events.length ? '' : 'none';
   const mapWrap = document.getElementById('pb-map-wrap');
   if (!events.length) {
     mapWrap.style.display = 'none'; feed.style.display = '';
-    feed.innerHTML = !POSTS.length ? '<div class="pb-empty">No posters up yet — check back soon.</div>'
-      : (S.saved && !FAVS.size) ? '<div class="pb-empty">You haven’t saved any shows yet — tap the ♥ on a poster to keep it here.</div>'
-      : '<div class="pb-empty">No posters match those filters.</div>';
+    feed.innerHTML = !POSTS.length ? '<div class="pb-empty">No shows up yet — check back soon.</div>'
+      : (S.saved && !FAVS.size) ? '<div class="pb-empty">You haven’t saved any shows yet — tap the ♥ on a show to keep it here.</div>'
+      : '<div class="pb-empty">No shows match those filters.</div>';
     return;
   }
   if (S.view === 'map') { feed.style.display = 'none'; mapWrap.style.display = ''; renderMap(events); return; }
@@ -663,7 +668,20 @@ function render() {
   const shown = events.slice(0, _pbShown);
   let html = '';
   if (S.view === 'wall') {
-    html = `<div class="pb-wall">${shown.map(tile).join('')}</div>`;
+    const cols = wallCols();
+    const groups = [];
+    for (const e of shown) {
+      const head = S.sort === 'venue' ? e.venue : e.date;
+      if (!groups.length || groups[groups.length - 1].head !== head) groups.push({ head, list: [] });
+      groups[groups.length - 1].list.push(e);
+    }
+    for (const g of groups) {
+      const title = S.sort === 'venue' ? g.head : parseDate(g.head).toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'});
+      html += `<h2 class="pb-day">${esc(title)}<span class="pb-daycount">${g.list.length} show${g.list.length === 1 ? '' : 's'}</span></h2>`;
+      const columns = Array.from({ length: cols }, () => '');
+      g.list.forEach((e, i) => { columns[i % cols] += tile(e); });
+      html += `<div class="pb-wall${g.list.length < 2 ? ' pb-single' : ''}">${columns.map(c => `<div class="pb-wallcol">${c}</div>`).join('')}</div>`;
+    }
   } else {
     let last = '';
     for (const e of shown) {
@@ -675,10 +693,11 @@ function render() {
       html += post(e);
     }
   }
-  if (events.length > shown.length) html += `<button class="pb-loadmore" id="pb-loadmore">Show more posters (${events.length - shown.length} more)</button>`;
+  if (events.length > shown.length) html += `<button class="pb-loadmore" id="pb-loadmore">Show more (${events.length - shown.length} more shows)</button>`;
   feed.innerHTML = html;
 }
 
+const wallCols = () => (window.innerWidth >= 720 ? 3 : 2);
 const shortDate = e => parseDate(e.date).toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
 function tile(e) {
   const time = formatTime(e.time);
@@ -688,7 +707,7 @@ function tile(e) {
            onload="this.parentNode.style.setProperty('--ar', this.naturalWidth / this.naturalHeight)"
            onerror="this.closest('.pb-tile').classList.add('pb-broken')">
     </button>
-    <div class="pb-tile-date">${esc(shortDate(e))}${time ? ' · ' + esc(time) : ''}</div>
+    <div class="pb-tile-date">${esc(S.sort === 'venue' ? [shortDate(e), time].filter(Boolean).join(' · ') : (time || shortDate(e)))}</div>
     <div class="pb-tile-title">${esc(e.title)}</div>
     <div class="pb-tile-venue">${esc(e.venue)}</div>
     ${heartBtn(eventKey(e), 'pb-tile-heart')}
@@ -1043,10 +1062,6 @@ document.getElementById('pb-clear').addEventListener('click', () => {
   Object.assign(S, { q: '', from: '', to: '', venue: '', dist: 'all', saved: false });
   setupControls(); reset(); render();
 });
-document.getElementById('pb-surprise').addEventListener('click', () => {
-  const ev = filtered(); if (!ev.length) return;
-  openViewer(ev, Math.floor(Math.random() * ev.length), false);
-});
 document.getElementById('pb-slideshow').addEventListener('click', () => openViewer(filtered(), 0, true));
 document.getElementById('pb-saved').addEventListener('click', () => { S.saved = !S.saved; reset(); render(); });
 document.getElementById('pb-feed').addEventListener('click', async ev => {
@@ -1100,6 +1115,9 @@ function openLocModal() {
   document.addEventListener('keydown', onKey);
 }
 document.getElementById('pb-locbtn').addEventListener('click', openLocModal);
+// Re-flow the wall when the window crosses the 2-column / 3-column breakpoint
+let _wallCols = wallCols();
+window.addEventListener('resize', () => { const c = wallCols(); if (c !== _wallCols) { _wallCols = c; if (S.view === 'wall') render(); } });
 
 // Dark-mode toggle (shares the main site's saved preference)
 function syncThemeIcons() {
