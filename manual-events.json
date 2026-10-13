@@ -25843,5 +25843,19 @@
     "price": "$13",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791903352503,
+    "title": "Monster Party Art Show - Cover Bands",
+    "date": "2026-10-30",
+    "time": "19:00",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791903285299-image-1-1.webp",
+    "price": "$10adv/$15door",
+    "free": false,
+    "_manual": true
   }
 ]
