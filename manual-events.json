@@ -26190,5 +26190,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791922833659,
+    "title": "Kingston Classical presents Haydn’s Seven Last Words",
+    "date": "2026-11-22",
+    "time": "15:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791922810772-haydn-seven-last-words-poster-viewcy-1080x734.webp",
+    "price": "$25-$50",
+    "free": false,
+    "_manual": true
   }
 ]
