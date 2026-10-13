@@ -22803,7 +22803,7 @@
     "venueUrl": "https://tempokingston.org/events/",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
-    "posterUrl": "",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791922722013-0-221-copy-1080x720.webp",
     "price": "$22-$37",
     "free": false,
     "_manual": true
