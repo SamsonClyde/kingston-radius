@@ -26092,5 +26092,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791916586336,
+    "title": "Reject Fest Pre-Party",
+    "date": "2026-10-17",
+    "time": "12:00",
+    "venue": "Curio Cabinet",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/CDmjaDiGyRqtvn449",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791916576172-unnamed.jpg",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
