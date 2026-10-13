@@ -19168,8 +19168,7 @@
     "mapsUrl": "https://maps.app.goo.gl/rumcuWciwQhFjQRr8",
     "price": "$21adv/$23door",
     "free": false,
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791906243149-unnamed-13.jpg"
+    "_manual": true
   },
   {
     "id": 1789643476530,
@@ -25964,6 +25963,20 @@
     "location": "Peekskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791905506830-27-04-11-1920x1080-spoonful.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
+  },
+  {
+    "id": 1791906327312,
+    "title": "Rock Academy Showband - Christmas Show",
+    "date": "2026-12-05",
+    "time": "19:00",
+    "venue": "Park Theater",
+    "venueUrl": "https://parktheaterhudson.com/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/rumcuWciwQhFjQRr8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791906321668-unnamed-14.jpg",
     "price": "See website",
     "free": false,
     "_manual": true
