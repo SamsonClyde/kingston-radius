@@ -8378,7 +8378,8 @@
     "price": "$69-$89",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791904842991-26-10-16-1920x1080-rascals.webp"
   },
   {
     "id": 1787508434065,
