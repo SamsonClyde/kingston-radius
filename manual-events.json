@@ -26141,5 +26141,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791920801046,
+    "title": "Duo Andalucia",
+    "date": "2026-10-23",
+    "time": "17:30",
+    "venue": "Rough Draft Books",
+    "venueUrl": "https://www.roughdraftny.com/events",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LLZ4sLnaNhZtSSar9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791920776731-unnamed-9.jpg",
+    "price": "$10 suggested donation",
+    "free": false,
+    "_manual": true
   }
 ]
