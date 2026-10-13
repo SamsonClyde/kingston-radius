@@ -25658,5 +25658,19 @@
     "price": "$19",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791888346125,
+    "title": "Idiota",
+    "date": "2026-10-17",
+    "time": "15:00",
+    "venue": "Happy Valley Arcade",
+    "venueUrl": "https://happyvalleybeacon.com/events",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LAGZJ318ZdvL9AvC6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791888333181-img-1970.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
