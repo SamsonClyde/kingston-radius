@@ -1,5 +1,17 @@
 [functions]
   node_bundler = "esbuild"
- 
+
 [build]
   ignore = "git diff --name-only HEAD^ HEAD | grep -qvE '^(manual-events\\.json|review-status\\.json)$' && exit 1 || exit 0"
+
+# Hidden Posters page — reachable only by typing kingstonradius.com/blog
+# (not linked anywhere on the site, not in the sitemap, marked noindex).
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/"
+  to = "/blog.html"
+  status = 200
