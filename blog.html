@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posters — Kingston Radius</title>
+<meta name="description" content="Upcoming Hudson Valley shows, with their posters.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C0392B;
+    --bg: #F7F5F0;
+    --card: #FFFFFF;
+    --text: #1A1A18;
+    --muted: #888880;
+    --border: #E8E6E0;
+    --tag-bg: #F0EEE8;
+    --header-bg: #1A1A18;
+    color-scheme: light;
+  }
+  [data-theme="dark"] {
+    --red: #E2604A;
+    --bg: #171613;
+    --card: #211F1B;
+    --text: #EDEAE2;
+    --muted: #9B968C;
+    --border: #37342D;
+    --tag-bg: #29271F;
+    --header-bg: #100F0D;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  header {
+    background: var(--header-bg); color: #fff; padding: 0 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px; position: sticky; top: 0; z-index: 100;
+  }
+  .logo { font-family: 'DM Serif Display', serif; font-size: 1.3rem; letter-spacing: 0.01em; color: #fff; text-decoration: none; }
+  .logo span { color: var(--red); }
+  #theme-toggle-btn {
+    background: none; border: 1px solid rgba(255,255,255,0.25); border-radius: 20px;
+    width: 30px; height: 30px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; color: #fff;
+  }
+
+  .pb-wrap { max-width: 640px; margin: 0 auto; padding: 28px 16px 60px; }
+  .pb-head h1 { font-family: 'DM Serif Display', serif; font-size: 2.1rem; font-weight: 400; line-height: 1.1; }
+  .pb-head p { font-family: 'Lora', serif; font-style: italic; color: var(--muted); font-size: 0.95rem; margin-top: 6px; }
+  .pb-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 6px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+  .pb-select {
+    flex: 1 1 140px; max-width: 100%; border: 1.5px solid var(--border); background: transparent; color: var(--text);
+    font-family: 'DM Sans', sans-serif; font-size: 0.8rem; padding: 6px 12px; border-radius: 20px; cursor: pointer;
+  }
+  .pb-select option { background: var(--card); color: var(--text); }
+  .pb-select:focus { outline: none; border-color: var(--text); }
+  .pb-count { font-size: 0.78rem; color: var(--muted); margin: 10px 0 4px; }
+
+  .pb-day { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.25rem; color: var(--red);
+    margin: 38px 0 18px; padding-bottom: 8px; border-bottom: 2px solid var(--red); }
+  .pb-day:first-of-type { margin-top: 22px; }
+  .pb-post { margin-bottom: 46px; }
+  /* Each poster keeps its own shape; very tall ones are capped at ~78% of screen height */
+  .pb-poster {
+    display: block; position: relative; width: min(100%, calc(78vh * var(--ar, 0.75))); aspect-ratio: var(--ar, 3 / 4);
+    margin: 0 auto; background: var(--tag-bg); border-radius: 6px; overflow: hidden; cursor: zoom-in;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.14); padding: 0; border: none;
+  }
+  [data-theme="dark"] .pb-poster { box-shadow: 0 4px 18px rgba(0,0,0,0.5); }
+  .pb-poster img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .pb-post.pb-broken .pb-poster { display: none; }
+  .pb-eyebrow { margin-top: 16px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); }
+  .pb-title { font-family: 'DM Serif Display', serif; font-size: 1.65rem; line-height: 1.15; margin-top: 4px; overflow-wrap: anywhere; }
+  .pb-where { font-family: 'Lora', serif; font-size: 1rem; margin-top: 6px; }
+  .pb-where a { color: inherit; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; }
+  .pb-where a:hover { text-decoration-color: var(--red); }
+  .pb-drive { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+  .pb-actions { display: flex; align-items: center; gap: 14px; margin-top: 12px; }
+  .pb-more { font-size: 0.82rem; font-weight: 600; color: var(--red); text-decoration: none; }
+  .pb-more:hover { text-decoration: underline; }
+  .icon-btn { background: none; border: none; color: var(--muted); cursor: pointer; padding: 4px; border-radius: 4px; display: inline-flex; }
+  .icon-btn:hover { color: var(--red); background: var(--tag-bg); }
+  .pb-loadmore { display: block; margin: 10px auto 0; background: none; border: 1.5px solid var(--border); color: var(--text);
+    border-radius: 20px; padding: 9px 24px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; cursor: pointer; }
+  .pb-loadmore:hover { border-color: var(--red); color: var(--red); }
+  .pb-empty { text-align: center; padding: 60px 20px; color: var(--muted); font-family: 'Lora', serif; }
+  .pb-foot { text-align: center; font-size: 0.78rem; color: var(--muted); padding: 10px 16px 40px; }
+  .pb-foot a { color: var(--muted); }
+
+  .loading-spinner { width: 28px; height: 28px; margin: 0 auto; border: 3px solid var(--border); border-top-color: var(--red); border-radius: 50%; animation: kr-spin 0.8s linear infinite; }
+  @keyframes kr-spin { to { transform: rotate(360deg); } }
+  .kr-toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--text); color: var(--bg);
+    padding: 10px 18px; border-radius: 8px; font-size: 0.85rem; z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+  .kr-toast.show { opacity: 1; }
+  .kr-poster-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 10001; display: none; align-items: center; justify-content: center; padding: 40px 20px; }
+  .kr-poster-overlay.show { display: flex; }
+  .kr-poster-img { max-width: 100%; max-height: 100%; border-radius: 6px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); object-fit: contain; }
+  .kr-poster-close { position: fixed; top: 18px; right: 22px; width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(255,255,255,0.12); border: none; color: #fff; font-size: 1.2rem; line-height: 1; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; }
+  .kr-poster-close:hover { background: rgba(255,255,255,0.25); }
+  @media (max-width: 480px) { header { padding: 0 14px; } }
+</style>
+<script>
+  // Apply saved/system theme before paint (same preference the main site uses)
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('kr_theme'); } catch (e) {}
+    var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  })();
+</script>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">Kingston<span>Radius</span></a>
+  <button id="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <svg id="theme-icon-sun" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    <svg id="theme-icon-moon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+  </button>
+</header>
+
+<div class="pb-wrap">
+  <div class="pb-head">
+    <h1>Posters</h1>
+    <p>Upcoming shows, with their posters.</p>
+  </div>
+  <div class="pb-filters">
+    <select id="pb-distance" class="pb-select" aria-label="Distance" style="display:none;"></select>
+    <select id="pb-month" class="pb-select" aria-label="Month"></select>
+    <select id="pb-venue" class="pb-select" aria-label="Venue"></select>
+  </div>
+  <div class="pb-count" id="pb-count"></div>
+  <div id="pb-feed"><div style="text-align:center;padding:60px 20px;"><div class="loading-spinner"></div></div></div>
+</div>
+<div class="pb-foot"><a href="/">← All Kingston Radius listings</a></div>
+
+<div id="kr-poster-overlay" class="kr-poster-overlay">
+  <button id="kr-poster-close" class="kr-poster-close" aria-label="Close" title="Close">✕</button>
+  <img id="kr-poster-img" class="kr-poster-img" src="" alt="Show poster">
+</div>
+
+<script>
+// ── Helpers (same rules the main listings page uses) ──────────────────────────
+function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function parseDate(s) { if (!s) return new Date(0); const [y,m,d] = s.split('-').map(Number); return new Date(y, m-1, d); }
+function eventKey(e) { return `${e.venue}||${e.date}||${e.time||''}`; }
+function formatTime(t) {
+  if (!t || t === 'See website') return '';
+  t = t.trim();
+  if (/^\d{1,2}:\d{2}\s*[ap]m$/i.test(t)) return t.replace(/\s*([ap]m)$/i, (_, s) => ' ' + s.toLowerCase());
+  if (/^\d{1,2}:\d{2}$/.test(t)) { const [h,m] = t.split(':').map(Number); return `${h % 12 || 12}:${String(m).padStart(2,'0')} ${h >= 12 ? 'pm' : 'am'}`; }
+  return t;
+}
+function shortHash(str) { let h = 5381; for (let i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) | 0; return (h >>> 0).toString(36); }
+function isRejected(s) { return s === 'rejected' || s === 'purged' || (typeof s === 'object' && s && (s.status === 'rejected' || s.status === 'purged')); }
+function isApproved(s) { return s === 'approved' || (typeof s === 'object' && s && s.status === 'approved'); }
+function lsGet(key, fallback) { try { return JSON.parse(localStorage.getItem(key) || 'null') ?? fallback; } catch { return fallback; } }
+
+// ── Data ──────────────────────────────────────────────────────────────────────
+let POSTS = [];          // upcoming, approved shows that have a poster
+let LOADED = false;
+const PB_STEP = 12;
+let _pbShown = PB_STEP, _pbMonth = '', _pbVenue = '', _pbDistance = 'all';
+let DRIVE = null;        // venue -> minutes from Kingston (read from index.html so both pages always agree)
+let CUSTOM_DRIVE = {};   // drive times saved on custom venue templates
+
+// The drive-time table lives in index.html. Read it from there rather than keeping a second
+// copy, so editing a drive time on the main site updates this page too. If it can't be read,
+// the distance filter simply stays hidden.
+async function loadDriveTimes() {
+  try {
+    const resp = await fetch('/index.html');
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const m = (await resp.text()).match(/const DRIVE_TIMES = (\{[\s\S]*?\n\});/);
+    if (!m) throw new Error('DRIVE_TIMES not found');
+    const obj = new Function('return ' + m[1])();
+    return (obj && typeof obj === 'object') ? obj : null;
+  } catch (e) { console.warn('Drive times unavailable:', e); return null; }
+}
+function knownDrive(venue) {
+  if (DRIVE && DRIVE[venue] !== undefined) return DRIVE[venue];
+  const c = CUSTOM_DRIVE[venue];
+  return (c && c.drive) ? c.drive : undefined;
+}
+function passesDistance(e, f) {
+  if (f === 'all' || !DRIVE) return true;
+  const inKingston = (e.location || '').toLowerCase().includes('kingston');
+  const d = knownDrive(e.venue) ?? 45;   // same 45-min default the main site uses for unlisted venues
+  if (f === '0') return d === 0 || inKingston;
+  return d === 0 || inKingston || d <= parseInt(f);
+}
+
+async function load() {
+  let data = null;
+  const drivePromise = loadDriveTimes();
+  try {
+    const resp = await fetch('/.netlify/functions/events-load');
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    data = await resp.json();
+  } catch (e) {
+    console.warn('Load failed:', e);
+    document.getElementById('pb-feed').innerHTML = '<div class="pb-empty">Couldn’t load the posters just now — please try again in a minute.</div>';
+    return;
+  }
+  DRIVE = await drivePromise;
+  CUSTOM_DRIVE = (data.customVenues && typeof data.customVenues === 'object') ? data.customVenues : {};
+  const manual  = Array.isArray(data.manualEvents)  ? data.manualEvents  : [];
+  const scraped = Array.isArray(data.scrapedEvents) ? data.scrapedEvents : [];
+  const email   = Array.isArray(data.emailEvents)   ? data.emailEvents   : [];
+  const status  = (data.reviewStatus && typeof data.reviewStatus === 'object') ? data.reviewStatus : {};
+  const hiddenTitles = Array.isArray(data.hiddenTitles) ? data.hiddenTitles : [];
+  const hiddenVenues = new Set(lsGet('kr_hidden_venues', []));
+
+  // Same merge order as the main page: manual first, then scraped, then email, deduped by venue+date+time
+  const seen = new Map();
+  for (const e of manual)  seen.set(eventKey(e), { ...e, _source: 'manual' });
+  for (const e of scraped) { const k = eventKey(e); if (!seen.has(k)) seen.set(k, { ...e, _source: 'scraped' }); }
+  for (const e of email)   { const k = eventKey(e); if (!seen.has(k)) seen.set(k, { ...e, _source: 'email' }); }
+
+  const today = new Date(); today.setHours(0,0,0,0);
+  POSTS = [...seen.values()].filter(e => {
+    const s = status[eventKey(e)];
+    if (isRejected(s)) return false;
+    if (!(e._manual || isApproved(s))) return false;
+    const t = (e.title || '').toLowerCase();
+    return e.posterUrl && parseDate(e.date) >= today && !hiddenVenues.has(e.venue) &&
+           !hiddenTitles.some(kw => t.includes(String(kw).toLowerCase()));
+  }).sort((a,b) => (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
+
+  LOADED = true;
+  render();
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+function fill(sel, html, value) { sel.innerHTML = html; sel.value = value; if (sel.value !== value) sel.value = ''; }
+
+function render() {
+  const feed = document.getElementById('pb-feed');
+  if (!LOADED) return;
+
+  const months = [...new Set(POSTS.map(e => e.date?.slice(0,7)).filter(Boolean))].sort();
+  fill(document.getElementById('pb-month'),
+    '<option value="">All months</option>' + months.map(m => {
+      const [y,mo] = m.split('-');
+      return `<option value="${m}">${new Date(+y, +mo-1).toLocaleString('default', {month:'long'})} ${y}</option>`;
+    }).join(''), _pbMonth);
+  const venues = [...new Set(POSTS.map(e => e.venue))].sort();
+  fill(document.getElementById('pb-venue'),
+    '<option value="">All venues</option>' + venues.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join(''), _pbVenue);
+  _pbMonth = document.getElementById('pb-month').value;
+  _pbVenue = document.getElementById('pb-venue').value;
+
+  const distSel = document.getElementById('pb-distance');
+  if (DRIVE) {
+    distSel.style.display = '';
+    fill(distSel, '<option value="all">Any distance</option><option value="0">Kingston only</option>' +
+      ['30','45','60','90'].map(n => `<option value="${n}">${n} mins or less</option>`).join(''), _pbDistance);
+    _pbDistance = distSel.value || 'all';
+  }
+
+  let events = POSTS.filter(e => passesDistance(e, _pbDistance));
+  if (_pbMonth) events = events.filter(e => e.date?.startsWith(_pbMonth));
+  if (_pbVenue) events = events.filter(e => e.venue === _pbVenue);
+
+  document.getElementById('pb-count').textContent = events.length ? `${events.length} poster${events.length === 1 ? '' : 's'}` : '';
+  if (!events.length) {
+    feed.innerHTML = POSTS.length ? '<div class="pb-empty">No posters match those filters.</div>'
+                                  : '<div class="pb-empty">No posters up yet — check back soon.</div>';
+    return;
+  }
+
+  const shown = events.slice(0, _pbShown);
+  let lastDate = '', html = '';
+  for (const e of shown) {
+    if (e.date !== lastDate) {
+      lastDate = e.date;
+      html += `<h2 class="pb-day">${esc(parseDate(e.date).toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'}))}</h2>`;
+    }
+    html += post(e);
+  }
+  if (events.length > shown.length) html += `<button class="pb-loadmore" id="pb-loadmore">Show more posters (${events.length - shown.length} more)</button>`;
+  feed.innerHTML = html;
+}
+
+function post(e) {
+  const key = eventKey(e);
+  const price = (e.price && e.price !== 'See website') ? e.price : '';
+  const eyebrow = [formatTime(e.time), price].filter(Boolean).join(' · ');
+  const dm = DRIVE ? knownDrive(e.venue) : undefined;
+  const driveLine = dm === undefined ? '' : (dm === 0 ? 'In Kingston' : `${dm} min from Kingston`);
+  const town = e.location ? (e.mapsUrl ? `<a href="${esc(e.mapsUrl)}" target="_blank" rel="noopener">${esc(e.location)}</a>` : esc(e.location)) : '';
+  return `<article class="pb-post">
+    <button type="button" class="pb-poster" data-view="${esc(e.posterUrl)}" aria-label="View poster for ${esc(e.title)}">
+      <img src="${esc(e.posterUrl)}" alt="Poster for ${esc(e.title)}" loading="lazy" decoding="async"
+           onload="this.parentNode.style.setProperty('--ar', this.naturalWidth / this.naturalHeight)"
+           onerror="this.closest('.pb-post').classList.add('pb-broken')">
+    </button>
+    ${eyebrow ? `<div class="pb-eyebrow">${esc(eyebrow)}</div>` : ''}
+    <div class="pb-title">${esc(e.title)}</div>
+    <div class="pb-where">at <a href="/?venue=${encodeURIComponent(e.venue)}">${esc(e.venue)}</a>${town ? ` — ${town}` : ''}</div>
+    ${driveLine ? `<div class="pb-drive">${driveLine}</div>` : ''}
+    <div class="pb-actions">
+      ${e.venueUrl ? `<a class="pb-more" href="${esc(e.venueUrl)}" target="_blank" rel="noopener">More info →</a>` : ''}
+      <button class="icon-btn" data-share="${esc(key)}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>
+      <button class="icon-btn" data-copy="${esc(key)}" title="Copy show details" aria-label="Copy show details"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>
+    </div>
+  </article>`;
+}
+
+// ── Interactions ──────────────────────────────────────────────────────────────
+function showToast(msg) {
+  let t = document.getElementById('kr-toast');
+  if (!t) { t = document.createElement('div'); t.id = 'kr-toast'; t.className = 'kr-toast'; document.body.appendChild(t); }
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(showToast._t); showToast._t = setTimeout(() => t.classList.remove('show'), 1800);
+}
+function blurb(e) {
+  const dateStr = parseDate(e.date).toLocaleDateString('default', {month:'short', day:'numeric'});
+  const timeStr = formatTime(e.time);
+  return `${e.title}\n${e.venue}\n${dateStr}${timeStr ? ', ' + timeStr : ''}`;
+}
+async function shareEvent(e) {
+  // Links to the show on the main listings page, same as the share button there
+  const shareUrl = `${location.origin}/?e=${shortHash(eventKey(e))}`;
+  if (navigator.share) {
+    try { await navigator.share({ title: e.title, text: blurb(e), url: shareUrl }); return; }
+    catch (err) { if (err && err.name === 'AbortError') return; }
+  }
+  try { await navigator.clipboard.writeText(shareUrl); showToast('Link copied!'); } catch { showToast('Could not copy link'); }
+}
+function showPoster(url) {
+  const overlay = document.getElementById('kr-poster-overlay'), img = document.getElementById('kr-poster-img');
+  img.src = url; overlay.classList.add('show');
+  const close = () => { overlay.classList.remove('show'); img.src = ''; document.removeEventListener('keydown', onKey); };
+  const onKey = ev => { if (ev.key === 'Escape') close(); };
+  document.getElementById('kr-poster-close').onclick = close;
+  overlay.onclick = ev => { if (ev.target === overlay) close(); };
+  document.addEventListener('keydown', onKey);
+}
+
+document.getElementById('pb-distance').addEventListener('change', ev => { _pbDistance = ev.target.value; _pbShown = PB_STEP; render(); });
+document.getElementById('pb-month').addEventListener('change', ev => { _pbMonth = ev.target.value; _pbShown = PB_STEP; render(); });
+document.getElementById('pb-venue').addEventListener('change', ev => { _pbVenue = ev.target.value; _pbShown = PB_STEP; render(); });
+document.getElementById('pb-feed').addEventListener('click', async ev => {
+  if (ev.target.closest('#pb-loadmore')) { _pbShown += PB_STEP; render(); return; }
+  const v = ev.target.closest('[data-view]');  if (v) { showPoster(v.dataset.view); return; }
+  const s = ev.target.closest('[data-share]'); if (s) { const e = POSTS.find(x => eventKey(x) === s.dataset.share); if (e) await shareEvent(e); return; }
+  const c = ev.target.closest('[data-copy]');  if (c) {
+    const e = POSTS.find(x => eventKey(x) === c.dataset.copy);
+    if (e) { try { await navigator.clipboard.writeText(blurb(e)); showToast('Copied!'); } catch { showToast('Could not copy'); } }
+  }
+});
+
+// Dark-mode toggle (shares the main site's saved preference)
+function syncThemeIcons() {
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.getElementById('theme-icon-sun').style.display  = dark ? 'block' : 'none';
+  document.getElementById('theme-icon-moon').style.display = dark ? 'none' : 'block';
+}
+document.getElementById('theme-toggle-btn').addEventListener('click', () => {
+  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if (dark) document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', 'dark');
+  try { localStorage.setItem('kr_theme', dark ? 'light' : 'dark'); } catch {}
+  syncThemeIcons();
+});
+syncThemeIcons();
+
+load();
+</script>
+</body>
+</html>
