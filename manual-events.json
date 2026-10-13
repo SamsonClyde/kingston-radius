@@ -26078,5 +26078,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791906986671,
+    "title": "The Classics",
+    "date": "2026-10-31",
+    "time": "19:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791906972801-w926-9.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
