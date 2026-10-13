@@ -8558,7 +8558,8 @@
     "price": "$37-$56",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791905328326-jessica-lynn-2026-sat-and-sun-1920x1080-1.webp"
   },
   {
     "id": 1787509474182,
