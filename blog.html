@@ -49,6 +49,19 @@
   }
 
   .pb-wrap { max-width: 640px; margin: 0 auto; padding: 28px 16px 60px; }
+  .pb-titlerow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .pb-locbtn { background: none; border: 1.5px solid transparent; cursor: pointer; font-size: 1.5rem; line-height: 1; padding: 4px; border-radius: 20px; color: var(--text); font-family: 'DM Sans', sans-serif; }
+  .pb-locbtn:hover { background: var(--tag-bg); }
+  .pb-locbtn.on { font-size: 0.82rem; font-weight: 600; color: var(--red); border-color: var(--red); padding: 5px 12px; }
+  .pb-pin.pb-me span { background: var(--text); color: var(--bg); font-size: 0.66rem; }
+  .kr-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 10000; display: none; align-items: center; justify-content: center; padding: 20px; }
+  .kr-modal-overlay.show { display: flex; }
+  .kr-modal-box { background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 22px; width: 100%; max-width: 420px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+  .kr-modal-msg { font-size: 0.9rem; margin-bottom: 18px; line-height: 1.5; }
+  .kr-modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+  .kr-modal-btn { padding: 7px 16px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 0.84rem; cursor: pointer; border: 1px solid var(--border); background: none; color: var(--text); }
+  .kr-modal-btn-confirm { background: var(--red); border-color: var(--red); color: #fff; }
+  .kr-modal-btn:disabled { opacity: 0.6; cursor: default; }
   .pb-head h1 { font-family: 'DM Serif Display', serif; font-size: 2.1rem; font-weight: 400; line-height: 1.1; }
   .pb-head p { font-family: 'Lora', serif; font-style: italic; color: var(--muted); font-size: 0.95rem; margin-top: 6px; }
   .pb-wrap.wall { max-width: 1000px; }
@@ -93,6 +106,14 @@
   .pb-pin.sel span { outline: 3px solid var(--text); }
   #pb-map-note { font-size: 0.78rem; color: var(--muted); margin: 10px 0 0; }
   #pb-map-towns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .pb-venuehead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 22px 0 2px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+  .pb-venuehead a { color: var(--red); text-decoration: none; }
+  .pb-venuehead a:hover { text-decoration: underline; }
+  .pb-venuehead .pb-vmaps { font-weight: 600; letter-spacing: 0.02em; text-transform: none; color: var(--muted); }
+  a.pb-rowlink { color: inherit; text-decoration: none; }
+  a.pb-rowlink:hover { color: var(--red); text-decoration: underline; }
+  @keyframes pb-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(192,57,43,0); } 40% { box-shadow: 0 0 0 10px rgba(192,57,43,0.35); } }
+  .pb-post.pb-pulse .pb-poster { animation: pb-pulse 1.1s ease-out 2; }
   .pb-maprow { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); cursor: pointer; align-items: center; }
   .pb-maprow:hover .pb-tile-title { color: var(--red); }
   .pb-maprow img { width: 56px; height: 72px; object-fit: cover; border-radius: 4px; background: var(--tag-bg); flex: none; }
@@ -191,7 +212,10 @@
 
 <div class="pb-wrap" id="pb-wrap">
   <div class="pb-head">
-    <h1>Upcoming Shows</h1>
+    <div class="pb-titlerow">
+      <h1>Upcoming Shows</h1>
+      <button id="pb-locbtn" class="pb-locbtn" type="button" title="Show distances from your own zip code" aria-label="Show distances from your own zip code">📍</button>
+    </div>
   </div>
   <div class="pb-filters">
     <input type="search" id="pb-search" class="pb-search" placeholder="Search shows, venues, towns…" autocomplete="off" aria-label="Search">
@@ -225,6 +249,22 @@
   <div id="pb-feed"><div style="text-align:center;padding:60px 20px;"><div class="loading-spinner"></div></div></div>
 </div>
 <div class="pb-foot"><a href="/">← All Kingston Radius listings</a></div>
+
+<div id="pb-loc-overlay" class="kr-modal-overlay">
+  <div class="kr-modal-box">
+    <div class="kr-modal-msg">
+      <strong style="display:block;margin-bottom:8px;font-size:1rem;">Show distances from your location</strong>
+      <span style="color:var(--muted);font-size:0.85rem;">Enter your zip code &amp; the 30/45/60/90-min filters will estimate distance from there instead of Kingston. These are straight-line estimates (with some adjustment for bridges and highways), not the precise Google Maps data used for Kingston’s default sorting.<br><br>Live in Kingston? Just use the default sorting.</span>
+      <input type="text" id="pb-zip-input" inputmode="numeric" maxlength="5" placeholder="e.g. 12401" style="display:block;width:100%;margin-top:14px;border:1.5px solid var(--border);background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.95rem;padding:8px 12px;border-radius:6px;">
+      <div id="pb-zip-error" style="color:var(--red);font-size:0.8rem;margin-top:6px;display:none;"></div>
+    </div>
+    <div class="kr-modal-actions">
+      <button class="kr-modal-btn" id="pb-zip-reset" style="margin-right:auto;">Reset to Kingston</button>
+      <button class="kr-modal-btn" id="pb-zip-cancel">Cancel</button>
+      <button class="kr-modal-btn kr-modal-btn-confirm" id="pb-zip-go">Go</button>
+    </div>
+  </div>
+</div>
 
 <div id="kr-poster-overlay" class="kr-poster-overlay" role="dialog" aria-modal="true" aria-label="Poster viewer">
   <div class="v-progress"><span id="v-progress"></span></div>
@@ -287,6 +327,106 @@ let _pbShown = PB_STEP;
 let DRIVE = null;        // venue -> minutes from Kingston (read from index.html so both pages always agree)
 let CUSTOM_DRIVE = {};   // drive times saved on custom venue templates
 let TOWNS = null;        // town -> {lat,lng}, also read from index.html
+// Backup copy of the town list, used only if index.html can't be read, so the My Radius pin never disappears.
+const TOWNS_FALLBACK = {  "kingston, ny": {lat: 41.9270, lng: -73.9974, side: 'w'},
+  "woodstock, ny": {lat: 42.0409, lng: -74.1179, side: 'w'},
+  "saugerties, ny": {lat: 42.0776, lng: -73.9515, side: 'w'},
+  "new paltz, ny": {lat: 41.7476, lng: -74.0857, side: 'w'},
+  "rosendale, ny": {lat: 41.8365, lng: -74.0776, side: 'w'},
+  "stone ridge, ny": {lat: 41.8151, lng: -74.1207, side: 'w'},
+  "accord, ny": {lat: 41.7929, lng: -74.2318, side: 'w'},
+  "high falls, ny": {lat: 41.8087, lng: -74.1385, side: 'w'},
+  "highland, ny": {lat: 41.7160, lng: -73.9613, side: 'w'},
+  "marlboro, ny": {lat: 41.6034, lng: -73.9799, side: 'w'},
+  "milton, ny": {lat: 41.6551, lng: -73.9724, side: 'w'},
+  "gardiner, ny": {lat: 41.6795, lng: -74.1746, side: 'w'},
+  "cottekill, ny": {lat: 41.8556, lng: -74.0654, side: 'w'},
+  "west kill, ny": {lat: 42.2079, lng: -74.3335, side: 'w'},
+  "tannersville, ny": {lat: 42.1959, lng: -74.1274, side: 'w'},
+  "hunter, ny": {lat: 42.2137, lng: -74.2202, side: 'w'},
+  "windham, ny": {lat: 42.3009, lng: -74.2493, side: 'w'},
+  "catskill, ny": {lat: 42.2168, lng: -73.8643, side: 'w'},
+  "cairo, ny": {lat: 42.2929, lng: -74.0074, side: 'w'},
+  "livingston manor, ny": {lat: 41.9012, lng: -74.8288, side: 'w'},
+  "big indian, ny": {lat: 42.0687, lng: -74.4271, side: 'w'},
+  "shandaken, ny": {lat: 42.0637, lng: -74.3821, side: 'w'},
+  "phoenicia, ny": {lat: 42.0834, lng: -74.3168, side: 'w'},
+  "olivebridge, ny": {lat: 41.9376, lng: -74.2160, side: 'w'},
+  "hudson, ny": {lat: 42.2528, lng: -73.7904, side: 'e'},
+  "chatham, ny": {lat: 42.3670, lng: -73.5993, side: 'e'},
+  "claverack, ny": {lat: 42.2167, lng: -73.7196, side: 'e'},
+  "livingston, ny": {lat: 42.1276, lng: -73.7418, side: 'e'},
+  "germantown, ny": {lat: 42.1348, lng: -73.8654, side: 'e'},
+  "athens, ny": {lat: 42.2529, lng: -73.8071, side: 'w'},
+  "coxsackie, ny": {lat: 42.3540, lng: -73.7982, side: 'w'},
+  "greenville, ny": {lat: 42.4106, lng: -74.0146, side: 'w'},
+  "north adams, ma": {lat: 42.7009, lng: -73.1087, side: 'e'},
+  "beacon, ny": {lat: 41.5048, lng: -73.9698, side: 'e'},
+  "poughkeepsie, ny": {lat: 41.7004, lng: -73.9209, side: 'e'},
+  "wappingers falls, ny": {lat: 41.5967, lng: -73.9126, side: 'e'},
+  "red hook, ny": {lat: 41.9887, lng: -73.8776, side: 'e'},
+  "rhinebeck, ny": {lat: 41.9273, lng: -73.9121, side: 'e'},
+  "tivoli, ny": {lat: 42.0509, lng: -73.9165, side: 'e'},
+  "annandale-on-hudson, ny": {lat: 42.0273, lng: -73.9143, side: 'e'},
+  "hopewell junction, ny": {lat: 41.5806, lng: -73.7960, side: 'e'},
+  "pawling, ny": {lat: 41.5615, lng: -73.5993, side: 'e'},
+  "pine plains, ny": {lat: 41.9701, lng: -73.6771, side: 'e'},
+  "millbrook, ny": {lat: 41.7859, lng: -73.6879, side: 'e'},
+  "fishkill, ny": {lat: 41.5359, lng: -73.9007, side: 'e'},
+  "newburgh, ny": {lat: 41.5034, lng: -74.0104, side: 'w'},
+  "cornwall-on-hudson, ny": {lat: 41.4326, lng: -74.0176, side: 'w'},
+  "washingtonville, ny": {lat: 41.4262, lng: -74.1638, side: 'w'},
+  "peekskill, ny": {lat: 41.2901, lng: -73.9204, side: 'e'},
+  "croton-on-hudson, ny": {lat: 41.2015, lng: -73.8929, side: 'e'},
+  "putnam valley, ny": {lat: 41.4406, lng: -73.8221, side: 'e'},
+  "cold spring, ny": {lat: 41.4195, lng: -73.9563, side: 'e'},
+  "garrison, ny": {lat: 41.3798, lng: -73.9310, side: 'e'},
+  "troy, ny": {lat: 42.7284, lng: -73.6918, side: 'e'},
+  "albany, ny": {lat: 42.6526, lng: -73.7562, side: 'w'},
+  "schenectady, ny": {lat: 42.8142, lng: -73.9396, side: 'w'},
+  "bethel, ny": {lat: 41.7273, lng: -74.9024, side: 'w'},
+  "ellenville, ny": {lat: 41.7176, lng: -74.3946, side: 'w'},
+  "woodridge, ny": {lat: 41.7048, lng: -74.5985, side: 'w'},
+  "kerhonkson, ny": {lat: 41.7743, lng: -74.2879, side: 'w'},
+  "maplecrest, ny": {lat: 42.2759, lng: -74.1868, side: 'w'},
+  "walden, ny": {lat: 41.5612, lng: -74.1885, side: 'w'},
+  "altamont, ny": {lat: 42.7043, lng: -74.0304, side: 'w'},
+  "berne, ny": {lat: 42.6001, lng: -74.1568, side: 'w'},
+  "clermont, ny": {lat: 42.1512, lng: -73.8462, side: 'e'},
+  "coeymans hollow, ny": {lat: 42.4717, lng: -73.8944, side: 'w'},
+  "fleischmanns, ny": {lat: 42.1465, lng: -74.5638, side: 'w'},
+  "ghent, ny": {lat: 42.3287, lng: -73.6462, side: 'e'},
+  "hillsdale, ny": {lat: 42.1782, lng: -73.5115, side: 'e'},
+  "kinderhook, ny": {lat: 42.3901, lng: -73.6987, side: 'e'},
+  "leeds, ny": {lat: 42.2547, lng: -73.9008, side: 'w'},
+  "nyack, ny": {lat: 41.0909, lng: -73.9179, side: 'w'},
+  "oak hill, ny": {lat: 42.4098, lng: -74.1524, side: 'w'},
+  "pine bush, ny": {lat: 41.6009, lng: -74.296, side: 'w'},
+  "pleasant valley, ny": {lat: 41.7573, lng: -73.8329, side: 'e'},
+  "port ewen, ny": {lat: 41.8887, lng: -73.9932, side: 'w'},
+  "preston hollow, ny": {lat: 42.4314, lng: -74.2231, side: 'w'},
+  "redding, ct": {lat: 41.304, lng: -73.3826, side: 'e'},
+  "round top, ny": {lat: 42.2689, lng: -74.0272, side: 'w'},
+  "verplanck, ny": {lat: 41.2359, lng: -73.9635, side: 'e'},
+  "west park, ny": {lat: 41.7834, lng: -73.9573, side: 'w'},
+  "coeyman hollow, ny": {lat: 42.4717, lng: -73.8944, side: 'w'}, // spelling variant of "coeymans hollow, ny"
+  "chester, ny": {lat: 41.3569, lng: -74.2769, side: 'w'},
+  "wallkill, ny": {lat: 41.4670, lng: -74.3670, side: 'w'},
+  "ephratah, ny": {lat: 43.0269, lng: -74.5531, side: 'w'},
+  "sleepy hollow, ny": {lat: 41.0857, lng: -73.8585, side: 'e'},
+  "teaneck, nj": {lat: 40.8925, lng: -74.0114, side: 'w'},
+  "stamford, ny": {lat: 42.4170, lng: -74.6170, side: 'w'},
+  "lee, ma": {lat: 42.3042, lng: -73.2481, side: 'e'},
+  "belleayre, ny": {lat: 42.1422, lng: -74.5108, side: 'w'},
+  "montgomery, ny": {lat: 41.5276, lng: -74.2368, side: 'w'},
+  "wassaic, ny": {lat: 41.8040, lng: -73.5587, side: 'e'},
+  "east durham, ny": {lat: 42.3725, lng: -74.0956, side: 'w'},
+  "prattsville, ny": {lat: 42.3150, lng: -74.4167, side: 'w'},
+  "palenville, ny": {lat: 42.1697, lng: -74.0192, side: 'w'},
+  "glens falls, ny": {lat: 43.3122, lng: -73.6483, side: 'w'},
+  "new windsor, ny": {lat: 41.4768, lng: -74.0237, side: 'w'},
+  "bard college, ny": {lat: 42.0210, lng: -73.9070, side: 'e'},
+};
 
 // The drive-time table lives in index.html. Read it from there rather than keeping a second
 // copy, so editing a drive time on the main site updates this page too. If it can't be read,
@@ -314,8 +454,44 @@ function knownDrive(venue) {
   const c = CUSTOM_DRIVE[venue];
   return (c && c.drive) ? c.drive : undefined;
 }
+// ── My Radius: distances from the visitor's own zip code ──────────────────────
+// Same estimate the main site uses (straight-line miles -> minutes, plus a flat penalty for crossing
+// the Hudson). Stored separately from the main site's setting so trying it here doesn't switch it on there.
+let CUSTOM = null;
+try { const c = JSON.parse(localStorage.getItem('kr_blog_location') || 'null'); if (c && typeof c.lat === 'number' && typeof c.lng === 'number') CUSTOM = c; } catch {}
+const RIVER_PENALTY_MIN = 20;
+function haversineMiles(lat1, lng1, lat2, lng2) {
+  const R = 3958.8, rad = d => d * Math.PI / 180;
+  const dLat = rad(lat2 - lat1), dLng = rad(lng2 - lng1);
+  const a = Math.sin(dLat/2)**2 + Math.cos(rad(lat1)) * Math.cos(rad(lat2)) * Math.sin(dLng/2)**2;
+  return R * 2 * Math.asin(Math.sqrt(a));
+}
+function minutesFromMiles(miles) {
+  const mph = miles <= 15 ? 30 : miles <= 40 ? 28 : 45;
+  return Math.round((miles / mph) * 60);
+}
+function nearestTownKey(lat, lng) {
+  let best = null, bd = Infinity;
+  for (const [k, t] of Object.entries(TOWNS || {})) { const d = haversineMiles(lat, lng, t.lat, t.lng); if (d < bd) { bd = d; best = k; } }
+  return best;
+}
+// Minutes from the visitor's zip to this show's town, or null if that town isn't on the list yet
+function customMinutes(e) {
+  if (!CUSTOM || !TOWNS) return null;
+  const c = TOWNS[townKeyOf(e.location)];
+  if (!c) return null;
+  let m = minutesFromMiles(haversineMiles(CUSTOM.lat, CUSTOM.lng, c.lat, c.lng));
+  if (CUSTOM.side && c.side && CUSTOM.side !== c.side) m += RIVER_PENALTY_MIN;
+  return m;
+}
 function passesDistance(e, f) {
-  if (f === 'all' || !DRIVE) return true;
+  if (f === 'all') return true;
+  if (CUSTOM && TOWNS) {
+    if (f === '0') return !!CUSTOM.townKey && townKeyOf(e.location) === CUSTOM.townKey;
+    const m = customMinutes(e);
+    return m !== null && m <= parseInt(f);      // towns we can't place are left out of the distance filters (still under Any distance)
+  }
+  if (!DRIVE) return true;
   const inKingston = (e.location || '').toLowerCase().includes('kingston');
   const d = knownDrive(e.venue) ?? 45;   // same 45-min default the main site uses for unlisted venues
   if (f === '0') return d === 0 || inKingston;
@@ -335,7 +511,7 @@ async function load() {
     return;
   }
   const site = await drivePromise;
-  DRIVE = site.drive; TOWNS = site.towns;
+  DRIVE = site.drive; TOWNS = site.towns || TOWNS_FALLBACK;
   CUSTOM_DRIVE = (data.customVenues && typeof data.customVenues === 'object') ? data.customVenues : {};
   const manual  = Array.isArray(data.manualEvents)  ? data.manualEvents  : [];
   const scraped = Array.isArray(data.scrapedEvents) ? data.scrapedEvents : [];
@@ -361,10 +537,13 @@ async function load() {
   }).sort((a,b) => (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
 
   LOADED = true;
+  const eh = new URLSearchParams(location.search).get('e');   // read before render() rewrites the address
   readUrl();
   _pbShown = step();
   setupControls();
   render();
+  // A link like /blog?e=abc123 jumps straight to that show in the Feed
+  if (eh) { const hit = POSTS.find(x => shortHash(eventKey(x)) === eh); if (hit) jumpToShow(eventKey(hit)); }
 }
 
 // ── Filtering ─────────────────────────────────────────────────────────────────
@@ -404,7 +583,7 @@ function writeUrl() {
   if (S.from) p.set('from', S.from);
   if (S.to) p.set('to', S.to);
   if (S.venue) p.set('venue', S.venue);
-  if (S.dist !== 'all') p.set('dist', S.dist);
+  if (S.dist !== 'all' && !CUSTOM) p.set('dist', S.dist);
   if (S.sort !== 'date') p.set('sort', S.sort);
   if (S.view !== 'feed') p.set('view', S.view);
   const qs = p.toString();
@@ -427,17 +606,28 @@ function setupControls() {
   fill(vSel, '<option value="">All venues</option>' + venues.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join(''), S.venue);
   S.venue = vSel.value;
   const dSel = document.getElementById('pb-distance');
-  if (DRIVE) {
+  const useZip = !!(CUSTOM && TOWNS);
+  if (DRIVE || useZip) {
     dSel.style.display = '';
-    fill(dSel, '<option value="all">Any distance</option><option value="0">Kingston only</option>' +
+    fill(dSel, '<option value="all">Any distance</option>' +
+      `<option value="0">${useZip ? 'Same town as ' + esc(CUSTOM.zip) : 'Kingston only'}</option>` +
       ['30','45','60','90'].map(n => `<option value="${n}">${n} mins or less</option>`).join(''), S.dist);
     S.dist = dSel.value || 'all';
-  } else { S.dist = 'all'; }
+  } else { dSel.style.display = 'none'; S.dist = 'all'; }
+  updateLocBtn();
   document.getElementById('pb-search').value = S.q;
   const today = ymd(new Date());
   for (const id of ['pb-from','pb-to']) document.getElementById(id).min = today;
   document.getElementById('pb-from').value = S.from;
   document.getElementById('pb-to').value = S.to;
+}
+function updateLocBtn() {
+  const b = document.getElementById('pb-locbtn');
+  b.style.display = '';
+  const on = !!CUSTOM;
+  b.classList.toggle('on', on);
+  b.textContent = on ? '📍 ' + CUSTOM.zip : '📍';
+  b.title = on ? `Distances are estimated from ${CUSTOM.zip} — tap to change` : 'Show distances from your own zip code';
 }
 function syncControls() {
   document.getElementById('pb-wrap').classList.toggle('wall', S.view !== 'feed');
@@ -510,9 +700,13 @@ function post(e) {
   const price = (e.price && e.price !== 'See website') ? e.price : '';
   const eyebrow = [S.sort === 'venue' ? shortDate(e) : '', formatTime(e.time), price].filter(Boolean).join(' · ');
   const dm = DRIVE ? knownDrive(e.venue) : undefined;
-  const driveLine = dm === undefined ? '' : (dm === 0 ? 'In Kingston' : `${dm} min from Kingston`);
+  const cm = customMinutes(e);
+  const inKingston = /\bkingston\b/i.test(e.location || '');   // any Kingston show reads "In Kingston" (the minutes are just the distance from Tubby's)
+  const driveLine = CUSTOM && TOWNS
+    ? (townKeyOf(e.location) === CUSTOM.townKey ? 'In your town' : (cm === null ? '' : `About ${cm} min from ${CUSTOM.zip}`))
+    : (inKingston || dm === 0 ? 'In Kingston' : (dm === undefined ? '' : `${dm} min from Kingston`));
   const town = e.location ? (e.mapsUrl ? `<a href="${esc(e.mapsUrl)}" target="_blank" rel="noopener">${esc(e.location)}</a>` : esc(e.location)) : '';
-  return `<article class="pb-post">
+  return `<article class="pb-post" data-post="${esc(key)}">
     <button type="button" class="pb-poster" data-view="${esc(e.posterUrl)}" data-key="${esc(key)}" aria-label="View poster for ${esc(e.title)}">
       <img src="${esc(e.posterUrl)}" alt="Poster for ${esc(e.title)}" loading="lazy" decoding="async"
            onload="this.parentNode.style.setProperty('--ar', this.naturalWidth / this.naturalHeight)"
@@ -648,9 +842,65 @@ function showPoster(url, key) {
   else { const e = POSTS.find(x => eventKey(x) === key); if (e) openViewer([e], 0, false); }
 }
 
+// Show one listing in the Feed: clears filters so it's visible, scrolls to it, and pulses the poster
+function jumpToShow(key) {
+  Object.assign(S, { q: '', from: '', to: '', venue: '', dist: 'all', sort: 'date', view: 'feed' });
+  setupControls();
+  const idx = filtered().findIndex(e => eventKey(e) === key);
+  if (idx < 0) return false;
+  _pbShown = Math.max(step(), idx + 1);
+  render();
+  const el = [...document.querySelectorAll('.pb-post')].find(x => x.dataset.post === key);
+  if (el) {
+    el.scrollIntoView({ block: 'start' });
+    window.scrollBy(0, -70);                        // clear the sticky header
+    el.classList.add('pb-pulse'); setTimeout(() => el.classList.remove('pb-pulse'), 2600);
+  }
+  return true;
+}
+
 // ── Map view (Leaflet + OpenStreetMap, loaded only when the Map view is first used) ──
 let MAP = null, MAP_LAYER = null, LEAFLET_P = null, MAP_GROUPS = new Map(), MAP_MARKERS = new Map(), SEL_TOWN = null;
 const KINGSTON_VIEW = [41.927, -73.997];
+// Optional exact spots. A venue listed here gets its own pin on the map; every other venue is pinned
+// at its town. Add one line per venue, copied from Google Maps (right-click a place -> the first line
+// is "latitude, longitude"), e.g.   "Tubby's": [41.9300, -73.9950],
+const VENUE_COORDS = {
+  "Assembly Kingston": [41.93178, -74.01862],
+  "Tubby's": [41.92956, -74.00358],
+  "Tempo Arts": [41.91841, -73.98639],
+  "UPAC": [41.92952, -74.00437],
+  "Unicorn Bar": [41.93389, -73.99686],
+  "Keegan Ales": [41.93165, -74.01183],
+  "Night Swim": [41.93207, -74.01001],
+  "Old Dutch Church": [41.93296, -74.01842],
+  "West Kill Supply (Kingston)": [41.92997, -74.00425],
+  "Hudson River Cruises": [41.91864, -73.98161],
+  "O+ Exchange": [41.93528, -74.01978],
+  "Eng's Chinese": [41.93208, -74.00975],
+  "Frog Alley Park": [41.93559, -74.02238],
+  "Green Kill": [41.92502, -74.01219],
+  "Heart of Midtown Festival": [41.93029, -74.00384],
+  "Heart Of Midtown Stage": [41.93029, -74.00384],
+  "Hopenanny House Concert": [41.9325, -74.01147],
+  "HRMM Solaris Cruise": [41.91905, -73.9809],
+  "Hudson River Maritime Museum": [41.91905, -73.9809],
+  "Kingston Point Beach": [41.93032, -73.96456],
+  "KPM": [41.93095, -74.00732],
+  "Louw-Bogardus Ruins at Frog Alley Park": [41.93559, -74.02238],
+  "Lye Parklet": [41.92732, -74.01531],
+  "Mirador": [41.93036, -74.00594],
+  "Mustangs Bouldering": [41.93796, -74.01977],
+  "O+ Festival": [41.93528, -74.01978],
+  "Rewind Kingston": [41.92983, -74.00468],
+  "Rosekill Art Farm": [41.885, -74.08108],
+  "Rough Draft Books": [41.93367, -74.02121],
+  "Snapper McGee's": [41.93542, -74.02128],
+  "The Lace Mill": [41.93479, -73.99842],
+  "Tilda's Kitchen": [41.93022, -74.00583],
+  "Town of Ulster Library": [41.95478, -73.99385],
+  "Trinity Lutheran Church": [41.91902, -73.98857],
+};
 function townKeyOf(location) {
   const key = (location || '').trim().toLowerCase();
   return key.replace(/^(.+?)(?<!,)\s+(ny|ma|ct|nj|pa|vt)$/, '$1, $2');
@@ -674,14 +924,17 @@ async function renderMap(events) {
   const note = vEl('pb-map-note'), mapEl = vEl('pb-map'), towns = vEl('pb-map-towns');
   MAP_GROUPS = new Map(); let unmapped = 0;
   for (const e of events) {
-    const k = townKeyOf(e.location), c = TOWNS && TOWNS[k];
+    const vc = VENUE_COORDS[e.venue] || ((typeof e.lat === 'number' && typeof e.lng === 'number') ? [e.lat, e.lng] : null);
+    let k, c, name;
+    if (vc) { k = 'v|' + e.venue; c = { lat: vc[0], lng: vc[1] }; name = e.venue; }
+    else { k = townKeyOf(e.location); c = TOWNS && TOWNS[k]; name = e.location; }
     if (!c) { unmapped++; continue; }
-    if (!MAP_GROUPS.has(k)) MAP_GROUPS.set(k, { key: k, name: e.location, c, list: [] });
+    if (!MAP_GROUPS.has(k)) MAP_GROUPS.set(k, { key: k, name, c, list: [] });
     MAP_GROUPS.get(k).list.push(e);
   }
   const mapped = events.length - unmapped;
   note.textContent = !TOWNS ? 'The map isn’t available right now.' :
-    `${mapped} show${mapped === 1 ? '' : 's'} in ${MAP_GROUPS.size} town${MAP_GROUPS.size === 1 ? '' : 's'}` +
+    `${mapped} show${mapped === 1 ? '' : 's'} at ${MAP_GROUPS.size} pin${MAP_GROUPS.size === 1 ? '' : 's'}` +
     (unmapped ? ` · ${unmapped} more ${unmapped === 1 ? 'is' : 'are'} in towns that aren’t on the map yet (see Feed or Wall)` : '') +
     ' — tap a pin to see its shows.';
   if (!MAP_GROUPS.size) { mapEl.style.display = 'none'; towns.innerHTML = ''; vEl('pb-map-panel').innerHTML = ''; return; }
@@ -713,6 +966,10 @@ async function renderMap(events) {
     m.on('click', () => showTown(g.key));
     m.addTo(MAP_LAYER); MAP_MARKERS.set(g.key, m);
   }
+  if (CUSTOM) {
+    const me = [CUSTOM.lat, CUSTOM.lng]; pts.push(me);
+    L.marker(me, { icon: L.divIcon({ className: 'pb-pin pb-me', html: '<span>You</span>', iconSize: [32, 32], iconAnchor: [16, 16] }), title: 'Your zip code ' + CUSTOM.zip, zIndexOffset: 500 }).addTo(MAP_LAYER);
+  }
   setTimeout(() => {
     MAP.invalidateSize();
     if (pts.length === 1) MAP.setView(pts[0], 11);
@@ -727,14 +984,29 @@ function markSelected() {
 function showTown(key) {
   const g = MAP_GROUPS.get(key); if (!g) return;
   SEL_TOWN = key; markSelected();
-  vEl('pb-map-panel').innerHTML =
-    `<h2 class="pb-day" style="margin-top:22px;">${esc(g.name)} — ${g.list.length} show${g.list.length === 1 ? '' : 's'}</h2>` +
-    g.list.map((e, i) => `<div class="pb-maprow" data-maprow="${i}">
+  // Group the town's shows by venue so each place is its own section
+  g.list.sort((a, b) => (a.venue||'').localeCompare(b.venue||'') || (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
+  let html = `<h2 class="pb-day" style="margin-top:22px;">${esc(g.name)} — ${g.list.length} show${g.list.length === 1 ? '' : 's'}</h2>`;
+  let lastVenue = null;
+  g.list.forEach((e, i) => {
+    if (e.venue !== lastVenue) {
+      lastVenue = e.venue;
+      const maps = g.list.find(x => x.venue === e.venue && x.mapsUrl && /^https?:/i.test(x.mapsUrl));
+      html += `<div class="pb-venuehead"><a href="/?venue=${encodeURIComponent(e.venue)}">${esc(e.venue)}</a>` +
+              (maps ? `<a class="pb-vmaps" href="${esc(maps.mapsUrl)}" target="_blank" rel="noopener">Open in Maps ↗</a>` : '') + `</div>`;
+    }
+    const k = eventKey(e), t = formatTime(e.time);
+    html += `<div class="pb-maprow" data-maprow="${i}">
       <img src="${esc(e.posterUrl)}" alt="" loading="lazy">
-      <div><div class="pb-tile-date">${esc(shortDate(e))}${formatTime(e.time) ? ' · ' + esc(formatTime(e.time)) : ''}</div>
-      <div class="pb-tile-title">${esc(e.title)}</div><div class="pb-tile-venue">${esc(e.venue)}</div></div></div>`).join('');
+      <div><div class="pb-tile-date">${esc(shortDate(e))}${t ? ' · ' + esc(t) : ''}</div>
+      <a class="pb-tile-title pb-rowlink" href="${esc(location.pathname)}?e=${shortHash(k)}" data-jump="${esc(k)}" title="See this show in the listing">${esc(e.title)}</a></div></div>`;
+  });
+  vEl('pb-map-panel').innerHTML = html;
 }
 vEl('pb-map-panel').addEventListener('click', ev => {
+  const jump = ev.target.closest('[data-jump]');
+  if (jump) { ev.preventDefault(); jumpToShow(jump.dataset.jump); return; }
+  if (ev.target.closest('a')) return;            // venue / Maps links behave normally
   const row = ev.target.closest('[data-maprow]'); if (!row || !SEL_TOWN) return;
   const g = MAP_GROUPS.get(SEL_TOWN); if (g) openViewer(g.list, +row.dataset.maprow, false);
 });
@@ -787,6 +1059,47 @@ document.getElementById('pb-feed').addEventListener('click', async ev => {
     if (e) { try { await navigator.clipboard.writeText(blurb(e)); showToast('Copied!'); } catch { showToast('Could not copy'); } }
   }
 });
+
+// ── Zip-code popup ───────────────────────────────────────────────────────────
+function openLocModal() {
+  const overlay = document.getElementById('pb-loc-overlay'), input = document.getElementById('pb-zip-input');
+  const errorEl = document.getElementById('pb-zip-error'), goBtn = document.getElementById('pb-zip-go');
+  errorEl.style.display = 'none'; input.value = CUSTOM ? CUSTOM.zip : '';
+  document.getElementById('pb-zip-reset').style.display = CUSTOM ? '' : 'none';
+  overlay.classList.add('show'); input.focus();
+  const close = () => { overlay.classList.remove('show'); document.removeEventListener('keydown', onKey); };
+  const onKey = ev => { if (ev.key === 'Escape') close(); if (ev.key === 'Enter') goBtn.click(); };
+  goBtn.onclick = async () => {
+    const zip = input.value.trim();
+    if (!/^\d{5}$/.test(zip)) { errorEl.textContent = 'Enter a valid 5-digit zip code.'; errorEl.style.display = 'block'; return; }
+    errorEl.style.display = 'none'; goBtn.textContent = 'Looking up…'; goBtn.disabled = true;
+    try {
+      const resp = await fetch(`https://api.zippopotam.us/us/${zip}`);
+      if (!resp.ok) throw new Error('not found');
+      const place = (await resp.json()).places?.[0];
+      if (!place) throw new Error('no place data');
+      const lat = parseFloat(place.latitude), lng = parseFloat(place.longitude);
+      const nk = nearestTownKey(lat, lng);
+      CUSTOM = { zip, lat, lng, side: nk ? TOWNS[nk].side : null, townKey: nk };
+      try { localStorage.setItem('kr_blog_location', JSON.stringify(CUSTOM)); } catch {}
+      S.dist = '90';                 // "Kingston only" stops making sense once centered on your own zip
+      setupControls(); reset(); render(); close();
+      showToast(`Showing distances from ${zip} ✓`);
+    } catch (e) {
+      errorEl.textContent = "Couldn't find that zip code — double-check it and try again."; errorEl.style.display = 'block';
+    }
+    goBtn.textContent = 'Go'; goBtn.disabled = false;
+  };
+  document.getElementById('pb-zip-cancel').onclick = close;
+  document.getElementById('pb-zip-reset').onclick = () => {
+    CUSTOM = null; try { localStorage.removeItem('kr_blog_location'); } catch {}
+    S.dist = 'all'; setupControls(); reset(); render(); close();
+    showToast('Back to distances from Kingston ✓');
+  };
+  overlay.onclick = ev => { if (ev.target === overlay) close(); };
+  document.addEventListener('keydown', onKey);
+}
+document.getElementById('pb-locbtn').addEventListener('click', openLocModal);
 
 // Dark-mode toggle (shares the main site's saved preference)
 function syncThemeIcons() {
