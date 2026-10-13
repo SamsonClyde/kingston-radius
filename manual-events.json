@@ -8468,7 +8468,8 @@
     "price": "$57-$72",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791905144536-press-bhtm-1-credit-kirsten-cohen-temp-1920x1080-1.webp"
   },
   {
     "id": 1787508908569,
