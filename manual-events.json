@@ -7714,7 +7714,8 @@
     "mapsUrl": "https://maps.google.com/?q=3023+Route+199+Pine+Plains+NY",
     "price": "$20",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791921635235-edie-sarah-mar2024-44-edie-carey.webp"
   },
   {
     "id": 1787498158256,
