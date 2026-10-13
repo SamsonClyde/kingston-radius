@@ -26218,5 +26218,19 @@
     "price": "$20-$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791923108275,
+    "title": "New Year’s Eve Dance Party & Gala",
+    "date": "2026-12-31",
+    "time": "17:30",
+    "venue": "The Ashokan Center",
+    "venueUrl": "https://ashokancenter.org/events/",
+    "location": "Olivebridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791923073336-draft-2024-10802.webp",
+    "price": "$25-$75",
+    "free": false,
+    "_manual": true
   }
 ]
