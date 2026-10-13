@@ -26036,5 +26036,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791906755787,
+    "title": "Jay Collin's Gravy Train",
+    "date": "2026-10-25",
+    "time": "11:00",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791906735925-w926-5.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
