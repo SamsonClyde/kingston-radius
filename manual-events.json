@@ -357,7 +357,8 @@
     "price": "See website",
     "free": false,
     "_source": "scraped",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791975666595-6712efd5ca84279784201aa1-jeremy-baum-xmas-left.png"
   },
   {
     "id": 481,
