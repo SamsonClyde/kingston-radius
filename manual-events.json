@@ -25,7 +25,8 @@
     "price": "See website",
     "free": false,
     "_source": "scraped",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791974753850-67006eeb1f4de2e4ba1c0084-dark-horses-horse-blkbg.jpg"
   },
   {
     "id": 1786449817724,
