@@ -17692,7 +17692,8 @@
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "$189",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791973408047-blueoctober-1400x810.jpg"
   },
   {
     "id": 1789477153771,
