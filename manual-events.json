@@ -4854,7 +4854,8 @@
     "price": "See website",
     "free": false,
     "_source": "scraped",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791975234712-63d40e441beb491fe331ed50-analogjazzorchestra-live.jpg"
   },
   {
     "id": 449,
