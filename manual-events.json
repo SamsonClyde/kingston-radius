@@ -26388,5 +26388,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791975808932,
+    "title": "Lew Tabackin's \"Dual Nature Trio\"",
+    "date": "2026-10-25",
+    "time": "19:30",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com/",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791975783407-6a71183e94b4232d7070fb99-lewtabackintrio-p-1600.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
