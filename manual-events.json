@@ -14770,7 +14770,8 @@
     "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791975169257-6531aa6b5cfa97b5e629568c-photo-edinburgh-2017-1-scaled-25737.jpg"
   },
   {
     "id": 1789036729310,
