@@ -25432,7 +25432,7 @@
   },
   {
     "id": 1791543846178,
-    "title": "Carolyn Shapiro",
+    "title": "Andy Morse & Denise Parent",
     "date": "2026-10-29",
     "time": "18:00",
     "venue": "The Eleven",
@@ -25442,7 +25442,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791543835641-screen-shot-2026-10-09-at-7-00-19-am.png",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1791544270689,
