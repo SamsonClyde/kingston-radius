@@ -19908,7 +19908,8 @@
     "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791974958758-694329a9c95eb8806cba6194-ian-hendrickson-smith-sq.jpg"
   },
   {
     "id": 1790091114431,
