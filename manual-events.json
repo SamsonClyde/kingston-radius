@@ -11850,7 +11850,8 @@
     "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
     "price": "$13",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791974187900-https-cdn-evbuc-com-images-1191629674-449002030048-1-origina.jpeg"
   },
   {
     "id": 1788279901525,
