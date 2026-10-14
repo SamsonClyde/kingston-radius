@@ -19710,7 +19710,8 @@
     "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
     "price": "$31-$63",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791973658093-ally-holiday-no-atp-1024x1024.png"
   },
   {
     "id": 290,
