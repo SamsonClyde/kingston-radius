@@ -18083,7 +18083,7 @@
   },
   {
     "id": 1789480012684,
-    "title": "Lúnasa",
+    "title": "Lúnasa, Armbruster",
     "date": "2026-12-09",
     "time": "20:00",
     "venue": "The Egg",
@@ -18093,7 +18093,8 @@
     "price": "$42+",
     "free": false,
     "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791973541949-img-5064-modif-11zon-980x653.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791973541949-img-5064-modif-11zon-980x653.jpg",
+    "_source": "manual"
   },
   {
     "id": 1789480648672,
