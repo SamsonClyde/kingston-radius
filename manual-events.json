@@ -26339,5 +26339,19 @@
     "price": "$30+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791974854682,
+    "title": "Bailen",
+    "date": "2026-10-17",
+    "time": "19:30",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com/",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791974826421-6a6e80547f87e8f1fb58d1b3-bailen-2026.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
