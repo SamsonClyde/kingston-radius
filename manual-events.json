@@ -4764,7 +4764,8 @@
     "price": "See website",
     "free": false,
     "_source": "scraped",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791974787838-6a7511423bbeaf76468064b5-uncaged-toy-piano.png"
   },
   {
     "id": 417,
