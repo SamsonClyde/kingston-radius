@@ -9947,7 +9947,8 @@
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
     "price": "$25",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791976491301-professor-louie-and-the-crowmatix-barn-web.jpg"
   },
   {
     "id": 1787577544428,
