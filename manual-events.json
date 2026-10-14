@@ -26321,5 +26321,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791974623253,
+    "title": "Michael Wilbur (Moon Hooch)",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "venue": "Lark Hall",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791974612170-https-cdn-evbuc-com-images-1194860772-449002030048-1-origina.jpeg",
+    "price": "$30+",
+    "free": false,
+    "_manual": true
   }
 ]
