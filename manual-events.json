@@ -11023,7 +11023,8 @@
     "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791974902865-6a7fa2f74a8f1fbb2784276d-wtr.png"
   },
   {
     "id": 228,
