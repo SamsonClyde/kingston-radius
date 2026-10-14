@@ -5838,7 +5838,8 @@
     "price": "$20adv/$25door",
     "free": false,
     "_source": "scraped",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791976364717-images.webp"
   },
   {
     "id": 410,
