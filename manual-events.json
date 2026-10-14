@@ -4869,7 +4869,8 @@
     "price": "See website",
     "free": false,
     "_source": "scraped",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791975393071-6984dcaab87108107d1efb20-beatleproject.png"
   },
   {
     "id": 458,
