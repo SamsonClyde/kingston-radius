@@ -4794,7 +4794,8 @@
     "price": "See website",
     "free": false,
     "_source": "scraped",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791974974736-6abae0a7c8c17878e207b815-10-24-26-falcon-website-2.jpg"
   },
   {
     "id": 422,
