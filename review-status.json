@@ -1550,10 +1550,6 @@
   },
   "Towne Crier Café||2026-10-09||20:00": "approved",
   "Towne Crier Café||2026-10-11||19:00": "approved",
-  "Tubby's||2026-10-13||5:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790246784710
-  },
   "Tubby's||2026-10-08||16:00": "approved",
   "Tubby's||2026-10-14||7:00 pm": {
     "status": "rejected",
