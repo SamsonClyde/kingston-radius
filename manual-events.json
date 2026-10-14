@@ -26403,5 +26403,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1791976114331,
+    "title": "Devin Dohrety",
+    "date": "2026-10-22",
+    "time": "20:00",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791976102731-oip.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
