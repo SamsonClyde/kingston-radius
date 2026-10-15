@@ -288,10 +288,6 @@
   "The Falcon||2026-10-04||19:30": "approved",
   "The Falcon||2026-10-09||19:30": "approved",
   "The Falcon||2026-10-10||19:30": "approved",
-  "The Falcon||2026-10-14||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076572718
-  },
   "The Falcon||2026-10-15||See website": {
     "status": "rejected",
     "hiddenAt": 1787076605532
@@ -1304,10 +1300,6 @@
     "hiddenAt": 1789483093108
   },
   "Trinity Lutheran Church||2026-09-18||19:00": "approved",
-  "Assembly Kingston||2026-10-14||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790087170143
-  },
   "Unicorn Bar||2026-10-17||8:30 pm": {
     "status": "rejected",
     "hiddenAt": 1790087170143
@@ -1551,10 +1543,6 @@
   "Towne Crier Café||2026-10-09||20:00": "approved",
   "Towne Crier Café||2026-10-11||19:00": "approved",
   "Tubby's||2026-10-08||16:00": "approved",
-  "Tubby's||2026-10-14||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790246914189
-  },
   "Tubby's||2026-10-20||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790246916590
@@ -1740,10 +1728,6 @@
     "status": "rejected",
     "hiddenAt": 1790680772980
   },
-  "Unicorn Bar||2026-10-14||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790680909117
-  },
   "Unicorn Bar||2026-10-17||5:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790680916012
@@ -1867,18 +1851,6 @@
     "status": "rejected",
     "hiddenAt": 1790962086279
   },
-  "Avalon Lounge||2026-10-14||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790962089649
-  },
-  "Avalon Lounge||2026-10-14||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790962133780
-  },
-  "Avalon Lounge||2026-10-14||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1791336625251
-  },
   "Avalon Lounge||2026-10-15||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790962147307
@@ -1899,10 +1871,6 @@
   "Colony Woodstock||2026-10-13||": {
     "status": "rejected",
     "hiddenAt": 1790962470173
-  },
-  "Colony Woodstock||2026-10-14||": {
-    "status": "rejected",
-    "hiddenAt": 1790962549954
   },
   "Colony Woodstock||2026-10-14||19:00": "approved",
   "Colony Woodstock||2026-10-18||": {
@@ -1949,10 +1917,6 @@
     "status": "rejected",
     "hiddenAt": 1791024656956
   },
-  "Unicorn Bar||2026-10-14||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1791024660963
-  },
   "Unicorn Bar||2026-10-23||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1791024664221
@@ -1964,10 +1928,6 @@
   "Towne Crier Café||2026-11-13||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1791110152812
-  },
-  "The Local Saugerties||2026-10-14||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1791196622282
   },
   "The Local Saugerties||2026-10-17||8:00 PM": {
     "status": "rejected",
