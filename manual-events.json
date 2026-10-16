@@ -26450,5 +26450,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792147264211,
+    "title": "Two Years in the Books - Night Lights (7:30pm)",
+    "date": "2026-10-17",
+    "time": "10:00",
+    "venue": "The Common Good",
+    "venueUrl": "https://www.thecommongoodny.com/",
+    "location": "Ellenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LHV8FPfmhjg3qRaLA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792147258624-unnamed-5.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
