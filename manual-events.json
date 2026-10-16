@@ -26596,5 +26596,20 @@
     "_source": "scraped",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792148716411-6879846f3bd3c1538391ca2a-ed-palermo-sq.png",
     "_manual": true
+  },
+  {
+    "id": 73,
+    "date": "2026-11-13",
+    "title": "Laura Cantrell",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "20:00",
+    "price": "See website",
+    "free": false,
+    "_source": "email",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792148959180-laura2.webp",
+    "_manual": true
   }
 ]
