@@ -2433,5 +2433,9 @@
   "Upstate Films' Orpheum Theatre||2026-10-26||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1792149522322
+  },
+  "Woodstock Playhouse||2026-11-07||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1792149604863
   }
 }
