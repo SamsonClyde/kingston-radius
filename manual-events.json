@@ -4786,8 +4786,8 @@
   },
   {
     "id": 421,
-    "date": "2026-10-24",
-    "title": "The Ed Palermo Big Band",
+    "date": "2026-11-29",
+    "title": "Will Bernard and Freelance Subversives",
     "venue": "The Falcon",
     "venueUrl": "https://www.liveatthefalcon.com",
     "location": "Marlboro, NY",
@@ -4796,8 +4796,8 @@
     "price": "See website",
     "free": false,
     "_source": "scraped",
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791974974736-6abae0a7c8c17878e207b815-10-24-26-falcon-website-2.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792148634616-6ad00b35e3381e48cea7d5bf-will-bernard-pedals-jpeg.jpg",
+    "_manual": true
   },
   {
     "id": 422,
