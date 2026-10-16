@@ -468,10 +468,6 @@
     "status": "rejected",
     "hiddenAt": 1787310292207
   },
-  "Tubby's||2026-10-15||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787310314296
-  },
   "Tubby's||2026-10-15||20:00": "approved",
   "Tubby's||2026-10-16||7:00 pm": {
     "status": "rejected",
@@ -1213,10 +1209,6 @@
   "The Egg||2026-12-18||20:00": {
     "status": "rejected",
     "hiddenAt": 1789478314511
-  },
-  "The Egg - Swyer Theatre||2026-10-15||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1789480222138
   },
   "The Egg - Swyer Theatre||2026-10-17||15:00": {
     "status": "rejected",
@@ -2181,9 +2173,5 @@
   "Curio Cabinet||2026-10-17||12:00": {
     "status": "rejected",
     "hiddenAt": 1791917062357
-  },
-  "The Local Saugerties||2026-10-15||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1791976330233
   }
 }
