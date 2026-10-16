@@ -2230,5 +2230,9 @@
     "status": "rejected",
     "hiddenAt": 1792148390611
   },
-  "Keegan Ales||2026-10-25||14:00": "approved"
+  "Keegan Ales||2026-10-25||14:00": "approved",
+  "Love, Velma||2026-12-04||11:55 pm": {
+    "status": "rejected",
+    "hiddenAt": 1792148419625
+  }
 }
