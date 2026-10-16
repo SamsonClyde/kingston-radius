@@ -2238,5 +2238,9 @@
   "Love, Velma||2027-02-13||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1792148426277
+  },
+  "Love, Velma||2027-04-24||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1792148430172
   }
 }
