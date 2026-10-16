@@ -9212,18 +9212,18 @@
   },
   {
     "id": 365,
-    "date": "2026-10-15",
-    "title": "Honky Tonk Dance Party with The Talking Hearts (Two Step Dance Class 7:30)",
-    "venue": "Tempo Arts",
-    "venueUrl": "https://tempokingston.org/events/",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
-    "time": "20:00",
-    "price": "$20-$35",
+    "date": "2026-11-13",
+    "title": "True North Jazz ProjectA Tribute to Sonny Rollins",
+    "venue": "Tompkins Corners Cultural Center",
+    "venueUrl": "https://www.tompkinscorners.org/music.html",
+    "location": "Putnam Valley, NY",
+    "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
+    "time": "19:00",
+    "price": "$25",
     "free": false,
     "_source": "scraped",
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791945247115-1000089927.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792149208890-graphic-true-north-jazz-2026-draft.jpg",
+    "_manual": true
   },
   {
     "id": 27,
