@@ -2382,5 +2382,10 @@
   "Time & Space Limited||2026-11-14||1:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792149174770
-  }
+  },
+  "Tompkins Corners Cultural Center||2026-11-13||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1792149223912
+  },
+  "Tompkins Corners Cultural Center||2026-11-13||19:00": "approved"
 }
