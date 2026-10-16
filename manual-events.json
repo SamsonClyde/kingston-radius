@@ -26506,5 +26506,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792147860661,
+    "title": "Baby Bonfire",
+    "date": "2026-11-07",
+    "time": "13:00",
+    "venue": "The KuBe",
+    "venueUrl": "https://www.instagram.com/beaconbonfire/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YzPP7Re8dNgyUsks8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792147853368-846536815-1104753902433415-6305897639167549017-n.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
