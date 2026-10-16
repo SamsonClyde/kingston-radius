@@ -20061,7 +20061,7 @@
   },
   {
     "id": 1790092166258,
-    "title": "Local Waves",
+    "title": "Local Waves - Play Time",
     "date": "2026-12-09",
     "time": "19:30",
     "venue": "The Local Saugerties",
@@ -20071,7 +20071,8 @@
     "price": "free",
     "free": false,
     "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792150362726-f1339c3e-1520-4780-a11d-f6fa54115a3f.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792150362726-f1339c3e-1520-4780-a11d-f6fa54115a3f.jpg",
+    "_source": "manual"
   },
   {
     "id": 1790092377474,
