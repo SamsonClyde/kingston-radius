@@ -1108,5 +1108,11 @@
     "location": "Poughkeepsie, NY",
     "mapsUrl": "https://maps.app.goo.gl/CDmjaDiGyRqtvn449",
     "drive": 36
+  },
+  "The Common Good": {
+    "venueUrl": "https://www.thecommongoodny.com/",
+    "location": "Ellenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LHV8FPfmhjg3qRaLA",
+    "drive": 42
   }
 }
