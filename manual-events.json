@@ -26436,5 +26436,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792145882016,
+    "title": "Veil Between Worlds - Dean Flanagan, TSO, Jennrock, The Highway Story, Sad Matt!, An Intimate Gathering of Wolves, Circus Riot, Crystal Wood, Atlantic Theory, Bleed Violet, Forget August, Leopard Monks, No More Sun, Weeping Angel, Machete Drive-By, Krucible",
+    "date": "2026-10-30",
+    "time": "16:00",
+    "venue": "Happy Valley Arcade",
+    "venueUrl": "https://happyvalleybeacon.com/events",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LAGZJ318ZdvL9AvC6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792145870558-unnamed-4.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
