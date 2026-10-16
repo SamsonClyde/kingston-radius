@@ -5860,7 +5860,7 @@
   {
     "id": 418,
     "date": "2026-10-23",
-    "title": "Flooding, Bloodsports",
+    "title": "Flooding, Bloodsports, Spain",
     "venue": "Tubby's",
     "venueUrl": "https://www.tubbyskingston.com/calendar/flooding-bloodsports",
     "location": "Kingston, NY",
@@ -5869,7 +5869,8 @@
     "price": "$20adv",
     "free": true,
     "_source": "manual",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": ""
   },
   {
     "id": 423,
