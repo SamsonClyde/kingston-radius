@@ -26581,5 +26581,20 @@
     "_source": "scraped",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792148673150-64975922c9b362f2e429d7de-photobybridgetbadore-4801-2.jpg",
     "_manual": true
+  },
+  {
+    "id": 454,
+    "date": "2026-12-19",
+    "title": "The Ed Palermo Big Band",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "19:30",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792148716411-6879846f3bd3c1538391ca2a-ed-palermo-sq.png",
+    "_manual": true
   }
 ]
