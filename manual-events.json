@@ -26492,5 +26492,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792147614175,
+    "title": "Everything Nice DJs - Jess Bonkers & DJ Solar",
+    "date": "2026-10-17",
+    "time": "17:00",
+    "venue": "Salt & Smoke",
+    "venueUrl": "https://www.instagram.com/everythingnice_ny/",
+    "location": "Mountain Dale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NMzAPCBv6znG27PK8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792147581988-unnamed-7.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
