@@ -26566,5 +26566,20 @@
     "_source": "scraped",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792148367217-img-5688.jpeg",
     "_manual": true
+  },
+  {
+    "id": 430,
+    "date": "2026-12-04",
+    "title": "Upstate",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "19:30",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792148673150-64975922c9b362f2e429d7de-photobybridgetbadore-4801-2.jpg",
+    "_manual": true
   }
 ]
