@@ -9756,16 +9756,18 @@
   },
   {
     "id": 1787575015875,
-    "title": "The Ultimate Ozzy Show - S.A.T.O & GTT Halloween Havoc",
+    "title": "Latin Night - DJ Tito Luv",
     "date": "2026-10-30",
-    "time": "19:00",
+    "time": "21:00",
     "venue": "The Silk Factory",
     "venueUrl": "https://www.silkfcty.com/event-list",
     "location": "Newburgh, NY",
     "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
-    "price": "$20",
+    "price": "$10adv/$25door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1787575261830,
