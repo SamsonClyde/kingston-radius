@@ -10004,7 +10004,8 @@
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
     "price": "$30",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792233972702-patrick-perone-no-writing-web.jpg"
   },
   {
     "id": 1787577634628,
