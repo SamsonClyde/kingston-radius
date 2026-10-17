@@ -18681,7 +18681,8 @@
     "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792231715547-image-260918125952726.png"
   },
   {
     "id": 1789482388074,
