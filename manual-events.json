@@ -10018,7 +10018,8 @@
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
     "price": "$25",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792234000087-cuboricua-web.jpg"
   },
   {
     "id": 1787577666024,
