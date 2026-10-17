@@ -20309,7 +20309,8 @@
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
     "price": "rsvp",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792200032911-1000090072.jpg"
   },
   {
     "id": 1790093925808,
