@@ -180,10 +180,6 @@
     "status": "rejected",
     "hiddenAt": 1786963896680
   },
-  "Assembly Kingston||2026-10-16||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786963905132
-  },
   "Assembly||2026-08-28||12:00 am": {
     "status": "rejected",
     "hiddenAt": 1786963910184
@@ -469,10 +465,6 @@
     "hiddenAt": 1787310292207
   },
   "Tubby's||2026-10-15||20:00": "approved",
-  "Tubby's||2026-10-16||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787310350242
-  },
   "Tubby's||2026-10-16||20:00": "approved",
   "Tubby's||2026-10-17||7:00 pm": {
     "status": "rejected",
@@ -1558,10 +1550,6 @@
     "hiddenAt": 1790247231006
   },
   "Unicorn Bar||2026-11-20||19:30": "approved",
-  "Westwind Orchard||2026-10-16||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790247288029
-  },
   "Westwind Orchard||2026-10-17||4:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790247292540
