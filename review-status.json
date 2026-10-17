@@ -289,10 +289,6 @@
     "hiddenAt": 1787076605532
   },
   "The Falcon||2026-10-15||19:30": "approved",
-  "The Falcon||2026-10-16||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076618335
-  },
   "The Falcon||2026-10-16||19:30": "approved",
   "The Falcon||2026-10-17||See website": {
     "status": "rejected",
@@ -939,10 +935,6 @@
   },
   "The Lace Mill||2026-09-02||18:00": "approved",
   "Towne Crier Café||2026-09-06||23:30": "approved",
-  "Towne Crier Café||2026-10-16||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788107865041
-  },
   "Towne Crier Café||2026-10-17||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1788107871922
@@ -1080,10 +1072,6 @@
   "Keegan Ales||2026-09-25||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789389012466
-  },
-  "Keegan Ales||2026-10-16||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789389021538
   },
   "The Falcon||2026-10-23||See website": {
     "status": "rejected",
@@ -1340,10 +1328,6 @@
     "status": "rejected",
     "hiddenAt": 1790117724955
   },
-  "The Living Room at Full Circle||2026-10-16||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790117820994
-  },
   "The Living Room at Full Circle||2026-10-23||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790117824296
@@ -1375,10 +1359,6 @@
   "Towne Crier Café||2026-10-31||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790117879776
-  },
-  "Unicorn Bar||2026-10-16||10:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790117891824
   },
   "Assembly Kingston||2026-09-25||12:00 am": {
     "status": "rejected",
@@ -1628,10 +1608,6 @@
   "Bardavon||2026-12-17||7:30 PM": {
     "status": "rejected",
     "hiddenAt": 1790419655763
-  },
-  "Keegan Ales||2026-10-16||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790419694830
   },
   "Keegan Ales||2026-10-31||9:00 pm": {
     "status": "rejected",
@@ -1893,10 +1869,6 @@
     "status": "rejected",
     "hiddenAt": 1791024664221
   },
-  "Towne Crier Café||2026-10-16||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1791110141571
-  },
   "Towne Crier Café||2026-11-13||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1791110152812
@@ -1932,10 +1904,6 @@
   "NoFun||2026-10-09||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791307322100
-  },
-  "Stissing Center||2026-10-16||6:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1791307419805
   },
   "Stissing Center||2026-10-17||7:30 PM": {
     "status": "rejected",
@@ -2071,10 +2039,6 @@
     "status": "rejected",
     "hiddenAt": 1791628588027
   },
-  "Tremper||2026-10-16||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1791628621878
-  },
   "Tubby's||2027-02-04||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1791628679951
@@ -2182,10 +2146,6 @@
     "status": "rejected",
     "hiddenAt": 1792148056033
   },
-  "Full Circle||2026-10-16||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792148062481
-  },
   "Keegan Ales||2026-10-17||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1792148122739
@@ -2231,10 +2191,6 @@
     "status": "rejected",
     "hiddenAt": 1792148430172
   },
-  "NoFun||2026-10-16||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792148444839
-  },
   "NoFun||2026-10-17||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792148467147
@@ -2270,10 +2226,6 @@
     "hiddenAt": 1792148746002
   },
   "The Falcon||2026-12-19||19:30": "approved",
-  "The Grand||2026-10-16||": {
-    "status": "rejected",
-    "hiddenAt": 1792148764348
-  },
   "The Grand||2026-10-17||4:30 PM": {
     "status": "rejected",
     "hiddenAt": 1792148767834
@@ -2326,14 +2278,6 @@
   "The Local Saugerties||2026-10-25||5:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792149132568
-  },
-  "Time & Space Limited||2026-10-16||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792149146815
-  },
-  "Time & Space Limited||2026-10-16||6:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792149151823
   },
   "Time & Space Limited||2026-10-17||7:00 PM": {
     "status": "rejected",
