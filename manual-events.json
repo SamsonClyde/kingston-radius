@@ -18401,16 +18401,18 @@
   },
   {
     "id": 1789481804356,
-    "title": "Asi Wind",
+    "title": "Duo Evol (Melanie Chirignan & Laura Melnicoff)",
     "date": "2026-10-30",
-    "time": "20:00",
+    "time": "17:30",
     "venue": "The Troy Savings Bank Music Hall",
     "venueUrl": "https://www.troymusichall.org/events/",
     "location": "Troy, NY",
     "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1789481837249,
