@@ -15507,7 +15507,8 @@
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
     "price": "$40",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792234161895-dervish-web.jpg"
   },
   {
     "id": 1789209095203,
