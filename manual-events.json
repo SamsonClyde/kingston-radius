@@ -15611,7 +15611,8 @@
     "price": "rsvp",
     "free": false,
     "_manual": true,
-    "_source": "manual"
+    "_source": "manual",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792319958158-beallcochran-use-web.jpg"
   },
   {
     "id": 1789210375841,
