@@ -26780,5 +26780,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792320243762,
+    "title": "Paul Guzzone – Salon Stage",
+    "date": "2026-11-07",
+    "time": "18:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792320236937-paul-guzzone.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
