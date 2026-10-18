@@ -24457,7 +24457,7 @@
     "venueUrl": "https://townecrier.com/",
     "location": "Beacon, NY",
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
-    "posterUrl": "",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792320661029-ats-2-0-stairs-web.jpg",
     "price": "$35",
     "free": false,
     "_manual": true
