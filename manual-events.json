@@ -24434,7 +24434,7 @@
     "venueUrl": "https://townecrier.com/",
     "location": "Beacon, NY",
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
-    "posterUrl": "",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792319731760-costellos-new-web.jpg",
     "price": "$20",
     "free": false,
     "_manual": true
