@@ -124,10 +124,6 @@
     "status": "rejected",
     "hiddenAt": 1786963682230
   },
-  "Assembly Kingston||2026-10-17||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786963717395
-  },
   "Assembly Kingston||2026-10-24||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963721979
@@ -462,10 +458,6 @@
   },
   "Tubby's||2026-10-15||20:00": "approved",
   "Tubby's||2026-10-16||20:00": "approved",
-  "Tubby's||2026-10-17||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787310381825
-  },
   "Tubby's||2026-10-17||20:00": "approved",
   "Tubby's||2026-10-22||7:00 pm": {
     "status": "rejected",
@@ -1190,18 +1182,6 @@
     "status": "rejected",
     "hiddenAt": 1789478314511
   },
-  "The Egg - Swyer Theatre||2026-10-17||15:00": {
-    "status": "rejected",
-    "hiddenAt": 1789480234007
-  },
-  "The Egg - Swyer Theatre||2026-10-17||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1789480241627
-  },
-  "The Egg||2026-10-17||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1789480250489
-  },
   "The Egg - Swyer Theatre||2026-10-18||15:00": {
     "status": "rejected",
     "hiddenAt": 1789480256939
@@ -1272,10 +1252,6 @@
     "hiddenAt": 1789483093108
   },
   "Trinity Lutheran Church||2026-09-18||19:00": "approved",
-  "Unicorn Bar||2026-10-17||8:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790087170143
-  },
   "Assembly Kingston||2026-12-29||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790117499444
@@ -1530,10 +1506,6 @@
     "hiddenAt": 1790247231006
   },
   "Unicorn Bar||2026-11-20||19:30": "approved",
-  "Westwind Orchard||2026-10-17||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790247292540
-  },
   "Tubby's||2026-11-12||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790283087278
@@ -1780,10 +1752,6 @@
     "status": "rejected",
     "hiddenAt": 1790852481368
   },
-  "The Half Moon||2026-10-17||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790852605820
-  },
   "The Half Moon||2026-10-17||19:00": "approved",
   "The Half Moon||2026-11-18||7:00 pm": {
     "status": "rejected",
@@ -1943,10 +1911,6 @@
   "Bardavon||2027-01-24||17:30": {
     "status": "rejected",
     "hiddenAt": 1791334553086
-  },
-  "UPAC||2026-10-17||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1791334622779
   },
   "UPAC||2026-11-08||15:00": {
     "status": "rejected",
@@ -2121,10 +2085,6 @@
   "Pearl Moon||2026-10-21||19:00": {
     "status": "rejected",
     "hiddenAt": 1791907060451
-  },
-  "Curio Cabinet||2026-10-17||12:00": {
-    "status": "rejected",
-    "hiddenAt": 1791917062357
   },
   "Bard College Conservatory||2026-10-23||": {
     "status": "rejected",
