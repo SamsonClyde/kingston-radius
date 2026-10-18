@@ -1013,10 +1013,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   #page-explore .pb-seg .pb-chip { padding: 4px 11px; font-size: 0.75rem; }
   .section-head .pb-clear { background: none; border: none; color: var(--red); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600; cursor: pointer; padding: 4px 2px; }
   .section-head .pb-clear:hover { text-decoration: underline; }
-  .section-head .head-actions { margin-left: auto; display: flex; gap: 10px; align-items: baseline; }
+  .section-head .head-actions { display: inline-flex; gap: 10px; align-items: baseline; }
   .section-head { flex-wrap: wrap; row-gap: 6px; }
   .section-head h2 { white-space: nowrap; }
-  @media (max-width: 600px) { .section-head .head-actions { flex-basis: 100%; margin-left: 0; gap: 18px; } }
   #page-explore .pb-clear { background: none; border: none; color: var(--red); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600; cursor: pointer; padding: 4px 2px; }
   #page-explore .pb-clear:hover { text-decoration: underline; }
   #page-explore .pb-select {
@@ -1250,7 +1249,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="section-head">
     <h2>Upcoming Shows</h2>
     <span class="event-count" id="event-count">Loading…</span>
-    <span class="head-actions"><button class="pb-clear" id="pb-slideshow" type="button" style="display:none;">▶ Slideshow</button><button class="pb-clear" id="pb-clear" type="button" style="display:none;">Clear filters</button></span>
+    <span class="head-actions"><button class="pb-clear" id="pb-slideshow" type="button" style="display:none;" aria-label="Play slideshow" title="Play slideshow">▶</button><button class="pb-clear" id="pb-clear" type="button" style="display:none;">Clear filters</button></span>
   </div>
 <div id="page-explore" style="display:none;">
 <div class="pb-wrap" id="pb-wrap">
