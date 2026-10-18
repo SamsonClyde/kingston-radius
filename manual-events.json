@@ -26794,5 +26794,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792320318723,
+    "title": "Brunch with Marji Zintz & Mike LaRocco – Salon Stage",
+    "date": "2026-11-08",
+    "time": "11:30",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792320306302-marji-zintz-mike-larocco-comp.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
