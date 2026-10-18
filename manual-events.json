@@ -20171,7 +20171,7 @@
   },
   {
     "id": 1790092860425,
-    "title": "Ministry In The Gallery (Jethro Tull Cover Band)",
+    "title": "Minstrels In The Gallery (Jethro Tull Cover Band)",
     "date": "2026-11-21",
     "time": "20:00",
     "venue": "Towne Crier Café",
@@ -20180,7 +20180,9 @@
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
     "price": "$30",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual",
+    "posterUrl": ""
   },
   {
     "id": 1790092931058,
