@@ -20195,7 +20195,8 @@
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
     "price": "$45",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792318878115-eileen-ivers-joyful-xmas.jpg"
   },
   {
     "id": 1790092968146,
