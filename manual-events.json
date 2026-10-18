@@ -5916,7 +5916,8 @@
     "price": "$21adv",
     "free": false,
     "_source": "manual",
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792321710033-unnamed-3.jpg"
   },
   {
     "id": 442,
