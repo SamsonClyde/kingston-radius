@@ -153,6 +153,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   #keyword-search:focus { outline: none; border-color: var(--red); }
   .venue-select:focus { outline: none; border-color: var(--text); }
+  .date-input {
+    border: 1.5px solid var(--border); background: transparent; color: var(--text);
+    font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 500;
+    padding: 5px 10px; border-radius: 20px; min-width: 0; width: 138px; color-scheme: light;
+  }
+  /* From / To always share one line, shrinking to fit narrow phones */
+  #date-filter-row { flex-wrap: nowrap; }
+  #date-filter-row .date-input { flex: 1 1 0; width: auto; max-width: 150px; }
+  @media (max-width: 380px) {
+    #date-filter-row { gap: 4px; }
+    #date-filter-row .filter-label { font-size: 0.66rem; letter-spacing: 0.04em; }
+    #date-filter-row .date-input { font-size: 0.74rem; padding: 5px 6px; }
+  }
+  [data-theme="dark"] .date-input { color-scheme: dark; }
+  .date-input:focus { outline: none; border-color: var(--text); }
+  .quick-btn { padding: 4px 11px; font-family: 'DM Serif Display', serif; font-size: 0.92rem; font-weight: 400; }
+  /* View picker: a row of four evenly spaced pills, each with a little picture */
+  #view-row { flex-wrap: nowrap; gap: 6px; max-width: 440px; }
+  .view-btn { flex: 1 1 0; min-width: 0; padding: 4px 4px; font-family: 'DM Serif Display', serif; font-size: 0.92rem; font-weight: 400; text-align: center; }   /* same serif as Distance and Tomorrow / This weekend */
+  .view-btn .vi { display: inline-block; width: 1.05rem; height: 1.05rem; margin-right: 3px; vertical-align: -3px; }
+  .view-btn .vi svg { display: block; width: 100%; height: 100%; }
+  @media (max-width: 380px) { .view-btn { font-size: 0.82rem; padding: 4px 2px; } .view-btn .vi { width: 0.95rem; height: 0.95rem; margin-right: 2px; } }
+  /* the "No artwork" sort only makes sense in the List view */
+  body:not([data-view="list"]) #sort-art-btn { display: none !important; }
 
   /* ── MAIN ── */
   main { max-width: 860px; margin: 0 auto; padding: 28px 16px 80px; }
@@ -952,6 +976,173 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 600px) {
     .mobile-break { display: block; flex-basis: 100%; height: 0; }
   }
+
+  /* ══ EXPLORE TAB — every rule below is scoped to #page-explore so it cannot touch the List tab ══ */
+  #page-explore .pb-wrap { max-width: 640px; margin: 0 auto; padding: 0; }
+  #page-explore .pb-titlerow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  #page-explore .pb-locbtn { background: none; border: 1.5px solid transparent; cursor: pointer; font-size: 1.5rem; line-height: 1; padding: 4px; border-radius: 20px; color: var(--text); font-family: 'DM Sans', sans-serif; }
+  #page-explore .pb-locbtn:hover { background: var(--tag-bg); }
+  #page-explore .pb-locbtn.on { font-size: 0.82rem; font-weight: 600; color: var(--red); border-color: var(--red); padding: 5px 12px; }
+  #page-explore .pb-pin.pb-me span { background: var(--text); color: var(--bg); font-size: 0.66rem; }
+  #page-explore .pbm-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 10000; display: none; align-items: center; justify-content: center; padding: 20px; }
+  #page-explore .pbm-overlay.show { display: flex; }
+  #page-explore .pbm-box { background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 22px; width: 100%; max-width: 420px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+  #page-explore .pbm-msg { font-size: 0.9rem; margin-bottom: 18px; line-height: 1.5; }
+  #page-explore .pbm-actions { display: flex; gap: 10px; justify-content: flex-end; }
+  #page-explore .pbm-btn { padding: 7px 16px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 0.84rem; cursor: pointer; border: 1px solid var(--border); background: none; color: var(--text); }
+  #page-explore .pbm-btn-confirm { background: var(--red); border-color: var(--red); color: #fff; }
+  #page-explore .pbm-btn:disabled { opacity: 0.6; cursor: default; }
+  #page-explore .pb-head h1 { font-family: 'DM Serif Display', serif; font-size: 2.1rem; font-weight: 400; line-height: 1.1; }
+  #page-explore .pb-head p { font-family: 'Lora', serif; font-style: italic; color: var(--muted); font-size: 0.95rem; margin-top: 6px; }
+  #page-explore .pb-wrap.wall { max-width: 100%; }
+  #page-explore .pb-filters { display: flex; flex-direction: column; gap: 10px; margin: 18px 0 6px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+  #page-explore .pb-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  #page-explore .pb-search { width: 100%; border: 1.5px solid var(--border); background: transparent; color: var(--text);
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; padding: 9px 16px; border-radius: 22px; }
+  #page-explore .pb-search:focus { outline: none; border-color: var(--red); }
+  #page-explore .pb-datebox { display: flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); flex: 1 1 150px; }
+  #page-explore .pb-datebox input { flex: 1; min-width: 0; border: 1.5px solid var(--border); background: transparent; color: var(--text);
+    font-family: 'DM Sans', sans-serif; font-size: 0.8rem; padding: 5px 10px; border-radius: 20px; }
+  #page-explore .pb-datebox input:focus { outline: none; border-color: var(--text); }
+  #page-explore .pb-chip { background: none; border: 1.5px solid var(--border); color: var(--text); border-radius: 20px; padding: 5px 13px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; }
+  #page-explore .pb-chip:hover { border-color: var(--red); color: var(--red); }
+  #page-explore .pb-chip.active { background: var(--red); border-color: var(--red); color: #fff; }
+  #page-explore .pb-toolbar { justify-content: space-between; }
+  #page-explore .pb-seg { display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; color: var(--muted); }
+  #page-explore .pb-seg .pb-chip { padding: 4px 11px; font-size: 0.75rem; }
+  .section-head .pb-clear { background: none; border: none; color: var(--red); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600; cursor: pointer; padding: 4px 2px; }
+  .section-head .pb-clear:hover { text-decoration: underline; }
+  .section-head .head-actions { margin-left: auto; display: flex; gap: 10px; align-items: baseline; }
+  .section-head { flex-wrap: wrap; row-gap: 6px; }
+  .section-head h2 { white-space: nowrap; }
+  @media (max-width: 600px) { .section-head .head-actions { flex-basis: 100%; margin-left: 0; gap: 18px; } }
+  #page-explore .pb-clear { background: none; border: none; color: var(--red); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600; cursor: pointer; padding: 4px 2px; }
+  #page-explore .pb-clear:hover { text-decoration: underline; }
+  #page-explore .pb-select {
+    flex: 1 1 0; min-width: 0; max-width: 100%; border: 1.5px solid var(--border); background: transparent; color: var(--text);
+    font-family: 'DM Sans', sans-serif; font-size: 0.8rem; padding: 6px 12px; border-radius: 20px; cursor: pointer;
+  }
+  #page-explore .pb-select option { background: var(--card); color: var(--text); }
+  #page-explore .pb-select:focus { outline: none; border-color: var(--text); }
+  #pbv-overlay .heart { background: none; border: none; color: var(--muted); cursor: pointer; padding: 4px; border-radius: 4px; display: inline-flex; line-height: 0; }
+  #pbv-overlay .heart svg { fill: none; }
+  #pbv-overlay .heart[aria-pressed="true"] svg { fill: currentColor; }
+  #page-explore .heart { background: none; border: none; color: var(--muted); cursor: pointer; padding: 4px; border-radius: 4px; display: inline-flex; line-height: 0; }
+  #page-explore .heart:hover { color: var(--red); }
+  #page-explore .heart svg { fill: none; }
+  #page-explore .heart[aria-pressed="true"] { color: var(--red); }
+  #page-explore .heart[aria-pressed="true"] svg { fill: currentColor; }
+  #page-explore .pb-tile { position: relative; }
+  #page-explore .pb-tile-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; }
+  #page-explore .pb-tile-row .pb-tile-date { margin-top: 0; }
+  #page-explore .pb-tile-heart { padding: 3px; margin-right: -3px; }
+  #page-explore .pb-tile-title a { color: inherit; text-decoration: none; }
+  #page-explore .pb-tile-title a:hover { color: var(--red); text-decoration: underline; text-underline-offset: 3px; }
+  #page-explore .pb-tile-venue a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 2px; }
+  #page-explore .pb-tile-venue a:hover { color: var(--red); text-decoration-color: var(--red); }
+  #page-explore #pb-map { overflow: hidden; height: min(62vh, 520px); min-height: 340px; border-radius: 8px; border: 1px solid var(--border); background: var(--tag-bg); margin-top: 16px; }
+  [data-theme="dark"] #page-explore #pb-map .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9); }
+  #page-explore .pb-pin span { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%;
+    background: var(--red); color: #fff; font: 700 0.78rem 'DM Sans', sans-serif; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.4); }
+  #page-explore .pb-pin.sel span { outline: 3px solid var(--text); }
+  #page-explore #pb-map-note { font-size: 0.78rem; color: var(--muted); margin: 10px 0 0; }
+  #page-explore #pb-map-towns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  #page-explore .pb-venuehead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 22px 0 2px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+  #page-explore .pb-venuehead a { color: var(--red); text-decoration: none; }
+  #page-explore .pb-venuehead a:hover { text-decoration: underline; }
+  #page-explore .pb-venuehead .pb-vmaps { font-weight: 600; letter-spacing: 0.02em; text-transform: none; color: var(--muted); }
+  #page-explore a.pb-rowlink { color: inherit; text-decoration: none; }
+  #page-explore a.pb-rowlink:hover { color: var(--red); text-decoration: underline; }
+@keyframes pb-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(192,57,43,0); } 40% { box-shadow: 0 0 0 10px rgba(192,57,43,0.35); } }
+  #page-explore .pb-post.pb-pulse .pb-poster { animation: pb-pulse 1.1s ease-out 2; }
+  #page-explore .pb-maprow { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); cursor: pointer; align-items: center; }
+  #page-explore .pb-maprow:hover .pb-tile-title { color: var(--red); }
+  #page-explore .pb-maprow img { width: 56px; height: 72px; object-fit: cover; border-radius: 4px; background: var(--tag-bg); flex: none; }
+  #page-explore .pb-maprow .pb-tile-date { margin-top: 0; }
+  #page-explore .pb-count { font-size: 0.78rem; color: var(--muted); margin: 10px 0 4px; display: flex; justify-content: space-between; align-items: center; }
+  #page-explore .pb-wall { --gap: 14px; display: flex; justify-content: center; gap: var(--gap); align-items: flex-start; margin: 4px 0 8px; }
+  #page-explore .pb-wallcol { flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols)); min-width: 0; }
+@media (min-width: 720px) {
+  #page-explore .pb-wall { --gap: 18px; }
+}
+  #page-explore .pb-day .pb-daycount { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-left: 10px; }
+  #page-explore .pb-tile { margin-bottom: 20px; }
+  #page-explore .pb-tile .pb-poster { width: 100%; }
+  #page-explore .pb-tile-date { margin-top: 8px; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); }
+  #page-explore .pb-tile-title { font-family: 'DM Serif Display', serif; font-size: 1.05rem; line-height: 1.15; margin-top: 2px; overflow-wrap: anywhere; }
+  #page-explore .pb-tile-venue { font-size: 0.74rem; color: var(--muted); margin-top: 2px; }
+  #page-explore .pb-tile.pb-broken .pb-poster { display: none; }
+  #page-explore .pb-day { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.25rem; color: var(--red);
+    margin: 38px 0 18px; padding-bottom: 8px; border-bottom: 2px solid var(--red); }
+  #page-explore .pb-day:first-of-type { margin-top: 22px; }
+  #page-explore .pb-post { margin-bottom: 46px; }
+  #page-explore .pb-poster {
+    display: block; position: relative; width: min(100%, calc(78vh * var(--ar, 0.75))); aspect-ratio: var(--ar, 3 / 4);
+    margin: 0 auto; background: var(--tag-bg); border-radius: 6px; overflow: hidden; cursor: zoom-in;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.14); padding: 0; border: none;
+  }
+  [data-theme="dark"] #page-explore .pb-poster { box-shadow: 0 4px 18px rgba(0,0,0,0.5); }
+  #page-explore .pb-poster img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  #page-explore .pb-post.pb-broken .pb-poster { display: none; }
+  #page-explore .pb-eyebrow { margin-top: 16px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); }
+  #page-explore .pb-title { font-family: 'DM Serif Display', serif; font-size: 1.65rem; line-height: 1.15; margin-top: 4px; overflow-wrap: anywhere; }
+  #page-explore .pb-where { font-family: 'Lora', serif; font-size: 1rem; margin-top: 6px; }
+  #page-explore .pb-where a { color: inherit; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; }
+  #page-explore .pb-where a:hover { text-decoration-color: var(--red); }
+  #page-explore .pb-drive { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+  #page-explore .pb-actions { display: flex; align-items: center; gap: 14px; margin-top: 12px; }
+  #page-explore .pb-title a { color: inherit; text-decoration: none; }
+  #page-explore .pb-title a:hover { color: var(--red); text-decoration: underline; text-underline-offset: 3px; }
+  #page-explore .icon-btn { background: none; border: none; color: var(--muted); cursor: pointer; padding: 4px; border-radius: 4px; display: inline-flex; }
+  #page-explore .icon-btn:hover { color: var(--red); background: var(--tag-bg); }
+  #page-explore .pb-loadmore { display: block; margin: 10px auto 0; background: none; border: 1.5px solid var(--border); color: var(--text);
+    border-radius: 20px; padding: 9px 24px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; cursor: pointer; }
+  #page-explore .pb-loadmore:hover { border-color: var(--red); color: var(--red); }
+  #page-explore .pb-empty { text-align: center; padding: 60px 20px; color: var(--muted); font-family: 'Lora', serif; }
+  #page-explore .kr-toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--text); color: var(--bg);
+    padding: 10px 18px; border-radius: 8px; font-size: 0.85rem; z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
+  #page-explore .kr-toast.show { opacity: 1; }
+  #pbv-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.93); z-index: 10001; display: none; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; }
+  #pbv-overlay.show { display: flex; }
+  #pbv-overlay .pbv-cap { color: #fff; text-align: center; font-size: 0.85rem; margin-top: 12px; max-width: 90vw; line-height: 1.35; }
+  #pbv-overlay .pbv-cap b { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.1rem; display: block; }
+  #pbv-overlay .pbv-img { max-width: 100%; max-height: calc(100% - 118px); min-height: 0; border-radius: 6px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); object-fit: contain; }
+  #pbv-overlay .pbv-close { position: fixed; top: 18px; right: 22px; width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(255,255,255,0.12); border: none; color: #fff; font-size: 1.2rem; line-height: 1; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; }
+  #pbv-overlay .pbv-close:hover { background: rgba(255,255,255,0.25); }
+  #pbv-overlay .v-nav { position: fixed; top: 50%; transform: translateY(-50%); width: 44px; height: 64px; border: none; border-radius: 8px;
+    background: rgba(255,255,255,0.12); color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
+  #pbv-overlay .v-nav:hover { background: rgba(255,255,255,0.25); }
+  #pbv-overlay .v-prev { left: 8px; }
+  #pbv-overlay .v-next { right: 8px; }
+  #pbv-overlay .v-bar { display: flex; align-items: center; gap: 6px; margin-top: 10px; }
+  #pbv-overlay .v-btn { background: rgba(255,255,255,0.12); border: none; color: #fff; border-radius: 20px; min-width: 40px; height: 36px; padding: 0 12px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+  #pbv-overlay .v-btn:hover { background: rgba(255,255,255,0.25); }
+  #pbv-overlay .v-bar .heart { color: #fff; padding: 0 12px; }
+  #pbv-overlay .v-bar .heart[aria-pressed="true"] { color: #ff7a68; }
+  #pbv-overlay .v-count { color: rgba(255,255,255,0.7); font-size: 0.78rem; margin-left: 6px; }
+  #pbv-overlay .v-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: transparent; }
+  #pbv-overlay .v-progress span { display: block; height: 100%; width: 0; background: var(--red); }
+@media (max-width: 480px) {
+  #pbv-overlay .v-nav { width: 36px; height: 52px; font-size: 1.6rem; }
+}
+
+  /* Wall: a box around each listing so neighbours are easy to tell apart (black in light mode, red in dark mode) */
+  #page-explore .pb-wall .pb-tile { border: 2px solid var(--text); border-radius: 8px; padding: 8px 8px 10px; }
+  [data-theme="dark"] #page-explore .pb-wall .pb-tile { border-color: var(--red); }
+  #page-explore .pb-noposter { border-left: 3px solid var(--border); padding-left: 14px; }
+  #page-explore .pb-np-box { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 120px; padding: 16px;
+    border-radius: 6px; background: var(--tag-bg); color: var(--muted); font-size: 0.78rem; letter-spacing: 0.04em; }
+  .no-art-tag { margin-left: 8px; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--red); border: 1px solid var(--red); border-radius: 10px; padding: 1px 7px; }
+  /* List tab: save-this-show heart, top-right corner of each listing */
+  .event-card .fav-btn { position: absolute; top: 10px; right: 12px; z-index: 2; padding: 4px; }
+  .event-card .fav-btn svg { fill: none; }
+  .event-card .fav-btn[aria-pressed="true"] { color: var(--red); }
+  .event-card .fav-btn[aria-pressed="true"] svg { fill: currentColor; }
+  .event-card .event-title-row { padding-right: 30px; }
 </style>
 <script>
   // Capture #admin hash before any other script can clear it
@@ -990,6 +1181,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="page-music" class="page active">
 
 <div class="filters-bar">
+  <div class="filter-row" id="view-row" role="group" aria-label="View">
+    <button class="filter-btn view-btn" data-view-mode="list" aria-label="List view"><span class="vi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h12M9 12h12M9 18h12"/><path d="M3.5 6h.01M3.5 12h.01M3.5 18h.01" stroke-width="3"/></svg></span> List</button>
+    <button class="filter-btn view-btn" data-view-mode="feed" aria-label="Feed view"><span class="vi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></span> Feed</button>
+    <button class="filter-btn view-btn" data-view-mode="wall" aria-label="Wall view"><span class="vi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9.33h18M3 14.67h18M12 4v5.33M7.5 9.33v5.34M16.5 9.33v5.34M12 14.67V20"/></svg></span> Wall</button>
+    <button class="filter-btn view-btn" data-view-mode="map" aria-label="Map view"><span class="vi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6.5l6-2.5 6 2.5 6-2.5v13.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/></svg></span> Map</button>
+  </div>
   <div class="filter-row">
     <span class="filter-label">Distance</span>
     <button class="filter-btn active" data-filter="all"><span class="mins-label-h2"><span class="num">All</span></span></button>
@@ -1003,11 +1200,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="filter-btn" data-filter="90"><span class="mins-label-h2"><span class="num">90</span><span class="cap"><span>mins</span><span>or</span><span>less</span></span></span></button>
     <!-- FREE FILTER HIDDEN — re-enable by removing comment: <button class="filter-btn red-btn" data-filter="free">Free only</button> -->
   </div>
-  <div class="filter-row" id="month-filter-row">
-    <span class="filter-label">Month</span>
-    <select id="month-select" class="venue-select"></select>
-    <button id="day-nav-btn" class="filter-btn" style="padding:4px 14px;font-family:'DM Serif Display',serif;font-size:1rem;font-weight:400;">Tomorrow</button>
-  </div>
   <div class="filter-row">
     <span class="filter-label">Venue</span>
     <select id="venue-select" class="venue-select">
@@ -1015,15 +1207,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </select>
     <button id="venue-share-btn" class="share-btn" onclick="shareVenue()" title="Share all of this venue's listings" aria-label="Share all of this venue's listings" style="display:none;padding:4px;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>
   </div>
+  <div class="filter-row" id="date-filter-row">
+    <span class="filter-label">From</span>
+    <input type="date" id="date-from" class="date-input" aria-label="From date">
+    <span class="filter-label" style="margin-left:6px;">To</span>
+    <input type="date" id="date-to" class="date-input" aria-label="To date">
+  </div>
+  <div class="filter-row" id="quick-row">
+    <button class="filter-btn quick-btn" data-quick="today">Today</button>
+    <button class="filter-btn quick-btn" id="day-nav-btn">Tomorrow</button>
+    <button class="filter-btn quick-btn" data-quick="weekend">This Weekend</button>
+  </div>
   <div class="filter-row" style="padding-top:2px;padding-bottom:4px;justify-content:space-between;align-items:center;">
     <div style="display:flex;gap:4px;align-items:center;">
-      <span style="font-size:0.72rem;color:var(--muted);margin-right:4px;">Sort:</span>
-      <button class="filter-btn active" id="sort-date-btn" onclick="setSortMode('date')" style="padding:4px 10px;font-size:0.75rem;">Date</button>
-      <button class="filter-btn" id="sort-venue-btn" onclick="setSortMode('venue')" style="padding:4px 10px;font-size:0.75rem;">Venue</button>
+      <button class="filter-btn quick-btn" id="saved-filter-btn" aria-pressed="false" title="Show only the shows you've saved">&#9829; Saved</button>
       <input type="search" id="keyword-search" name="kr-search" placeholder="Search…" autocomplete="off" data-lpignore="true" data-1p-ignore style="border:1.5px solid var(--border);background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.8rem;padding:4px 12px;border-radius:20px;margin-left:6px;width:150px;transition:border-color 0.15s;">
     </div>
     <button id="venue-delete-mode-btn" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;" onclick="toggleVenueDeleteMode()">Manage venues</button>
     <button id="title-hide-mode-btn" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;" onclick="toggleTitleHideMode()">Hide by title</button>
+  </div>
+  <div class="filter-row" id="admin-sort-row" style="display:none;padding-top:0;">
+    <span class="filter-label">Sort</span>
+    <button class="filter-btn active" id="sort-date-btn" onclick="setSortMode('date')" style="padding:4px 10px;font-size:0.75rem;">Date</button>
+    <button class="filter-btn" id="sort-venue-btn" onclick="setSortMode('venue')" style="padding:4px 10px;font-size:0.75rem;">Venue</button>
+    <button class="filter-btn" id="sort-art-btn" onclick="setSortMode('art')" title="Admin: list shows with no artwork first" style="padding:4px 10px;font-size:0.75rem;">No artwork</button>
   </div>
   <div id="venue-delete-bar" style="display:none;padding:8px 0 4px;gap:6px;flex-wrap:wrap;" class="filter-row">
     <span style="font-size:0.72rem;color:var(--red);font-weight:600;">Select a venue to hide all its events:</span>
@@ -1043,7 +1250,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="section-head">
     <h2>Upcoming Shows</h2>
     <span class="event-count" id="event-count">Loading…</span>
+    <span class="head-actions"><button class="pb-clear" id="pb-slideshow" type="button" style="display:none;">▶ Slideshow</button><button class="pb-clear" id="pb-clear" type="button" style="display:none;">Clear filters</button></span>
   </div>
+<div id="page-explore" style="display:none;">
+<div class="pb-wrap" id="pb-wrap">
+  <div id="pb-map-wrap" style="display:none;">
+    <div id="pb-map"></div>
+    <div id="pb-map-note"></div>
+    <div id="pb-map-towns"></div>
+    <div id="pb-map-panel"></div>
+  </div>
+  <div id="pb-feed"><div style="text-align:center;padding:60px 20px;"><div class="loading-spinner"></div></div></div>
+</div>
+</div><!-- /page-explore (Feed / Wall / Map) -->
   <div id="events-list">
     <div id="initial-loading" style="text-align:center;padding:70px 20px;color:var(--muted);">
       <div class="loading-spinner"></div>
@@ -1068,6 +1287,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="site-footer-links"><a href="about.html">About</a><span class="sep">·</span><a href="privacy.html">Privacy Policy</a><span class="sep">·</span><a href="contact.html">Contact</a></div>
 
 </div><!-- /page-music -->
+
+<div id="pbv-overlay" class="pbv-overlay" role="dialog" aria-modal="true" aria-label="Poster viewer">
+  <div class="v-progress"><span id="v-progress"></span></div>
+  <button id="pbv-close" class="pbv-close" aria-label="Close" title="Close">✕</button>
+  <button id="v-prev" class="v-nav v-prev" aria-label="Previous poster">‹</button>
+  <img id="pbv-img" class="pbv-img" src="" alt="Show poster">
+  <button id="v-next" class="v-nav v-next" aria-label="Next poster">›</button>
+  <div id="pbv-cap" class="pbv-cap"></div>
+  <div class="v-bar">
+    <button id="v-fav" class="v-btn heart" aria-label="Save this show" aria-pressed="false"></button>
+    <button id="v-play" class="v-btn" aria-label="Play slideshow">▶</button>
+    <button id="v-speed" class="v-btn" aria-label="Slideshow speed (seconds per poster)">2s</button>
+    <button id="v-full" class="v-btn" aria-label="Full screen" style="display:none;">⛶</button>
+    <span id="v-count" class="v-count"></span>
+  </div>
+</div>
+<!-- poster viewer / slideshow overlay ends here -->
 
 <!-- ── ADMIN PAGE ── -->
 <div id="page-admin" class="page">
@@ -1246,6 +1482,7 @@ const TOWN_COORDS = {  "kingston, ny": {lat: 41.9270, lng: -73.9974, side: 'w'},
   "bethel, ny": {lat: 41.7273, lng: -74.9024, side: 'w'},
   "ellenville, ny": {lat: 41.7176, lng: -74.3946, side: 'w'},
   "woodridge, ny": {lat: 41.7048, lng: -74.5985, side: 'w'},
+  "mountain dale, ny": {lat: 41.6960, lng: -74.5380, side: 'w'},
   "kerhonkson, ny": {lat: 41.7743, lng: -74.2879, side: 'w'},
   "maplecrest, ny": {lat: 42.2759, lng: -74.1868, side: 'w'},
   "walden, ny": {lat: 41.5612, lng: -74.1885, side: 'w'},
@@ -1620,6 +1857,20 @@ async function saveCustomVenueTemplates(obj) {
   return await _saveToServer({ customVenues: obj });
 }
 function getAllVenueTemplates() { return { ...VENUE_TEMPLATES, ...getCustomVenueTemplates() }; }
+// Where a town name should link: only what's entered on the show. The show's maps link;
+// for house shows with no address, whatever link is entered (usually the venue page).
+function krMapsLink(e) {
+  const ok = u => typeof u === 'string' && /^https?:\/\//i.test(u.trim());
+  if (ok(e.mapsUrl)) return e.mapsUrl.trim();
+  if (ok(e.venueUrl)) return e.venueUrl.trim();
+  return '';
+}
+function krTownLink(e, cls) {
+  if (!e.location) return '';
+  const url = krMapsLink(e);
+  const c = cls ? ` class="${cls}"` : '';
+  return url ? `<a${c} href="${esc(url)}" target="_blank" rel="noopener">${esc(e.location)}</a>` : (cls ? `<span${c}>${esc(e.location)}</span>` : esc(e.location));
+}
 
 function getHiddenTitles() {
   return _hiddenTitlesCache ?? _getLocal(HIDDEN_TITLES_KEY, []);
@@ -1806,6 +2057,31 @@ async function loadFromServer() {
 function eventKey(e) {
   return `${e.venue}||${e.date}||${e.time||''}`;
 }
+// ── SAVED SHOWS (hearts) ──────────────────────────────────────────────────────
+// One list per device, shared by every view (heart on each listing; ♥ Saved filter).
+const FAV_KEY = 'kr_favs';
+try { // carry over anything saved before the tabs were merged
+  if (localStorage.getItem(FAV_KEY) === null && localStorage.getItem('kr_blog_favs')) localStorage.setItem(FAV_KEY, localStorage.getItem('kr_blog_favs'));
+} catch (e) {}
+function krFavGet() { try { return new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]')); } catch (e) { return new Set(); } }
+function krFavToggle(key) {
+  const s = krFavGet();
+  if (s.has(key)) s.delete(key); else s.add(key);
+  try { localStorage.setItem(FAV_KEY, JSON.stringify([...s])); } catch (e) {}
+  window.dispatchEvent(new CustomEvent('kr-favs-changed', { detail: { key } }));
+  return s.has(key);
+}
+const KR_HEART_SVG = '<svg viewBox="0 0 24 24" width="17" height="17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>';
+window.addEventListener('kr-favs-changed', () => {
+  const s = krFavGet();
+  document.querySelectorAll('.event-card .fav-btn').forEach(b => b.setAttribute('aria-pressed', s.has(b.dataset.key)));
+});
+// ── ONE SET OF FILTERS FOR EVERY VIEW ─────────────────────────────────────────
+// List, Feed, Wall and Map all read this same object, so a filter set in one view is still set in the next.
+const KRF = { q: '', from: '', to: '', venue: '', dist: 'all', saved: false, sort: 'date', view: 'list', dayOffset: null };
+const KR_BOOT = new URLSearchParams(window.location.search);   // read once, before anything rewrites the address
+window.addEventListener('kr-favs-changed', () => { krUpdateSavedChip(); if (KRF.saved && typeof krRender === 'function') krRender(); });
+
 function hasManualOverride(e) {
   return getManualEvents().some(m => eventKey(m) === eventKey(e));
 }
@@ -1987,54 +2263,7 @@ function updateBadge() {
   }
 }
 
-// ── MONTH BUTTONS ─────────────────────────────────────────────────────────────
-let _activeMonth = null;
-let _activeDayOffset = null; // null = inactive; 1 = tomorrow, 2 = day after, etc.
-
-function updateDayNavBtn() {
-  const btn = document.getElementById('day-nav-btn');
-  if (!btn) return;
-  btn.textContent = _activeDayOffset === null ? 'Tomorrow' : 'Next Day';
-  btn.classList.toggle('active', _activeDayOffset !== null);
-}
-
-document.getElementById('day-nav-btn')?.addEventListener('click', () => {
-  _activeDayOffset = (_activeDayOffset || 0) + 1;
-  _activeMonth = null; // a specific day and a specific month are mutually exclusive
-  _currentPage = 1;
-  updateDayNavBtn();
-  buildMonthButtons();
-  renderEvents();
-});
-
-function buildMonthButtons() {
-  const select = document.getElementById('month-select');
-  if (!select) return;
-  const today = new Date(); today.setHours(0,0,0,0);
-  const months = [...new Set(
-    getApprovedEvents()
-      .filter(e => parseDate(e.date) >= today)
-      .map(e => e.date?.slice(0,7))
-      .filter(Boolean)
-  )].sort();
-  const options = months.map(m => {
-    const [y,mo] = m.split('-');
-    const label = new Date(+y, +mo-1).toLocaleString('default', {month:'short'}) + ' ' + y;
-    return `<option value="${m}"${_activeMonth===m?' selected':''}>${label}</option>`;
-  }).join('');
-  select.innerHTML = `<option value="">All months</option>${options}`;
-  select.value = _activeMonth || '';
-  select.onchange = () => {
-    _activeMonth = select.value || null;
-    _activeDayOffset = null; // switching months exits day-by-day mode
-    _currentPage = 1;
-    updateDayNavBtn();
-    renderEvents();
-  };
-}
-
 // ── VENUE SELECT ──────────────────────────────────────────────────────────────
-let _activeVenue    = null;
 let _hiddenVenues   = new Set(JSON.parse(localStorage.getItem('kr_hidden_venues') || '[]'));
 
 function saveHiddenVenues() { localStorage.setItem('kr_hidden_venues', JSON.stringify([..._hiddenVenues])); }
@@ -2049,33 +2278,31 @@ function populateVenueSelect() {
       .map(e => e.venue)
   )].sort();
   sel.innerHTML = '<option value="">All venues</option>' +
-    venues.map(v => `<option value="${esc(v)}"${_activeVenue===v?' selected':''}>${esc(v)}</option>`).join('');
-  sel.onchange = () => { _activeVenue = sel.value || null; _currentPage = 1; renderEvents(); };
+    venues.map(v => `<option value="${esc(v)}"${KRF.venue===v?' selected':''}>${esc(v)}</option>`).join('');
+  sel.value = KRF.venue || '';
+  sel.onchange = () => { KRF.venue = sel.value || ''; krFilterChanged(); };
 }
 
 // ── RENDER EVENTS ─────────────────────────────────────────────────────────────
-let _activeFilter = 'all';
-let _sortMode = 'date';
 let _currentPage = 1;
-let _searchKeyword = '';
 function setSortMode(mode) {
-  _sortMode = mode;
-  _currentPage = 1;
-  document.getElementById('sort-date-btn')?.classList.toggle('active', mode === 'date');
-  document.getElementById('sort-venue-btn')?.classList.toggle('active', mode === 'venue');
-  renderEvents();
+  KRF.sort = mode;
+  if (mode === 'art') KRF.view = 'list';      // "No artwork" is a List-only sort
+  krFilterChanged();
 }
 
-function renderEvents() {
-  updateVenueShareBtn();
-  const container = document.getElementById('events-list');
-  if (!container) return;
+// Every upcoming, approved, not-hidden show: the pool all four views draw from
+function krBaseEvents() {
   const today = new Date(); today.setHours(0,0,0,0);
-  let events = getApprovedEvents()
+  return getApprovedEvents()
     .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue) && !isTitleHidden(e.title));
+}
+// The shows that pass the current filters, in the current sort order (opts.sort overrides the sort)
+function krFilteredEvents(opts) {
+  let events = krBaseEvents();
 
-  if (_activeFilter !== 'all') {
-    if (_activeFilter === '0') {
+  if (KRF.dist !== 'all') {
+    if (KRF.dist === '0') {
       if (_customLocation && _customLocation.townKey) {
         // Same button, same filter value — but once a zip is set, "Kingston
         // only" has become "My Radius [zip]", so this now means "only this
@@ -2089,7 +2316,7 @@ function renderEvents() {
         );
       }
     } else {
-      const maxMins = parseInt(_activeFilter);
+      const maxMins = parseInt(KRF.dist);
       events = events.filter(e => {
         if (_customLocation) {
           // A visitor has set their own zip code — use estimated distance from
@@ -2105,36 +2332,45 @@ function renderEvents() {
       });
     }
   }
-  if (_activeDayOffset !== null) {
-    const target = new Date(); target.setHours(0,0,0,0);
-    target.setDate(target.getDate() + _activeDayOffset);
-    const y = target.getFullYear();
-    const m = String(target.getMonth()+1).padStart(2,'0');
-    const d = String(target.getDate()).padStart(2,'0');
-    const targetStr = `${y}-${m}-${d}`;
-    events = events.filter(e => e.date === targetStr);
-  } else if (_activeMonth) {
-    events = events.filter(e => e.date?.startsWith(_activeMonth));
-  }
-  if (_activeVenue) events = events.filter(e => e.venue === _activeVenue);
-  if (_searchKeyword) {
+  if (KRF.from) events = events.filter(e => e.date >= KRF.from);
+  if (KRF.to)   events = events.filter(e => e.date <= KRF.to);
+  if (KRF.venue) events = events.filter(e => e.venue === KRF.venue);
+  if (KRF.saved) { const _fv = krFavGet(); events = events.filter(e => _fv.has(eventKey(e))); }
+  const _kw = KRF.q.trim().toLowerCase();
+  if (_kw) {
     events = events.filter(e =>
-      (e.title||'').toLowerCase().includes(_searchKeyword) ||
-      (e.venue||'').toLowerCase().includes(_searchKeyword) ||
-      (e.location||'').toLowerCase().includes(_searchKeyword)
+      (e.title||'').toLowerCase().includes(_kw) ||
+      (e.venue||'').toLowerCase().includes(_kw) ||
+      (e.location||'').toLowerCase().includes(_kw)
     );
   }
-  if (_sortMode === 'venue') {
+  // "No artwork" is an admin-only sort; fall back to date order if you've signed out
+  if (KRF.sort === 'art' && !sessionStorage.getItem('kr_authed')) KRF.sort = 'date';
+  const _mode = (opts && opts.sort) || KRF.sort;
+  if (_mode === 'venue') {
     events.sort((a,b) => (a.venue||'').localeCompare(b.venue||'') || (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
+  } else if (_mode === 'art') {
+    // shows with no artwork first, then the rest; each group in date order
+    events.sort((a,b) => (!!a.posterUrl - !!b.posterUrl) || (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
   } else {
     events.sort((a,b) => (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
   }
+  return events;
+}
+
+function renderListView() {
+  const container = document.getElementById('events-list');
+  if (!container) return;
+  const events = krFilteredEvents();
 
   const countEl = document.getElementById('event-count');
-  if (countEl) countEl.textContent = events.length ? `${events.length} show${events.length===1?'':'s'}` : '';
+  const _missingArt = events.filter(e => !e.posterUrl).length;
+  if (countEl) countEl.textContent = events.length
+    ? `${events.length} show${events.length===1?'':'s'}` + (KRF.sort === 'art' ? ` · ${_missingArt} missing artwork` : '')
+    : '';
 
   if (!events.length) {
-    container.innerHTML = '<div style="text-align:center;padding:60px 20px;color:var(--muted);">No shows found.</div>';
+    container.innerHTML = '<div style="text-align:center;padding:60px 20px;color:var(--muted);">' + (KRF.saved ? 'No saved shows match. Tap the heart on a listing to save it.' : 'No shows found.') + '</div>';
     return;
   }
   const isAdmin = document.body.classList.contains('admin-mode');
@@ -2148,7 +2384,7 @@ function renderEvents() {
   const pageEvents = events.slice(pageStart, pageStart + PAGE_SIZE);
 
   let listHtml;
-  if (_sortMode === 'venue') {
+  if (KRF.sort === 'venue') {
     const groups = {};
     pageEvents.forEach(e => { if (!groups[e.venue]) groups[e.venue] = []; groups[e.venue].push(e); });
     listHtml = Object.keys(groups).sort().map(venue => `
@@ -2156,6 +2392,17 @@ function renderEvents() {
         <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);padding:6px 0;border-bottom:1px solid var(--border);margin-bottom:10px;">${venue}</div>
         ${groups[venue].map(e => buildEventCard(e, isAdmin)).join('')}
       </div>`).join('');
+  } else if (KRF.sort === 'art') {
+    const head = (label, n) => `<div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);padding:6px 0;border-bottom:1px solid var(--border);margin:${label.startsWith('Has') ? '24px' : '0'} 0 10px;">${label} (${n})</div>`;
+    const hasCount = events.length - _missingArt;
+    let lastHead = null;
+    listHtml = pageEvents.map(e => {
+      const missing = !e.posterUrl;
+      const h = missing ? 'Missing artwork' : 'Has artwork';
+      const top = h !== lastHead ? head(h, missing ? _missingArt : hasCount) : '';
+      lastHead = h;
+      return top + buildEventCard(e, isAdmin);
+    }).join('');
   } else {
     listHtml = pageEvents.map(e => buildEventCard(e, isAdmin)).join('');
   }
@@ -2399,11 +2646,11 @@ function showLocationModal() {
       localStorage.setItem('kr_custom_location', JSON.stringify(_customLocation));
       // "Kingston Only" no longer makes sense once centered on a visitor's own
       // zip, so default to the widest distance filter instead.
-      _activeFilter = '90';
-      document.querySelectorAll('[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === '90'));
+      KRF.dist = '90';
       close();
-      renderEvents();
       updateRadiusUI();
+      window.dispatchEvent(new CustomEvent('kr-location-changed', { detail: { from: 'shows' } }));
+      krFilterChanged();
       showToast(`Showing distances from ${zip} ✓`);
     } catch (e) {
       errorEl.textContent = "Couldn't find that zip code — double-check it and try again.";
@@ -2417,11 +2664,11 @@ function showLocationModal() {
   resetBtn.onclick = () => {
     _customLocation = null;
     localStorage.removeItem('kr_custom_location');
-    _activeFilter = 'all';
-    document.querySelectorAll('[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
+    KRF.dist = 'all';
     close();
-    renderEvents();
     updateRadiusUI();
+    window.dispatchEvent(new CustomEvent('kr-location-changed', { detail: { from: 'shows' } }));
+    krFilterChanged();
     showToast('Back to distances from Kingston ✓');
   };
   overlay.onclick = (e) => { if (e.target === overlay) close(); };
@@ -2481,14 +2728,12 @@ async function copyEventBlurb(e) {
   }
 }
 
+// A ?e=… link (from a List-view share) opens the List view on the page that holds that show and pulses it
 function jumpToSharedEvent() {
-  const params = new URLSearchParams(window.location.search);
-  const sharedHash = params.get('e') || params.get('event'); // 'event' kept for old links
+  const sharedHash = KR_BOOT.get('e') || KR_BOOT.get('event'); // 'event' kept for old links
   if (!sharedHash) return;
 
-  const today = new Date(); today.setHours(0,0,0,0);
-  const upcoming = getApprovedEvents()
-    .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue) && !isTitleHidden(e.title))
+  const upcoming = krBaseEvents()
     .sort((a,b) => (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
 
   // New short-hash links match directly; old base64 links still decode as a fallback
@@ -2500,24 +2745,11 @@ function jumpToSharedEvent() {
   if (idx === -1) return; // event not found, in the past, or hidden — just show the normal homepage
   if (!decoded) decoded = eventKey(upcoming[idx]);
 
-  // Reset to default view so the shared event is guaranteed visible
-  _activeFilter = 'all';
-  _activeMonth = null;
-  _activeDayOffset = null;
-  _activeVenue = null;
-  _searchKeyword = '';
-  _sortMode = 'date';
-  const searchBox = document.getElementById('keyword-search');
-  if (searchBox) searchBox.value = '';
-  updateDayNavBtn();
-  document.querySelectorAll('[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
-  document.getElementById('sort-date-btn')?.classList.add('active');
-  document.getElementById('sort-venue-btn')?.classList.remove('active');
+  // Reset to the default List view so the shared show is guaranteed visible
+  Object.assign(KRF, { q: '', from: '', to: '', venue: '', dist: 'all', saved: false, sort: 'date', view: 'list', dayOffset: null });
   _currentPage = Math.floor(idx / 100) + 1;
-
-  renderEvents();
-  buildMonthButtons();
   populateVenueSelect();
+  krRender();
 
   setTimeout(() => {
     const el = document.querySelector(`[data-ekey="${CSS.escape(decoded)}"]`);
@@ -2531,24 +2763,25 @@ function jumpToSharedEvent() {
 
 function updateVenueShareBtn() {
   const btn = document.getElementById('venue-share-btn');
-  if (btn) btn.style.display = _activeVenue ? 'inline-flex' : 'none';
+  if (btn) btn.style.display = KRF.venue ? 'inline-flex' : 'none';
 }
 
 // Shares a link that opens the site already filtered to this venue's listings
-// (handled on load by applyVenueParam).
+// (read on load by krInitFromUrl). It opens in the same view the sender is using.
 async function shareVenue() {
-  if (!_activeVenue) return;
+  if (!KRF.venue) return;
   const url = new URL(window.location.href);
   url.hash = '';
   url.search = '';
-  url.searchParams.set('venue', _activeVenue);
+  url.searchParams.set('venue', KRF.venue);
+  if (KRF.view !== 'list') url.searchParams.set('view', KRF.view);
   const shareUrl = url.toString();
 
   if (navigator.share) {
     try {
       await navigator.share({
-        title: `${_activeVenue} — Kingston Radius`,
-        text: `All upcoming shows at ${_activeVenue}`,
+        title: `${KRF.venue} — Kingston Radius`,
+        text: `All upcoming shows at ${KRF.venue}`,
         url: shareUrl,
       });
       return;
@@ -2563,34 +2796,6 @@ async function shareVenue() {
   } catch {
     showToast('Could not copy link');
   }
-}
-
-function applyVenueParam() {
-  const params = new URLSearchParams(window.location.search);
-  const requested = (params.get('venue') || '').trim();
-  if (!requested) return;
-
-  // Only filter to venues that actually have upcoming shows (matched ignoring
-  // case), so a stale or mistyped link can't leave the page filtered to nothing.
-  const today = new Date(); today.setHours(0,0,0,0);
-  const venues = [...new Set(
-    getApprovedEvents()
-      .filter(e => parseDate(e.date) >= today && !_hiddenVenues.has(e.venue) && !isTitleHidden(e.title))
-      .map(e => e.venue)
-  )];
-  const match = venues.find(v => v.toLowerCase() === requested.toLowerCase());
-
-  history.replaceState(null, '', window.location.pathname);
-  if (!match) {
-    showToast('No upcoming shows found for that venue');
-    return;
-  }
-
-  _activeVenue = match;
-  _currentPage = 1;
-  const sel = document.getElementById('venue-select');
-  if (sel) sel.value = match;
-  renderEvents();
 }
 
 function buildEventCard(e, isAdmin) {
@@ -2666,6 +2871,7 @@ function buildEventCard(e, isAdmin) {
     : '';
 
   return `<div class="event-card${e._manual?' manual-event':''}" data-ekey="${esc(key)}">
+    <button class="share-btn fav-btn" data-action="fav-event" data-key="${esc(key)}" aria-pressed="${krFavGet().has(key)}" title="Save this show" aria-label="Save this show">${KR_HEART_SVG}</button>
     <div class="event-date">
       <span class="day-name">${dayName}</span>
       <span class="day-num">${dayNum}</span>
@@ -2680,10 +2886,10 @@ function buildEventCard(e, isAdmin) {
       </div>
       <div class="event-venue-row">
         <a class="venue-name" href="index.html?venue=${encodeURIComponent(e.venue)}" target="_blank" rel="noopener" title="See all ${esc(e.venue)} listings">${esc(e.venue)}</a>
-        ${e.mapsUrl  ? `<a class="city-link"  href="${esc(e.mapsUrl)}"  target="_blank" rel="noopener">${esc(e.location)}</a>` : `<span class="city-link">${esc(e.location)}</span>`}
+        ${krTownLink(e, 'city-link')}
       </div>
       <div class="event-bottom-row">
-        <span style="font-size:0.75rem;color:var(--muted);">${priceStr}</span>
+        <span style="font-size:0.75rem;color:var(--muted);">${priceStr}${isAdmin && !e.posterUrl ? '<span class="no-art-tag">No artwork</span>' : ''}</span>
         <div class="event-icons">
           ${e.posterUrl ? `<button class="share-btn" data-action="view-poster" data-poster-url="${esc(e.posterUrl)}" title="View poster" aria-label="View poster"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" stroke="none"/><path d="M21 15l-5-5L5 21"/></svg></button>` : ''}
           <button class="share-btn" data-action="share-event" data-key="${esc(key)}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>
@@ -2929,15 +3135,44 @@ function renderAdminNotes() {
   }
 
   // 5. Listings missing key info
-  const missingInfo = upcoming.filter(e => !e.mapsUrl || !e.venueUrl || !e.location);
+  const missingInfo = upcoming.filter(e => !e.mapsUrl || !e.location);
   if (missingInfo.length) {
     totalIssues += missingInfo.length;
     html += `<div class="note-section"><h3>ℹ️ Listings missing info (${missingInfo.length})</h3>
-      <p class="note-desc">Missing a maps link, venue link, or location — the matching part of the card won't be clickable for these.</p>
+      <p class="note-desc">Missing a maps link or a town. Without a maps link the town links to the show's venue page link instead (house shows); without either, or without a town, it isn't clickable. (Missing venue page links are listed separately below.)</p>
       <div class="note-item">${missingInfo.slice(0,15).map(e => {
-        const missing = [!e.venueUrl && 'venue link', !e.mapsUrl && 'maps link', !e.location && 'location'].filter(Boolean).join(', ');
+        const missing = [!e.mapsUrl && 'maps link', !e.location && 'location'].filter(Boolean).join(', ');
         return `${esc(e.title)} (${esc(e.venue)}) — missing ${missing}`;
       }).join('<br>')}${missingInfo.length > 15 ? `<br><em>+ ${missingInfo.length - 15} more</em>` : ''}</div></div>`;
+  }
+
+  // 5a. Upcoming shows with no venue page link (the title can't be clicked)
+  const noVenueUrl = upcoming.filter(e => !(e.venueUrl && String(e.venueUrl).trim()) && parseDate(e.date) >= today);
+  if (noVenueUrl.length) {
+    const byV = new Map();
+    noVenueUrl.forEach(e => { if (!byV.has(e.venue)) byV.set(e.venue, []); byV.get(e.venue).push(e); });
+    const vRows = [...byV.entries()].map(([venue, list]) => ({ venue, n: list.length, next: list.map(x => x.date).sort()[0], hasTpl: !!(getAllVenueTemplates()[venue] || {}).venueUrl }))
+      .sort((a, b) => b.n - a.n || a.venue.localeCompare(b.venue));
+    totalIssues += vRows.length;
+    html += `<div class="note-section"><h3>🔗 Missing venue page link (${noVenueUrl.length} show${noVenueUrl.length === 1 ? '' : 's'} · ${vRows.length} venue${vRows.length === 1 ? '' : 's'})</h3>
+      <p class="note-desc">Upcoming shows with no venue page link, so the title isn't clickable. Add the link with the Edit button on a card, or save one for the venue in Manage venues so future shows pick it up.</p>
+      <div class="note-item">${vRows.slice(0, 40).map(r => `<strong>${esc(r.venue)}</strong> — ${r.n} show${r.n === 1 ? '' : 's'} (next: ${parseDate(r.next).toLocaleDateString('en-US', {month:'short', day:'numeric'})})${r.hasTpl ? ' · venue has a saved link, edit these shows' : ' · no saved link for this venue'}`).join('<br>')}${vRows.length > 40 ? `<br><em>+ ${vRows.length - 40} more venues</em>` : ''}</div></div>`;
+  }
+
+  // 5b. Upcoming shows that still have no poster/artwork, grouped by venue (most missing first)
+  const noArt = upcoming.filter(e => !e.posterUrl && parseDate(e.date) >= today);
+  if (noArt.length) {
+    const byVenueArt = new Map();
+    noArt.forEach(e => { if (!byVenueArt.has(e.venue)) byVenueArt.set(e.venue, []); byVenueArt.get(e.venue).push(e); });
+    const artRows = [...byVenueArt.entries()]
+      .map(([venue, list]) => ({ venue, n: list.length, next: list.map(x => x.date).sort()[0] }))
+      .sort((a, b) => b.n - a.n || a.venue.localeCompare(b.venue));
+    totalIssues += artRows.length;
+    const total = upcoming.filter(e => parseDate(e.date) >= today).length;
+    html += `<div class="note-section"><h3>🖼️ Shows missing artwork (${noArt.length} of ${total} upcoming · ${artRows.length} venues)</h3>
+      <p class="note-desc">Upcoming shows with no poster yet. Venues with the most missing are first. Use the <strong>No artwork</strong> sort in the List tab to see each show, and the Edit button on a card to add its poster.</p>
+      <div style="margin:0 0 10px;"><button data-action="notes-show-missing-art" style="font-size:0.76rem;background:var(--red);border:none;border-radius:5px;padding:5px 12px;cursor:pointer;color:#fff;font-family:'DM Sans',sans-serif;">Show these in the list</button></div>
+      <div class="note-item">${artRows.slice(0, 40).map(r => `<strong>${esc(r.venue)}</strong> — ${r.n} show${r.n === 1 ? '' : 's'} (next: ${parseDate(r.next).toLocaleDateString('en-US', {month:'short', day:'numeric'})})`).join('<br>')}${artRows.length > 40 ? `<br><em>+ ${artRows.length - 40} more venues</em>` : ''}</div></div>`;
   }
 
   // 6. Similar venue names that might be typos/duplicates
@@ -3203,7 +3438,7 @@ document.addEventListener('click', async (ev) => {
       [newKey]: 'approved',
     });
     const ok = okManual && okStatus;
-    renderAdminUnreviewed(); renderEvents(); buildMonthButtons(); populateVenueSelect(); updateBadge();
+    renderAdminUnreviewed(); renderEvents(); populateVenueSelect(); updateBadge();
     if (!ok) alert('This approval is showing on your screen, but saving it to the server failed after several attempts. It\'s safe to click Approve with Edits again — reload the page in a minute to confirm it synced.');
     else showToast('Approved and saved ✓');
     return;
@@ -3242,6 +3477,24 @@ document.addEventListener('click', async (ev) => {
     return;
   }
 
+  // Notes → jump to the List tab, sorted so shows with no artwork come first
+  if (action === 'notes-show-missing-art') {
+    document.querySelector('nav a[data-page="music"]')?.click();
+    setSortMode('art');
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  // Save (heart) action
+  if (action === 'fav-event') {
+    const nowSaved = krFavToggle(key);
+    if (nowSaved) {
+      let told = false; try { told = !!localStorage.getItem('kr_fav_hint'); localStorage.setItem('kr_fav_hint', '1'); } catch (e) {}
+      showToast(told ? 'Saved ♥' : 'Saved ♥ — find your saved shows under ♥ Saved');
+    }
+    return;
+  }
+
   // Share action
   if (action === 'share-event') {
     const all = getAllEvents();
@@ -3261,11 +3514,8 @@ document.addEventListener('click', async (ev) => {
   // Filter to one venue's listings
   if (action === 'filter-venue') {
     const venue = btn.dataset.venue;
-    _activeVenue = venue;
-    _currentPage = 1;
-    const sel = document.getElementById('venue-select');
-    if (sel) sel.value = venue;
-    renderEvents();
+    KRF.venue = venue;
+    krFilterChanged();
     document.querySelector('main')?.scrollIntoView({behavior:'smooth', block:'start'});
     return;
   }
@@ -3340,7 +3590,7 @@ document.addEventListener('click', async (ev) => {
     }
     const ie = document.getElementById('ie-' + key);
     if (ie) ie.style.display = 'none';
-    renderEvents(); buildMonthButtons(); populateVenueSelect();
+    renderEvents(); populateVenueSelect();
     return;
   }
   if (action === 'inline-reject') {
@@ -3348,7 +3598,7 @@ document.addEventListener('click', async (ev) => {
     const e   = all.find(ev => eventKey(ev) === key);
     if (e) {
       const ok = await hideEvent(e);
-      renderEvents(); buildMonthButtons(); populateVenueSelect(); updateBadge();
+      renderEvents(); populateVenueSelect(); updateBadge();
       if (!ok) alert('This is showing as hidden on your screen, but saving it to the server failed after several attempts. It\'s safe to click "Hide from site" again — reload the page in a minute to confirm it synced.');
       else showToast('Hidden and saved ✓ — undo anytime from the admin Hidden tab');
     }
@@ -3460,7 +3710,7 @@ document.getElementById('add-event-btn')?.addEventListener('click', async () => 
     // reload the page later to confirm it made it through.
     alert('This event is showing on your screen, but saving it to the server failed after several attempts. Please don\'t re-enter it — just wait a minute and reload the page to check it synced. If it still hasn\'t after a few minutes, let me know.');
   }
-  renderEvents(); buildMonthButtons(); populateVenueSelect();
+  renderEvents(); populateVenueSelect();
 });
 
 // ── MANAGE VENUE (front end) ──────────────────────────────────────────────────
@@ -3499,7 +3749,7 @@ async function hideVenueFromFront(venueName) {
       patch[eventKey(e)] = { status: 'rejected', hiddenAt: Date.now() };
   });
   const ok = await patchReviewStatus(patch);
-  renderEvents(); populateVenueSelect(); buildMonthButtons(); buildVenueDeleteList(); updateBadge();
+  renderEvents(); populateVenueSelect(); buildVenueDeleteList(); updateBadge();
   if (!ok) alert(`"${venueName}" is showing as hidden on your screen, but saving it to the server failed after several attempts. It's safe to try again — reload the page in a minute to confirm it synced.`);
   else showToast(`"${venueName}" hidden and saved ✓`);
 }
@@ -3543,7 +3793,7 @@ async function addHiddenTitle() {
   const ok = await saveHiddenTitlesList(keywords);
   input.value = '';
   buildTitleHideList();
-  renderEvents(); buildMonthButtons(); populateVenueSelect(); updateBadge();
+  renderEvents(); populateVenueSelect(); updateBadge();
   if (!ok) alert(`"${kw}" is hiding matching shows on your screen, but saving it to the server failed after several attempts. It's safe to try again — reload the page in a minute to confirm it synced.`);
   else showToast(`Now hiding shows with "${kw}" in the title ✓`);
 }
@@ -3552,7 +3802,7 @@ async function removeHiddenTitle(kw) {
   const keywords = getHiddenTitles().filter(k => k !== kw);
   const ok = await saveHiddenTitlesList(keywords);
   buildTitleHideList();
-  renderEvents(); buildMonthButtons(); populateVenueSelect(); updateBadge();
+  renderEvents(); populateVenueSelect(); updateBadge();
   if (!ok) alert(`Un-hiding "${kw}" is showing on your screen, but saving it to the server failed after several attempts. It's safe to try again — reload the page in a minute to confirm it synced.`);
   else showToast(`"${kw}" removed from hidden titles ✓`);
 }
@@ -3562,6 +3812,8 @@ function updateManageVenueBtn() {
   if (btn) btn.style.display = sessionStorage.getItem('kr_authed') ? '' : 'none';
   const titleBtn = document.getElementById('title-hide-mode-btn');
   if (titleBtn) titleBtn.style.display = sessionStorage.getItem('kr_authed') ? '' : 'none';
+  const sortRow = document.getElementById('admin-sort-row');   // Sort is for the signed-in admin only
+  if (sortRow) sortRow.style.display = sessionStorage.getItem('kr_authed') ? '' : 'none';
 }
 
 // ── VENUE TEMPLATE DROPDOWN ───────────────────────────────────────────────────
@@ -3674,25 +3926,10 @@ document.getElementById('quick-add-btn')?.addEventListener('click', async () => 
   ['q-title','q-date','q-time','q-price'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
   const msg = document.getElementById('quick-add-success');
   if (msg) { msg.style.display = 'block'; setTimeout(() => msg.style.display = 'none', 2000); }
-  renderEvents(); buildMonthButtons(); populateVenueSelect();
+  renderEvents(); populateVenueSelect();
 });
 
 // ── NAV ───────────────────────────────────────────────────────────────────────
-// ── KEYWORD SEARCH (live) ────────────────────────────────────────────────────
-document.getElementById('keyword-search')?.addEventListener('input', (e) => {
-  const value = e.target.value.trim().toLowerCase();
-  if (value === 'change') {
-    e.target.value = '';
-    _searchKeyword = '';
-    showLocationModal();
-    renderEvents();
-    return;
-  }
-  _searchKeyword = value;
-  _currentPage = 1;
-  renderEvents();
-});
-
 document.querySelectorAll('nav a[data-page]').forEach(link => {
   link.addEventListener('click', ev => {
     ev.preventDefault();
@@ -3705,32 +3942,193 @@ document.querySelectorAll('nav a[data-page]').forEach(link => {
     const el = document.getElementById('page-' + page);
     if (el) el.classList.add('active');
     link.classList.add('active');
+    if (page === 'music' && typeof krRender === 'function') { krRender(); window.scrollTo(0, 0); }   // refresh hearts / filters when coming back
   });
 });
 
-// ── FILTER BUTTONS ────────────────────────────────────────────────────────────
-document.querySelectorAll('[data-filter]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    // data-filter="0" means "Kingston only" normally, or "my town only" once a
-    // zip is set — same button, same filter value, the meaning just shifts
-    // with _customLocation (handled in the filtering logic itself). So this
-    // click handler stays the same simple, generic toggle for every button.
-    document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    _activeFilter = btn.dataset.filter;
-    _currentPage = 1;
-    renderEvents();
+// ── SHARED CONTROLS (List · Feed · Wall · Map all use the same filter bar) ────
+const KR_VIEWS = ['list', 'feed', 'wall', 'map'];
+const krYmd = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+function krQuickRange(kind) {
+  const t = new Date(); t.setHours(0,0,0,0);
+  const add = n => { const d = new Date(t); d.setDate(d.getDate() + n); return d; };
+  if (kind === 'today') return [krYmd(t), krYmd(t)];
+  if (kind === 'weekend') {                 // Fri–Sun (or what's left of it)
+    const dow = t.getDay();                 // 0 Sun … 6 Sat
+    if (dow === 0) return [krYmd(t), krYmd(t)];
+    if (dow === 6) return [krYmd(t), krYmd(add(1))];
+    const toFri = (5 - dow + 7) % 7;
+    return [krYmd(add(toFri)), krYmd(add(toFri + 2))];
+  }
+}
+const krFiltersActive = () => !!(KRF.q.trim() || KRF.from || KRF.to || KRF.venue || KRF.saved || KRF.dist !== 'all');
+
+function krUpdateSavedChip() {
+  const b = document.getElementById('saved-filter-btn'); if (!b) return;
+  const fv = krFavGet();
+  const n = krBaseEvents().filter(e => fv.has(eventKey(e))).length;
+  b.innerHTML = '&#9829; Saved' + (n ? ' (' + n + ')' : '');
+  b.classList.toggle('active', KRF.saved);
+  b.setAttribute('aria-pressed', KRF.saved);
+}
+
+// Make every control show what KRF says
+function krSyncControls() {
+  document.body.dataset.view = KRF.view;
+  document.querySelectorAll('[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === KRF.dist));
+  const vs = document.getElementById('venue-select');
+  if (vs && vs.value !== KRF.venue) { vs.value = KRF.venue; if (vs.value !== KRF.venue) { KRF.venue = ''; vs.value = ''; } }
+  const kb = document.getElementById('keyword-search');
+  if (kb && kb.value !== KRF.q) kb.value = KRF.q;
+  const today = krYmd(new Date());
+  const fi = document.getElementById('date-from'), ti = document.getElementById('date-to');
+  if (fi) { fi.min = today; if (fi.value !== KRF.from) fi.value = KRF.from; }
+  if (ti) { ti.min = today; if (ti.value !== KRF.to) ti.value = KRF.to; }
+  document.getElementById('sort-date-btn')?.classList.toggle('active', KRF.sort === 'date');
+  document.getElementById('sort-venue-btn')?.classList.toggle('active', KRF.sort === 'venue');
+  document.getElementById('sort-art-btn')?.classList.toggle('active', KRF.sort === 'art');
+  document.querySelectorAll('[data-view-mode]').forEach(b => b.classList.toggle('active', b.dataset.viewMode === KRF.view));
+  document.querySelectorAll('[data-quick]').forEach(b => {
+    const [f, t] = krQuickRange(b.dataset.quick);
+    b.classList.toggle('active', KRF.dayOffset === null && KRF.from === f && KRF.to === t);
   });
+  const dn = document.getElementById('day-nav-btn');
+  if (dn) {
+    dn.textContent = KRF.dayOffset === null ? 'Tomorrow' : 'Next Day';
+    dn.classList.toggle('active', KRF.dayOffset !== null);
+  }
+  updateVenueShareBtn();
+  krUpdateSavedChip();
+  const clr = document.getElementById('pb-clear'); if (clr) clr.style.display = krFiltersActive() ? '' : 'none';
+  const ss = document.getElementById('pb-slideshow'); if (ss) ss.style.display = krFilteredEvents({ sort: 'date' }).some(e => e.posterUrl) ? '' : 'none';
+}
+
+// Draw whichever view is selected
+function krRender() {
+  if (KRF.sort !== 'date' && !sessionStorage.getItem('kr_authed')) KRF.sort = 'date';      // sorting is admin-only
+  const list = document.getElementById('events-list'), ex = document.getElementById('page-explore');
+  if (!list || !ex) return;
+  const isList = KRF.view === 'list';
+  list.style.display = isList ? '' : 'none';
+  ex.style.display = isList ? 'none' : '';
+  krSyncControls();
+  if (isList) renderListView(); else if (window.KR_EXPLORE) window.KR_EXPLORE.render();
+  krWriteUrl();
+}
+function renderEvents() { krRender(); }           // every older call site (admin edits, hiding, approving…) refreshes whichever view is open
+function krFilterChanged() {                       // a filter, sort or view changed: start from the first page again
+  _currentPage = 1;
+  if (window.KR_EXPLORE) window.KR_EXPLORE.reset();
+  krRender();
+}
+
+// The address bar mirrors the Feed / Wall / Map filters so they can be shared; the List view keeps a clean address
+function krWriteUrl() {
+  try {
+    if (!document.getElementById('page-music')?.classList.contains('active')) return;
+    if (KRF.view === 'list') { if (location.search) history.replaceState(null, '', location.pathname); return; }
+    const p = new URLSearchParams(); p.set('view', KRF.view);
+    if (KRF.q.trim()) p.set('q', KRF.q.trim());
+    if (KRF.from) p.set('from', KRF.from);
+    if (KRF.to) p.set('to', KRF.to);
+    if (KRF.venue) p.set('venue', KRF.venue);
+    if (KRF.dist !== 'all' && !_customLocation) p.set('dist', KRF.dist);
+    if (KRF.sort === 'venue') p.set('sort', 'venue');
+    history.replaceState(null, '', location.pathname + '?' + p.toString());
+  } catch (e) {}
+}
+// Read the opening link (and this device's last view) into KRF. Old ?tab=explore, ?venue= and ?e= links still work.
+function krInitFromUrl() {
+  const p = KR_BOOT;
+  let view = null;
+  const pv = p.get('view');
+  if (KR_VIEWS.includes(pv)) view = pv;
+  else if (p.get('tab') === 'explore' || p.get('show')) view = 'feed';
+  else if (p.get('e') || p.get('event') || p.get('venue')) view = 'list';
+  if (!view) {
+    let last = null;
+    try {
+      last = localStorage.getItem('kr_last_view');
+      if (!last && localStorage.getItem('kr_last_tab') === 'explore') last = 'feed';     // from before the pages were merged
+    } catch (e) {}
+    view = KR_VIEWS.includes(last) ? last : 'list';
+  }
+  KRF.view = view;
+  KRF.q = (p.get('q') || '').slice(0, 100);
+  const dRe = /^\d{4}-\d{2}-\d{2}$/;
+  KRF.from = dRe.test(p.get('from') || '') ? p.get('from') : '';
+  KRF.to = dRe.test(p.get('to') || '') ? p.get('to') : '';
+  if (['0', '30', '45', '60', '90'].includes(p.get('dist'))) KRF.dist = p.get('dist');
+  KRF.sort = p.get('sort') === 'venue' ? 'venue' : 'date';
+  const requested = (p.get('venue') || '').trim();
+  if (requested) {
+    // only venues that really have upcoming shows, so a stale or mistyped link can't leave the page empty
+    const match = [...new Set(krBaseEvents().map(e => e.venue))].find(v => v.toLowerCase() === requested.toLowerCase());
+    if (match) KRF.venue = match; else showToast('No upcoming shows found for that venue');
+  }
+}
+
+// ── wiring ──
+document.querySelectorAll('[data-filter]').forEach(btn => {
+  // data-filter="0" means "Kingston only" normally, or "my town only" once a zip is set — same button, same
+  // value; the meaning shifts with _customLocation inside krFilteredEvents.
+  btn.addEventListener('click', () => { KRF.dist = btn.dataset.filter; krFilterChanged(); });
 });
+let _kwTimer;
+document.getElementById('keyword-search')?.addEventListener('input', e => {
+  const raw = e.target.value;
+  if (raw.trim().toLowerCase() === 'change') {        // typing "change" opens the zip-code box
+    e.target.value = ''; KRF.q = '';
+    showLocationModal(); krFilterChanged();
+    return;
+  }
+  KRF.q = raw;
+  clearTimeout(_kwTimer); _kwTimer = setTimeout(krFilterChanged, 120);
+});
+document.getElementById('date-from')?.addEventListener('change', e => {
+  KRF.from = e.target.value; KRF.dayOffset = null;
+  if (KRF.from && KRF.to && KRF.to < KRF.from) KRF.to = KRF.from;
+  krFilterChanged();
+});
+document.getElementById('date-to')?.addEventListener('change', e => {
+  KRF.to = e.target.value; KRF.dayOffset = null;
+  if (KRF.from && KRF.to && KRF.to < KRF.from) KRF.from = KRF.to;
+  krFilterChanged();
+});
+document.querySelectorAll('[data-quick]').forEach(b => b.addEventListener('click', () => {
+  const [f, t] = krQuickRange(b.dataset.quick);
+  const already = KRF.dayOffset === null && KRF.from === f && KRF.to === t;       // tapping an active button turns it off
+  KRF.from = already ? '' : f; KRF.to = already ? '' : t; KRF.dayOffset = null;
+  krFilterChanged();
+}));
+// "Tomorrow" shows tomorrow; each further tap moves on one more day ("Next Day")
+document.getElementById('day-nav-btn')?.addEventListener('click', () => {
+  KRF.dayOffset = (KRF.dayOffset || 0) + 1;
+  const d = new Date(); d.setHours(0,0,0,0); d.setDate(d.getDate() + KRF.dayOffset);
+  KRF.from = KRF.to = krYmd(d);
+  krFilterChanged();
+});
+document.getElementById('saved-filter-btn')?.addEventListener('click', () => { KRF.saved = !KRF.saved; krFilterChanged(); });
+document.querySelectorAll('[data-view-mode]').forEach(b => b.addEventListener('click', () => {
+  KRF.view = b.dataset.viewMode;
+  if (KRF.view !== 'list' && KRF.sort === 'art') KRF.sort = 'date';
+  try { localStorage.setItem('kr_last_view', KRF.view); } catch (e) {}     // this device opens in the view you last picked
+  krFilterChanged();
+}));
+document.getElementById('pb-clear')?.addEventListener('click', () => {
+  Object.assign(KRF, { q: '', from: '', to: '', venue: '', dist: 'all', saved: false, dayOffset: null });
+  krFilterChanged();
+});
+document.getElementById('pb-slideshow')?.addEventListener('click', () => window.KR_EXPLORE && window.KR_EXPLORE.slideshow());
 
 document.getElementById('radius-pin-btn')?.addEventListener('click', showLocationModal);
 document.getElementById('back-to-kingston-btn')?.addEventListener('click', () => {
   _customLocation = null;
   localStorage.removeItem('kr_custom_location');
-  _activeFilter = 'all';
-  document.querySelectorAll('[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
-  renderEvents();
+  KRF.dist = 'all';
   updateRadiusUI();
+  window.dispatchEvent(new CustomEvent('kr-location-changed', { detail: { from: 'shows' } }));
+  krFilterChanged();
   showToast('Back to distances from Kingston ✓');
 });
 updateRadiusUI(); // reflect a zip code already saved from a previous visit
@@ -3813,21 +4211,19 @@ loadFromServer().then(() => {
   // Clean up any hidden entries whose date has passed
   pruneHidden();
 
-  // Ensure music page is visible on load
+  // Ensure the music page is visible on load
   document.getElementById('page-music')?.classList.add('active');
-
-  // Ensure music page is visible (counteract any display:none from previous admin visit)
+  // counteract any display:none from previous admin visit
   const musicPage = document.getElementById('page-music');
   if (musicPage) { musicPage.style.display = 'block'; musicPage.classList.add('active'); }
 
-  renderEvents();
-  buildMonthButtons();
+  // Which view to open, and any filters carried in the link
+  krInitFromUrl();
+  if (window.KR_EXPLORE) window.KR_EXPLORE.init();
   populateVenueSelect();
+  krRender();
   updateBadge();
   updateManageVenueBtn();
-
-  // If this page was opened via a venue link, filter to that venue right away
-  applyVenueParam();
 
   if (sessionStorage.getItem('kr_authed')) {
     showAdminContent();
@@ -3837,6 +4233,8 @@ loadFromServer().then(() => {
 
   // Jump to a specific event if this page was opened via a share link
   jumpToSharedEvent();
+  const _sh = KR_BOOT.get('show');          // a Feed share link
+  if (_sh && window.KR_EXPLORE) window.KR_EXPLORE.jumpToHash(_sh);
 });
 
 // ── DARK MODE TOGGLE ──────────────────────────────────────────────────────────
@@ -3869,6 +4267,552 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
   updateThemeIcons();
 });
 
+</script>
+<script>
+(function () {
+// ── Helpers (same rules the main listings page uses) ──────────────────────────
+function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function parseDate(s) { if (!s) return new Date(0); const [y,m,d] = s.split('-').map(Number); return new Date(y, m-1, d); }
+function eventKey(e) { return `${e.venue}||${e.date}||${e.time||''}`; }
+function formatTime(t) {
+  if (!t || t === 'See website') return '';
+  t = t.trim();
+  if (/^\d{1,2}:\d{2}\s*[ap]m$/i.test(t)) return t.replace(/\s*([ap]m)$/i, (_, s) => ' ' + s.toLowerCase());
+  if (/^\d{1,2}:\d{2}$/.test(t)) { const [h,m] = t.split(':').map(Number); return `${h % 12 || 12}:${String(m).padStart(2,'0')} ${h >= 12 ? 'pm' : 'am'}`; }
+  return t;
+}
+function shortHash(str) { let h = 5381; for (let i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) | 0; return (h >>> 0).toString(36); }
+function isRejected(s) { return s === 'rejected' || s === 'purged' || (typeof s === 'object' && s && (s.status === 'rejected' || s.status === 'purged')); }
+function isApproved(s) { return s === 'approved' || (typeof s === 'object' && s && s.status === 'approved'); }
+function lsGet(key, fallback) { try { return JSON.parse(localStorage.getItem(key) || 'null') ?? fallback; } catch { return fallback; } }
+
+// ── Data ──────────────────────────────────────────────────────────────────────
+let POSTS = [];          // upcoming, approved, not-hidden shows (with or without a poster) — the same pool the List view uses
+const hasPoster = e => !!e.posterUrl;
+let LOADED = false;
+const PB_STEP = 20, WALL_STEP = 20;     // Feed and Wall: first 20, then each "Show more" adds one more than the time before (21, 22, 23 …)
+let _wallMore = 0;                       // how many times "Show more" has been pressed
+const step = () => S.view === 'wall' ? WALL_STEP : PB_STEP;
+
+// ── Favorites (kept on this device only) ──────────────────────────────────────
+let FAVS = krFavGet();     // shared with the hearts on the Shows tab
+const HEART = '<svg viewBox="0 0 24 24" width="17" height="17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>';
+const heartBtn = (key, cls) => `<button class="heart ${cls||''}" data-fav="${esc(key)}" aria-pressed="${FAVS.has(key)}" title="Save this show" aria-label="Save this show">${HEART}</button>`;
+function toggleFav(key) { krFavToggle(key); }     // updates FAVS through the 'kr-favs-changed' listener below
+function onFavsChanged() {
+  FAVS = krFavGet();
+  document.querySelectorAll('#page-explore [data-fav], #pbv-overlay [data-fav]').forEach(b => b.setAttribute('aria-pressed', FAVS.has(b.dataset.fav)));
+}   // (the shared code re-draws the view if "Saved" is on)
+window.addEventListener('kr-favs-changed', onFavsChanged);
+const ROOT = document.getElementById('page-explore');
+const S = KRF;           // the one set of filters shared with the List view (q, from, to, venue, dist, saved, sort, view)
+let _pbShown = PB_STEP;
+let DRIVE = null;        // venue -> minutes from Kingston (read from the page's own table)
+let CUSTOM_DRIVE = {};   // drive times saved on custom venue templates
+let TOWNS = null;        // town -> {lat,lng}, also read from index.html
+
+// Drive times and town coordinates come straight from this page's own tables, so every view agrees.
+async function loadDriveTimes() {
+  return {
+    drive: (typeof DRIVE_TIMES !== 'undefined' && DRIVE_TIMES) ? DRIVE_TIMES : null,
+    towns: (typeof TOWN_COORDS !== 'undefined' && TOWN_COORDS) ? TOWN_COORDS : null
+  };
+}
+function knownDrive(venue) {
+  if (DRIVE && DRIVE[venue] !== undefined) return DRIVE[venue];
+  const c = CUSTOM_DRIVE[venue];
+  return (c && c.drive) ? c.drive : undefined;
+}
+// ── My Radius: distances from the visitor's own zip code ──────────────────────
+// Same estimate the main site uses (straight-line miles -> minutes, plus a flat penalty for crossing
+// the Hudson). Stored separately from the main site's setting so trying it here doesn't switch it on there.
+let CUSTOM = null;
+// My Radius is one setting for the whole site: the same saved zip the Shows tab uses.
+function readCustom() { try { const c = JSON.parse(localStorage.getItem('kr_custom_location') || 'null'); return (c && typeof c.lat === 'number' && typeof c.lng === 'number') ? c : null; } catch { return null; } }
+CUSTOM = readCustom();
+// The zip was set or reset in the shared bar: pick up the new value (the shared code re-draws the view)
+window.addEventListener('kr-location-changed', () => { CUSTOM = readCustom(); });
+const RIVER_PENALTY_MIN = 20;
+function haversineMiles(lat1, lng1, lat2, lng2) {
+  const R = 3958.8, rad = d => d * Math.PI / 180;
+  const dLat = rad(lat2 - lat1), dLng = rad(lng2 - lng1);
+  const a = Math.sin(dLat/2)**2 + Math.cos(rad(lat1)) * Math.cos(rad(lat2)) * Math.sin(dLng/2)**2;
+  return R * 2 * Math.asin(Math.sqrt(a));
+}
+function minutesFromMiles(miles) {
+  const mph = miles <= 15 ? 30 : miles <= 40 ? 28 : 45;
+  return Math.round((miles / mph) * 60);
+}
+function nearestTownKey(lat, lng) {
+  let best = null, bd = Infinity;
+  for (const [k, t] of Object.entries(TOWNS || {})) { const d = haversineMiles(lat, lng, t.lat, t.lng); if (d < bd) { bd = d; best = k; } }
+  return best;
+}
+// Minutes from the visitor's zip to this show's town, or null if that town isn't on the list yet
+function customMinutes(e) {
+  if (!CUSTOM || !TOWNS) return null;
+  const c = TOWNS[townKeyOf(e.location)];
+  if (!c) return null;
+  let m = minutesFromMiles(haversineMiles(CUSTOM.lat, CUSTOM.lng, c.lat, c.lng));
+  if (CUSTOM.side && c.side && CUSTOM.side !== c.side) m += RIVER_PENALTY_MIN;
+  return m;
+}
+// Called once by the page after the shows have loaded
+function init() {
+  DRIVE = (typeof DRIVE_TIMES !== 'undefined' && DRIVE_TIMES) ? DRIVE_TIMES : null;
+  TOWNS = (typeof TOWN_COORDS !== 'undefined' && TOWN_COORDS) ? TOWN_COORDS : null;
+  CUSTOM_DRIVE = (typeof _customVenuesCache !== 'undefined' && _customVenuesCache && typeof _customVenuesCache === 'object') ? _customVenuesCache : {};
+  CUSTOM = readCustom();
+  POSTS = krBaseEvents();
+  LOADED = true;
+  reset();
+}
+
+// ── Filtering (shared with the List view) ─────────────────────────────────────
+const ymd = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+function filtered() {
+  // Feed and Wall show shows that have a poster (a saved show is always kept); the Map shows everything
+  let ev = krFilteredEvents({ sort: S.sort === 'venue' ? 'venue' : 'date' });
+  if (!S.saved && S.view !== 'map') ev = ev.filter(hasPoster);
+  return ev;
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+function render() {
+  if (!LOADED) return;
+  POSTS = krBaseEvents();
+  document.getElementById('pb-wrap').classList.toggle('wall', S.view !== 'feed');
+  const feed = document.getElementById('pb-feed');
+  const events = filtered();
+  const cnt = document.getElementById('event-count');
+  if (cnt) cnt.textContent = events.length ? `${events.length} show${events.length === 1 ? '' : 's'}` : '';
+  const mapWrap = document.getElementById('pb-map-wrap');
+  if (!events.length) {
+    mapWrap.style.display = 'none'; feed.style.display = '';
+    feed.innerHTML = !POSTS.length ? '<div class="pb-empty">No shows up yet — check back soon.</div>'
+      : (S.saved && !FAVS.size) ? '<div class="pb-empty">You haven’t saved any shows yet — tap the ♥ on a show to keep it here.</div>'
+      : '<div class="pb-empty">No shows match those filters.</div>';
+    return;
+  }
+  if (S.view === 'map') { feed.style.display = 'none'; mapWrap.style.display = ''; renderMap(events); return; }
+  mapWrap.style.display = 'none'; feed.style.display = '';
+  const shown = events.slice(0, _pbShown);
+  let html = '';
+  if (S.view === 'wall') {
+    if (shown.some(e => e.posterUrl && !AR.has(e.posterUrl))) {
+      // learn the poster shapes first (a moment, once), then draw the wall in one go
+      const token = ++_wallToken;
+      feed.innerHTML = '<div style="text-align:center;padding:60px 20px;"><div class="loading-spinner"></div></div>';
+      preloadRatios(shown).then(() => { if (token === _wallToken && S.view === 'wall') render(); });
+      return;
+    }
+    html = wallHtml(shown, feed.clientWidth, events);
+  } else {
+    let last = '';
+    for (const e of shown) {
+      const head = S.sort === 'venue' ? e.venue : e.date;
+      if (head !== last) {
+        last = head;
+        html += `<h2 class="pb-day">${esc(S.sort === 'venue' ? e.venue : parseDate(e.date).toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'}))}</h2>`;
+      }
+      html += post(e);
+    }
+  }
+  if (events.length > shown.length) html += `<button class="pb-loadmore" id="pb-loadmore">Show more (${events.length - shown.length} more shows)</button>`;
+  feed.innerHTML = html;
+}
+
+let _wallToken = 0;
+const wallCols = () => (window.innerWidth >= 720 ? 3 : 2);
+const shortDate = e => parseDate(e.date).toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
+function tile(e) {
+  const time = formatTime(e.time);
+  const posterBlock = e.posterUrl ? `<button type="button" class="pb-poster"${AR.has(e.posterUrl) ? ` style="--ar:${AR.get(e.posterUrl)}"` : ''} data-view="${esc(e.posterUrl)}" data-key="${esc(eventKey(e))}" aria-label="View poster for ${esc(e.title)}">
+      <img src="${esc(e.posterUrl)}" alt="Poster for ${esc(e.title)}" loading="lazy" decoding="async"
+           onload="this.parentNode.style.setProperty('--ar', this.naturalWidth / this.naturalHeight)"
+           onerror="this.closest('.pb-tile').classList.add('pb-broken')">
+    </button>` : `<div class="pb-np-box">No poster yet</div>`;
+  // same links as the List tab: the title goes to the venue's page, the town goes to Maps
+  const titleHtml = e.venueUrl ? `<a href="${esc(e.venueUrl)}" target="_blank" rel="noopener">${esc(e.title)}</a>` : esc(e.title);
+  const townHtml = krTownLink(e);
+  return `<div class="pb-tile">
+    ${posterBlock}
+    <div class="pb-tile-row"><div class="pb-tile-date">${esc(S.sort === 'venue' ? [shortDate(e), time].filter(Boolean).join(' · ') : (time || shortDate(e)))}</div>${heartBtn(eventKey(e), 'pb-tile-heart')}</div>
+    <div class="pb-tile-title">${titleHtml}</div>
+    <div class="pb-tile-venue"><a href="${esc(location.pathname)}?view=feed&venue=${encodeURIComponent(e.venue)}" data-xvenue="${esc(e.venue)}" title="See all ${esc(e.venue)} shows">${esc(e.venue)}</a>${townHtml ? ` — ${townHtml}` : ''}</div>
+  </div>`;
+}
+
+// ── Wall layout ───────────────────────────────────────────────────────────────
+// Posters come in every shape, so a plain "next column, next column" deal leaves one side of a night
+// much longer than the other. Instead, each day's first row is dealt left to right, and every later show
+// goes under whichever column is currently shortest (using each poster's real proportions), so the
+// bottom of a night stays level. Short nights are centred.
+const AR = new Map();                      // poster url -> width / height, learned before the wall is drawn
+function preloadRatios(list) {
+  const todo = [...new Set(list.map(e => e.posterUrl).filter(u => u && !AR.has(u)))];
+  return new Promise(resolve => {
+    if (!todo.length) return resolve();
+    let left = todo.length;
+    const done = () => { if (--left <= 0) { clearTimeout(timer); resolve(); } };
+    const timer = setTimeout(() => { todo.forEach(u => { if (!AR.has(u)) AR.set(u, 0.75); }); resolve(); }, 3000);
+    todo.forEach(u => {
+      const im = new Image();
+      im.onload  = () => { AR.set(u, (im.naturalWidth && im.naturalHeight) ? im.naturalWidth / im.naturalHeight : 0.75); done(); };
+      im.onerror = () => { AR.set(u, 0.75); done(); };
+      im.src = u;
+    });
+  });
+}
+function wallHtml(shown, feedWidth, all) {
+  const cols = wallCols();
+  const gap = window.innerWidth >= 720 ? 18 : 14;
+  const colW = Math.max(120, ((feedWidth || 640) - gap * (cols - 1)) / cols);
+  const estimate = e => {
+    const cpl = Math.max(10, Math.floor((colW - 20) / 8.6));
+    const titleLines = Math.max(1, Math.ceil((e.title || '').length / cpl));
+    const poster = e.posterUrl ? colW / (AR.get(e.posterUrl) || 0.75) : 120;
+    return poster + 22 + 22 + titleLines * 19 + 24 + 20;       // poster + box + time row + title + venue line + gap
+  };
+  // the count in each heading is the day's full total, even when only part of that day has loaded so far
+  const totals = new Map();
+  for (const e of (all || shown)) { const h = S.sort === 'venue' ? e.venue : e.date; totals.set(h, (totals.get(h) || 0) + 1); }
+  const groups = [];
+  for (const e of shown) {
+    const head = S.sort === 'venue' ? e.venue : e.date;
+    if (!groups.length || groups[groups.length - 1].head !== head) groups.push({ head, list: [] });
+    groups[groups.length - 1].list.push(e);
+  }
+  let html = '';
+  for (const g of groups) {
+    const title = S.sort === 'venue' ? g.head : parseDate(g.head).toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'});
+    html += `<h2 class="pb-day">${esc(title)}<span class="pb-daycount">${totals.get(g.head) || g.list.length} show${(totals.get(g.head) || g.list.length) === 1 ? '' : 's'}</span></h2>`;
+    const n = Math.min(cols, g.list.length);                       // a short night only gets as many columns as it needs
+    const colHtml = Array.from({ length: n }, () => '');
+    const heights = Array.from({ length: n }, () => 0);
+    g.list.forEach((e, i) => {
+      let c = i;
+      if (i >= n) { c = 0; for (let k = 1; k < n; k++) if (heights[k] < heights[c]) c = k; }
+      colHtml[c] += tile(e); heights[c] += estimate(e);
+    });
+    html += `<div class="pb-wall${g.list.length < 2 ? ' pb-single' : ''}" style="--cols:${cols}">${colHtml.map(c => `<div class="pb-wallcol">${c}</div>`).join('')}</div>`;
+  }
+  return html;
+}
+
+function post(e) {
+  const key = eventKey(e);
+  const price = (e.price && e.price !== 'See website') ? e.price : '';
+  const eyebrow = [S.sort === 'venue' ? shortDate(e) : '', formatTime(e.time), price].filter(Boolean).join(' · ');
+  const dm = DRIVE ? knownDrive(e.venue) : undefined;
+  const cm = customMinutes(e);
+  const inKingston = /\bkingston\b/i.test(e.location || '');   // any Kingston show reads "In Kingston" (the minutes are just the distance from Tubby's)
+  const driveLine = CUSTOM && TOWNS
+    ? (townKeyOf(e.location) === CUSTOM.townKey ? 'In your town' : (cm === null ? '' : `About ${cm} min from ${CUSTOM.zip}`))
+    : (inKingston || dm === 0 ? 'In Kingston' : (dm === undefined ? '' : `${dm} min from Kingston`));
+  const town = krTownLink(e);
+  const posterBlock = e.posterUrl ? `<button type="button" class="pb-poster" data-view="${esc(e.posterUrl)}" data-key="${esc(key)}" aria-label="View poster for ${esc(e.title)}">
+      <img src="${esc(e.posterUrl)}" alt="Poster for ${esc(e.title)}" loading="lazy" decoding="async"
+           onload="this.parentNode.style.setProperty('--ar', this.naturalWidth / this.naturalHeight)"
+           onerror="this.closest('.pb-post').classList.add('pb-broken')">
+    </button>` : '';
+  return `<article class="pb-post${e.posterUrl ? '' : ' pb-noposter'}" data-post="${esc(key)}">
+    ${posterBlock}
+    ${eyebrow ? `<div class="pb-eyebrow">${esc(eyebrow)}</div>` : ''}
+    <div class="pb-title">${e.venueUrl ? `<a href="${esc(e.venueUrl)}" target="_blank" rel="noopener">${esc(e.title)}</a>` : esc(e.title)}</div>
+    <div class="pb-where">at <a href="${esc(location.pathname)}?view=feed&venue=${encodeURIComponent(e.venue)}" data-xvenue="${esc(e.venue)}" title="See all ${esc(e.venue)} shows">${esc(e.venue)}</a>${town ? ` — ${town}` : ''}</div>
+    ${driveLine ? `<div class="pb-drive">${driveLine}</div>` : ''}
+    <div class="pb-actions">
+      ${heartBtn(key)}
+      <button class="icon-btn" data-share="${esc(key)}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>
+      <button class="icon-btn" data-copy="${esc(key)}" title="Copy show details" aria-label="Copy show details"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>
+    </div>
+  </article>`;
+}
+
+// ── Interactions ──────────────────────────────────────────────────────────────
+function blurb(e) {
+  const dateStr = parseDate(e.date).toLocaleDateString('default', {month:'short', day:'numeric'});
+  const timeStr = formatTime(e.time);
+  return `${e.title}\n${e.venue}\n${dateStr}${timeStr ? ', ' + timeStr : ''}`;
+}
+async function shareEvent(e) {
+  // Links to this show in the Feed view
+  const shareUrl = `${location.origin}${location.pathname}?view=feed&show=${shortHash(eventKey(e))}`;
+  if (navigator.share) {
+    try { await navigator.share({ title: e.title, text: blurb(e), url: shareUrl }); return; }
+    catch (err) { if (err && err.name === 'AbortError') return; }
+  }
+  try { await navigator.clipboard.writeText(shareUrl); showToast('Link copied!'); } catch { showToast('Could not copy link'); }
+}
+// ── Poster viewer: browse, favorite, and (optionally) auto-play a slideshow ───
+const V = { list: [], i: 0, playing: false, ms: 2000, timer: null };
+const SPEEDS = [2000, 5000, 10000];      // seconds per poster: 2 (default), 5 or 10
+const vEl = id => document.getElementById(id);
+function openViewer(list, i, play) {
+  const cur = list[i]; list = list.filter(hasPoster); i = Math.max(0, list.indexOf(cur));
+  if (!list.length) return;
+  V.list = list; V.i = Math.max(0, Math.min(i, list.length - 1));
+  vEl('pbv-overlay').classList.add('show');
+  document.body.style.overflow = 'hidden';
+  vEl('v-fav').innerHTML = HEART;
+  vEl('v-full').style.display = (vEl('pbv-overlay').requestFullscreen || vEl('pbv-overlay').webkitRequestFullscreen) ? '' : 'none';
+  vEl('v-speed').textContent = (V.ms / 1000) + 's';
+  const multi = list.length > 1;
+  for (const id of ['v-prev', 'v-next', 'v-play', 'v-speed']) vEl(id).style.display = multi ? '' : 'none';
+  showSlide();
+  setPlaying(!!play && multi);
+}
+function showSlide() {
+  const e = V.list[V.i]; if (!e) return;
+  const t = formatTime(e.time);
+  vEl('pbv-img').src = e.posterUrl;
+  vEl('pbv-img').alt = 'Poster for ' + e.title;
+  vEl('pbv-cap').innerHTML = `<b>${esc(e.title)}</b>${esc(e.venue)} · ${esc(shortDate(e))}${t ? ' · ' + esc(t) : ''}`;
+  vEl('v-fav').dataset.fav = eventKey(e);
+  vEl('v-fav').setAttribute('aria-pressed', FAVS.has(eventKey(e)));
+  vEl('v-count').textContent = V.list.length > 1 ? `${V.i + 1} / ${V.list.length}` : '';
+  if (V.list.length > 1) { const n = V.list[(V.i + 1) % V.list.length]; if (n) new Image().src = n.posterUrl; }  // preload next
+}
+function viewerGo(d) {
+  if (V.list.length < 2) return;
+  V.i = (V.i + d + V.list.length) % V.list.length;
+  showSlide();
+  if (V.playing) schedule();
+}
+function schedule() {
+  clearTimeout(V.timer);
+  const bar = vEl('v-progress');
+  bar.style.transition = 'none'; bar.style.width = '0'; void bar.offsetWidth;
+  bar.style.transition = `width ${V.ms}ms linear`; bar.style.width = '100%';
+  V.timer = setTimeout(() => viewerGo(1), V.ms);
+}
+function setPlaying(p) {
+  V.playing = p; clearTimeout(V.timer);
+  vEl('v-play').textContent = p ? '❚❚' : '▶';
+  vEl('v-play').setAttribute('aria-label', p ? 'Pause slideshow' : 'Play slideshow');
+  const bar = vEl('v-progress'); bar.style.transition = 'none'; bar.style.width = '0';
+  if (p) schedule();
+}
+function closeViewer() {
+  setPlaying(false);
+  try { if (document.fullscreenElement) document.exitFullscreen(); else if (document.webkitFullscreenElement) document.webkitExitFullscreen(); } catch {}
+  vEl('pbv-overlay').classList.remove('show');
+  vEl('pbv-img').src = '';
+  document.body.style.overflow = '';
+  if (S.saved) render();   // if "Saved" is on, reflect anything un-saved while browsing
+}
+vEl('pbv-close').addEventListener('click', closeViewer);
+vEl('pbv-overlay').addEventListener('click', ev => { if (ev.target === ev.currentTarget) closeViewer(); });
+vEl('v-prev').addEventListener('click', () => viewerGo(-1));
+vEl('v-next').addEventListener('click', () => viewerGo(1));
+vEl('v-play').addEventListener('click', () => setPlaying(!V.playing));
+vEl('v-speed').addEventListener('click', () => {
+  V.ms = SPEEDS[(SPEEDS.indexOf(V.ms) + 1) % SPEEDS.length];
+  vEl('v-speed').textContent = (V.ms / 1000) + 's';
+  if (V.playing) schedule();
+});
+vEl('v-full').addEventListener('click', () => {
+  const o = vEl('pbv-overlay');
+  try {
+    if (document.fullscreenElement || document.webkitFullscreenElement) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+    else (o.requestFullscreen || o.webkitRequestFullscreen).call(o);
+  } catch {}
+});
+vEl('v-fav').addEventListener('click', () => { const k = vEl('v-fav').dataset.fav; if (k) toggleFav(k); });
+document.addEventListener('keydown', ev => {
+  if (!vEl('pbv-overlay').classList.contains('show')) return;
+  if (ev.key === 'Escape') closeViewer();
+  else if (ev.key === 'ArrowLeft') viewerGo(-1);
+  else if (ev.key === 'ArrowRight') viewerGo(1);
+  else if (ev.key === ' ') { ev.preventDefault(); if (V.list.length > 1) setPlaying(!V.playing); }
+});
+let _tx = null;
+vEl('pbv-overlay').addEventListener('touchstart', ev => { _tx = ev.touches.length === 1 ? ev.touches[0].clientX : null; }, { passive: true });
+vEl('pbv-overlay').addEventListener('touchend', ev => {
+  if (_tx === null) return;
+  const dx = ev.changedTouches[0].clientX - _tx; _tx = null;
+  if (Math.abs(dx) > 50) viewerGo(dx < 0 ? 1 : -1);
+}, { passive: true });
+// Open the viewer on a specific show, browsing through the currently filtered list
+function showPoster(url, key) {
+  const list = filtered();
+  const i = list.findIndex(x => eventKey(x) === key);
+  if (i >= 0) openViewer(list, i, false);
+  else { const e = POSTS.find(x => eventKey(x) === key); if (e) openViewer([e], 0, false); }
+}
+
+// Show one listing in the Feed: clears filters so it's visible, scrolls to it, and pulses the poster
+function jumpToShow(key) {
+  Object.assign(S, { q: '', from: '', to: '', venue: '', dist: 'all', saved: false, sort: 'date', view: 'feed', dayOffset: null });
+  POSTS = krBaseEvents();
+  const idx = filtered().findIndex(e => eventKey(e) === key);
+  if (idx < 0) return false;
+  _wallMore = 0; _pbShown = Math.max(step(), idx + 1);
+  krRender();
+  const el = [...ROOT.querySelectorAll('.pb-post')].find(x => x.dataset.post === key);
+  if (el) {
+    el.scrollIntoView({ block: 'start' });
+    window.scrollBy(0, -70);                        // clear the sticky header
+    el.classList.add('pb-pulse'); setTimeout(() => el.classList.remove('pb-pulse'), 2600);
+  }
+  return true;
+}
+
+// ── Map view (Leaflet + OpenStreetMap, loaded only when the Map view is first used) ──
+let MAP = null, MAP_LAYER = null, LEAFLET_P = null, MAP_GROUPS = new Map(), MAP_MARKERS = new Map(), SEL_TOWN = null;
+const KINGSTON_VIEW = [41.927, -73.997];
+// Optional exact spots. A venue listed here gets its own pin on the map; every other venue is pinned
+// at its town. Add one line per venue, copied from Google Maps (right-click a place -> the first line
+// is "latitude, longitude"), e.g.   "Tubby's": [41.9300, -73.9950],
+const VENUE_COORDS = {
+};
+function townKeyOf(location) {
+  const key = (location || '').trim().toLowerCase();
+  return key.replace(/^(.+?)(?<!,)\s+(ny|ma|ct|nj|pa|vt)$/, '$1, $2');
+}
+function loadLeaflet() {
+  if (window.L && window.L.map) return Promise.resolve();
+  if (LEAFLET_P) return LEAFLET_P;
+  LEAFLET_P = new Promise((resolve, reject) => {
+    const css = document.createElement('link');
+    css.rel = 'stylesheet'; css.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css';
+    document.head.appendChild(css);
+    const js = document.createElement('script');
+    js.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js';
+    js.onload = () => (window.L && window.L.map) ? resolve() : reject(new Error('Leaflet missing'));
+    js.onerror = () => reject(new Error('Leaflet failed to load'));
+    document.head.appendChild(js);
+  }).catch(err => { LEAFLET_P = null; throw err; });
+  return LEAFLET_P;
+}
+async function renderMap(events) {
+  const note = vEl('pb-map-note'), mapEl = vEl('pb-map'), towns = vEl('pb-map-towns');
+  MAP_GROUPS = new Map(); let unmapped = 0;
+  for (const e of events) {
+    const vc = VENUE_COORDS[e.venue] || ((typeof e.lat === 'number' && typeof e.lng === 'number') ? [e.lat, e.lng] : null);
+    let k, c, name;
+    if (vc) { k = 'v|' + e.venue; c = { lat: vc[0], lng: vc[1] }; name = e.venue; }
+    else { k = townKeyOf(e.location); c = TOWNS && TOWNS[k]; name = e.location; }
+    if (!c) { unmapped++; continue; }
+    if (!MAP_GROUPS.has(k)) MAP_GROUPS.set(k, { key: k, name, c, list: [] });
+    MAP_GROUPS.get(k).list.push(e);
+  }
+  const mapped = events.length - unmapped;
+  note.textContent = !TOWNS ? 'The map isn’t available right now.' :
+    `${mapped} show${mapped === 1 ? '' : 's'} at ${MAP_GROUPS.size} pin${MAP_GROUPS.size === 1 ? '' : 's'}` +
+    (unmapped ? ` · ${unmapped} more ${unmapped === 1 ? 'is' : 'are'} in towns that aren’t on the map yet (see Feed or Wall)` : '') +
+    ' — tap a pin to see its shows.';
+  if (!MAP_GROUPS.size) { mapEl.style.display = 'none'; towns.innerHTML = ''; vEl('pb-map-panel').innerHTML = ''; return; }
+
+  try { await loadLeaflet(); }
+  catch (err) {
+    // Couldn't load the map library — fall back to a plain list of towns
+    mapEl.style.display = 'none';
+    towns.innerHTML = [...MAP_GROUPS.values()].sort((a, b) => a.name.localeCompare(b.name))
+      .map(g => `<button class="pb-chip" data-town="${esc(g.key)}">${esc(g.name)} (${g.list.length})</button>`).join('');
+    if (SEL_TOWN && MAP_GROUPS.has(SEL_TOWN)) showTown(SEL_TOWN); else vEl('pb-map-panel').innerHTML = '';
+    return;
+  }
+  towns.innerHTML = ''; mapEl.style.display = '';
+  if (!MAP) {
+    MAP = L.map('pb-map', { scrollWheelZoom: false });
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(MAP);
+    MAP_LAYER = L.layerGroup().addTo(MAP);
+    MAP.setView(KINGSTON_VIEW, 9);
+  }
+  MAP_LAYER.clearLayers(); MAP_MARKERS = new Map();
+  const pts = [];
+  for (const g of MAP_GROUPS.values()) {
+    const pt = [g.c.lat, g.c.lng]; pts.push(pt);
+    const n = g.list.length;
+    const icon = L.divIcon({ className: 'pb-pin', html: `<span>${n > 99 ? '99+' : n}</span>`, iconSize: [32, 32], iconAnchor: [16, 16] });
+    const m = L.marker(pt, { icon, title: `${g.name} — ${n} show${n === 1 ? '' : 's'}`, riseOnHover: true });
+    m.on('click', () => showTown(g.key));
+    m.addTo(MAP_LAYER); MAP_MARKERS.set(g.key, m);
+  }
+  if (CUSTOM) {
+    const me = [CUSTOM.lat, CUSTOM.lng]; pts.push(me);
+    L.marker(me, { icon: L.divIcon({ className: 'pb-pin pb-me', html: '<span>You</span>', iconSize: [32, 32], iconAnchor: [16, 16] }), title: 'Your zip code ' + CUSTOM.zip, zIndexOffset: 500 }).addTo(MAP_LAYER);
+  }
+  setTimeout(() => {
+    MAP.invalidateSize();
+    if (pts.length === 1) MAP.setView(pts[0], 11);
+    else MAP.fitBounds(L.latLngBounds(pts), { padding: [34, 34], maxZoom: 11 });
+    markSelected();
+  }, 60);
+  if (SEL_TOWN && MAP_GROUPS.has(SEL_TOWN)) showTown(SEL_TOWN); else { SEL_TOWN = null; vEl('pb-map-panel').innerHTML = ''; }
+}
+function markSelected() {
+  for (const [k, m] of MAP_MARKERS) { const el = m._icon; if (el) el.classList.toggle('sel', k === SEL_TOWN); }
+}
+function showTown(key) {
+  const g = MAP_GROUPS.get(key); if (!g) return;
+  SEL_TOWN = key; markSelected();
+  // Group the town's shows by venue so each place is its own section
+  g.list.sort((a, b) => (a.venue||'').localeCompare(b.venue||'') || (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
+    let html = `<h2 class="pb-day" style="margin-top:22px;">${esc(g.name)} — ${g.list.length} show${g.list.length === 1 ? '' : 's'}</h2>`;
+  let lastVenue = null;
+  g.list.forEach((e, i) => {
+    if (e.venue !== lastVenue) {
+      lastVenue = e.venue;
+      const maps = { mapsUrl: krMapsLink(g.list.find(x => x.venue === e.venue && x.mapsUrl && /^https?:/i.test(x.mapsUrl)) || e) };
+      html += `<div class="pb-venuehead"><a href="${esc(location.pathname)}?view=feed&venue=${encodeURIComponent(e.venue)}" data-xvenue="${esc(e.venue)}" title="See all ${esc(e.venue)} shows">${esc(e.venue)}</a>` +
+              (maps.mapsUrl ? `<a class="pb-vmaps" href="${esc(maps.mapsUrl)}" target="_blank" rel="noopener">Open in Maps ↗</a>` : '') + `</div>`;
+    }
+    const k = eventKey(e), t = formatTime(e.time);
+    html += `<div class="pb-maprow" data-maprow="${i}">
+      ${e.posterUrl ? `<img src="${esc(e.posterUrl)}" alt="" loading="lazy">` : `<div class="pb-np-box" style="min-height:0;height:100%;padding:4px;font-size:0.6rem;">No poster</div>`}
+      <div><div class="pb-tile-date">${esc(shortDate(e))}${t ? ' · ' + esc(t) : ''}</div>
+      <div class="pb-tile-title">${e.venueUrl ? `<a href="${esc(e.venueUrl)}" target="_blank" rel="noopener">${esc(e.title)}</a>` : esc(e.title)}</div></div></div>`;
+  });
+  vEl('pb-map-panel').innerHTML = html;
+}
+vEl('pb-map-panel').addEventListener('click', ev => {
+  const jump = ev.target.closest('[data-jump]');
+  if (jump) { ev.preventDefault(); jumpToShow(jump.dataset.jump); return; }
+  if (ev.target.closest('a')) return;            // venue / Maps links behave normally
+  const row = ev.target.closest('[data-maprow]'); if (!row || !SEL_TOWN) return;
+  const g = MAP_GROUPS.get(SEL_TOWN); if (g) openViewer(g.list, +row.dataset.maprow, false);
+});
+vEl('pb-map-towns').addEventListener('click', ev => {
+  const b = ev.target.closest('[data-town]'); if (b) { showTown(b.dataset.town); vEl('pb-map-panel').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+});
+
+const reset = () => { _pbShown = step(); _wallMore = 0; };
+ROOT.addEventListener('click', ev => {
+  const a = ev.target.closest('a[data-xvenue]'); if (!a) return;
+  if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button === 1) return;      // let "open in new tab" work normally
+  ev.preventDefault();
+  Object.assign(S, { q: '', from: '', to: '', saved: false, dist: 'all', sort: 'date', view: 'feed', dayOffset: null, venue: a.dataset.xvenue });
+  krFilterChanged();
+  window.scrollTo({ top: 0 });
+});
+document.getElementById('pb-feed').addEventListener('click', async ev => {
+  if (ev.target.closest('#pb-loadmore')) { _wallMore++; _pbShown += step() + _wallMore; render(); return; }
+  const f = ev.target.closest('[data-fav]'); if (f) { toggleFav(f.dataset.fav); return; }
+  const v = ev.target.closest('[data-view]');  if (v) { showPoster(v.dataset.view, v.dataset.key); return; }
+  const s = ev.target.closest('[data-share]'); if (s) { const e = POSTS.find(x => eventKey(x) === s.dataset.share); if (e) await shareEvent(e); return; }
+  const c = ev.target.closest('[data-copy]');  if (c) {
+    const e = POSTS.find(x => eventKey(x) === c.dataset.copy);
+    if (e) { try { await navigator.clipboard.writeText(blurb(e)); showToast('Copied!'); } catch { showToast('Could not copy'); } }
+  }
+});
+
+// Re-flow the wall when the window crosses the 2-column / 3-column breakpoint
+let _wallCols = wallCols();
+window.addEventListener('resize', () => { const c = wallCols(); if (c !== _wallCols) { _wallCols = c; if (S.view === 'wall') render(); } });
+
+// What the page's shared code calls
+window.KR_EXPLORE = {
+  init,
+  render,
+  reset,
+  slideshow() { openViewer(filtered(), 0, true); },
+  jumpToHash(h) { const hit = POSTS.find(x => shortHash(eventKey(x)) === h); if (hit) jumpToShow(eventKey(hit)); }
+};
+})();
 </script>
 <div id="kr-modal-overlay" class="kr-modal-overlay">
   <div class="kr-modal-box">
