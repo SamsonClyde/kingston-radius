@@ -20297,7 +20297,8 @@
     "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
     "price": "$35",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792319894048-imar-landscape-web.jpg"
   },
   {
     "id": 1790093340139,
