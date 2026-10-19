@@ -2332,5 +2332,9 @@
   "Woodstock Playhouse||2026-11-07||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1792149604863
+  },
+  "The Chapel Restoration||2026-12-12||19:00": {
+    "status": "rejected",
+    "hiddenAt": 1792372520237
   }
 }
