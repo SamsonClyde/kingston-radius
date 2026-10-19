@@ -26974,5 +26974,20 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 293,
+    "date": "2026-10-31",
+    "title": "Halloween Takeover Weekend: UFO Invasion",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/halloween-takeover-weekend-lights-out-har76",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792368104481-1000090188.jpg",
+    "_manual": true
   }
 ]
