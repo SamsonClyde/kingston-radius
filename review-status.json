@@ -2177,5 +2177,9 @@
     "status": "rejected",
     "hiddenAt": 1792447150087
   },
-  "Keegan Ales||2026-10-30||20:00": "approved"
+  "Keegan Ales||2026-10-30||20:00": "approved",
+  "Rough Draft Books||2026-10-20||6:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1792450085737
+  }
 }
