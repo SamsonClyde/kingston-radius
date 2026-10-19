@@ -27151,5 +27151,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792447442681,
+    "title": "Connan Mockasin",
+    "date": "2026-10-30",
+    "time": "20:00",
+    "venue": "Woodstock Byrdcliffe Guild",
+    "venueUrl": "https://www.woodstockguild.org/events/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/pVBrB3SCGDhdaGhx5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792447370575-unnamed-1.jpg",
+    "price": "sold out",
+    "free": false,
+    "_manual": true
   }
 ]
