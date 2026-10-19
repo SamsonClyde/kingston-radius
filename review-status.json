@@ -2328,5 +2328,9 @@
   "The Chapel Restoration||2026-12-12||19:00": {
     "status": "rejected",
     "hiddenAt": 1792372520237
+  },
+  "Keegan Ales||2026-10-25||11:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1792405101619
   }
 }
