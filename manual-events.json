@@ -25336,7 +25336,7 @@
   },
   {
     "id": 1791509489026,
-    "title": "Jack Vero, Lily of the Valley",
+    "title": "Jack Vero & Lily of the Valley",
     "date": "2026-10-29",
     "time": "19:00",
     "venue": "Colony Woodstock",
@@ -25346,7 +25346,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791548584045-1000089513.jpg",
     "price": "$17",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1791509548654,
