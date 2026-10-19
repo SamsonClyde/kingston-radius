@@ -27066,5 +27066,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792406734887,
+    "title": "both",
+    "date": "2026-11-28",
+    "time": "20:30",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792406729418-screen-shot-2026-10-19-at-6-44-36-am.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
