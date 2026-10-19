@@ -1376,7 +1376,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="add-section-divider">Full Entry Form</div>
         <div class="form-group">
-          <label>Venue Template</label>
+          <div style="display:flex;align-items:baseline;gap:14px;"><label>Venue Template</label><button type="button" id="clear-add-form-btn" style="background:none;border:none;color:var(--red);font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:600;cursor:pointer;padding:4px 2px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Clear form</button></div>
           <div style="display:flex;gap:8px;">
             <select id="f-venue-template" style="width:100%;border:1.5px solid var(--border);border-radius:6px;padding:8px 10px;font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--text);background:var(--bg);"><option value="">— Select a venue —</option></select>
             <button id="f-template-delete" style="display:none;background:none;border:1.5px solid #e74c3c;color:#e74c3c;border-radius:6px;padding:8px 12px;font-family:'DM Sans',sans-serif;font-size:0.82rem;cursor:pointer;">✕ Delete</button>
@@ -1404,7 +1404,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="form-group"><label>Price</label><input type="text" id="f-price" placeholder="$15 / Free / See website" /></div>
         </div>
         <button class="btn-primary" id="add-event-btn">Add Event</button>
-        <button class="btn-save-venue" id="clear-add-form-btn" type="button">Clear form</button>
         <button class="btn-save-venue" id="save-venue-btn">💾 Save This Venue for Quick Add</button>
         <div class="success-msg" id="add-success">✓ Event added!</div>
         <div class="success-msg" id="venue-saved-msg" style="margin-top:6px;">✓ Venue saved!</div>
