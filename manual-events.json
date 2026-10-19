@@ -27179,5 +27179,19 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792447627146,
+    "title": "Tim Moore",
+    "date": "2026-11-28",
+    "time": "20:00",
+    "venue": "Woodstock Byrdcliffe Guild",
+    "venueUrl": "https://www.woodstockguild.org/events/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/pVBrB3SCGDhdaGhx5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792447573322-tim-moore-3-1536x1464.jpeg",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
