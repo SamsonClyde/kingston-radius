@@ -2168,5 +2168,9 @@
   "Keegan Ales||2026-10-25||11:00 am": {
     "status": "rejected",
     "hiddenAt": 1792405101619
+  },
+  "Athens Cultural Center||2026-10-26||6:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1792447065843
   }
 }
