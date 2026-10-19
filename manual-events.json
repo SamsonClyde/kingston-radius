@@ -27122,5 +27122,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792408117525,
+    "title": "Andy Grammer",
+    "date": "2026-11-11",
+    "time": "20:00",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792408082757-image-260621014418470.jpg",
+    "price": "$56+",
+    "free": false,
+    "_manual": true
   }
 ]
