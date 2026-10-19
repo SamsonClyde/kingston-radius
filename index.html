@@ -1223,8 +1223,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button class="filter-btn quick-btn" id="saved-filter-btn" aria-pressed="false" title="Show only the shows you've saved">&#9829; Saved</button>
       <input type="search" id="keyword-search" name="kr-search" placeholder="Search…" autocomplete="off" data-lpignore="true" data-1p-ignore style="border:1.5px solid var(--border);background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.8rem;padding:4px 12px;border-radius:20px;margin-left:6px;width:150px;transition:border-color 0.15s;">
     </div>
+    <div style="display:flex;gap:6px;align-items:center;">
+    <button id="add-show-jump-btn" type="button" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--red);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--red);font-family:'DM Sans',sans-serif;font-weight:600;" onclick="jumpToAddShow()">+ Add show</button>
     <button id="venue-delete-mode-btn" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;" onclick="toggleVenueDeleteMode()">Manage venues</button>
     <button id="title-hide-mode-btn" style="display:none;font-size:0.72rem;background:none;border:1px solid var(--border);border-radius:4px;padding:3px 8px;cursor:pointer;color:var(--muted);font-family:'DM Sans',sans-serif;" onclick="toggleTitleHideMode()">Hide by title</button>
+    </div>
   </div>
   <div class="filter-row" id="admin-sort-row" style="display:none;padding-top:0;">
     <span class="filter-label">Sort</span>
@@ -1401,6 +1404,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="form-group"><label>Price</label><input type="text" id="f-price" placeholder="$15 / Free / See website" /></div>
         </div>
         <button class="btn-primary" id="add-event-btn">Add Event</button>
+        <button class="btn-save-venue" id="clear-add-form-btn" type="button">Clear form</button>
         <button class="btn-save-venue" id="save-venue-btn">💾 Save This Venue for Quick Add</button>
         <div class="success-msg" id="add-success">✓ Event added!</div>
         <div class="success-msg" id="venue-saved-msg" style="margin-top:6px;">✓ Venue saved!</div>
@@ -3811,11 +3815,34 @@ async function removeHiddenTitle(kw) {
   else showToast(`"${kw}" removed from hidden titles ✓`);
 }
 
+// Signed-in admin: jump from the public Music page straight to the Add New form
+function jumpToAddShow() {
+  if (!sessionStorage.getItem('kr_authed')) return;
+  openAdminPanel();
+  document.querySelector('.admin-tab-btn[data-tab="add"]')?.click();
+  window.scrollTo({ top: 0 });
+  setTimeout(() => document.getElementById('f-title')?.focus(), 80);
+}
+
+// Add New form: empty every field so a new show can be entered from scratch
+function clearAddShowForm() {
+  ['f-title','f-date','f-time','f-venue','f-venue-url','f-location','f-maps','f-poster','f-drive','f-price','f-poster-file','f-venue-template'].forEach(id => {
+    const el = document.getElementById(id); if (el) el.value = '';
+  });
+  const st = document.getElementById('f-poster-status'); if (st) st.textContent = '';
+  const del = document.getElementById('f-template-delete'); if (del) del.style.display = 'none';
+  ['add-success','venue-saved-msg'].forEach(id => { const m = document.getElementById(id); if (m) m.style.display = 'none'; });
+  document.getElementById('f-title')?.focus();
+}
+document.getElementById('clear-add-form-btn')?.addEventListener('click', clearAddShowForm);
+
 function updateManageVenueBtn() {
   const btn = document.getElementById('venue-delete-mode-btn');
   if (btn) btn.style.display = sessionStorage.getItem('kr_authed') ? '' : 'none';
   const titleBtn = document.getElementById('title-hide-mode-btn');
   if (titleBtn) titleBtn.style.display = sessionStorage.getItem('kr_authed') ? '' : 'none';
+  const addJump = document.getElementById('add-show-jump-btn');
+  if (addJump) addJump.style.display = sessionStorage.getItem('kr_authed') ? '' : 'none';
   const sortRow = document.getElementById('admin-sort-row');   // Sort is for the signed-in admin only
   if (sortRow) sortRow.style.display = sessionStorage.getItem('kr_authed') ? '' : 'none';
 }
@@ -4441,7 +4468,7 @@ function tile(e) {
   const townHtml = krTownLink(e);
   return `<div class="pb-tile">
     ${posterBlock}
-    <div class="pb-tile-row"><div class="pb-tile-date">${esc(S.sort === 'venue' ? [shortDate(e), time].filter(Boolean).join(' · ') : (time || shortDate(e)))}</div><span class="pb-tile-icons"><button class="icon-btn" data-share="${esc(eventKey(e))}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button><button class="icon-btn" data-copy="${esc(eventKey(e))}" title="Copy title" aria-label="Copy title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>${heartBtn(eventKey(e), 'pb-tile-heart')}</span></div>
+    <div class="pb-tile-row"><div class="pb-tile-date">${esc(S.sort === 'venue' ? [shortDate(e), time].filter(Boolean).join(' · ') : (time || shortDate(e)))}</div><span class="pb-tile-icons"><button class="icon-btn" data-copy="${esc(eventKey(e))}" title="Copy title" aria-label="Copy title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button><button class="icon-btn" data-share="${esc(eventKey(e))}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>${heartBtn(eventKey(e), 'pb-tile-heart')}</span></div>
     <div class="pb-tile-title">${titleHtml}</div>
     <div class="pb-tile-venue"><a href="${esc(location.pathname)}?view=feed&venue=${encodeURIComponent(e.venue)}" data-xvenue="${esc(e.venue)}" title="See all ${esc(e.venue)} shows">${esc(e.venue)}</a>${townHtml ? ` — ${townHtml}` : ''}</div>
   </div>`;
