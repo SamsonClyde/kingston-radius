@@ -27024,5 +27024,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792406031240,
+    "title": "Bourbon Sprawl",
+    "date": "2026-11-07",
+    "time": "20:30",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792406000293-bourbon-sprawl.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
