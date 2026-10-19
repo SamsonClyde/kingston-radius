@@ -1132,5 +1132,11 @@
     "location": "Wallkill NY",
     "mapsUrl": "https://maps.app.goo.gl/QHVtHgtLogwNnvU9A",
     "drive": 40
+  },
+  "Woodstock Byrdcliffe Guild": {
+    "venueUrl": "https://www.woodstockguild.org/events/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/pVBrB3SCGDhdaGhx5",
+    "drive": 18
   }
 }
