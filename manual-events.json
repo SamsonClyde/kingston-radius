@@ -27080,5 +27080,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792407109225,
+    "title": "Howlin Halloween Party",
+    "date": "2026-10-31",
+    "time": "21:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792407102354-ff90b5-5292e08fc44f4abb88b8a257266e80e5-mv2.avif",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
