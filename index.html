@@ -1036,6 +1036,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   #page-explore .pb-tile-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; }
   #page-explore .pb-tile-row .pb-tile-date { margin-top: 0; }
   #page-explore .pb-tile-heart { padding: 3px; margin-right: -3px; }
+  #page-explore .pb-tile-icons { display: inline-flex; align-items: center; gap: 2px; }
+  #page-explore .pb-tile-icons .icon-btn { padding: 3px; }
   #page-explore .pb-tile-title a { color: inherit; text-decoration: none; }
   #page-explore .pb-tile-title a:hover { color: var(--red); text-decoration: underline; text-underline-offset: 3px; }
   #page-explore .pb-tile-venue a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 2px; }
@@ -2717,10 +2719,10 @@ async function shareEvent(e) {
 }
 
 async function copyEventBlurb(e) {
-  const blurb = formatEventBlurb(e);
+  // the button copies just the show's title
   try {
-    await navigator.clipboard.writeText(blurb);
-    showToast('Copied!');
+    await navigator.clipboard.writeText(e.title || '');
+    showToast('Title copied!');
   } catch {
     showToast('Could not copy');
   }
@@ -2891,7 +2893,7 @@ function buildEventCard(e, isAdmin) {
         <div class="event-icons">
           ${e.posterUrl ? `<button class="share-btn" data-action="view-poster" data-poster-url="${esc(e.posterUrl)}" title="View poster" aria-label="View poster"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" stroke="none"/><path d="M21 15l-5-5L5 21"/></svg></button>` : ''}
           <button class="share-btn" data-action="share-event" data-key="${esc(key)}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>
-          <button class="copy-btn" data-action="copy-event" data-key="${esc(key)}" title="Copy show details" aria-label="Copy show details"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>
+          <button class="copy-btn" data-action="copy-event" data-key="${esc(key)}" title="Copy title" aria-label="Copy title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>
         </div>
       </div>
       ${editBtn}
@@ -4439,7 +4441,7 @@ function tile(e) {
   const townHtml = krTownLink(e);
   return `<div class="pb-tile">
     ${posterBlock}
-    <div class="pb-tile-row"><div class="pb-tile-date">${esc(S.sort === 'venue' ? [shortDate(e), time].filter(Boolean).join(' · ') : (time || shortDate(e)))}</div>${heartBtn(eventKey(e), 'pb-tile-heart')}</div>
+    <div class="pb-tile-row"><div class="pb-tile-date">${esc(S.sort === 'venue' ? [shortDate(e), time].filter(Boolean).join(' · ') : (time || shortDate(e)))}</div><span class="pb-tile-icons"><button class="icon-btn" data-share="${esc(eventKey(e))}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button><button class="icon-btn" data-copy="${esc(eventKey(e))}" title="Copy title" aria-label="Copy title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>${heartBtn(eventKey(e), 'pb-tile-heart')}</span></div>
     <div class="pb-tile-title">${titleHtml}</div>
     <div class="pb-tile-venue"><a href="${esc(location.pathname)}?view=feed&venue=${encodeURIComponent(e.venue)}" data-xvenue="${esc(e.venue)}" title="See all ${esc(e.venue)} shows">${esc(e.venue)}</a>${townHtml ? ` — ${townHtml}` : ''}</div>
   </div>`;
@@ -4527,7 +4529,7 @@ function post(e) {
     <div class="pb-actions">
       ${heartBtn(key)}
       <button class="icon-btn" data-share="${esc(key)}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>
-      <button class="icon-btn" data-copy="${esc(key)}" title="Copy show details" aria-label="Copy show details"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>
+      <button class="icon-btn" data-copy="${esc(key)}" title="Copy title" aria-label="Copy title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>
     </div>
   </article>`;
 }
@@ -4794,11 +4796,11 @@ ROOT.addEventListener('click', ev => {
 document.getElementById('pb-feed').addEventListener('click', async ev => {
   if (ev.target.closest('#pb-loadmore')) { _wallMore++; _pbShown += step() + _wallMore; render(); return; }
   const f = ev.target.closest('[data-fav]'); if (f) { toggleFav(f.dataset.fav); return; }
-  const v = ev.target.closest('[data-view]');  if (v) { showPoster(v.dataset.view, v.dataset.key); return; }
+  const v = ev.target.closest('button[data-view]');  if (v) { showPoster(v.dataset.view, v.dataset.key); return; }
   const s = ev.target.closest('[data-share]'); if (s) { const e = POSTS.find(x => eventKey(x) === s.dataset.share); if (e) await shareEvent(e); return; }
   const c = ev.target.closest('[data-copy]');  if (c) {
     const e = POSTS.find(x => eventKey(x) === c.dataset.copy);
-    if (e) { try { await navigator.clipboard.writeText(blurb(e)); showToast('Copied!'); } catch { showToast('Could not copy'); } }
+    if (e) { try { await navigator.clipboard.writeText(e.title || ''); showToast('Title copied!'); } catch { showToast('Could not copy'); } }
   }
 });
 
