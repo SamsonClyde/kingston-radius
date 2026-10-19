@@ -2172,5 +2172,10 @@
   "Athens Cultural Center||2026-10-26||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1792447065843
-  }
+  },
+  "Keegan Ales||2026-10-30||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1792447150087
+  },
+  "Keegan Ales||2026-10-30||20:00": "approved"
 }
