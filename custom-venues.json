@@ -1126,5 +1126,11 @@
     "location": "Beacon, NY",
     "mapsUrl": "https://maps.app.goo.gl/YzPP7Re8dNgyUsks8",
     "drive": 44
+  },
+  "WildHeart Center": {
+    "venueUrl": "https://www.wildheartcenter.art/events/",
+    "location": "Windsor, NY",
+    "mapsUrl": "https://maps.app.goo.gl/qXUfx51mMunywtwM9",
+    "drive": 40
   }
 }
