@@ -27263,5 +27263,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792450481300,
+    "title": "Dominick & The Family Band",
+    "date": "2026-11-14",
+    "time": "20:00",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792450444298-unnamed-8.jpg",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
