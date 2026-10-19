@@ -27136,5 +27136,19 @@
     "price": "$56+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792446731630,
+    "title": "Pathos Trio",
+    "date": "2026-10-30",
+    "time": "19:00",
+    "venue": "WildHeart Center",
+    "venueUrl": "https://www.wildheartcenter.art/events/",
+    "location": "Wallkill NY",
+    "mapsUrl": "https://maps.app.goo.gl/QHVtHgtLogwNnvU9A",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792446723413-banners-29-1.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
