@@ -27010,5 +27010,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792405884956,
+    "title": "Pete Donnelly",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792405882006-peteoct.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
