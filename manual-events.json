@@ -27094,5 +27094,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792407173776,
+    "title": "Line Dance Night",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792407171297-ff90b5-c6d348d9b1ad4cc1af6082f96b87d6e8-mv2.avif",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
