@@ -27235,5 +27235,19 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792449612765,
+    "title": "Funky Pirates",
+    "date": "2026-10-31",
+    "time": "19:00",
+    "venue": "The Greenhouse Cidery",
+    "venueUrl": "https://www.thechathamberryfarm.com/greenhouse-cidery.html",
+    "location": "Chatham, NY",
+    "mapsUrl": "https://maps.app.goo.gl/DzCNXHirqPit3UBK7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792449591746-unnamed-6.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
