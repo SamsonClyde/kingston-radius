@@ -2201,5 +2201,9 @@
   "The Local Saugerties||2026-11-01||5:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792450344357
+  },
+  "Unicorn Bar||2026-11-04||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1792450346963
   }
 }
