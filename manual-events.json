@@ -27249,5 +27249,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792449794097,
+    "title": "Brandi & The Alexanders, Professor Louis & The Crowmatrix",
+    "date": "2026-12-18",
+    "time": "18:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792449760465-unnamed-7.jpg",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
