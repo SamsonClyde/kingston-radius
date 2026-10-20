@@ -27482,5 +27482,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792500609829,
+    "title": "Alan Cumming",
+    "date": "2027-01-31",
+    "time": "19:30",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792500606895-image-26101308002333.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
