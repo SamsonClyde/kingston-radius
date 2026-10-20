@@ -27750,5 +27750,19 @@
     "price": "$34+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792519442269,
+    "title": "PureSoul Presents Ladies of the 80s: Anita, Chaka, Whitney",
+    "date": "2026-12-06",
+    "time": "12:00",
+    "venue": "City Winery HV",
+    "venueUrl": "https://citywinery.com/pages/events/hudson-valley#",
+    "location": "Montgomery, NY",
+    "mapsUrl": "https://maps.app.goo.gl/eaFRDVZgzj3VpTpi8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792519412945-image.jpeg",
+    "price": "$30+",
+    "free": false,
+    "_manual": true
   }
 ]
