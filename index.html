@@ -4327,7 +4327,7 @@ function lsGet(key, fallback) { try { return JSON.parse(localStorage.getItem(key
 let POSTS = [];          // upcoming, approved, not-hidden shows (with or without a poster) — the same pool the List view uses
 const hasPoster = e => !!e.posterUrl;
 let LOADED = false;
-const PB_STEP = 20, WALL_STEP = 20;     // Feed and Wall: first 20, then each "Show more" adds one more than the time before (21, 22, 23 …)
+const PB_STEP = 20, WALL_STEP = 30;     // Feed: first 20, then each "Show more" adds 21, 22, 23 …   Wall: first 30, then "Show more" adds 30, 32, 34, 36 …
 let _wallMore = 0;                       // how many times "Show more" has been pressed
 const step = () => S.view === 'wall' ? WALL_STEP : PB_STEP;
 
@@ -4840,7 +4840,7 @@ ROOT.addEventListener('click', ev => {
   window.scrollTo({ top: 0 });
 });
 document.getElementById('pb-feed').addEventListener('click', async ev => {
-  if (ev.target.closest('#pb-loadmore')) { _wallMore++; _pbShown += step() + _wallMore; render(); return; }
+  if (ev.target.closest('#pb-loadmore')) { _wallMore++; _pbShown += S.view === 'wall' ? WALL_STEP + 2 * (_wallMore - 1) : step() + _wallMore; render(); return; }
   const f = ev.target.closest('[data-fav]'); if (f) { toggleFav(f.dataset.fav); return; }
   const v = ev.target.closest('button[data-view]');  if (v) { showPoster(v.dataset.view, v.dataset.key); return; }
   const s = ev.target.closest('[data-share]'); if (s) { const e = POSTS.find(x => eventKey(x) === s.dataset.share); if (e) await shareEvent(e); return; }
