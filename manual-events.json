@@ -27468,5 +27468,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792500566389,
+    "title": "Big Bad Voodoo Daddy's Wild & Swingin' Holiday Party",
+    "date": "2026-12-09",
+    "time": "19:00",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792500564946-image-261014072884.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
