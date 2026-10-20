@@ -25310,7 +25310,7 @@
   {
     "id": 1791509366497,
     "title": "Triad",
-    "date": "2026-10-24",
+    "date": "2026-10-21",
     "time": "17:00",
     "venue": "Colony Woodstock",
     "venueUrl": "https://www.colonywoodstock.com/shows",
@@ -25319,7 +25319,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791548231301-1000089517.jpg",
     "price": "donation",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1791509431980,
