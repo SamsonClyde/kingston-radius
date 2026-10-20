@@ -27308,5 +27308,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792455798924,
+    "title": "Regina Bonelli",
+    "date": "2026-12-10",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792455783584-image-15.webp",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
