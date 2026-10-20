@@ -1132,6 +1132,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   #pbv-overlay .v-bar .heart { color: #fff; padding: 0 12px; }
   #pbv-overlay .v-bar .heart[aria-pressed="true"] { color: #ff7a68; }
   #pbv-overlay .v-count { color: rgba(255,255,255,0.7); font-size: 0.78rem; margin-left: 6px; }
+  /* Full screen: nothing but the art (Esc, a tap on the art, ← → and space still work) */
+  #pbv-overlay.v-clean { padding: 0; background: #000; }
+  #pbv-overlay.v-clean .pbv-close, #pbv-overlay.v-clean .v-nav, #pbv-overlay.v-clean .pbv-cap, #pbv-overlay.v-clean .v-bar, #pbv-overlay.v-clean .v-progress { display: none; }
+  #pbv-overlay.v-clean .pbv-img { max-width: 100vw; max-height: 100vh; width: auto; height: auto; border-radius: 0; box-shadow: none; cursor: pointer; }
   #pbv-overlay .v-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: transparent; }
   #pbv-overlay .v-progress span { display: block; height: 100%; width: 0; background: var(--red); }
 @media (max-width: 480px) {
@@ -4647,13 +4651,20 @@ function setPlaying(p) {
 function closeViewer() {
   setPlaying(false);
   try { if (document.fullscreenElement) document.exitFullscreen(); else if (document.webkitFullscreenElement) document.webkitExitFullscreen(); } catch {}
-  vEl('pbv-overlay').classList.remove('show');
+  vEl('pbv-overlay').classList.remove('show', 'v-clean');
   vEl('pbv-img').src = '';
   document.body.style.overflow = '';
   if (S.saved) render();   // if "Saved" is on, reflect anything un-saved while browsing
 }
 vEl('pbv-close').addEventListener('click', closeViewer);
-vEl('pbv-overlay').addEventListener('click', ev => { if (ev.target === ev.currentTarget) closeViewer(); });
+const exitFull = () => { try { (document.exitFullscreen || document.webkitExitFullscreen).call(document); } catch {} };
+const syncClean = () => vEl('pbv-overlay').classList.toggle('v-clean', (document.fullscreenElement || document.webkitFullscreenElement) === vEl('pbv-overlay'));
+document.addEventListener('fullscreenchange', syncClean);
+document.addEventListener('webkitfullscreenchange', syncClean);
+vEl('pbv-overlay').addEventListener('click', ev => {
+  if (vEl('pbv-overlay').classList.contains('v-clean')) { exitFull(); return; }      // in full screen a tap just brings the controls back
+  if (ev.target === ev.currentTarget) closeViewer();
+});
 vEl('v-prev').addEventListener('click', () => viewerGo(-1));
 vEl('v-next').addEventListener('click', () => viewerGo(1));
 vEl('v-play').addEventListener('click', () => setPlaying(!V.playing));
