@@ -27792,5 +27792,19 @@
     "price": "$31+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792535781515,
+    "title": "Party For Public Radio",
+    "date": "2026-10-23",
+    "time": "17:30",
+    "venue": "The Common Good",
+    "venueUrl": "https://www.thecommongoodny.com/",
+    "location": "Ellenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LHV8FPfmhjg3qRaLA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792535776939-unnamed-1.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
