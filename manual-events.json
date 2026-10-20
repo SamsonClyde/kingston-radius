@@ -27319,9 +27319,10 @@
     "location": "Woodstock, NY",
     "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792455783584-image-15.webp",
-    "price": "donation",
+    "price": "$12",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1792455878145,
