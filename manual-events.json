@@ -27454,5 +27454,19 @@
     "price": "$9",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792500466464,
+    "title": "Terry Fator",
+    "date": "2026-12-05",
+    "time": "19:30",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792500441858-image-260721125030170.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
