@@ -1034,7 +1034,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   #page-explore .heart[aria-pressed="true"] svg { fill: currentColor; }
   #page-explore .pb-tile { position: relative; }
   #page-explore .pb-tile-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; }
-  #page-explore .pb-tile-row .pb-tile-date { margin-top: 0; }
+  #page-explore .pb-tile-row .pb-tile-date { margin-top: 0; min-width: 0; flex: 1 1 auto; overflow: hidden; white-space: nowrap; }
+  #page-explore .pb-tile-price { color: var(--red); }
+  #page-explore .pb-price-btn { display: none; background: none; border: none; padding: 0 4px; margin-left: 2px; font: inherit; font-weight: 700; color: var(--red); cursor: pointer; }
+  #page-explore .pb-price-btn:hover { text-decoration: underline; }
+  #page-explore .pb-tile-date.pb-price-short .pb-tile-price { display: none; }
+  #page-explore .pb-tile-date.pb-price-short .pb-price-btn { display: inline; }
   #page-explore .pb-tile-heart { padding: 3px; margin-right: -3px; }
   #page-explore .pb-tile-icons { display: inline-flex; align-items: center; gap: 2px; }
   #page-explore .pb-tile-icons .icon-btn { padding: 3px; }
@@ -4466,7 +4471,18 @@ function render() {
   }
   if (events.length > shown.length) html += `<button class="pb-loadmore" id="pb-loadmore">Show more (${events.length - shown.length} more shows)</button>`;
   feed.innerHTML = html;
+  if (S.view === 'wall') fitPrices();
 }
+
+// Wall: show the price next to the time; if it doesn't fit on that line, collapse it to a $ you can hover or tap
+function fitPrices() {
+  document.querySelectorAll('#pb-feed .pb-tile-date').forEach(d => {
+    d.classList.remove('pb-price-short');
+    if (d.querySelector('.pb-tile-price') && d.scrollWidth > d.clientWidth + 1) d.classList.add('pb-price-short');
+  });
+}
+window.addEventListener('resize', () => { clearTimeout(window._fitT); window._fitT = setTimeout(() => { if (S.view === 'wall') fitPrices(); }, 120); });
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { if (S.view === 'wall') fitPrices(); });
 
 let _wallToken = 0;
 const wallCols = () => (window.innerWidth >= 720 ? 3 : 2);
@@ -4475,6 +4491,7 @@ const wallFlat = () => !!S.venue && S.sort !== 'venue';
 const shortDate = e => parseDate(e.date).toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
 function tile(e, dayHead) {
   const time = formatTime(e.time);
+  const price = (e.price && e.price !== 'See website') ? e.price : '';   // same rule as the Feed
   const posterBlock = e.posterUrl ? `<button type="button" class="pb-poster"${AR.has(e.posterUrl) ? ` style="--ar:${AR.get(e.posterUrl)}"` : ''} data-view="${esc(e.posterUrl)}" data-key="${esc(eventKey(e))}" aria-label="View poster for ${esc(e.title)}">
       <img src="${esc(e.posterUrl)}" alt="Poster for ${esc(e.title)}" loading="lazy" decoding="async"
            onload="this.parentNode.style.setProperty('--ar', this.naturalWidth / this.naturalHeight)"
@@ -4485,7 +4502,7 @@ function tile(e, dayHead) {
   const townHtml = krTownLink(e);
   return `<div class="pb-tile">
     ${posterBlock}
-    <div class="pb-tile-row"><div class="pb-tile-date">${esc(S.sort === 'venue' || (wallFlat() && !dayHead) ? [shortDate(e), time].filter(Boolean).join(' · ') : (time || shortDate(e)))}</div><span class="pb-tile-icons"><button class="icon-btn" data-copy="${esc(eventKey(e))}" title="Copy title" aria-label="Copy title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button><button class="icon-btn" data-share="${esc(eventKey(e))}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>${heartBtn(eventKey(e), 'pb-tile-heart')}</span></div>
+    <div class="pb-tile-row"><div class="pb-tile-date"><span class="pb-tile-when">${esc(S.sort === 'venue' || (wallFlat() && !dayHead) ? [shortDate(e), time].filter(Boolean).join(' · ') : (time || shortDate(e)))}</span>${price ? `<span class="pb-tile-price"> · ${esc(price)}</span><button type="button" class="pb-price-btn" data-price="${esc(price)}" title="${esc(price)}" aria-label="Price: ${esc(price)}">$</button>` : ''}</div><span class="pb-tile-icons"><button class="icon-btn" data-copy="${esc(eventKey(e))}" title="Copy title" aria-label="Copy title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button><button class="icon-btn" data-share="${esc(eventKey(e))}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>${heartBtn(eventKey(e), 'pb-tile-heart')}</span></div>
     <div class="pb-tile-title">${titleHtml}</div>
     <div class="pb-tile-venue"><a href="${esc(location.pathname)}?view=feed&venue=${encodeURIComponent(e.venue)}" data-xvenue="${esc(e.venue)}" title="See all ${esc(e.venue)} shows">${esc(e.venue)}</a>${townHtml ? ` — ${townHtml}` : ''}</div>
   </div>`;
@@ -4857,6 +4874,7 @@ ROOT.addEventListener('click', ev => {
 });
 document.getElementById('pb-feed').addEventListener('click', async ev => {
   if (ev.target.closest('#pb-loadmore')) { _wallMore++; _pbShown += S.view === 'wall' ? WALL_STEP + 2 * (_wallMore - 1) : step() + _wallMore; render(); return; }
+  const pr = ev.target.closest('.pb-price-btn'); if (pr) { showToast(pr.dataset.price); return; }
   const f = ev.target.closest('[data-fav]'); if (f) { toggleFav(f.dataset.fav); return; }
   const v = ev.target.closest('button[data-view]');  if (v) { showPoster(v.dataset.view, v.dataset.key); return; }
   const s = ev.target.closest('[data-share]'); if (s) { const e = POSTS.find(x => eventKey(x) === s.dataset.share); if (e) await shareEvent(e); return; }
