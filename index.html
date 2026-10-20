@@ -1091,6 +1091,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   [data-theme="dark"] #page-explore .pb-poster { box-shadow: 0 4px 18px rgba(0,0,0,0.5); }
   #page-explore .pb-poster img { display: block; width: 100%; height: 100%; object-fit: cover; }
   #page-explore .pb-post.pb-broken .pb-poster { display: none; }
+  #page-explore .pb-eyerow { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 12px; min-height: 28px; }
+  #page-explore .pb-eyerow .pb-eyebrow { margin-top: 0; }
   #page-explore .pb-eyebrow { margin-top: 16px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); }
   #page-explore .pb-title { font-family: 'DM Serif Display', serif; font-size: 1.65rem; line-height: 1.15; margin-top: 4px; overflow-wrap: anywhere; }
   #page-explore .pb-where { font-family: 'Lora', serif; font-size: 1rem; margin-top: 6px; }
@@ -4474,7 +4476,7 @@ function tile(e, dayHead) {
   const townHtml = krTownLink(e);
   return `<div class="pb-tile">
     ${posterBlock}
-    <div class="pb-tile-row"><div class="pb-tile-date">${esc(S.sort === 'venue' || (wallFlat() && !dayHead) ? [shortDate(e), time].filter(Boolean).join(' · ') : (time || shortDate(e)))}</div><span class="pb-tile-icons"><button class="icon-btn" data-copy="${esc(eventKey(e))}" title="Copy title" aria-label="Copy title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button><button class="icon-btn" data-share="${esc(eventKey(e))}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>${heartBtn(eventKey(e), 'pb-tile-heart')}</span></div>
+    <div class="pb-tile-row"><div class="pb-tile-date">${esc(S.sort === 'venue' || (wallFlat() && !dayHead) ? [shortDate(e), time].filter(Boolean).join(' · ') : (time || shortDate(e)))}</div><span class="pb-tile-icons">${heartBtn(eventKey(e), 'pb-tile-heart')}<button class="icon-btn" data-share="${esc(eventKey(e))}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button><button class="icon-btn" data-copy="${esc(eventKey(e))}" title="Copy title" aria-label="Copy title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button></span></div>
     <div class="pb-tile-title">${titleHtml}</div>
     <div class="pb-tile-venue"><a href="${esc(location.pathname)}?view=feed&venue=${encodeURIComponent(e.venue)}" data-xvenue="${esc(e.venue)}" title="See all ${esc(e.venue)} shows">${esc(e.venue)}</a>${townHtml ? ` — ${townHtml}` : ''}</div>
   </div>`;
@@ -4571,15 +4573,10 @@ function post(e) {
     </button>` : '';
   return `<article class="pb-post${e.posterUrl ? '' : ' pb-noposter'}" data-post="${esc(key)}">
     ${posterBlock}
-    ${eyebrow ? `<div class="pb-eyebrow">${esc(eyebrow)}</div>` : ''}
+    <div class="pb-eyerow"><div class="pb-eyebrow">${esc(eyebrow)}</div><span class="pb-tile-icons"><button class="icon-btn" data-copy="${esc(key)}" title="Copy title" aria-label="Copy title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button><button class="icon-btn" data-share="${esc(key)}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>${heartBtn(key, 'pb-tile-heart')}</span></div>
     <div class="pb-title">${e.venueUrl ? `<a href="${esc(e.venueUrl)}" target="_blank" rel="noopener">${esc(e.title)}</a>` : esc(e.title)}</div>
     <div class="pb-where">at <a href="${esc(location.pathname)}?view=feed&venue=${encodeURIComponent(e.venue)}" data-xvenue="${esc(e.venue)}" title="See all ${esc(e.venue)} shows">${esc(e.venue)}</a>${town ? ` — ${town}` : ''}</div>
     ${driveLine ? `<div class="pb-drive">${driveLine}</div>` : ''}
-    <div class="pb-actions">
-      ${heartBtn(key)}
-      <button class="icon-btn" data-share="${esc(key)}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>
-      <button class="icon-btn" data-copy="${esc(key)}" title="Copy title" aria-label="Copy title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>
-    </div>
   </article>`;
 }
 
