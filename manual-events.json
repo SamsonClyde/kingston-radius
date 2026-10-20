@@ -27664,5 +27664,19 @@
     "price": "$23adv/$32door",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792516301130,
+    "title": "Cheap Thrills, Kristill Avalanche",
+    "date": "2026-10-23",
+    "time": "19:00",
+    "venue": "BackBar",
+    "venueUrl": "https://www.facebook.com/backbarhudson/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vNsveLibaz7gbVNc6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792516279932-screen-shot-2026-10-20-at-1-09-48-pm.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
