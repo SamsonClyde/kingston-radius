@@ -27438,5 +27438,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792499609976,
+    "title": "Little Slicer, Kilgore Trout, Brave About",
+    "date": "2026-11-06",
+    "time": "21:00",
+    "venue": "El Dorado Bar",
+    "venueUrl": "https://www.instagram.com/eldoradobar_troy/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/QwhaMLfRyAoqbWLt9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792499608518-unnamed.jpg",
+    "price": "$9",
+    "free": false,
+    "_manual": true
   }
 ]
