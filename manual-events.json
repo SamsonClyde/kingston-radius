@@ -27778,5 +27778,19 @@
     "price": "$35+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792519566696,
+    "title": "Jaimoe & Friends",
+    "date": "2026-12-13",
+    "time": "19:00",
+    "venue": "City Winery HV",
+    "venueUrl": "https://citywinery.com/pages/events/hudson-valley#",
+    "location": "Montgomery, NY",
+    "mapsUrl": "https://maps.app.goo.gl/eaFRDVZgzj3VpTpi8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792519550827-image-1.jpeg",
+    "price": "$31+",
+    "free": false,
+    "_manual": true
   }
 ]
