@@ -1080,6 +1080,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   #page-explore .pb-daybox { border: 2px solid rgba(128,128,128,0.2); border-radius: 8px; padding: 10px 10px 2px; margin-bottom: 20px; }
   #page-explore .pb-dayhead { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.05rem; color: var(--red); margin: 0 0 10px; padding-bottom: 4px; border-bottom: 2px solid var(--red); }
   #page-explore .pb-dayhead .pb-daycount { font-family: 'DM Sans', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-left: 10px; }
+  @media (max-width: 600px) {   /* phone: the day heading stays on one line (a one-show day drops its "1 show" tag) */
+    #page-explore .pb-dayhead { white-space: nowrap; }
+    #page-explore .pb-dayhead.pb-one .pb-daycount { display: none; }
+  }
+  @media (max-width: 360px) { #page-explore .pb-dayhead { font-size: 0.95rem; } }
   #page-explore .pb-wall .pb-daybox .pb-tile { border: none; padding: 0; margin-bottom: 14px; }
   #page-explore .pb-wall .pb-daybox .pb-tile, #page-explore .pb-wall .pb-daybox .pb-tile .pb-poster, [data-theme="dark"] #page-explore .pb-wall .pb-daybox .pb-poster { border: none; box-shadow: none; background: none; }
   #page-explore .pb-post { margin-bottom: 46px; }
@@ -4547,7 +4552,7 @@ function wallHtml(shown, feedWidth, all) {
       if (i >= n) { c = 0; for (let k = 1; k < n; k++) if (heights[k] < heights[c]) c = k; }
       if (wallFlat()) {
         const nDay = totals.get(u.date) || u.tiles.length;
-        const head = `<div class="pb-dayhead">${esc(parseDate(u.date).toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'}))}<span class="pb-daycount">${nDay} show${nDay === 1 ? '' : 's'}</span></div>`;
+        const head = `<div class="pb-dayhead${nDay === 1 ? ' pb-one' : ''}">${esc(parseDate(u.date).toLocaleDateString('en-US', {weekday:'short', month:'long', day:'numeric'}))}<span class="pb-daycount">${nDay} show${nDay === 1 ? '' : 's'}</span></div>`;
         colHtml[c] += `<div class="pb-daybox">${head}${u.tiles.map(e => tile(e, true)).join('')}</div>`;
         heights[c] += u.tiles.reduce((a, e) => a + estimate(e), 0) + 50;
       } else {
