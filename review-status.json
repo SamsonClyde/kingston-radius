@@ -2209,5 +2209,9 @@
   "Bard College Conservatory||2026-10-19||": {
     "status": "rejected",
     "hiddenAt": 1792459344816
+  },
+  "Time & Space Limited||2026-10-19||4:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1792459346739
   }
 }
