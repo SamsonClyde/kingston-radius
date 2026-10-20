@@ -27608,5 +27608,19 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792515632496,
+    "title": "Upstate Composers Orchestra",
+    "date": "2026-11-01",
+    "time": "19:30",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792515626088-uco-mk-bp-rudy-lu.webp",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
