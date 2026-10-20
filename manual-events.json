@@ -27946,5 +27946,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792538273540,
+    "title": "Beatrice Ann & Odin Scott Coleman",
+    "date": "2026-10-29",
+    "time": "17:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792538209998-31a4db6b-d7ff-4c17-bf33-bbfa9568ac95.webp",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
