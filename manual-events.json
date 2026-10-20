@@ -27876,5 +27876,19 @@
     "price": "$44",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792537122052,
+    "title": "Dancing With The Ancestors",
+    "date": "2026-11-01",
+    "time": "12:00",
+    "venue": "Hudson Harmonic",
+    "venueUrl": "https://www.instagram.com/hudsonharmonic/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cf4gKpApEsoxXPM28",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792537117165-unnamed-7.jpg",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
