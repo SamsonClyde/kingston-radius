@@ -2281,5 +2281,9 @@
   "Unicorn Bar||2026-11-05||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1792500032858
+  },
+  "Daryl's House Club||2026-11-21||12:00": {
+    "status": "rejected",
+    "hiddenAt": 1792539364070
   }
 }
