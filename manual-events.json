@@ -27524,5 +27524,19 @@
     "price": "$30",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792501623071,
+    "title": "Tatiana Bilbao ESTUDIO: Borrowed Earth - Lita Vinueza",
+    "date": "2026-10-24",
+    "time": "14:00",
+    "venue": "Art Omi",
+    "venueUrl": "https://artomi.org/event/opening-tatiana-bilbao-estudio-borrowed-earth/",
+    "location": "Ghent, NY",
+    "mapsUrl": "https://maps.app.goo.gl/nyUTeCEHK9JP3exA8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792501612184-ao-26-tatiana-bilbao-homepagebanner-final-xl-1600x943-1.png",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
