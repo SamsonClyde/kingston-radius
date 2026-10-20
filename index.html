@@ -1077,6 +1077,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   #page-explore .pb-day { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.25rem; color: var(--red);
     margin: 38px 0 18px; padding-bottom: 8px; border-bottom: 2px solid var(--red); }
   #page-explore .pb-day:first-of-type { margin-top: 22px; }
+  #page-explore .pb-daybox { border: 2px solid rgba(128,128,128,0.2); border-radius: 8px; padding: 10px 10px 2px; margin-bottom: 20px; }
+  #page-explore .pb-dayhead { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.05rem; color: var(--red); margin: 0 0 10px; padding-bottom: 4px; border-bottom: 2px solid var(--red); }
+  #page-explore .pb-dayhead .pb-daycount { font-family: 'DM Sans', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-left: 10px; }
+  #page-explore .pb-wall .pb-daybox .pb-tile { border: none; padding: 0; margin-bottom: 14px; }
+  #page-explore .pb-wall .pb-daybox .pb-tile, #page-explore .pb-wall .pb-daybox .pb-tile .pb-poster, [data-theme="dark"] #page-explore .pb-wall .pb-daybox .pb-poster { border: none; box-shadow: none; background: none; }
   #page-explore .pb-post { margin-bottom: 46px; }
   #page-explore .pb-poster {
     display: block; position: relative; width: min(100%, calc(78vh * var(--ar, 0.75))); aspect-ratio: var(--ar, 3 / 4);
@@ -4454,8 +4459,10 @@ function render() {
 
 let _wallToken = 0;
 const wallCols = () => (window.innerWidth >= 720 ? 3 : 2);
+// With one venue picked there's no need to break the wall up night by night: it runs as one continuous wall
+const wallFlat = () => !!S.venue && S.sort !== 'venue';
 const shortDate = e => parseDate(e.date).toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
-function tile(e) {
+function tile(e, dayHead) {
   const time = formatTime(e.time);
   const posterBlock = e.posterUrl ? `<button type="button" class="pb-poster"${AR.has(e.posterUrl) ? ` style="--ar:${AR.get(e.posterUrl)}"` : ''} data-view="${esc(e.posterUrl)}" data-key="${esc(eventKey(e))}" aria-label="View poster for ${esc(e.title)}">
       <img src="${esc(e.posterUrl)}" alt="Poster for ${esc(e.title)}" loading="lazy" decoding="async"
@@ -4467,7 +4474,7 @@ function tile(e) {
   const townHtml = krTownLink(e);
   return `<div class="pb-tile">
     ${posterBlock}
-    <div class="pb-tile-row"><div class="pb-tile-date">${esc(S.sort === 'venue' ? [shortDate(e), time].filter(Boolean).join(' · ') : (time || shortDate(e)))}</div><span class="pb-tile-icons"><button class="icon-btn" data-copy="${esc(eventKey(e))}" title="Copy title" aria-label="Copy title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button><button class="icon-btn" data-share="${esc(eventKey(e))}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>${heartBtn(eventKey(e), 'pb-tile-heart')}</span></div>
+    <div class="pb-tile-row"><div class="pb-tile-date">${esc(S.sort === 'venue' || (wallFlat() && !dayHead) ? [shortDate(e), time].filter(Boolean).join(' · ') : (time || shortDate(e)))}</div><span class="pb-tile-icons"><button class="icon-btn" data-copy="${esc(eventKey(e))}" title="Copy title" aria-label="Copy title"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button><button class="icon-btn" data-share="${esc(eventKey(e))}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>${heartBtn(eventKey(e), 'pb-tile-heart')}</span></div>
     <div class="pb-tile-title">${titleHtml}</div>
     <div class="pb-tile-venue"><a href="${esc(location.pathname)}?view=feed&venue=${encodeURIComponent(e.venue)}" data-xvenue="${esc(e.venue)}" title="See all ${esc(e.venue)} shows">${esc(e.venue)}</a>${townHtml ? ` — ${townHtml}` : ''}</div>
   </div>`;
@@ -4506,26 +4513,42 @@ function wallHtml(shown, feedWidth, all) {
   };
   // the count in each heading is the day's full total, even when only part of that day has loaded so far
   const totals = new Map();
-  for (const e of (all || shown)) { const h = S.sort === 'venue' ? e.venue : e.date; totals.set(h, (totals.get(h) || 0) + 1); }
+  for (const e of (all || shown)) { const h = S.sort === 'venue' && !wallFlat() ? e.venue : e.date; totals.set(h, (totals.get(h) || 0) + 1); }
   const groups = [];
   for (const e of shown) {
-    const head = S.sort === 'venue' ? e.venue : e.date;
+    const head = wallFlat() ? '' : (S.sort === 'venue' ? e.venue : e.date);
     if (!groups.length || groups[groups.length - 1].head !== head) groups.push({ head, list: [] });
     groups[groups.length - 1].list.push(e);
   }
   let html = '';
   for (const g of groups) {
-    const title = S.sort === 'venue' ? g.head : parseDate(g.head).toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'});
-    html += `<h2 class="pb-day">${esc(title)}<span class="pb-daycount">${totals.get(g.head) || g.list.length} show${(totals.get(g.head) || g.list.length) === 1 ? '' : 's'}</span></h2>`;
-    const n = Math.min(cols, g.list.length);                       // a short night only gets as many columns as it needs
+    const title = wallFlat() ? '' : (S.sort === 'venue' ? g.head : parseDate(g.head).toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'}));
+    if (!wallFlat()) html += `<h2 class="pb-day">${esc(title)}<span class="pb-daycount">${totals.get(g.head) || g.list.length} show${(totals.get(g.head) || g.list.length) === 1 ? '' : 's'}</span></h2>`;
+    // one venue picked: each day is a single box (heading + that day's show(s)), and the boxes pack into columns
+    const units = [];
+    if (wallFlat()) {
+      g.list.forEach(e => {
+        const last = units[units.length - 1];
+        if (last && last.date === e.date) { last.tiles.push(e); return; }
+        units.push({ date: e.date, tiles: [e] });
+      });
+    } else g.list.forEach(e => units.push({ tiles: [e] }));
+    const n = Math.min(cols, units.length);                       // a short night only gets as many columns as it needs
     const colHtml = Array.from({ length: n }, () => '');
     const heights = Array.from({ length: n }, () => 0);
-    g.list.forEach((e, i) => {
+    units.forEach((u, i) => {
       let c = i;
       if (i >= n) { c = 0; for (let k = 1; k < n; k++) if (heights[k] < heights[c]) c = k; }
-      colHtml[c] += tile(e); heights[c] += estimate(e);
+      if (wallFlat()) {
+        const nDay = totals.get(u.date) || u.tiles.length;
+        const head = `<div class="pb-dayhead">${esc(parseDate(u.date).toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'}))}<span class="pb-daycount">${nDay} show${nDay === 1 ? '' : 's'}</span></div>`;
+        colHtml[c] += `<div class="pb-daybox">${head}${u.tiles.map(e => tile(e, true)).join('')}</div>`;
+        heights[c] += u.tiles.reduce((a, e) => a + estimate(e), 0) + 50;
+      } else {
+        colHtml[c] += tile(u.tiles[0]); heights[c] += estimate(u.tiles[0]);
+      }
     });
-    html += `<div class="pb-wall${g.list.length < 2 ? ' pb-single' : ''}" style="--cols:${cols}">${colHtml.map(c => `<div class="pb-wallcol">${c}</div>`).join('')}</div>`;
+    html += `<div class="pb-wall${units.length < 2 ? ' pb-single' : ''}" style="--cols:${cols}">${colHtml.map(c => `<div class="pb-wallcol">${c}</div>`).join('')}</div>`;
   }
   return html;
 }
