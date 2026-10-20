@@ -27351,5 +27351,19 @@
     "price": "$23",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792456217620,
+    "title": "A John Prine Christmas",
+    "date": "2026-12-20",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792456209706-image-18.webp",
+    "price": "$23",
+    "free": false,
+    "_manual": true
   }
 ]
