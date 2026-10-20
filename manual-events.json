@@ -27365,5 +27365,19 @@
     "price": "$23",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792456387364,
+    "title": "The Smithereens",
+    "date": "2027-02-27",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792456375838-image-19.webp",
+    "price": "$55",
+    "free": false,
+    "_manual": true
   }
 ]
