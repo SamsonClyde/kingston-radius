@@ -27622,5 +27622,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792515722387,
+    "title": "Allysen Callery, Noah Harley, Will Lawrence",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792515716915-img-0678-1-scaled.webp",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
