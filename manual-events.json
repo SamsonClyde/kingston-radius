@@ -27322,5 +27322,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792455878145,
+    "title": "The Marc Black Band",
+    "date": "2026-12-13",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792455827717-image-16.webp",
+    "price": "$23",
+    "free": false,
+    "_manual": true
   }
 ]
