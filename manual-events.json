@@ -27722,5 +27722,19 @@
     "price": "$50+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792518472759,
+    "title": "Fall Harvest Fest - Joel & Friends",
+    "date": "2026-10-25",
+    "time": "14:00",
+    "venue": "Three Rivers Homestead",
+    "venueUrl": "https://www.instagram.com/3rivershomestead/",
+    "location": "Hannacroix, NY",
+    "mapsUrl": "https://maps.app.goo.gl/oMMraUjXCTHLtAt36",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792518450519-screen-shot-2026-10-20-at-1-46-52-pm.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
