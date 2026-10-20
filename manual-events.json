@@ -27708,5 +27708,19 @@
     "price": "$62+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792517363033,
+    "title": "Dakha Brakha",
+    "date": "2027-01-31",
+    "time": "18:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792517350848-20270131-dakhabrakha-event-1920x1080.jpg",
+    "price": "$50+",
+    "free": false,
+    "_manual": true
   }
 ]
