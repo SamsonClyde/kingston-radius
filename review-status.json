@@ -2205,17 +2205,5 @@
   "Colony Woodstock||2026-10-24||17:00": {
     "status": "rejected",
     "hiddenAt": 1792451190896
-  },
-  "Bard College Conservatory||2026-10-19||": {
-    "status": "rejected",
-    "hiddenAt": 1792459344816
-  },
-  "Time & Space Limited||2026-10-19||4:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792459346739
-  },
-  "Time & Space Limited||2026-10-19||6:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792459349080
   }
 }
