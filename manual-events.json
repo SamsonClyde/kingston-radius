@@ -27806,5 +27806,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792536129574,
+    "title": "Alejandra & Aaron",
+    "date": "2026-10-25",
+    "time": "15:00",
+    "venue": "Return Brewing Outpost (Catskill)",
+    "venueUrl": "https://www.instagram.com/returnbrewing/",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/UJFQe4Mtw6ByPMre8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792536058302-unnamed-2.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
