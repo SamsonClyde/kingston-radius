@@ -27379,5 +27379,19 @@
     "price": "$55",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792457863369,
+    "title": "Karyn Kuhl, Beauty in the Dissonance, Anne Stott",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "venue": "Park Theater",
+    "venueUrl": "https://parktheaterhudson.com/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/rumcuWciwQhFjQRr8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792457853038-img-0961-1.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
