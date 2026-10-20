@@ -27890,5 +27890,19 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792537179438,
+    "title": "Perry Foster",
+    "date": "2026-10-25",
+    "time": "15:00",
+    "venue": "Lasting Joy",
+    "venueUrl": "https://www.instagram.com/lastingjoybrewery/",
+    "location": "Tivoli, NY",
+    "mapsUrl": "https://maps.app.goo.gl/DmbLDvWcqiTovggw5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792537169547-unnamed-8.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
