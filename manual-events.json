@@ -27848,5 +27848,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792536804951,
+    "title": "Hudson Valley Symphony Orchestra Strings",
+    "date": "2026-12-05",
+    "time": "",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792536742059-unnamed-5.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
