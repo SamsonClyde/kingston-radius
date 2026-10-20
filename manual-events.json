@@ -24944,9 +24944,9 @@
   },
   {
     "id": 1791457603486,
-    "title": "Cosmic Charlie Brown Christmas - Jason Crosby",
+    "title": "Cosmic Charlie Brown Christmas - Jason Crosby (3pm & 7pm)",
     "date": "2026-12-05",
-    "time": "19:00",
+    "time": "15:00",
     "venue": "Bearsville Theater",
     "venueUrl": "https://bearsvilletheater.com/",
     "location": "Woodstock, NY",
@@ -24954,7 +24954,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791457581094-etix-cosmic-206951790676265.jfif",
     "price": "$40",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1791457673660,
