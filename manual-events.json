@@ -27594,5 +27594,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792515563202,
+    "title": "Halloween with Pamela_ and Her Sons, Kanyon, DJ guy",
+    "date": "2026-10-31",
+    "time": "21:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792515555438-avalon20halloween20202620flyer.webp",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
