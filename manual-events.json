@@ -27393,5 +27393,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792457941723,
+    "title": "James Maddock, Ben Higginbotham",
+    "date": "2026-12-12",
+    "time": "20:00",
+    "venue": "Park Theater",
+    "venueUrl": "https://parktheaterhudson.com/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/rumcuWciwQhFjQRr8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792457913831-img-0646.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
