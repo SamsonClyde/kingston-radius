@@ -27918,5 +27918,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792537970710,
+    "title": "Maddy Meeker",
+    "date": "2026-10-25",
+    "time": "17:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792537959487-image.webp",
+    "price": "donation",
+    "free": false,
+    "_manual": true
   }
 ]
