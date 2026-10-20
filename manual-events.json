@@ -26101,7 +26101,7 @@
   },
   {
     "id": 1791902325775,
-    "title": "OC Pirate Dogs",
+    "title": "Pirate Dogs O.C.",
     "date": "2026-10-25",
     "time": "",
     "venue": "Newburgh Brewing",
@@ -26111,7 +26111,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791902316637-unnamed-6.jpg",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1791902815899,
