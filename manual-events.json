@@ -27636,5 +27636,19 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792515809300,
+    "title": "DJ Uncle Rudy, MLE, Tiger Singer",
+    "date": "2026-11-07",
+    "time": "20:30",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792515789953-untitled20design-4.webp",
+    "price": "$12",
+    "free": false,
+    "_manual": true
   }
 ]
