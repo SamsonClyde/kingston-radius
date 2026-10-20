@@ -9956,7 +9956,7 @@
     "price": "$20",
     "free": false,
     "_source": "manual",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792498352755-1000090624.jpg",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792492766014-1000090624.jpg",
     "_manual": true
   },
   {
@@ -25872,7 +25872,7 @@
     "venueUrl": "https://www.instagram.com/eldoradobar_troy/",
     "location": "Troy, NY",
     "mapsUrl": "https://maps.app.goo.gl/QwhaMLfRyAoqbWLt9",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791802116910-unnamed-12.jpg",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792499136653-screen-shot-2026-10-20-at-8-04-15-am.png",
     "price": "$10",
     "free": false,
     "_manual": true
@@ -26997,11 +26997,11 @@
     "venueUrl": "https://www.assemblykingston.com/events/halloween-takeover-weekend-lights-out-har76",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
-    "time": "21:00",
+    "time": "",
     "price": "See website",
     "free": false,
-    "_source": "manual",
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792498368477-1000090626.jpg",
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792492776622-1000090626.jpg",
     "_manual": true
   },
   {
