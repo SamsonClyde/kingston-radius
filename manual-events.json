@@ -28380,5 +28380,19 @@
     "price": "$29",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792545289309,
+    "title": "FuzzMas - The Obsessed, Sun Natives, Dan Carr & The Cure For Asthma, Pink Lady",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "venue": "The Hangar",
+    "venueUrl": "https://www.thehangaronthehudson.com/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agP4ptppoZV8vK1h9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792545261580-837302544-1806917563676402-496651627806841260-n.webp",
+    "price": "$23",
+    "free": false,
+    "_manual": true
   }
 ]
