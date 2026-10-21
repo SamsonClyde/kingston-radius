@@ -28268,5 +28268,19 @@
     "price": "$29+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792541724413,
+    "title": "Red NOT Chili Peppers",
+    "date": "2027-03-25",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792541713032-34-edp-1.jpg",
+    "price": "$40+",
+    "free": false,
+    "_manual": true
   }
 ]
