@@ -28226,5 +28226,19 @@
     "price": "$40+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792541514295,
+    "title": "The Wonderwall (Oasis Cover Band)",
+    "date": "2027-03-14",
+    "time": "19:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792541505954-44-edp-2.jpg",
+    "price": "$34+",
+    "free": false,
+    "_manual": true
   }
 ]
