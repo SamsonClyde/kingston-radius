@@ -28366,5 +28366,19 @@
     "price": "$18",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792545180200,
+    "title": "Bill Kirchen's Honky Tonk Holiday Show",
+    "date": "2026-11-28",
+    "time": "10:00",
+    "venue": "The Hangar",
+    "venueUrl": "https://www.thehangaronthehudson.com/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agP4ptppoZV8vK1h9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792545173492-image-1.webp",
+    "price": "$29",
+    "free": false,
+    "_manual": true
   }
 ]
