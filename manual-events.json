@@ -28506,5 +28506,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792550561506,
+    "title": "Fresh Grass Festival Day One",
+    "date": "2027-09-24",
+    "time": "",
+    "venue": "MASS MoCA",
+    "venueUrl": "https://massmoca.org/performances/",
+    "location": "North Adams, MA",
+    "mapsUrl": "https://maps.app.goo.gl/SttEGBLzqFEAu41cA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792550556364-27-webcuts-freshgrass-1920-x-1920-1280x1280.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
