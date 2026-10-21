@@ -28436,5 +28436,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792545821898,
+    "title": "Made Famous, Bleed Violet",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "venue": "Industrial Arts",
+    "venueUrl": "https://www.industrialartsbrewing.com/pages/visit-us",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.app.goo.gl/SgAFjarmr4HVf61E7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792545814973-iab-music-1792166588285.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
