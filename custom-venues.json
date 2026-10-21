@@ -1168,5 +1168,11 @@
     "location": "Hudson, NY",
     "mapsUrl": "https://maps.app.goo.gl/cf4gKpApEsoxXPM28",
     "drive": 38
+  },
+  "The Hangar": {
+    "venueUrl": "https://www.thehangaronthehudson.com/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agP4ptppoZV8vK1h9",
+    "drive": 60
   }
 }
