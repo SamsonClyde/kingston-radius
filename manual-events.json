@@ -26208,14 +26208,15 @@
     "title": "Alan Cumming",
     "date": "2027-02-07",
     "time": "19:00",
-    "venue": "Paramount",
+    "venue": "Paramount Theater",
     "venueUrl": "https://paramounthudsonvalley.com/events/",
     "location": "Peekskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791905455810-27-02-07-1920x1080-alancumming.webp",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1791905511310,
