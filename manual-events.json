@@ -28170,5 +28170,19 @@
     "price": "$29+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792541233775,
+    "title": "Martha Spencer & the Wonderland Country Band",
+    "date": "2027-02-21",
+    "time": "19:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792541225249-24-edp-2.jpg",
+    "price": "$22+",
+    "free": false,
+    "_manual": true
   }
 ]
