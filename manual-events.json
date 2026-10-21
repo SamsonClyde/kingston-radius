@@ -28408,5 +28408,19 @@
     "price": "$23",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792545629549,
+    "title": "Massacre at The Workshop",
+    "date": "2026-10-31",
+    "time": "19:30",
+    "venue": "Industrial Arts",
+    "venueUrl": "https://www.industrialartsbrewing.com/pages/visit-us",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.app.goo.gl/SgAFjarmr4HVf61E7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792545626883-2026-10-31-massacre.webp",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
