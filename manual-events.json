@@ -28478,5 +28478,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792549837877,
+    "title": "Lady Moon & The Eclipse (Membership Required)",
+    "date": "2027-02-13",
+    "time": "19:00",
+    "venue": "Love, Velma",
+    "venueUrl": "https://www.lovevelma.com/calendar",
+    "location": "Ellenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1N7G54TEiuvAWsch9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792549826838-lady-moon.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
