@@ -860,10 +860,6 @@
   "Keegan Ales||2026-09-04||19:00": "approved",
   "Keegan Ales||2026-09-05||19:00": "approved",
   "MASS MoCA||2026-10-10||13:00": "approved",
-  "MASS MoCA||2026-10-20||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788106506815
-  },
   "MASS MoCA||2026-11-14||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788106583379
@@ -1771,10 +1767,6 @@
     "status": "rejected",
     "hiddenAt": 1791308005803
   },
-  "Tubby's||2026-10-20||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1791308009672
-  },
   "Tubby's||2026-10-24||4:00 pm": {
     "status": "rejected",
     "hiddenAt": 1791308012971
@@ -1942,10 +1934,6 @@
     "status": "rejected",
     "hiddenAt": 1792148127513
   },
-  "Keegan Ales||2026-10-20||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792148130005
-  },
   "Keegan Ales||2026-10-22||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1792148180663
@@ -2046,10 +2034,6 @@
     "hiddenAt": 1792148972463
   },
   "The Grand||2026-11-13||20:00": "approved",
-  "The Living Room at Full Circle||2026-10-20||5:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792148981052
-  },
   "The Living Room at Full Circle||2026-10-22||6:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792148984876
@@ -2166,10 +2150,6 @@
     "hiddenAt": 1792447150087
   },
   "Keegan Ales||2026-10-30||20:00": "approved",
-  "Rough Draft Books||2026-10-20||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792450085737
-  },
   "Rough Draft Books||2026-10-21||6:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792450090449
@@ -2225,10 +2205,6 @@
   "Keegan Ales||2026-11-05||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1792499756771
-  },
-  "NoFun||2026-10-20||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792499759658
   },
   "NoFun||2026-10-21||8:00 PM": {
     "status": "rejected",
