@@ -28198,5 +28198,19 @@
     "price": "$29+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792541384297,
+    "title": "Katie Henry",
+    "date": "2027-03-03",
+    "time": "19:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792541354267-44-edp-1.jpg",
+    "price": "$29+",
+    "free": false,
+    "_manual": true
   }
 ]
