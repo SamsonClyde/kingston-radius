@@ -28184,5 +28184,19 @@
     "price": "$22+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792541315129,
+    "title": "Remember Tomorrow (Iron Maiden Cover Band)",
+    "date": "2027-02-25",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792541300954-74-edp.jpg",
+    "price": "$29+",
+    "free": false,
+    "_manual": true
   }
 ]
