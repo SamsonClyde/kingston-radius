@@ -28324,5 +28324,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792544911699,
+    "title": "Eastbound Jesus, Rhoseway",
+    "date": "2026-11-07",
+    "time": "20:00",
+    "venue": "The Hangar",
+    "venueUrl": "https://www.thehangaronthehudson.com/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agP4ptppoZV8vK1h9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792544908130-unnamed.jpg",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
