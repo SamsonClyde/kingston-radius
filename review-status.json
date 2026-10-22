@@ -681,10 +681,6 @@
   "Old Dutch Church||2026-10-25||16:00": "approved",
   "Tompkins Corners Cultural Center||2026-09-12||19:30": "approved",
   "Tompkins Corners Cultural Center||2026-09-27||14:00": "approved",
-  "Tompkins Corners Cultural Center||2026-10-21||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787576057925
-  },
   "Tompkins Corners Cultural Center||2026-11-01||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1787576060368
@@ -1102,10 +1098,6 @@
   },
   "Unicorn Bar||2026-09-26||21:00": "approved",
   "Unicorn Bar||2026-10-09||21:00": "approved",
-  "Unicorn Bar||2026-10-21||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789389999781
-  },
   "Unicorn Bar||2026-10-22||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789390002694
@@ -1391,10 +1383,6 @@
     "status": "rejected",
     "hiddenAt": 1790246996671
   },
-  "Tubby's||2026-10-21||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790247073931
-  },
   "Tubby's||2026-10-21||20:00": "approved",
   "Tubby's||2026-12-12||7:00 pm": {
     "status": "rejected",
@@ -1665,10 +1653,6 @@
     "hiddenAt": 1790962391660
   },
   "Colony Woodstock||2026-10-14||19:00": "approved",
-  "Colony Woodstock||2026-10-21||": {
-    "status": "rejected",
-    "hiddenAt": 1790962640936
-  },
   "Colony Woodstock||2026-10-21||19:00": "approved",
   "Colony Woodstock||2026-10-23||": {
     "status": "rejected",
@@ -1877,10 +1861,6 @@
     "status": "rejected",
     "hiddenAt": 1791714439480
   },
-  "Unicorn Bar||2026-10-21||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1791714443874
-  },
   "Unicorn Bar||2026-10-30||5:30 pm": {
     "status": "rejected",
     "hiddenAt": 1791714447822
@@ -1900,10 +1880,6 @@
   "Meadowbrooks Farm||2027-07-24||12:00": {
     "status": "rejected",
     "hiddenAt": 1791901548897
-  },
-  "Pearl Moon||2026-10-21||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1791907060451
   },
   "Bard College Conservatory||2026-10-23||": {
     "status": "rejected",
@@ -2012,10 +1988,6 @@
   "The Grand||2026-10-18||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792148793955
-  },
-  "The Grand||2026-10-21||": {
-    "status": "rejected",
-    "hiddenAt": 1792148799514
   },
   "The Grand||2026-10-24||": {
     "status": "rejected",
@@ -2150,10 +2122,6 @@
     "hiddenAt": 1792447150087
   },
   "Keegan Ales||2026-10-30||20:00": "approved",
-  "Rough Draft Books||2026-10-21||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792450090449
-  },
   "Stissing Center||2026-11-01||3:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792450094898
@@ -2182,14 +2150,6 @@
     "status": "rejected",
     "hiddenAt": 1792450353187
   },
-  "Colony Woodstock||2026-10-21||5:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792499693307
-  },
-  "Colony Woodstock||2026-10-21||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792499696730
-  },
   "Colony Woodstock||2026-10-22||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792499748410
@@ -2205,10 +2165,6 @@
   "Keegan Ales||2026-11-05||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1792499756771
-  },
-  "NoFun||2026-10-21||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792499763598
   },
   "NoFun||2026-10-22||8:00 PM": {
     "status": "rejected",
