@@ -28791,5 +28791,19 @@
     "_source": "scraped",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792667223522-30604029-451294185325556-239012361631956992-n.jpg",
     "_manual": true
+  },
+  {
+    "id": 1792667821914,
+    "title": "High Tek, Patty G",
+    "date": "2026-10-22",
+    "time": "21:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792667818007-unnamed-7.jpg",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
