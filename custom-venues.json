@@ -1180,5 +1180,11 @@
     "location": "Peekskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/vZjz5gV6k4ZhHTLy5",
     "drive": 72
+  },
+  "Kafe Neo": {
+    "venueUrl": "https://www.instagram.com/kafe_neo/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/bTHN7rpLvrw1crbk6",
+    "drive": 33
   }
 }
