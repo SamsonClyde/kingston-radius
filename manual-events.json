@@ -28975,5 +28975,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792707543183,
+    "title": "Gerry Malkin Quintet",
+    "date": "2026-11-28",
+    "time": "18:00",
+    "venue": "Bean Runner Cafe",
+    "venueUrl": "https://www.beanrunnercafe.com/music-events",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vZjz5gV6k4ZhHTLy5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792707526366-calentry-71807-dre4a8b47c077ce3-photo.jpg",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
