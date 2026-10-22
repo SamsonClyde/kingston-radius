@@ -28919,5 +28919,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792707055232,
+    "title": "Ras Droppa & the Eazy Skanking Band",
+    "date": "2026-11-13",
+    "time": "19:00",
+    "venue": "Bean Runner Cafe",
+    "venueUrl": "https://www.beanrunnercafe.com/music-events",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vZjz5gV6k4ZhHTLy5",
+    "posterUrl": "",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
