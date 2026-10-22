@@ -1192,5 +1192,11 @@
     "location": "Woodbourne, NY",
     "mapsUrl": "https://maps.app.goo.gl/V6Y2MBEvUzksgWTS8",
     "drive": 57
+  },
+  "Scribner's Catskill Lodge": {
+    "venueUrl": "https://www.instagram.com/scribnerslodge/",
+    "location": "Hunter, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xuQY2u5mVuLEYtoM7",
+    "drive": 42
   }
 }
