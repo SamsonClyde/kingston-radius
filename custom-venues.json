@@ -1168,5 +1168,11 @@
     "location": "Troy, NY",
     "mapsUrl": "https://maps.app.goo.gl/agP4ptppoZV8vK1h9",
     "drive": 60
+  },
+  "Vosburgh Brewing": {
+    "venueUrl": "https://www.vosburghbrewing.com/events",
+    "location": "Elizaville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/bkFz5SDs1dDXuBE56",
+    "drive": 33
   }
 }
