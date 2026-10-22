@@ -28620,5 +28620,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792632255672,
+    "title": "Caravan Harvest Fair",
+    "date": "2026-10-25",
+    "time": "14:00",
+    "venue": "Stone Ridge Orchard",
+    "venueUrl": "https://www.stoneridgeorchard.com/events.html",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/bw5dyCL5iXxqjCz98",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792632235143-1000090723.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
