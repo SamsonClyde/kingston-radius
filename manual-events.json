@@ -29059,5 +29059,19 @@
     "price": "$12",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792709088719,
+    "title": "Şeb-I-Arûs: A 24-Hour Sema Devotional Gathering",
+    "date": "2026-12-19",
+    "time": "18:00",
+    "venue": "Akera",
+    "venueUrl": "https://www.instagram.com/akera.experience/",
+    "location": "Woodbourne, NY",
+    "mapsUrl": "https://maps.app.goo.gl/V6Y2MBEvUzksgWTS8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792709010775-unnamed-13.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
