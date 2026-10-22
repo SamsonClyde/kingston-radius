@@ -28733,5 +28733,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792665358210,
+    "title": "Sausage Fest 2026 - T McCann Band, Mike O'Leary",
+    "date": "2026-11-07",
+    "time": "13:00",
+    "venue": "Vosburgh Brewing",
+    "venueUrl": "https://www.vosburghbrewing.com/events",
+    "location": "Elizaville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/bkFz5SDs1dDXuBE56",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792665195664-unnamed-3.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
