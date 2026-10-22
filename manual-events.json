@@ -28877,5 +28877,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792706859736,
+    "title": "Salsa Night! with Pablito y su Latin Band",
+    "date": "2026-11-06",
+    "time": "19:00",
+    "venue": "Bean Runner Cafe",
+    "venueUrl": "https://www.beanrunnercafe.com/music-events",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vZjz5gV6k4ZhHTLy5",
+    "posterUrl": "",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
