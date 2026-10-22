@@ -1174,5 +1174,11 @@
     "location": "Elizaville, NY",
     "mapsUrl": "https://maps.app.goo.gl/bkFz5SDs1dDXuBE56",
     "drive": 33
+  },
+  "Bean Runner Cafe": {
+    "venueUrl": "https://www.instagram.com/beanrunnercafe/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vZjz5gV6k4ZhHTLy5",
+    "drive": 72
   }
 }
