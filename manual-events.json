@@ -29017,5 +29017,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792708628655,
+    "title": "George Habernig",
+    "date": "2026-11-09",
+    "time": "18:00",
+    "venue": "The Lace Mill",
+    "venueUrl": "https://thelacemillarts.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/8k3T7UXQT5Lzeqke9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792708624087-unnamed-10.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
