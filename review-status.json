@@ -2238,5 +2238,9 @@
     "status": "rejected",
     "hiddenAt": 1792666719301
   },
-  "Bard College Conservatory||2026-10-27||19:30": "approved"
+  "Bard College Conservatory||2026-10-27||19:30": "approved",
+  "PS21 Chatham||2026-10-28||5:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1792666723511
+  }
 }
