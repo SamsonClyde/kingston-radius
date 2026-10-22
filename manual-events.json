@@ -29087,5 +29087,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792709566747,
+    "title": "Scribner's Holiday Market - Live Music",
+    "date": "2026-12-13",
+    "time": "10:00",
+    "venue": "Scribner's Catskill Lodge",
+    "venueUrl": "https://www.instagram.com/scribnerslodge/",
+    "location": "Hunter, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xuQY2u5mVuLEYtoM7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792709536092-unnamed-14.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
