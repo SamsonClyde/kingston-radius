@@ -28905,5 +28905,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792707025617,
+    "title": "Steve Wells",
+    "date": "2026-11-08",
+    "time": "14:30",
+    "venue": "Bean Runner Cafe",
+    "venueUrl": "https://www.beanrunnercafe.com/music-events",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vZjz5gV6k4ZhHTLy5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792707012443-calentry-71969-dre4a8b47c077ce3-photo.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
