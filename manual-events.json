@@ -29031,5 +29031,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792708686208,
+    "title": "Jake Lee Rau Band",
+    "date": "2026-10-25",
+    "time": "15:00",
+    "venue": "Bad Seed",
+    "venueUrl": "https://www.badseedhardcider.com/events/",
+    "location": "Highland, NY",
+    "mapsUrl": "https://maps.google.com/?q=87+Burroughs+Dr+Highland+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792708681539-unnamed-11.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
