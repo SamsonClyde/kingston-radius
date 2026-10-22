@@ -2242,5 +2242,9 @@
   "PS21 Chatham||2026-10-28||5:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792666723511
+  },
+  "Stissing Center||2026-11-08||3:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1792666753452
   }
 }
