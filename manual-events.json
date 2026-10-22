@@ -28747,5 +28747,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792665529487,
+    "title": "Food Not Bombs Fundraiser - DJ Kiersten Fink",
+    "date": "2026-11-18",
+    "time": "19:00",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792665471213-unnamed-4.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
