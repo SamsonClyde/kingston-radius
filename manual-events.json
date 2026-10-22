@@ -28719,5 +28719,19 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792665123161,
+    "title": "Leo Belsky Band, DJ MomBod",
+    "date": "2026-10-31",
+    "time": "19:00",
+    "venue": "BackBar",
+    "venueUrl": "https://www.facebook.com/backbarhudson/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vNsveLibaz7gbVNc6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792665118264-unnamed-2.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
