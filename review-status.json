@@ -2221,5 +2221,9 @@
   "Daryl's House Club||2027-01-03||19:00": {
     "status": "rejected",
     "hiddenAt": 1792539548328
+  },
+  "Assembly Kingston||2026-12-05||11:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1792632642450
   }
 }
