@@ -28663,5 +28663,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792664410644,
+    "title": "Albi Beluli",
+    "date": "2026-11-07",
+    "time": "17:00",
+    "venue": "RMV Cellars",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
+    "location": "West Park, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YKDAq1q7vWCf2mNd9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792664406641-albi.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
