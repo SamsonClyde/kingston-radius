@@ -28705,5 +28705,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792664977914,
+    "title": "Halloween Night - DJ Mago, EZ3",
+    "date": "2026-10-31",
+    "time": "21:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792664969606-unnamed.jpg",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
