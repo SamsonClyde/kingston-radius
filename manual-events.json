@@ -28806,5 +28806,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792706358899,
+    "title": "Also In ablue",
+    "date": "2026-10-25",
+    "time": "14:30",
+    "venue": "Bean Runner Cafe",
+    "venueUrl": "https://www.instagram.com/beanrunnercafe/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vZjz5gV6k4ZhHTLy5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792706340330-unnamed-8.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
