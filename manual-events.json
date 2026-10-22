@@ -29003,5 +29003,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792708328364,
+    "title": "DJ Zeno",
+    "date": "2026-10-31",
+    "time": "12:00",
+    "venue": "Kafe Neo",
+    "venueUrl": "https://www.instagram.com/kafe_neo/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/bTHN7rpLvrw1crbk6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792707950367-unnamed-9.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
