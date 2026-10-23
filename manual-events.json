@@ -29143,5 +29143,19 @@
     "price": "$50+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792761511751,
+    "title": "Zach Williams, Cochren & Co, Christian Hohn",
+    "date": "2026-11-20",
+    "time": "19:00",
+    "venue": "Palace Theater",
+    "venueUrl": "https://www.palacealbany.org/events/all",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kQjYwCKcZSeJRCbd8",
+    "posterUrl": "",
+    "price": "$25+",
+    "free": false,
+    "_manual": true
   }
 ]
