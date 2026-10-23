@@ -1198,5 +1198,11 @@
     "location": "Hunter, NY",
     "mapsUrl": "https://maps.app.goo.gl/xuQY2u5mVuLEYtoM7",
     "drive": 42
+  },
+  "Palace Theater": {
+    "venueUrl": "https://www.palacealbany.org/events/all",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kQjYwCKcZSeJRCbd8",
+    "drive": 54
   }
 }
