@@ -2292,5 +2292,9 @@
   "Unicorn Bar||2026-11-06||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1792667362098
+  },
+  "MASS MoCA||2026-11-07||4:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1792761106704
   }
 }
