@@ -29466,5 +29466,19 @@
     "price": "sold out",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792787472030,
+    "title": "Catbread",
+    "date": "2026-10-24",
+    "time": "17:00",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792787463755-unnamed-2.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
