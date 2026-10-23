@@ -29185,5 +29185,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792761711225,
+    "title": "Lord Huron",
+    "date": "2026-12-11",
+    "time": "20:00",
+    "venue": "Palace Theater",
+    "venueUrl": "https://www.palacealbany.org/events/all",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kQjYwCKcZSeJRCbd8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792761700588-121126-lord-huron-albany-1920x108065-8706390494.webp",
+    "price": "$50+",
+    "free": false,
+    "_manual": true
   }
 ]
