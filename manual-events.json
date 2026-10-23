@@ -29424,5 +29424,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792779015580,
+    "title": "Newburgh Nightmare - Salvo, Game, The Lot",
+    "date": "2026-10-24",
+    "time": "21:00",
+    "venue": "The Ellis",
+    "venueUrl": "https://www.theellisnewburgh.com/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/r8BMC6j6N8u7Y8Y97",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792778956901-1000090812.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
