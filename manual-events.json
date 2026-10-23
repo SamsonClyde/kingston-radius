@@ -29284,5 +29284,19 @@
     "price": "$26+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792763517636,
+    "title": "First Friday Fall Festival - Lex Gray & The Urban Pioneers",
+    "date": "2026-11-06",
+    "time": "17:00",
+    "venue": "Village of Catskill",
+    "venueUrl": "https://www.instagram.com/catskillhappenings/",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/Sngigk66SQkxypmHA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792763496813-unnamed-1.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
