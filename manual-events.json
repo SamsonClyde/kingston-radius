@@ -29354,5 +29354,19 @@
     "price": "$30+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792764346971,
+    "title": "Spooky Scorpio Party - Vinyl DJ Set",
+    "date": "2026-10-28",
+    "time": "15:00",
+    "venue": "Rewind Kingston",
+    "venueUrl": "https://www.instagram.com/rewindkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/qj7Z5WR4M1M8up1q9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792764341535-unnamed-3.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
