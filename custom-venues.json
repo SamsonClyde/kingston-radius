@@ -1216,5 +1216,11 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/GqV7xzJCQtUsBmbWA",
     "drive": 1
+  },
+  "The Forest Haven": {
+    "venueUrl": "https://www.theforesthaven.com/events-backend?utm_source=ig&utm_medium=paid&utm_campaign=52592857336303&utm_term=52592857336503&utm_content=52592857336103&utm_id=52592857336303&fbclid=PAZXh0bgNhZW0BMABwZG9mAmFkaWQAAC_VSiYUb3NydGMGYXBwX2lkDzU2NzA2NzM0MzM1MjQyNwABpw5kyiLTx0OmTcdX9iNgRgfk_CJdE3WrQqGSKb3h1gBXc8Eqau2PqIh5ZP0M_aem_WPGfubJRXlPQBnqZC95OGw",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/owUiUSNY4zYoCucG8",
+    "drive": 22
   }
 }
