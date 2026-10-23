@@ -29438,5 +29438,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792787078888,
+    "title": "Halloween Party - DJ Maxwell",
+    "date": "2026-10-30",
+    "time": "19:00",
+    "venue": "Rough Draft Books",
+    "venueUrl": "https://www.roughdraftny.com/events",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LLZ4sLnaNhZtSSar9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792787067058-unnamed.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
