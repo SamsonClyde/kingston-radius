@@ -29171,5 +29171,19 @@
     "price": "$49+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792761651580,
+    "title": "Magic of Christmas - Albany Symphony",
+    "date": "2026-12-06",
+    "time": "15:00",
+    "venue": "Palace Theater",
+    "venueUrl": "https://www.palacealbany.org/events/all",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kQjYwCKcZSeJRCbd8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792761644042-aso-magic2026-wide-97e128d8d9.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
