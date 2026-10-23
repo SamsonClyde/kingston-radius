@@ -29480,5 +29480,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792787931120,
+    "title": "Cursed Covers",
+    "date": "2026-10-23",
+    "time": "21:00",
+    "venue": "Snug Harbor",
+    "venueUrl": "https://www.facebook.com/snugsnewpaltz?utm_source=ig&utm_medium=social&utm_content=link_in_bio&_rdr",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/UxtL3uvDoYHidUS4A",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792787926870-unnamed-3.jpg",
+    "price": "$7",
+    "free": false,
+    "_manual": true
   }
 ]
