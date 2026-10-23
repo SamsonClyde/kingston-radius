@@ -1210,5 +1210,11 @@
     "location": "Catskill, NY",
     "mapsUrl": "https://maps.app.goo.gl/Sngigk66SQkxypmHA",
     "drive": 30
+  },
+  "The Draw": {
+    "venueUrl": "https://www.instagram.com/thedrawkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GqV7xzJCQtUsBmbWA",
+    "drive": 1
   }
 }
