@@ -29269,5 +29269,19 @@
     "price": "$40+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792762251617,
+    "title": "Star Wars & More: The Music of John Williams - Albany Symphony",
+    "date": "2027-05-01",
+    "time": "19:30",
+    "venue": "Palace Theater",
+    "venueUrl": "https://www.palacealbany.org/events/all",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kQjYwCKcZSeJRCbd8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792762246025-aso-may2027-wide-95bb6bfc69.webp",
+    "price": "$26+",
+    "free": false,
+    "_manual": true
   }
 ]
