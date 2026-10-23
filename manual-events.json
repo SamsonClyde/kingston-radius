@@ -29382,5 +29382,19 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792764558204,
+    "title": "Hallowine - Live Music",
+    "date": "2026-10-25",
+    "time": "11:00",
+    "venue": "Robibero Winery",
+    "venueUrl": "https://www.robiberofamilyvineyards.com/events",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://www.robiberofamilyvineyards.com/events",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792764554622-ac4961c4-8979-437d-8477-dafa486dc3ac-1790782653759-bmr1ydna.png",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
