@@ -29410,5 +29410,19 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792778734208,
+    "title": "Furia",
+    "date": "2026-10-23",
+    "time": "19:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792778726074-1000090810.jpg",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
