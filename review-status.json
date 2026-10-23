@@ -2317,5 +2317,9 @@
     "status": "rejected",
     "hiddenAt": 1792762489998
   },
-  "The Lace Mill||2026-10-26||19:00": "approved"
+  "The Lace Mill||2026-10-26||19:00": "approved",
+  "Towne Crier Café||2026-10-29||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1792762494266
+  }
 }
