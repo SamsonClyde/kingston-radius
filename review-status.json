@@ -2304,5 +2304,9 @@
   "MASS MoCA||2026-11-12||5:30 PM": {
     "status": "rejected",
     "hiddenAt": 1792762259293
+  },
+  "MASS MoCA||2026-11-18||5:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1792762262046
   }
 }
