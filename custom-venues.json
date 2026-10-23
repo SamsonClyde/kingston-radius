@@ -1204,5 +1204,11 @@
     "location": "Albany, NY",
     "mapsUrl": "https://maps.app.goo.gl/kQjYwCKcZSeJRCbd8",
     "drive": 54
+  },
+  "Village of Catskill": {
+    "venueUrl": "https://www.instagram.com/catskillhappenings/",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/Sngigk66SQkxypmHA",
+    "drive": 30
   }
 }
