@@ -29298,5 +29298,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792763700062,
+    "title": "You Don't Need  Smartphone - QWIP",
+    "date": "2026-11-11",
+    "time": "19:00",
+    "venue": "The Draw",
+    "venueUrl": "https://www.instagram.com/thedrawkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GqV7xzJCQtUsBmbWA",
+    "posterUrl": "",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
