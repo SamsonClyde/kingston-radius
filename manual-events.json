@@ -29115,5 +29115,19 @@
     "price": "$41+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792761390644,
+    "title": "Trey Anastasio Band",
+    "date": "2026-11-12",
+    "time": "19:00",
+    "venue": "Palace Theater",
+    "venueUrl": "https://www.palacealbany.org/events/all",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kQjYwCKcZSeJRCbd8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792761388258-trey26-1080x1080-d2347ce2aa.webp",
+    "price": "$70+",
+    "free": false,
+    "_manual": true
   }
 ]
