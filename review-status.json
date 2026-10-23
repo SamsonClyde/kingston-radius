@@ -284,10 +284,6 @@
   "The Falcon||2026-10-16||19:30": "approved",
   "The Falcon||2026-10-17||19:30": "approved",
   "The Falcon||2026-10-18||See website": "approved",
-  "The Falcon||2026-10-22||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076722593
-  },
   "The Falcon||2026-10-22||19:30": "approved",
   "The Falcon||2026-10-24||See website": {
     "status": "rejected",
@@ -451,10 +447,6 @@
   "Tubby's||2026-10-15||20:00": "approved",
   "Tubby's||2026-10-16||20:00": "approved",
   "Tubby's||2026-10-17||20:00": "approved",
-  "Tubby's||2026-10-22||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787310409240
-  },
   "Tubby's||2026-10-22||20:00": "approved",
   "Tubby's||2026-10-23||7:00 pm": {
     "status": "rejected",
@@ -633,10 +625,6 @@
   "The Snyder Estate||2026-10-31||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787541896207
-  },
-  "Bardavon||2026-10-22||": {
-    "status": "rejected",
-    "hiddenAt": 1787572492021
   },
   "Bardavon||2026-11-21||": {
     "status": "rejected",
@@ -1098,10 +1086,6 @@
   },
   "Unicorn Bar||2026-09-26||21:00": "approved",
   "Unicorn Bar||2026-10-09||21:00": "approved",
-  "Unicorn Bar||2026-10-22||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789390002694
-  },
   "Unicorn Bar||2026-10-23||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789390007222
@@ -1524,10 +1508,6 @@
     "hiddenAt": 1790680673990
   },
   "Assembly Kingston||2026-11-04||20:00": "approved",
-  "Bardavon||2026-10-22||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790680680563
-  },
   "Bardavon||2026-11-04||": {
     "status": "rejected",
     "hiddenAt": 1790680685051
@@ -1636,10 +1616,6 @@
   "Tompkins Corners Cultural Center||2026-11-06||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1790852645732
-  },
-  "Unicorn Bar||2026-10-22||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790852714357
   },
   "Unicorn Bar||2026-10-22||19:30": "approved",
   "Avalon Lounge||2026-10-09||20:00": "approved",
@@ -1766,10 +1742,6 @@
   "Time & Space Limited||2026-10-09||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791369167910
-  },
-  "Time & Space Limited||2026-10-22||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1791369223189
   },
   "Time & Space Limited||2026-11-07||2:00 PM": {
     "status": "rejected",
@@ -1910,10 +1882,6 @@
     "status": "rejected",
     "hiddenAt": 1792148127513
   },
-  "Keegan Ales||2026-10-22||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792148180663
-  },
   "Keegan Ales||2026-10-22||19:00": "approved",
   "Keegan Ales||2026-10-23||8:00 pm": {
     "status": "rejected",
@@ -2006,10 +1974,6 @@
     "hiddenAt": 1792148972463
   },
   "The Grand||2026-11-13||20:00": "approved",
-  "The Living Room at Full Circle||2026-10-22||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792148984876
-  },
   "The Local Saugerties||2026-10-23||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792149116218
@@ -2062,10 +2026,6 @@
   "Tompkins Corners Cultural Center||2027-04-14||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1792149234997
-  },
-  "Towne Crier Café||2026-10-22||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792149237555
   },
   "Towne Crier Café||2026-10-23||6:30 pm": {
     "status": "rejected",
@@ -2150,10 +2110,6 @@
     "status": "rejected",
     "hiddenAt": 1792450353187
   },
-  "Colony Woodstock||2026-10-22||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792499748410
-  },
   "Colony Woodstock||2026-10-23||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792499751391
@@ -2165,10 +2121,6 @@
   "Keegan Ales||2026-11-05||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1792499756771
-  },
-  "NoFun||2026-10-22||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792499787486
   },
   "NoFun||2026-10-23||8:00 PM": {
     "status": "rejected",
@@ -2262,10 +2214,6 @@
   "Tempo Arts||2026-11-15||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792666812057
-  },
-  "The Grand||2026-10-22||": {
-    "status": "rejected",
-    "hiddenAt": 1792666819563
   },
   "The Grand||2026-10-24||4:30 PM": {
     "status": "rejected",
