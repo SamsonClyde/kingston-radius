@@ -29452,5 +29452,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792787228807,
+    "title": "Murphy's Law",
+    "date": "2026-12-20",
+    "time": "18:00",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792787222499-unnamed-1.jpg",
+    "price": "sold out",
+    "free": false,
+    "_manual": true
   }
 ]
