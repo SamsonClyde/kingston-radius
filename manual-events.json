@@ -29227,5 +29227,19 @@
     "price": "$67+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792761941990,
+    "title": "The Princess Proms Concert",
+    "date": "2027-03-31",
+    "time": "15:30",
+    "venue": "Palace Theater",
+    "venueUrl": "https://www.palacealbany.org/events/all",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kQjYwCKcZSeJRCbd8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792761935710-princessproms27-wide-e21775c7e3.webp",
+    "price": "$34+",
+    "free": false,
+    "_manual": true
   }
 ]
