@@ -29157,5 +29157,19 @@
     "price": "$25+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792761562895,
+    "title": "The Lox",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "venue": "Palace Theater",
+    "venueUrl": "https://www.palacealbany.org/events/all",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kQjYwCKcZSeJRCbd8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792761558252-thelox26-wide-01c44af9a3.webp",
+    "price": "$49+",
+    "free": false,
+    "_manual": true
   }
 ]
