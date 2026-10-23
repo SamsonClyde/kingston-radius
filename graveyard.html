@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Graveyard</title>
+<style>
+  html, body { margin: 0; background: #0d0d0c; }
+  #wall { column-width: 220px; column-gap: 10px; padding: 10px; }
+  #wall a { display: block; break-inside: avoid; margin: 0 0 10px; }
+  #wall img { display: block; width: 100%; height: auto; border-radius: 4px; background: #1b1a18; }
+</style>
+</head>
+<body>
+<div id="wall"></div>
+<script>
+// Every past show that has a flyer, one page, shuffled each time you load it.
+(async () => {
+  const key = e => `${e.venue}||${e.date}||${e.time || ''}`;
+  const rejected = s => s === 'rejected' || s === 'purged' || (s && typeof s === 'object' && (s.status === 'rejected' || s.status === 'purged'));
+  const approved = s => s === 'approved' || (s && typeof s === 'object' && s.status === 'approved');
+  let data;
+  try { data = await (await fetch('/.netlify/functions/events-load')).json(); } catch (err) { return; }
+  const status = data.reviewStatus || {};
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const pastDay = d => { const t = new Date(d + 'T00:00:00'); return !isNaN(t) && t < today; };
+  const all = [
+    ...(data.manualEvents  || []).map(e => ({ ...e, _manual: true })),
+    ...(data.scrapedEvents || []),
+    ...(data.emailEvents   || [])
+  ];
+  const seen = new Set(), urls = [];
+  for (const e of all) {
+    if (!e.posterUrl || !pastDay(e.date)) continue;
+    const s = status[key(e)];
+    if (rejected(s)) continue;
+    if (!e._manual && !approved(s)) continue;
+    if (seen.has(e.posterUrl)) continue;
+    seen.add(e.posterUrl); urls.push(e.posterUrl);
+  }
+  for (let i = urls.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [urls[i], urls[j]] = [urls[j], urls[i]]; }
+  const wall = document.getElementById('wall');
+  for (const u of urls) {
+    const a = document.createElement('a'); a.href = u; a.target = '_blank'; a.rel = 'noopener';
+    const img = document.createElement('img'); img.src = u; img.loading = 'lazy'; img.decoding = 'async'; img.alt = '';
+    img.onerror = () => a.remove();                     // a flyer that no longer exists just disappears
+    a.appendChild(img); wall.appendChild(a);
+  }
+})();
+</script>
+</body>
+</html>
