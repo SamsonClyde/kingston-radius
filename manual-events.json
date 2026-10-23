@@ -29199,5 +29199,19 @@
     "price": "$50+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792761789191,
+    "title": "A Hero's Journey - Albany Symphony",
+    "date": "2027-01-23",
+    "time": "19:30",
+    "venue": "Palace Theater",
+    "venueUrl": "https://www.palacealbany.org/events/all",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/kQjYwCKcZSeJRCbd8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792761778937-aso-jan2027-thumb-11665e0ad8-t.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
