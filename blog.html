@@ -1,1139 +1,208 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Upcoming Shows — Kingston Radius</title>
-<meta name="description" content="Upcoming Hudson Valley shows, with their posters.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+<title>Kingston Radius - Live Music in the Hudson Valley</title>
 <style>
-  :root {
-    --red: #C0392B;
-    --bg: #F7F5F0;
-    --card: #FFFFFF;
-    --text: #1A1A18;
-    --muted: #888880;
-    --border: #E8E6E0;
-    --tag-bg: #F0EEE8;
-    --header-bg: #1A1A18;
-    color-scheme: light;
+  /* Old-school page, on purpose. */
+  html { background: #000080; }
+  body {
+    margin: 0; padding: 8px 8px 30px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px; color: #FFFFFF;
+    background-color: #000080;
+    background-image:
+      radial-gradient(#ffffff 1px, transparent 1.5px),
+      radial-gradient(#ffff99 1px, transparent 1.5px),
+      radial-gradient(#99ffff 1px, transparent 1.5px);
+    background-size: 53px 53px, 91px 91px, 37px 37px;
+    background-position: 0 0, 17px 31px, 5px 13px;
+    cursor: crosshair;
   }
-  [data-theme="dark"] {
-    --red: #E2604A;
-    --bg: #171613;
-    --card: #211F1B;
-    --text: #EDEAE2;
-    --muted: #9B968C;
-    --border: #37342D;
-    --tag-bg: #29271F;
-    --header-bg: #100F0D;
-    color-scheme: dark;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  a:link { color: #00FFFF; }
+  a:visited { color: #FF99FF; }
+  a:hover { color: #FF0000; background: #FFFF00; }
+  center { display: block; text-align: center; }
 
-  header {
-    background: var(--header-bg); color: #fff; padding: 0 24px;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 56px; position: sticky; top: 0; z-index: 100;
-  }
-  .logo { font-family: 'DM Serif Display', serif; font-size: 1.3rem; letter-spacing: 0.01em; color: #fff; text-decoration: none; }
-  .logo span { color: var(--red); }
-  #theme-toggle-btn {
-    background: none; border: 1px solid rgba(255,255,255,0.25); border-radius: 20px;
-    width: 30px; height: 30px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; color: #fff;
-  }
+  .blink { animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { visibility: hidden; } }
 
-  .pb-wrap { max-width: 640px; margin: 0 auto; padding: 28px 16px 60px; }
-  .pb-titlerow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-  .pb-locbtn { background: none; border: 1.5px solid transparent; cursor: pointer; font-size: 1.5rem; line-height: 1; padding: 4px; border-radius: 20px; color: var(--text); font-family: 'DM Sans', sans-serif; }
-  .pb-locbtn:hover { background: var(--tag-bg); }
-  .pb-locbtn.on { font-size: 0.82rem; font-weight: 600; color: var(--red); border-color: var(--red); padding: 5px 12px; }
-  .pb-pin.pb-me span { background: var(--text); color: var(--bg); font-size: 0.66rem; }
-  .kr-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 10000; display: none; align-items: center; justify-content: center; padding: 20px; }
-  .kr-modal-overlay.show { display: flex; }
-  .kr-modal-box { background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 22px; width: 100%; max-width: 420px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
-  .kr-modal-msg { font-size: 0.9rem; margin-bottom: 18px; line-height: 1.5; }
-  .kr-modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
-  .kr-modal-btn { padding: 7px 16px; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 0.84rem; cursor: pointer; border: 1px solid var(--border); background: none; color: var(--text); }
-  .kr-modal-btn-confirm { background: var(--red); border-color: var(--red); color: #fff; }
-  .kr-modal-btn:disabled { opacity: 0.6; cursor: default; }
-  .pb-head h1 { font-family: 'DM Serif Display', serif; font-size: 2.1rem; font-weight: 400; line-height: 1.1; }
-  .pb-head p { font-family: 'Lora', serif; font-style: italic; color: var(--muted); font-size: 0.95rem; margin-top: 6px; }
-  .pb-wrap.wall { max-width: 1000px; }
-  .pb-filters { display: flex; flex-direction: column; gap: 10px; margin: 18px 0 6px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
-  .pb-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-  .pb-search { width: 100%; border: 1.5px solid var(--border); background: transparent; color: var(--text);
-    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; padding: 9px 16px; border-radius: 22px; }
-  .pb-search:focus { outline: none; border-color: var(--red); }
-  .pb-datebox { display: flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); flex: 1 1 150px; }
-  .pb-datebox input { flex: 1; min-width: 0; border: 1.5px solid var(--border); background: transparent; color: var(--text);
-    font-family: 'DM Sans', sans-serif; font-size: 0.8rem; padding: 5px 10px; border-radius: 20px; }
-  .pb-datebox input:focus { outline: none; border-color: var(--text); }
-  .pb-chip { background: none; border: 1.5px solid var(--border); color: var(--text); border-radius: 20px; padding: 5px 13px;
-    font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; }
-  .pb-chip:hover { border-color: var(--red); color: var(--red); }
-  .pb-chip.active { background: var(--red); border-color: var(--red); color: #fff; }
-  .pb-toolbar { justify-content: space-between; }
-  .pb-seg { display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; color: var(--muted); }
-  .pb-seg .pb-chip { padding: 4px 11px; font-size: 0.75rem; }
-  .pb-clear { background: none; border: none; color: var(--red); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 600; cursor: pointer; padding: 4px 2px; }
-  .pb-clear:hover { text-decoration: underline; }
-  .pb-select {
-    flex: 1 1 0; min-width: 0; max-width: 100%; border: 1.5px solid var(--border); background: transparent; color: var(--text);
-    font-family: 'DM Sans', sans-serif; font-size: 0.8rem; padding: 6px 12px; border-radius: 20px; cursor: pointer;
+  h1.title { font-family: "Courier New", Courier, monospace; font-size: 44px; font-weight: bold; color: #FFFF66; margin: 10px 0 0; text-shadow: 3px 3px 0 #000066; }
+  .sub { font-size: 20px; color: #FFFFFF; margin: 2px 0 0; }
+  .rainbow { height: 6px; border: 0; margin: 10px 0; background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, magenta, red); }
+  .construction {
+    margin: 8px auto; max-width: 560px; padding: 4px; color: #000; font-weight: bold; text-align: center;
+    background: repeating-linear-gradient(-45deg, #ffcc00 0 14px, #000 14px 28px);
   }
-  .pb-select option { background: var(--card); color: var(--text); }
-  .pb-select:focus { outline: none; border-color: var(--text); }
-  .heart { background: none; border: none; color: var(--muted); cursor: pointer; padding: 4px; border-radius: 4px; display: inline-flex; line-height: 0; }
-  .heart:hover { color: var(--red); }
-  .heart svg { fill: none; }
-  .heart[aria-pressed="true"] { color: var(--red); }
-  .heart[aria-pressed="true"] svg { fill: currentColor; }
-  .pb-tile { position: relative; }
-  .pb-tile-heart { position: absolute; top: 8px; right: 8px; width: 32px; height: 32px; padding: 0; align-items: center; justify-content: center;
-    background: rgba(0,0,0,0.45); color: #fff; border-radius: 50%; }
-  .pb-tile-heart:hover { background: rgba(0,0,0,0.65); color: #fff; }
-  .pb-tile-heart[aria-pressed="true"] { color: #ff7a68; }
-  #pb-map { overflow: hidden; height: min(62vh, 520px); min-height: 340px; border-radius: 8px; border: 1px solid var(--border); background: var(--tag-bg); margin-top: 16px; }
-  [data-theme="dark"] #pb-map .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9); }
-  .pb-pin span { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%;
-    background: var(--red); color: #fff; font: 700 0.78rem 'DM Sans', sans-serif; border: 2px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.4); }
-  .pb-pin.sel span { outline: 3px solid var(--text); }
-  #pb-map-note { font-size: 0.78rem; color: var(--muted); margin: 10px 0 0; }
-  #pb-map-towns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-  .pb-venuehead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 22px 0 2px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
-  .pb-venuehead a { color: var(--red); text-decoration: none; }
-  .pb-venuehead a:hover { text-decoration: underline; }
-  .pb-venuehead .pb-vmaps { font-weight: 600; letter-spacing: 0.02em; text-transform: none; color: var(--muted); }
-  a.pb-rowlink { color: inherit; text-decoration: none; }
-  a.pb-rowlink:hover { color: var(--red); text-decoration: underline; }
-  @keyframes pb-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(192,57,43,0); } 40% { box-shadow: 0 0 0 10px rgba(192,57,43,0.35); } }
-  .pb-post.pb-pulse .pb-poster { animation: pb-pulse 1.1s ease-out 2; }
-  .pb-maprow { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); cursor: pointer; align-items: center; }
-  .pb-maprow:hover .pb-tile-title { color: var(--red); }
-  .pb-maprow img { width: 56px; height: 72px; object-fit: cover; border-radius: 4px; background: var(--tag-bg); flex: none; }
-  .pb-maprow .pb-tile-date { margin-top: 0; }
-  .pb-count { font-size: 0.78rem; color: var(--muted); margin: 10px 0 4px; display: flex; justify-content: space-between; align-items: center; }
-  /* Wall view: posters in columns, each at its own shape */
-  /* Posters sit in staggered columns: each day (or venue) gets a divider, and its shows read left to right,
-     then down. Alternate columns start a little lower so the rows never line up like a table. */
-  .pb-wall { display: flex; gap: 14px; align-items: flex-start; margin: 4px 0 8px; }
-  .pb-wallcol { flex: 1 1 0; min-width: 0; }
-  .pb-wallcol:nth-child(even) { padding-top: 34px; }
-  .pb-wall.pb-single .pb-wallcol:nth-child(even) { padding-top: 0; }
-  @media (min-width: 720px) { .pb-wall { gap: 18px; } .pb-wallcol:nth-child(even) { padding-top: 44px; } }
-  .pb-day .pb-daycount { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-left: 10px; }
-  .pb-tile { margin-bottom: 20px; }
-  .pb-tile .pb-poster { width: 100%; }
-  .pb-tile-date { margin-top: 8px; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red); }
-  .pb-tile-title { font-family: 'DM Serif Display', serif; font-size: 1.05rem; line-height: 1.15; margin-top: 2px; overflow-wrap: anywhere; }
-  .pb-tile-venue { font-size: 0.74rem; color: var(--muted); margin-top: 2px; }
-  .pb-tile.pb-broken .pb-poster { display: none; }
+  .construction span { display: block; background: #ffcc00; padding: 3px 6px; }
 
-  .pb-day { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.25rem; color: var(--red);
-    margin: 38px 0 18px; padding-bottom: 8px; border-bottom: 2px solid var(--red); }
-  .pb-day:first-of-type { margin-top: 22px; }
-  .pb-post { margin-bottom: 46px; }
-  /* Each poster keeps its own shape; very tall ones are capped at ~78% of screen height */
-  .pb-poster {
-    display: block; position: relative; width: min(100%, calc(78vh * var(--ar, 0.75))); aspect-ratio: var(--ar, 3 / 4);
-    margin: 0 auto; background: var(--tag-bg); border-radius: 6px; overflow: hidden; cursor: zoom-in;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.14); padding: 0; border: none;
+  /* the old beveled gray "button" look */
+  .btn {
+    display: inline-block; padding: 3px 10px; margin: 2px; background: #C0C0C0; color: #000 !important; text-decoration: none;
+    border: 2px outset #fff; font-size: 13px; font-family: "Courier New", Courier, monospace;
   }
-  [data-theme="dark"] .pb-poster { box-shadow: 0 4px 18px rgba(0,0,0,0.5); }
-  .pb-poster img { display: block; width: 100%; height: 100%; object-fit: cover; }
-  .pb-post.pb-broken .pb-poster { display: none; }
-  .pb-eyebrow { margin-top: 16px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); }
-  .pb-title { font-family: 'DM Serif Display', serif; font-size: 1.65rem; line-height: 1.15; margin-top: 4px; overflow-wrap: anywhere; }
-  .pb-where { font-family: 'Lora', serif; font-size: 1rem; margin-top: 6px; }
-  .pb-where a { color: inherit; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; }
-  .pb-where a:hover { text-decoration-color: var(--red); }
-  .pb-drive { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
-  .pb-actions { display: flex; align-items: center; gap: 14px; margin-top: 12px; }
-  .pb-more { font-size: 0.82rem; font-weight: 600; color: var(--red); text-decoration: none; }
-  .pb-more:hover { text-decoration: underline; }
-  .icon-btn { background: none; border: none; color: var(--muted); cursor: pointer; padding: 4px; border-radius: 4px; display: inline-flex; }
-  .icon-btn:hover { color: var(--red); background: var(--tag-bg); }
-  .pb-loadmore { display: block; margin: 10px auto 0; background: none; border: 1.5px solid var(--border); color: var(--text);
-    border-radius: 20px; padding: 9px 24px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; cursor: pointer; }
-  .pb-loadmore:hover { border-color: var(--red); color: var(--red); }
-  .pb-empty { text-align: center; padding: 60px 20px; color: var(--muted); font-family: 'Lora', serif; }
-  .pb-foot { text-align: center; font-size: 0.78rem; color: var(--muted); padding: 10px 16px 40px; }
-  .pb-foot a { color: var(--muted); }
+  .btn:hover { background: #dcdcdc; }
+  .btn:active { border-style: inset; }
 
-  .loading-spinner { width: 28px; height: 28px; margin: 0 auto; border: 3px solid var(--border); border-top-color: var(--red); border-radius: 50%; animation: kr-spin 0.8s linear infinite; }
-  @keyframes kr-spin { to { transform: rotate(360deg); } }
-  .kr-toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: var(--text); color: var(--bg);
-    padding: 10px 18px; border-radius: 8px; font-size: 0.85rem; z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
-  .kr-toast.show { opacity: 1; }
-  .kr-poster-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.93); z-index: 10001; display: none; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; }
-  .kr-poster-overlay.show { display: flex; }
-  .kr-poster-cap { color: #fff; text-align: center; font-size: 0.85rem; margin-top: 12px; max-width: 90vw; line-height: 1.35; }
-  .kr-poster-cap b { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.1rem; display: block; }
-  .kr-poster-img { max-width: 100%; max-height: calc(100% - 118px); min-height: 0; border-radius: 6px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); object-fit: contain; }
-  .kr-poster-close { position: fixed; top: 18px; right: 22px; width: 40px; height: 40px; border-radius: 50%;
-    background: rgba(255,255,255,0.12); border: none; color: #fff; font-size: 1.2rem; line-height: 1; cursor: pointer;
-    display: flex; align-items: center; justify-content: center; }
-  .kr-poster-close:hover { background: rgba(255,255,255,0.25); }
-  .v-nav { position: fixed; top: 50%; transform: translateY(-50%); width: 44px; height: 64px; border: none; border-radius: 8px;
-    background: rgba(255,255,255,0.12); color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
-  .v-nav:hover { background: rgba(255,255,255,0.25); }
-  .v-prev { left: 8px; } .v-next { right: 8px; }
-  .v-bar { display: flex; align-items: center; gap: 6px; margin-top: 10px; }
-  .v-btn { background: rgba(255,255,255,0.12); border: none; color: #fff; border-radius: 20px; min-width: 40px; height: 36px; padding: 0 12px;
-    font-family: 'DM Sans', sans-serif; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
-  .v-btn:hover { background: rgba(255,255,255,0.25); }
-  .v-bar .heart { color: #fff; padding: 0 12px; }
-  .v-bar .heart[aria-pressed="true"] { color: #ff7a68; }
-  .v-count { color: rgba(255,255,255,0.7); font-size: 0.78rem; margin-left: 6px; }
-  .v-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: transparent; }
-  .v-progress span { display: block; height: 100%; width: 0; background: var(--red); }
-  @media (max-width: 480px) { .v-nav { width: 36px; height: 52px; font-size: 1.6rem; } }
-  @media (max-width: 480px) { header { padding: 0 14px; } }
+  table.intro { margin: 8px auto; border: 4px ridge #c0c0c0; background: #000; }
+  table.intro td { padding: 6px 12px; text-align: center; }
+  .counter { display: inline-block; background: #000; color: #0f0; font-family: "Courier New", Courier, monospace; letter-spacing: 3px; padding: 1px 6px; border: 2px inset #888; }
+
+  marquee { background: #000066; color: #ffffff; font-family: "Courier New", Courier, monospace; font-size: 16px; border-top: 2px solid #c0c0c0; border-bottom: 2px solid #c0c0c0; padding: 2px 0; }
+
+  h2.day {
+    font-family: "Courier New", Courier, monospace; font-size: 24px; font-weight: bold; text-align: center;
+    color: #FFFF66; margin: 22px 0 4px;
+  }
+  h2.day small { color: #99FFFF; font-size: 15px; font-weight: normal; }
+
+  /* the wall, but 5 across */
+  .grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; max-width: 1100px; margin: 0 auto; align-items: start; }
+  .tile {
+    background: #C0C0C0; color: #000; border: 3px outset #fff; padding: 4px; min-width: 0;
+    font-family: "Courier New", Courier, monospace; font-size: 10px; line-height: 1.25; overflow-wrap: anywhere;
+  }
+  .tile a:link { color: #0000EE; } .tile a:visited { color: #551A8B; } .tile a:hover { color: #f00; background: #ff0; }
+  .tile .poster { display: block; border: 2px inset #808080; background: #fff; margin-bottom: 4px; line-height: 0; }
+  .tile .poster img { width: 100%; height: auto; display: block; image-rendering: auto; }
+  .tile .nopic { display: block; border: 2px inset #808080; background: #fff; color: #666; text-align: center; padding: 22px 2px; margin-bottom: 4px; }
+  .tile .ttl { font-weight: bold; font-size: 11px; text-decoration: underline; display: block; margin-bottom: 2px; }
+  .tile .meta { color: #000; }
+  .tile .when { color: #800000; font-weight: bold; }
+  .tile .new { color: #f00; font-weight: bold; }
+
+  .more { text-align: center; margin: 22px 0; }
+  .guest { max-width: 520px; margin: 24px auto 0; border: 4px ridge #c0c0c0; background: #000; padding: 8px 14px; text-align: center; color: #fff; }
+  .foot { text-align: center; margin-top: 18px; font-size: 11px; color: #c0c0c0; }
+  .foot .tiny { font-size: 10px; color: #808080; }
+  #msg { text-align: center; color: #fff; margin: 30px 0; }
+
+  @media (max-width: 760px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } h1.title { font-size: 34px; } }
 </style>
-<script>
-  // Apply saved/system theme before paint (same preference the main site uses)
-  (function () {
-    var saved = null;
-    try { saved = localStorage.getItem('kr_theme'); } catch (e) {}
-    var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-  })();
-</script>
 </head>
 <body>
 
-<header>
-  <a href="/" class="logo">Kingston<span>Radius</span></a>
-  <button id="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
-    <svg id="theme-icon-sun" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-    <svg id="theme-icon-moon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
-  </button>
-</header>
+<center>
+  <h1 class="title">Kingston Radius</h1>
+  <div class="sub">Live Music Listings for the Hudson Valley</div>
+  <div class="rainbow"></div>
 
-<div class="pb-wrap" id="pb-wrap">
-  <div class="pb-head">
-    <div class="pb-titlerow">
-      <h1>Upcoming Shows</h1>
-      <button id="pb-locbtn" class="pb-locbtn" type="button" title="Show distances from your own zip code" aria-label="Show distances from your own zip code">📍</button>
-    </div>
-  </div>
-  <div class="pb-filters">
-    <input type="search" id="pb-search" class="pb-search" placeholder="Search shows, venues, towns…" autocomplete="off" aria-label="Search">
-    <div class="pb-row">
-      <select id="pb-distance" class="pb-select" aria-label="Distance" style="display:none;"></select>
-      <select id="pb-venue" class="pb-select" aria-label="Venue"></select>
-    </div>
-    <div class="pb-row">
-      <label class="pb-datebox">From <input type="date" id="pb-from"></label>
-      <label class="pb-datebox">To <input type="date" id="pb-to"></label>
-    </div>
-    <div class="pb-row" id="pb-chips">
-      <button class="pb-chip" data-quick="today">Today</button>
-      <button class="pb-chip" data-quick="weekend">This weekend</button>
-      <button class="pb-chip" data-quick="week">Next 7 days</button>
-      <button class="pb-chip" data-quick="month">Next 30 days</button>
-      <button class="pb-chip" id="pb-saved" aria-pressed="false">♥ Saved <span id="pb-saved-n"></span></button>
-    </div>
-    <div class="pb-row pb-toolbar">
-      <span class="pb-seg">Sort <button class="pb-chip" data-sort="date">Date</button><button class="pb-chip" data-sort="venue">Venue</button></span>
-      <span class="pb-seg">View <button class="pb-chip" data-view-mode="feed">Feed</button><button class="pb-chip" data-view-mode="wall">Wall</button><button class="pb-chip" data-view-mode="map">Map</button></span>
-    </div>
-  </div>
-  <div class="pb-count"><span id="pb-count"></span><span><button class="pb-clear" id="pb-slideshow" type="button">▶ Slideshow</button> <button class="pb-clear" id="pb-clear" type="button" style="display:none;">Clear filters</button></span></div>
-  <div id="pb-map-wrap" style="display:none;">
-    <div id="pb-map"></div>
-    <div id="pb-map-note"></div>
-    <div id="pb-map-towns"></div>
-    <div id="pb-map-panel"></div>
-  </div>
-  <div id="pb-feed"><div style="text-align:center;padding:60px 20px;"><div class="loading-spinner"></div></div></div>
-</div>
-<div class="pb-foot"><a href="/">← All Kingston Radius listings</a></div>
+  <font size="4" color="#FFFFFF">
+    Welcome to the Kingston Radius home page! &nbsp;<span class="new blink">NEW!</span>
+  </font><br>
+  <font size="3" color="#99FFFF">Upcoming shows within a short drive of Kingston, NY. Check back often.</font>
 
-<div id="pb-loc-overlay" class="kr-modal-overlay">
-  <div class="kr-modal-box">
-    <div class="kr-modal-msg">
-      <strong style="display:block;margin-bottom:8px;font-size:1rem;">Show distances from your location</strong>
-      <span style="color:var(--muted);font-size:0.85rem;">Enter your zip code &amp; the 30/45/60/90-min filters will estimate distance from there instead of Kingston. These are straight-line estimates (with some adjustment for bridges and highways), not the precise Google Maps data used for Kingston’s default sorting.<br><br>Live in Kingston? Just use the default sorting.</span>
-      <input type="text" id="pb-zip-input" inputmode="numeric" maxlength="5" placeholder="e.g. 12401" style="display:block;width:100%;margin-top:14px;border:1.5px solid var(--border);background:transparent;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.95rem;padding:8px 12px;border-radius:6px;">
-      <div id="pb-zip-error" style="color:var(--red);font-size:0.8rem;margin-top:6px;display:none;"></div>
-    </div>
-    <div class="kr-modal-actions">
-      <button class="kr-modal-btn" id="pb-zip-reset" style="margin-right:auto;">Reset to Kingston</button>
-      <button class="kr-modal-btn" id="pb-zip-cancel">Cancel</button>
-      <button class="kr-modal-btn kr-modal-btn-confirm" id="pb-zip-go">Go</button>
-    </div>
-  </div>
+  <div class="construction"><span>UNDER CONSTRUCTION</span></div>
+
+  <table class="intro" cellpadding="0" cellspacing="0">
+    <tr>
+      <td>
+        You are visitor number<br>
+        <span class="counter" id="counter">000000</span>
+      </td>
+      <td>
+        <a class="btn" href="/contact.html">Sign my Guestbook</a><br>
+        <a class="btn" href="/">Kingston Radius Home</a>
+      </td>
+    </tr>
+  </table>
+</center>
+
+<marquee scrollamount="5">Welcome to the Kingston Radius home page! ... Please bookmark this site and check back for new listings ... </marquee>
+
+<div class="rainbow"></div>
+
+<div id="msg">Loading show listings, please wait...</div>
+<div id="days"></div>
+
+<div class="rainbow"></div>
+
+<div class="guest">
+  <font size="3" color="#FFFF66"><b>Webmaster</b></font><br><br>
+  Know of a show that should be listed here?<br>
+  <a href="/contact.html">Send me e-mail</a><br><br>
+  <a class="btn" href="/">Kingston Radius Home</a>
 </div>
 
-<div id="kr-poster-overlay" class="kr-poster-overlay" role="dialog" aria-modal="true" aria-label="Poster viewer">
-  <div class="v-progress"><span id="v-progress"></span></div>
-  <button id="kr-poster-close" class="kr-poster-close" aria-label="Close" title="Close">✕</button>
-  <button id="v-prev" class="v-nav v-prev" aria-label="Previous poster">‹</button>
-  <img id="kr-poster-img" class="kr-poster-img" src="" alt="Show poster">
-  <button id="v-next" class="v-nav v-next" aria-label="Next poster">›</button>
-  <div id="kr-poster-cap" class="kr-poster-cap"></div>
-  <div class="v-bar">
-    <button id="v-fav" class="v-btn heart" aria-label="Save this show" aria-pressed="false"></button>
-    <button id="v-play" class="v-btn" aria-label="Play slideshow">▶</button>
-    <button id="v-speed" class="v-btn" aria-label="Slideshow speed">6s</button>
-    <button id="v-full" class="v-btn" aria-label="Full screen" style="display:none;">⛶</button>
-    <span id="v-count" class="v-count"></span>
-  </div>
+<div class="foot">
+  <p>Best viewed with Netscape Navigator 3.0 or Internet Explorer 3.0 at 800x600.<br>
+  <a class="btn" href="#" onclick="window.scrollTo(0,0);return false;">^ Back to Top</a></p>
+  <p class="tiny">Last updated: <span id="updated"></span> &nbsp;|&nbsp; Copyright &copy; 1997 Kingston Radius. All rights reserved.</p>
 </div>
 
 <script>
-// ── Helpers (same rules the main listings page uses) ──────────────────────────
-function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-function parseDate(s) { if (!s) return new Date(0); const [y,m,d] = s.split('-').map(Number); return new Date(y, m-1, d); }
-function eventKey(e) { return `${e.venue}||${e.date}||${e.time||''}`; }
-function formatTime(t) {
-  if (!t || t === 'See website') return '';
-  t = t.trim();
-  if (/^\d{1,2}:\d{2}\s*[ap]m$/i.test(t)) return t.replace(/\s*([ap]m)$/i, (_, s) => ' ' + s.toLowerCase());
-  if (/^\d{1,2}:\d{2}$/.test(t)) { const [h,m] = t.split(':').map(Number); return `${h % 12 || 12}:${String(m).padStart(2,'0')} ${h >= 12 ? 'pm' : 'am'}`; }
-  return t;
-}
-function shortHash(str) { let h = 5381; for (let i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) | 0; return (h >>> 0).toString(36); }
-function isRejected(s) { return s === 'rejected' || s === 'purged' || (typeof s === 'object' && s && (s.status === 'rejected' || s.status === 'purged')); }
-function isApproved(s) { return s === 'approved' || (typeof s === 'object' && s && s.status === 'approved'); }
-function lsGet(key, fallback) { try { return JSON.parse(localStorage.getItem(key) || 'null') ?? fallback; } catch { return fallback; } }
-
-// ── Data ──────────────────────────────────────────────────────────────────────
-let POSTS = [];          // upcoming, approved shows that have a poster
-let LOADED = false;
-const PB_STEP = 12, WALL_STEP = 24;
-const step = () => S.view === 'wall' ? WALL_STEP : PB_STEP;
-
-// ── Favorites (kept on this device only) ──────────────────────────────────────
-let FAVS = new Set();
-try { FAVS = new Set(JSON.parse(localStorage.getItem('kr_blog_favs') || '[]')); } catch {}
-function saveFavs() { try { localStorage.setItem('kr_blog_favs', JSON.stringify([...FAVS])); } catch {} }
-const HEART = '<svg viewBox="0 0 24 24" width="17" height="17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>';
-const heartBtn = (key, cls) => `<button class="heart ${cls||''}" data-fav="${esc(key)}" aria-pressed="${FAVS.has(key)}" title="Save this show" aria-label="Save this show">${HEART}</button>`;
-function toggleFav(key) {
-  if (FAVS.has(key)) FAVS.delete(key); else FAVS.add(key);
-  saveFavs();
-  document.querySelectorAll('[data-fav]').forEach(b => { if (b.dataset.fav === key) b.setAttribute('aria-pressed', FAVS.has(key)); });
-  updateSavedChip();
-  if (S.saved) render();
-}
-function updateSavedChip() {
-  const n = POSTS.filter(e => FAVS.has(eventKey(e))).length;
-  document.getElementById('pb-saved-n').textContent = n ? `(${n})` : '';
-}
-const S = { q: '', from: '', to: '', venue: '', dist: 'all', saved: false, sort: 'date', view: 'feed' };
-let _pbShown = PB_STEP;
-let DRIVE = null;        // venue -> minutes from Kingston (read from index.html so both pages always agree)
-let CUSTOM_DRIVE = {};   // drive times saved on custom venue templates
-let TOWNS = null;        // town -> {lat,lng}, also read from index.html
-// Backup copy of the town list, used only if index.html can't be read, so the My Radius pin never disappears.
-const TOWNS_FALLBACK = {  "kingston, ny": {lat: 41.9270, lng: -73.9974, side: 'w'},
-  "woodstock, ny": {lat: 42.0409, lng: -74.1179, side: 'w'},
-  "saugerties, ny": {lat: 42.0776, lng: -73.9515, side: 'w'},
-  "new paltz, ny": {lat: 41.7476, lng: -74.0857, side: 'w'},
-  "rosendale, ny": {lat: 41.8365, lng: -74.0776, side: 'w'},
-  "stone ridge, ny": {lat: 41.8151, lng: -74.1207, side: 'w'},
-  "accord, ny": {lat: 41.7929, lng: -74.2318, side: 'w'},
-  "high falls, ny": {lat: 41.8087, lng: -74.1385, side: 'w'},
-  "highland, ny": {lat: 41.7160, lng: -73.9613, side: 'w'},
-  "marlboro, ny": {lat: 41.6034, lng: -73.9799, side: 'w'},
-  "milton, ny": {lat: 41.6551, lng: -73.9724, side: 'w'},
-  "gardiner, ny": {lat: 41.6795, lng: -74.1746, side: 'w'},
-  "cottekill, ny": {lat: 41.8556, lng: -74.0654, side: 'w'},
-  "west kill, ny": {lat: 42.2079, lng: -74.3335, side: 'w'},
-  "tannersville, ny": {lat: 42.1959, lng: -74.1274, side: 'w'},
-  "hunter, ny": {lat: 42.2137, lng: -74.2202, side: 'w'},
-  "windham, ny": {lat: 42.3009, lng: -74.2493, side: 'w'},
-  "catskill, ny": {lat: 42.2168, lng: -73.8643, side: 'w'},
-  "cairo, ny": {lat: 42.2929, lng: -74.0074, side: 'w'},
-  "livingston manor, ny": {lat: 41.9012, lng: -74.8288, side: 'w'},
-  "big indian, ny": {lat: 42.0687, lng: -74.4271, side: 'w'},
-  "shandaken, ny": {lat: 42.0637, lng: -74.3821, side: 'w'},
-  "phoenicia, ny": {lat: 42.0834, lng: -74.3168, side: 'w'},
-  "olivebridge, ny": {lat: 41.9376, lng: -74.2160, side: 'w'},
-  "hudson, ny": {lat: 42.2528, lng: -73.7904, side: 'e'},
-  "chatham, ny": {lat: 42.3670, lng: -73.5993, side: 'e'},
-  "claverack, ny": {lat: 42.2167, lng: -73.7196, side: 'e'},
-  "livingston, ny": {lat: 42.1276, lng: -73.7418, side: 'e'},
-  "germantown, ny": {lat: 42.1348, lng: -73.8654, side: 'e'},
-  "athens, ny": {lat: 42.2529, lng: -73.8071, side: 'w'},
-  "coxsackie, ny": {lat: 42.3540, lng: -73.7982, side: 'w'},
-  "greenville, ny": {lat: 42.4106, lng: -74.0146, side: 'w'},
-  "north adams, ma": {lat: 42.7009, lng: -73.1087, side: 'e'},
-  "beacon, ny": {lat: 41.5048, lng: -73.9698, side: 'e'},
-  "poughkeepsie, ny": {lat: 41.7004, lng: -73.9209, side: 'e'},
-  "wappingers falls, ny": {lat: 41.5967, lng: -73.9126, side: 'e'},
-  "red hook, ny": {lat: 41.9887, lng: -73.8776, side: 'e'},
-  "rhinebeck, ny": {lat: 41.9273, lng: -73.9121, side: 'e'},
-  "tivoli, ny": {lat: 42.0509, lng: -73.9165, side: 'e'},
-  "annandale-on-hudson, ny": {lat: 42.0273, lng: -73.9143, side: 'e'},
-  "hopewell junction, ny": {lat: 41.5806, lng: -73.7960, side: 'e'},
-  "pawling, ny": {lat: 41.5615, lng: -73.5993, side: 'e'},
-  "pine plains, ny": {lat: 41.9701, lng: -73.6771, side: 'e'},
-  "millbrook, ny": {lat: 41.7859, lng: -73.6879, side: 'e'},
-  "fishkill, ny": {lat: 41.5359, lng: -73.9007, side: 'e'},
-  "newburgh, ny": {lat: 41.5034, lng: -74.0104, side: 'w'},
-  "cornwall-on-hudson, ny": {lat: 41.4326, lng: -74.0176, side: 'w'},
-  "washingtonville, ny": {lat: 41.4262, lng: -74.1638, side: 'w'},
-  "peekskill, ny": {lat: 41.2901, lng: -73.9204, side: 'e'},
-  "croton-on-hudson, ny": {lat: 41.2015, lng: -73.8929, side: 'e'},
-  "putnam valley, ny": {lat: 41.4406, lng: -73.8221, side: 'e'},
-  "cold spring, ny": {lat: 41.4195, lng: -73.9563, side: 'e'},
-  "garrison, ny": {lat: 41.3798, lng: -73.9310, side: 'e'},
-  "troy, ny": {lat: 42.7284, lng: -73.6918, side: 'e'},
-  "albany, ny": {lat: 42.6526, lng: -73.7562, side: 'w'},
-  "schenectady, ny": {lat: 42.8142, lng: -73.9396, side: 'w'},
-  "bethel, ny": {lat: 41.7273, lng: -74.9024, side: 'w'},
-  "ellenville, ny": {lat: 41.7176, lng: -74.3946, side: 'w'},
-  "woodridge, ny": {lat: 41.7048, lng: -74.5985, side: 'w'},
-  "kerhonkson, ny": {lat: 41.7743, lng: -74.2879, side: 'w'},
-  "maplecrest, ny": {lat: 42.2759, lng: -74.1868, side: 'w'},
-  "walden, ny": {lat: 41.5612, lng: -74.1885, side: 'w'},
-  "altamont, ny": {lat: 42.7043, lng: -74.0304, side: 'w'},
-  "berne, ny": {lat: 42.6001, lng: -74.1568, side: 'w'},
-  "clermont, ny": {lat: 42.1512, lng: -73.8462, side: 'e'},
-  "coeymans hollow, ny": {lat: 42.4717, lng: -73.8944, side: 'w'},
-  "fleischmanns, ny": {lat: 42.1465, lng: -74.5638, side: 'w'},
-  "ghent, ny": {lat: 42.3287, lng: -73.6462, side: 'e'},
-  "hillsdale, ny": {lat: 42.1782, lng: -73.5115, side: 'e'},
-  "kinderhook, ny": {lat: 42.3901, lng: -73.6987, side: 'e'},
-  "leeds, ny": {lat: 42.2547, lng: -73.9008, side: 'w'},
-  "nyack, ny": {lat: 41.0909, lng: -73.9179, side: 'w'},
-  "oak hill, ny": {lat: 42.4098, lng: -74.1524, side: 'w'},
-  "pine bush, ny": {lat: 41.6009, lng: -74.296, side: 'w'},
-  "pleasant valley, ny": {lat: 41.7573, lng: -73.8329, side: 'e'},
-  "port ewen, ny": {lat: 41.8887, lng: -73.9932, side: 'w'},
-  "preston hollow, ny": {lat: 42.4314, lng: -74.2231, side: 'w'},
-  "redding, ct": {lat: 41.304, lng: -73.3826, side: 'e'},
-  "round top, ny": {lat: 42.2689, lng: -74.0272, side: 'w'},
-  "verplanck, ny": {lat: 41.2359, lng: -73.9635, side: 'e'},
-  "west park, ny": {lat: 41.7834, lng: -73.9573, side: 'w'},
-  "coeyman hollow, ny": {lat: 42.4717, lng: -73.8944, side: 'w'}, // spelling variant of "coeymans hollow, ny"
-  "chester, ny": {lat: 41.3569, lng: -74.2769, side: 'w'},
-  "wallkill, ny": {lat: 41.4670, lng: -74.3670, side: 'w'},
-  "ephratah, ny": {lat: 43.0269, lng: -74.5531, side: 'w'},
-  "sleepy hollow, ny": {lat: 41.0857, lng: -73.8585, side: 'e'},
-  "teaneck, nj": {lat: 40.8925, lng: -74.0114, side: 'w'},
-  "stamford, ny": {lat: 42.4170, lng: -74.6170, side: 'w'},
-  "lee, ma": {lat: 42.3042, lng: -73.2481, side: 'e'},
-  "belleayre, ny": {lat: 42.1422, lng: -74.5108, side: 'w'},
-  "montgomery, ny": {lat: 41.5276, lng: -74.2368, side: 'w'},
-  "wassaic, ny": {lat: 41.8040, lng: -73.5587, side: 'e'},
-  "east durham, ny": {lat: 42.3725, lng: -74.0956, side: 'w'},
-  "prattsville, ny": {lat: 42.3150, lng: -74.4167, side: 'w'},
-  "palenville, ny": {lat: 42.1697, lng: -74.0192, side: 'w'},
-  "glens falls, ny": {lat: 43.3122, lng: -73.6483, side: 'w'},
-  "new windsor, ny": {lat: 41.4768, lng: -74.0237, side: 'w'},
-  "bard college, ny": {lat: 42.0210, lng: -73.9070, side: 'e'},
-};
-
-// The drive-time table lives in index.html. Read it from there rather than keeping a second
-// copy, so editing a drive time on the main site updates this page too. If it can't be read,
-// the distance filter simply stays hidden.
-async function loadDriveTimes() {
-  const out = { drive: null, towns: null };
-  try {
-    const resp = await fetch('/index.html');
-    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    const text = await resp.text();
-    const grab = name => {
-      try {
-        const m = text.match(new RegExp('const ' + name + ' = (\\{[\\s\\S]*?\\n\\});'));
-        const obj = m ? new Function('return ' + m[1])() : null;
-        return (obj && typeof obj === 'object') ? obj : null;
-      } catch (e) { return null; }
-    };
-    out.drive = grab('DRIVE_TIMES');
-    out.towns = grab('TOWN_COORDS');   // town -> lat/lng, used only by the Map view
-  } catch (e) { console.warn('Drive times / towns unavailable:', e); }
-  return out;
-}
-function knownDrive(venue) {
-  if (DRIVE && DRIVE[venue] !== undefined) return DRIVE[venue];
-  const c = CUSTOM_DRIVE[venue];
-  return (c && c.drive) ? c.drive : undefined;
-}
-// ── My Radius: distances from the visitor's own zip code ──────────────────────
-// Same estimate the main site uses (straight-line miles -> minutes, plus a flat penalty for crossing
-// the Hudson). Stored separately from the main site's setting so trying it here doesn't switch it on there.
-let CUSTOM = null;
-try { const c = JSON.parse(localStorage.getItem('kr_blog_location') || 'null'); if (c && typeof c.lat === 'number' && typeof c.lng === 'number') CUSTOM = c; } catch {}
-const RIVER_PENALTY_MIN = 20;
-function haversineMiles(lat1, lng1, lat2, lng2) {
-  const R = 3958.8, rad = d => d * Math.PI / 180;
-  const dLat = rad(lat2 - lat1), dLng = rad(lng2 - lng1);
-  const a = Math.sin(dLat/2)**2 + Math.cos(rad(lat1)) * Math.cos(rad(lat2)) * Math.sin(dLng/2)**2;
-  return R * 2 * Math.asin(Math.sqrt(a));
-}
-function minutesFromMiles(miles) {
-  const mph = miles <= 15 ? 30 : miles <= 40 ? 28 : 45;
-  return Math.round((miles / mph) * 60);
-}
-function nearestTownKey(lat, lng) {
-  let best = null, bd = Infinity;
-  for (const [k, t] of Object.entries(TOWNS || {})) { const d = haversineMiles(lat, lng, t.lat, t.lng); if (d < bd) { bd = d; best = k; } }
-  return best;
-}
-// Minutes from the visitor's zip to this show's town, or null if that town isn't on the list yet
-function customMinutes(e) {
-  if (!CUSTOM || !TOWNS) return null;
-  const c = TOWNS[townKeyOf(e.location)];
-  if (!c) return null;
-  let m = minutesFromMiles(haversineMiles(CUSTOM.lat, CUSTOM.lng, c.lat, c.lng));
-  if (CUSTOM.side && c.side && CUSTOM.side !== c.side) m += RIVER_PENALTY_MIN;
-  return m;
-}
-function passesDistance(e, f) {
-  if (f === 'all') return true;
-  if (CUSTOM && TOWNS) {
-    if (f === '0') return !!CUSTOM.townKey && townKeyOf(e.location) === CUSTOM.townKey;
-    const m = customMinutes(e);
-    return m !== null && m <= parseInt(f);      // towns we can't place are left out of the distance filters (still under Any distance)
-  }
-  if (!DRIVE) return true;
-  const inKingston = (e.location || '').toLowerCase().includes('kingston');
-  const d = knownDrive(e.venue) ?? 45;   // same 45-min default the main site uses for unlisted venues
-  if (f === '0') return d === 0 || inKingston;
-  return d === 0 || inKingston || d <= parseInt(f);
-}
-
-async function load() {
-  let data = null;
-  const drivePromise = loadDriveTimes();
-  try {
-    const resp = await fetch('/.netlify/functions/events-load');
-    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    data = await resp.json();
-  } catch (e) {
-    console.warn('Load failed:', e);
-    document.getElementById('pb-feed').innerHTML = '<div class="pb-empty">Couldn’t load the shows just now — please try again in a minute.</div>';
-    return;
-  }
-  const site = await drivePromise;
-  DRIVE = site.drive; TOWNS = site.towns || TOWNS_FALLBACK;
-  CUSTOM_DRIVE = (data.customVenues && typeof data.customVenues === 'object') ? data.customVenues : {};
-  const manual  = Array.isArray(data.manualEvents)  ? data.manualEvents  : [];
-  const scraped = Array.isArray(data.scrapedEvents) ? data.scrapedEvents : [];
-  const email   = Array.isArray(data.emailEvents)   ? data.emailEvents   : [];
-  const status  = (data.reviewStatus && typeof data.reviewStatus === 'object') ? data.reviewStatus : {};
-  const hiddenTitles = Array.isArray(data.hiddenTitles) ? data.hiddenTitles : [];
-  const hiddenVenues = new Set(lsGet('kr_hidden_venues', []));
-
-  // Same merge order as the main page: manual first, then scraped, then email, deduped by venue+date+time
-  const seen = new Map();
-  for (const e of manual)  seen.set(eventKey(e), { ...e, _source: 'manual' });
-  for (const e of scraped) { const k = eventKey(e); if (!seen.has(k)) seen.set(k, { ...e, _source: 'scraped' }); }
-  for (const e of email)   { const k = eventKey(e); if (!seen.has(k)) seen.set(k, { ...e, _source: 'email' }); }
-
-  const today = new Date(); today.setHours(0,0,0,0);
-  POSTS = [...seen.values()].filter(e => {
-    const s = status[eventKey(e)];
-    if (isRejected(s)) return false;
-    if (!(e._manual || isApproved(s))) return false;
-    const t = (e.title || '').toLowerCase();
-    return e.posterUrl && parseDate(e.date) >= today && !hiddenVenues.has(e.venue) &&
-           !hiddenTitles.some(kw => t.includes(String(kw).toLowerCase()));
-  }).sort((a,b) => (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
-
-  LOADED = true;
-  const eh = new URLSearchParams(location.search).get('e');   // read before render() rewrites the address
-  readUrl();
-  _pbShown = step();
-  setupControls();
-  render();
-  // A link like /blog?e=abc123 jumps straight to that show in the Feed
-  if (eh) { const hit = POSTS.find(x => shortHash(eventKey(x)) === eh); if (hit) jumpToShow(eventKey(hit)); }
-}
-
-// ── Filtering ─────────────────────────────────────────────────────────────────
-const ymd = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-function quickRange(kind) {
-  const t = new Date(); t.setHours(0,0,0,0);
-  const add = n => { const d = new Date(t); d.setDate(d.getDate() + n); return d; };
-  if (kind === 'today') return [ymd(t), ymd(t)];
-  if (kind === 'week')  return [ymd(t), ymd(add(6))];
-  if (kind === 'month') return [ymd(t), ymd(add(29))];
-  if (kind === 'weekend') {                 // Fri–Sun (or what's left of it)
-    const dow = t.getDay();                 // 0 Sun … 6 Sat
-    if (dow === 0) return [ymd(t), ymd(t)];
-    if (dow === 6) return [ymd(t), ymd(add(1))];
-    const toFri = (5 - dow + 7) % 7;
-    return [ymd(add(toFri)), ymd(add(toFri + 2))];
-  }
-}
-function filtered() {
-  const q = S.q.trim().toLowerCase();
-  let ev = POSTS.filter(e => passesDistance(e, S.dist));
-  if (S.venue) ev = ev.filter(e => e.venue === S.venue);
-  if (S.from)  ev = ev.filter(e => e.date >= S.from);
-  if (S.to)    ev = ev.filter(e => e.date <= S.to);
-  if (S.saved) ev = ev.filter(e => FAVS.has(eventKey(e)));
-  if (q) ev = ev.filter(e => (e.title||'').toLowerCase().includes(q) || (e.venue||'').toLowerCase().includes(q) || (e.location||'').toLowerCase().includes(q));
-  ev = ev.slice();
-  if (S.sort === 'venue') ev.sort((a,b) => (a.venue||'').localeCompare(b.venue||'') || (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
-  return ev;   // POSTS is already date/time sorted
-}
-const filtersActive = () => !!(S.q || S.from || S.to || S.venue || S.saved || S.dist !== 'all');
-
-// ── URL <-> state (so a filtered view can be shared as a link) ───────────────
-function writeUrl() {
-  const p = new URLSearchParams();
-  if (S.q) p.set('q', S.q);
-  if (S.from) p.set('from', S.from);
-  if (S.to) p.set('to', S.to);
-  if (S.venue) p.set('venue', S.venue);
-  if (S.dist !== 'all' && !CUSTOM) p.set('dist', S.dist);
-  if (S.sort !== 'date') p.set('sort', S.sort);
-  if (S.view !== 'feed') p.set('view', S.view);
-  const qs = p.toString();
-  try { history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '')); } catch {}
-}
-function readUrl() {
-  const p = new URLSearchParams(location.search);
-  S.q = p.get('q') || ''; S.from = p.get('from') || ''; S.to = p.get('to') || '';
-  S.venue = p.get('venue') || ''; S.dist = p.get('dist') || 'all';
-  S.sort = p.get('sort') === 'venue' ? 'venue' : 'date'; S.view = ['wall','map'].includes(p.get('view')) ? p.get('view') : 'feed';
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(S.from)) S.from = '';
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(S.to)) S.to = '';
-}
-
-// ── Controls ──────────────────────────────────────────────────────────────────
-function fill(sel, html, value) { sel.innerHTML = html; sel.value = value; if (sel.value !== value) sel.value = ''; }
-function setupControls() {
-  const venues = [...new Set(POSTS.map(e => e.venue))].sort();
-  const vSel = document.getElementById('pb-venue');
-  fill(vSel, '<option value="">All venues</option>' + venues.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join(''), S.venue);
-  S.venue = vSel.value;
-  const dSel = document.getElementById('pb-distance');
-  const useZip = !!(CUSTOM && TOWNS);
-  if (DRIVE || useZip) {
-    dSel.style.display = '';
-    fill(dSel, '<option value="all">Any distance</option>' +
-      `<option value="0">${useZip ? 'Same town as ' + esc(CUSTOM.zip) : 'Kingston only'}</option>` +
-      ['30','45','60','90'].map(n => `<option value="${n}">${n} mins or less</option>`).join(''), S.dist);
-    S.dist = dSel.value || 'all';
-  } else { dSel.style.display = 'none'; S.dist = 'all'; }
-  updateLocBtn();
-  document.getElementById('pb-search').value = S.q;
-  const today = ymd(new Date());
-  for (const id of ['pb-from','pb-to']) document.getElementById(id).min = today;
-  document.getElementById('pb-from').value = S.from;
-  document.getElementById('pb-to').value = S.to;
-}
-function updateLocBtn() {
-  const b = document.getElementById('pb-locbtn');
-  b.style.display = '';
-  const on = !!CUSTOM;
-  b.classList.toggle('on', on);
-  b.textContent = on ? '📍 ' + CUSTOM.zip : '📍';
-  b.title = on ? `Distances are estimated from ${CUSTOM.zip} — tap to change` : 'Show distances from your own zip code';
-}
-function syncControls() {
-  document.getElementById('pb-wrap').classList.toggle('wall', S.view !== 'feed');
-  document.querySelectorAll('[data-sort]').forEach(b => b.classList.toggle('active', b.dataset.sort === S.sort));
-  document.querySelectorAll('[data-view-mode]').forEach(b => b.classList.toggle('active', b.dataset.viewMode === S.view));
-  document.querySelectorAll('[data-quick]').forEach(b => {
-    const [f, t] = quickRange(b.dataset.quick);
-    b.classList.toggle('active', S.from === f && S.to === t);
-  });
-  const sv = document.getElementById('pb-saved'); sv.classList.toggle('active', S.saved); sv.setAttribute('aria-pressed', S.saved); updateSavedChip();
-  document.getElementById('pb-clear').style.display = filtersActive() ? '' : 'none';
-}
-
-// ── Render ────────────────────────────────────────────────────────────────────
-function render() {
-  if (!LOADED) return;
-  syncControls(); writeUrl();
-  const feed = document.getElementById('pb-feed');
-  const events = filtered();
-  document.getElementById('pb-count').textContent = events.length ? `${events.length} show${events.length === 1 ? '' : 's'}` : '';
-  document.getElementById('pb-slideshow').style.display = events.length ? '' : 'none';
-  const mapWrap = document.getElementById('pb-map-wrap');
-  if (!events.length) {
-    mapWrap.style.display = 'none'; feed.style.display = '';
-    feed.innerHTML = !POSTS.length ? '<div class="pb-empty">No shows up yet — check back soon.</div>'
-      : (S.saved && !FAVS.size) ? '<div class="pb-empty">You haven’t saved any shows yet — tap the ♥ on a show to keep it here.</div>'
-      : '<div class="pb-empty">No shows match those filters.</div>';
-    return;
-  }
-  if (S.view === 'map') { feed.style.display = 'none'; mapWrap.style.display = ''; renderMap(events); return; }
-  mapWrap.style.display = 'none'; feed.style.display = '';
-  const shown = events.slice(0, _pbShown);
-  let html = '';
-  if (S.view === 'wall') {
-    const cols = wallCols();
-    const groups = [];
-    for (const e of shown) {
-      const head = S.sort === 'venue' ? e.venue : e.date;
-      if (!groups.length || groups[groups.length - 1].head !== head) groups.push({ head, list: [] });
-      groups[groups.length - 1].list.push(e);
-    }
-    for (const g of groups) {
-      const title = S.sort === 'venue' ? g.head : parseDate(g.head).toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'});
-      html += `<h2 class="pb-day">${esc(title)}<span class="pb-daycount">${g.list.length} show${g.list.length === 1 ? '' : 's'}</span></h2>`;
-      const columns = Array.from({ length: cols }, () => '');
-      g.list.forEach((e, i) => { columns[i % cols] += tile(e); });
-      html += `<div class="pb-wall${g.list.length < 2 ? ' pb-single' : ''}">${columns.map(c => `<div class="pb-wallcol">${c}</div>`).join('')}</div>`;
-    }
-  } else {
-    let last = '';
-    for (const e of shown) {
-      const head = S.sort === 'venue' ? e.venue : e.date;
-      if (head !== last) {
-        last = head;
-        html += `<h2 class="pb-day">${esc(S.sort === 'venue' ? e.venue : parseDate(e.date).toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'}))}</h2>`;
-      }
-      html += post(e);
-    }
-  }
-  if (events.length > shown.length) html += `<button class="pb-loadmore" id="pb-loadmore">Show more (${events.length - shown.length} more shows)</button>`;
-  feed.innerHTML = html;
-}
-
-const wallCols = () => (window.innerWidth >= 720 ? 3 : 2);
-const shortDate = e => parseDate(e.date).toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
-function tile(e) {
-  const time = formatTime(e.time);
-  return `<div class="pb-tile">
-    <button type="button" class="pb-poster" data-view="${esc(e.posterUrl)}" data-key="${esc(eventKey(e))}" aria-label="View poster for ${esc(e.title)}">
-      <img src="${esc(e.posterUrl)}" alt="Poster for ${esc(e.title)}" loading="lazy" decoding="async"
-           onload="this.parentNode.style.setProperty('--ar', this.naturalWidth / this.naturalHeight)"
-           onerror="this.closest('.pb-tile').classList.add('pb-broken')">
-    </button>
-    <div class="pb-tile-date">${esc(S.sort === 'venue' ? [shortDate(e), time].filter(Boolean).join(' · ') : (time || shortDate(e)))}</div>
-    <div class="pb-tile-title">${esc(e.title)}</div>
-    <div class="pb-tile-venue">${esc(e.venue)}</div>
-    ${heartBtn(eventKey(e), 'pb-tile-heart')}
-  </div>`;
-}
-
-function post(e) {
-  const key = eventKey(e);
-  const price = (e.price && e.price !== 'See website') ? e.price : '';
-  const eyebrow = [S.sort === 'venue' ? shortDate(e) : '', formatTime(e.time), price].filter(Boolean).join(' · ');
-  const dm = DRIVE ? knownDrive(e.venue) : undefined;
-  const cm = customMinutes(e);
-  const inKingston = /\bkingston\b/i.test(e.location || '');   // any Kingston show reads "In Kingston" (the minutes are just the distance from Tubby's)
-  const driveLine = CUSTOM && TOWNS
-    ? (townKeyOf(e.location) === CUSTOM.townKey ? 'In your town' : (cm === null ? '' : `About ${cm} min from ${CUSTOM.zip}`))
-    : (inKingston || dm === 0 ? 'In Kingston' : (dm === undefined ? '' : `${dm} min from Kingston`));
-  const town = e.location ? (e.mapsUrl ? `<a href="${esc(e.mapsUrl)}" target="_blank" rel="noopener">${esc(e.location)}</a>` : esc(e.location)) : '';
-  return `<article class="pb-post" data-post="${esc(key)}">
-    <button type="button" class="pb-poster" data-view="${esc(e.posterUrl)}" data-key="${esc(key)}" aria-label="View poster for ${esc(e.title)}">
-      <img src="${esc(e.posterUrl)}" alt="Poster for ${esc(e.title)}" loading="lazy" decoding="async"
-           onload="this.parentNode.style.setProperty('--ar', this.naturalWidth / this.naturalHeight)"
-           onerror="this.closest('.pb-post').classList.add('pb-broken')">
-    </button>
-    ${eyebrow ? `<div class="pb-eyebrow">${esc(eyebrow)}</div>` : ''}
-    <div class="pb-title">${esc(e.title)}</div>
-    <div class="pb-where">at <a href="/?venue=${encodeURIComponent(e.venue)}">${esc(e.venue)}</a>${town ? ` — ${town}` : ''}</div>
-    ${driveLine ? `<div class="pb-drive">${driveLine}</div>` : ''}
-    <div class="pb-actions">
-      ${e.venueUrl ? `<a class="pb-more" href="${esc(e.venueUrl)}" target="_blank" rel="noopener">More info →</a>` : ''}
-      ${heartBtn(key)}
-      <button class="icon-btn" data-share="${esc(key)}" title="Share this show" aria-label="Share this show"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="1.8" fill="currentColor" stroke="none"/><path d="M8.5 8.5a5 5 0 0 1 7 0"/><path d="M6 6a8.5 8.5 0 0 1 12 0"/><path d="M15.5 15.5a5 5 0 0 1-7 0"/><path d="M18 18a8.5 8.5 0 0 1-12 0"/></svg></button>
-      <button class="icon-btn" data-copy="${esc(key)}" title="Copy show details" aria-label="Copy show details"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="13" height="13" rx="3"/><rect x="8" y="8" width="13" height="13" rx="3" fill="var(--bg)"/></svg></button>
-    </div>
-  </article>`;
-}
-
-// ── Interactions ──────────────────────────────────────────────────────────────
-function showToast(msg) {
-  let t = document.getElementById('kr-toast');
-  if (!t) { t = document.createElement('div'); t.id = 'kr-toast'; t.className = 'kr-toast'; document.body.appendChild(t); }
-  t.textContent = msg; t.classList.add('show');
-  clearTimeout(showToast._t); showToast._t = setTimeout(() => t.classList.remove('show'), 1800);
-}
-function blurb(e) {
-  const dateStr = parseDate(e.date).toLocaleDateString('default', {month:'short', day:'numeric'});
-  const timeStr = formatTime(e.time);
-  return `${e.title}\n${e.venue}\n${dateStr}${timeStr ? ', ' + timeStr : ''}`;
-}
-async function shareEvent(e) {
-  // Links to the show on the main listings page, same as the share button there
-  const shareUrl = `${location.origin}/?e=${shortHash(eventKey(e))}`;
-  if (navigator.share) {
-    try { await navigator.share({ title: e.title, text: blurb(e), url: shareUrl }); return; }
-    catch (err) { if (err && err.name === 'AbortError') return; }
-  }
-  try { await navigator.clipboard.writeText(shareUrl); showToast('Link copied!'); } catch { showToast('Could not copy link'); }
-}
-// ── Poster viewer: browse, favorite, and (optionally) auto-play a slideshow ───
-const V = { list: [], i: 0, playing: false, ms: 6000, timer: null };
-const SPEEDS = [4000, 6000, 10000];
-const vEl = id => document.getElementById(id);
-function openViewer(list, i, play) {
-  if (!list.length) return;
-  V.list = list; V.i = Math.max(0, Math.min(i, list.length - 1));
-  vEl('kr-poster-overlay').classList.add('show');
-  document.body.style.overflow = 'hidden';
-  vEl('v-fav').innerHTML = HEART;
-  vEl('v-full').style.display = (vEl('kr-poster-overlay').requestFullscreen || vEl('kr-poster-overlay').webkitRequestFullscreen) ? '' : 'none';
-  vEl('v-speed').textContent = (V.ms / 1000) + 's';
-  const multi = list.length > 1;
-  for (const id of ['v-prev', 'v-next', 'v-play', 'v-speed']) vEl(id).style.display = multi ? '' : 'none';
-  showSlide();
-  setPlaying(!!play && multi);
-}
-function showSlide() {
-  const e = V.list[V.i]; if (!e) return;
-  const t = formatTime(e.time);
-  vEl('kr-poster-img').src = e.posterUrl;
-  vEl('kr-poster-img').alt = 'Poster for ' + e.title;
-  vEl('kr-poster-cap').innerHTML = `<b>${esc(e.title)}</b>${esc(e.venue)} · ${esc(shortDate(e))}${t ? ' · ' + esc(t) : ''}`;
-  vEl('v-fav').dataset.fav = eventKey(e);
-  vEl('v-fav').setAttribute('aria-pressed', FAVS.has(eventKey(e)));
-  vEl('v-count').textContent = V.list.length > 1 ? `${V.i + 1} / ${V.list.length}` : '';
-  if (V.list.length > 1) { const n = V.list[(V.i + 1) % V.list.length]; if (n) new Image().src = n.posterUrl; }  // preload next
-}
-function viewerGo(d) {
-  if (V.list.length < 2) return;
-  V.i = (V.i + d + V.list.length) % V.list.length;
-  showSlide();
-  if (V.playing) schedule();
-}
-function schedule() {
-  clearTimeout(V.timer);
-  const bar = vEl('v-progress');
-  bar.style.transition = 'none'; bar.style.width = '0'; void bar.offsetWidth;
-  bar.style.transition = `width ${V.ms}ms linear`; bar.style.width = '100%';
-  V.timer = setTimeout(() => viewerGo(1), V.ms);
-}
-function setPlaying(p) {
-  V.playing = p; clearTimeout(V.timer);
-  vEl('v-play').textContent = p ? '❚❚' : '▶';
-  vEl('v-play').setAttribute('aria-label', p ? 'Pause slideshow' : 'Play slideshow');
-  const bar = vEl('v-progress'); bar.style.transition = 'none'; bar.style.width = '0';
-  if (p) schedule();
-}
-function closeViewer() {
-  setPlaying(false);
-  try { if (document.fullscreenElement) document.exitFullscreen(); else if (document.webkitFullscreenElement) document.webkitExitFullscreen(); } catch {}
-  vEl('kr-poster-overlay').classList.remove('show');
-  vEl('kr-poster-img').src = '';
-  document.body.style.overflow = '';
-  if (S.saved) render();   // if "Saved" is on, reflect anything un-saved while browsing
-}
-vEl('kr-poster-close').addEventListener('click', closeViewer);
-vEl('kr-poster-overlay').addEventListener('click', ev => { if (ev.target === ev.currentTarget) closeViewer(); });
-vEl('v-prev').addEventListener('click', () => viewerGo(-1));
-vEl('v-next').addEventListener('click', () => viewerGo(1));
-vEl('v-play').addEventListener('click', () => setPlaying(!V.playing));
-vEl('v-speed').addEventListener('click', () => {
-  V.ms = SPEEDS[(SPEEDS.indexOf(V.ms) + 1) % SPEEDS.length];
-  vEl('v-speed').textContent = (V.ms / 1000) + 's';
-  if (V.playing) schedule();
-});
-vEl('v-full').addEventListener('click', () => {
-  const o = vEl('kr-poster-overlay');
-  try {
-    if (document.fullscreenElement || document.webkitFullscreenElement) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
-    else (o.requestFullscreen || o.webkitRequestFullscreen).call(o);
-  } catch {}
-});
-vEl('v-fav').addEventListener('click', () => { const k = vEl('v-fav').dataset.fav; if (k) toggleFav(k); });
-document.addEventListener('keydown', ev => {
-  if (!vEl('kr-poster-overlay').classList.contains('show')) return;
-  if (ev.key === 'Escape') closeViewer();
-  else if (ev.key === 'ArrowLeft') viewerGo(-1);
-  else if (ev.key === 'ArrowRight') viewerGo(1);
-  else if (ev.key === ' ') { ev.preventDefault(); if (V.list.length > 1) setPlaying(!V.playing); }
-});
-let _tx = null;
-vEl('kr-poster-overlay').addEventListener('touchstart', ev => { _tx = ev.touches.length === 1 ? ev.touches[0].clientX : null; }, { passive: true });
-vEl('kr-poster-overlay').addEventListener('touchend', ev => {
-  if (_tx === null) return;
-  const dx = ev.changedTouches[0].clientX - _tx; _tx = null;
-  if (Math.abs(dx) > 50) viewerGo(dx < 0 ? 1 : -1);
-}, { passive: true });
-// Open the viewer on a specific show, browsing through the currently filtered list
-function showPoster(url, key) {
-  const list = filtered();
-  const i = list.findIndex(x => eventKey(x) === key);
-  if (i >= 0) openViewer(list, i, false);
-  else { const e = POSTS.find(x => eventKey(x) === key); if (e) openViewer([e], 0, false); }
-}
-
-// Show one listing in the Feed: clears filters so it's visible, scrolls to it, and pulses the poster
-function jumpToShow(key) {
-  Object.assign(S, { q: '', from: '', to: '', venue: '', dist: 'all', sort: 'date', view: 'feed' });
-  setupControls();
-  const idx = filtered().findIndex(e => eventKey(e) === key);
-  if (idx < 0) return false;
-  _pbShown = Math.max(step(), idx + 1);
-  render();
-  const el = [...document.querySelectorAll('.pb-post')].find(x => x.dataset.post === key);
-  if (el) {
-    el.scrollIntoView({ block: 'start' });
-    window.scrollBy(0, -70);                        // clear the sticky header
-    el.classList.add('pb-pulse'); setTimeout(() => el.classList.remove('pb-pulse'), 2600);
-  }
-  return true;
-}
-
-// ── Map view (Leaflet + OpenStreetMap, loaded only when the Map view is first used) ──
-let MAP = null, MAP_LAYER = null, LEAFLET_P = null, MAP_GROUPS = new Map(), MAP_MARKERS = new Map(), SEL_TOWN = null;
-const KINGSTON_VIEW = [41.927, -73.997];
-// Optional exact spots. A venue listed here gets its own pin on the map; every other venue is pinned
-// at its town. Add one line per venue, copied from Google Maps (right-click a place -> the first line
-// is "latitude, longitude"), e.g.   "Tubby's": [41.9300, -73.9950],
-const VENUE_COORDS = {
-  "Assembly Kingston": [41.93178, -74.01862],
-  "Tubby's": [41.92956, -74.00358],
-  "Tempo Arts": [41.91841, -73.98639],
-  "UPAC": [41.92952, -74.00437],
-  "Unicorn Bar": [41.93389, -73.99686],
-  "Keegan Ales": [41.93165, -74.01183],
-  "Night Swim": [41.93207, -74.01001],
-  "Old Dutch Church": [41.93296, -74.01842],
-  "West Kill Supply (Kingston)": [41.92997, -74.00425],
-  "Hudson River Cruises": [41.91864, -73.98161],
-  "O+ Exchange": [41.93528, -74.01978],
-  "Eng's Chinese": [41.93208, -74.00975],
-  "Frog Alley Park": [41.93559, -74.02238],
-  "Green Kill": [41.92502, -74.01219],
-  "Heart of Midtown Festival": [41.93029, -74.00384],
-  "Heart Of Midtown Stage": [41.93029, -74.00384],
-  "Hopenanny House Concert": [41.9325, -74.01147],
-  "HRMM Solaris Cruise": [41.91905, -73.9809],
-  "Hudson River Maritime Museum": [41.91905, -73.9809],
-  "Kingston Point Beach": [41.93032, -73.96456],
-  "KPM": [41.93095, -74.00732],
-  "Louw-Bogardus Ruins at Frog Alley Park": [41.93559, -74.02238],
-  "Lye Parklet": [41.92732, -74.01531],
-  "Mirador": [41.93036, -74.00594],
-  "Mustangs Bouldering": [41.93796, -74.01977],
-  "O+ Festival": [41.93528, -74.01978],
-  "Rewind Kingston": [41.92983, -74.00468],
-  "Rosekill Art Farm": [41.885, -74.08108],
-  "Rough Draft Books": [41.93367, -74.02121],
-  "Snapper McGee's": [41.93542, -74.02128],
-  "The Lace Mill": [41.93479, -73.99842],
-  "Tilda's Kitchen": [41.93022, -74.00583],
-  "Town of Ulster Library": [41.95478, -73.99385],
-  "Trinity Lutheran Church": [41.91902, -73.98857],
-};
-function townKeyOf(location) {
-  const key = (location || '').trim().toLowerCase();
-  return key.replace(/^(.+?)(?<!,)\s+(ny|ma|ct|nj|pa|vt)$/, '$1, $2');
-}
-function loadLeaflet() {
-  if (window.L && window.L.map) return Promise.resolve();
-  if (LEAFLET_P) return LEAFLET_P;
-  LEAFLET_P = new Promise((resolve, reject) => {
-    const css = document.createElement('link');
-    css.rel = 'stylesheet'; css.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css';
-    document.head.appendChild(css);
-    const js = document.createElement('script');
-    js.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js';
-    js.onload = () => (window.L && window.L.map) ? resolve() : reject(new Error('Leaflet missing'));
-    js.onerror = () => reject(new Error('Leaflet failed to load'));
-    document.head.appendChild(js);
-  }).catch(err => { LEAFLET_P = null; throw err; });
-  return LEAFLET_P;
-}
-async function renderMap(events) {
-  const note = vEl('pb-map-note'), mapEl = vEl('pb-map'), towns = vEl('pb-map-towns');
-  MAP_GROUPS = new Map(); let unmapped = 0;
-  for (const e of events) {
-    const vc = VENUE_COORDS[e.venue] || ((typeof e.lat === 'number' && typeof e.lng === 'number') ? [e.lat, e.lng] : null);
-    let k, c, name;
-    if (vc) { k = 'v|' + e.venue; c = { lat: vc[0], lng: vc[1] }; name = e.venue; }
-    else { k = townKeyOf(e.location); c = TOWNS && TOWNS[k]; name = e.location; }
-    if (!c) { unmapped++; continue; }
-    if (!MAP_GROUPS.has(k)) MAP_GROUPS.set(k, { key: k, name, c, list: [] });
-    MAP_GROUPS.get(k).list.push(e);
-  }
-  const mapped = events.length - unmapped;
-  note.textContent = !TOWNS ? 'The map isn’t available right now.' :
-    `${mapped} show${mapped === 1 ? '' : 's'} at ${MAP_GROUPS.size} pin${MAP_GROUPS.size === 1 ? '' : 's'}` +
-    (unmapped ? ` · ${unmapped} more ${unmapped === 1 ? 'is' : 'are'} in towns that aren’t on the map yet (see Feed or Wall)` : '') +
-    ' — tap a pin to see its shows.';
-  if (!MAP_GROUPS.size) { mapEl.style.display = 'none'; towns.innerHTML = ''; vEl('pb-map-panel').innerHTML = ''; return; }
-
-  try { await loadLeaflet(); }
-  catch (err) {
-    // Couldn't load the map library — fall back to a plain list of towns
-    mapEl.style.display = 'none';
-    towns.innerHTML = [...MAP_GROUPS.values()].sort((a, b) => a.name.localeCompare(b.name))
-      .map(g => `<button class="pb-chip" data-town="${esc(g.key)}">${esc(g.name)} (${g.list.length})</button>`).join('');
-    if (SEL_TOWN && MAP_GROUPS.has(SEL_TOWN)) showTown(SEL_TOWN); else vEl('pb-map-panel').innerHTML = '';
-    return;
-  }
-  towns.innerHTML = ''; mapEl.style.display = '';
-  if (!MAP) {
-    MAP = L.map('pb-map', { scrollWheelZoom: false });
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(MAP);
-    MAP_LAYER = L.layerGroup().addTo(MAP);
-    MAP.setView(KINGSTON_VIEW, 9);
-  }
-  MAP_LAYER.clearLayers(); MAP_MARKERS = new Map();
-  const pts = [];
-  for (const g of MAP_GROUPS.values()) {
-    const pt = [g.c.lat, g.c.lng]; pts.push(pt);
-    const n = g.list.length;
-    const icon = L.divIcon({ className: 'pb-pin', html: `<span>${n > 99 ? '99+' : n}</span>`, iconSize: [32, 32], iconAnchor: [16, 16] });
-    const m = L.marker(pt, { icon, title: `${g.name} — ${n} show${n === 1 ? '' : 's'}`, riseOnHover: true });
-    m.on('click', () => showTown(g.key));
-    m.addTo(MAP_LAYER); MAP_MARKERS.set(g.key, m);
-  }
-  if (CUSTOM) {
-    const me = [CUSTOM.lat, CUSTOM.lng]; pts.push(me);
-    L.marker(me, { icon: L.divIcon({ className: 'pb-pin pb-me', html: '<span>You</span>', iconSize: [32, 32], iconAnchor: [16, 16] }), title: 'Your zip code ' + CUSTOM.zip, zIndexOffset: 500 }).addTo(MAP_LAYER);
-  }
-  setTimeout(() => {
-    MAP.invalidateSize();
-    if (pts.length === 1) MAP.setView(pts[0], 11);
-    else MAP.fitBounds(L.latLngBounds(pts), { padding: [34, 34], maxZoom: 11 });
-    markSelected();
-  }, 60);
-  if (SEL_TOWN && MAP_GROUPS.has(SEL_TOWN)) showTown(SEL_TOWN); else { SEL_TOWN = null; vEl('pb-map-panel').innerHTML = ''; }
-}
-function markSelected() {
-  for (const [k, m] of MAP_MARKERS) { const el = m._icon; if (el) el.classList.toggle('sel', k === SEL_TOWN); }
-}
-function showTown(key) {
-  const g = MAP_GROUPS.get(key); if (!g) return;
-  SEL_TOWN = key; markSelected();
-  // Group the town's shows by venue so each place is its own section
-  g.list.sort((a, b) => (a.venue||'').localeCompare(b.venue||'') || (a.date||'').localeCompare(b.date||'') || (a.time||'').localeCompare(b.time||''));
-  let html = `<h2 class="pb-day" style="margin-top:22px;">${esc(g.name)} — ${g.list.length} show${g.list.length === 1 ? '' : 's'}</h2>`;
-  let lastVenue = null;
-  g.list.forEach((e, i) => {
-    if (e.venue !== lastVenue) {
-      lastVenue = e.venue;
-      const maps = g.list.find(x => x.venue === e.venue && x.mapsUrl && /^https?:/i.test(x.mapsUrl));
-      html += `<div class="pb-venuehead"><a href="/?venue=${encodeURIComponent(e.venue)}">${esc(e.venue)}</a>` +
-              (maps ? `<a class="pb-vmaps" href="${esc(maps.mapsUrl)}" target="_blank" rel="noopener">Open in Maps ↗</a>` : '') + `</div>`;
-    }
-    const k = eventKey(e), t = formatTime(e.time);
-    html += `<div class="pb-maprow" data-maprow="${i}">
-      <img src="${esc(e.posterUrl)}" alt="" loading="lazy">
-      <div><div class="pb-tile-date">${esc(shortDate(e))}${t ? ' · ' + esc(t) : ''}</div>
-      <a class="pb-tile-title pb-rowlink" href="${esc(location.pathname)}?e=${shortHash(k)}" data-jump="${esc(k)}" title="See this show in the listing">${esc(e.title)}</a></div></div>`;
-  });
-  vEl('pb-map-panel').innerHTML = html;
-}
-vEl('pb-map-panel').addEventListener('click', ev => {
-  const jump = ev.target.closest('[data-jump]');
-  if (jump) { ev.preventDefault(); jumpToShow(jump.dataset.jump); return; }
-  if (ev.target.closest('a')) return;            // venue / Maps links behave normally
-  const row = ev.target.closest('[data-maprow]'); if (!row || !SEL_TOWN) return;
-  const g = MAP_GROUPS.get(SEL_TOWN); if (g) openViewer(g.list, +row.dataset.maprow, false);
-});
-vEl('pb-map-towns').addEventListener('click', ev => {
-  const b = ev.target.closest('[data-town]'); if (b) { showTown(b.dataset.town); vEl('pb-map-panel').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-});
-
-const reset = () => { _pbShown = step(); };
-let _qTimer;
-document.getElementById('pb-search').addEventListener('input', ev => { clearTimeout(_qTimer); _qTimer = setTimeout(() => { S.q = ev.target.value; reset(); render(); }, 150); });
-document.getElementById('pb-distance').addEventListener('change', ev => { S.dist = ev.target.value; reset(); render(); });
-document.getElementById('pb-venue').addEventListener('change', ev => { S.venue = ev.target.value; reset(); render(); });
-document.getElementById('pb-from').addEventListener('change', ev => {
-  S.from = ev.target.value;
-  if (S.from && S.to && S.to < S.from) { S.to = S.from; document.getElementById('pb-to').value = S.to; }
-  reset(); render();
-});
-document.getElementById('pb-to').addEventListener('change', ev => {
-  S.to = ev.target.value;
-  if (S.from && S.to && S.to < S.from) { S.from = S.to; document.getElementById('pb-from').value = S.from; }
-  reset(); render();
-});
-document.getElementById('pb-chips').addEventListener('click', ev => {
-  const b = ev.target.closest('[data-quick]'); if (!b) return;
-  const [f, t] = quickRange(b.dataset.quick);
-  const already = S.from === f && S.to === t;          // tapping an active chip turns it off
-  S.from = already ? '' : f; S.to = already ? '' : t;
-  document.getElementById('pb-from').value = S.from; document.getElementById('pb-to').value = S.to;
-  reset(); render();
-});
-document.querySelectorAll('[data-sort]').forEach(b => b.addEventListener('click', () => { S.sort = b.dataset.sort; reset(); render(); }));
-document.querySelectorAll('[data-view-mode]').forEach(b => b.addEventListener('click', () => { S.view = b.dataset.viewMode; reset(); render(); }));
-document.getElementById('pb-clear').addEventListener('click', () => {
-  Object.assign(S, { q: '', from: '', to: '', venue: '', dist: 'all', saved: false });
-  setupControls(); reset(); render();
-});
-document.getElementById('pb-slideshow').addEventListener('click', () => openViewer(filtered(), 0, true));
-document.getElementById('pb-saved').addEventListener('click', () => { S.saved = !S.saved; reset(); render(); });
-document.getElementById('pb-feed').addEventListener('click', async ev => {
-  if (ev.target.closest('#pb-loadmore')) { _pbShown += step(); render(); return; }
-  const f = ev.target.closest('[data-fav]'); if (f) { toggleFav(f.dataset.fav); return; }
-  const v = ev.target.closest('[data-view]');  if (v) { showPoster(v.dataset.view, v.dataset.key); return; }
-  const s = ev.target.closest('[data-share]'); if (s) { const e = POSTS.find(x => eventKey(x) === s.dataset.share); if (e) await shareEvent(e); return; }
-  const c = ev.target.closest('[data-copy]');  if (c) {
-    const e = POSTS.find(x => eventKey(x) === c.dataset.copy);
-    if (e) { try { await navigator.clipboard.writeText(blurb(e)); showToast('Copied!'); } catch { showToast('Could not copy'); } }
-  }
-});
-
-// ── Zip-code popup ───────────────────────────────────────────────────────────
-function openLocModal() {
-  const overlay = document.getElementById('pb-loc-overlay'), input = document.getElementById('pb-zip-input');
-  const errorEl = document.getElementById('pb-zip-error'), goBtn = document.getElementById('pb-zip-go');
-  errorEl.style.display = 'none'; input.value = CUSTOM ? CUSTOM.zip : '';
-  document.getElementById('pb-zip-reset').style.display = CUSTOM ? '' : 'none';
-  overlay.classList.add('show'); input.focus();
-  const close = () => { overlay.classList.remove('show'); document.removeEventListener('keydown', onKey); };
-  const onKey = ev => { if (ev.key === 'Escape') close(); if (ev.key === 'Enter') goBtn.click(); };
-  goBtn.onclick = async () => {
-    const zip = input.value.trim();
-    if (!/^\d{5}$/.test(zip)) { errorEl.textContent = 'Enter a valid 5-digit zip code.'; errorEl.style.display = 'block'; return; }
-    errorEl.style.display = 'none'; goBtn.textContent = 'Looking up…'; goBtn.disabled = true;
-    try {
-      const resp = await fetch(`https://api.zippopotam.us/us/${zip}`);
-      if (!resp.ok) throw new Error('not found');
-      const place = (await resp.json()).places?.[0];
-      if (!place) throw new Error('no place data');
-      const lat = parseFloat(place.latitude), lng = parseFloat(place.longitude);
-      const nk = nearestTownKey(lat, lng);
-      CUSTOM = { zip, lat, lng, side: nk ? TOWNS[nk].side : null, townKey: nk };
-      try { localStorage.setItem('kr_blog_location', JSON.stringify(CUSTOM)); } catch {}
-      S.dist = '90';                 // "Kingston only" stops making sense once centered on your own zip
-      setupControls(); reset(); render(); close();
-      showToast(`Showing distances from ${zip} ✓`);
-    } catch (e) {
-      errorEl.textContent = "Couldn't find that zip code — double-check it and try again."; errorEl.style.display = 'block';
-    }
-    goBtn.textContent = 'Go'; goBtn.disabled = false;
+// Pulls the same approved shows the real site uses, and lays them out like the Wall, 5 across.
+(async () => {
+  const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const key = e => `${e.venue}||${e.date}||${e.time || ''}`;
+  const rejected = s => s === 'rejected' || s === 'purged' || (s && typeof s === 'object' && (s.status === 'rejected' || s.status === 'purged'));
+  const approved = s => s === 'approved' || (s && typeof s === 'object' && s.status === 'approved');
+  const okUrl = u => typeof u === 'string' && /^https?:\/\//i.test(u.trim());
+  const parseDate = s => { const [y, m, d] = String(s).split('-').map(Number); return new Date(y, m - 1, d); };
+  const fmtTime = t => {
+    if (!t || t === 'See website') return '';
+    t = String(t).trim();
+    if (/^\d{1,2}:\d{2}\s*[ap]m$/i.test(t)) return t.replace(/\s*([ap]m)$/i, (_, s) => ' ' + s.toUpperCase());
+    if (/^\d{1,2}:\d{2}$/.test(t)) { const [h, m] = t.split(':').map(Number); return `${h % 12 || 12}:${String(m).padStart(2, '0')} ${h >= 12 ? 'PM' : 'AM'}`; }
+    return t;
   };
-  document.getElementById('pb-zip-cancel').onclick = close;
-  document.getElementById('pb-zip-reset').onclick = () => {
-    CUSTOM = null; try { localStorage.removeItem('kr_blog_location'); } catch {}
-    S.dist = 'all'; setupControls(); reset(); render(); close();
-    showToast('Back to distances from Kingston ✓');
+
+  // fake hit counter: climbs a little every day, never goes backwards
+  const days = Math.floor(Date.now() / 86400000);
+  document.getElementById('counter').textContent = String(4217 + (days - 20000) * 3 + Math.floor((Date.now() % 86400000) / 600000)).padStart(6, '0');
+  document.getElementById('updated').textContent = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).replace(/\d{4}$/, '1997');
+
+  const msg = document.getElementById('msg');
+  let data;
+  try { data = await (await fetch('/.netlify/functions/events-load')).json(); }
+  catch (err) { msg.innerHTML = 'Unable to load the show listings right now. Please try again later.'; return; }
+
+  const status = data.reviewStatus || {};
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  const all = [
+    ...(data.manualEvents  || []).map(e => ({ ...e, _manual: true })),
+    ...(data.scrapedEvents || []),
+    ...(data.emailEvents   || [])
+  ];
+  const seen = new Set(), list = [];
+  for (const e of all) {
+    if (!e.date || !e.title) continue;
+    const d = parseDate(e.date);
+    if (isNaN(d) || d < today) continue;
+    const k = key(e); if (seen.has(k)) continue;
+    const s = status[k];
+    if (rejected(s)) continue;
+    if (!e._manual && !approved(s)) continue;
+    seen.add(k); list.push(e);
+  }
+  list.sort((a, b) => a.date.localeCompare(b.date) || String(a.time || '').localeCompare(String(b.time || '')) || String(a.venue).localeCompare(String(b.venue)));
+
+  if (!list.length) { msg.innerHTML = 'No shows are listed right now. Please check back soon.'; return; }
+  msg.remove();
+
+  const tile = (e, i, isFirstWeek) => {
+    const time = fmtTime(e.time);
+    const price = (e.price && e.price !== 'See website') ? e.price : '';
+    const pic = e.posterUrl && okUrl(e.posterUrl)
+      ? `<a class="poster" href="${esc(e.posterUrl)}" target="_blank" rel="noopener"><img src="${esc(e.posterUrl)}" alt="${esc(e.title)}" loading="lazy" decoding="async" onerror="this.parentNode.outerHTML='<span class=&quot;nopic&quot;>image not found</span>'"></a>`
+      : `<span class="nopic">no image</span>`;
+    const title = okUrl(e.venueUrl) ? `<a class="ttl" href="${esc(e.venueUrl.trim())}" target="_blank" rel="noopener">${esc(e.title)}</a>` : `<span class="ttl">${esc(e.title)}</span>`;
+    const town = e.location ? ` - ${esc(e.location)}` : '';
+    return `<div class="tile">${pic}${title}<span class="meta">@ ${esc(e.venue)}${town}<br><span class="when">${esc(time)}</span>${price ? ` ${esc(price)}` : ''}</span></div>`;
   };
-  overlay.onclick = ev => { if (ev.target === overlay) close(); };
-  document.addEventListener('keydown', onKey);
-}
-document.getElementById('pb-locbtn').addEventListener('click', openLocModal);
-// Re-flow the wall when the window crosses the 2-column / 3-column breakpoint
-let _wallCols = wallCols();
-window.addEventListener('resize', () => { const c = wallCols(); if (c !== _wallCols) { _wallCols = c; if (S.view === 'wall') render(); } });
 
-// Dark-mode toggle (shares the main site's saved preference)
-function syncThemeIcons() {
-  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-  document.getElementById('theme-icon-sun').style.display  = dark ? 'block' : 'none';
-  document.getElementById('theme-icon-moon').style.display = dark ? 'none' : 'block';
-}
-document.getElementById('theme-toggle-btn').addEventListener('click', () => {
-  const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-  if (dark) document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', 'dark');
-  try { localStorage.setItem('kr_theme', dark ? 'light' : 'dark'); } catch {}
-  syncThemeIcons();
-});
-syncThemeIcons();
-
-load();
+  // group by day
+  const byDay = new Map();
+  for (const e of list) { if (!byDay.has(e.date)) byDay.set(e.date, []); byDay.get(e.date).push(e); }
+  let html = '', n = 0;
+  for (const [date, shows] of byDay) {
+    const label = parseDate(date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+    html += `<h2 class="day">${esc(label)} <small>(${shows.length} show${shows.length === 1 ? '' : 's'})</small></h2><div class="rainbow" style="max-width:420px;margin:0 auto 8px"></div><div class="grid">${shows.map(e => tile(e, n++)).join('')}</div>`;
+  }
+  document.getElementById('days').innerHTML = html;
+})();
 </script>
 </body>
 </html>
