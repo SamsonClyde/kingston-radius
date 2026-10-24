@@ -4,28 +4,22 @@
 [build]
   ignore = "git diff --name-only HEAD^ HEAD | grep -qvE '^(manual-events\\.json|review-status\\.json)$' && exit 1 || exit 0"
 
-# The old /blog address (and /explore) now open the poster Feed on the main Music page.
-[[redirects]]
-  from = "/blog"
-  to = "/?tab=explore"
-  status = 301
-
-[[redirects]]
-  from = "/blog/"
-  to = "/?tab=explore"
-  status = 301
-
+# /explore still opens the poster Feed on the main Music page.
 [[redirects]]
   from = "/explore"
   to = "/?tab=explore"
   status = 301
 
-# force = true so this still applies if an old blog.html is left sitting on the site
+# The joke 90s page lives at kingstonradius.com/blog (blog.html is served as-is, not redirected).
 [[redirects]]
-  from = "/blog.html"
-  to = "/?tab=explore"
-  status = 301
-  force = true
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/"
+  to = "/blog.html"
+  status = 200
 
 # Private poster archive: kingstonradius.com/graveyard (not linked anywhere, not in the sitemap)
 [[redirects]]
