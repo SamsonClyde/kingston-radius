@@ -102,6 +102,55 @@
   .cell.open { background: #fff; border-style: inset; }
   .cell.done { background: #99ff99; border-style: inset; }
 
+
+  /* cursor sparkles */
+  .spark { position: fixed; z-index: 9999; pointer-events: none; font-family: "Courier New", Courier, monospace; font-weight: bold; font-size: 16px; line-height: 1; animation: spark 0.9s ease-out forwards; text-shadow: 0 0 3px #fff; }
+  @keyframes spark { 0% { opacity: 1; transform: translate(-50%, -50%) scale(1); } 100% { opacity: 0; transform: translate(calc(-50% + var(--dx)), calc(-50% + 26px)) scale(0.4) rotate(120deg); } }
+
+  /* dial-up: posters come in a stripe at a time, top to bottom */
+  .tile .poster img.scan { animation: scan 1.6s steps(14, end) 1; }
+  @keyframes scan { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+  .tile .poster:hover img.scan { animation: spin 1.2s linear infinite; }
+  #dialstat { text-align: center; color: #fff; margin: 14px 0; font-size: 14px; }
+  #dialstat .bar { display: inline-block; width: 220px; height: 14px; border: 2px inset #808080; background: #000; vertical-align: middle; margin-left: 6px; text-align: left; }
+  #dialstat .bar i { display: block; height: 100%; width: 0; background: repeating-linear-gradient(90deg, #0000ff 0 8px, #000 8px 10px); }
+
+  /* clock + mood + award */
+  .clockbar { text-align: center; background: #000; color: #00ff00; border-bottom: 2px solid #c0c0c0; padding: 2px 0; font-size: 14px; letter-spacing: 1px; }
+  .mood { max-width: 560px; margin: 12px auto; border: 4px ridge #c0c0c0; background: #000; padding: 8px 12px; text-align: center; font-size: 14px; }
+  .mood b { color: #FFFF66; font-size: 16px; }
+  .mood select { font-family: inherit; font-size: 13px; background: #fff; color: #000; border: 2px inset #808080; margin: 0 4px; }
+  #mood-out { margin-top: 8px; color: #99FFFF; min-height: 18px; }
+  #mood-out b { color: #fff; font-size: 14px; }
+  .award { display: inline-block; margin: 10px 6px 4px; padding: 3px; border: 3px outset #fff8c0; vertical-align: middle;
+    background: linear-gradient(135deg, #fff7b0 0%, #e0b020 35%, #fff1a0 55%, #b8860b 100%); color: #3a2500; text-align: center; font-size: 11px; line-height: 1.2; box-shadow: 0 0 0 2px #7a5a00; }
+  .award .in { border: 1px solid #7a5a00; padding: 4px 10px; }
+  .award .big { font-size: 15px; font-weight: bold; letter-spacing: 1px; }
+  .award .star { color: #a00; }
+
+  /* Ray the helper */
+  #ray { position: fixed; right: 10px; bottom: 10px; z-index: 9000; display: flex; flex-direction: column; align-items: flex-end; max-width: 250px; font-family: "Courier New", Courier, monospace; }
+  #ray .bubble { background: #FFFFCC; color: #000; border: 1px solid #000; padding: 8px 10px; font-size: 12px; line-height: 1.35; box-shadow: 3px 3px 0 rgba(0,0,0,.5); margin-bottom: 10px; position: relative; }
+  #ray .bubble:after { content: ""; position: absolute; right: 26px; bottom: -9px; border: 5px solid transparent; border-top: 9px solid #000; }
+  #ray .bubble .acts { margin-top: 6px; text-align: right; }
+  #ray .bubble .acts button { font-family: inherit; font-size: 11px; background: #C0C0C0; border: 2px outset #fff; cursor: pointer; margin-left: 4px; color: #000; padding: 1px 6px; }
+  #ray svg { width: 54px; height: 54px; cursor: pointer; filter: drop-shadow(2px 2px 0 rgba(0,0,0,.5)); animation: bob 2.4s ease-in-out infinite; }
+  @keyframes bob { 50% { transform: translateY(-4px); } }
+  @media (max-width: 760px) { #ray { max-width: 190px; } #ray svg { width: 42px; height: 42px; } }
+  @media (prefers-reduced-motion: reduce) { #ray svg { animation: none; } .spark { display: none; } }
+
+
+  /* weather */
+  .wx { max-width: 560px; margin: 12px auto; border: 4px ridge #c0c0c0; background: #000; padding: 8px 12px; text-align: center; font-size: 14px; color: #99FFFF; }
+  .wx h3 { margin: 0 0 6px; font-size: 16px; color: #FFFF66; }
+  .wx .now { display: flex; gap: 14px; justify-content: center; align-items: center; flex-wrap: wrap; }
+  .wx pre { margin: 0; color: #FFFF66; font-family: inherit; font-size: 13px; line-height: 1.1; text-align: left; }
+  .wx .big { font-size: 26px; color: #fff; font-weight: bold; }
+  .wx table { margin: 8px auto 0; border-collapse: collapse; }
+  .wx td { border: 1px solid #808080; padding: 2px 8px; color: #fff; font-size: 12px; }
+  .wx td.d { color: #FFFF66; }
+  .wx .fine { margin-top: 6px; font-size: 11px; color: #808080; }
+
   .more { text-align: center; margin: 22px 0; }
   .guest { max-width: 520px; margin: 24px auto 0; border: 4px ridge #c0c0c0; background: #000; padding: 8px 14px; text-align: center; color: #fff; }
   .foot { text-align: center; margin-top: 18px; font-size: 11px; color: #c0c0c0; }
@@ -137,12 +186,35 @@
       </td>
     </tr>
   </table>
+
+  <div class="award"><div class="in"><span class="star">&#9733;</span> <span class="big">COOL SITE</span> <span class="star">&#9733;</span><br>OF THE WEEK<br>Awarded March 14, 1997</div></div>
 </center>
 
 <marquee scrollamount="5">Welcome to the Kingston Radius home page! ... Please bookmark this site and check back for new listings ... </marquee>
 
+<div class="clockbar" id="clockbar">&nbsp;</div>
+
+<div class="wx" id="wx">
+  <h3>Kingston, NY Weather Report</h3>
+  <div id="wx-body">Checking the sky... please wait.</div>
+</div>
+
+<div class="mood">
+  <b>Mood of the Day</b><br>
+  How are you feeling today?
+  <select id="mood">
+    <option>Chill</option><option>Rowdy</option><option>Romantic</option><option>Mysterious</option><option>Nostalgic</option><option>Curious</option>
+  </select>
+  <button class="btn" id="mood-go" type="button" disabled>Pick a show</button>
+  <div id="mood-out">Loading the show list...</div>
+</div>
+
 <div class="rainbow"></div>
 
+<div id="msg">Loading show listings, please wait...</div>
+<div id="days"></div>
+
+<div class="rainbow"></div>
 
 <div class="games" id="games">
   <h2>Games Corner</h2>
@@ -177,10 +249,6 @@
   </div>
 </div>
 
-<div class="rainbow"></div>
-
-<div id="msg">Loading show listings, please wait...</div>
-<div id="days"></div>
 
 <div class="rainbow"></div>
 
@@ -251,7 +319,7 @@
     const time = fmtTime(e.time);
     const price = (e.price && e.price !== 'See website') ? e.price : '';
     const pic = e.posterUrl && okUrl(e.posterUrl)
-      ? `<a class="poster" href="${esc(e.posterUrl)}" target="_blank" rel="noopener"><img src="${esc(e.posterUrl)}" alt="${esc(e.title)}" loading="lazy" decoding="async" onerror="this.parentNode.outerHTML='<span class=&quot;nopic&quot;>image not found</span>'"></a>`
+      ? `<a class="poster" href="${esc(e.posterUrl)}" target="_blank" rel="noopener"><img src="${esc(e.posterUrl)}" alt="${esc(e.title)}" loading="lazy" decoding="async" onload="this.classList.add('scan')" onerror="this.parentNode.outerHTML='<span class=&quot;nopic&quot;>image not found</span>'"></a>`
       : `<span class="nopic">no image</span>`;
     const title = okUrl(e.venueUrl) ? `<a class="ttl" href="${esc(e.venueUrl.trim())}" target="_blank" rel="noopener">${esc(e.title)}</a>` : `<span class="ttl">${esc(e.title)}</span>`;
     const town = e.location ? ` - ${esc(e.location)}` : '';
@@ -261,12 +329,44 @@
   // group by day
   const byDay = new Map();
   for (const e of list) { if (!byDay.has(e.date)) byDay.set(e.date, []); byDay.get(e.date).push(e); }
-  let html = '', n = 0;
+  const dayHtml = []; let n = 0;
   for (const [date, shows] of byDay) {
     const label = parseDate(date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
-    html += `<h2 class="day">${esc(label)} <small>(${shows.length} show${shows.length === 1 ? '' : 's'})</small></h2><div class="rainbow" style="max-width:420px;margin:0 auto 8px"></div><div class="grid">${shows.map(e => tile(e, n++)).join('')}</div>`;
+    dayHtml.push(`<h2 class="day">${esc(label)} <small>(${shows.length} show${shows.length === 1 ? '' : 's'})</small></h2><div class="rainbow" style="max-width:420px;margin:0 auto 8px"></div><div class="grid">${shows.map(e => tile(e, n++)).join('')}</div>`);
   }
-  document.getElementById('days').innerHTML = html;
+  window.KRSHOWS = list;                                   // the other scripts on the page (helper, mood picker) use this
+  document.dispatchEvent(new Event('krshows'));
+
+  const host = document.getElementById('days');
+  const calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (calm) { host.innerHTML = dayHtml.join(''); return; }
+
+  // "dial-up": the first few days arrive one show at a time, the rest in bursts, with a progress bar underneath
+  const stat = document.createElement('div'); stat.id = 'dialstat';
+  stat.innerHTML = 'Transferring data... <span id="dialpct">0%</span><span class="bar"><i id="dialbar"></i></span>';
+  host.after(stat);
+  let d = 0;
+  const progress = () => { const p = Math.round(100 * d / dayHtml.length); document.getElementById('dialpct').textContent = p + '%'; document.getElementById('dialbar').style.width = p + '%'; };
+  const addDay = (staggered) => {
+    const wrap = document.createElement('div'); wrap.innerHTML = dayHtml[d++];
+    const kids = [...wrap.childNodes];
+    kids.forEach(k => host.appendChild(k));
+    if (staggered) {
+      const grid = kids.find(k => k.classList && k.classList.contains('grid'));
+      const tiles = grid ? [...grid.querySelectorAll('.tile')] : [];
+      tiles.forEach(t => { t.style.visibility = 'hidden'; });
+      tiles.forEach((t, i) => setTimeout(() => { t.style.visibility = ''; }, 90 * (i + 1)));
+      return 90 * (tiles.length + 1);
+    }
+    return 0;
+  };
+  const pump = () => {
+    if (d >= dayHtml.length) { progress(); setTimeout(() => stat.remove(), 600); return; }
+    if (d < 2) { const wait = addDay(true); progress(); setTimeout(pump, wait + 250); return; }
+    for (let k = 0; k < 6 && d < dayHtml.length; k++) addDay(false);
+    progress(); setTimeout(pump, 260);
+  };
+  pump();
 })();
 </script>
 
@@ -371,6 +471,154 @@
     for (let i = 0; i < 16; i++) { const el = document.createElement('button'); el.type = 'button'; el.className = 'cell'; el.onclick = () => click(i); $('mem').appendChild(el); cells.push(el); }
     $('mem-reset').onclick = reset; reset();
   })();
+})();
+</script>
+
+<div id="ray">
+  <div class="bubble" id="ray-bubble" style="display:none">
+    <div id="ray-text"></div>
+    <div class="acts"><button type="button" id="ray-next">Next tip</button><button type="button" id="ray-hide">Hide</button></div>
+  </div>
+  <svg id="ray-face" viewBox="0 0 100 100" role="img" aria-label="Ray, the helper">
+    <circle cx="50" cy="50" r="48" fill="#C0392B"/>
+    <circle cx="50" cy="50" r="34" fill="none" stroke="#fff" stroke-opacity="0.45" stroke-width="5"/>
+    <line x1="50" y1="50" x2="88" y2="6" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="37" cy="44" r="8" fill="#fff"/><circle cx="63" cy="44" r="8" fill="#fff"/>
+    <circle cx="39" cy="45" r="3.5" fill="#000"/><circle cx="65" cy="45" r="3.5" fill="#000"/>
+    <path d="M36 64 Q50 76 64 64" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<script>
+// Extras: cursor sparkles, local clock, Mood of the Day, and Ray the helper.
+(function () {
+  const $ = id => document.getElementById(id);
+  const calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---- clock ----
+  const clockEl = $('clockbar');
+  const tick = () => {
+    const now = new Date();
+    const t = now.toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit', second: '2-digit' });
+    const d = now.toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric' });
+    clockEl.textContent = 'Today is ' + d + '. The time in Kingston, NY is ' + t + '.';
+  };
+  tick(); setInterval(tick, 1000);
+
+  // ---- cursor sparkles (mouse only) ----
+  if (!calm && window.matchMedia && matchMedia('(pointer: fine)').matches) {
+    const GLYPHS = ['*', '+', '.', 'x'], COLORS = ['#ff0000', '#ffff00', '#00ffff', '#ff66ff', '#66ff66', '#ffffff', '#ff9900'];
+    let last = 0;
+    document.addEventListener('mousemove', e => {
+      const now = performance.now(); if (now - last < 28) return; last = now;
+      const s = document.createElement('span'); s.className = 'spark';
+      s.textContent = GLYPHS[Math.floor(Math.random() * GLYPHS.length)];
+      s.style.left = e.clientX + 'px'; s.style.top = e.clientY + 'px';
+      s.style.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+      s.style.setProperty('--dx', (Math.random() * 24 - 12).toFixed(0) + 'px');
+      s.style.fontSize = (12 + Math.random() * 10).toFixed(0) + 'px';
+      s.addEventListener('animationend', () => s.remove());
+      document.body.appendChild(s);
+    });
+  }
+
+  // ---- helpers over the show list ----
+  const dayStr = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const pretty = e => { const [y, m, d] = e.date.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }); };
+  const when = e => { let t = e.time && e.time !== 'See website' ? String(e.time).trim() : ''; if (/^\d{1,2}:\d{2}$/.test(t)) { const [h, m] = t.split(':').map(Number); t = (h % 12 || 12) + ':' + String(m).padStart(2, '0') + ' ' + (h >= 12 ? 'PM' : 'AM'); } return t; };
+  const seed = str => { let h = 5381; for (let i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) | 0; return Math.abs(h); };
+  const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const soon = (list, days) => { const lim = new Date(); lim.setDate(lim.getDate() + days); const l = dayStr(lim); return list.filter(e => e.date <= l); };
+
+  // ---- Mood of the Day ----
+  const MOODS = {
+    Chill:      /jazz|acoustic|folk|quiet|songwriter|piano|classical|duo|unplugged|lounge/i,
+    Rowdy:      /rock|punk|metal|dance|party|ska|hardcore|funk|band|stomp|bash/i,
+    Romantic:   /love|wine|dinner|valentine|serenade|candle|ballad|jazz/i,
+    Mysterious: /ghost|spooky|haunt|moon|midnight|dark|halloween|witch|mystic|ooky|shadow/i,
+    Nostalgic:  /tribute|oldies|classic|60s|70s|80s|90s|cover|vintage|retro|legacy/i
+  };
+  function wireMood(list) {
+    const go = $('mood-go'), out = $('mood-out');
+    if (!list.length) { out.textContent = 'No shows are listed right now.'; return; }
+    const week = soon(list, 7), pool = week.length ? week : list;
+    out.textContent = 'Pick a mood and press the button.'; go.disabled = false;
+    go.onclick = () => {
+      const mood = $('mood').value, re = MOODS[mood];
+      const hits = re ? pool.filter(e => re.test(e.title)) : [];
+      const src = hits.length ? hits : pool;
+      const pick = src[seed(mood + dayStr(new Date())) % src.length];
+      out.innerHTML = 'Your mood today: <b>' + esc(mood) + '</b><br>We suggest: <b>' + esc(pick.title) + '</b><br>at ' + esc(pick.venue) + ' on ' + esc(pretty(pick)) + (when(pick) ? ' at ' + esc(when(pick)) : '') + '.';
+    };
+  }
+
+  // ---- Ray the helper ----
+  const bubble = $('ray-bubble'), text = $('ray-text');
+  let tips = ['Hi! I\'m Ray. Looking for a show? Press "Next tip" and I\'ll try to help.'], at = 0, hidden = false;
+  const STATIC = [
+    'Click a poster to see it full size.',
+    'Click the name of a show to visit the venue\'s own page.',
+    'Try holding your mouse over a poster. Go on.',
+    'There are some games at the bottom of the page. Snake is my favorite.',
+    'Not sure what to see? Try the Mood of the Day box near the top of the page.',
+    'Remember to check back often. New shows are added all the time.'
+  ];
+  function buildTips(list) {
+    const t = [tips[0]], today = dayStr(new Date());
+    const tonight = list.filter(e => e.date === today);
+    if (tonight.length) { const e = tonight[seed(today) % tonight.length]; t.push('Tonight: ' + e.title + ' at ' + e.venue + (when(e) ? ', ' + when(e) : '') + '.'); }
+    const n7 = soon(list, 7).length;
+    t.push('There ' + (n7 === 1 ? 'is 1 show' : 'are ' + n7 + ' shows') + ' coming up in the next 7 days.');
+    for (let i = 0; i < 3 && list.length; i++) { const e = list[Math.floor(Math.random() * list.length)]; t.push('Have you been to ' + e.venue + '? ' + e.title + ' is on ' + pretty(e) + '.'); }
+    STATIC.forEach(x => t.push(x));
+    for (let i = t.length - 1; i > 1; i--) { const j = 1 + Math.floor(Math.random() * i); [t[i], t[j]] = [t[j], t[i]]; }   // greeting stays first
+    tips = t;
+  }
+  const show = () => { if (hidden) return; text.textContent = tips[at % tips.length]; bubble.style.display = ''; };
+  $('ray-next').onclick = () => { at++; show(); };
+  $('ray-hide').onclick = () => { hidden = true; bubble.style.display = 'none'; };
+  $('ray-face').onclick = () => { hidden = false; at++; show(); };
+  setTimeout(show, 2500);
+
+  const ready = list => { wireMood(list); buildTips(list); };
+  if (window.KRSHOWS) ready(window.KRSHOWS);
+  else document.addEventListener('krshows', () => ready(window.KRSHOWS || []));
+})();
+</script>
+
+<script>
+// Weather for Kingston, NY (free Open-Meteo feed, no account needed)
+(function () {
+  const body = document.getElementById('wx-body');
+  const ART = {
+    sun:   ['  \\ | /  ', ' -- O -- ', '  / | \\  '],
+    part:  ['  \\ /  .-.', ' -- O( + )', '  / \\`---\''],
+    cloud: ['    .--.   ', ' .-(    ). ', '(___.__)__)'],
+    fog:   [' _ _ _ _ _ ', '_ _ _ _ _  ', ' _ _ _ _ _ '],
+    rain:  ['    .--.   ', ' .-(    ). ', "(___.__)__) ", "  ' ' ' '  "],
+    snow:  ['    .--.   ', ' .-(    ). ', '(___.__)__) ', '  *  *  *  '],
+    storm: ['    .--.   ', ' .-(    ). ', '(___.__)__) ', '  /_ /_ /_ ']
+  };
+  const kind = c => c === 0 ? ['sun', 'Clear'] : c === 1 ? ['sun', 'Mostly clear'] : c === 2 ? ['part', 'Partly cloudy'] : c === 3 ? ['cloud', 'Overcast']
+    : (c === 45 || c === 48) ? ['fog', 'Foggy'] : (c >= 51 && c <= 57) ? ['rain', 'Drizzle'] : (c >= 61 && c <= 67) || (c >= 80 && c <= 82) ? ['rain', 'Rain']
+    : (c >= 71 && c <= 77) || c === 85 || c === 86 ? ['snow', 'Snow'] : c >= 95 ? ['storm', 'Thunderstorms'] : ['cloud', 'Cloudy'];
+  const url = 'https://api.open-meteo.com/v1/forecast?latitude=41.927&longitude=-73.997'
+    + '&current=temperature_2m,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min'
+    + '&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FNew_York&forecast_days=5';
+  const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  fetch(url).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(j => {
+    const c = j.current, d = j.daily, [k, label] = kind(c.weather_code);
+    let rows = '';
+    for (let i = 0; i < d.time.length; i++) {
+      const [y, m, dd] = d.time[i].split('-').map(Number);
+      const name = i === 0 ? 'Today' : new Date(y, m - 1, dd).toLocaleDateString('en-US', { weekday: 'short' });
+      rows += '<tr><td class="d">' + name + '</td><td>' + esc(kind(d.weather_code[i])[1]) + '</td><td>' + Math.round(d.temperature_2m_max[i]) + '&deg; / ' + Math.round(d.temperature_2m_min[i]) + '&deg;</td></tr>';
+    }
+    body.innerHTML = '<div class="now"><pre>' + esc(ART[k].join('\n')) + '</pre><div><div class="big">' + Math.round(c.temperature_2m) + '&deg;F</div>'
+      + esc(label) + '<br>Wind ' + Math.round(c.wind_speed_10m) + ' mph</div></div>'
+      + '<table><tr><td class="d" colspan="3">5-Day Forecast (High / Low)</td></tr>' + rows + '</table>'
+      + '<div class="fine">Data courtesy of Open-Meteo.com</div>';
+  }).catch(() => { body.textContent = 'The weather report is not available right now. Please look out the window.'; });
 })();
 </script>
 </body>
