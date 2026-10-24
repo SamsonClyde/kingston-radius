@@ -29578,5 +29578,19 @@
     "price": "$25+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792839115197,
+    "title": "A Whole Nother, Killer Film",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "venue": "The Baldwin",
+    "venueUrl": "https://www.instagram.com/liquidmercantile/",
+    "location": "Pine Bush, NY",
+    "mapsUrl": "https://maps.app.goo.gl/WhfYUq8ysYeaa6reA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792839113798-unnamed-7.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
