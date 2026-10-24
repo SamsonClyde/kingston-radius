@@ -29606,5 +29606,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792839385257,
+    "title": "Trio Raconteur – Schubert Piano Trios",
+    "date": "2027-06-13",
+    "time": "16:00",
+    "venue": "The Chapel Restoration",
+    "venueUrl": "https://chapelrestoration.org/calendar/",
+    "location": "Cold Spring, NY",
+    "mapsUrl": "https://maps.app.goo.gl/boPY8ZmdA2TMLbzu9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792839369369-trio-5.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
