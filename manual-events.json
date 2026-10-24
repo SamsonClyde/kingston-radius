@@ -29522,5 +29522,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792838393663,
+    "title": "Chestnut Festival - Live Music",
+    "date": "2026-11-08",
+    "time": "12:00",
+    "venue": "Stone Ridge Orchard",
+    "venueUrl": "https://www.instagram.com/stoneridgeorchard/",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/bw5dyCL5iXxqjCz98",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792838386965-screen-shot-2026-10-24-at-6-37-52-am.png",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
