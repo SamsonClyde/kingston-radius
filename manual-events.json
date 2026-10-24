@@ -29676,5 +29676,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792839752955,
+    "title": "Momenta Quartet",
+    "date": "2027-11-14",
+    "time": "16:00",
+    "venue": "The Chapel Restoration",
+    "venueUrl": "https://chapelrestoration.org/calendar/",
+    "location": "Cold Spring, NY",
+    "mapsUrl": "https://maps.app.goo.gl/boPY8ZmdA2TMLbzu9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792839706596-7-oct-momenta-quartet.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
