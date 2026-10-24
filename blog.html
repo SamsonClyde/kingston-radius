@@ -67,11 +67,40 @@
   .tile a:link { color: #0000EE; } .tile a:visited { color: #551A8B; } .tile a:hover { color: #f00; background: #ff0; }
   .tile .poster { display: block; border: 2px inset #808080; background: #fff; margin-bottom: 4px; line-height: 0; }
   .tile .poster img { width: 100%; height: auto; display: block; image-rendering: auto; }
+  /* posters spin while the mouse is over them */
+  .tile { position: relative; }
+  .tile:hover { z-index: 5; }
+  .tile .poster:hover img { animation: spin 1.2s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .tile .poster:hover img { animation: none; } }
   .tile .nopic { display: block; border: 2px inset #808080; background: #fff; color: #666; text-align: center; padding: 22px 2px; margin-bottom: 4px; }
   .tile .ttl { font-weight: bold; font-size: 11px; text-decoration: underline; display: block; margin-bottom: 2px; }
   .tile .meta { color: #000; }
   .tile .when { color: #800000; font-weight: bold; }
   .tile .new { color: #f00; font-weight: bold; }
+
+
+  /* games corner */
+  .games { max-width: 1100px; margin: 16px auto 0; border: 4px ridge #c0c0c0; background: #000; padding: 8px 10px 14px; }
+  .games h2 { text-align: center; color: #FFFF66; font-size: 22px; margin: 4px 0 2px; }
+  .games .cap { text-align: center; color: #99FFFF; font-size: 13px; margin-bottom: 10px; }
+  .gamerow { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: flex-start; }
+  .game { background: #C0C0C0; color: #000; border: 3px outset #fff; padding: 8px; text-align: center; width: 252px; box-sizing: border-box; }
+  .game h3 { margin: 0 0 6px; font-size: 15px; }
+  .game .stat { font-size: 12px; min-height: 16px; margin: 4px 0; color: #000080; }
+  .game button.btn { font-size: 12px; cursor: pointer; }
+  #snake { background: #000; border: 2px inset #808080; display: block; margin: 0 auto; touch-action: none; }
+  .pad { display: grid; grid-template-columns: repeat(3, 36px); gap: 2px; justify-content: center; margin-top: 4px; }
+  .pad button { height: 30px; padding: 0; }
+  .ttt, .mem { display: grid; gap: 4px; margin: 4px auto; justify-content: center; }
+  .ttt { grid-template-columns: repeat(3, 56px); }
+  .mem { grid-template-columns: repeat(4, 50px); }
+  .cell { height: 56px; font-family: inherit; font-size: 28px; font-weight: bold; background: #C0C0C0; border: 3px outset #fff; cursor: pointer; padding: 0; color: #000; }
+  .mem .cell { height: 50px; font-size: 22px; }
+  .cell:active { border-style: inset; }
+  .cell.x { color: #0000CC; } .cell.o { color: #CC0000; }
+  .cell.open { background: #fff; border-style: inset; }
+  .cell.done { background: #99ff99; border-style: inset; }
 
   .more { text-align: center; margin: 22px 0; }
   .guest { max-width: 520px; margin: 24px auto 0; border: 4px ridge #c0c0c0; background: #000; padding: 8px 14px; text-align: center; color: #fff; }
@@ -114,6 +143,42 @@
 
 <div class="rainbow"></div>
 
+
+<div class="games" id="games">
+  <h2>Games Corner</h2>
+  <div class="cap">Take a break between shows. Arrow keys work for Snake.</div>
+  <div class="gamerow">
+
+    <div class="game" id="g-snake">
+      <h3>Snake</h3>
+      <canvas id="snake" width="224" height="224"></canvas>
+      <div class="stat" id="snake-stat">Press Start</div>
+      <button class="btn" id="snake-start" type="button">Start</button>
+      <div class="pad">
+        <span></span><button class="btn" type="button" data-d="U">^</button><span></span>
+        <button class="btn" type="button" data-d="L">&lt;</button><button class="btn" type="button" data-d="D">v</button><button class="btn" type="button" data-d="R">&gt;</button>
+      </div>
+    </div>
+
+    <div class="game" id="g-ttt">
+      <h3>Tic-Tac-Toe</h3>
+      <div class="ttt" id="ttt"></div>
+      <div class="stat" id="ttt-stat">You are X. Your move.</div>
+      <button class="btn" id="ttt-reset" type="button">New Game</button>
+    </div>
+
+    <div class="game" id="g-mem">
+      <h3>Memory Match</h3>
+      <div class="mem" id="mem"></div>
+      <div class="stat" id="mem-stat">Find all 8 pairs.</div>
+      <button class="btn" id="mem-reset" type="button">New Game</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="rainbow"></div>
+
 <div id="msg">Loading show listings, please wait...</div>
 <div id="days"></div>
 
@@ -139,7 +204,7 @@
   const key = e => `${e.venue}||${e.date}||${e.time || ''}`;
   const rejected = s => s === 'rejected' || s === 'purged' || (s && typeof s === 'object' && (s.status === 'rejected' || s.status === 'purged'));
   const approved = s => s === 'approved' || (s && typeof s === 'object' && s.status === 'approved');
-  const okUrl = u => typeof u === 'string' && /^https?:\/\//i.test(u.trim());
+  const okUrl = u => typeof u === 'string' && u.trim() && !/^\s*(javascript|data|vbscript):/i.test(u);   // http(s) or a site-relative path
   const parseDate = s => { const [y, m, d] = String(s).split('-').map(Number); return new Date(y, m - 1, d); };
   const fmtTime = t => {
     if (!t || t === 'See website') return '';
@@ -202,6 +267,110 @@
     html += `<h2 class="day">${esc(label)} <small>(${shows.length} show${shows.length === 1 ? '' : 's'})</small></h2><div class="rainbow" style="max-width:420px;margin:0 auto 8px"></div><div class="grid">${shows.map(e => tile(e, n++)).join('')}</div>`;
   }
   document.getElementById('days').innerHTML = html;
+})();
+</script>
+
+<script>
+// Games corner: Snake, Tic-Tac-Toe, Memory Match. No libraries.
+(function () {
+  const $ = id => document.getElementById(id);
+
+  // ---------- Snake ----------
+  (function () {
+    const cv = $('snake'), cx = cv.getContext('2d'), N = 14, C = 16;
+    let snake, dir, nextDir, food, timer, score, running = false;
+    let best = 0; try { best = +localStorage.getItem('kr_snake_best') || 0; } catch (e) {}
+    const stat = t => { $('snake-stat').textContent = t; };
+    const place = () => { do { food = { x: Math.floor(Math.random() * N), y: Math.floor(Math.random() * N) }; } while (snake.some(p => p.x === food.x && p.y === food.y)); };
+    const draw = () => {
+      cx.fillStyle = '#000'; cx.fillRect(0, 0, cv.width, cv.height);
+      cx.fillStyle = '#ff0000'; cx.fillRect(food.x * C + 2, food.y * C + 2, C - 4, C - 4);
+      snake.forEach((p, i) => { cx.fillStyle = i ? '#00cc00' : '#66ff66'; cx.fillRect(p.x * C + 1, p.y * C + 1, C - 2, C - 2); });
+    };
+    const over = () => {
+      clearInterval(timer); running = false;
+      if (score > best) { best = score; try { localStorage.setItem('kr_snake_best', best); } catch (e) {} }
+      stat('Game over! Score ' + score + '  Best ' + best); $('snake-start').textContent = 'Play Again';
+    };
+    const step = () => {
+      dir = nextDir;
+      const h = { x: snake[0].x + dir.x, y: snake[0].y + dir.y };
+      if (h.x < 0 || h.y < 0 || h.x >= N || h.y >= N || snake.some(p => p.x === h.x && p.y === h.y)) return over();
+      snake.unshift(h);
+      if (h.x === food.x && h.y === food.y) { score++; stat('Score ' + score + '  Best ' + best); place(); } else snake.pop();
+      draw();
+    };
+    const start = () => {
+      snake = [{ x: 7, y: 7 }, { x: 6, y: 7 }, { x: 5, y: 7 }]; dir = nextDir = { x: 1, y: 0 }; score = 0;
+      place(); draw(); stat('Score 0  Best ' + best); running = true;
+      clearInterval(timer); timer = setInterval(step, 120); $('snake-start').textContent = 'Restart';
+    };
+    const DIRS = { U: { x: 0, y: -1 }, D: { x: 0, y: 1 }, L: { x: -1, y: 0 }, R: { x: 1, y: 0 } };
+    const turn = d => { if (!running) return; if (d.x === -dir.x && d.y === -dir.y) return; nextDir = d; };
+    $('snake-start').onclick = start;
+    document.querySelectorAll('#g-snake .pad button').forEach(b => { b.onclick = () => turn(DIRS[b.dataset.d]); });
+    document.addEventListener('keydown', e => {
+      const k = { ArrowUp: 'U', ArrowDown: 'D', ArrowLeft: 'L', ArrowRight: 'R', w: 'U', s: 'D', a: 'L', d: 'R' }[e.key];
+      if (!k || !running) return;
+      e.preventDefault(); turn(DIRS[k]);
+    });
+    let t0 = null;     // swipe on the canvas
+    cv.addEventListener('touchstart', e => { t0 = e.touches[0]; }, { passive: true });
+    cv.addEventListener('touchend', e => {
+      if (!t0) return; const t = e.changedTouches[0], dx = t.clientX - t0.clientX, dy = t.clientY - t0.clientY; t0 = null;
+      if (Math.max(Math.abs(dx), Math.abs(dy)) < 20) return;
+      turn(Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? DIRS.R : DIRS.L) : (dy > 0 ? DIRS.D : DIRS.U));
+    }, { passive: true });
+    snake = [{ x: 7, y: 7 }, { x: 6, y: 7 }, { x: 5, y: 7 }]; food = { x: 11, y: 7 }; draw();
+    stat(best ? 'Best ' + best + '. Press Start' : 'Press Start');
+  })();
+
+  // ---------- Tic-Tac-Toe (you are X, computer is O) ----------
+  (function () {
+    const LINES = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+    let b, over, cells = [];
+    const stat = t => { $('ttt-stat').textContent = t; };
+    const winner = bd => { for (const [a, c, d] of LINES) if (bd[a] && bd[a] === bd[c] && bd[a] === bd[d]) return bd[a]; return bd.every(Boolean) ? 'tie' : null; };
+    const find = (bd, who) => { for (const [a, c, d] of LINES) { const v = [bd[a], bd[c], bd[d]]; if (v.filter(x => x === who).length === 2 && v.includes(null)) return [a, c, d][v.indexOf(null)]; } return -1; };
+    const show = () => cells.forEach((el, i) => { el.textContent = b[i] || ''; el.className = 'cell' + (b[i] ? ' ' + b[i].toLowerCase() : ''); });
+    const finish = () => { const w = winner(b); if (!w) return false; over = true; stat(w === 'tie' ? "It's a tie." : w === 'X' ? 'You win!' : 'Computer wins.'); return true; };
+    const cpu = () => {
+      let m = find(b, 'O'); if (m < 0) m = find(b, 'X');
+      if (m < 0 && !b[4]) m = 4;
+      if (m < 0) { const free = b.map((v, i) => v ? -1 : i).filter(i => i >= 0); m = free[Math.floor(Math.random() * free.length)]; }
+      b[m] = 'O'; show(); if (!finish()) stat('Your move.');
+    };
+    const click = i => { if (over || b[i]) return; b[i] = 'X'; show(); if (!finish()) setTimeout(cpu, 250); };
+    const reset = () => { b = Array(9).fill(null); over = false; show(); stat('You are X. Your move.'); };
+    for (let i = 0; i < 9; i++) { const el = document.createElement('button'); el.type = 'button'; el.className = 'cell'; el.onclick = () => click(i); $('ttt').appendChild(el); cells.push(el); }
+    $('ttt-reset').onclick = reset; reset();
+  })();
+
+  // ---------- Memory Match ----------
+  (function () {
+    const SYM = ['@', '#', '$', '%', '&', '*', '+', '?'];
+    let deck, open, matched, moves, lock, cells = [];
+    const stat = t => { $('mem-stat').textContent = t; };
+    const reset = () => {
+      deck = SYM.concat(SYM).sort(() => Math.random() - 0.5); open = []; matched = 0; moves = 0; lock = false;
+      cells.forEach(c => { c.textContent = ''; c.className = 'cell'; }); stat('Find all 8 pairs.');
+    };
+    const click = i => {
+      if (lock || open.includes(i) || cells[i].classList.contains('done')) return;
+      cells[i].textContent = deck[i]; cells[i].classList.add('open'); open.push(i);
+      if (open.length < 2) return;
+      moves++; const [a, c] = open;
+      if (deck[a] === deck[c]) {
+        cells[a].className = cells[c].className = 'cell done'; matched++; open = [];
+        stat(matched === 8 ? 'You won in ' + moves + ' moves!' : 'Match! Moves: ' + moves);
+      } else {
+        lock = true; stat('Moves: ' + moves);
+        setTimeout(() => { [a, c].forEach(k => { cells[k].textContent = ''; cells[k].className = 'cell'; }); open = []; lock = false; }, 700);
+      }
+    };
+    for (let i = 0; i < 16; i++) { const el = document.createElement('button'); el.type = 'button'; el.className = 'cell'; el.onclick = () => click(i); $('mem').appendChild(el); cells.push(el); }
+    $('mem-reset').onclick = reset; reset();
+  })();
 })();
 </script>
 </body>
