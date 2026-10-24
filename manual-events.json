@@ -29620,5 +29620,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792839474597,
+    "title": "Matthew Christakos – J. S. Bach: Cello Suite No. 1-3",
+    "date": "2027-08-21",
+    "time": "16:00",
+    "venue": "The Chapel Restoration",
+    "venueUrl": "https://chapelrestoration.org/calendar/",
+    "location": "Cold Spring, NY",
+    "mapsUrl": "https://maps.app.goo.gl/boPY8ZmdA2TMLbzu9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792839446355-matthew-christakos.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
