@@ -29536,5 +29536,19 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792838578686,
+    "title": "Mr Sun Plays Duke Ellington’s Nutcracker Suite",
+    "date": "2026-12-06",
+    "time": "19:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792838561681-sun-nutcracker-viewcy-1080x613.webp",
+    "price": "$25+",
+    "free": false,
+    "_manual": true
   }
 ]
