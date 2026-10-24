@@ -29564,5 +29564,19 @@
     "price": "$10+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792838714165,
+    "title": "The Sweetback Sisters Country Christmas Sing Along Spectacular",
+    "date": "2026-12-16",
+    "time": "19:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "posterUrl": "",
+    "price": "$25+",
+    "free": false,
+    "_manual": true
   }
 ]
