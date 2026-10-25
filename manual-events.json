@@ -29732,5 +29732,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792924409131,
+    "title": "Sunday Jazz with 2c2z",
+    "date": "2026-10-26",
+    "time": "12:00",
+    "venue": "The Eleven",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/aqdL8wtJdNAHwLoB7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792924398002-screen-shot-2026-10-25-at-6-32-47-am.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
