@@ -29788,5 +29788,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792924953283,
+    "title": "Boys Go To Jupiter",
+    "date": "2027-01-27",
+    "time": "20:00",
+    "venue": "Lark Hall",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792924946964-image-4.webp",
+    "price": "$25+",
+    "free": false,
+    "_manual": true
   }
 ]
