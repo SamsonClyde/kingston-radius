@@ -29858,5 +29858,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792925514322,
+    "title": "Idiota, Sweet Clementines",
+    "date": "2026-12-05",
+    "time": "21:00",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com/",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792925501351-6ad00db691cd6fc4f16784f6-65570-016.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
