@@ -29760,5 +29760,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792924662845,
+    "title": "HEX",
+    "date": "2026-11-07",
+    "time": "21:00",
+    "venue": "Lark Hall",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792924630443-image-2.webp",
+    "price": "$13+",
+    "free": false,
+    "_manual": true
   }
 ]
