@@ -29574,7 +29574,7 @@
     "venueUrl": "https://tempokingston.org/events/",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
-    "posterUrl": "",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792924101433-sweetback-viewcy-1080x630.webp",
     "price": "$25+",
     "free": false,
     "_manual": true
