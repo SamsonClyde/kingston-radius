@@ -29886,5 +29886,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792926231079,
+    "title": "Good TIme Honey, Questionable Authorities (Hits)",
+    "date": "2026-10-30",
+    "time": "19:00",
+    "venue": "The Lemon Squeeze",
+    "venueUrl": "https://thelemonsqueezenewpaltz.com/events/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792926216420-screen-shot-2026-10-25-at-7-02-53-am.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
