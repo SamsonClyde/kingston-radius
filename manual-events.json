@@ -27927,7 +27927,7 @@
   },
   {
     "id": 1792537970710,
-    "title": "Maddy Meeker",
+    "title": "'Classic Country Revue'",
     "date": "2026-10-25",
     "time": "17:00",
     "venue": "Colony Woodstock",
@@ -27937,7 +27937,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792537959487-image.webp",
     "price": "donation",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1792538130529,
