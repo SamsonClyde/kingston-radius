@@ -29872,5 +29872,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1792925984552,
+    "title": "Judi Silvano's Garden Winds",
+    "date": "2026-11-15",
+    "time": "16:00",
+    "venue": "The Lace Mill",
+    "venueUrl": "https://thelacemillarts.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/8k3T7UXQT5Lzeqke9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792925976233-unnamed-9.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
