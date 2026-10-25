@@ -29,14 +29,8 @@
   .blink { animation: blink 1s steps(1) infinite; }
   @keyframes blink { 50% { visibility: hidden; } }
 
-  h1.title { font-family: "Courier New", Courier, monospace; font-size: 44px; font-weight: bold; color: #FFFF66; margin: 10px 0 0; text-shadow: 3px 3px 0 #000066; }
   .sub { font-size: 20px; color: #FFFFFF; margin: 2px 0 0; }
   .rainbow { height: 6px; border: 0; margin: 10px 0; background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, magenta, red); }
-  .construction {
-    margin: 8px auto; max-width: 560px; padding: 4px; color: #000; font-weight: bold; text-align: center;
-    background: repeating-linear-gradient(-45deg, #ffcc00 0 14px, #000 14px 28px);
-  }
-  .construction span { display: block; background: #ffcc00; padding: 3px 6px; }
 
   /* the old beveled gray "button" look */
   .btn {
@@ -46,9 +40,6 @@
   .btn:hover { background: #dcdcdc; }
   .btn:active { border-style: inset; }
 
-  table.intro { margin: 8px auto; border: 4px ridge #c0c0c0; background: #000; }
-  table.intro td { padding: 6px 12px; text-align: center; }
-  .counter { display: inline-block; background: #000; color: #0f0; font-family: "Courier New", Courier, monospace; letter-spacing: 3px; padding: 1px 6px; border: 2px inset #888; }
 
   marquee { background: #000066; color: #ffffff; font-family: "Courier New", Courier, monospace; font-size: 16px; border-top: 2px solid #c0c0c0; border-bottom: 2px solid #c0c0c0; padding: 2px 0; }
 
@@ -122,11 +113,6 @@
   .mood select { font-family: inherit; font-size: 13px; background: #fff; color: #000; border: 2px inset #808080; margin: 0 4px; }
   #mood-out { margin-top: 8px; color: #99FFFF; min-height: 18px; }
   #mood-out b { color: #fff; font-size: 14px; }
-  .award { display: inline-block; margin: 10px 6px 4px; padding: 3px; border: 3px outset #fff8c0; vertical-align: middle;
-    background: linear-gradient(135deg, #fff7b0 0%, #e0b020 35%, #fff1a0 55%, #b8860b 100%); color: #3a2500; text-align: center; font-size: 11px; line-height: 1.2; box-shadow: 0 0 0 2px #7a5a00; }
-  .award .in { border: 1px solid #7a5a00; padding: 4px 10px; }
-  .award .big { font-size: 15px; font-weight: bold; letter-spacing: 1px; }
-  .award .star { color: #a00; }
 
   /* Ray the helper */
   #ray { position: fixed; right: 10px; bottom: 10px; z-index: 9000; display: flex; flex-direction: column; align-items: flex-end; max-width: 250px; font-family: "Courier New", Courier, monospace; }
@@ -151,19 +137,58 @@
   .wx td.d { color: #FFFF66; }
   .wx .fine { margin-top: 6px; font-size: 11px; color: #808080; }
 
+
+  /* ASCII banner */
+  .srtitle { position: absolute; left: -9999px; }
+  pre.ascii { display: inline-block; text-align: left; margin: 10px 0 0; background: #000; border: 4px ridge #c0c0c0; padding: 10px 16px; font-family: "Courier New", Courier, monospace; font-weight: bold; line-height: 1.0; white-space: pre;
+    font-size: min(16px, calc((100vw - 70px) / 28.2)); text-shadow: 3px 3px 0 #000066; }
+  pre.ascii .a1 { color: #FFFF66; } pre.ascii .a2 { color: #FF7755; }
+
+  /* fortune cookie + magic 8-ball */
+  .toys { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 900px; margin: 12px auto; }
+  .toy { flex: 1 1 300px; max-width: 440px; border: 4px ridge #c0c0c0; background: #000; padding: 8px 12px; text-align: center; font-size: 14px; color: #99FFFF; }
+  .toy h3 { margin: 0 0 6px; font-size: 16px; color: #FFFF66; }
+  .toy .out { margin-top: 8px; min-height: 40px; }
+  .toy .out b { color: #fff; }
+  .toy input[type=text] { font-family: inherit; font-size: 13px; width: 90%; max-width: 280px; background: #fff; color: #000; border: 2px inset #808080; margin: 4px 0; padding: 2px 4px; }
+  .ball { width: 110px; height: 110px; margin: 6px auto; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #666 0%, #111 45%, #000 100%); position: relative; border: 2px solid #333; }
+  .ball .win { position: absolute; left: 50%; top: 50%; width: 62px; height: 62px; transform: translate(-50%, -50%); border-radius: 50%; background: #0a0a50; border: 2px solid #223; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 11px; line-height: 1.1; text-align: center; padding: 4px; box-sizing: border-box; overflow: hidden; }
+  .ball .win.eight { font-size: 30px; font-weight: bold; background: #fff; color: #000; border-color: #888; }
+  .ball.shake { animation: shake 0.7s ease-in-out; }
+  @keyframes shake { 0%,100% { transform: translate(0,0) rotate(0); } 15% { transform: translate(-8px,2px) rotate(-8deg); } 30% { transform: translate(8px,-3px) rotate(8deg); } 45% { transform: translate(-6px,3px) rotate(-6deg); } 60% { transform: translate(6px,-2px) rotate(6deg); } 80% { transform: translate(-3px,1px) rotate(-2deg); } }
+  @media (prefers-reduced-motion: reduce) { .ball.shake { animation: none; } }
+
+
+  /* speedometer page counter */
+  .speedo { margin: 12px auto 4px; width: 250px; text-align: center; }
+  .speedo svg { display: block; width: 250px; height: 160px; margin: 0 auto; }
+  .speedo .needle { transform-origin: 110px 110px; transition: transform 2.4s cubic-bezier(.2, 1.4, .4, 1); }
+  .speedo .lbl { font-size: 11px; color: #99FFFF; margin-top: 2px; }
+  .speedo .counter { display: inline-block; background: #000; color: #0f0; font-family: "Courier New", Courier, monospace; font-size: 18px; letter-spacing: 4px; padding: 1px 8px; border: 2px inset #888; }
+
   .more { text-align: center; margin: 22px 0; }
   .guest { max-width: 520px; margin: 24px auto 0; border: 4px ridge #c0c0c0; background: #000; padding: 8px 14px; text-align: center; color: #fff; }
   .foot { text-align: center; margin-top: 18px; font-size: 11px; color: #c0c0c0; }
   .foot .tiny { font-size: 10px; color: #808080; }
   #msg { text-align: center; color: #fff; margin: 30px 0; }
 
-  @media (max-width: 760px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } h1.title { font-size: 34px; } }
+  @media (max-width: 760px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 </style>
 </head>
 <body>
 
 <center>
-  <h1 class="title">Kingston Radius</h1>
+  <h1 class="srtitle">Kingston Radius</h1>
+  <pre class="ascii" aria-hidden="true"><span class="a1">#   # ##### #   #  ####  #### #####  ###  #   #
+#  #    #   ##  # #     #       #   #   # ##  #
+###     #   # # # #  ##  ###    #   #   # # # #
+#  #    #   #  ## #   #     #   #   #   # #  ##
+#   # ##### #   #  ###  ####    #    ###  #   #</span>
+<span class="a2">####   ###  ####  ##### #   #  ####
+#   # #   # #   #   #   #   # #    
+####  ##### #   #   #   #   #  ### 
+#  #  #   # #   #   #   #   #     #
+#   # #   # ####  #####  ###  #### </span></pre>
   <div class="sub">Live Music Listings for the Hudson Valley</div>
   <div class="rainbow"></div>
 
@@ -172,22 +197,23 @@
   </font><br>
   <font size="3" color="#99FFFF">Upcoming shows within a short drive of Kingston, NY. Check back often.</font>
 
-  <div class="construction"><span>UNDER CONSTRUCTION</span></div>
-
-  <table class="intro" cellpadding="0" cellspacing="0">
-    <tr>
-      <td>
-        You are visitor number<br>
-        <span class="counter" id="counter">000000</span>
-      </td>
-      <td>
-        <a class="btn" href="/contact.html">Sign my Guestbook</a><br>
-        <a class="btn" href="/">Kingston Radius Home</a>
-      </td>
-    </tr>
-  </table>
-
-  <div class="award"><div class="in"><span class="star">&#9733;</span> <span class="big">COOL SITE</span> <span class="star">&#9733;</span><br>OF THE WEEK<br>Awarded March 14, 1997</div></div>
+  <div class="speedo">
+    <svg id="speedo" viewBox="0 0 220 140" role="img" aria-label="Page view counter styled as a speedometer">
+      <path d="M 20 110 A 90 90 0 1 1 200 110" fill="#0a0a14" stroke="#c0c0c0" stroke-width="4"/>
+      <g id="speedo-ticks"></g>
+      <path d="M 28 110 A 82 82 0 0 1 36 76" fill="none" stroke="#00cc00" stroke-width="3"/>
+      <path d="M 184 76 A 82 82 0 0 1 192 110" fill="none" stroke="#ff2222" stroke-width="3"/>
+      <text x="110" y="88" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#99FFFF">x 1000</text>
+      <text x="110" y="132" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#FFFF66" font-weight="bold">PAGE VIEWS</text>
+      <g class="needle" id="speedo-needle" style="transform: rotate(-120deg)">
+        <line x1="110" y1="110" x2="110" y2="38" stroke="#ff2222" stroke-width="3" stroke-linecap="round"/>
+        <line x1="110" y1="110" x2="110" y2="122" stroke="#ff2222" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      <circle cx="110" cy="110" r="7" fill="#c0c0c0" stroke="#444" stroke-width="2"/>
+    </svg>
+    <span class="counter" id="odo">000000</span>
+    <div class="lbl">visitors since 1997</div>
+  </div>
 </center>
 
 <marquee scrollamount="5">Welcome to the Kingston Radius home page! ... Please bookmark this site and check back for new listings ... </marquee>
@@ -207,6 +233,23 @@
   </select>
   <button class="btn" id="mood-go" type="button" disabled>Pick a show</button>
   <div id="mood-out">Loading the show list...</div>
+</div>
+
+<div class="toys">
+  <div class="toy" id="fortune">
+    <h3>Fortune Cookie</h3>
+    Crack open a cookie to find out your lucky show.<br>
+    <button class="btn" id="fortune-go" type="button" disabled>Your Lucky Show</button>
+    <div class="out" id="fortune-out">Loading the show list...</div>
+  </div>
+  <div class="toy" id="ball-box">
+    <h3>Magic 8-Ball</h3>
+    Should I go out tonight?<br>
+    <input type="text" id="ball-q" maxlength="80" placeholder="Type your question (optional)">
+    <div class="ball" id="ball"><div class="win eight" id="ball-win">8</div></div>
+    <button class="btn" id="ball-go" type="button" disabled>Shake</button>
+    <div class="out" id="ball-out">Loading the show list...</div>
+  </div>
 </div>
 
 <div class="rainbow"></div>
@@ -282,9 +325,6 @@
     return t;
   };
 
-  // fake hit counter: climbs a little every day, never goes backwards
-  const days = Math.floor(Date.now() / 86400000);
-  document.getElementById('counter').textContent = String(4217 + (days - 20000) * 3 + Math.floor((Date.now() % 86400000) / 600000)).padStart(6, '0');
   document.getElementById('updated').textContent = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).replace(/\d{4}$/, '1997');
 
   const msg = document.getElementById('msg');
@@ -619,6 +659,103 @@
       + '<table><tr><td class="d" colspan="3">5-Day Forecast (High / Low)</td></tr>' + rows + '</table>'
       + '<div class="fine">Data courtesy of Open-Meteo.com</div>';
   }).catch(() => { body.textContent = 'The weather report is not available right now. Please look out the window.'; });
+})();
+</script>
+
+<script>
+// Fortune cookie + Magic 8-Ball (both use the same show list as the rest of the page)
+(function () {
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const dayStr = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const pretty = e => { const [y, m, d] = e.date.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }); };
+  const when = e => { let t = e.time && e.time !== 'See website' ? String(e.time).trim() : ''; if (/^\d{1,2}:\d{2}$/.test(t)) { const [h, m] = t.split(':').map(Number); t = (h % 12 || 12) + ':' + String(m).padStart(2, '0') + ' ' + (h >= 12 ? 'PM' : 'AM'); } return t; };
+  const pickFrom = a => a[Math.floor(Math.random() * a.length)];
+  const line = e => '<b>' + esc(e.title) + '</b><br>at ' + esc(e.venue) + ' on ' + esc(pretty(e)) + (when(e) ? ' at ' + esc(when(e)) : '') + '.';
+
+  const FORTUNES = [
+    'A stranger near the front will become a friend by the last song.',
+    'You will soon hear a song you thought you had forgotten.',
+    'Your ears are about to have a very good week.',
+    'The band you have never heard of is the one you will remember.',
+    'Someone will save you a spot. Say thank you.',
+    'A great night begins with a small decision to leave the house.',
+    'You will clap louder than you expect to.',
+    'Good things come to those who arrive before the opening act.',
+    'The drummer is having a better night than anyone knows.',
+    'You will find a new favorite venue within three miles of your house.',
+    'A loud night is coming. Pack earplugs and an open mind.',
+    'Someone you know will be standing right next to you, and you will not notice until the encore.',
+    'The best seat in the house is the one you walk to first.',
+    'You will leave humming something. You will not know what.',
+    'A ticket you have not bought yet is already waiting for you.',
+    'Today is a good day to say yes to a show.'
+  ];
+  const BALL_YES = ['It is certain.', 'Without a doubt.', 'Yes, definitely.', 'Most likely.', 'Outlook good.', 'Signs point to yes.', 'You may rely on it.', 'Yes.'];
+  const BALL_MAYBE = ['Reply hazy, try again.', 'Ask again later.', 'Cannot predict now.', 'Concentrate and ask again.'];
+  const BALL_NO = ['Don\'t count on it.', 'My sources say no.', 'Outlook not so good.', 'Very doubtful.'];
+
+  function wire(list) {
+    const fo = $('fortune-out'), bo = $('ball-out'), fg = $('fortune-go'), bg = $('ball-go');
+    if (!list.length) { fo.textContent = bo.textContent = 'No shows are listed right now.'; return; }
+    const today = dayStr(new Date()), tonight = list.filter(e => e.date === today);
+    const lim = new Date(); lim.setDate(lim.getDate() + 7);
+    const week = list.filter(e => e.date <= dayStr(lim)), pool = week.length ? week : list;
+    fo.textContent = 'Press the button to open your cookie.'; bo.textContent = 'Think of your question, then shake.';
+    fg.disabled = bg.disabled = false;
+
+    fg.onclick = () => { fo.innerHTML = '<i>"' + esc(pickFrom(FORTUNES)) + '"</i><br><br>Your lucky show:<br>' + line(pickFrom(pool)); };
+
+    bg.onclick = () => {
+      const ball = $('ball'), win = $('ball-win'); ball.classList.remove('shake'); void ball.offsetWidth; ball.classList.add('shake');
+      win.className = 'win'; win.textContent = '...'; bo.textContent = '';
+      setTimeout(() => {
+        const r = Math.random();
+        let kind = r < 0.5 ? 'yes' : r < 0.75 ? 'maybe' : 'no';
+        let ans = pickFrom(kind === 'yes' ? BALL_YES : kind === 'maybe' ? BALL_MAYBE : BALL_NO);
+        win.textContent = ans;
+        const tn = tonight.length ? pickFrom(tonight) : null;
+        if (kind === 'yes') {
+          bo.innerHTML = tn ? 'Go out! Try tonight:<br>' + line(tn) : 'Nothing is listed for tonight, but try the next one up:<br>' + line(pool[0]);
+        } else if (kind === 'maybe') {
+          bo.innerHTML = 'The ball is unsure. Shake again.';
+        } else {
+          bo.innerHTML = 'The ball says stay in. Maybe plan ahead instead:<br>' + line(pickFrom(pool));
+        }
+      }, 750);
+    };
+  }
+  if (window.KRSHOWS) wire(window.KRSHOWS);
+  else document.addEventListener('krshows', () => wire(window.KRSHOWS || []));
+})();
+</script>
+
+<script>
+// Speedometer page counter (the number climbs a little every day and never goes backwards)
+(function () {
+  const days = Math.floor(Date.now() / 86400000);
+  const value = 4217 + (days - 20000) * 3 + Math.floor((Date.now() % 86400000) / 600000);
+  document.getElementById('odo').textContent = String(value).padStart(6, '0');
+  const g = document.getElementById('speedo-ticks'), NS = 'http://www.w3.org/2000/svg', cx = 110, cy = 110;
+  for (let i = 0; i <= 50; i++) {
+    const a = (-120 + 240 * i / 50) * Math.PI / 180, major = i % 5 === 0, r1 = major ? 70 : 76, r2 = 82;
+    const l = document.createElementNS(NS, 'line');
+    l.setAttribute('x1', cx + r1 * Math.sin(a)); l.setAttribute('y1', cy - r1 * Math.cos(a));
+    l.setAttribute('x2', cx + r2 * Math.sin(a)); l.setAttribute('y2', cy - r2 * Math.cos(a));
+    l.setAttribute('stroke', major ? '#fff' : '#888'); l.setAttribute('stroke-width', major ? 2 : 1);
+    g.appendChild(l);
+    if (major) {
+      const t = document.createElementNS(NS, 'text'), rr = 58;
+      t.setAttribute('x', cx + rr * Math.sin(a)); t.setAttribute('y', cy - rr * Math.cos(a) + 3);
+      t.setAttribute('text-anchor', 'middle'); t.setAttribute('font-size', 9); t.setAttribute('font-family', 'Courier New, monospace'); t.setAttribute('fill', '#fff');
+      t.textContent = i / 5; g.appendChild(t);
+    }
+  }
+  const needle = document.getElementById('speedo-needle');
+  const angle = -120 + 240 * Math.min(value / 10000, 1);
+  const calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (calm) { needle.style.transition = 'none'; needle.style.transform = 'rotate(' + angle + 'deg)'; }
+  else setTimeout(() => { needle.style.transform = 'rotate(' + angle + 'deg)'; }, 250);
 })();
 </script>
 </body>
