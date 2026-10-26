@@ -30001,5 +30001,19 @@
     "price": "$15+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793011902963,
+    "title": "KJ Denhert & The NY Unit",
+    "date": "2026-11-21",
+    "time": "19:30",
+    "venue": "Tompkins Corners Cultural Center",
+    "venueUrl": "https://www.tompkinscorners.org/music.html",
+    "location": "Putnam Valley, NY",
+    "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793011884917-graphic-kj-ny-unit-2026-draft-orig.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
