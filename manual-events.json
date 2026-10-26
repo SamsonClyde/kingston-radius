@@ -30071,5 +30071,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793012441264,
+    "title": "Dave Way’s Annual Island of Misfits Pre-Holiday Get Together featuring the Last Minute Soulmates – Salon Stage",
+    "date": "2026-12-04",
+    "time": "18:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793012438782-lms-dec-6-24-web.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
