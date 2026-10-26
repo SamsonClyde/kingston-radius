@@ -30127,5 +30127,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793013342473,
+    "title": "(dm for address) Pink Lady, The Schwegs, Table Dave and The Chairs, You Are Not Brave Enough",
+    "date": "2026-11-06",
+    "time": "19:00",
+    "venue": "Law and Order",
+    "venueUrl": "https://www.instagram.com/law_n_order1/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://www.instagram.com/law_n_order1/",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793013317654-unnamed-3.jpg",
+    "price": "$5",
+    "free": false,
+    "_manual": true
   }
 ]
