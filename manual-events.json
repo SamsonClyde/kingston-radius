@@ -30113,5 +30113,19 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793012936448,
+    "title": "Adventure[s] BK presents: The Enya Party",
+    "date": "2026-11-27",
+    "time": "21:00",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793012931960-images.webp",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
