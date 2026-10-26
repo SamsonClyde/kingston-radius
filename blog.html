@@ -7,53 +7,53 @@
 <title>Kingston Radius - Live Music in the Hudson Valley</title>
 <style>
   /* Old-school page, on purpose. */
-  html { background: #000080; }
+  html { background: var(--bg); }
   body {
     margin: 0; padding: 8px 8px 30px;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 16px; color: #FFFFFF;
-    background-color: #000080;
-    background-image:
-      radial-gradient(#ffffff 1px, transparent 1.5px),
-      radial-gradient(#ffff99 1px, transparent 1.5px),
-      radial-gradient(#99ffff 1px, transparent 1.5px);
-    background-size: 53px 53px, 91px 91px, 37px 37px;
-    background-position: 0 0, 17px 31px, 5px 13px;
-    cursor: crosshair;
+    font-family: var(--font);
+    font-size: var(--fs); color: var(--txt); letter-spacing: var(--ls);
+    background-color: var(--bg);
+    background-image: var(--bgimg);
+    background-size: var(--bgsz);
+    background-position: var(--bgpos);
+    cursor: var(--cur);
+    overflow-x: hidden;
   }
-  a:link { color: #00FFFF; }
-  a:visited { color: #FF99FF; }
+  a:link { color: var(--link); }
+  a:visited { color: var(--visited); }
   a:hover { color: #FF0000; background: #FFFF00; }
   center { display: block; text-align: center; }
 
   .blink { animation: blink 1s steps(1) infinite; }
   @keyframes blink { 50% { visibility: hidden; } }
 
-  .sub { font-size: 20px; color: #FFFFFF; margin: 2px 0 0; }
-  .rainbow { height: 6px; border: 0; margin: 10px 0; background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, magenta, red); }
+  .sub { font-size: 20px; color: var(--txt); margin: 2px 0 0; }
+  .wel1 { color: var(--txt); font-size: 1.1em; }
+  .wel2 { color: var(--pagelo); }
+  .rainbow { height: 6px; border: 0; margin: 10px 0; filter: hue-rotate(var(--hue)); background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, magenta, red); }
 
   /* the old beveled gray "button" look */
   .btn {
-    display: inline-block; padding: 3px 10px; margin: 2px; background: #C0C0C0; color: #000 !important; text-decoration: none;
-    border: 2px outset #fff; font-size: 13px; font-family: "Courier New", Courier, monospace;
+    display: inline-block; padding: 3px 10px; margin: 2px; background: var(--tile); color: #000 !important; text-decoration: none;
+    border: 2px outset #fff; font-size: 13px; font-family: var(--font);
   }
   .btn:hover { background: #dcdcdc; }
   .btn:active { border-style: inset; }
 
 
-  marquee { background: #000066; color: #ffffff; font-family: "Courier New", Courier, monospace; font-size: 16px; border-top: 2px solid #c0c0c0; border-bottom: 2px solid #c0c0c0; padding: 2px 0; }
+  marquee { background: var(--mq); color: #ffffff; font-family: var(--font); font-size: 16px; border-top: 2px solid var(--bd); border-bottom: 2px solid var(--bd); padding: 2px 0; }
 
   h2.day {
-    font-family: "Courier New", Courier, monospace; font-size: 24px; font-weight: bold; text-align: center;
-    color: #FFFF66; margin: 22px 0 4px;
+    font-family: var(--font); font-size: 24px; font-weight: bold; text-align: center;
+    color: var(--pagehi); margin: 22px 0 4px;
   }
-  h2.day small { color: #99FFFF; font-size: 15px; font-weight: normal; }
+  h2.day small { color: var(--pagelo); font-size: 15px; font-weight: normal; }
 
   /* the wall, but 5 across */
-  .grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; max-width: 1100px; margin: 0 auto; align-items: start; }
+  .grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--gap); max-width: 1100px; margin: 0 auto; align-items: start; }
   .tile {
-    background: #C0C0C0; color: #000; border: 3px outset #fff; padding: 4px; min-width: 0;
-    font-family: "Courier New", Courier, monospace; font-size: 10px; line-height: 1.25; overflow-wrap: anywhere;
+    background: var(--tile); color: #000; border: 3px var(--tbs) #fff; padding: 4px; min-width: 0;
+    font-family: var(--font); font-size: 10px; line-height: 1.25; overflow-wrap: anywhere;
   }
   .tile a:link { color: #0000EE; } .tile a:visited { color: #551A8B; } .tile a:hover { color: #f00; background: #ff0; }
   .tile .poster { display: block; border: 2px inset #808080; background: #fff; margin-bottom: 4px; line-height: 0; }
@@ -72,11 +72,11 @@
 
 
   /* games corner */
-  .games { max-width: 1100px; margin: 16px auto 0; border: 4px ridge #c0c0c0; background: #000; padding: 8px 10px 14px; }
-  .games h2 { text-align: center; color: #FFFF66; font-size: 22px; margin: 4px 0 2px; }
-  .games .cap { text-align: center; color: #99FFFF; font-size: 13px; margin-bottom: 10px; }
+  .games { max-width: 1100px; margin: 16px auto 0; border: var(--bw) var(--bs) var(--bd); background: var(--panel); padding: 8px 10px 14px; }
+  .games h2 { text-align: center; color: var(--hi); font-size: 22px; margin: 4px 0 2px; }
+  .games .cap { text-align: center; color: var(--lo); font-size: 13px; margin-bottom: 10px; }
   .gamerow { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; align-items: flex-start; }
-  .game { background: #C0C0C0; color: #000; border: 3px outset #fff; padding: 8px; text-align: center; width: 252px; box-sizing: border-box; }
+  .game { background: var(--tile); color: #000; border: 3px outset #fff; padding: 8px; text-align: center; width: 252px; box-sizing: border-box; }
   .game h3 { margin: 0 0 6px; font-size: 15px; }
   .game .stat { font-size: 12px; min-height: 16px; margin: 4px 0; color: #000080; }
   .game button.btn { font-size: 12px; cursor: pointer; }
@@ -86,7 +86,7 @@
   .ttt, .mem { display: grid; gap: 4px; margin: 4px auto; justify-content: center; }
   .ttt { grid-template-columns: repeat(3, 56px); }
   .mem { grid-template-columns: repeat(4, 50px); }
-  .cell { height: 56px; font-family: inherit; font-size: 28px; font-weight: bold; background: #C0C0C0; border: 3px outset #fff; cursor: pointer; padding: 0; color: #000; }
+  .cell { height: 56px; font-family: inherit; font-size: 28px; font-weight: bold; background: var(--tile); border: 3px outset #fff; cursor: pointer; padding: 0; color: #000; }
   .mem .cell { height: 50px; font-size: 22px; }
   .cell:active { border-style: inset; }
   .cell.x { color: #0000CC; } .cell.o { color: #CC0000; }
@@ -95,27 +95,28 @@
 
 
   /* cursor sparkles */
-  .spark { position: fixed; z-index: 9999; pointer-events: none; font-family: "Courier New", Courier, monospace; font-weight: bold; font-size: 16px; line-height: 1; animation: spark 0.9s ease-out forwards; text-shadow: 0 0 3px #fff; }
+  .spark { position: fixed; z-index: 9999; pointer-events: none; font-family: var(--font); font-weight: bold; font-size: 16px; line-height: 1; animation: spark 0.9s ease-out forwards; text-shadow: 0 0 3px #fff; }
   @keyframes spark { 0% { opacity: 1; transform: translate(-50%, -50%) scale(1); } 100% { opacity: 0; transform: translate(calc(-50% + var(--dx)), calc(-50% + 26px)) scale(0.4) rotate(120deg); } }
 
   /* dial-up: posters come in a stripe at a time, top to bottom */
   .tile .poster img.scan { animation: scan 1.6s steps(14, end) 1; }
   @keyframes scan { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
   .tile .poster:hover img.scan { animation: spin 1.2s linear infinite; }
-  #dialstat { text-align: center; color: #fff; margin: 14px 0; font-size: 14px; }
+  #dialstat { text-align: center; color: var(--txt); margin: 14px 0; font-size: 14px; }
   #dialstat .bar { display: inline-block; width: 220px; height: 14px; border: 2px inset #808080; background: #000; vertical-align: middle; margin-left: 6px; text-align: left; }
   #dialstat .bar i { display: block; height: 100%; width: 0; background: repeating-linear-gradient(90deg, #0000ff 0 8px, #000 8px 10px); }
 
   /* clock + mood + award */
-  .clockbar { text-align: center; background: #000; color: #00ff00; border-bottom: 2px solid #c0c0c0; padding: 2px 0; font-size: 14px; letter-spacing: 1px; }
-  .mood { max-width: 560px; margin: 12px auto; border: 4px ridge #c0c0c0; background: #000; padding: 8px 12px; text-align: center; font-size: 14px; }
-  .mood b { color: #FFFF66; font-size: 16px; }
+  .clockbar { text-align: center; background: var(--panel); color: #00ff00; border-bottom: 2px solid var(--bd); padding: 2px 0; font-size: 14px; letter-spacing: 1px; }
+  .mood { max-width: 560px; margin: 12px auto; border: var(--bw) var(--bs) var(--bd); background: var(--panel); padding: 8px 12px; text-align: center; font-size: 14px; }
+  .mood { color: #fff; }
+  .mood b { color: var(--hi); font-size: 16px; }
   .mood select { font-family: inherit; font-size: 13px; background: #fff; color: #000; border: 2px inset #808080; margin: 0 4px; }
-  #mood-out { margin-top: 8px; color: #99FFFF; min-height: 18px; }
+  #mood-out { margin-top: 8px; color: var(--lo); min-height: 18px; }
   #mood-out b { color: #fff; font-size: 14px; }
 
   /* Ray the helper */
-  #ray { position: fixed; right: 10px; bottom: 10px; z-index: 9000; display: flex; flex-direction: column; align-items: flex-end; max-width: 250px; font-family: "Courier New", Courier, monospace; }
+  #ray { position: fixed; right: 10px; bottom: 10px; z-index: 9000; display: flex; flex-direction: column; align-items: flex-end; max-width: 250px; font-family: var(--font); }
   #ray .bubble { background: #FFFFCC; color: #000; border: 1px solid #000; padding: 8px 10px; font-size: 12px; line-height: 1.35; box-shadow: 3px 3px 0 rgba(0,0,0,.5); margin-bottom: 10px; position: relative; }
   #ray .bubble:after { content: ""; position: absolute; right: 26px; bottom: -9px; border: 5px solid transparent; border-top: 9px solid #000; }
   #ray .bubble .acts { margin-top: 6px; text-align: right; }
@@ -127,27 +128,27 @@
 
 
   /* weather */
-  .wx { max-width: 560px; margin: 12px auto; border: 4px ridge #c0c0c0; background: #000; padding: 8px 12px; text-align: center; font-size: 14px; color: #99FFFF; }
-  .wx h3 { margin: 0 0 6px; font-size: 16px; color: #FFFF66; }
+  .wx { max-width: 560px; margin: 12px auto; border: var(--bw) var(--bs) var(--bd); background: var(--panel); padding: 8px 12px; text-align: center; font-size: 14px; color: var(--lo); }
+  .wx h3 { margin: 0 0 6px; font-size: 16px; color: var(--hi); }
   .wx .now { display: flex; gap: 14px; justify-content: center; align-items: center; flex-wrap: wrap; }
-  .wx pre { margin: 0; color: #FFFF66; font-family: inherit; font-size: 13px; line-height: 1.1; text-align: left; }
+  .wx pre { margin: 0; color: var(--hi); font-family: inherit; font-size: 13px; line-height: 1.1; text-align: left; }
   .wx .big { font-size: 26px; color: #fff; font-weight: bold; }
   .wx table { margin: 8px auto 0; border-collapse: collapse; }
   .wx td { border: 1px solid #808080; padding: 2px 8px; color: #fff; font-size: 12px; }
-  .wx td.d { color: #FFFF66; }
+  .wx td.d { color: var(--hi); }
   .wx .fine { margin-top: 6px; font-size: 11px; color: #808080; }
 
 
   /* ASCII banner */
   .srtitle { position: absolute; left: -9999px; }
-  pre.ascii { display: inline-block; text-align: left; margin: 10px 0 0; background: #000; border: 4px ridge #c0c0c0; padding: 10px 16px; font-family: "Courier New", Courier, monospace; font-weight: bold; line-height: 1.0; white-space: pre;
-    font-size: min(16px, calc((100vw - 70px) / 28.2)); text-shadow: 3px 3px 0 #000066; }
-  pre.ascii .a1 { color: #FFFF66; } pre.ascii .a2 { color: #FF7755; }
+  pre.ascii { display: inline-block; text-align: left; margin: 10px 0 0; background: var(--panel); border: var(--bw) var(--bs) var(--bd); padding: 10px 16px; font-family: var(--font); font-weight: bold; line-height: 1.0; white-space: pre;
+    letter-spacing: 0; font-size: min(16px, calc((100vw - 84px) / 28.2)); text-shadow: 3px 3px 0 var(--mq); }
+  pre.ascii .a1 { color: var(--hi); } pre.ascii .a2 { color: var(--acc); }
 
   /* fortune cookie + magic 8-ball */
   .toys { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 900px; margin: 12px auto; }
-  .toy { flex: 1 1 300px; max-width: 440px; border: 4px ridge #c0c0c0; background: #000; padding: 8px 12px; text-align: center; font-size: 14px; color: #99FFFF; }
-  .toy h3 { margin: 0 0 6px; font-size: 16px; color: #FFFF66; }
+  .toy { flex: 1 1 300px; max-width: 440px; border: var(--bw) var(--bs) var(--bd); background: var(--panel); padding: 8px 12px; text-align: center; font-size: 14px; color: var(--lo); }
+  .toy h3 { margin: 0 0 6px; font-size: 16px; color: var(--hi); }
   .toy .out { margin-top: 8px; min-height: 40px; }
   .toy .out b { color: #fff; }
   .toy input[type=text] { font-family: inherit; font-size: 13px; width: 90%; max-width: 280px; background: #fff; color: #000; border: 2px inset #808080; margin: 4px 0; padding: 2px 4px; }
@@ -163,19 +164,123 @@
   .speedo { margin: 12px auto 4px; width: 250px; text-align: center; }
   .speedo svg { display: block; width: 250px; height: 160px; margin: 0 auto; }
   .speedo .needle { transform-origin: 110px 110px; transition: transform 2.4s cubic-bezier(.2, 1.4, .4, 1); }
-  .speedo .lbl { font-size: 11px; color: #99FFFF; margin-top: 2px; }
-  .speedo .counter { display: inline-block; background: #000; color: #0f0; font-family: "Courier New", Courier, monospace; font-size: 18px; letter-spacing: 4px; padding: 1px 8px; border: 2px inset #888; }
+  .speedo .lbl { font-size: 11px; color: var(--pagelo); margin-top: 2px; }
+  .speedo .counter { display: inline-block; background: #000; color: #0f0; font-family: var(--font); font-size: 18px; letter-spacing: 4px; padding: 1px 8px; border: 2px inset #888; }
+
+
+  /* drink + food of the day */
+  .clip { display: inline-block; width: 110px; height: 110px; line-height: 110px; font-size: 68px; text-align: center; margin: 4px auto; background: radial-gradient(circle at 50% 40%, #fff 0%, #e8e8e8 55%, #bdbdbd 100%); border: 3px var(--tbs) #fff; border-radius: 50%; box-shadow: 3px 3px 0 rgba(0,0,0,.5); }
+  .clip span { display: inline-block; animation: bob 2.6s ease-in-out infinite; }
+  #dailies .out { min-height: 60px; }
+  #dailies .nm { color: #fff; font-size: 16px; font-weight: bold; display: block; margin-bottom: 4px; }
+  #dailies .pair { margin-top: 6px; font-size: 12px; color: var(--hi); }
+
+  /* tetris */
+  #tetris { position: fixed; inset: 0; z-index: 9500; background: rgba(0,0,0,.84); display: none; align-items: flex-start; justify-content: center; overflow: auto; padding: 10px; box-sizing: border-box; }
+  #tetris.open { display: flex; }
+  .tbox { background: var(--panel); border: var(--bw) var(--bs) var(--bd); padding: 8px 10px 12px; color: #fff; max-width: 640px; width: 100%; margin: auto; text-align: center; }
+  .tbox h2 { margin: 0; font-size: 18px; color: var(--hi); display: flex; justify-content: space-between; align-items: center; }
+  .tbox .cap { font-size: 12px; color: var(--lo); margin: 4px 0 8px; }
+  .tgrid { display: flex; gap: 10px; justify-content: center; align-items: flex-start; flex-wrap: wrap; }
+  .tboard { display: flex; align-items: stretch; }
+  .tlabels { display: grid; grid-template-rows: repeat(20, 1fr); font-size: 9px; color: var(--lo); text-align: right; padding-right: 4px; line-height: 1; white-space: nowrap; }
+  .tlabels div { display: flex; align-items: center; justify-content: flex-end; }
+  #tcv { display: block; background: #050510; border: 2px inset #808080; width: min(240px, 52vw); height: auto; }
+  .tside { width: 170px; text-align: left; font-size: 12px; }
+  #tnext { display: block; background: #050510; border: 2px inset #808080; margin-bottom: 6px; }
+  .tside .row { margin: 3px 0; } .tside b { color: var(--hi); }
+  #tfall { color: #fff; min-height: 32px; }
+  #tlog { margin-top: 6px; max-height: 120px; overflow: auto; font-size: 11px; color: var(--lo); border-top: 1px solid var(--bd); padding-top: 4px; }
+  #tlog div { margin-bottom: 3px; }
+  .tctl { margin-top: 8px; }
+  .tctl .btn { min-width: 44px; font-size: 16px; padding: 4px 10px; touch-action: manipulation; }
+  #tmsg { min-height: 18px; margin-top: 6px; color: var(--hi); font-weight: bold; }
+
+  /* animals that wander across the screen */
+  .critter { position: fixed; left: 0; top: 0; z-index: 8000; pointer-events: none; will-change: transform; line-height: 1; }
+  .critter span { display: block; }
+  @media (prefers-reduced-motion: reduce) { .critter { display: none; } }
 
   .more { text-align: center; margin: 22px 0; }
-  .guest { max-width: 520px; margin: 24px auto 0; border: 4px ridge #c0c0c0; background: #000; padding: 8px 14px; text-align: center; color: #fff; }
-  .foot { text-align: center; margin-top: 18px; font-size: 11px; color: #c0c0c0; }
-  .foot .tiny { font-size: 10px; color: #808080; }
-  #msg { text-align: center; color: #fff; margin: 30px 0; }
+  .guest { max-width: 520px; margin: 24px auto 0; border: var(--bw) var(--bs) var(--bd); background: var(--panel); padding: 8px 14px; text-align: center; color: #fff; }
+  .foot { text-align: center; margin-top: 18px; font-size: 11px; color: var(--txt); }
+  .foot .tiny { font-size: 10px; color: var(--txt); opacity: .75; }
+  #msg { text-align: center; color: var(--txt); margin: 30px 0; }
 
   @media (max-width: 760px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+  /* theme variables (the defaults here are the original navy look; the script in <head> picks new ones on every load) */
+  :root {
+    --bg: #000080; --txt: #FFFFFF; --pagehi: #FFFF66; --pagelo: #99FFFF;
+    --hi: #FFFF66; --lo: #99FFFF; --acc: #FF7755; --link: #00FFFF; --visited: #FF99FF;
+    --panel: #000; --tile: #C0C0C0; --mq: #000066; --bd: #c0c0c0; --bw: 4px; --bs: ridge; --tbs: outset;
+    --gap: 6px; --font: "Courier New", Courier, monospace; --fs: 16px; --ls: 0px; --cur: crosshair; --hue: 0deg;
+    --bgimg: radial-gradient(#ffffff 1px, transparent 1.5px), radial-gradient(#ffff99 1px, transparent 1.5px), radial-gradient(#99ffff 1px, transparent 1.5px);
+    --bgsz: 53px 53px, 91px 91px, 37px 37px; --bgpos: 0 0, 17px 31px, 5px 13px;
+  }
+  /* the page shakes now and then */
+  #page.quake { animation: quake 0.9s linear 1; }
+  @keyframes quake {
+    0%,100% { transform: translate(0,0); } 8% { transform: translate(-7px,3px); } 16% { transform: translate(6px,-4px); } 24% { transform: translate(-6px,-2px); }
+    32% { transform: translate(7px,4px); } 40% { transform: translate(-5px,3px); } 48% { transform: translate(5px,-3px); } 56% { transform: translate(-4px,2px); }
+    64% { transform: translate(4px,-2px); } 76% { transform: translate(-2px,1px); } 88% { transform: translate(1px,-1px); }
+  }
+  @media (prefers-reduced-motion: reduce) { #page.quake { animation: none; } }
+
 </style>
+<script>
+// A new look on every load: palette, background pattern, borders, font, spacing, cursor. Add ?theme=7 to the address to pin one.
+(function () {
+  var PAL = [
+    { n: 'Midnight', dark: 1, bg: '#000080', txt: '#FFFFFF', pagehi: '#FFFF66', pagelo: '#99FFFF', hi: '#FFFF66', lo: '#99FFFF', acc: '#FF7755', link: '#00FFFF', vis: '#FF99FF', panel: '#000000', tile: '#C0C0C0', mq: '#000066', bd: '#C0C0C0' },
+    { n: 'Teal Cave', dark: 1, bg: '#006666', txt: '#FFFFFF', pagehi: '#FFFF99', pagelo: '#CCFFFF', hi: '#FFFF99', lo: '#CCFFFF', acc: '#FF9966', link: '#FFFF00', vis: '#FFCCFF', panel: '#002222', tile: '#D0E8E8', mq: '#004444', bd: '#99CCCC' },
+    { n: 'Grape Soda', dark: 1, bg: '#4B0082', txt: '#FFFFFF', pagehi: '#FFD700', pagelo: '#E0B0FF', hi: '#FFD700', lo: '#E0B0FF', acc: '#FF69B4', link: '#00FFCC', vis: '#FFB3FF', panel: '#1A0030', tile: '#E6D8F5', mq: '#2A0050', bd: '#C9A0FF' },
+    { n: 'Brick', dark: 1, bg: '#800000', txt: '#FFFFFF', pagehi: '#FFCC00', pagelo: '#FFE4B5', hi: '#FFCC00', lo: '#FFE4B5', acc: '#FF8C69', link: '#FFFF99', vis: '#FFB6C1', panel: '#200000', tile: '#F0D8C0', mq: '#500000', bd: '#D8A080' },
+    { n: 'Pine', dark: 1, bg: '#004D1A', txt: '#FFFFFF', pagehi: '#CCFF66', pagelo: '#B3FFD9', hi: '#CCFF66', lo: '#B3FFD9', acc: '#FFA500', link: '#66FFFF', vis: '#FFB3E6', panel: '#001A08', tile: '#D8F0D0', mq: '#003311', bd: '#99CC99' },
+    { n: 'Lemon Meringue', dark: 0, bg: '#FFFFB3', txt: '#000000', pagehi: '#800000', pagelo: '#000080', hi: '#FFFF66', lo: '#99FFFF', acc: '#FF7755', link: '#00FFFF', vis: '#FF99FF', panel: '#000000', tile: '#C0C0C0', mq: '#000066', bd: '#808080' },
+    { n: 'Sky Mall', dark: 0, bg: '#99CCFF', txt: '#000033', pagehi: '#990000', pagelo: '#003366', hi: '#FFFF66', lo: '#99FFFF', acc: '#FF8866', link: '#00FFFF', vis: '#FF99FF', panel: '#001030', tile: '#E0ECFF', mq: '#003377', bd: '#6699CC' },
+    { n: 'Bubblegum', dark: 0, bg: '#FF99CC', txt: '#330033', pagehi: '#660066', pagelo: '#003366', hi: '#FFFF99', lo: '#CCFFFF', acc: '#FF66AA', link: '#66FFFF', vis: '#FFCCFF', panel: '#220022', tile: '#FFE0F0', mq: '#660044', bd: '#CC6699' },
+    { n: 'Hacker', dark: 1, bg: '#000000', txt: '#00FF00', pagehi: '#00FF00', pagelo: '#99FF99', hi: '#00FF00', lo: '#99FF99', acc: '#FFFF00', link: '#00FFFF', vis: '#FF99FF', panel: '#001100', tile: '#C0FFC0', mq: '#003300', bd: '#00AA00' },
+    { n: 'Sunset', dark: 1, bg: '#CC5500', txt: '#FFFFFF', pagehi: '#FFFF99', pagelo: '#FFE0B0', hi: '#FFFF99', lo: '#FFE0B0', acc: '#FF3366', link: '#FFFF99', vis: '#FFB3D9', panel: '#2A0F00', tile: '#FFE4C0', mq: '#883300', bd: '#FFAA66' },
+    { n: 'Newsprint', dark: 0, bg: '#E8E4D8', txt: '#111111', pagehi: '#880000', pagelo: '#222266', hi: '#FFFF66', lo: '#99FFFF', acc: '#FF7755', link: '#00FFFF', vis: '#FF99FF', panel: '#111111', tile: '#FFFFFF', mq: '#333333', bd: '#777777' }
+  ];
+  var ADJ = ['Midnight', 'Cosmic', 'Lava', 'Turbo', 'Cyber', 'Groovy', 'Neon', 'Dusty', 'Radical', 'Velvet', 'Atomic', 'Plaid'];
+  var NOUN = ['Disco', 'Basement', 'Arcade', 'Highway', 'Lounge', 'Cafeteria', 'Garage', 'Waffle', 'Carpet', 'Skating Rink', 'Mall', 'Dial-Up'];
+  var q = /[?&]theme=(\d+)/.exec(location.search);
+  var seed = q ? parseInt(q[1], 10) : Math.floor(Math.random() * 1e9);
+  var s = seed >>> 0;
+  var rnd = function () { s = (s + 0x6D2B79F5) >>> 0; var t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  var pick = function (a) { return a[Math.floor(rnd() * a.length)]; };
+  var p = pick(PAL), dark = p.dark;
+  var ink = dark ? '255,255,255' : '0,0,0';
+  var PATTERNS = [
+    ['radial-gradient(' + p.pagehi + ' 1px, transparent 1.5px), radial-gradient(' + p.pagelo + ' 1px, transparent 1.5px), radial-gradient(#fff 1px, transparent 1.5px)', '53px 53px, 91px 91px, 37px 37px', '0 0, 17px 31px, 5px 13px'],            // stars
+    ['radial-gradient(rgba(' + ink + ',.22) 2px, transparent 2.5px)', '16px 16px', '0 0'],                                                                                                                       // dots
+    ['conic-gradient(rgba(' + ink + ',.10) 25%, transparent 0 50%, rgba(' + ink + ',.10) 0 75%, transparent 0)', '40px 40px', '0 0'],                                                                              // checkerboard
+    ['repeating-linear-gradient(45deg, rgba(' + ink + ',.10) 0 10px, transparent 10px 20px)', 'auto', '0 0'],                                                                                                      // diagonal stripes
+    ['linear-gradient(rgba(' + ink + ',.14) 1px, transparent 1px), linear-gradient(90deg, rgba(' + ink + ',.14) 1px, transparent 1px)', '24px 24px', '0 0'],                                                      // graph paper
+    ['repeating-linear-gradient(0deg, rgba(' + ink + ',.08) 0 2px, transparent 2px 6px)', 'auto', '0 0'],                                                                                                         // scan lines
+    ['none', 'auto', '0 0']                                                                                                                                                                                       // plain
+  ];
+  var pat = pick(PATTERNS);
+  var fonts = ['"Courier New", Courier, monospace', '"Lucida Console", Monaco, "Courier New", monospace', 'Consolas, "Andale Mono", "Courier New", monospace', 'monospace'];
+  var r = document.documentElement.style, set = function (k, v) { r.setProperty(k, v); };
+  set('--bg', p.bg); set('--txt', p.txt); set('--pagehi', p.pagehi); set('--pagelo', p.pagelo);
+  set('--hi', p.hi); set('--lo', p.lo); set('--acc', p.acc); set('--link', p.link); set('--visited', p.vis);
+  set('--panel', p.panel); set('--tile', p.tile); set('--mq', p.mq); set('--bd', p.bd);
+  set('--bw', pick(['3px', '4px', '5px', '6px'])); set('--bs', pick(['ridge', 'groove', 'double', 'outset', 'inset']));
+  set('--tbs', pick(['outset', 'outset', 'inset', 'ridge', 'groove']));
+  set('--gap', pick(['3px', '6px', '6px', '9px', '12px']));
+  set('--font', pick(fonts)); set('--fs', pick(['15px', '16px', '16px', '17px'])); set('--ls', pick(['0px', '0px', '0.5px', '1px']));
+  set('--cur', pick(['crosshair', 'default', 'cell', 'help']));
+  set('--hue', Math.floor(rnd() * 360) + 'deg');
+  set('--bgimg', pat[0]); set('--bgsz', pat[1]); set('--bgpos', pat[2]);
+  window.KRTHEME = { seed: seed, name: pick(ADJ) + ' ' + pick(NOUN), palette: p.n };
+})();
+</script>
 </head>
 <body>
+<div id="page">
 
 <center>
   <h1 class="srtitle">Kingston Radius</h1>
@@ -192,10 +297,11 @@
   <div class="sub">Live Music Listings for the Hudson Valley</div>
   <div class="rainbow"></div>
 
-  <font size="4" color="#FFFFFF">
+  <font size="4" class="wel1">
     Welcome to the Kingston Radius home page! &nbsp;<span class="new blink">NEW!</span>
   </font><br>
-  <font size="3" color="#99FFFF">Upcoming shows within a short drive of Kingston, NY. Check back often.</font>
+  <font size="3" class="wel2">Upcoming shows within a short drive of Kingston, NY. Check back often.</font>
+  <div style="margin-top:10px"><button class="btn" id="tetris-open" type="button">&#9654; TETRIS: Book the Week</button></div>
 
   <div class="speedo">
     <svg id="speedo" viewBox="0 0 220 140" role="img" aria-label="Page view counter styled as a speedometer">
@@ -204,7 +310,7 @@
       <path d="M 28 110 A 82 82 0 0 1 36 76" fill="none" stroke="#00cc00" stroke-width="3"/>
       <path d="M 184 76 A 82 82 0 0 1 192 110" fill="none" stroke="#ff2222" stroke-width="3"/>
       <text x="110" y="88" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#99FFFF">x 1000</text>
-      <text x="110" y="132" text-anchor="middle" font-family="Courier New, monospace" font-size="10" fill="#FFFF66" font-weight="bold">PAGE VIEWS</text>
+      <text x="110" y="132" text-anchor="middle" font-family="Courier New, monospace" font-size="10" style="fill:var(--pagehi)" font-weight="bold">PAGE VIEWS</text>
       <g class="needle" id="speedo-needle" style="transform: rotate(-120deg)">
         <line x1="110" y1="110" x2="110" y2="38" stroke="#ff2222" stroke-width="3" stroke-linecap="round"/>
         <line x1="110" y1="110" x2="110" y2="122" stroke="#ff2222" stroke-width="3" stroke-linecap="round"/>
@@ -252,6 +358,19 @@
   </div>
 </div>
 
+<div class="toys" id="dailies">
+  <div class="toy" id="drink-box">
+    <h3>Drink of the Day</h3>
+    <div class="clip" id="drink-pic"></div>
+    <div class="out" id="drink-out"></div>
+  </div>
+  <div class="toy" id="food-box">
+    <h3>Food of the Day</h3>
+    <div class="clip" id="food-pic"></div>
+    <div class="out" id="food-out"></div>
+  </div>
+</div>
+
 <div class="rainbow"></div>
 
 <div id="msg">Loading show listings, please wait...</div>
@@ -296,7 +415,7 @@
 <div class="rainbow"></div>
 
 <div class="guest">
-  <font size="3" color="#FFFF66"><b>Webmaster</b></font><br><br>
+  <font size="3" style="color:var(--hi)"><b>Webmaster</b></font><br><br>
   Know of a show that should be listed here?<br>
   <a href="/contact.html">Send me e-mail</a><br><br>
   <a class="btn" href="/">Kingston Radius Home</a>
@@ -305,7 +424,38 @@
 <div class="foot">
   <p>Best viewed with Netscape Navigator 3.0 or Internet Explorer 3.0 at 800x600.<br>
   <a class="btn" href="#" onclick="window.scrollTo(0,0);return false;">^ Back to Top</a></p>
-  <p class="tiny">Last updated: <span id="updated"></span> &nbsp;|&nbsp; Copyright &copy; 1997 Kingston Radius. All rights reserved.</p>
+  <p class="tiny">Skin: <span id="skin"></span> &nbsp;|&nbsp; Last updated: <span id="updated"></span> &nbsp;|&nbsp; Copyright &copy; 1997 Kingston Radius. All rights reserved.</p>
+</div>
+
+</div><!-- /#page -->
+
+<div id="zoo" aria-hidden="true"></div>
+
+<div id="tetris" role="dialog" aria-label="Tetris">
+  <div class="tbox">
+    <h2><span>TETRIS: Book the Week</span> <button class="btn" id="tclose" type="button">X Close</button></h2>
+    <div class="cap">Each falling piece is a real listing. Fill a whole row to book that day. Arrow keys move, Up turns, Space drops, P pauses.</div>
+    <div class="tgrid">
+      <div class="tboard"><div class="tlabels" id="tlabels"></div><canvas id="tcv" width="240" height="480"></canvas></div>
+      <div class="tside">
+        <canvas id="tnext" width="96" height="96"></canvas>
+        <div class="row">Score: <b id="tscore">0</b></div>
+        <div class="row">Days booked: <b id="tdays">0</b></div>
+        <div class="row">Level: <b id="tlevel">1</b></div>
+        <div class="row" id="tfall">Press Start</div>
+        <button class="btn" id="tstart" type="button">New Game</button>
+        <div id="tlog"></div>
+      </div>
+    </div>
+    <div class="tctl">
+      <button class="btn" type="button" data-t="L" aria-label="Move left">&lt;</button>
+      <button class="btn" type="button" data-t="R2" aria-label="Turn">Turn</button>
+      <button class="btn" type="button" data-t="R" aria-label="Move right">&gt;</button>
+      <button class="btn" type="button" data-t="D" aria-label="Down">v</button>
+      <button class="btn" type="button" data-t="DROP" aria-label="Drop">Drop</button>
+    </div>
+    <div id="tmsg"></div>
+  </div>
 </div>
 
 <script>
@@ -325,6 +475,7 @@
     return t;
   };
 
+  document.getElementById('skin').textContent = (window.KRTHEME ? window.KRTHEME.name : 'Classic') + (window.KRTHEME ? ' #' + window.KRTHEME.seed : '');
   document.getElementById('updated').textContent = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).replace(/\d{4}$/, '1997');
 
   const msg = document.getElementById('msg');
@@ -514,6 +665,245 @@
 })();
 </script>
 
+<script>
+// Page extras: random quakes, Tetris with real listings, wandering animals, and the drink + food of the day.
+(function () {
+  const $ = id => document.getElementById(id);
+  const calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const rand = (a, b) => a + Math.random() * (b - a);
+  const dayKey = () => { const d = new Date(); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); };
+  const seed = str => { let h = 5381; for (let i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) | 0; return Math.abs(h); };
+  const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const pretty = e => { const [y, m, d] = e.date.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }); };
+
+  // ---------- the page shakes about once a minute ----------
+  const page = $('page');
+  function quake() {
+    if (calm || document.hidden) return;
+    page.classList.remove('quake'); void page.offsetWidth; page.classList.add('quake');
+    setTimeout(() => page.classList.remove('quake'), 1000);
+  }
+  (function schedule() { setTimeout(() => { quake(); schedule(); }, rand(40000, 80000)); })();
+
+  // ---------- animals ----------
+  const SP = {
+    dog: { e: '\u{1F415}', size: 46, dur: [5000, 8000] },
+    cat: { e: '\u{1F408}', size: 38, dur: [7000, 11000] },
+    rat: { e: '\u{1F400}', size: 26, dur: [3200, 5000] }
+  };
+  function run(kind, dir, top, delay, dur) {
+    const sp = SP[kind], w = innerWidth;
+    const el = document.createElement('div'); el.className = 'critter';
+    el.style.fontSize = sp.size + 'px'; el.style.top = top + 'px'; el.style.visibility = 'hidden';
+    const inner = document.createElement('span'); inner.textContent = sp.e;
+    inner.style.transform = dir > 0 ? 'scaleX(-1)' : 'none';              // the emoji face left, so flip them going right
+    el.appendChild(inner); $('zoo').appendChild(el);
+    const from = dir > 0 ? -90 : w + 90, to = dir > 0 ? w + 90 : -90;
+    const go = el.animate([{ transform: 'translateX(' + from + 'px)' }, { transform: 'translateX(' + to + 'px)' }], { duration: dur, delay: delay, easing: 'linear', fill: 'backwards' });
+    go.onfinish = () => el.remove();
+    setTimeout(() => { el.style.visibility = ''; }, delay);
+    inner.animate([{ transform: (dir > 0 ? 'scaleX(-1)' : 'none') + ' translateY(0)' }, { transform: (dir > 0 ? 'scaleX(-1)' : 'none') + ' translateY(-' + Math.round(sp.size * 0.18) + 'px)' }], { duration: kind === 'rat' ? 140 : 260, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' });
+  }
+  function critters() {
+    if (calm || document.hidden || $('tetris').classList.contains('open')) return;
+    const dir = Math.random() < 0.5 ? 1 : -1, h = innerHeight;
+    if (Math.random() < 0.2) {                                               // the chase: rat, then cat, then dog
+      const top = h - rand(70, 140), dur = rand(4200, 5600);
+      ['rat', 'cat', 'dog'].forEach((k, i) => run(k, dir, top - (k === 'dog' ? 8 : 0), i * 900, dur));
+      return;
+    }
+    const kind = ['dog', 'cat', 'rat'][Math.floor(Math.random() * 3)], sp = SP[kind];
+    const top = kind === 'rat' ? h - rand(40, 70) : rand(h * 0.25, h - sp.size - 20);
+    run(kind, dir, top, 0, rand(sp.dur[0], sp.dur[1]));
+  }
+  window.KRCRITTER = critters;
+  (function schedule(first) { setTimeout(() => { critters(); schedule(false); }, first ? rand(4000, 9000) : rand(9000, 28000)); })(true);
+
+  // ---------- drink + food of the day ----------
+  const DRINKS = [
+    ['\u{1F37A}', 'Rondout Amber Pint', 'A malty, copper-colored pint. Best sipped slowly during the opening act.'],
+    ['☕', 'The Soundcheck Special', 'Black coffee, one sugar, no questions. For people who show up before the doors open.'],
+    ['\u{1F377}', 'Hudson Valley Red', 'A smooth red for a slow night. Goes nicely with a long encore.'],
+    ['\u{1F378}', 'The Radar Martini', 'Shaken, not stirred, with an olive on a tiny sword.'],
+    ['\u{1F379}', 'Catskill Sunrise', 'Orange juice and grenadine in a tall glass. It looks like October leaves.'],
+    ['\u{1F943}', 'Old Dutch Neat', 'One serious pour of something amber. Sip, do not gulp.'],
+    ['\u{1F375}', 'Green Tea for the Quiet Set', 'Hot, grassy and calming. Perfect for a seated show.'],
+    ['\u{1F9C3}', 'Local Apple Cider', 'Fresh pressed and a little cloudy. Autumn in a cup.'],
+    ['\u{1F95B}', 'A Big Cold Glass of Milk', 'For the designated driver in all of us.'],
+    ['\u{1F37E}', 'Opening Night Bubbly', 'Pop the cork the moment the headliner walks on.'],
+    ['\u{1F376}', 'Warm Sake for Two', 'Small cups, slow sips, and a good seat in the back.'],
+    ['\u{1F37B}', 'Two Pints, One Song', 'Clink glasses when the chorus comes around.'],
+    ['\u{1F964}', 'Root Beer Float', 'Vanilla ice cream, root beer, and a very long straw.'],
+    ['\u{1F34B}', 'Porch Lemonade', 'Sweet, sour and full of ice. Good for loud rooms.'],
+    ['\u{1FAD6}', 'Pot of Chai', 'Spiced and steamy. Share it with a friend.'],
+    ['\u{1F9CB}', 'Bubble Tea, Backstage Edition', 'Chewy pearls and a fat straw. Hard to drink quietly.'],
+    ['\u{1F942}', 'Cheers to the Band', 'Raise a glass to whoever is on the stage tonight.'],
+    ['☕', 'Maple Latte', 'A little local maple in the foam. Tastes like a Saturday morning.'],
+    ['\u{1F37A}', 'Pilsner for the Pit', 'Light, crisp and easy to hold while standing up front.'],
+    ['\u{1F9CA}', 'Water, With Ice', 'The most important drink of the night. Please hydrate.'],
+    ['\u{1F9C9}', 'Mate on the Mountain', 'Sip it slowly and pass it around the circle.'],
+    ['\u{1F377}', 'The Late Set Rose', 'Pink, cold and a little bit fancy.'],
+    ['\u{1F379}', 'Tiki Thursday Punch', 'A pineapple wedge and a paper umbrella. Required.'],
+    ['\u{1F95B}', 'Hot Cocoa Encore', 'Whipped cream on top. Marshmallows are not optional.']
+  ];
+  const FOODS = [
+    ['\u{1F355}', 'The Late-Night Slice', 'Hot, foldable and gone in four bites.'],
+    ['\u{1F354}', 'The Backstage Burger', 'Double patty, no frills, eaten standing up.'],
+    ['\u{1F32E}', 'Tuesday Tacos (Any Day)', 'Three small tacos and a lime wedge.'],
+    ['\u{1F35F}', 'Basket of Fries to Share', 'Salty, crispy, and somehow always one short.'],
+    ['\u{1F32D}', 'Venue Hot Dog', 'Mustard only. Do not ask for anything else.'],
+    ['\u{1F96A}', 'Turkey Club Sandwich', 'Triple decker, held together with a toothpick.'],
+    ['\u{1F35D}', 'Spaghetti and Meatballs', 'Red sauce on a white shirt. Wear a napkin.'],
+    ['\u{1F35C}', 'Ramen on a Rainy Night', 'Steamy broth, curly noodles, a soft egg.'],
+    ['\u{1F95E}', 'Pancake Stack', 'Breakfast for a night owl. Extra syrup, please.'],
+    ['\u{1F9C7}', 'Waffle Sundae', 'Warm waffle, cold ice cream, and a cherry on top.'],
+    ['\u{1F357}', 'Fried Chicken Basket', 'Crunchy outside, juicy inside, eaten with both hands.'],
+    ['\u{1F957}', 'Garden Salad (For Balance)', 'Eat this first so you can feel good about dessert.'],
+    ['\u{1F369}', 'Honey Dipped Donut', 'Sticky fingers are a small price to pay.'],
+    ['\u{1F36A}', 'The Warm Cookie', 'Chocolate chips still melted in the middle.'],
+    ['\u{1F968}', 'Giant Soft Pretzel', 'Salt, mustard and a big torn-off piece for a friend.'],
+    ['\u{1F37F}', 'Bucket of Popcorn', 'Buttery, salty and easy to snack on during a slow song.'],
+    ['\u{1F363}', 'Sushi Platter', 'A little bit of everything, neatly lined up.'],
+    ['\u{1F32F}', 'Foil-Wrapped Burrito', 'Heavy as a brick and twice as satisfying.'],
+    ['\u{1F959}', 'Falafel Pita', 'Crunchy, saucy and perfect for walking.'],
+    ['\u{1F372}', 'Hearty Stew', 'A cold-night special. Bread for dipping is a must.'],
+    ['\u{1F9C0}', 'Cheese Board', 'Three cheeses, a few crackers and good company.'],
+    ['\u{1F370}', 'Slice of Cake', 'Two forks, please. Maybe three.'],
+    ['\u{1F950}', 'Butter Croissant', 'Flaky, golden and gone before you know it.'],
+    ['\u{1F373}', 'Breakfast for Dinner', 'Eggs, toast and a good reason to stay up late.']
+  ];
+  function dailies() {
+    const k = dayKey();
+    const d = DRINKS[seed(k + 'drink') % DRINKS.length], f = FOODS[seed(k + 'food') % FOODS.length];
+    $('drink-pic').innerHTML = '<span>' + d[0] + '</span>';
+    $('food-pic').innerHTML = '<span>' + f[0] + '</span>';
+    $('drink-out').innerHTML = '<span class="nm">' + esc(d[1]) + '</span>' + esc(d[2]) + '<div class="pair" id="drink-pair"></div>';
+    $('food-out').innerHTML = '<span class="nm">' + esc(f[1]) + '</span>' + esc(f[2]) + '<div class="pair" id="food-pair"></div>';
+  }
+  dailies();
+  function pairs(list) {
+    if (!list || !list.length) return;
+    const k = dayKey(), lim = new Date(); lim.setDate(lim.getDate() + 7);
+    const ds = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    const week = list.filter(e => e.date <= ds(lim)), pool = week.length ? week : list;
+    const pe = pool[seed(k + 'dp') % pool.length], pf = pool[seed(k + 'fp') % pool.length];
+    $('drink-pair').innerHTML = 'Try it at: ' + esc(pe.venue) + ' (' + esc(pe.title) + ', ' + esc(pretty(pe)) + ')';
+    $('food-pair').innerHTML = 'Try it at: ' + esc(pf.venue) + ' (' + esc(pf.title) + ', ' + esc(pretty(pf)) + ')';
+  }
+  if (window.KRSHOWS) pairs(window.KRSHOWS); else document.addEventListener('krshows', () => pairs(window.KRSHOWS));
+
+  // ---------- tetris ----------
+  const W = 10, H = 20, CELL = 24;
+  const SHAPES = {
+    I: [[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0]], O: [[1,1],[1,1]], T: [[0,1,0],[1,1,1],[0,0,0]],
+    S: [[0,1,1],[1,1,0],[0,0,0]], Z: [[1,1,0],[0,1,1],[0,0,0]], J: [[1,0,0],[1,1,1],[0,0,0]], L: [[0,0,1],[1,1,1],[0,0,0]]
+  };
+  const COLORS = { I: '#14c8c8', O: '#e0d000', T: '#a848d0', S: '#38c038', Z: '#e04040', J: '#4070e8', L: '#f09028' };
+  const KEYS = Object.keys(SHAPES);
+  const cv = $('tcv'), cx = cv.getContext('2d'), nv = $('tnext'), nx = nv.getContext('2d');
+  let grid, cur, nxt, score, lines, level, days, over, paused, timer, started = false;
+  const FALLBACK = [{ title: 'Open Mic Night', venue: 'Somewhere Nice' }, { title: 'Friday Jam', venue: 'The Back Room' }, { title: 'Sunday Brunch Band', venue: 'The Corner Cafe' }];
+  const dayLabel = r => { const d = new Date(); d.setDate(d.getDate() + (H - 1 - r)); return d.toLocaleDateString('en-US', { weekday: 'short', month: 'numeric', day: 'numeric' }); };
+  const fullDay = r => { const d = new Date(); d.setDate(d.getDate() + (H - 1 - r)); return d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }); };
+  $('tlabels').innerHTML = Array.from({ length: H }, (_, r) => '<div>' + dayLabel(r) + '</div>').join('');
+
+  function newPiece() {
+    const type = KEYS[Math.floor(Math.random() * KEYS.length)];
+    const pool = (window.KRSHOWS && window.KRSHOWS.length) ? window.KRSHOWS : FALLBACK;
+    const show = pool[Math.floor(Math.random() * pool.length)];
+    const chars = String(show.title).replace(/[^A-Za-z0-9]/g, '').toUpperCase() || 'SHOW';
+    let n = 0;
+    const m = SHAPES[type].map(row => row.map(v => v ? { ch: chars[n++ % chars.length], t: show.title } : null));
+    return { type, m, x: 0, y: 0, show };
+  }
+  const place = p => { p.x = Math.floor((W - p.m.length) / 2); p.y = p.type === 'I' ? -1 : 0; return p; };
+  const rot = m => { const n = m.length; return m.map((row, r) => row.map((_, c) => m[n - 1 - c][r])); };
+  function hit(m, x, y) {
+    for (let r = 0; r < m.length; r++) for (let c = 0; c < m[r].length; c++) {
+      if (!m[r][c]) continue;
+      const gx = x + c, gy = y + r;
+      if (gx < 0 || gx >= W || gy >= H) return true;
+      if (gy >= 0 && grid[gy][gx]) return true;
+    }
+    return false;
+  }
+  function block(g, x, y, size, color, ch) {
+    g.fillStyle = color; g.fillRect(x, y, size, size);
+    g.fillStyle = 'rgba(255,255,255,.35)'; g.fillRect(x, y, size, 3); g.fillRect(x, y, 3, size);
+    g.fillStyle = 'rgba(0,0,0,.35)'; g.fillRect(x, y + size - 3, size, 3); g.fillRect(x + size - 3, y, 3, size);
+    if (ch) { g.fillStyle = '#000'; g.font = 'bold ' + Math.round(size * 0.55) + 'px "Courier New", monospace'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(ch, x + size / 2, y + size / 2 + 1); }
+  }
+  function draw() {
+    cx.fillStyle = '#050510'; cx.fillRect(0, 0, cv.width, cv.height);
+    cx.strokeStyle = 'rgba(255,255,255,.07)'; cx.lineWidth = 1;
+    for (let r = 1; r < H; r++) { cx.beginPath(); cx.moveTo(0, r * CELL + .5); cx.lineTo(cv.width, r * CELL + .5); cx.stroke(); }
+    for (let c = 1; c < W; c++) { cx.beginPath(); cx.moveTo(c * CELL + .5, 0); cx.lineTo(c * CELL + .5, cv.height); cx.stroke(); }
+    for (let r = 0; r < H; r++) for (let c = 0; c < W; c++) { const g = grid[r][c]; if (g) block(cx, c * CELL, r * CELL, CELL, g.color, g.ch); }
+    if (cur) cur.m.forEach((row, r) => row.forEach((v, c) => { if (v && cur.y + r >= 0) block(cx, (cur.x + c) * CELL, (cur.y + r) * CELL, CELL, COLORS[cur.type], v.ch); }));
+    nx.fillStyle = '#050510'; nx.fillRect(0, 0, 96, 96);
+    if (nxt) { const s = 20, off = (96 - nxt.m.length * s) / 2; nxt.m.forEach((row, r) => row.forEach((v, c) => { if (v) block(nx, off + c * s, off + r * s, s, COLORS[nxt.type], v.ch); })); }
+  }
+  const msg = t => { $('tmsg').textContent = t || ''; };
+  function stats() {
+    $('tscore').textContent = score; $('tdays').textContent = days; $('tlevel').textContent = level;
+    $('tfall').innerHTML = cur ? 'Now falling:<br><b>' + esc(cur.show.title) + '</b> @ ' + esc(cur.show.venue) : '';
+  }
+  function speed() { return Math.max(90, 650 - (level - 1) * 55); }
+  function restartTimer() { clearInterval(timer); if (!over && !paused) timer = setInterval(drop, speed()); }
+  function spawn() {
+    cur = place(nxt || newPiece()); nxt = newPiece();
+    if (hit(cur.m, cur.x, cur.y)) { over = true; clearInterval(timer); msg('The calendar is full! Final score ' + score + '. Press New Game.'); }
+    stats(); draw();
+  }
+  function lock() {
+    cur.m.forEach((row, r) => row.forEach((v, c) => { if (v) { const gy = cur.y + r; if (gy >= 0) grid[gy][cur.x + c] = { color: COLORS[cur.type], ch: v.ch, t: v.t }; } }));
+    let cleared = 0;
+    for (let r = H - 1; r >= 0; r--) {
+      if (grid[r].every(Boolean)) {
+        const titles = [...new Set(grid[r].map(g => g.t))];
+        const log = document.createElement('div');
+        log.textContent = 'Booked ' + fullDay(r + cleared) + ': ' + titles.slice(0, 3).join(', ') + (titles.length > 3 ? ' + ' + (titles.length - 3) + ' more' : '');
+        $('tlog').prepend(log);
+        grid.splice(r, 1); grid.unshift(Array(W).fill(null)); cleared++; r++;
+      }
+    }
+    if (cleared) { score += [0, 100, 300, 500, 800][cleared] * level; lines += cleared; days += cleared; level = 1 + Math.floor(lines / 5); msg(cleared > 1 ? cleared + ' days booked at once!' : 'A day is booked!'); restartTimer(); }
+    spawn();
+  }
+  function drop() { if (over || paused || !cur) return; if (!hit(cur.m, cur.x, cur.y + 1)) { cur.y++; draw(); } else lock(); }
+  function move(dx) { if (over || paused || !cur) return; if (!hit(cur.m, cur.x + dx, cur.y)) { cur.x += dx; draw(); } }
+  function turn() {
+    if (over || paused || !cur || cur.type === 'O') return;
+    const m = rot(cur.m);
+    for (const k of [0, -1, 1, -2, 2]) if (!hit(m, cur.x + k, cur.y)) { cur.m = m; cur.x += k; draw(); return; }
+  }
+  function slam() { if (over || paused || !cur) return; let n = 0; while (!hit(cur.m, cur.x, cur.y + 1)) { cur.y++; n++; } score += n; lock(); }
+  function soft() { if (over || paused || !cur) return; if (!hit(cur.m, cur.x, cur.y + 1)) { cur.y++; score++; stats(); draw(); } else lock(); }
+  function start() {
+    grid = Array.from({ length: H }, () => Array(W).fill(null)); score = 0; lines = 0; level = 1; days = 0; over = false; paused = false; nxt = null; started = true;
+    $('tlog').innerHTML = ''; msg(''); spawn(); restartTimer();
+  }
+  function open() {
+    $('tetris').classList.add('open'); document.body.style.overflow = 'hidden';
+    if (!started || over) start(); else { paused = false; restartTimer(); msg(''); }
+  }
+  function close() { $('tetris').classList.remove('open'); document.body.style.overflow = ''; paused = true; clearInterval(timer); }
+  $('tetris-open').onclick = open; $('tclose').onclick = close; $('tstart').onclick = start;
+  $('tetris').addEventListener('click', e => { if (e.target === $('tetris')) close(); });
+  const ACT = { L: () => move(-1), R: () => move(1), R2: turn, D: soft, DROP: slam };
+  document.querySelectorAll('.tctl [data-t]').forEach(b => { b.onclick = () => ACT[b.dataset.t](); });
+  document.addEventListener('keydown', e => {
+    if (!$('tetris').classList.contains('open')) return;
+    const k = e.key;
+    if (k === 'Escape') { close(); return; }
+    if (k === 'p' || k === 'P') { if (over) return; paused = !paused; msg(paused ? 'Paused. Press P to continue.' : ''); restartTimer(); return; }
+    const map = { ArrowLeft: ACT.L, ArrowRight: ACT.R, ArrowUp: turn, x: turn, X: turn, ArrowDown: soft, ' ': slam };
+    if (map[k]) { e.preventDefault(); map[k](); }
+  });
+  window.KRTETRIS = { open, close, state: () => ({ score, lines, days, level, over, cur: cur && cur.type, grid }), act: ACT };
+})();
+</script>
+
 <div id="ray">
   <div class="bubble" id="ray-bubble" style="display:none">
     <div id="ray-text"></div>
@@ -601,7 +991,9 @@
     'Try holding your mouse over a poster. Go on.',
     'There are some games at the bottom of the page. Snake is my favorite.',
     'Not sure what to see? Try the Mood of the Day box near the top of the page.',
-    'Remember to check back often. New shows are added all the time.'
+    'Remember to check back often. New shows are added all the time.',
+    'Press the Tetris button near the top. Every piece is a real listing.',
+    'Keep an eye on the bottom of the screen. Something might run by.'
   ];
   function buildTips(list) {
     const t = [tips[0]], today = dayStr(new Date());
