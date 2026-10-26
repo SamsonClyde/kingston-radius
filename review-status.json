@@ -2162,5 +2162,10 @@
   "Keegan Ales||2026-11-08||2:00 pm": {
     "status": "rejected",
     "hiddenAt": 1793010635502
-  }
+  },
+  "Love, Velma||2026-12-31||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1793010754171
+  },
+  "Love, Velma||2026-12-31||20:00": "approved"
 }
