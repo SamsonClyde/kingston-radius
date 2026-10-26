@@ -29915,5 +29915,19 @@
     "price": "$27",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793009958087,
+    "title": "Restoration Open Boat - James Felice",
+    "date": "2026-11-14",
+    "time": "13:00",
+    "venue": "Hudson River Maritime Museum",
+    "venueUrl": "https://www.hrmm.org/events.html",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/BeMvKWTL7bdDv5uB6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793009947293-unnamed.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
