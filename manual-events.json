@@ -30015,5 +30015,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793012135844,
+    "title": "New Year’s Eve Celebration -Willa Vincitore Band, Traveling Riverside Blues Band, Route One",
+    "date": "2026-12-31",
+    "time": "21:30",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793012133317-nye-2026-comp-web.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
