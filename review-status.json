@@ -2179,5 +2179,9 @@
   "Towne Crier Café||2026-11-01||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1793011228297
+  },
+  "Towne Crier Café||2026-11-06||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1793011229615
   }
 }
