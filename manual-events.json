@@ -29944,5 +29944,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793010463468,
+    "title": "Mandingo Ambassador",
+    "date": "2026-12-06",
+    "time": "19:00",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793010456539-8efe07c6-63de-491d-87ac-b4c13b0321d1.avif",
+    "price": "$30+",
+    "free": false,
+    "_manual": true
   }
 ]
