@@ -29930,5 +29930,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793010165802,
+    "title": "Synacure, Strafe",
+    "date": "2026-11-07",
+    "time": "18:30",
+    "venue": "The Parlour",
+    "venueUrl": "https://www.instagram.com/theparlouron1main/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/ZQZqCGA7gysXWpmi7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793010150632-unnamed-2.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
