@@ -4820,18 +4820,18 @@
   },
   {
     "id": 424,
-    "date": "2026-10-29",
-    "title": "Junco Partners \"Mardi Gras Show\"",
-    "venue": "The Falcon",
-    "venueUrl": "https://www.liveatthefalcon.com",
-    "location": "Marlboro, NY",
-    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    "time": "19:30",
-    "price": "See website",
+    "date": "2026-12-31",
+    "title": "NYE - DJ Andre Acosta (Membership Required)",
+    "venue": "Love, Velma",
+    "venueUrl": "https://www.lovevelma.com/calendar/nye-fdj-andre-acosta",
+    "location": "Ellenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1N7G54TEiuvAWsch9",
+    "time": "20:00",
+    "price": "members only",
     "free": false,
     "_source": "scraped",
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791975018840-69134a21e53534846e27db4b-junco-partners-press-photo-2025-sq-.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793010730407-turntables-dj-andre-acosta.jpg",
+    "_manual": true
   },
   {
     "id": 426,
