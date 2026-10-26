@@ -22634,7 +22634,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793009986168-unnamed-1.jpg",
     "price": "$22adv/$27door",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1790696262451,
