@@ -29987,5 +29987,19 @@
     "price": "$25+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793011190505,
+    "title": "SuckaPunch, Snow White, Obsidian",
+    "date": "2027-02-20",
+    "time": "19:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793011165495-3981da-af07b2ef2b094610be3a4446961e3d97-mv2.avif",
+    "price": "$15+",
+    "free": false,
+    "_manual": true
   }
 ]
