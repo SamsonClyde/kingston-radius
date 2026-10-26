@@ -2149,5 +2149,9 @@
   "Towne Crier Café||2026-10-31||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1792764434367
+  },
+  "Keegan Ales||2026-11-01||11:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1793009486085
   }
 }
