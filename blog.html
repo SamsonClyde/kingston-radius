@@ -116,13 +116,44 @@
   #mood-out b { color: #fff; font-size: 14px; }
 
   /* Ray the helper */
-  #ray { position: fixed; right: 10px; bottom: 10px; z-index: 9000; display: flex; flex-direction: column; align-items: flex-end; max-width: 250px; font-family: var(--font); }
+  #ray { position: fixed; right: 10px; bottom: 10px; z-index: 9600; display: flex; flex-direction: column; align-items: flex-end; max-width: 250px; font-family: var(--font); }
   #ray .bubble { background: #FFFFCC; color: #000; border: 1px solid #000; padding: 8px 10px; font-size: 12px; line-height: 1.35; box-shadow: 3px 3px 0 rgba(0,0,0,.5); margin-bottom: 10px; position: relative; }
   #ray .bubble:after { content: ""; position: absolute; right: 26px; bottom: -9px; border: 5px solid transparent; border-top: 9px solid #000; }
   #ray .bubble .acts { margin-top: 6px; text-align: right; }
   #ray .bubble .acts button { font-family: inherit; font-size: 11px; background: #C0C0C0; border: 2px outset #fff; cursor: pointer; margin-left: 4px; color: #000; padding: 1px 6px; }
   #ray svg { width: 54px; height: 54px; cursor: pointer; filter: drop-shadow(2px 2px 0 rgba(0,0,0,.5)); animation: bob 2.4s ease-in-out infinite; }
   @keyframes bob { 50% { transform: translateY(-4px); } }
+
+  /* Ray gets mad */
+  #ray.mad svg { animation: rage 0.12s linear infinite; filter: saturate(1.6) brightness(.78) drop-shadow(2px 2px 0 rgba(0,0,0,.5)); }
+  #ray.mad .bubble { background: #FFD9D2; border-color: #990000; color: #5a0000; font-weight: bold; }
+  #ray.mad .bubble:after { border-top-color: #990000; }
+  @keyframes rage { 0% { transform: translate(0,0) rotate(0); } 25% { transform: translate(-2px,1px) rotate(-3deg); } 50% { transform: translate(2px,-1px) rotate(3deg); } 75% { transform: translate(-1px,-1px) rotate(-2deg); } 100% { transform: translate(0,0) rotate(0); } }
+  @media (prefers-reduced-motion: reduce) { #ray.mad svg { animation: none; } }
+
+  body.tetris-open #ray { pointer-events: none; }
+  #ray.happy svg { animation: hop 0.35s ease-in-out infinite; }
+  @keyframes hop { 50% { transform: translateY(-10px); } }
+  #ray.sad svg { filter: saturate(.5) brightness(.85) drop-shadow(2px 2px 0 rgba(0,0,0,.5)); animation: none; }
+  @media (prefers-reduced-motion: reduce) { #ray.happy svg { animation: none; } }
+
+  /* Pet Radar */
+  #pet-box { max-width: 440px; }
+  #pet-svg { width: 150px; height: 150px; cursor: pointer; display: block; margin: 4px auto; }
+  .pet-sweep { transform-origin: 60px 64px; animation: petsweep 3s linear infinite; }
+  @keyframes petsweep { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .pet-sweep { animation: none; } }
+  #pet-svg.eat { animation: munch 0.45s ease-in-out 2; }
+  @keyframes munch { 0%,100% { transform: scale(1,1); } 50% { transform: scale(1.08,.9); } }
+  #pet-svg.wiggle { animation: wiggle 0.5s ease-in-out 1; }
+  @keyframes wiggle { 0%,100% { transform: rotate(0); } 25% { transform: rotate(-6deg); } 75% { transform: rotate(6deg); } }
+  #pet-bar { display: inline-block; width: 160px; height: 14px; border: 2px inset #808080; background: #000; vertical-align: middle; margin-left: 6px; text-align: left; }
+  #pet-bar i { display: block; height: 100%; width: 100%; background: repeating-linear-gradient(90deg, #00cc00 0 8px, #000 8px 10px); transition: width .6s; }
+  #pet-bar.low i { background: repeating-linear-gradient(90deg, #ff3333 0 8px, #000 8px 10px); }
+  #pet-bar.mid i { background: repeating-linear-gradient(90deg, #ffcc00 0 8px, #000 8px 10px); }
+  .floaty { position: fixed; z-index: 9400; pointer-events: none; font-size: 22px; animation: floaty 1.2s ease-out forwards; }
+  @keyframes floaty { 0% { opacity: 1; transform: translate(-50%, 0); } 100% { opacity: 0; transform: translate(-50%, -60px); } }
+  @media (prefers-reduced-motion: reduce) { #pet-svg.eat, #pet-svg.wiggle { animation: none; } .floaty { animation-duration: .01s; } }
   @media (max-width: 760px) { #ray { max-width: 190px; } #ray svg { width: 42px; height: 42px; } }
   @media (prefers-reduced-motion: reduce) { #ray svg { animation: none; } .spark { display: none; } }
 
@@ -200,6 +231,7 @@
   .critter { position: fixed; left: 0; top: 0; z-index: 8000; pointer-events: none; will-change: transform; line-height: 1; }
   .critter span { display: block; }
   @media (prefers-reduced-motion: reduce) { .critter { display: none; } }
+
 
   .more { text-align: center; margin: 22px 0; }
   .guest { max-width: 520px; margin: 24px auto 0; border: var(--bw) var(--bs) var(--bd); background: var(--panel); padding: 8px 14px; text-align: center; color: #fff; }
@@ -368,6 +400,28 @@
     <h3>Food of the Day</h3>
     <div class="clip" id="food-pic"></div>
     <div class="out" id="food-out"></div>
+  </div>
+</div>
+
+<div class="toys">
+  <div class="toy" id="pet-box">
+    <h3>Pet Radar</h3>
+    Meet Blip, a radar screen with feelings. Blip likes snacks and gets hungry over time.
+    <svg id="pet-svg" viewBox="0 0 120 120" role="img" aria-label="Blip, your pet radar screen">
+      <ellipse cx="60" cy="113" rx="32" ry="5" fill="rgba(0,0,0,.45)"/>
+      <rect x="36" y="104" width="12" height="8" rx="2" fill="#c0c0c0"/><rect x="72" y="104" width="12" height="8" rx="2" fill="#c0c0c0"/>
+      <circle cx="60" cy="64" r="44" fill="#0a2a1a" stroke="#c0c0c0" stroke-width="5"/>
+      <g id="pet-rings" fill="none" stroke="#2fd36b" stroke-opacity=".55" stroke-width="2"><circle cx="60" cy="64" r="32"/><circle cx="60" cy="64" r="18"/></g>
+      <g id="pet-sweep" class="pet-sweep"><path id="pet-wedge" d="M60 64 L60 20 A 44 44 0 0 1 98 42 Z" fill="#2fd36b" opacity=".28"/><line id="pet-line" x1="60" y1="64" x2="98" y2="42" stroke="#7dffa8" stroke-width="3" stroke-linecap="round"/></g>
+      <circle id="pet-ant" cx="86" cy="36" r="3.5" fill="#7dffa8"/>
+      <circle cx="46" cy="62" r="6.5" fill="#fff"/><circle cx="70" cy="62" r="6.5" fill="#fff"/>
+      <circle id="pet-e1" cx="47" cy="63" r="3.2" fill="#000"/><circle id="pet-e2" cx="71" cy="63" r="3.2" fill="#000"/>
+      <path id="pet-mouth" d="M48 78 Q60 90 72 78" fill="none" stroke="#7dffa8" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <div>Fullness: <span id="pet-bar"><i id="pet-fill"></i></span> <span id="pet-pct">100%</span></div>
+    <div class="out" id="pet-out" style="min-height:22px">Blip is happy to see you.</div>
+    <button class="btn" id="pet-feed" type="button">Feed Blip</button>
+    <button class="btn" id="pet-pet" type="button">Pet Blip</button>
   </div>
 </div>
 
@@ -681,6 +735,7 @@
   function quake() {
     if (calm || document.hidden) return;
     page.classList.remove('quake'); void page.offsetWidth; page.classList.add('quake');
+    document.dispatchEvent(new CustomEvent('krquake'));
     setTimeout(() => page.classList.remove('quake'), 1000);
   }
   (function schedule() { setTimeout(() => { quake(); schedule(); }, rand(40000, 80000)); })();
@@ -713,6 +768,7 @@
       return;
     }
     const kind = ['dog', 'cat', 'rat'][Math.floor(Math.random() * 3)], sp = SP[kind];
+    document.dispatchEvent(new CustomEvent('krcritter', { detail: kind }));
     const top = kind === 'rat' ? h - rand(40, 70) : rand(h * 0.25, h - sp.size - 20);
     run(kind, dir, top, 0, rand(sp.dur[0], sp.dur[1]));
   }
@@ -852,7 +908,7 @@
   function restartTimer() { clearInterval(timer); if (!over && !paused) timer = setInterval(drop, speed()); }
   function spawn() {
     cur = place(nxt || newPiece()); nxt = newPiece();
-    if (hit(cur.m, cur.x, cur.y)) { over = true; clearInterval(timer); msg('The calendar is full! Final score ' + score + '. Press New Game.'); }
+    if (hit(cur.m, cur.x, cur.y)) { over = true; clearInterval(timer); msg('The calendar is full! Final score ' + score + '. Press New Game.'); document.dispatchEvent(new CustomEvent('krfull')); }
     stats(); draw();
   }
   function lock() {
@@ -867,7 +923,7 @@
         grid.splice(r, 1); grid.unshift(Array(W).fill(null)); cleared++; r++;
       }
     }
-    if (cleared) { score += [0, 100, 300, 500, 800][cleared] * level; lines += cleared; days += cleared; level = 1 + Math.floor(lines / 5); msg(cleared > 1 ? cleared + ' days booked at once!' : 'A day is booked!'); restartTimer(); }
+    if (cleared) { score += [0, 100, 300, 500, 800][cleared] * level; lines += cleared; days += cleared; level = 1 + Math.floor(lines / 5); msg(cleared > 1 ? cleared + ' days booked at once!' : 'A day is booked!'); restartTimer(); document.dispatchEvent(new CustomEvent('krbooked', { detail: cleared })); }
     spawn();
   }
   function drop() { if (over || paused || !cur) return; if (!hit(cur.m, cur.x, cur.y + 1)) { cur.y++; draw(); } else lock(); }
@@ -884,10 +940,10 @@
     $('tlog').innerHTML = ''; msg(''); spawn(); restartTimer();
   }
   function open() {
-    $('tetris').classList.add('open'); document.body.style.overflow = 'hidden';
+    $('tetris').classList.add('open'); document.body.classList.add('tetris-open'); document.body.style.overflow = 'hidden';
     if (!started || over) start(); else { paused = false; restartTimer(); msg(''); }
   }
-  function close() { $('tetris').classList.remove('open'); document.body.style.overflow = ''; paused = true; clearInterval(timer); }
+  function close() { $('tetris').classList.remove('open'); document.body.classList.remove('tetris-open'); document.body.style.overflow = ''; paused = true; clearInterval(timer); }
   $('tetris-open').onclick = open; $('tclose').onclick = close; $('tstart').onclick = start;
   $('tetris').addEventListener('click', e => { if (e.target === $('tetris')) close(); });
   const ACT = { L: () => move(-1), R: () => move(1), R2: turn, D: soft, DROP: slam };
@@ -904,6 +960,71 @@
 })();
 </script>
 
+<script>
+// Pet Radar: Blip gets hungry while you are away. Feed and pet him. His snacks are saved in this browser.
+(function () {
+  const $ = id => document.getElementById(id);
+  const KEY = 'kr_pet_blip', RATE = 1 / 90000;                       // lose 1 point of fullness every 90 seconds (about 2.5 hours from full to empty)
+  const SNACKS = ['\u{1F36A}', '\u{1F355}', '\u{1F34E}', '\u{1F9C0}', '\u{1F955}', '\u{1F369}', '\u{1F32D}', '\u{1F34C}'];
+  let st = { f: 80, ts: Date.now(), fed: 0, pets: 0 };
+  try { const raw = JSON.parse(localStorage.getItem(KEY) || 'null'); if (raw && typeof raw.f === 'number') st = Object.assign(st, raw); } catch (e) {}
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} };
+  const now = () => Date.now();
+  const full = () => Math.max(0, Math.min(100, st.f - (now() - st.ts) * RATE));
+  const out = $('pet-out'), svg = $('pet-svg');
+  const MOUTH = { happy: 'M46 76 Q60 92 74 76', ok: 'M50 80 L70 80', hungry: 'M52 80 Q60 90 68 80 Q60 76 52 80', sad: 'M50 87 Q60 76 70 87' };
+  const TINT = { happy: ['#7dffa8', '3s'], ok: ['#7dffa8', '4.5s'], hungry: ['#ffcc44', '8s'], sad: ['#ff5555', '8s'] };
+  const LINES = {
+    happy: ['Blip is full and happy.', 'Blip is glowing. Good snack!', 'Blip beeps softly. Life is good.'],
+    ok: ['Blip is doing fine.', 'Blip is watching the sky.', 'Blip hums quietly to himself.'],
+    hungry: ['Blip\'s tummy is rumbling...', 'Blip is looking at you. Then at the snack drawer.', 'Blip is getting hungry.'],
+    sad: ['Blip is STARVING. Please feed him.', 'Blip has stopped beeping. That is bad.', 'Blip is sad and very hungry.']
+  };
+  const pickLine = k => LINES[k][Math.floor(Math.random() * LINES[k].length)];
+  let lastBand = null, lock = 0;
+  function band(f) { return f >= 66 ? 'happy' : f >= 36 ? 'ok' : f >= 12 ? 'hungry' : 'sad'; }
+  function render(force) {
+    const f = full(), b = band(f), pct = Math.round(f);
+    $('pet-fill').style.width = pct + '%'; $('pet-pct').textContent = pct + '%';
+    $('pet-bar').className = f < 25 ? 'low' : f < 55 ? 'mid' : '';
+    $('pet-mouth').setAttribute('d', MOUTH[b]);
+    const r = b === 'sad' ? 2 : 3.2; $('pet-e1').setAttribute('r', r); $('pet-e2').setAttribute('r', r);
+    const t = TINT[b];
+    $('pet-line').setAttribute('stroke', t[0]); $('pet-wedge').setAttribute('fill', t[0]); $('pet-mouth').setAttribute('stroke', t[0]); $('pet-rings').setAttribute('stroke', t[0]);
+    $('pet-sweep').style.animationDuration = t[1]; $('pet-sweep').style.animationPlayState = b === 'sad' ? 'paused' : 'running';
+    if ((force || b !== lastBand) && now() > lock) { out.textContent = pickLine(b); }
+    lastBand = b;
+  }
+  function floaty(txt, el) {
+    const r = el.getBoundingClientRect(), n = document.createElement('div'); n.className = 'floaty'; n.textContent = txt;
+    n.style.left = (r.left + r.width / 2 + (Math.random() * 40 - 20)) + 'px'; n.style.top = (r.top + r.height * 0.35) + 'px';
+    document.body.appendChild(n); setTimeout(() => n.remove(), 1300);
+  }
+  function anim(cls) { svg.classList.remove('eat', 'wiggle'); void svg.getBoundingClientRect(); svg.classList.add(cls); setTimeout(() => svg.classList.remove(cls), 1000); }
+  function say(t, ms) { out.textContent = t; lock = now() + (ms || 3500); }
+  function feed() {
+    const f = full();
+    st.f = Math.min(100, f + 25); st.ts = now(); st.fed++; save();
+    floaty(SNACKS[Math.floor(Math.random() * SNACKS.length)], svg); anim('eat');
+    say(f >= 95 ? 'Blip is stuffed! He can\'t eat another bite.' : f < 12 ? 'Blip scarfs it down. Thank you thank you thank you.' : 'Nom nom nom. Blip beeps happily. (' + st.fed + (st.fed === 1 ? ' snack' : ' snacks') + ' so far)');
+    render(false);
+  }
+  function pet() {
+    const f = full(); st.pets++; save();
+    floaty('♥', svg); anim('wiggle');
+    say(f < 12 ? 'Blip would rather have a snack than a pat.' : f < 36 ? 'Blip lets you pet him, but keeps glancing at the snack drawer.' : 'Blip leans into the pat. Beep beep.', 3000);
+    render(false);
+  }
+  $('pet-feed').onclick = feed; $('pet-pet').onclick = pet; svg.onclick = pet;
+  // while you were away
+  const away = (now() - st.ts) / 60000;
+  render(true);
+  if (away > 5 && full() < 36) say('Blip missed you. He is hungry!', 5000);
+  setInterval(() => render(false), 5000);
+  // the little blip on Blip's screen flashes
+  if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) setInterval(() => { const a = $('pet-ant'); a.setAttribute('opacity', a.getAttribute('opacity') === '0.15' ? '1' : '0.15'); }, 900);
+})();
+</script>
 <div id="ray">
   <div class="bubble" id="ray-bubble" style="display:none">
     <div id="ray-text"></div>
@@ -914,8 +1035,11 @@
     <circle cx="50" cy="50" r="34" fill="none" stroke="#fff" stroke-opacity="0.45" stroke-width="5"/>
     <line x1="50" y1="50" x2="88" y2="6" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
     <circle cx="37" cy="44" r="8" fill="#fff"/><circle cx="63" cy="44" r="8" fill="#fff"/>
-    <circle cx="39" cy="45" r="3.5" fill="#000"/><circle cx="65" cy="45" r="3.5" fill="#000"/>
-    <path d="M36 64 Q50 76 64 64" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <circle id="ray-p1" cx="39" cy="45" r="3.5" fill="#000"/><circle id="ray-p2" cx="65" cy="45" r="3.5" fill="#000"/>
+    <g id="ray-sadbrows" style="display:none" stroke="#300" stroke-width="5" stroke-linecap="round"><line x1="27" y1="36" x2="45" y2="30"/><line x1="73" y1="36" x2="55" y2="30"/></g>
+    <path id="ray-tear" style="display:none" d="M33 56 q-5 9 0 12 q5 -3 0 -12z" fill="#7fd0ff" stroke="#fff" stroke-width="1"/>
+    <g id="ray-brows" style="display:none" stroke="#300" stroke-width="5" stroke-linecap="round"><line x1="27" y1="30" x2="45" y2="38"/><line x1="73" y1="30" x2="55" y2="38"/></g>
+    <path id="ray-mouth" d="M36 64 Q50 76 64 64" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
   </svg>
 </div>
 
@@ -1007,10 +1131,69 @@
     tips = t;
   }
   const show = () => { if (hidden) return; text.textContent = tips[at % tips.length]; bubble.style.display = ''; };
-  $('ray-next').onclick = () => { at++; show(); };
-  $('ray-hide').onclick = () => { hidden = true; bubble.style.display = 'none'; };
-  $('ray-face').onclick = () => { hidden = false; at++; show(); };
+  // ---- Ray gets mad now and then ----
+  const ray = $('ray');
+  const GRUMPS = [
+    'HEY! Quit poking me!',
+    'I am TRYING to help you here!',
+    'Does nobody read my tips?!',
+    'Do you know how hard it is to be a radar dish?!',
+    'GRRR. Fine. Go to the show without me.',
+    'I do NOT get paid enough for this.',
+    'Stop clicking! I can hear that!',
+    'I have been up since 1997!'
+  ];
+  const ANGRY_AT = { rat: 'A RAT?! Somebody call somebody!', cat: 'Get that cat off my page!', dog: 'WHO LET THE DOG OUT?!' };
+  const CALM = ['...Sorry. I get like that sometimes.', 'Okay. Deep breaths. Where were we?', 'Sorry about that. Want a tip?'];
+  let madT = null, madUntil = 0;
+  const FACE = { calm: 'M36 64 Q50 76 64 64', mad: 'M36 72 Q50 58 64 72' };
+  function makeMad(line, ms) {
+    if (hidden) return;
+    ray.classList.add('mad'); $('ray-brows').style.display = ''; $('ray-mouth').setAttribute('d', FACE.mad);
+    $('ray-p1').setAttribute('r', '2.2'); $('ray-p2').setAttribute('r', '2.2');
+    text.textContent = line; bubble.style.display = '';
+    clearTimeout(madT); madUntil = Date.now() + (ms || 7000);
+    madT = setTimeout(cool, ms || 7000);
+  }
+  function resetFace() {
+    ray.classList.remove('mad', 'happy', 'sad'); $('ray-brows').style.display = 'none'; $('ray-sadbrows').style.display = 'none'; $('ray-tear').style.display = 'none';
+    $('ray-mouth').setAttribute('d', FACE.calm); $('ray-p1').setAttribute('r', '3.5'); $('ray-p2').setAttribute('r', '3.5');
+  }
+  function cool(quiet) {
+    clearTimeout(madT); madUntil = 0; resetFace();
+    if (!hidden && quiet !== true) { text.textContent = CALM[Math.floor(Math.random() * CALM.length)]; bubble.style.display = ''; }
+  }
+  // happy (booked a day) and sad (calendar full) faces
+  function feel(kind, line, ms) {
+    if (hidden) return;
+    clearTimeout(madT); resetFace(); ray.classList.add(kind);
+    if (kind === 'happy') { $('ray-mouth').setAttribute('d', 'M30 60 Q50 90 70 60'); }
+    else { $('ray-sadbrows').style.display = ''; $('ray-tear').style.display = ''; $('ray-mouth').setAttribute('d', FACE.mad); }
+    text.textContent = line; bubble.style.display = '';
+    madUntil = Date.now() + ms;
+    madT = setTimeout(() => { cool(true); }, ms);
+  }
+  const CHEER = ['Another day booked! Look at you!', 'Nice! That day is all set.', 'Ooh, a full night. Very organized.', 'Hooray! I love a packed calendar.', 'You are so good at this!'];
+  const SULK = ['The calendar is full... I\'m not mad. Just disappointed.', 'Aww. It happens to everybody.', 'Try again? I believe in you.', 'Well. That went poorly.'];
+  document.addEventListener('krbooked', e => feel('happy', e.detail > 1 ? 'WOW! ' + e.detail + ' days at once?! Amazing!' : CHEER[Math.floor(Math.random() * CHEER.length)], 3500));
+  document.addEventListener('krfull', () => feel('sad', SULK[Math.floor(Math.random() * SULK.length)], 5000));
+  const isMad = () => Date.now() < madUntil;
+  const pokes = [];                                       // timestamps of recent clicks on Ray or Next tip
+  function poke() {
+    const now = Date.now(); pokes.push(now); while (pokes.length && now - pokes[0] > 5000) pokes.shift();
+    if (pokes.length >= 5 && !isMad()) { pokes.length = 0; makeMad(GRUMPS[Math.floor(Math.random() * GRUMPS.length)], 7000); return true; }
+    return isMad();
+  }
+  $('ray-next').onclick = () => { if (poke()) return; at++; show(); };
+  $('ray-hide').onclick = () => { hidden = true; cool(); bubble.style.display = 'none'; };
+  $('ray-face').onclick = () => { if (poke()) return; hidden = false; at++; show(); };
   setTimeout(show, 2500);
+  // out of nowhere, every few minutes
+  (function schedule() { setTimeout(() => { if (!document.hidden && !isMad() && Math.random() < 0.6) makeMad(GRUMPS[Math.floor(Math.random() * GRUMPS.length)], 7000); schedule(); }, 90000 + Math.random() * 150000); })();
+  // and when the page misbehaves
+  document.addEventListener('krquake', () => { if (Math.random() < 0.5) makeMad('WHO KEEPS SHAKING THE PAGE?!', 6000); });
+  document.addEventListener('krcritter', e => { if (Math.random() < 0.5) makeMad(ANGRY_AT[e.detail] || 'WHAT WAS THAT?!', 6000); });
+  window.KRRAY = { mad: makeMad, cool };
 
   const ready = list => { wireMood(list); buildTips(list); };
   if (window.KRSHOWS) ready(window.KRSHOWS);
