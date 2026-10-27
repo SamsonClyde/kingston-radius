@@ -2171,5 +2171,10 @@
   "The Falcon||2026-12-16||See website": {
     "status": "rejected",
     "hiddenAt": 1793109897502
-  }
+  },
+  "The Half Moon||2026-11-14||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1793109975076
+  },
+  "The Half Moon||2026-11-14||20:00": "approved"
 }
