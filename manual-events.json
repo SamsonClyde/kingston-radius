@@ -30183,5 +30183,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793101711322,
+    "title": "Aidan Samp, Quinn Waltermaureron, Zack Howenstein, Will Heel.",
+    "date": "2026-11-04",
+    "time": "19:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793101677881-upstairs20wednesdays.webp",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
