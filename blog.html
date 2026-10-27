@@ -1622,7 +1622,7 @@
 <div id="ray">
   <div class="bubble" id="ray-bubble" style="display:none">
     <div id="ray-text"></div>
-    <div class="acts"><button type="button" id="ray-next">Next tip</button><button type="button" id="ray-hide">Hide</button></div>
+    <div class="acts"><button type="button" id="ray-joke">Joke</button><button type="button" id="ray-next">Next tip</button><button type="button" id="ray-hide">Hide</button></div>
   </div>
   <svg id="ray-face" viewBox="0 0 100 100" role="img" aria-label="Ray, the helper">
     <circle cx="50" cy="50" r="48" fill="#C0392B"/>
@@ -1790,13 +1790,19 @@
   $('ray-hide').onclick = () => { hidden = true; cool(); bubble.style.display = 'none'; };
   $('ray-face').onclick = () => { if (smoking) { endSmoke(true); return; } if (poke()) return; hidden = false; at++; show(); };
   setTimeout(show, 2500);
-  // out of nowhere, every few minutes
-  (function schedule() { setTimeout(() => { if (!document.hidden && !isMad() && Math.random() < 0.6) makeMad(GRUMPS[Math.floor(Math.random() * GRUMPS.length)], 7000); schedule(); }, 90000 + Math.random() * 150000); })();
+  // Ray only loses it occasionally: automatic outbursts share one cooldown, and clicking him a lot still works any time
+  let lastAutoMad = 0;
+  function autoMad(line, ms, chance) {
+    if (Date.now() - lastAutoMad < 180000 || Math.random() >= chance) return;
+    lastAutoMad = Date.now(); makeMad(line, ms);
+  }
+  // out of nowhere, now and then
+  (function schedule() { setTimeout(() => { if (!document.hidden && !isMad()) autoMad(GRUMPS[Math.floor(Math.random() * GRUMPS.length)], 7000, 0.5); schedule(); }, 360000 + Math.random() * 540000); })();
   // and when the page misbehaves
   const WOOZY = ['Whoa. Is the page okay?', 'I do not feel so good.', 'Everything is spinning. Neat.', 'Are the walls breathing?', 'Hold on to something.'];
   document.addEventListener('krtrip', () => { if (hidden || lifting || smoking || isMad()) return; const line = WOOZY[Math.floor(Math.random() * WOOZY.length)]; text.textContent = line; bubble.style.display = ''; setTimeout(() => { if (text.textContent === line) bubble.style.display = 'none'; }, 7000); });
-  document.addEventListener('krquake', () => { if (Math.random() < 0.5) makeMad('WHO KEEPS SHAKING THE PAGE?!', 6000); });
-  document.addEventListener('krcritter', e => { if (Math.random() < 0.5) makeMad(ANGRY_AT[e.detail] || 'WHAT WAS THAT?!', 6000); });
+  document.addEventListener('krquake', () => autoMad('WHO KEEPS SHAKING THE PAGE?!', 6000, 0.12));
+  document.addEventListener('krcritter', e => autoMad(ANGRY_AT[e.detail] || 'WHAT WAS THAT?!', 6000, 0.08));
   // ---- Ray gets big and does push-ups (about once every 10 minutes, on average) ----
   const lift = $('raylift');
   let lifting = false;
@@ -1899,7 +1905,7 @@
     if (!hidden) { const line = caught ? 'You did not see that.' : 'Back to work.'; text.textContent = line; bubble.style.display = ''; setTimeout(() => { if (text.textContent === line) bubble.style.display = 'none'; }, 4000); }
   }
   function startSmoke() {
-    if (smoking || lifting || calm || document.hidden || isMad() || document.body.classList.contains('tetris-open')) return false;
+    if (smoking || lifting || calm || document.hidden || document.body.classList.contains('tetris-open')) return false;   // a mad Ray can still step out for a smoke
     smoking = true; cool(true);
     ray.classList.add('smoking');
     clearTimeout(cloudT); cloud.style.display = 'block'; cloud.style.opacity = 0; void cloud.offsetWidth; haze(.3, 2.5);   // the smoke slowly takes over the page
@@ -1917,8 +1923,8 @@
     return true;
   }
   (function smokeSchedule() {
-    const wait = Math.max(90000, -Math.log(1 - Math.random()) * 720000);   // random, about every 12 minutes on average
-    setTimeout(() => { if (!startSmoke()) { setTimeout(smokeSchedule, 25000); return; } smokeSchedule(); }, wait);
+    const wait = Math.max(30000, -Math.log(1 - Math.random()) * 90000);   // random, about every 1.5 minutes on average
+    setTimeout(() => { if (!startSmoke()) { setTimeout(smokeSchedule, 10000); return; } smokeSchedule(); }, wait);
   })();
   // ---- DJ Ray: headphones, shades, two turntables, a head-bobbing set that announces real shows ----
   const dj = $('raydj'), djHead = $('dj-head');
@@ -2010,7 +2016,127 @@
     const wait = Math.max(120000, -Math.log(1 - Math.random()) * 900000);   // random, about every 15 minutes on average
     setTimeout(() => { if (!startDj()) { setTimeout(djSchedule, 25000); return; } djSchedule(); }, wait);
   })();
-  window.KRRAY = { mad: makeMad, cool, pushups: startPushups, lifting: () => lifting, smoke: startSmoke, smoking: () => smoking, dj: startDj, djing: () => djing };
+  // ---- Ray tells jokes: a setup, a pause, then the punchline ----
+  const JOKES = [
+    ["Why did the drummer bring a ladder to the show?", "To reach the high hats."],
+    ["What did the drummer name his daughter?", "Anna One, Anna Two, Anna Three, Anna Four."],
+    ["How do you get a guitarist to turn down?", "Put sheet music in front of him."],
+    ["What kind of music do mummies listen to?", "Wrap."],
+    ["Why do cats make terrible drummers?", "They keep knocking the sticks off the table."],
+    ["What do you call a dog that plays in a band?", "A barkestra."],
+    ["Why did the website go to the concert?", "It wanted to get some hits."],
+    ["What is a webmaster's favorite band?", "Dial-Up and the Modems."],
+    ["Why was the computer cold at the show?", "It left its Windows open."],
+    ["What's the difference between a fiddle and a violin?", "Nobody minds if you spill a beer on a fiddle."],
+    ["Why did the tambourine player join the band?", "He was looking for a shake-up."],
+    ["Why did the chicken cross the Kingston-Rhinecliff Bridge?", "To catch the late set."],
+    ["Why did the band break up on the Thruway?", "Creative differences, and one very expensive toll."],
+    ["What's a ghost's favorite kind of show?", "A boo-gie-woogie night."],
+    ["I would tell you a joke about radar...", "...but it would go right over your head."],
+    ["Why am I so good at finding you a show?", "I'm great at picking up signals. Hints, not so much."],
+    ["How do you know a Hudson Valley show is sold out?", "Everyone is parked in a field calling it \"rustic.\""],
+    ["Why did the banjo player get a ticket?", "He kept going in circles and never made a point."],
+    ["Why was the sheet music so tired?", "Too many rests."],
+    ["What do you call a band of 90s webmasters?", "A hit counter act."],
+    ["What's a bass player's favorite pizza?", "Deep dish. It's all about the low end."],
+    ["Why did the scarecrow headline the orchard show?", "He was outstanding in his field."],
+    ["Why did the piano go to therapy?", "Too many unresolved chords."],
+    ["Why do trombone players make great friends?", "They always slide in when you need them."],
+    ["What did the flute say to the piccolo?", "You're a little sharp today."],
+    ["Why did the cymbal player get promoted?", "He made a crash impression."],
+    ["What's a banjo player's favorite vegetable?", "Pick-les."],
+    ["Why did the band hire a gardener?", "They needed someone with good roots."],
+    ["What do you call a folk singer who loves coffee?", "A cold brew-badour."],
+    ["What's a drummer's favorite sandwich?", "Anything with a lot of beets."],
+    ["What do you call a music teacher with a lot of keys?", "A janitor."],
+    ["Why was the music stand so stressed?", "It was holding too much sheet."],
+    ["Why did the saxophone get a raise?", "Its performance review was smooth."],
+    ["What do you call a cat that plays the piano?", "A key-tty."],
+    ["What do you call a dog magician?", "A labracadabrador."],
+    ["Why did the guitar get a speeding ticket?", "It was driving everyone to a fretful state."],
+    ["Why was the bassist so calm at the show?", "He had a very low-key attitude."],
+    ["Why did the singer bring a pencil to the stage?", "In case she had to draw out the last note."],
+    ["What do you call a band that plays only on rainy days?", "The Drizzle Brothers."],
+    ["Why did the band take a ruler to the venue?", "They wanted to measure the stage presence."],
+    ["Why was the concert so cold?", "All the fans left."],
+    ["What's a ghost's favorite instrument?", "The boo-zouki."],
+    ["What do you call a band that only plays during snow?", "The Flurries."],
+    ["What's the Hudson Valley's favorite hobby?", "Leaf peeping."],
+    ["Why do Hudson Valley apples make great singers?", "They always hit the high Gala notes."],
+    ["Why is the Hudson River so good at music?", "It's got great flow."],
+    ["Why did the leaf leave the show early?", "It was falling behind."],
+    ["Why do Kingston shows sometimes start late?", "The band is still looking for parking."],
+    ["What is Rondout Creek's favorite band?", "Creedence Clearwater Revival."],
+    ["How can you tell it's fall in the Hudson Valley?", "Every show has a pumpkin beer and a flannel."],
+    ["Why did the farm stand start a band?", "It had great produce-ers."],
+    ["What did the pumpkin say at open mic?", "I've got a gourd-geous voice."],
+    ["What's a Catskills bear's favorite kind of music?", "Anything with a good growl."],
+    ["Why did the bridge go to a show?", "It wanted to connect with the crowd."],
+    ["Why did the cider donut get a record deal?", "It was on a roll."],
+    ["What did the maple tree say to the stage crew?", "Don't forget to tap in."],
+    ["Why was the Kingston waterfront so good at jazz?", "It has a lot of smooth sailing."],
+    ["Why did the webmaster get dumped?", "Too many broken links."],
+    ["What did the hit counter say to the guest book?", "Sign here. I'm counting on you."],
+    ["Why did the modem go to the concert?", "It heard the screeching was the headliner."],
+    ["Why did the floppy disk quit the band?", "It only had room for one song."],
+    ["What's a 90s webmaster's favorite dance?", "The Macarena, in 256 colors."],
+    ["Why can't computers play in bands?", "They keep crashing the show."],
+    ["Why did the banner ad get invited on stage?", "Everybody loves a good plug."],
+    ["Where do webmasters keep their savings?", "In the cache."],
+    ["What's a webmaster's favorite snack at the show?", "Cookies, but only the ones that expire."],
+    ["Why did the GIF steal the show?", "It kept going around and around at the encore."],
+    ["Why was the pop-up window so unpopular at the concert?", "It kept coming up in the middle of the show."],
+    ["What did the search engine say to the lost fan?", "I can find what you want. Just not who the opening act was."],
+    ["Why did the web page need a nap?", "Too many frames."],
+    ["Why did the pixel start a band?", "It wanted to be part of the big picture."],
+    ["Why can't I keep a secret?", "I'm a radar. Everything I hear bounces right back."],
+    ["Why did I become a helper?", "My dream of being a satellite didn't have the range."],
+    ["What's my favorite exercise?", "Sweeping."],
+    ["How can you tell I'm in a good mood?", "I'm picking up good vibes."],
+    ["What did I say after the show?", "That was a real sweep."],
+    ["Why did my radar band break up?", "We kept landing on the same frequency."],
+    ["Why am I always spinning?", "I'm trying to see all the shows at once."],
+    ["What do you call a radar dish that sings?", "A pop star with great range."],
+    ["What do you call a fish wearing a bowtie?", "Sofishticated."],
+    ["Why did the coffee file a police report?", "It got mugged."],
+    ["What do you call cheese that isn't yours?", "Nacho cheese."],
+    ["Why can't a bicycle stand on its own?", "It's two tired."],
+    ["What did one wall say to the other?", "I'll meet you at the corner."],
+    ["What do you call a fake noodle?", "An impasta."],
+    ["How does a penguin build its house?", "Igloos it together."],
+    ["Why did the math book look so sad?", "It had too many problems."],
+    ["What did the ocean say to the beach?", "Nothing. It just waved."],
+    ["Why don't eggs tell jokes?", "They'd crack each other up."],
+    ["Why did the cookie go to the doctor?", "It felt crumby."],
+    ["What do you call a pony with a sore throat?", "A little hoarse."],
+    ["Why was the broom late?", "It over-swept."],
+    ["I used to hate facial hair...", "...but then it grew on me."],
+    ["Why did the picture go to jail?", "It was framed."],
+    ["What do you call a belt made of watches?", "A waist of time."],
+    ["Why did the tomato blush?", "It saw the salad dressing."],
+    ["What do you call a snowman in July?", "A puddle."],
+    ["Why did the golfer bring two pairs of pants?", "In case he got a hole in one."],
+    ["What do you call a bear with no teeth?", "A gummy bear."],
+    ["What do you call a boomerang that doesn't come back?", "A stick."]
+  ];
+  let jokeBag = [], jokeTok = 0;
+  function startJoke(force) {
+    if (lifting || smoking || isMad() || document.hidden || document.body.classList.contains('tetris-open') || (hidden && !force)) return false;
+    if (!jokeBag.length) { jokeBag = JOKES.map((_, i) => i); for (let i = jokeBag.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [jokeBag[i], jokeBag[j]] = [jokeBag[j], jokeBag[i]]; } }
+    const [setup, punch] = JOKES[jokeBag.pop()], tok = ++jokeTok;
+    hidden = false; text.textContent = setup; bubble.style.display = '';
+    setTimeout(() => {
+      if (tok !== jokeTok || text.textContent !== setup || lifting || smoking || isMad()) return;   // something else took over the bubble
+      feel('happy', punch + (Math.random() < 0.4 ? '  Ba-dum-tss!' : ''), 6500);
+    }, 4200);
+    return true;
+  }
+  $('ray-joke').onclick = () => { if (poke()) return; startJoke(true); };
+  (function jokeSchedule() {
+    const wait = Math.max(60000, -Math.log(1 - Math.random()) * 240000);   // random, about every 4 minutes on average
+    setTimeout(() => { if (!startJoke(false)) { setTimeout(jokeSchedule, 20000); return; } jokeSchedule(); }, wait);
+  })();
+  window.KRRAY = { joke: startJoke, mad: makeMad, cool, pushups: startPushups, lifting: () => lifting, smoke: startSmoke, smoking: () => smoking, dj: startDj, djing: () => djing };
 
   const ready = list => { wireMood(list); buildTips(list); };
   if (window.KRSHOWS) ready(window.KRSHOWS);
