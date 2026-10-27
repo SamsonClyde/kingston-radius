@@ -30337,5 +30337,20 @@
     "price": "$5",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 329,
+    "date": "2026-11-14",
+    "title": "Jackson and the Janks, The Binoculars",
+    "venue": "The Half Moon",
+    "venueUrl": "https://www.thehalfmoonhudson.com/events/lfwmenyb45ns7jj-n6clk-d5pxc-f2g8r-n9k2y-6ysah-28gjk-ht8tf-yepm6",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/2xtXkdDVa2REhf9VA",
+    "time": "20:00",
+    "price": "$15",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793109960979-img-4256.webp",
+    "_manual": true
   }
 ]
