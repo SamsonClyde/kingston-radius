@@ -1468,8 +1468,8 @@ body.djing .critter > span:first-child{ animation: fk-krdance var(--dd, .5s) eas
 #tetris .tbox { color: #fff; }
 #tripstop { display: inline-block; padding: 3px 10px; background: var(--fk-tile); color: #000 !important; border: 2px outset #fff; font-size: 13px; font-family: var(--fk-font); cursor: pointer; }
 canvas.pix { image-rendering: pixelated; image-rendering: crisp-edges; image-rendering: pixelated; }
-@media (hover: hover) and (pointer: fine) { #page-explore .pb-poster:hover img, #page-explore .pb-tile:hover img { animation: fk-spin 1.2s linear infinite; } }
-@media (prefers-reduced-motion: reduce) { #page-explore .pb-poster:hover img, #page-explore .pb-tile:hover img { animation: none; } }
+@media (hover: hover) and (pointer: fine) { #page-explore .pb-wall .pb-tile:hover img { animation: fk-spin 1.2s linear infinite; } }
+@media (prefers-reduced-motion: reduce) { #page-explore .pb-wall .pb-tile:hover img { animation: none; } }
 body.scribbling, body.scribbling * { user-select: none; -webkit-user-select: none; }
 
 /* ===== SKIN: the real site wears the blog's look (palette, wallpaper, fonts, beveled panels) ===== */
@@ -1550,7 +1550,6 @@ body { background: none !important; font-family: var(--fk-font) !important; font
 #page-explore .pb-wall .pb-daybox .pb-tile .heart[aria-pressed="true"] , #page-explore .pb-wall .pb-tile .heart[aria-pressed="true"]  { color: #c00; }
 /* --- feed: framed posters --- */
 #page-explore .pb-post .pb-poster { border: 3px outset #fff !important; background: var(--fk-tile); box-shadow: none !important; }
-#page-explore .pb-post .pb-poster:hover img { animation: fk-spin 1.2s linear infinite; }
 #page-explore .pb-post { --red: var(--fk-hi); }
 #page-explore .pb-post.pb-pulse .pb-poster, #page-explore .pb-tile.pb-pulse { animation: fk-pulse 1.1s ease-out 3; }
 @keyframes fk-pulse { 0%, 100% { box-shadow: 0 0 0 0 transparent; } 40% { box-shadow: 0 0 0 12px var(--fk-hi); } }
@@ -1631,6 +1630,16 @@ body { background: none !important; font-family: var(--fk-font) !important; font
 ::selection { background: var(--fk-hi); color: #000; }
 .site-footer-links { display: table; margin: 24px auto 0; padding: 4px 14px; background: var(--fk-panel); border: 2px ridge var(--fk-bd); }
 .site-footer-links .sep { color: var(--fk-txt); }
+
+/* --- pinball + memory 10x --- */
+#funhouse #g-pin { width: 304px; }
+#funhouse #pin { background: #000; border: 3px inset #808080; display: block; margin: 0 auto; max-width: 100%; height: auto; touch-action: none; }
+#funhouse .pinpad { display: flex; gap: 4px; justify-content: center; margin: 4px 0; }
+#funhouse .pinpad .btn { flex: 1; min-height: 36px; touch-action: none; user-select: none; -webkit-user-select: none; }
+#funhouse .game.wide { width: min(100%, 560px); }
+#funhouse .game.wide .mem { grid-template-columns: repeat(16, 1fr); gap: 2px; width: 100%; }
+#funhouse .game.wide .mem .cell { height: auto; aspect-ratio: 1; font-size: clamp(11px, 2.3vw, 19px); border-width: 2px; line-height: 1; padding: 0; min-width: 0; }
+@media (max-width: 520px) { #funhouse .game.wide .mem { grid-template-columns: repeat(10, 1fr); } #funhouse #g-pin { width: 100%; } }
 
 </style>
 </head>
@@ -5375,7 +5384,7 @@ window.KR_EXPLORE = {
 // KINGSTON RADIUS /fun : the real index page plus the chaos from the blog page.
 (function () {
   if (window.__KRFUN) return; window.__KRFUN = 1;
-  const H = {"hdr": "<div id=\"hdr\">\n  <pre class=\"ascii\" aria-hidden=\"true\"><span class=\"a1\">#   # ##### #   #  ####  #### #####  ###  #   #\n#  #    #   ##  # #     #       #   #   # ##  #\n###     #   # # # #  ##  ###    #   #   # # # #\n#  #    #   #  ## #   #     #   #   #   # #  ##\n#   # ##### #   #  ###  ####    #    ###  #   #</span>\n<span class=\"a2\">####   ###  ####  ##### #   #  ####\n#   # #   # #   #   #   #   # #    \n####  ##### #   #   #   #   #  ### \n#  #  #   # #   #   #   #   #     #\n#   # #   # ####  #####  ###  #### </span></pre>\n  <div id=\"hdr-alt\" aria-hidden=\"true\"></div>\n  </div>", "clock": "<div class=\"clockbar\" id=\"clockbar\">&nbsp;</div>", "wx": "<div class=\"wx\" id=\"wx\">\n  <h3>Kingston, NY Weather Report</h3>\n  <div id=\"wx-body\">Checking the sky... please wait.</div>\n</div>\n\n", "toys": "<div class=\"mood\">\n  <b>Mood of the Day</b><br>\n  How are you feeling today?\n  <select id=\"mood\">\n    <option>Chill</option><option>Rowdy</option><option>Romantic</option><option>Mysterious</option><option>Nostalgic</option><option>Curious</option>\n  </select>\n  <button class=\"btn\" id=\"mood-go\" type=\"button\" disabled>Pick a show</button>\n  <div id=\"mood-out\">Loading the show list...</div>\n</div>\n\n<div class=\"toys\">\n  <div class=\"toy\" id=\"fortune\">\n    <h3>Fortune Cookie</h3>\n    Crack open a cookie to find out your lucky show.<br>\n    <button class=\"btn\" id=\"fortune-go\" type=\"button\" disabled>Your Lucky Show</button>\n    <div class=\"out\" id=\"fortune-out\">Loading the show list...</div>\n  </div>\n  <div class=\"toy\" id=\"ball-box\">\n    <h3>Magic 8-Ball</h3>\n    Should I go out tonight?<br>\n    <input type=\"text\" id=\"ball-q\" maxlength=\"80\" placeholder=\"Type your question (optional)\">\n    <div class=\"ball\" id=\"ball\"><div class=\"win eight\" id=\"ball-win\">8</div></div>\n    <button class=\"btn\" id=\"ball-go\" type=\"button\" disabled>Shake</button>\n    <div class=\"out\" id=\"ball-out\">Loading the show list...</div>\n  </div>\n</div>\n\n<div class=\"toys\" id=\"dailies\">\n  <div class=\"toy\" id=\"drink-box\">\n    <h3>Drink of the Day</h3>\n    <div class=\"clip\" id=\"drink-pic\"></div>\n    <div class=\"out\" id=\"drink-out\"></div>\n  </div>\n  <div class=\"toy\" id=\"food-box\">\n    <h3>Food of the Day</h3>\n    <div class=\"clip\" id=\"food-pic\"></div>\n    <div class=\"out\" id=\"food-out\"></div>\n  </div>\n</div>\n\n<div class=\"toys\">\n  <div class=\"toy\" id=\"pet-box\">\n    <h3>Pet Radar</h3>\n    Meet Blip, a radar screen with feelings. Blip likes snacks and gets hungry over time.\n    <svg id=\"pet-svg\" viewBox=\"0 0 120 120\" role=\"img\" aria-label=\"Blip, your pet radar screen\">\n      <ellipse cx=\"60\" cy=\"113\" rx=\"32\" ry=\"5\" fill=\"rgba(0,0,0,.45)\"/>\n      <rect x=\"36\" y=\"104\" width=\"12\" height=\"8\" rx=\"2\" fill=\"#c0c0c0\"/><rect x=\"72\" y=\"104\" width=\"12\" height=\"8\" rx=\"2\" fill=\"#c0c0c0\"/>\n      <circle cx=\"60\" cy=\"64\" r=\"44\" fill=\"#0a2a1a\" stroke=\"#c0c0c0\" stroke-width=\"5\"/>\n      <g id=\"pet-rings\" fill=\"none\" stroke=\"#2fd36b\" stroke-opacity=\".55\" stroke-width=\"2\"><circle cx=\"60\" cy=\"64\" r=\"32\"/><circle cx=\"60\" cy=\"64\" r=\"18\"/></g>\n      <g id=\"pet-sweep\" class=\"pet-sweep\"><path id=\"pet-wedge\" d=\"M60 64 L60 20 A 44 44 0 0 1 98 42 Z\" fill=\"#2fd36b\" opacity=\".28\"/><line id=\"pet-line\" x1=\"60\" y1=\"64\" x2=\"98\" y2=\"42\" stroke=\"#7dffa8\" stroke-width=\"3\" stroke-linecap=\"round\"/></g>\n      <circle id=\"pet-ant\" cx=\"86\" cy=\"36\" r=\"3.5\" fill=\"#7dffa8\"/>\n      <circle cx=\"46\" cy=\"62\" r=\"6.5\" fill=\"#fff\"/><circle cx=\"70\" cy=\"62\" r=\"6.5\" fill=\"#fff\"/>\n      <circle id=\"pet-e1\" cx=\"47\" cy=\"63\" r=\"3.2\" fill=\"#000\"/><circle id=\"pet-e2\" cx=\"71\" cy=\"63\" r=\"3.2\" fill=\"#000\"/>\n      <path id=\"pet-mouth\" d=\"M48 78 Q60 90 72 78\" fill=\"none\" stroke=\"#7dffa8\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n    </svg>\n    <div>Fullness: <span id=\"pet-bar\"><i id=\"pet-fill\"></i></span> <span id=\"pet-pct\">100%</span></div>\n    <div class=\"out\" id=\"pet-out\" style=\"min-height:22px\">Blip is happy to see you.</div>\n    <button class=\"btn\" id=\"pet-feed\" type=\"button\">Feed Blip</button>\n    <button class=\"btn\" id=\"pet-pet\" type=\"button\">Pet Blip</button>\n  </div>\n</div>\n\n", "games": "<div class=\"games\" id=\"games\">\n  <h2>Games Corner</h2>\n  <div class=\"cap\">Take a break between shows. Arrow keys work for Snake.</div>\n  <div style=\"text-align:center;margin:6px 0 10px\"><button class=\"btn\" id=\"tetris-open\" type=\"button\">&#9654; TETRIS: Book the Week</button> <button class=\"btn\" id=\"trip-btn\" type=\"button\">&#9788; Go Trippy</button></div>\n  <div class=\"gamerow\">\n\n    <div class=\"game\" id=\"g-snake\">\n      <h3>Snake</h3>\n      <canvas id=\"snake\" width=\"224\" height=\"224\"></canvas>\n      <div class=\"stat\" id=\"snake-stat\">Press Start</div>\n      <button class=\"btn\" id=\"snake-start\" type=\"button\">Start</button>\n      <div class=\"pad\">\n        <span></span><button class=\"btn\" type=\"button\" data-d=\"U\">^</button><span></span>\n        <button class=\"btn\" type=\"button\" data-d=\"L\">&lt;</button><button class=\"btn\" type=\"button\" data-d=\"D\">v</button><button class=\"btn\" type=\"button\" data-d=\"R\">&gt;</button>\n      </div>\n    </div>\n\n    <div class=\"game\" id=\"g-ttt\">\n      <h3>Tic-Tac-Toe</h3>\n      <div class=\"ttt\" id=\"ttt\"></div>\n      <div class=\"stat\" id=\"ttt-stat\">You are X. Your move.</div>\n      <button class=\"btn\" id=\"ttt-reset\" type=\"button\">New Game</button>\n    </div>\n\n    <div class=\"game\" id=\"g-mem\">\n      <h3>Memory Match</h3>\n      <div class=\"mem\" id=\"mem\"></div>\n      <div class=\"stat\" id=\"mem-stat\">Find all 8 pairs.</div>\n      <button class=\"btn\" id=\"mem-reset\" type=\"button\">New Game</button>\n    </div>\n\n  </div>\n</div>\n\n\n", "over": "<div id=\"zoo\" aria-hidden=\"true\"></div>\n\n<div id=\"tetris\" role=\"dialog\" aria-label=\"Tetris\">\n  <div class=\"tbox\">\n    <h2><span>TETRIS: Book the Week</span> <button class=\"btn\" id=\"tclose\" type=\"button\">X Close</button></h2>\n    <div class=\"cap\">Each falling piece is a real listing. Fill a whole row to book that day. Arrow keys move, Up turns, Space drops, P pauses.</div>\n    <div class=\"tgrid\">\n      <div class=\"tboard\"><div class=\"tlabels\" id=\"tlabels\"></div><canvas id=\"tcv\" width=\"240\" height=\"480\"></canvas></div>\n      <div class=\"tside\">\n        <canvas id=\"tnext\" width=\"96\" height=\"96\"></canvas>\n        <div class=\"row\">Score: <b id=\"tscore\">0</b></div>\n        <div class=\"row\">Days booked: <b id=\"tdays\">0</b></div>\n        <div class=\"row\">Level: <b id=\"tlevel\">1</b></div>\n        <div class=\"row\" id=\"tfall\">Press Start</div>\n        <button class=\"btn\" id=\"tstart\" type=\"button\">New Game</button>\n        <div id=\"tlog\"></div>\n      </div>\n    </div>\n    <div class=\"tctl\">\n      <button class=\"btn\" type=\"button\" data-t=\"L\" aria-label=\"Move left\">&lt;</button>\n      <button class=\"btn\" type=\"button\" data-t=\"R2\" aria-label=\"Turn\">Turn</button>\n      <button class=\"btn\" type=\"button\" data-t=\"R\" aria-label=\"Move right\">&gt;</button>\n      <button class=\"btn\" type=\"button\" data-t=\"D\" aria-label=\"Down\">v</button>\n      <button class=\"btn\" type=\"button\" data-t=\"DROP\" aria-label=\"Drop\">Drop</button>\n    </div>\n    <div id=\"tmsg\"></div>\n  </div>\n</div>\n\n<div id=\"sotd\" role=\"dialog\" aria-label=\"Show of the day\"></div>\n\n<div id=\"raydj\" aria-hidden=\"true\">\n  <div class=\"count\" id=\"dj-count\"></div>\n  <svg viewBox=\"0 0 300 240\">\n    <g id=\"dj-eql\"></g><g id=\"dj-eqr\"></g>\n    <rect x=\"12\" y=\"150\" width=\"276\" height=\"82\" rx=\"6\" fill=\"#2b2b36\" stroke=\"#000\" stroke-width=\"2\"/>\n    <rect x=\"12\" y=\"150\" width=\"276\" height=\"6\" rx=\"3\" fill=\"#4a4a5a\"/>\n    <g id=\"dj-recs\"></g>\n    <rect x=\"118\" y=\"162\" width=\"64\" height=\"60\" rx=\"4\" fill=\"#15151c\" stroke=\"#000\" stroke-width=\"1.5\"/>\n    <circle cx=\"134\" cy=\"176\" r=\"6\" fill=\"#888\" stroke=\"#000\"/><circle cx=\"150\" cy=\"176\" r=\"6\" fill=\"#888\" stroke=\"#000\"/><circle cx=\"166\" cy=\"176\" r=\"6\" fill=\"#888\" stroke=\"#000\"/>\n    <line x1=\"134\" y1=\"190\" x2=\"134\" y2=\"214\" stroke=\"#555\" stroke-width=\"3\"/><line x1=\"150\" y1=\"190\" x2=\"150\" y2=\"214\" stroke=\"#555\" stroke-width=\"3\"/><line x1=\"166\" y1=\"190\" x2=\"166\" y2=\"214\" stroke=\"#555\" stroke-width=\"3\"/>\n    <rect x=\"129\" y=\"198\" width=\"10\" height=\"6\" fill=\"#ddd\"/><rect x=\"145\" y=\"205\" width=\"10\" height=\"6\" fill=\"#ddd\"/><rect x=\"161\" y=\"195\" width=\"10\" height=\"6\" fill=\"#ddd\"/>\n    <line id=\"dj-armL1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"dj-armL2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <line id=\"dj-armR1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"dj-armR2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <circle id=\"dj-handL\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/><circle id=\"dj-handR\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/>\n    <g id=\"dj-head\"></g>\n    <g id=\"dj-notes\"></g>\n  </svg>\n</div>\n\n<div id=\"raylift\" aria-hidden=\"true\">\n  <div class=\"count\" id=\"rl-count\"></div>\n  <svg viewBox=\"0 0 300 240\">\n    <rect x=\"14\" y=\"214\" width=\"272\" height=\"12\" rx=\"3\" fill=\"#1fa37a\" stroke=\"#000\" stroke-width=\"2\"/>\n    <line id=\"rl-armL1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"rl-armL2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <line id=\"rl-armR1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"rl-armR2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <circle id=\"rl-handL\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/><circle id=\"rl-handR\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/>\n    <g id=\"rl-body\"></g>\n  </svg>\n</div>\n\n<div id=\"ray\">\n  <div class=\"bubble\" id=\"ray-bubble\" style=\"display:none\">\n    <div id=\"ray-text\"></div>\n    <div class=\"acts\"><button type=\"button\" id=\"ray-next\">Next tip</button><button type=\"button\" id=\"ray-hide\">Hide</button></div>\n  </div>\n  <svg id=\"ray-face\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Ray, the helper\">\n    <circle cx=\"50\" cy=\"50\" r=\"48\" fill=\"#C0392B\"/>\n    <circle cx=\"50\" cy=\"50\" r=\"34\" fill=\"none\" stroke=\"#fff\" stroke-opacity=\"0.45\" stroke-width=\"5\"/>\n    <line x1=\"50\" y1=\"50\" x2=\"88\" y2=\"6\" stroke=\"#fff\" stroke-width=\"9\" stroke-linecap=\"round\"/>\n    <circle cx=\"37\" cy=\"44\" r=\"8\" fill=\"#fff\"/><circle cx=\"63\" cy=\"44\" r=\"8\" fill=\"#fff\"/>\n    <circle id=\"ray-p1\" cx=\"39\" cy=\"45\" r=\"3.5\" fill=\"#000\"/><circle id=\"ray-p2\" cx=\"65\" cy=\"45\" r=\"3.5\" fill=\"#000\"/>\n    <g id=\"ray-sadbrows\" style=\"display:none\" stroke=\"#300\" stroke-width=\"5\" stroke-linecap=\"round\"><line x1=\"27\" y1=\"36\" x2=\"45\" y2=\"30\"/><line x1=\"73\" y1=\"36\" x2=\"55\" y2=\"30\"/></g>\n    <path id=\"ray-tear\" style=\"display:none\" d=\"M33 56 q-5 9 0 12 q5 -3 0 -12z\" fill=\"#7fd0ff\" stroke=\"#fff\" stroke-width=\"1\"/>\n    <g id=\"ray-brows\" style=\"display:none\" stroke=\"#300\" stroke-width=\"5\" stroke-linecap=\"round\"><line x1=\"27\" y1=\"30\" x2=\"45\" y2=\"38\"/><line x1=\"73\" y1=\"30\" x2=\"55\" y2=\"38\"/></g>\n    <path id=\"ray-mouth\" d=\"M36 64 Q50 76 64 64\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\" stroke-linecap=\"round\"/>\n    <g id=\"ray-lids\" style=\"display:none\"><path d=\"M29 44 A8 8 0 0 1 45 44 Z\" fill=\"#C0392B\" stroke=\"#300\" stroke-width=\"1.6\"/><path d=\"M55 44 A8 8 0 0 1 71 44 Z\" fill=\"#C0392B\" stroke=\"#300\" stroke-width=\"1.6\"/></g>\n    <g id=\"ray-cig\" style=\"display:none\"><g transform=\"rotate(-10 58 66)\"><rect x=\"58\" y=\"63.8\" width=\"30\" height=\"4.4\" rx=\"1\" fill=\"#fff\" stroke=\"#000\" stroke-width=\".8\"/><rect x=\"58\" y=\"63.8\" width=\"7\" height=\"4.4\" rx=\"1\" fill=\"#d98e2b\" stroke=\"#000\" stroke-width=\".8\"/><rect x=\"83\" y=\"63.8\" width=\"5\" height=\"4.4\" fill=\"#9a9a9a\"/></g><circle id=\"ray-ember\" cx=\"88.5\" cy=\"60.8\" r=\"2.6\" fill=\"#ff4a1c\"/></g>\n    <g id=\"ray-smoke\"></g>\n  </svg>\n</div>\n\n"};
+  const H = {"hdr": "<div id=\"hdr\">\n  <pre class=\"ascii\" aria-hidden=\"true\"><span class=\"a1\">#   # ##### #   #  ####  #### #####  ###  #   #\n#  #    #   ##  # #     #       #   #   # ##  #\n###     #   # # # #  ##  ###    #   #   # # # #\n#  #    #   #  ## #   #     #   #   #   # #  ##\n#   # ##### #   #  ###  ####    #    ###  #   #</span>\n<span class=\"a2\">####   ###  ####  ##### #   #  ####\n#   # #   # #   #   #   #   # #    \n####  ##### #   #   #   #   #  ### \n#  #  #   # #   #   #   #   #     #\n#   # #   # ####  #####  ###  #### </span></pre>\n  <div id=\"hdr-alt\" aria-hidden=\"true\"></div>\n  </div>", "clock": "<div class=\"clockbar\" id=\"clockbar\">&nbsp;</div>", "wx": "<div class=\"wx\" id=\"wx\">\n  <h3>Kingston, NY Weather Report</h3>\n  <div id=\"wx-body\">Checking the sky... please wait.</div>\n</div>\n\n", "toys": "<div class=\"mood\">\n  <b>Mood of the Day</b><br>\n  How are you feeling today?\n  <select id=\"mood\">\n    <option>Chill</option><option>Rowdy</option><option>Romantic</option><option>Mysterious</option><option>Nostalgic</option><option>Curious</option>\n  </select>\n  <button class=\"btn\" id=\"mood-go\" type=\"button\" disabled>Pick a show</button>\n  <div id=\"mood-out\">Loading the show list...</div>\n</div>\n\n<div class=\"toys\">\n  <div class=\"toy\" id=\"fortune\">\n    <h3>Fortune Cookie</h3>\n    Crack open a cookie to find out your lucky show.<br>\n    <button class=\"btn\" id=\"fortune-go\" type=\"button\" disabled>Your Lucky Show</button>\n    <div class=\"out\" id=\"fortune-out\">Loading the show list...</div>\n  </div>\n  <div class=\"toy\" id=\"ball-box\">\n    <h3>Magic 8-Ball</h3>\n    Should I go out tonight?<br>\n    <input type=\"text\" id=\"ball-q\" maxlength=\"80\" placeholder=\"Type your question (optional)\">\n    <div class=\"ball\" id=\"ball\"><div class=\"win eight\" id=\"ball-win\">8</div></div>\n    <button class=\"btn\" id=\"ball-go\" type=\"button\" disabled>Shake</button>\n    <div class=\"out\" id=\"ball-out\">Loading the show list...</div>\n  </div>\n</div>\n\n<div class=\"toys\" id=\"dailies\">\n  <div class=\"toy\" id=\"drink-box\">\n    <h3>Drink of the Day</h3>\n    <div class=\"clip\" id=\"drink-pic\"></div>\n    <div class=\"out\" id=\"drink-out\"></div>\n  </div>\n  <div class=\"toy\" id=\"food-box\">\n    <h3>Food of the Day</h3>\n    <div class=\"clip\" id=\"food-pic\"></div>\n    <div class=\"out\" id=\"food-out\"></div>\n  </div>\n</div>\n\n<div class=\"toys\">\n  <div class=\"toy\" id=\"pet-box\">\n    <h3>Pet Radar</h3>\n    Meet Blip, a radar screen with feelings. Blip likes snacks and gets hungry over time.\n    <svg id=\"pet-svg\" viewBox=\"0 0 120 120\" role=\"img\" aria-label=\"Blip, your pet radar screen\">\n      <ellipse cx=\"60\" cy=\"113\" rx=\"32\" ry=\"5\" fill=\"rgba(0,0,0,.45)\"/>\n      <rect x=\"36\" y=\"104\" width=\"12\" height=\"8\" rx=\"2\" fill=\"#c0c0c0\"/><rect x=\"72\" y=\"104\" width=\"12\" height=\"8\" rx=\"2\" fill=\"#c0c0c0\"/>\n      <circle cx=\"60\" cy=\"64\" r=\"44\" fill=\"#0a2a1a\" stroke=\"#c0c0c0\" stroke-width=\"5\"/>\n      <g id=\"pet-rings\" fill=\"none\" stroke=\"#2fd36b\" stroke-opacity=\".55\" stroke-width=\"2\"><circle cx=\"60\" cy=\"64\" r=\"32\"/><circle cx=\"60\" cy=\"64\" r=\"18\"/></g>\n      <g id=\"pet-sweep\" class=\"pet-sweep\"><path id=\"pet-wedge\" d=\"M60 64 L60 20 A 44 44 0 0 1 98 42 Z\" fill=\"#2fd36b\" opacity=\".28\"/><line id=\"pet-line\" x1=\"60\" y1=\"64\" x2=\"98\" y2=\"42\" stroke=\"#7dffa8\" stroke-width=\"3\" stroke-linecap=\"round\"/></g>\n      <circle id=\"pet-ant\" cx=\"86\" cy=\"36\" r=\"3.5\" fill=\"#7dffa8\"/>\n      <circle cx=\"46\" cy=\"62\" r=\"6.5\" fill=\"#fff\"/><circle cx=\"70\" cy=\"62\" r=\"6.5\" fill=\"#fff\"/>\n      <circle id=\"pet-e1\" cx=\"47\" cy=\"63\" r=\"3.2\" fill=\"#000\"/><circle id=\"pet-e2\" cx=\"71\" cy=\"63\" r=\"3.2\" fill=\"#000\"/>\n      <path id=\"pet-mouth\" d=\"M48 78 Q60 90 72 78\" fill=\"none\" stroke=\"#7dffa8\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n    </svg>\n    <div>Fullness: <span id=\"pet-bar\"><i id=\"pet-fill\"></i></span> <span id=\"pet-pct\">100%</span></div>\n    <div class=\"out\" id=\"pet-out\" style=\"min-height:22px\">Blip is happy to see you.</div>\n    <button class=\"btn\" id=\"pet-feed\" type=\"button\">Feed Blip</button>\n    <button class=\"btn\" id=\"pet-pet\" type=\"button\">Pet Blip</button>\n  </div>\n</div>\n\n", "games": "<div class=\"games\" id=\"games\">\n  <h2>Games Corner</h2>\n  <div class=\"cap\">Take a break between shows. Arrow keys work for Snake. Pinball: Z and / flip, Space launches.</div>\n  <div style=\"text-align:center;margin:6px 0 10px\"><button class=\"btn\" id=\"tetris-open\" type=\"button\">&#9654; TETRIS: Book the Week</button> <button class=\"btn\" id=\"trip-btn\" type=\"button\">&#9788; Go Trippy</button></div>\n  <div class=\"gamerow\">\n\n    <div class=\"game\" id=\"g-snake\">\n      <h3>Snake</h3>\n      <canvas id=\"snake\" width=\"224\" height=\"224\"></canvas>\n      <div class=\"stat\" id=\"snake-stat\">Press Start</div>\n      <button class=\"btn\" id=\"snake-start\" type=\"button\">Start</button>\n      <div class=\"pad\">\n        <span></span><button class=\"btn\" type=\"button\" data-d=\"U\">^</button><span></span>\n        <button class=\"btn\" type=\"button\" data-d=\"L\">&lt;</button><button class=\"btn\" type=\"button\" data-d=\"D\">v</button><button class=\"btn\" type=\"button\" data-d=\"R\">&gt;</button>\n      </div>\n    </div>\n\n    <div class=\"game\" id=\"g-pin\">\n      <h3>Pinball</h3>\n      <canvas id=\"pin\" width=\"280\" height=\"440\" aria-label=\"Pinball table\"></canvas>\n      <div class=\"stat\" id=\"pin-stat\">Press Start</div>\n      <div class=\"pinpad\"><button class=\"btn\" id=\"pin-l\" type=\"button\">&lt; Flip</button><button class=\"btn\" id=\"pin-p\" type=\"button\">LAUNCH</button><button class=\"btn\" id=\"pin-r\" type=\"button\">Flip &gt;</button></div>\n      <button class=\"btn\" id=\"pin-go\" type=\"button\">Start</button>\n    </div>\n\n    <div class=\"game wide\" id=\"g-mem\">\n      <h3>Memory Match 10x</h3>\n      <div class=\"mem\" id=\"mem\"></div>\n      <div class=\"stat\" id=\"mem-stat\">Find all 80 pairs.</div>\n      <button class=\"btn\" id=\"mem-reset\" type=\"button\">New Game</button>\n    </div>\n\n  </div>\n</div>\n\n\n", "over": "<div id=\"zoo\" aria-hidden=\"true\"></div>\n\n<div id=\"tetris\" role=\"dialog\" aria-label=\"Tetris\">\n  <div class=\"tbox\">\n    <h2><span>TETRIS: Book the Week</span> <button class=\"btn\" id=\"tclose\" type=\"button\">X Close</button></h2>\n    <div class=\"cap\">Each falling piece is a real listing. Fill a whole row to book that day. Arrow keys move, Up turns, Space drops, P pauses.</div>\n    <div class=\"tgrid\">\n      <div class=\"tboard\"><div class=\"tlabels\" id=\"tlabels\"></div><canvas id=\"tcv\" width=\"240\" height=\"480\"></canvas></div>\n      <div class=\"tside\">\n        <canvas id=\"tnext\" width=\"96\" height=\"96\"></canvas>\n        <div class=\"row\">Score: <b id=\"tscore\">0</b></div>\n        <div class=\"row\">Days booked: <b id=\"tdays\">0</b></div>\n        <div class=\"row\">Level: <b id=\"tlevel\">1</b></div>\n        <div class=\"row\" id=\"tfall\">Press Start</div>\n        <button class=\"btn\" id=\"tstart\" type=\"button\">New Game</button>\n        <div id=\"tlog\"></div>\n      </div>\n    </div>\n    <div class=\"tctl\">\n      <button class=\"btn\" type=\"button\" data-t=\"L\" aria-label=\"Move left\">&lt;</button>\n      <button class=\"btn\" type=\"button\" data-t=\"R2\" aria-label=\"Turn\">Turn</button>\n      <button class=\"btn\" type=\"button\" data-t=\"R\" aria-label=\"Move right\">&gt;</button>\n      <button class=\"btn\" type=\"button\" data-t=\"D\" aria-label=\"Down\">v</button>\n      <button class=\"btn\" type=\"button\" data-t=\"DROP\" aria-label=\"Drop\">Drop</button>\n    </div>\n    <div id=\"tmsg\"></div>\n  </div>\n</div>\n\n<div id=\"sotd\" role=\"dialog\" aria-label=\"Show of the day\"></div>\n\n<div id=\"raydj\" aria-hidden=\"true\">\n  <div class=\"count\" id=\"dj-count\"></div>\n  <svg viewBox=\"0 0 300 240\">\n    <g id=\"dj-eql\"></g><g id=\"dj-eqr\"></g>\n    <rect x=\"12\" y=\"150\" width=\"276\" height=\"82\" rx=\"6\" fill=\"#2b2b36\" stroke=\"#000\" stroke-width=\"2\"/>\n    <rect x=\"12\" y=\"150\" width=\"276\" height=\"6\" rx=\"3\" fill=\"#4a4a5a\"/>\n    <g id=\"dj-recs\"></g>\n    <rect x=\"118\" y=\"162\" width=\"64\" height=\"60\" rx=\"4\" fill=\"#15151c\" stroke=\"#000\" stroke-width=\"1.5\"/>\n    <circle cx=\"134\" cy=\"176\" r=\"6\" fill=\"#888\" stroke=\"#000\"/><circle cx=\"150\" cy=\"176\" r=\"6\" fill=\"#888\" stroke=\"#000\"/><circle cx=\"166\" cy=\"176\" r=\"6\" fill=\"#888\" stroke=\"#000\"/>\n    <line x1=\"134\" y1=\"190\" x2=\"134\" y2=\"214\" stroke=\"#555\" stroke-width=\"3\"/><line x1=\"150\" y1=\"190\" x2=\"150\" y2=\"214\" stroke=\"#555\" stroke-width=\"3\"/><line x1=\"166\" y1=\"190\" x2=\"166\" y2=\"214\" stroke=\"#555\" stroke-width=\"3\"/>\n    <rect x=\"129\" y=\"198\" width=\"10\" height=\"6\" fill=\"#ddd\"/><rect x=\"145\" y=\"205\" width=\"10\" height=\"6\" fill=\"#ddd\"/><rect x=\"161\" y=\"195\" width=\"10\" height=\"6\" fill=\"#ddd\"/>\n    <line id=\"dj-armL1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"dj-armL2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <line id=\"dj-armR1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"dj-armR2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <circle id=\"dj-handL\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/><circle id=\"dj-handR\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/>\n    <g id=\"dj-head\"></g>\n    <g id=\"dj-notes\"></g>\n  </svg>\n</div>\n\n<div id=\"raylift\" aria-hidden=\"true\">\n  <div class=\"count\" id=\"rl-count\"></div>\n  <svg viewBox=\"0 0 300 240\">\n    <rect x=\"14\" y=\"214\" width=\"272\" height=\"12\" rx=\"3\" fill=\"#1fa37a\" stroke=\"#000\" stroke-width=\"2\"/>\n    <line id=\"rl-armL1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"rl-armL2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <line id=\"rl-armR1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"rl-armR2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <circle id=\"rl-handL\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/><circle id=\"rl-handR\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/>\n    <g id=\"rl-body\"></g>\n  </svg>\n</div>\n\n<div id=\"ray\">\n  <div class=\"bubble\" id=\"ray-bubble\" style=\"display:none\">\n    <div id=\"ray-text\"></div>\n    <div class=\"acts\"><button type=\"button\" id=\"ray-next\">Next tip</button><button type=\"button\" id=\"ray-hide\">Hide</button></div>\n  </div>\n  <svg id=\"ray-face\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Ray, the helper\">\n    <circle cx=\"50\" cy=\"50\" r=\"48\" fill=\"#C0392B\"/>\n    <circle cx=\"50\" cy=\"50\" r=\"34\" fill=\"none\" stroke=\"#fff\" stroke-opacity=\"0.45\" stroke-width=\"5\"/>\n    <line x1=\"50\" y1=\"50\" x2=\"88\" y2=\"6\" stroke=\"#fff\" stroke-width=\"9\" stroke-linecap=\"round\"/>\n    <circle cx=\"37\" cy=\"44\" r=\"8\" fill=\"#fff\"/><circle cx=\"63\" cy=\"44\" r=\"8\" fill=\"#fff\"/>\n    <circle id=\"ray-p1\" cx=\"39\" cy=\"45\" r=\"3.5\" fill=\"#000\"/><circle id=\"ray-p2\" cx=\"65\" cy=\"45\" r=\"3.5\" fill=\"#000\"/>\n    <g id=\"ray-sadbrows\" style=\"display:none\" stroke=\"#300\" stroke-width=\"5\" stroke-linecap=\"round\"><line x1=\"27\" y1=\"36\" x2=\"45\" y2=\"30\"/><line x1=\"73\" y1=\"36\" x2=\"55\" y2=\"30\"/></g>\n    <path id=\"ray-tear\" style=\"display:none\" d=\"M33 56 q-5 9 0 12 q5 -3 0 -12z\" fill=\"#7fd0ff\" stroke=\"#fff\" stroke-width=\"1\"/>\n    <g id=\"ray-brows\" style=\"display:none\" stroke=\"#300\" stroke-width=\"5\" stroke-linecap=\"round\"><line x1=\"27\" y1=\"30\" x2=\"45\" y2=\"38\"/><line x1=\"73\" y1=\"30\" x2=\"55\" y2=\"38\"/></g>\n    <path id=\"ray-mouth\" d=\"M36 64 Q50 76 64 64\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\" stroke-linecap=\"round\"/>\n    <g id=\"ray-lids\" style=\"display:none\"><path d=\"M29 44 A8 8 0 0 1 45 44 Z\" fill=\"#C0392B\" stroke=\"#300\" stroke-width=\"1.6\"/><path d=\"M55 44 A8 8 0 0 1 71 44 Z\" fill=\"#C0392B\" stroke=\"#300\" stroke-width=\"1.6\"/></g>\n    <g id=\"ray-cig\" style=\"display:none\"><g transform=\"rotate(-10 58 66)\"><rect x=\"58\" y=\"63.8\" width=\"30\" height=\"4.4\" rx=\"1\" fill=\"#fff\" stroke=\"#000\" stroke-width=\".8\"/><rect x=\"58\" y=\"63.8\" width=\"7\" height=\"4.4\" rx=\"1\" fill=\"#d98e2b\" stroke=\"#000\" stroke-width=\".8\"/><rect x=\"83\" y=\"63.8\" width=\"5\" height=\"4.4\" fill=\"#9a9a9a\"/></g><circle id=\"ray-ember\" cx=\"88.5\" cy=\"60.8\" r=\"2.6\" fill=\"#ff4a1c\"/></g>\n    <g id=\"ray-smoke\"></g>\n  </svg>\n</div>\n\n"};
   const hdr = document.querySelector('header'); if (!hdr) return;
 
   // everything that is "the page" goes in one wrapper, so quakes and trips can bend it without touching the pop-up layers
@@ -5386,7 +5395,7 @@ window.KR_EXPLORE = {
   fh.innerHTML =
       '<div class="fk-c">' + H.hdr
     + '<div class="rainbow"></div></div>'
-    + '<marquee scrollamount="5">Welcome to the secret page! ... Every filter, search, map, heart and poster viewer from the real site works down below ... Hold the mouse down to scribble ... Ray is watching ... </marquee>'
+    + '<marquee scrollamount="5" loop="1">&nbsp;</marquee>'
     + H.clock
     + '<div id="freshnote" style="display:none"></div>'
     + '<details id="fh-more"><summary>funhouse</summary>'
@@ -5679,55 +5688,152 @@ try {
     stat(best ? 'Best ' + best + '. Press Start' : 'Press Start');
   })();
 
-  // ---------- Tic-Tac-Toe (you are X, computer is O) ----------
+  // ---------- Pinball (replaces tic-tac-toe) ----------
   (function () {
-    const LINES = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
-    let b, over, cells = [];
-    const stat = t => { $('ttt-stat').textContent = t; };
-    const winner = bd => { for (const [a, c, d] of LINES) if (bd[a] && bd[a] === bd[c] && bd[a] === bd[d]) return bd[a]; return bd.every(Boolean) ? 'tie' : null; };
-    const find = (bd, who) => { for (const [a, c, d] of LINES) { const v = [bd[a], bd[c], bd[d]]; if (v.filter(x => x === who).length === 2 && v.includes(null)) return [a, c, d][v.indexOf(null)]; } return -1; };
-    const show = () => cells.forEach((el, i) => { el.textContent = b[i] || ''; el.className = 'cell' + (b[i] ? ' ' + b[i].toLowerCase() : ''); });
-    const finish = () => { const w = winner(b); if (!w) return false; over = true; stat(w === 'tie' ? "It's a tie." : w === 'X' ? 'You win!' : 'Computer wins.'); return true; };
-    const cpu = () => {
-      let m = find(b, 'O'); if (m < 0) m = find(b, 'X');
-      if (m < 0 && !b[4]) m = 4;
-      if (m < 0) { const free = b.map((v, i) => v ? -1 : i).filter(i => i >= 0); m = free[Math.floor(Math.random() * free.length)]; }
-      b[m] = 'O'; show(); if (!finish()) stat('Your move.');
-    };
-    const click = i => { if (over || b[i]) return; b[i] = 'X'; show(); if (!finish()) setTimeout(cpu, 250); };
-    const reset = () => { b = Array(9).fill(null); over = false; show(); stat('You are X. Your move.'); };
-    for (let i = 0; i < 9; i++) { const el = document.createElement('button'); el.type = 'button'; el.className = 'cell'; el.onclick = () => click(i); $('ttt').appendChild(el); cells.push(el); }
-    $('ttt-reset').onclick = reset; reset();
+    const cv = $('pin'), cx = cv.getContext('2d'), W = 280, H = 440, R = 6, SUB = 6, G = 0.34;
+    const stat = t => { $('pin-stat').textContent = t; };
+    let best = 0; try { best = +localStorage.getItem('kr_pin_best') || 0; } catch (e) {}
+    const WALLS = [
+      [8, 70, 8, H - 120], [8, 70, 70, 8], [70, 8, W - 70, 8], [W - 8, 70, W - 70, 8], [W - 8, 70, W - 8, H - 20],
+      [W - 28, 90, W - 28, H - 20], [W - 28, H - 20, W - 8, H - 20],
+      [8, H - 120, 59, H - 66], [W - 28, H - 120, W - 81, H - 66]
+    ];
+    const BUMPS = [{ x: 100, y: 130, r: 15, v: 100 }, { x: 165, y: 112, r: 15, v: 100 }, { x: 132, y: 186, r: 15, v: 100 },
+                   { x: 44, y: 236, r: 9, v: 50 }, { x: 214, y: 236, r: 9, v: 50 }, { x: 70, y: 168, r: 5, v: 25 }, { x: 196, y: 168, r: 5, v: 25 }];
+    const FL = [{ px: 62, py: H - 62, s: 1, th: 0.45, ph: 0.45, on: false }, { px: W - 84, py: H - 62, s: -1, th: 0.45, ph: 0.45, on: false }];
+    const FLEN = 50, FR = 5, REST = 0.45, UP = -0.5;
+    let state = 'idle', ball, score, balls, charge = 0, charging = false, keys = { l: false, r: false }, raf = 0, still = 0, flash = [], last = 0;
+    const colors = () => { const cs = getComputedStyle($('funhouse') || document.body); return { hi: cs.getPropertyValue('--fk-hi').trim() || '#ff0', acc: cs.getPropertyValue('--fk-acc').trim() || '#f0f' }; };
+    const visible = () => cv.offsetParent !== null && !document.hidden;
+    function newBall() { ball = { x: W - 18, y: H - 30, vx: 0, vy: 0 }; state = 'ready'; charge = 0; still = 0; stat('Ball ' + (4 - balls) + ' of 3. Hold LAUNCH, let go to shoot.'); }
+    function reset() { score = 0; balls = 3; flash = []; newBall(); stat('Hold LAUNCH (or Space), let go to shoot.'); $('pin-go').textContent = 'Quit'; kick(); }
+    function over() {
+      state = 'over'; $('pin-go').textContent = 'New Game'; const hi = score > best;
+      if (hi) { best = score; try { localStorage.setItem('kr_pin_best', best); } catch (e) {} }
+      stat('Game over: ' + score + (hi ? ' (new best!)' : best ? '. Best ' + best : '')); draw();
+      try { if (window.KRRAY && KRRAY.chat) KRRAY.chat(hi && score > 0 ? 'A new pinball high score! ' + score + '!' : score > 2500 ? 'Not bad at pinball.' : 'Pinball is hard. Try again?', 3500); } catch (e) {}
+    }
+    function seg(ax, ay, bx, by, e, rad) {
+      const dx = bx - ax, dy = by - ay, l2 = dx * dx + dy * dy; let t = ((ball.x - ax) * dx + (ball.y - ay) * dy) / l2; t = Math.max(0, Math.min(1, t));
+      const px = ax + dx * t, py = ay + dy * t; let nx = ball.x - px, ny = ball.y - py, d = Math.hypot(nx, ny), need = R + (rad || 0);
+      if (d >= need) return null; if (d < 1e-6) { nx = -dy; ny = dx; d = Math.hypot(nx, ny); } nx /= d; ny /= d;
+      ball.x = px + nx * need; ball.y = py + ny * need;
+      const vn = ball.vx * nx + ball.vy * ny; if (vn < 0) { ball.vx -= (1 + e) * vn * nx; ball.vy -= (1 + e) * vn * ny; }
+      return { nx, ny, t, px, py };
+    }
+    function circ(x, y, rad, e) {
+      let nx = ball.x - x, ny = ball.y - y, d = Math.hypot(nx, ny), need = R + rad; if (d >= need) return null; if (d < 1e-6) { nx = 0; ny = -1; d = 1; } nx /= d; ny /= d;
+      ball.x = x + nx * need; ball.y = y + ny * need; const vn = ball.vx * nx + ball.vy * ny; if (vn < 0) { ball.vx -= (1 + e) * vn * nx; ball.vy -= (1 + e) * vn * ny; } return { nx, ny };
+    }
+    function step(dt) {
+      for (const f of FL) { const on = f.s > 0 ? keys.l : keys.r; f.ph = f.th; f.th += on ? -0.26 * dt : 0.17 * dt; f.th = Math.max(UP, Math.min(REST, f.th)); f.dth = (f.th - f.ph) / dt; }
+      if (state !== 'play' && state !== 'ready') return;
+      if (state === 'ready') {   // the ball sits on the plunger; it only moves once launched
+        ball.y = H - 30 + charge * 6; return;
+      }
+      ball.vy += G * dt; const sp = Math.hypot(ball.vx, ball.vy); if (sp > 17) { ball.vx *= 17 / sp; ball.vy *= 17 / sp; }
+      ball.x += ball.vx * dt; ball.y += ball.vy * dt;
+      for (const w of WALLS) seg(w[0], w[1], w[2], w[3], 0.45);
+      if (ball.x > W - 28 && ball.y > H - 40 && ball.vy > 0 && Math.abs(ball.vy) < 1.2) {   // fell back into the shooter lane: back on the plunger
+        if (ball.y >= H - 27) { ball.y = H - 30; ball.vy = 0; ball.vx = 0; state = 'ready'; charge = 0; }
+      }
+      for (const b of BUMPS) { const r = circ(b.x, b.y, b.r, 0.4); if (r) { const k = b.r > 10 ? 5.2 : 4; ball.vx += r.nx * k; ball.vy += r.ny * k; score += b.v; b.hit = 8; } }
+      for (const f of FL) {
+        const tx = f.px + f.s * Math.cos(f.th) * FLEN, ty = f.py + Math.sin(f.th) * FLEN;
+        const dx = tx - f.px, dy = ty - f.py, l2 = dx * dx + dy * dy; let t = ((ball.x - f.px) * dx + (ball.y - f.py) * dy) / l2; t = Math.max(0, Math.min(1, t));
+        const px = f.px + dx * t, py = f.py + dy * t; let nx = ball.x - px, ny = ball.y - py, d = Math.hypot(nx, ny); const need = R + FR + (1 - t) * 2;
+        if (d >= need || d < 1e-6) continue; nx /= d; ny /= d; ball.x = px + nx * need; ball.y = py + ny * need;
+        const sx = -f.s * Math.sin(f.th), sy = Math.cos(f.th), w = (f.dth || 0) * t * FLEN; const svx = sx * w, svy = sy * w;
+        const rx = ball.vx - svx, ry = ball.vy - svy, vn = rx * nx + ry * ny; if (vn < 0) { const e = 0.35; ball.vx = rx - (1 + e) * vn * nx + svx; ball.vy = ry - (1 + e) * vn * ny + svy; }
+      }
+      if (ball.y > H + 12) { balls--; if (balls <= 0) { over(); } else { newBall(); } return; }
+      if (Math.hypot(ball.vx, ball.vy) < 0.15 && ball.y < H - 150 && ball.y > 20) { if (++still > 90) { ball.vx += (Math.random() - 0.5) * 6; ball.vy -= 3; still = 0; } } else still = 0;
+    }
+    function frame(ts) {
+      raf = 0; if (state === 'idle' || state === 'over') { last = 0; return; }
+      if (visible()) {
+        const k = last ? Math.max(0.5, Math.min(2, (ts - last) / 16.67)) : 1; last = ts;   // same speed on 30, 60 and 120 Hz screens
+        if (charging && state === 'ready') charge = Math.min(1, charge + 0.025 * k);
+        for (let i = 0; i < SUB; i++) step(k / SUB);
+        stat('Score ' + score + '   Ball ' + (4 - balls) + '/3' + (best ? '   Best ' + best : ''));
+        if (state === 'ready') stat('Ball ' + (4 - balls) + '/3. Hold LAUNCH, let go to shoot.' + (score ? '  Score ' + score : ''));
+        draw();
+      }
+      raf = requestAnimationFrame(frame);
+    }
+    function kick() { if (!raf) raf = requestAnimationFrame(frame); }
+    function launch() { if (state !== 'ready') return; ball.vy = -(10.5 + charge * 8.5); ball.vx = 0; charge = 0; charging = false; state = 'play'; }
+    function draw() {
+      const c = colors(); cx.fillStyle = '#000'; cx.fillRect(0, 0, W, H);
+      cx.lineWidth = 3; cx.strokeStyle = c.acc; cx.lineCap = 'round'; cx.beginPath(); for (const w of WALLS) { cx.moveTo(w[0], w[1]); cx.lineTo(w[2], w[3]); } cx.stroke();
+      for (const b of BUMPS) { if (b.hit > 0) b.hit--; cx.beginPath(); cx.arc(b.x, b.y, b.r, 0, 6.3); cx.fillStyle = b.hit > 0 ? '#fff' : b.r > 10 ? c.hi : '#0cf'; cx.fill(); cx.lineWidth = 3; cx.strokeStyle = '#000'; cx.stroke(); }
+      cx.lineWidth = FR * 2; cx.strokeStyle = '#eee';
+      for (const f of FL) { cx.beginPath(); cx.moveTo(f.px, f.py); cx.lineTo(f.px + f.s * Math.cos(f.th) * FLEN, f.py + Math.sin(f.th) * FLEN); cx.stroke(); }
+      cx.fillStyle = '#888'; cx.fillRect(W - 24, H - 18 + (state === 'ready' ? charge * 6 : 0), 12, 6);
+      if (ball && state !== 'idle') { cx.beginPath(); cx.arc(ball.x, ball.y, R, 0, 6.3); cx.fillStyle = '#fff'; cx.fill(); cx.beginPath(); cx.arc(ball.x - 2, ball.y - 2, 2, 0, 6.3); cx.fillStyle = '#9cf'; cx.fill(); }
+      cx.font = 'bold 13px monospace'; cx.textAlign = 'left'; cx.fillStyle = c.hi; cx.fillText(String(score || 0), 14, 24);
+      cx.textAlign = 'right'; cx.fillStyle = '#fff'; cx.fillText('Ball ' + Math.min(3, 4 - (balls || 3)) + '/3', W - 14, 24);
+      if (state === 'idle' || state === 'over') { cx.textAlign = 'center'; cx.fillStyle = '#fff'; cx.font = 'bold 22px monospace'; cx.fillText(state === 'over' ? 'GAME OVER' : 'PINBALL', W / 2, H / 2 - 20); cx.font = '12px monospace'; cx.fillText('Z and / flip, or tap', W / 2, H / 2 + 4); cx.fillText('Space = launch', W / 2, H / 2 + 22); }
+    }
+    const typing = e => /^(INPUT|SELECT|TEXTAREA)$/.test((e.target || {}).tagName || '');
+    const KEY = { ArrowLeft: 'l', KeyZ: 'l', ArrowRight: 'r', Slash: 'r', KeyM: 'r', Space: 'p', ArrowDown: 'p' };
+    document.addEventListener('keydown', e => {
+      const k = KEY[e.code]; if (!k || typing(e) || e.ctrlKey || e.metaKey || e.altKey || (state !== 'ready' && state !== 'play') || !visible()) return; e.preventDefault();
+      if (k === 'p') { if (state === 'ready') charging = true; } else keys[k] = true;
+    });
+    document.addEventListener('keyup', e => { const k = KEY[e.code]; if (!k) return; if (k === 'p') { if (charging) { charging = false; launch(); } } else keys[k] = false; });
+    const hold = (id, fn_on, fn_off) => { const b = $(id); const on = e => { e.preventDefault(); fn_on(); }, off = () => fn_off(); b.addEventListener('pointerdown', on); ['pointerup', 'pointercancel', 'pointerleave'].forEach(n => b.addEventListener(n, off)); };
+    hold('pin-l', () => { keys.l = true; }, () => { keys.l = false; });
+    hold('pin-r', () => { keys.r = true; }, () => { keys.r = false; });
+    hold('pin-p', () => { if (state === 'ready') charging = true; }, () => { if (charging) { charging = false; launch(); } });
+    $('pin-go').onclick = () => { if (state === 'ready' || state === 'play') { state = 'idle'; $('pin-go').textContent = 'Start'; stat(best ? 'Best ' + best + '. Press Start' : 'Press Start'); draw(); } else reset(); };
+    window.KRPIN = { state: () => state, ball: () => ball, score: () => score, force: () => { if (state === 'ready') { charge = 1; launch(); } } };
+    draw(); stat(best ? 'Best ' + best + '. Press Start' : 'Press Start');
   })();
 
-  // ---------- Memory Match ----------
+  // ---------- Memory Match 10x: 160 cards, 80 pairs ----------
   (function () {
-    const SYM = ['@', '#', '$', '%', '&', '*', '+', '?'];
-    let deck, open, matched, moves, lock, cells = [];
+    const SYM = ['🍎','🍊','🍋','🍌','🍉','🍇','🍓','🍒','🍑','🍍','🥝','🍅','🥑','🌽','🥕','🍔','🍕','🌮','🍩','🍪','🎂','🍿','🍺','☕','🎸','🥁','🎹','🎺','🎻','🎤','🎧','📻','🎲','🎯','🎳','🏀','⚽','🏈','⚾','🎾','🐶','🐱','🐭','🐹','🐰','🦊','🐻','🐼','🐨','🐯','🦁','🐮','🐷','🐸','🐵','🐔','🐧','🐦','🦆','🦉','🐺','🐴','🦄','🐝','🐛','🦋','🐌','🐞','🐢','🐍','🐙','🦀','🐠','🐬','🐳','🦈','🌵','🌻','🌈','🔥'];
+    const PAIRS = SYM.length;
+    let deck, open, matched, moves, lock, cells = [], t0, tick, best = 0;
+    try { best = +localStorage.getItem('kr_mem80_best') || 0; } catch (e) {}
     const stat = t => { $('mem-stat').textContent = t; };
+    const fmt = s => Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+    const line = () => 'Pairs ' + matched + '/' + PAIRS + '   Moves ' + moves + (t0 ? '   ' + fmt(Math.floor((Date.now() - t0) / 1000)) : '') + (best ? '   Best ' + best : '');
     const reset = () => {
-      deck = SYM.concat(SYM).sort(() => Math.random() - 0.5); open = []; matched = 0; moves = 0; lock = false;
-      cells.forEach(c => { c.textContent = ''; c.className = 'cell'; }); stat('Find all 8 pairs.');
+      deck = SYM.concat(SYM); for (let i = deck.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [deck[i], deck[j]] = [deck[j], deck[i]]; }
+      open = []; matched = 0; moves = 0; lock = false; t0 = 0; clearInterval(tick);
+      cells.forEach(c => { c.textContent = ''; c.className = 'cell'; c.setAttribute('aria-label', 'Hidden card'); }); stat('Find all ' + PAIRS + ' pairs. Good luck.');
     };
     const click = i => {
       if (lock || open.includes(i) || cells[i].classList.contains('done')) return;
-      cells[i].textContent = deck[i]; cells[i].classList.add('open'); open.push(i);
+      if (!t0) { t0 = Date.now(); tick = setInterval(() => { if (matched < PAIRS) stat(line()); }, 1000); }
+      cells[i].textContent = deck[i]; cells[i].classList.add('open'); cells[i].setAttribute('aria-label', 'Card ' + deck[i]); open.push(i);
       if (open.length < 2) return;
       moves++; const [a, c] = open;
       if (deck[a] === deck[c]) {
         cells[a].className = cells[c].className = 'cell done'; matched++; open = [];
-        stat(matched === 8 ? 'You won in ' + moves + ' moves!' : 'Match! Moves: ' + moves);
+        if (matched === PAIRS) {
+          clearInterval(tick); const secs = Math.floor((Date.now() - t0) / 1000), hi = !best || moves < best; if (hi) { best = moves; try { localStorage.setItem('kr_mem80_best', best); } catch (e) {} }
+          stat('ALL ' + PAIRS + ' PAIRS in ' + moves + ' moves, ' + fmt(secs) + (hi ? ' (new best!)' : '.'));
+          try { if (window.KRRAY && KRRAY.chat) KRRAY.chat('You matched all ' + PAIRS + ' pairs?! That is a lot of pairs.', 4000); } catch (e) {}
+        } else stat(line());
       } else {
-        lock = true; stat('Moves: ' + moves);
-        setTimeout(() => { [a, c].forEach(k => { cells[k].textContent = ''; cells[k].className = 'cell'; }); open = []; lock = false; }, 700);
+        lock = true; stat(line());
+        setTimeout(() => { [a, c].forEach(k => { cells[k].textContent = ''; cells[k].className = 'cell'; cells[k].setAttribute('aria-label', 'Hidden card'); }); open = []; lock = false; }, 650);
       }
     };
-    for (let i = 0; i < 16; i++) { const el = document.createElement('button'); el.type = 'button'; el.className = 'cell'; el.onclick = () => click(i); $('mem').appendChild(el); cells.push(el); }
+    for (let i = 0; i < PAIRS * 2; i++) { const el = document.createElement('button'); el.type = 'button'; el.className = 'cell'; el.onclick = () => click(i); $('mem').appendChild(el); cells.push(el); }
     $('mem-reset').onclick = reset; reset();
   })();
 })();
+
 } catch (err) { console.error('[fun:games]', err); }
 try {
+window.KRBIG = (function () { let last = Date.now() - 100000; return {
+  wait: () => Math.max(180000, -Math.log(1 - Math.random()) * 2400000),   // each one about every 40-45 minutes, five of them: roughly one every 9 minutes overall
+  ok: () => Date.now() - last > 150000,                                  // never two in a row
+  mark: () => { last = Date.now(); return true; } }; })();
 // Page extras: random quakes, Tetris with real listings, wandering animals, and the drink + food of the day.
 (function () {
   const $ = id => document.getElementById(id);
@@ -5746,7 +5852,7 @@ try {
     document.dispatchEvent(new CustomEvent('krquake'));
     setTimeout(() => page.classList.remove('quake'), 1000);
   }
-  (function schedule() { setTimeout(() => { quake(); schedule(); }, rand(40000, 80000)); })();
+  (function schedule() { setTimeout(() => { if (KRBIG.ok() && !document.hidden) { KRBIG.mark(); quake(); } schedule(); }, KRBIG.wait() * 1.5); })();
 
   // ---------- trippy episodes: the page changes dimensions for a while, then comes back ----------
   const tripEl = document.createElement('div'); tripEl.id = 'trip'; document.body.appendChild(tripEl);
@@ -5792,7 +5898,7 @@ try {
   tripStop.onclick = () => stopTrip();
   if (calm) { $('trip-btn').disabled = true; $('trip-btn').title = 'Turned off because your device asks for reduced motion'; }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') stopTrip(); });
-  (function tripSchedule(first) { setTimeout(() => { if (!startTrip(false)) { tripSchedule(false); return; } tripSchedule(false); }, first ? rand(60000, 150000) : rand(150000, 330000)); })(true);
+  (function tripSchedule() { setTimeout(() => { if (KRBIG.ok() && !document.hidden && startTrip(false)) KRBIG.mark(); tripSchedule(); }, KRBIG.wait()); })();
 
   // ---------- crayon: hold the mouse down anywhere to scribble over the whole page (it all goes away on reload) ----------
   (function () {
@@ -5900,7 +6006,7 @@ try {
     return true;
   }
   window.KRPIXEL = pixelate;
-  (function pixSchedule() { setTimeout(() => { pixelate(); pixSchedule(); }, rand(20000, 75000)); })();
+  (function pixSchedule() { setTimeout(() => { if (KRBIG.ok() && !document.hidden) { KRBIG.mark(); pixelate(); } pixSchedule(); }, KRBIG.wait()); })();
 
   // ---------- animals ----------
   const SP = {
@@ -6297,7 +6403,7 @@ try {
 
   // ---- Ray the helper ----
   const bubble = $('ray-bubble'), text = $('ray-text');
-  let tips = ['Psst! You found the secret page. Everything on the real site works. Try the Funhouse button, or hold the mouse down and scribble.'], at = 0, hidden = false;
+  let tips = ['Hi! I\'m Ray. Looking for a show? Hold the mouse down anywhere to scribble.'], at = 0, hidden = false;
   const STATIC = [
     'Click a poster to see it full size.',
     'Click the name of a show to visit the venue\'s own page.',
@@ -6389,12 +6495,12 @@ try {
     lastAutoMad = Date.now(); makeMad(line, ms);
   }
   // out of nowhere, now and then
-  (function schedule() { setTimeout(() => { if (!document.hidden && !isMad()) autoMad(GRUMPS[Math.floor(Math.random() * GRUMPS.length)], 7000, 0.5); schedule(); }, 360000 + Math.random() * 540000); })();
+  (function schedule() { setTimeout(() => { if (!document.hidden && !isMad()) autoMad(GRUMPS[Math.floor(Math.random() * GRUMPS.length)], 7000, 0.5); schedule(); }, 1800000 + Math.random() * 1800000); })();
   // and when the page misbehaves
   const WOOZY = ['Whoa. Is the page okay?', 'I do not feel so good.', 'Everything is spinning. Neat.', 'Are the walls breathing?', 'Hold on to something.'];
   document.addEventListener('krtrip', () => { if (hidden || lifting || smoking || isMad()) return; const line = WOOZY[Math.floor(Math.random() * WOOZY.length)]; text.textContent = line; bubble.style.display = ''; setTimeout(() => { if (text.textContent === line) bubble.style.display = 'none'; }, 7000); });
-  document.addEventListener('krquake', () => autoMad('WHO KEEPS SHAKING THE PAGE?!', 6000, 0.12));
-  document.addEventListener('krcritter', e => autoMad(ANGRY_AT[e.detail] || 'WHAT WAS THAT?!', 6000, 0.08));
+  document.addEventListener('krquake', () => autoMad('WHO KEEPS SHAKING THE PAGE?!', 6000, 0.05));
+  document.addEventListener('krcritter', e => autoMad(ANGRY_AT[e.detail] || 'WHAT WAS THAT?!', 6000, 0.03));
   // ---- Ray gets big and does push-ups (about once every 10 minutes, on average) ----
   const lift = $('raylift');
   let lifting = false;
@@ -6468,8 +6574,8 @@ try {
     return true;
   }
   (function pushSchedule() {
-    const wait = Math.max(45000, -Math.log(1 - Math.random()) * 600000);   // random gaps, about 10 minutes apart on average
-    setTimeout(() => { if (!startPushups()) { setTimeout(pushSchedule, 20000); return; } pushSchedule(); }, wait);
+    const wait = KRBIG.wait();   // random gaps, about 10 minutes apart on average
+    setTimeout(() => { if (!(KRBIG.ok() && startPushups() && KRBIG.mark())) { setTimeout(pushSchedule, 20000); return; } pushSchedule(); }, wait);
   })();
   // ---- Ray takes a smoke break now and then (a cartoon cigarette, a few puffs, and a cough) ----
   let smoking = false, smokeTimers = [];
@@ -6523,30 +6629,36 @@ try {
   function startClouds() { buildSprites(); const n = innerWidth < 760 ? 10 : 15, gap = 7000 / n; for (let i = 0; i < n; i++) cloudTimers.push(setTimeout(spawnPuff, 700 + i * gap)); }   // fewer on phones, to stay smooth
   // ---- Show of the day: one show per day (picked by the date, so it stays the same all day) pops up on top of the smoke ----
   const sotdEl = $('sotd'); let sotdT = null;
-  function pickSotd() {
+  function pickSotd(step) {
     const list = window.KRSHOWS || []; if (!list.length) return null;
     const day = dayStr(new Date()), tonight = list.filter(e => e.date === day), soonList = soon(list, 7);
     let pool = tonight.length ? tonight : soonList.length ? soonList : list;
     const withPic = pool.filter(e => e.posterUrl && /^(https?:|\/)/i.test(String(e.posterUrl).trim()));
     if (withPic.length) pool = withPic;
-    return pool[seed(day + 'show-of-the-day') % pool.length];
+    const s0 = seed(day + 'show-of-the-day') % pool.length;
+    if (!(step > 0)) return pool[s0];
+    const order = []; pool.concat(tonight, soonList).forEach(x => { if (order.indexOf(x) < 0) order.push(x); });   // the day's pick first, then everything else tonight, then the next week
+    return order[(s0 + step) % order.length];
   }
   function hideSotd(now) {
     clearTimeout(sotdT); if (!sotdEl.classList.contains('pop')) return;
     if (now) { sotdEl.classList.remove('pop', 'out'); return; }
     sotdEl.classList.add('out'); sotdT = setTimeout(() => sotdEl.classList.remove('pop', 'out'), 480);
   }
-  function showSotd() {
-    const e = pickSotd(); if (!e) return;
+  let smokeNo = 0;
+  function showSotd(step) {
+    step = step > 0 ? step | 0 : 0;
+    const e = pickSotd(step); if (!e) return;
+    const label = step === 0 ? 'SHOW OF THE DAY' : e.date === dayStr(new Date()) ? 'ALSO ON TONIGHT' : 'COMING UP';
     const t = when(e), link = /^https?:/i.test(String(e.venueUrl || '').trim()) ? e.venueUrl.trim() : '';
     const pic = e.posterUrl && /^(https?:|\/)/i.test(String(e.posterUrl).trim()) ? '<img src="' + esc(String(e.posterUrl).trim()) + '" alt="" onerror="this.remove()">' : '';
-    sotdEl.innerHTML = '<div class="h"><span class="blink">&#9733;</span> SHOW OF THE DAY <span class="blink">&#9733;</span><button type="button" class="x" aria-label="Close">x</button></div>' + pic
+    sotdEl.innerHTML = '<div class="h"><span class="blink">&#9733;</span> ' + label + ' <span class="blink">&#9733;</span><button type="button" class="x" aria-label="Close">x</button></div>' + pic
       + '<div class="t">' + (link ? '<a href="' + esc(link) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a>' : esc(e.title)) + '</div>'
       + '<div class="m">@ ' + esc(e.venue) + (e.location ? ' - ' + esc(e.location) : '') + '</div>'
       + '<div class="w">' + esc(pretty(e)) + (t ? ' at ' + esc(t) : '') + (e.price && e.price !== 'See website' ? ' &middot; ' + esc(e.price) : '') + '</div>' + '<div class="f">' + '<a href="#" class="fk-find" data-reveal="' + esc(e.venue + '||' + e.date + '||' + (e.time || '')) + '">Show me this one in the list &raquo;</a>' + '</div>';
     sotdEl.querySelector('.x').onclick = () => hideSotd();
     clearTimeout(sotdT); sotdEl.classList.remove('out'); sotdEl.classList.remove('pop'); void sotdEl.offsetWidth; sotdEl.classList.add('pop');
-    if (!hidden) { text.textContent = 'Show of the day! Look at that.'; bubble.style.display = ''; }
+    if (!hidden) { text.textContent = step === 0 ? 'Show of the day! Look at that.' : ['Oh, and this one too.', 'Another good one, honest.', 'Okay, one more. Last one.', 'Look, there is a lot going on.'][(step - 1) % 4]; bubble.style.display = ''; }
   }
   function endSmoke(caught) {
     if (!smoking) return;
@@ -6570,7 +6682,7 @@ try {
     const at = (ms, fn) => smokeTimers.push(setTimeout(fn, ms));
     for (let i = 0; i < 8; i++) at(900 + i * 900, () => puff(false));
     at(2800, () => puff(true)); at(5600, () => puff(true));
-    at(4800, showSotd);                                              // the show of the day pops up on top of the thick smoke
+    at(4800, () => showSotd(smokeNo++));                                              // the show of the day pops up on top of the thick smoke
     at(4200, () => { if (!hidden) { const l = SMOKE_MID[Math.floor(Math.random() * SMOKE_MID.length)]; text.textContent = l; bubble.style.display = ''; } });
     at(7600, () => { ray.classList.add('cough'); if (!hidden) { text.textContent = '*cough cough*'; bubble.style.display = ''; } });
     at(8800, () => ray.classList.remove('cough'));
@@ -6578,8 +6690,8 @@ try {
     return true;
   }
   (function smokeSchedule() {
-    const wait = Math.max(30000, -Math.log(1 - Math.random()) * 90000);   // random, about every 1.5 minutes on average
-    setTimeout(() => { if (!startSmoke()) { setTimeout(smokeSchedule, 10000); return; } smokeSchedule(); }, wait);
+    const wait = KRBIG.wait();   // random, about every 1.5 minutes on average
+    setTimeout(() => { if (!(KRBIG.ok() && startSmoke() && KRBIG.mark())) { setTimeout(smokeSchedule, 10000); return; } smokeSchedule(); }, wait);
   })();
   // ---- DJ Ray: headphones, shades, two turntables, a head-bobbing set that announces real shows ----
   const dj = $('raydj'), djHead = $('dj-head');
@@ -6668,8 +6780,8 @@ try {
     return true;
   }
   (function djSchedule() {
-    const wait = Math.max(120000, -Math.log(1 - Math.random()) * 900000);   // random, about every 15 minutes on average
-    setTimeout(() => { if (!startDj()) { setTimeout(djSchedule, 25000); return; } djSchedule(); }, wait);
+    const wait = KRBIG.wait();   // random, about every 15 minutes on average
+    setTimeout(() => { if (!(KRBIG.ok() && startDj() && KRBIG.mark())) { setTimeout(djSchedule, 25000); return; } djSchedule(); }, wait);
   })();
   // ---- Ray tells jokes: a setup, a pause, then the punchline ----
   const JOKES = [
@@ -6978,24 +7090,24 @@ try {
     return parts.length ? ' | ' + parts.join(' | ') : '';
   };
 
-  // ---------- the marquee reads the real data ----------
+  // ---------- the scrolling text: 100 quotes from famous musicians, one per pass, in a random order ----------
   const esc = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-  function marquee() {
-    const m = document.querySelector('#funhouse > marquee'); if (!m) return;
-    const list = window.KRSHOWS || [], bits = ['Welcome to the secret page!'];
-    const s = R().sotdPick && R().sotdPick();
-    const link = (e, txt) => '<a href="#" data-reveal="' + esc(key(e)) + '">' + esc(txt) + '</a>';
-    if (s) bits.push('&#9733; SHOW OF THE DAY: ' + link(s, s.title + ' @ ' + s.venue) + ' &#9733;');
-    const d = new Date(), ds = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-    const tonight = list.filter(e => e.date === ds);
-    if (tonight.length) bits.push('Tonight: ' + tonight.slice(0, 3).map(e => link(e, e.title + ' @ ' + e.venue)).join(' ... ') + (tonight.length > 3 ? ' ... and ' + (tonight.length - 3) + ' more' : ''));
-    const nu = list.filter(e => e._fresh).length; if (nu) bits.push(nu + ' NEW show' + (nu === 1 ? '' : 's') + ' added in the last 2 days');
-    bits.push('Every filter, search, map, heart and poster viewer from the real site works down below');
-    bits.push('Hold the mouse down to scribble');
-    m.innerHTML = bits.join(' &nbsp;...&nbsp; ') + ' &nbsp;...&nbsp; ';
-    m.setAttribute('onmouseover', 'this.stop()'); m.setAttribute('onmouseout', 'this.start()');
-  }
-  if (window.KRSHOWS) marquee(); document.addEventListener('krshows', marquee);
+  (function quotes() {
+    const Q = [["What we play is life.", "Louis Armstrong"], ["If you have to ask what jazz is, you'll never know.", "Louis Armstrong"], ["Musicians don't retire; they stop when there's no more music in them.", "Louis Armstrong"], ["If it sounds good, it is good.", "Duke Ellington"], ["There are two kinds of music. Good music, and the other kind.", "Duke Ellington"], ["A problem is a chance for you to do your best.", "Duke Ellington"], ["Music is my mistress, and she plays second fiddle to no one.", "Duke Ellington"], ["Do not fear mistakes. There are none.", "Miles Davis"], ["Sometimes you have to play a long time to be able to play like yourself.", "Miles Davis"], ["I'll play it first and tell you what it is later.", "Miles Davis"], ["Music is your own experience, your thoughts, your wisdom. If you don't live it, it won't come out of your horn.", "Charlie Parker"], ["They teach you there's a boundary line to music. But, man, there's no boundary line to art.", "Charlie Parker"], ["You can play a shoestring if you're sincere.", "John Coltrane"], ["I start in the middle of a sentence and move in both directions.", "John Coltrane"], ["A genius is the one most like himself.", "Thelonious Monk"], ["Make the drummer sound good.", "Thelonious Monk"], ["It took me all my life to learn what not to play.", "Dizzy Gillespie"], ["The only thing better than singing is more singing.", "Ella Fitzgerald"], ["It isn't where you came from, it's where you're going that counts.", "Ella Fitzgerald"], ["If I'm going to sing like someone else, then I don't need to sing at all.", "Billie Holiday"], ["A song is anything that can walk by itself.", "Bob Dylan"], ["I accept chaos. I'm not sure whether it accepts me.", "Bob Dylan"], ["A man is a success if he gets up in the morning and gets to bed at night, and in between he does what he wants to do.", "Bob Dylan"], ["I define nothing. Not beauty, not patriotism. I take each thing as it is.", "Bob Dylan"], ["Music is my religion.", "Jimi Hendrix"], ["Music doesn't lie. If there is something to be changed in this world, then it can only happen through music.", "Jimi Hendrix"], ["Without deviation from the norm, progress is not possible.", "Frank Zappa"], ["Music is everybody's possession. It's only publishers who think that people own it.", "John Lennon"], ["I don't know anything about music. In my line you don't have to.", "Elvis Presley"], ["Values are like fingerprints. Nobody's are the same, but you leave 'em all over everything you do.", "Elvis Presley"], ["Aging is an extraordinary process whereby you become the person you always should have been.", "David Bowie"], ["I don't know where I'm going from here, but I promise it won't be boring.", "David Bowie"], ["Tomorrow belongs to those who can hear it coming.", "David Bowie"], ["Always go a little further into the water than you feel you're capable of being in.", "David Bowie"], ["A strong spirit transcends rules.", "Prince"], ["The greatest education in the world is watching the masters at work.", "Michael Jackson"], ["We all have the ability. The difference is how we use it.", "Stevie Wonder"], ["You build on failure. You use it as a stepping stone.", "Johnny Cash"], ["Success is having to worry about every damn thing in the world, except money.", "Johnny Cash"], ["Once you replace negative thoughts with positive ones, you'll start having positive results.", "Willie Nelson"], ["Find out who you are and do it on purpose.", "Dolly Parton"], ["If you don't like the road you're walking, start paving another one.", "Dolly Parton"], ["It costs a lot of money to look this cheap.", "Dolly Parton"], ["Storms make trees take deeper roots.", "Dolly Parton"], ["I'm not offended by all the dumb blonde jokes because I know I'm not dumb. And I also know that I'm not blonde.", "Dolly Parton"], ["I am the architect of rock and roll.", "Little Richard"], ["I was born with music inside me. Music was one of my parts. Like my ribs, my kidneys, my liver, my heart.", "Ray Charles"], ["The beautiful thing about learning is that nobody can take it away from you.", "B.B. King"], ["To play a wrong note is insignificant; to play without passion is inexcusable.", "Ludwig van Beethoven"], ["Music is the mediator between the spiritual and the sensual life.", "Ludwig van Beethoven"], ["I was obliged to be industrious. Whoever is equally industrious will succeed equally well.", "Johann Sebastian Bach"], ["Simplicity is the final achievement.", "Frederic Chopin"], ["Music can name the unnameable and communicate the unknowable.", "Leonard Bernstein"], ["To achieve great things, two things are needed: a plan, and not quite enough time.", "Leonard Bernstein"], ["Honor thy error as a hidden intention.", "Brian Eno"], ["One chord is fine. Two chords is pushing it. Three chords and you're into jazz.", "Lou Reed"], ["Punk is musical freedom. It's saying, doing, and playing what you want.", "Kurt Cobain"], ["The duty of youth is to challenge corruption.", "Kurt Cobain"], ["I like beautiful melodies telling me terrible things.", "Tom Waits"], ["I'll tell you what freedom is to me: no fear.", "Nina Simone"], ["An artist's duty, as far as I'm concerned, is to reflect the times.", "Nina Simone"], ["Don't compromise yourself. You are all you've got.", "Janis Joplin"], ["I won't be a rock star. I will be a legend.", "Freddie Mercury"], ["Music has healing power. It has the ability to take people out of themselves for a few hours.", "Elton John"], ["Participation. That's what's gonna save the human race.", "Pete Seeger"], ["Any darn fool can make something complex; it takes a genius to make something simple.", "Pete Seeger"], ["I hate a song that makes you think you're not any good.", "Woody Guthrie"], ["Music is a language that doesn't speak in particular words. It speaks in emotions.", "Keith Richards"], ["If you think you're too old to rock and roll, then you are.", "Lemmy Kilmister"], ["The most alluring thing a woman can have is confidence.", "Beyonce"], ["Just be yourself, there is no one better.", "Taylor Swift"], ["You have to be unique, and different, and shine in your own way.", "Lady Gaga"], ["Music washes away from the soul the dust of everyday life.", "Art Blakey"], ["Making the simple complicated is commonplace; making the complicated simple, awesomely simple, that's creativity.", "Charles Mingus"], ["Jazz stands for freedom.", "Dave Brubeck"], ["Music is the divine way to tell beautiful, poetic things to the heart.", "Pablo Casals"], ["The main thing in life is not to be afraid to be human.", "Pablo Casals"], ["Music is the weapon of the future.", "Fela Kuti"], ["You may have the universe if I may have Italy.", "Giuseppe Verdi"], ["Jazz is the only music in which the same note can be played night after night but differently each time.", "Ornette Coleman"], ["Music can change the world because it can change people.", "Bono"], ["There's only two kinds of music: the blues and zip-a-dee-doo-dah.", "Townes Van Zandt"], ["You've got to have smelt a lot of mule manure before you can sing like a hillbilly.", "Hank Williams"], ["If something is boring after two minutes, try it for four.", "John Cage"], ["There is no such thing as silence.", "John Cage"], ["I have nothing to say and I am saying it and that is poetry.", "John Cage"], ["The best revenge is massive success.", "Frank Sinatra"], ["Life teaches you how to live it, if you live long enough.", "Tony Bennett"], ["A smile is the shortest distance between two people.", "Victor Borge"], ["Life is a lot like jazz. It's best when you improvise.", "George Gershwin"], ["Talent is only a starting point in this business.", "Irving Berlin"], ["If children are not introduced to music at an early age, I believe something fundamental is being taken from them.", "Luciano Pavarotti"], ["Music is God's voice.", "Brian Wilson"], ["Music creates order out of chaos.", "Yehudi Menuhin"], ["I have found that if you love life, life will love you back.", "Arthur Rubinstein"], ["Music is enough for a lifetime, but a lifetime is not enough for music.", "Sergei Rachmaninoff"], ["To send light into the darkness of men's hearts: such is the duty of the artist.", "Robert Schumann"], ["Inspiration is a guest that does not willingly visit the lazy.", "Pyotr Tchaikovsky"], ["I never tried to prove nothing, just wanted to give a good show.", "Louis Armstrong"], ["Don't only practice your art, but force your way into its secrets; art deserves that, for it and knowledge can raise man to the Divine.", "Ludwig van Beethoven"]];
+    let m = document.querySelector('#funhouse > marquee'); if (!m) return;
+    for (let i = Q.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [Q[i], Q[j]] = [Q[j], Q[i]]; }
+    let n = 0, timer = 0;
+    function next() {
+      clearTimeout(timer); const q = Q[n++ % Q.length];
+      const el = document.createElement('marquee');   // a fresh marquee starts at the right edge every time
+      el.setAttribute('scrollamount', '5'); el.setAttribute('onmouseover', 'this.stop()'); el.setAttribute('onmouseout', 'this.start()');
+      el.innerHTML = '<span>&ldquo;' + esc(q[0]) + '&rdquo; &nbsp;&mdash;&nbsp; <b>' + esc(q[1]) + '</b></span>';
+      m.replaceWith(el); m = el;
+      const tw = (el.firstChild && el.firstChild.getBoundingClientRect().width) || 600;
+      timer = setTimeout(next, Math.max(8000, (el.clientWidth + tw) / 83 * 1000 + 600));   // about 83 px a second at this speed: when the quote has scrolled off, bring the next one
+    }
+    next();
+  })();
 
   // ---------- posters arrive a stripe at a time, like dial-up ----------
   if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
@@ -7018,7 +7130,7 @@ try {
 } catch (err) { console.error('[fun:react]', err); }
 
   // Ray's hello bubble would sit on top of the real filters, so it tucks itself away after a few seconds (he keeps joking and smoking)
-  setTimeout(() => { const t = document.getElementById('ray-text'), bb = document.getElementById('ray-bubble'); if (t && bb && /^Psst! You found/.test(t.textContent)) bb.style.display = 'none'; }, 9000);
+  setTimeout(() => { const t = document.getElementById('ray-text'), bb = document.getElementById('ray-bubble'); if (t && bb && /^Hi! I'm Ray/.test(t.textContent)) bb.style.display = 'none'; }, 9000);
 })();
 
 </script>
