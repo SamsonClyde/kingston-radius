@@ -137,6 +137,10 @@
   #raylift .count { position: absolute; left: 0; right: 0; top: -34px; text-align: center; font: bold 24px var(--font); letter-spacing: 1px; color: #ff0; text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; }
   #ray.lifting svg { visibility: hidden; }
   #ray.lifting .bubble { display: none !important; }
+  /* trippy episodes */
+  #trip { position: fixed; inset: 0; z-index: 7000; pointer-events: none; display: none; opacity: 0; mix-blend-mode: soft-light;
+          background: conic-gradient(from 0deg at 50% 50%, #ff00ff, #00ffff, #ffff00, #ff3366, #3366ff, #ff00ff); }
+  #page.tripping { will-change: transform, filter; }
   body.tetris-open #ray { pointer-events: none; }
   #ray.happy svg { animation: hop 0.35s ease-in-out infinite; }
   @keyframes hop { 50% { transform: translateY(-10px); } }
@@ -425,7 +429,7 @@
 <div class="games" id="games">
   <h2>Games Corner</h2>
   <div class="cap">Take a break between shows. Arrow keys work for Snake.</div>
-  <div style="text-align:center;margin:6px 0 10px"><button class="btn" id="tetris-open" type="button">&#9654; TETRIS: Book the Week</button></div>
+  <div style="text-align:center;margin:6px 0 10px"><button class="btn" id="tetris-open" type="button">&#9654; TETRIS: Book the Week</button> <button class="btn" id="trip-btn" type="button">&#9788; Go Trippy</button></div>
   <div class="gamerow">
 
     <div class="game" id="g-snake">
@@ -751,12 +755,58 @@
   // ---------- the page shakes about once a minute ----------
   const page = $('page');
   function quake() {
-    if (calm || document.hidden) return;
+    if (calm || document.hidden || tripping) return;
     page.classList.remove('quake'); void page.offsetWidth; page.classList.add('quake');
     document.dispatchEvent(new CustomEvent('krquake'));
     setTimeout(() => page.classList.remove('quake'), 1000);
   }
   (function schedule() { setTimeout(() => { quake(); schedule(); }, rand(40000, 80000)); })();
+
+  // ---------- trippy episodes: the page changes dimensions for a while, then comes back ----------
+  const tripEl = document.createElement('div'); tripEl.id = 'trip'; document.body.appendChild(tripEl);
+  let tripping = false, tripAnims = [], tripEnd = null;
+  const tripStop = document.createElement('button');                     // fixed in place so it can always be reached, even while the page swings around
+  tripStop.type = 'button'; tripStop.id = 'tripstop'; tripStop.className = 'btn'; tripStop.textContent = '\u25A0 Stop trip (Esc)';
+  tripStop.style.cssText = 'position:fixed;top:8px;right:8px;z-index:9650;display:none';
+  document.body.appendChild(tripStop);
+  const P = 'perspective(900px) ';
+  const MODES = {
+    tilt:   [P + 'rotateX(0) rotateY(0)', P + 'rotateX(18deg) rotateY(-16deg) rotateZ(1deg)', P + 'rotateX(-14deg) rotateY(18deg) rotateZ(-2deg)', P + 'rotateX(10deg) rotateY(-8deg)', P + 'rotateX(0) rotateY(0)'],
+    flip:   [P + 'rotateY(0deg)', P + 'rotateY(180deg) scale(.92)', P + 'rotateY(360deg)'],
+    squash: ['scale(1,1)', 'scale(1.18,.82) skewX(6deg)', 'scale(.82,1.2) skewX(-8deg)', 'scale(1.1,.9) skewY(5deg)', 'scale(1,1)'],
+    spiral: ['rotate(0deg) scale(1)', 'rotate(120deg) scale(.78)', 'rotate(240deg) scale(.9)', 'rotate(360deg) scale(1)'],
+    tunnel: [P + 'translateZ(0) rotateX(0)', P + 'translateZ(-260px) rotateX(35deg)', P + 'translateZ(-120px) rotateX(-25deg) rotateZ(4deg)', P + 'translateZ(0) rotateX(0)']
+  };
+  function stopTrip(quiet) {
+    if (!tripping) return;
+    clearTimeout(tripEnd); tripAnims.forEach(a => a.cancel()); tripAnims = [];
+    tripEl.style.display = 'none'; tripEl.style.opacity = 0; page.classList.remove('tripping'); page.style.transformOrigin = '';
+    tripping = false; tripStop.style.display = 'none'; $('trip-btn').innerHTML = '&#9788; Go Trippy';
+  }
+  function startTrip(force) {
+    if (tripping || calm) return false;
+    if (!force && (document.hidden || $('tetris').classList.contains('open') || (window.KRRAY && window.KRRAY.lifting()))) return false;
+    tripping = true; tripStop.style.display = '';
+    const names = Object.keys(MODES), mode = names[Math.floor(Math.random() * names.length)], D = rand(12000, 18000);
+    const pageTop = page.getBoundingClientRect().top + scrollY;
+    page.style.transformOrigin = '50% ' + Math.round(scrollY + innerHeight / 2 - pageTop) + 'px';
+    page.classList.remove('quake'); page.classList.add('tripping');
+    const fr = MODES[mode].map(t => ({ transform: t }));
+    tripAnims.push(page.animate(fr, { duration: D, easing: 'ease-in-out', fill: 'none' }));
+    tripAnims.push(page.animate([{ filter: 'hue-rotate(0deg) saturate(1)' }, { filter: 'hue-rotate(180deg) saturate(2) contrast(1.12)' }, { filter: 'hue-rotate(360deg) saturate(1)' }], { duration: D, easing: 'ease-in-out' }));
+    tripEl.style.display = 'block';
+    tripAnims.push(tripEl.animate([{ opacity: 0, transform: 'rotate(0deg) scale(1.6)' }, { opacity: .45, transform: 'rotate(180deg) scale(1.6)', offset: .5 }, { opacity: 0, transform: 'rotate(360deg) scale(1.6)' }], { duration: D, easing: 'ease-in-out' }));
+    document.dispatchEvent(new CustomEvent('krtrip', { detail: mode }));
+    window.KRTRIP.mode = mode;
+    tripEnd = setTimeout(() => stopTrip(), D + 100);
+    return true;
+  }
+  window.KRTRIP = { start: () => startTrip(true), stop: stopTrip, active: () => tripping, mode: '' };
+  $('trip-btn').onclick = () => { if (!tripping) startTrip(true); };
+  tripStop.onclick = () => stopTrip();
+  if (calm) { $('trip-btn').disabled = true; $('trip-btn').title = 'Turned off because your device asks for reduced motion'; }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') stopTrip(); });
+  (function tripSchedule(first) { setTimeout(() => { if (!startTrip(false)) { tripSchedule(false); return; } tripSchedule(false); }, first ? rand(60000, 150000) : rand(150000, 330000)); })(true);
 
   // ---------- animals ----------
   const SP = {
@@ -1223,6 +1273,8 @@
   // out of nowhere, every few minutes
   (function schedule() { setTimeout(() => { if (!document.hidden && !isMad() && Math.random() < 0.6) makeMad(GRUMPS[Math.floor(Math.random() * GRUMPS.length)], 7000); schedule(); }, 90000 + Math.random() * 150000); })();
   // and when the page misbehaves
+  const WOOZY = ['Whoa. Is the page okay?', 'I do not feel so good.', 'Everything is spinning. Neat.', 'Are the walls breathing?', 'Hold on to something.'];
+  document.addEventListener('krtrip', () => { if (hidden || lifting || isMad()) return; const line = WOOZY[Math.floor(Math.random() * WOOZY.length)]; text.textContent = line; bubble.style.display = ''; setTimeout(() => { if (text.textContent === line) bubble.style.display = 'none'; }, 7000); });
   document.addEventListener('krquake', () => { if (Math.random() < 0.5) makeMad('WHO KEEPS SHAKING THE PAGE?!', 6000); });
   document.addEventListener('krcritter', e => { if (Math.random() < 0.5) makeMad(ANGRY_AT[e.detail] || 'WHAT WAS THAT?!', 6000); });
   // ---- Ray gets big and does push-ups (about once every 10 minutes, on average) ----
