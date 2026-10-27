@@ -26,3 +26,14 @@
   from = "/graveyard"
   to = "/graveyard.html"
   status = 200
+
+# Secret page: kingstonradius.com/fun (the real site plus the blog's chaos). Not linked anywhere, not in the sitemap, marked noindex.
+[[redirects]]
+  from = "/fun"
+  to = "/fun.html"
+  status = 200
+
+[[redirects]]
+  from = "/fun/"
+  to = "/fun.html"
+  status = 200
