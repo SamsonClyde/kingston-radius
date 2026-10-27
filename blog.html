@@ -316,6 +316,18 @@
   .gps-list .row small { color: var(--lo); }
   .gps-list a:link { color: #9fd4ff; } .gps-list a:visited { color: #d9a8ff; }
   .gps-towns button { margin: 2px; }
+  /* full-screen GPS */
+  html.gps-lock { overflow: hidden; }
+  .gps.gps-full { position: fixed; inset: 0; width: auto; height: 100vh; height: 100dvh; margin: 0; z-index: 9300; border-radius: 0; border-width: 0; display: flex; flex-direction: column; padding: 10px 10px 8px; }
+  .gps.gps-full:before { display: none; }
+  .gps.gps-full .gps-bezel { flex: 1; min-height: 0; display: flex; }
+  .gps.gps-full .gps-screen { height: auto; flex: 1; min-width: 0; }
+  .gps.gps-full .gps-btns { max-width: 520px; width: 100%; margin: 8px auto 0; }
+  .gps.gps-full .gps-list { position: absolute; left: 0; right: 0; bottom: 20px; z-index: 870; max-width: none; max-height: 46%; overflow: auto; margin: 0; border: 0; border-top: 2px solid #1d2a14; background: #a9b98a; color: #1d2a14; font: bold 11px/1.35 "Courier New", monospace; padding: 4px 8px; }
+  .gps.gps-full .gps-list h3, .gps.gps-full .gps-list .vh, .gps.gps-full .gps-list .row, .gps.gps-full .gps-list .row small { color: #1d2a14; }
+  .gps.gps-full .gps-list a:link, .gps.gps-full .gps-list a:visited { color: #1d2a14; text-decoration: underline; }
+  .gps-btns .col.three { gap: 4px; }
+  .gps-btns .col.three button { padding: 4px 4px; }
 
   /* fortune cookie + magic 8-ball */
   .toys { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 900px; margin: 12px auto; }
@@ -505,7 +517,7 @@
   <div class="gps-btns">
     <div class="col"><button type="button" id="gps-zin">ZOOM +</button><button type="button" id="gps-zout">ZOOM -</button></div>
     <div class="gps-pad"><button type="button" class="u" data-p="U">&#9650;</button><button type="button" class="l" data-p="L">&#9664;</button><button type="button" class="c" id="gps-home" aria-label="Recenter">&#9679;</button><button type="button" class="r" data-p="R">&#9654;</button><button type="button" class="d" data-p="D">&#9660;</button></div>
-    <div class="col"><button type="button" id="gps-fit">PAGE</button><button type="button" id="gps-clear">QUIT</button></div>
+    <div class="col three"><button type="button" id="gps-fit">PAGE</button><button type="button" id="gps-full" aria-pressed="false">FULL</button><button type="button" id="gps-clear">QUIT</button></div>
   </div>
 </div>
 <div class="gps-list" id="gps-list"></div>
@@ -779,8 +791,25 @@
   $('gps-zin').onclick = () => map && map.zoomIn(); $('gps-zout').onclick = () => map && map.zoomOut();
   $('gps-fit').onclick = () => fit(); $('gps-home').onclick = () => map && map.setView(KING, 10);
   $('gps-clear').onclick = () => { sel = null; $('gps-list').style.display = 'none'; $('gps-sel').textContent = 'HOME'; for (const m of markers.values()) if (m._icon) m._icon.classList.remove('sel'); };
+  // full screen: the whole GPS fills the window (works on phones too, where the browser's own full screen isn't available)
+  const dev = $('gps'), listBox = $('gps-list');
+  function setFull(on) {
+    if (on === dev.classList.contains('gps-full')) return;
+    if (on && window.KRTRIP) KRTRIP.stop();
+    dev.classList.toggle('gps-full', on);
+    document.documentElement.classList.toggle('gps-lock', on);
+    document.body.classList.toggle('gps-open', on);
+    $('gps-full').textContent = on ? 'EXIT' : 'FULL'; $('gps-full').setAttribute('aria-pressed', on ? 'true' : 'false');
+    if (on) dev.querySelector('.gps-screen').appendChild(listBox); else dev.after(listBox);   // the list of shows rides inside the LCD while full screen
+    const refresh = () => { if (map) { map.invalidateSize(); readout(); } };
+    setTimeout(refresh, 60); setTimeout(refresh, 400);
+    if (!on) dev.scrollIntoView({ block: 'center' });
+  }
+  $('gps-full').onclick = () => setFull(!dev.classList.contains('gps-full'));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && dev.classList.contains('gps-full')) setFull(false); });
+  window.addEventListener('resize', () => { if (map && dev.classList.contains('gps-full')) map.invalidateSize(); });
   document.querySelectorAll('.gps-pad [data-p]').forEach(b => { b.onclick = () => { if (!map) return; const d = b.dataset.p; map.panBy([d === 'L' ? -90 : d === 'R' ? 90 : 0, d === 'U' ? -90 : d === 'D' ? 90 : 0]); }; });
-  window.KRGPS = { groups: () => groups.size, select: showTown, started: () => started, map: () => map };
+  window.KRGPS = { full: setFull, isFull: () => dev.classList.contains('gps-full'), groups: () => groups.size, select: showTown, started: () => started, map: () => map };
   if (window.KRSHOWS) ready(window.KRSHOWS); else document.addEventListener('krshows', () => ready(window.KRSHOWS || []));
 })();
 </script>
@@ -1079,7 +1108,7 @@
   // ---------- the page shakes about once a minute ----------
   const page = $('page');
   function quake() {
-    if (calm || document.hidden || tripping) return;
+    if (calm || document.hidden || tripping || document.body.classList.contains('gps-open')) return;
     page.classList.remove('quake'); void page.offsetWidth; page.classList.add('quake');
     document.dispatchEvent(new CustomEvent('krquake'));
     setTimeout(() => page.classList.remove('quake'), 1000);
@@ -1109,7 +1138,7 @@
   }
   function startTrip(force) {
     if (tripping || calm) return false;
-    if (!force && (document.hidden || $('tetris').classList.contains('open') || (window.KRRAY && window.KRRAY.lifting()))) return false;
+    if (!force && (document.hidden || document.body.classList.contains('gps-open') || $('tetris').classList.contains('open') || (window.KRRAY && window.KRRAY.lifting()))) return false;
     tripping = true; tripStop.style.display = '';
     const names = Object.keys(MODES), mode = names[Math.floor(Math.random() * names.length)], D = rand(12000, 18000);
     const pageTop = page.getBoundingClientRect().top + scrollY;
@@ -1166,7 +1195,7 @@
       return t;
     }
     // The crayon works over everything. Form fields, the Tetris window, Ray and the games' canvases keep their own mouse handling.
-    const SKIP = 'input,select,textarea,option,canvas,#tetris,#ray,#tripstop';
+    const SKIP = 'input,select,textarea,option,canvas,#tetris,#ray,#tripstop,#gps';
     const CLICKY = 'a,button,label,summary,.btn,[onclick]';
     let pending = false, swallow = false, sx = 0, sy = 0, moves = 0;
     const begin = (x, y) => { drawing = true; document.body.classList.add('scribbling'); try { getSelection().removeAllRanges(); } catch (err) {} lx = x; ly = y; dab(lx, ly); drewAny = true; };
