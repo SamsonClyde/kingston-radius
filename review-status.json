@@ -2176,5 +2176,9 @@
     "status": "rejected",
     "hiddenAt": 1793109975076
   },
-  "The Half Moon||2026-11-14||20:00": "approved"
+  "The Half Moon||2026-11-14||20:00": "approved",
+  "The Living Room at Full Circle||2026-10-28||6:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1793109981734
+  }
 }
