@@ -156,6 +156,19 @@
   #smokecloud i { position: absolute; width: 75vmax; height: 75vmax; margin: -37vmax 0 0 -37vmax; border-radius: 50%; background: radial-gradient(circle, rgba(222,222,218,.9) 0%, rgba(196,196,192,.6) 38%, rgba(170,170,168,0) 68%); animation: smokedrift 13s ease-in-out infinite alternate; }
   @keyframes smokedrift { from { transform: translate(-7vw, 5vh) scale(1); } to { transform: translate(8vw, -9vh) scale(1.2); } }
   #smokecloud .cpuff { position: absolute; pointer-events: none; will-change: transform, opacity; }
+  #sotd { position: fixed; left: 50%; top: 50%; z-index: 9100; width: min(88vw, 340px); max-height: 88vh; overflow: auto; transform: translate(-50%, -50%); background: #fffbd6; color: #111; border: 5px ridge #d4a017; box-shadow: 6px 6px 0 rgba(0,0,0,.55), 0 0 40px rgba(255, 220, 80, .7); text-align: center; display: none; font-family: var(--font); }
+  #sotd.pop { display: block; animation: sotdpop .7s cubic-bezier(.2,1.6,.4,1); }
+  #sotd.out { animation: sotdout .45s ease-in forwards; }
+  @keyframes sotdpop { from { transform: translate(-50%, -50%) scale(.2) rotate(-12deg); opacity: 0; } to { transform: translate(-50%, -50%) scale(1) rotate(0); opacity: 1; } }
+  @keyframes sotdout { to { transform: translate(-50%, -50%) scale(.2) rotate(10deg); opacity: 0; } }
+  #sotd .h { background: linear-gradient(#d4161c, #8a0b10); color: #ffee00; font-weight: bold; letter-spacing: 2px; padding: 6px 30px 6px 8px; font-size: 14px; position: relative; }
+  #sotd .x { position: absolute; right: 4px; top: 4px; width: 22px; height: 20px; padding: 0; line-height: 16px; font: bold 12px Arial, sans-serif; background: #c0c0c0; border: 2px outset #fff; cursor: pointer; color: #000; }
+  #sotd img { display: block; max-width: 100%; max-height: 42vh; margin: 8px auto 0; border: 2px inset #808080; }
+  #sotd .t { font-weight: bold; font-size: 17px; line-height: 1.2; margin: 8px 10px 2px; }
+  #sotd .t a:link, #sotd .t a:visited { color: #0000cc; }
+  #sotd .m { font-size: 13px; margin: 2px 10px; }
+  #sotd .w { font-size: 14px; font-weight: bold; color: #8a0b10; margin: 4px 10px 10px; }
+  @media (prefers-reduced-motion: reduce) { #sotd.pop, #sotd.out { animation: none; } }
   #ray.cough svg { animation: rage .12s linear 7; }
   #ray.lifting svg { visibility: hidden; }
   #ray.lifting .bubble { display: none !important; }
@@ -376,6 +389,9 @@
   /* animals that wander across the screen */
   .critter { position: fixed; left: 0; top: 0; z-index: 8000; pointer-events: none; will-change: transform; line-height: 1; }
   .critter span { display: block; }
+  /* when Ray DJs every animal dances (the rotate/scale properties stack on top of the hop animation) */
+  body.djing .critter > span:first-child { animation: krdance var(--dd, .5s) ease-in-out infinite alternate; transform-origin: 50% 90%; }
+  @keyframes krdance { from { rotate: -20deg; scale: 1 .9; } to { rotate: 20deg; scale: 1.2 1.25; } }
   @media (prefers-reduced-motion: reduce) { .critter { display: none; } }
 
 
@@ -777,7 +793,7 @@
     const sats = 6 + Math.floor(Math.random() * 4), bars = $('gps-bars'); let n = 0;
     bars.innerHTML = Array.from({ length: 8 }, (_, i) => '<i style="height:' + (8 + i * 4) + 'px;opacity:.15"></i>').join('');
     const t = setInterval(() => {
-      n++; $('gps-bootmsg').textContent = 'SATS ' + Math.min(n, sats);
+      n++; const bm = $('gps-bootmsg'); if (bm) bm.textContent = 'SATS ' + Math.min(n, sats);
       [...bars.children].forEach((b, i) => { b.style.opacity = i < n ? 1 : .15; });
       if (n >= sats) { clearInterval(t); setTimeout(() => { $('gps-boot').style.display = 'none'; $('gps-sats').textContent = '3D FIX S' + String(sats).padStart(2, '0'); }, calm ? 0 : 500); }
     }, calm ? 10 : 330);
@@ -1196,7 +1212,7 @@
       return t;
     }
     // The crayon works over everything. Form fields, the Tetris window, Ray and the games' canvases keep their own mouse handling.
-    const SKIP = 'input,select,textarea,option,canvas,#tetris,#ray,#tripstop,#gps';
+    const SKIP = 'input,select,textarea,option,canvas,#tetris,#ray,#tripstop,#gps,#sotd';
     const CLICKY = 'a,button,label,summary,.btn,[onclick]';
     let pending = false, swallow = false, sx = 0, sy = 0, moves = 0;
     const begin = (x, y) => { drawing = true; document.body.classList.add('scribbling'); try { getSelection().removeAllRanges(); } catch (err) {} lx = x; ly = y; dab(lx, ly); drewAny = true; };
@@ -1289,6 +1305,7 @@
     const el = document.createElement('div'); el.className = 'critter';
     el.style.fontSize = sp.size + 'px'; el.style.top = top + 'px'; el.style.visibility = 'hidden';
     const inner = document.createElement('span'); inner.textContent = sp.e; inner.style.transform = flip;   // the emoji face left, so flip them going right
+    inner.style.setProperty('--dd', rand(0.32, 0.6).toFixed(2) + 's'); inner.style.animationDelay = (-rand(0, 0.5)).toFixed(2) + 's';
     el.appendChild(inner); $('zoo').appendChild(el);
     const from = dir > 0 ? -90 : w + 90, to = dir > 0 ? w + 90 : -90;
     const total = dur + (stay ? stay.ms : 0);
@@ -1337,6 +1354,16 @@
     document.dispatchEvent(new CustomEvent('krcritter', { detail: first }));
     if (Math.random() < 0.3) { const extra = 1 + Math.floor(Math.random() * 2); for (let i = 0; i < extra; i++) one(h, rand(500, 1800) * (i + 1)); }   // sometimes a whole bunch
   }
+  // Ray starts DJing: a crowd of extra animals shows up, parks on the page, and dances with the rest
+  document.addEventListener('krdj', () => {
+    if (calm || document.hidden) return;
+    const h = innerHeight, n = 8;
+    for (let i = 0; i < n; i++) {
+      const kind = BAG[Math.floor(Math.random() * BAG.length)], sp = SP[kind];
+      const top = rand(24, Math.max(60, h - sp.size - 14));
+      run(kind, Math.random() < 0.5 ? 1 : -1, top, rand(0, 2500), rand(2500, 4200), { at: rand(0.3, 0.75), ms: rand(7000, 10000) });
+    }
+  });
   window.KRCRITTER = critters;
   (function schedule(first) { setTimeout(() => { critters(); schedule(false); }, first ? rand(1200, 2600) : rand(1800, 5000)); })(true);
 
@@ -1590,6 +1617,8 @@
   if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) setInterval(() => { const a = $('pet-ant'); a.setAttribute('opacity', a.getAttribute('opacity') === '0.15' ? '1' : '0.15'); }, 900);
 })();
 </script>
+<div id="sotd" role="dialog" aria-label="Show of the day"></div>
+
 <div id="raydj" aria-hidden="true">
   <div class="count" id="dj-count"></div>
   <svg viewBox="0 0 300 240">
@@ -1930,8 +1959,36 @@
     ], { duration: dur, easing: 'cubic-bezier(.2,.7,.3,1)', fill: 'forwards' });
   }
   function startClouds() { buildSprites(); const n = innerWidth < 760 ? 10 : 15, gap = 7000 / n; for (let i = 0; i < n; i++) cloudTimers.push(setTimeout(spawnPuff, 700 + i * gap)); }   // fewer on phones, to stay smooth
+  // ---- Show of the day: one show per day (picked by the date, so it stays the same all day) pops up on top of the smoke ----
+  const sotdEl = $('sotd'); let sotdT = null;
+  function pickSotd() {
+    const list = window.KRSHOWS || []; if (!list.length) return null;
+    const day = dayStr(new Date()), tonight = list.filter(e => e.date === day), soonList = soon(list, 7);
+    let pool = tonight.length ? tonight : soonList.length ? soonList : list;
+    const withPic = pool.filter(e => e.posterUrl && /^(https?:|\/)/i.test(String(e.posterUrl).trim()));
+    if (withPic.length) pool = withPic;
+    return pool[seed(day + 'show-of-the-day') % pool.length];
+  }
+  function hideSotd(now) {
+    clearTimeout(sotdT); if (!sotdEl.classList.contains('pop')) return;
+    if (now) { sotdEl.classList.remove('pop', 'out'); return; }
+    sotdEl.classList.add('out'); sotdT = setTimeout(() => sotdEl.classList.remove('pop', 'out'), 480);
+  }
+  function showSotd() {
+    const e = pickSotd(); if (!e) return;
+    const t = when(e), link = /^https?:/i.test(String(e.venueUrl || '').trim()) ? e.venueUrl.trim() : '';
+    const pic = e.posterUrl && /^(https?:|\/)/i.test(String(e.posterUrl).trim()) ? '<img src="' + esc(String(e.posterUrl).trim()) + '" alt="" onerror="this.remove()">' : '';
+    sotdEl.innerHTML = '<div class="h"><span class="blink">&#9733;</span> SHOW OF THE DAY <span class="blink">&#9733;</span><button type="button" class="x" aria-label="Close">x</button></div>' + pic
+      + '<div class="t">' + (link ? '<a href="' + esc(link) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a>' : esc(e.title)) + '</div>'
+      + '<div class="m">@ ' + esc(e.venue) + (e.location ? ' - ' + esc(e.location) : '') + '</div>'
+      + '<div class="w">' + esc(pretty(e)) + (t ? ' at ' + esc(t) : '') + (e.price && e.price !== 'See website' ? ' &middot; ' + esc(e.price) : '') + '</div>';
+    sotdEl.querySelector('.x').onclick = () => hideSotd();
+    clearTimeout(sotdT); sotdEl.classList.remove('out'); sotdEl.classList.remove('pop'); void sotdEl.offsetWidth; sotdEl.classList.add('pop');
+    if (!hidden) { text.textContent = 'Show of the day! Look at that.'; bubble.style.display = ''; }
+  }
   function endSmoke(caught) {
     if (!smoking) return;
+    if (caught) hideSotd(true); else { clearTimeout(sotdT); sotdT = setTimeout(() => hideSotd(), 4500); }
     cloudTimers.forEach(clearTimeout); cloudTimers = [];
     haze(0, caught ? 1 : 3.5); clearTimeout(cloudT); cloudT = setTimeout(() => { cloud.style.display = 'none'; cloud.querySelectorAll('.cpuff').forEach(p => p.remove()); }, (caught ? 1 : 3.5) * 1000 + 100);
     smokeTimers.forEach(clearTimeout); smokeTimers = [];
@@ -1951,6 +2008,7 @@
     const at = (ms, fn) => smokeTimers.push(setTimeout(fn, ms));
     for (let i = 0; i < 8; i++) at(900 + i * 900, () => puff(false));
     at(2800, () => puff(true)); at(5600, () => puff(true));
+    at(4800, showSotd);                                              // the show of the day pops up on top of the thick smoke
     at(4200, () => { if (!hidden) { const l = SMOKE_MID[Math.floor(Math.random() * SMOKE_MID.length)]; text.textContent = l; bubble.style.display = ''; } });
     at(7600, () => { ray.classList.add('cough'); if (!hidden) { text.textContent = '*cough cough*'; bubble.style.display = ''; } });
     at(8800, () => ray.classList.remove('cough'));
@@ -2008,7 +2066,7 @@
   }
   function startDj() {
     if (djing || lifting || smoking || calm || document.hidden || isMad() || document.body.classList.contains('tetris-open')) return false;
-    djing = true; lifting = true;                                   // "lifting" is the shared "Ray is busy up on the big stage" flag
+    djing = true; document.body.classList.add('djing'); document.dispatchEvent(new Event('krdj')); lifting = true;                                   // "lifting" is the shared "Ray is busy up on the big stage" flag
     cool(true); ray.classList.add('lifting');
     djHead.setAttribute('transform', 'translate(150,100) scale(1.2) translate(-50,-50)');
     $('dj-count').textContent = '';
@@ -2039,7 +2097,7 @@
     };
     raf = requestAnimationFrame(tick);
     at(15600, () => {
-      djing = false; cancelAnimationFrame(raf); say('');
+      djing = false; document.body.classList.remove('djing'); cancelAnimationFrame(raf); say('');
       const fr2 = $('ray-face').getBoundingClientRect(), lr2 = dj.getBoundingClientRect();
       const fx2 = lr2.left + lr2.width * 0.5, fy2 = lr2.top + lr2.height * (100 / 240);
       dj.style.transform = 'translate(' + (fr2.left + fr2.width / 2 - fx2) + 'px,' + (fr2.top + fr2.height / 2 - fy2) + 'px) scale(' + (fr2.width / diam) + ')';
@@ -2170,7 +2228,7 @@
     const wait = Math.max(60000, -Math.log(1 - Math.random()) * 240000);   // random, about every 4 minutes on average
     setTimeout(() => { if (!startJoke(false)) { setTimeout(jokeSchedule, 20000); return; } jokeSchedule(); }, wait);
   })();
-  window.KRRAY = { joke: startJoke, mad: makeMad, cool, pushups: startPushups, lifting: () => lifting, smoke: startSmoke, smoking: () => smoking, dj: startDj, djing: () => djing };
+  window.KRRAY = { sotd: showSotd, joke: startJoke, mad: makeMad, cool, pushups: startPushups, lifting: () => lifting, smoke: startSmoke, smoking: () => smoking, dj: startDj, djing: () => djing };
 
   const ready = list => { wireMood(list); buildTips(list); };
   if (window.KRSHOWS) ready(window.KRSHOWS);
