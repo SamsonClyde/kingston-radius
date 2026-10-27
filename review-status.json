@@ -2123,5 +2123,9 @@
   "Bard College Conservatory||2026-11-25||": {
     "status": "rejected",
     "hiddenAt": 1793108381151
+  },
+  "Colony Woodstock||2026-10-28||5:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1793108431627
   }
 }
