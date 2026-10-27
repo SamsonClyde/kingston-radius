@@ -30323,5 +30323,19 @@
     "price": "$10adv",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793108017050,
+    "title": "Dan Pitt, Kyle G Carlson, Chris Davenport",
+    "date": "2026-11-03",
+    "time": "20:30",
+    "venue": "Snug Harbor",
+    "venueUrl": "https://www.instagram.com/snugsnpz_38main/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/UxtL3uvDoYHidUS4A",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793108012104-unnamed-1.jpg",
+    "price": "$5",
+    "free": false,
+    "_manual": true
   }
 ]
