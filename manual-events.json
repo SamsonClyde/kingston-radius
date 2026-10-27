@@ -30169,5 +30169,19 @@
     "price": "rsvp potluck",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793098588924,
+    "title": "Halloween Party - Ramona Lane",
+    "date": "2026-10-31",
+    "time": "17:00",
+    "venue": "West Kill Supply (Kingston)",
+    "venueUrl": "https://www.westkillbrewing.com",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/FDYVgTuBWmmjw1tS6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793098579969-unnamed.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
