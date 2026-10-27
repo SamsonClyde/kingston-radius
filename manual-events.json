@@ -30211,5 +30211,19 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793102005391,
+    "title": "Spike Priggen Band, Brian Dewan",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793101923291-unknown.webp",
+    "price": "$18",
+    "free": false,
+    "_manual": true
   }
 ]
