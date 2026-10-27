@@ -17,7 +17,8 @@
     cursor: crosshair;
     overflow-x: hidden;
   }
-  #scribble { position: absolute; left: 0; top: 0; z-index: 7500; pointer-events: none; }
+  #scribble { position: absolute; left: 0; top: 0; width: 100%; height: 0; overflow: hidden; z-index: 7500; pointer-events: none; }
+  #scribble canvas { position: absolute; left: 0; display: block; }
   body.scribbling, body.scribbling * { user-select: none; -webkit-user-select: none; }
   a:link { color: var(--link); }
   a:visited { color: var(--visited); }
@@ -57,6 +58,11 @@
   }
   .tile a:link { color: #0000EE; } .tile a:visited { color: #551A8B; } .tile a:hover { color: #f00; background: #ff0; }
   .tile .poster { display: block; border: 2px inset #808080; background: #fff; margin-bottom: 4px; line-height: 0; }
+  .tile.fresh { box-shadow: 0 0 0 3px #ffee00, 0 0 0 6px #ff2bd6, 0 0 16px 6px rgba(255, 43, 214, .55); animation: freshglow 2.6s ease-in-out infinite; }
+  @keyframes freshglow { 50% { box-shadow: 0 0 0 3px #ffee00, 0 0 0 6px #ff2bd6, 0 0 26px 10px rgba(255, 238, 0, .6); } }
+  @media (prefers-reduced-motion: reduce) { .tile.fresh { animation: none; } }
+  .newtag { display: inline-block; background: #e00000; color: #ffee00; border: 1px solid #ffee00; font-size: 11px; font-weight: bold; padding: 0 4px; margin-right: 5px; line-height: 1.35; vertical-align: 1px; }
+  #freshnote { text-align: center; margin: 4px auto 10px; max-width: 700px; padding: 4px 8px; background: var(--panel); border: var(--bw) var(--bs) var(--bd); color: #ffee00; font-size: 13px; }
   .tile .poster { position: relative; }
   .tile .poster canvas.pix { position: absolute; left: 0; top: 0; width: 100%; height: 100%; image-rendering: pixelated; image-rendering: crisp-edges; image-rendering: pixelated; }
   .tile .poster:hover canvas.pix { animation: spin 1.2s linear infinite; }
@@ -138,12 +144,22 @@
   #raylift { position: fixed; left: 0; right: 0; bottom: 8px; margin: 0 auto; width: min(92vw, 360px); z-index: 9700; pointer-events: none; display: none; transition: transform .8s cubic-bezier(.2,.9,.3,1.15); }
   #raylift svg { width: 100%; height: auto; display: block; filter: drop-shadow(3px 3px 0 rgba(0,0,0,.5)); overflow: visible; }
   #raylift .count { position: absolute; left: 0; right: 0; top: -34px; text-align: center; font: bold 24px var(--font); letter-spacing: 1px; color: #ff0; text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; }
+  #raydj { position: fixed; left: 0; right: 0; bottom: 8px; margin: 0 auto; width: min(92vw, 360px); z-index: 9700; pointer-events: none; display: none; transition: transform .8s cubic-bezier(.2,.9,.3,1.15); }
+  #raydj svg { width: 100%; height: auto; display: block; filter: drop-shadow(3px 3px 0 rgba(0,0,0,.5)); overflow: visible; }
+  #raydj .count { position: absolute; left: 6px; right: 6px; top: -52px; text-align: center; font: bold 15px/1.2 var(--font); color: #7dffb0; background: rgba(0,0,0,.82); border: 1px solid #7dffb0; padding: 3px 6px; }
+  .dj-rec { animation: spin 1.7s linear infinite; transform-box: fill-box; transform-origin: center; }
+  @media (prefers-reduced-motion: reduce) { .dj-rec { animation: none; } }
+  #ray svg { overflow: visible; transition: width .35s, height .35s; }
+  #ray.smoking svg { width: 78px; height: 78px; }
+  @media (max-width: 760px) { #ray.smoking svg { width: 60px; height: 60px; } }
+  #ray.cough svg { animation: rage .12s linear 7; }
   #ray.lifting svg { visibility: hidden; }
   #ray.lifting .bubble { display: none !important; }
   /* trippy episodes */
   #trip { position: fixed; inset: 0; z-index: 7000; pointer-events: none; display: none; opacity: 0; mix-blend-mode: soft-light;
           background: conic-gradient(from 0deg at 50% 50%, #ff00ff, #00ffff, #ffff00, #ff3366, #3366ff, #ff00ff); }
   #page.tripping { will-change: transform, filter; }
+  @media (hover: hover) and (pointer: fine) { #tripstop { display: none !important; } }   /* desktop: Esc stops a trip; touch devices keep the button */
   body.tetris-open #ray { pointer-events: none; }
   #ray.happy svg { animation: hop 0.35s ease-in-out infinite; }
   @keyframes hop { 50% { transform: translateY(-10px); } }
@@ -582,6 +598,26 @@
   }
   list.sort((a, b) => a.date.localeCompare(b.date) || String(a.time || '').localeCompare(String(b.time || '')) || String(a.venue).localeCompare(String(b.venue)));
 
+  // "recently added": manual shows carry the time they were added in their id; for the rest we remember, in this browser,
+  // when each show first appeared, so anything that turned up since your last visit lights up for a week.
+  const fresh = new Set();
+  (function () {
+    const WEEK = 7 * 86400000, nowMs = Date.now();
+    const hk = str => { let h = 5381; for (let i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) | 0; return (h >>> 0).toString(36); };
+    let prev = {}, visited = false;
+    try { const raw = localStorage.getItem('kr_blog_seen'); if (raw) { prev = JSON.parse(raw) || {}; visited = true; } } catch (err) {}
+    const next = {};
+    for (const e of list) {
+      const k = key(e), h = hk(k);
+      let first = prev[h];
+      if (first == null) first = visited ? nowMs : 0;              // 0 means "was already here before we started counting"
+      next[h] = first;
+      const added = e._manual && Number(e.id) > 1e12 && Number(e.id) <= nowMs + 86400000 ? Number(e.id) : 0;
+      if ((added && nowMs - added < WEEK) || (first && nowMs - first < WEEK)) { fresh.add(k); e._fresh = true; }
+    }
+    try { localStorage.setItem('kr_blog_seen', JSON.stringify(next)); } catch (err) {}
+  })();
+
   if (!list.length) { msg.innerHTML = 'No shows are listed right now. Please check back soon.'; return; }
   msg.remove();
 
@@ -593,7 +629,8 @@
       : `<span class="nopic">no image</span>`;
     const title = okUrl(e.venueUrl) ? `<a class="ttl" href="${esc(e.venueUrl.trim())}" target="_blank" rel="noopener">${esc(e.title)}</a>` : `<span class="ttl">${esc(e.title)}</span>`;
     const town = e.location ? ` - ${esc(e.location)}` : '';
-    return `<div class="tile">${pic}${title}<span class="meta">@ ${esc(e.venue)}${town}<br><span class="when">${esc(time)}</span>${price ? ` ${esc(price)}` : ''}</span></div>`;
+    const isNew = fresh.has(key(e));
+    return `<div class="tile${isNew ? ' fresh' : ''}">${pic}${isNew ? '<span class="newtag blink">NEW!</span>' : ''}${title}<span class="meta">@ ${esc(e.venue)}${town}<br><span class="when">${esc(time)}</span>${price ? ` ${esc(price)}` : ''}</span></div>`;
   };
 
   // group by day
@@ -608,6 +645,7 @@
   document.dispatchEvent(new Event('krshows'));
 
   const host = document.getElementById('days');
+  if (fresh.size) { const note = document.createElement('div'); note.id = 'freshnote'; note.innerHTML = '<span class="newtag">NEW!</span> ' + fresh.size + ' show' + (fresh.size === 1 ? ' was' : 's were') + ' added recently. Look for the glowing ones.'; host.before(note); }
   const calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (calm) { host.innerHTML = dayHtml.join(''); return; }
 
@@ -813,8 +851,9 @@
 
   // ---------- crayon: hold the mouse down anywhere to scribble over the whole page (it all goes away on reload) ----------
   (function () {
-    const cv = document.createElement('canvas'); cv.id = 'scribble'; document.body.insertBefore(cv, document.body.firstChild);
-    let ctx = cv.getContext('2d'), drawing = false, lx = 0, ly = 0, color = '#e63946', drewAny = false;
+    const layer = document.createElement('div'); layer.id = 'scribble'; document.body.insertBefore(layer, document.body.firstChild);
+    const TILE = 1500, tiles = new Map();           // the drawing is cut into 1500px-tall strips, made only where you draw, so a long page works on phones too
+    let drawing = false, lx = 0, ly = 0, color = '#e63946', drewAny = false;
     const COLORS = ['#e63946', '#f77f00', '#fcbf49', '#2a9d8f', '#1d7fd6', '#7b2cbf', '#ff5fa2', '#3a3a3a', '#8ac926'];
     const shade = (hex, f) => '#' + [1, 3, 5].map(i => Math.round(parseInt(hex.substr(i, 2), 16) * f).toString(16).padStart(2, '0')).join('');
     function crayon(c) {
@@ -828,27 +867,39 @@
     }
     const setCursor = () => { document.body.style.cursor = crayon(color); };
     setCursor();
-    function fit() {                                   // the canvas covers the whole page and only ever grows
-      const w = document.documentElement.clientWidth, h = Math.min(9000, Math.ceil(page.offsetTop + page.offsetHeight + 60));
-      if (cv.width >= w && cv.height >= h) return;
-      const nw = Math.max(cv.width, w), nh = Math.max(cv.height, h);
-      if (!cv.width || !drewAny) { cv.width = nw; cv.height = nh; }
-      else { const keep = document.createElement('canvas'); keep.width = cv.width; keep.height = cv.height; keep.getContext('2d').drawImage(cv, 0, 0); cv.width = nw; cv.height = nh; cv.getContext('2d').drawImage(keep, 0, 0); }
-      ctx = cv.getContext('2d');
+    function fit() {                                   // the layer is exactly as tall as the page, so it never adds scroll room
+      layer.style.height = Math.ceil(page.offsetTop + page.offsetHeight + 60) + 'px';
+    }
+    function tile(i) {
+      const w = document.documentElement.clientWidth;
+      let t = tiles.get(i);
+      if (!t) {
+        const c = document.createElement('canvas'); c.width = w; c.height = TILE; c.style.top = (i * TILE) + 'px';
+        layer.appendChild(c); t = { c, g: c.getContext('2d') }; tiles.set(i, t);
+      } else if (t.c.width < w) {                      // window got wider: widen the strip and keep what was drawn
+        const keep = document.createElement('canvas'); keep.width = t.c.width; keep.height = TILE; keep.getContext('2d').drawImage(t.c, 0, 0);
+        t.c.width = w; t.g = t.c.getContext('2d'); t.g.drawImage(keep, 0, 0);
+      }
+      return t;
     }
     // The crayon works over everything. Form fields, the Tetris window, Ray and the games' canvases keep their own mouse handling.
     const SKIP = 'input,select,textarea,option,canvas,#tetris,#ray,#tripstop';
     const CLICKY = 'a,button,label,summary,.btn,[onclick]';
-    let pending = false, swallow = false, sx = 0, sy = 0;
+    let pending = false, swallow = false, sx = 0, sy = 0, moves = 0;
     const begin = (x, y) => { drawing = true; document.body.classList.add('scribbling'); try { getSelection().removeAllRanges(); } catch (err) {} lx = x; ly = y; dab(lx, ly); drewAny = true; };
     function dab(x, y) {
-      ctx.fillStyle = color;
-      for (let i = 0; i < 7; i++) {                    // lots of little waxy specks, so it looks like crayon and not marker
-        const a = Math.random() * 6.283, r = Math.random() * 5.5;
-        ctx.globalAlpha = 0.28 + Math.random() * 0.4;
-        ctx.beginPath(); ctx.arc(x + Math.cos(a) * r, y + Math.sin(a) * r, 1.2 + Math.random() * 2.6, 0, 6.283); ctx.fill();
+      if (y < -10) return;
+      const first = Math.max(0, Math.floor((y - 9) / TILE)), last = Math.max(0, Math.floor((y + 9) / TILE));
+      for (let ti = first; ti <= last; ti++) {
+        const g = tile(ti).g, oy = ti * TILE;
+        g.fillStyle = color;
+        for (let i = 0; i < 7; i++) {                  // lots of little waxy specks, so it looks like crayon and not marker
+          const a = Math.random() * 6.283, r = Math.random() * 5.5;
+          g.globalAlpha = 0.28 + Math.random() * 0.4;
+          g.beginPath(); g.arc(x + Math.cos(a) * r, y - oy + Math.sin(a) * r, 1.2 + Math.random() * 2.6, 0, 6.283); g.fill();
+        }
+        g.globalAlpha = 1;
       }
-      ctx.globalAlpha = 1;
     }
     function seg(x, y) {
       const dx = x - lx, dy = y - ly, n = Math.max(1, Math.ceil(Math.hypot(dx, dy) / 2));
@@ -870,6 +921,7 @@
       }
       if (!drawing) return;
       if (!(e.buttons & 1)) { stop(); return; }
+      if ((++moves & 15) === 0) fit();                 // the list can still be arriving, so keep the layer as tall as the page
       seg(e.pageX, e.pageY);
     });
     function stop() { drawing = false; pending = false; document.body.classList.remove('scribbling'); setTimeout(() => { swallow = false; }, 80); }
@@ -877,7 +929,7 @@
     addEventListener('blur', stop);
     addEventListener('click', e => { if (swallow) { e.preventDefault(); e.stopPropagation(); swallow = false; } }, true);
     addEventListener('dragstart', e => { if (pending || drawing) e.preventDefault(); });
-    window.KRCRAYON = { color: () => color, drewAny: () => drewAny, size: () => [cv.width, cv.height] };
+    window.KRCRAYON = { color: () => color, drewAny: () => drewAny, size: () => [layer.offsetWidth, layer.offsetHeight], tiles: () => tiles.size };
   })();
 
   // ---------- every so often, all the posters turn into big chunky pixels for 3 seconds ----------
@@ -907,40 +959,72 @@
 
   // ---------- animals ----------
   const SP = {
-    dog: { e: '\u{1F415}', size: 46, dur: [5000, 8000] },
-    cat: { e: '\u{1F408}', size: 38, dur: [7000, 11000] },
-    rat: { e: '\u{1F400}', size: 26, dur: [3200, 5000] }
+    dog:      { e: '\u{1F415}', size: 46, dur: [5000, 8000],   hop: .18, w: 3, mood: '❤️' },
+    cat:      { e: '\u{1F408}', size: 38, dur: [7000, 11000],  hop: .18, w: 3, mood: '\u{1F4A4}' },
+    rat:      { e: '\u{1F400}', size: 26, dur: [3200, 5000],   hop: .18, w: 3, mood: '\u{1F9C0}' },
+    rabbit:   { e: '\u{1F407}', size: 34, dur: [3000, 4800],   hop: .42, w: 2, mood: '\u{1F955}' },
+    squirrel: { e: '\u{1F43F}️', size: 30, dur: [3500, 5500], hop: .26, w: 2, mood: '\u{1F330}' },
+    duck:     { e: '\u{1F986}', size: 34, dur: [6500, 9500],   hop: .12, w: 2, mood: '\u{1F35E}' },
+    chicken:  { e: '\u{1F413}', size: 34, dur: [6000, 9000],   hop: .2,  w: 2, mood: '\u{1F95A}' },
+    hedgehog: { e: '\u{1F994}', size: 28, dur: [9000, 13000],  hop: .1,  w: 1, mood: '\u{1F34E}' },
+    turtle:   { e: '\u{1F422}', size: 30, dur: [12000, 18000], hop: .08, w: 1, mood: '\u{1F33F}' }
   };
-  function run(kind, dir, top, delay, dur) {
-    const sp = SP[kind], w = innerWidth;
+  const BAG = Object.keys(SP).flatMap(k => Array(SP[k].w).fill(k));
+  // stay = { at: how far across (0-1) they stop, ms: how long they sit there }
+  function run(kind, dir, top, delay, dur, stay) {
+    const sp = SP[kind], w = innerWidth, flip = dir > 0 ? 'scaleX(-1)' : 'none';
     const el = document.createElement('div'); el.className = 'critter';
     el.style.fontSize = sp.size + 'px'; el.style.top = top + 'px'; el.style.visibility = 'hidden';
-    const inner = document.createElement('span'); inner.textContent = sp.e;
-    inner.style.transform = dir > 0 ? 'scaleX(-1)' : 'none';              // the emoji face left, so flip them going right
+    const inner = document.createElement('span'); inner.textContent = sp.e; inner.style.transform = flip;   // the emoji face left, so flip them going right
     el.appendChild(inner); $('zoo').appendChild(el);
     const from = dir > 0 ? -90 : w + 90, to = dir > 0 ? w + 90 : -90;
-    const go = el.animate([{ transform: 'translateX(' + from + 'px)' }, { transform: 'translateX(' + to + 'px)' }], { duration: dur, delay: delay, easing: 'linear', fill: 'backwards' });
+    const total = dur + (stay ? stay.ms : 0);
+    let frames;
+    if (stay) {
+      const stopX = from + (to - from) * stay.at, t1 = dur * stay.at / total, t2 = (dur * stay.at + stay.ms) / total;
+      frames = [
+        { transform: 'translateX(' + from + 'px)', offset: 0, easing: 'ease-out' },
+        { transform: 'translateX(' + stopX + 'px)', offset: t1, easing: 'linear' },
+        { transform: 'translateX(' + stopX + 'px)', offset: t2, easing: 'ease-in' },
+        { transform: 'translateX(' + to + 'px)', offset: 1 }
+      ];
+    } else frames = [{ transform: 'translateX(' + from + 'px)' }, { transform: 'translateX(' + to + 'px)' }];
+    const go = el.animate(frames, { duration: total, delay: delay, easing: 'linear', fill: 'backwards' });
     go.onfinish = () => el.remove();
     setTimeout(() => { el.style.visibility = ''; }, delay);
-    inner.animate([{ transform: (dir > 0 ? 'scaleX(-1)' : 'none') + ' translateY(0)' }, { transform: (dir > 0 ? 'scaleX(-1)' : 'none') + ' translateY(-' + Math.round(sp.size * 0.18) + 'px)' }], { duration: kind === 'rat' ? 140 : 260, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' });
+    const hop = inner.animate([{ transform: flip + ' translateY(0)' }, { transform: flip + ' translateY(-' + Math.round(sp.size * sp.hop) + 'px)' }], { duration: kind === 'rat' || kind === 'squirrel' ? 140 : kind === 'turtle' ? 520 : 260, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' });
+    if (stay) {                                                     // sit still for a bit, with a little thought bubble
+      const sit = delay + dur * stay.at;
+      const m = document.createElement('span'); m.textContent = sp.mood;
+      m.style.cssText = 'position:absolute;left:50%;top:-0.55em;font-size:.55em;opacity:0;margin-left:-.3em';
+      el.appendChild(m);
+      setTimeout(() => { hop.currentTime = 0; hop.pause(); }, sit);
+      setTimeout(() => { hop.play(); }, sit + stay.ms);
+      m.animate([{ opacity: 0, transform: 'translateY(6px)' }, { opacity: 1, transform: 'translateY(-4px)', offset: .2 }, { opacity: 1, transform: 'translateY(-10px)', offset: .8 }, { opacity: 0, transform: 'translateY(-16px)' }], { delay: sit, duration: stay.ms, fill: 'none' });
+    }
+  }
+  function one(h, extraDelay) {
+    const kind = BAG[Math.floor(Math.random() * BAG.length)], sp = SP[kind], dir = Math.random() < 0.5 ? 1 : -1;
+    const sitter = Math.random() < 0.4, dur = rand(sp.dur[0], sp.dur[1]);
+    const top = (sitter || kind === 'rat') ? h - sp.size - rand(6, 55) : rand(h * 0.25, h - sp.size - 20);
+    run(kind, dir, top, extraDelay, dur, sitter ? { at: rand(0.2, 0.8), ms: rand(4000, 9500) } : null);
+    if (!sitter && Math.random() < 0.3) run(kind, -dir, top, extraDelay + dur + 500, dur);   // some turn around and come back
+    return kind;
   }
   function critters() {
-    if (calm || document.hidden || $('tetris').classList.contains('open')) return;
-    const dir = Math.random() < 0.5 ? 1 : -1, h = innerHeight;
-    if (Math.random() < 0.2) {                                               // the chase: rat, then cat, then dog
-      const top = h - rand(70, 140), dur = rand(4200, 5600);
+    if (calm || document.hidden || $('tetris').classList.contains('open') || document.querySelectorAll('.critter').length > 8) return;
+    const h = innerHeight;
+    if (Math.random() < 0.15) {                                              // the chase: rat, then cat, then dog
+      const dir = Math.random() < 0.5 ? 1 : -1, top = h - rand(70, 140), dur = rand(4200, 5600);
       ['rat', 'cat', 'dog'].forEach((k, i) => run(k, dir, top - (k === 'dog' ? 8 : 0), i * 900, dur));
       return;
     }
-    const kind = ['dog', 'cat', 'rat'][Math.floor(Math.random() * 3)], sp = SP[kind];
-    document.dispatchEvent(new CustomEvent('krcritter', { detail: kind }));
-    const top = kind === 'rat' ? h - rand(40, 70) : rand(h * 0.25, h - sp.size - 20);
-    const dur = rand(sp.dur[0], sp.dur[1]);
-    run(kind, dir, top, 0, dur);
-    if (Math.random() < 0.35) run(kind, -dir, top, dur + 500, dur);          // some turn around and come back
+    const first = one(h, 0);
+    document.dispatchEvent(new CustomEvent('krcritter', { detail: first }));
+    if (Math.random() < 0.3) { const extra = 1 + Math.floor(Math.random() * 2); for (let i = 0; i < extra; i++) one(h, rand(500, 1800) * (i + 1)); }   // sometimes a whole bunch
   }
   window.KRCRITTER = critters;
-  (function schedule(first) { setTimeout(() => { critters(); schedule(false); }, first ? rand(2700, 6000) : rand(6000, 18700)); })(true);
+  (function schedule(first) { setTimeout(() => { critters(); schedule(false); }, first ? rand(2000, 4500) : rand(4500, 12500)); })(true);
 
   // ---------- drink + food of the day ----------
   const DRINKS = [
@@ -1192,6 +1276,25 @@
   if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) setInterval(() => { const a = $('pet-ant'); a.setAttribute('opacity', a.getAttribute('opacity') === '0.15' ? '1' : '0.15'); }, 900);
 })();
 </script>
+<div id="raydj" aria-hidden="true">
+  <div class="count" id="dj-count"></div>
+  <svg viewBox="0 0 300 240">
+    <g id="dj-eql"></g><g id="dj-eqr"></g>
+    <rect x="12" y="150" width="276" height="82" rx="6" fill="#2b2b36" stroke="#000" stroke-width="2"/>
+    <rect x="12" y="150" width="276" height="6" rx="3" fill="#4a4a5a"/>
+    <g id="dj-recs"></g>
+    <rect x="118" y="162" width="64" height="60" rx="4" fill="#15151c" stroke="#000" stroke-width="1.5"/>
+    <circle cx="134" cy="176" r="6" fill="#888" stroke="#000"/><circle cx="150" cy="176" r="6" fill="#888" stroke="#000"/><circle cx="166" cy="176" r="6" fill="#888" stroke="#000"/>
+    <line x1="134" y1="190" x2="134" y2="214" stroke="#555" stroke-width="3"/><line x1="150" y1="190" x2="150" y2="214" stroke="#555" stroke-width="3"/><line x1="166" y1="190" x2="166" y2="214" stroke="#555" stroke-width="3"/>
+    <rect x="129" y="198" width="10" height="6" fill="#ddd"/><rect x="145" y="205" width="10" height="6" fill="#ddd"/><rect x="161" y="195" width="10" height="6" fill="#ddd"/>
+    <line id="dj-armL1" stroke="#7a241a" stroke-width="12" stroke-linecap="round"/><line id="dj-armL2" stroke="#7a241a" stroke-width="12" stroke-linecap="round"/>
+    <line id="dj-armR1" stroke="#7a241a" stroke-width="12" stroke-linecap="round"/><line id="dj-armR2" stroke="#7a241a" stroke-width="12" stroke-linecap="round"/>
+    <circle id="dj-handL" r="9" fill="#fff" stroke="#000" stroke-width="2"/><circle id="dj-handR" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
+    <g id="dj-head"></g>
+    <g id="dj-notes"></g>
+  </svg>
+</div>
+
 <div id="raylift" aria-hidden="true">
   <div class="count" id="rl-count"></div>
   <svg viewBox="0 0 300 240">
@@ -1218,6 +1321,9 @@
     <path id="ray-tear" style="display:none" d="M33 56 q-5 9 0 12 q5 -3 0 -12z" fill="#7fd0ff" stroke="#fff" stroke-width="1"/>
     <g id="ray-brows" style="display:none" stroke="#300" stroke-width="5" stroke-linecap="round"><line x1="27" y1="30" x2="45" y2="38"/><line x1="73" y1="30" x2="55" y2="38"/></g>
     <path id="ray-mouth" d="M36 64 Q50 76 64 64" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <g id="ray-lids" style="display:none"><path d="M29 44 A8 8 0 0 1 45 44 Z" fill="#C0392B" stroke="#300" stroke-width="1.6"/><path d="M55 44 A8 8 0 0 1 71 44 Z" fill="#C0392B" stroke="#300" stroke-width="1.6"/></g>
+    <g id="ray-cig" style="display:none"><g transform="rotate(-10 58 66)"><rect x="58" y="63.8" width="30" height="4.4" rx="1" fill="#fff" stroke="#000" stroke-width=".8"/><rect x="58" y="63.8" width="7" height="4.4" rx="1" fill="#d98e2b" stroke="#000" stroke-width=".8"/><rect x="83" y="63.8" width="5" height="4.4" fill="#9a9a9a"/></g><circle id="ray-ember" cx="88.5" cy="60.8" r="2.6" fill="#ff4a1c"/></g>
+    <g id="ray-smoke"></g>
   </svg>
 </div>
 
@@ -1303,6 +1409,8 @@
     const t = [tips[0]], today = dayStr(new Date());
     const tonight = list.filter(e => e.date === today);
     if (tonight.length) { const e = tonight[seed(today) % tonight.length]; t.push('Tonight: ' + e.title + ' at ' + e.venue + (when(e) ? ', ' + when(e) : '') + '.'); }
+    const nFresh = list.filter(e => e._fresh).length;
+    if (nFresh) t.push(nFresh + (nFresh === 1 ? ' show was' : ' shows were') + ' added recently. Look for the glowing NEW! ones.');
     const n7 = soon(list, 7).length;
     t.push('There ' + (n7 === 1 ? 'is 1 show' : 'are ' + n7 + ' shows') + ' coming up in the next 7 days.');
     for (let i = 0; i < 3 && list.length; i++) { const e = list[Math.floor(Math.random() * list.length)]; t.push('Have you been to ' + e.venue + '? ' + e.title + ' is on ' + pretty(e) + '.'); }
@@ -1328,7 +1436,7 @@
   let madT = null, madUntil = 0;
   const FACE = { calm: 'M36 64 Q50 76 64 64', mad: 'M36 72 Q50 58 64 72' };
   function makeMad(line, ms) {
-    if (hidden || lifting) return;
+    if (hidden || lifting || smoking) return;
     ray.classList.add('mad'); $('ray-brows').style.display = ''; $('ray-mouth').setAttribute('d', FACE.mad);
     $('ray-p1').setAttribute('r', '2.2'); $('ray-p2').setAttribute('r', '2.2');
     text.textContent = line; bubble.style.display = '';
@@ -1336,7 +1444,7 @@
     madT = setTimeout(cool, ms || 7000);
   }
   function resetFace() {
-    ray.classList.remove('mad', 'happy', 'sad'); $('ray-brows').style.display = 'none'; $('ray-sadbrows').style.display = 'none'; $('ray-tear').style.display = 'none';
+    ray.classList.remove('mad', 'happy', 'sad'); $('ray-lids').style.display = 'none'; $('ray-cig').style.display = 'none'; $('ray-brows').style.display = 'none'; $('ray-sadbrows').style.display = 'none'; $('ray-tear').style.display = 'none';
     $('ray-mouth').setAttribute('d', FACE.calm); $('ray-p1').setAttribute('r', '3.5'); $('ray-p2').setAttribute('r', '3.5');
   }
   function cool(quiet) {
@@ -1345,7 +1453,7 @@
   }
   // happy (booked a day) and sad (calendar full) faces
   function feel(kind, line, ms) {
-    if (hidden || lifting) return;
+    if (hidden || lifting || smoking) return;
     clearTimeout(madT); resetFace(); ray.classList.add(kind);
     if (kind === 'happy') { $('ray-mouth').setAttribute('d', 'M30 60 Q50 90 70 60'); }
     else { $('ray-sadbrows').style.display = ''; $('ray-tear').style.display = ''; $('ray-mouth').setAttribute('d', FACE.mad); }
@@ -1366,13 +1474,13 @@
   }
   $('ray-next').onclick = () => { if (poke()) return; at++; show(); };
   $('ray-hide').onclick = () => { hidden = true; cool(); bubble.style.display = 'none'; };
-  $('ray-face').onclick = () => { if (poke()) return; hidden = false; at++; show(); };
+  $('ray-face').onclick = () => { if (smoking) { endSmoke(true); return; } if (poke()) return; hidden = false; at++; show(); };
   setTimeout(show, 2500);
   // out of nowhere, every few minutes
   (function schedule() { setTimeout(() => { if (!document.hidden && !isMad() && Math.random() < 0.6) makeMad(GRUMPS[Math.floor(Math.random() * GRUMPS.length)], 7000); schedule(); }, 90000 + Math.random() * 150000); })();
   // and when the page misbehaves
   const WOOZY = ['Whoa. Is the page okay?', 'I do not feel so good.', 'Everything is spinning. Neat.', 'Are the walls breathing?', 'Hold on to something.'];
-  document.addEventListener('krtrip', () => { if (hidden || lifting || isMad()) return; const line = WOOZY[Math.floor(Math.random() * WOOZY.length)]; text.textContent = line; bubble.style.display = ''; setTimeout(() => { if (text.textContent === line) bubble.style.display = 'none'; }, 7000); });
+  document.addEventListener('krtrip', () => { if (hidden || lifting || smoking || isMad()) return; const line = WOOZY[Math.floor(Math.random() * WOOZY.length)]; text.textContent = line; bubble.style.display = ''; setTimeout(() => { if (text.textContent === line) bubble.style.display = 'none'; }, 7000); });
   document.addEventListener('krquake', () => { if (Math.random() < 0.5) makeMad('WHO KEEPS SHAKING THE PAGE?!', 6000); });
   document.addEventListener('krcritter', e => { if (Math.random() < 0.5) makeMad(ANGRY_AT[e.detail] || 'WHAT WAS THAT?!', 6000); });
   // ---- Ray gets big and does push-ups (about once every 10 minutes, on average) ----
@@ -1403,7 +1511,7 @@
     part['ray-tear'].style.display = sweat ? '' : 'none';
   };
   function startPushups() {
-    if (lifting || calm || document.hidden || isMad() || document.body.classList.contains('tetris-open')) return false;
+    if (lifting || smoking || calm || document.hidden || isMad() || document.body.classList.contains('tetris-open')) return false;
     lifting = true;
     cool(true); ray.classList.add('lifting');
     const reps = 6 + Math.floor(Math.random() * 4);
@@ -1451,7 +1559,138 @@
     const wait = Math.max(45000, -Math.log(1 - Math.random()) * 600000);   // random gaps, about 10 minutes apart on average
     setTimeout(() => { if (!startPushups()) { setTimeout(pushSchedule, 20000); return; } pushSchedule(); }, wait);
   })();
-  window.KRRAY = { mad: makeMad, cool, pushups: startPushups, lifting: () => lifting };
+  // ---- Ray takes a smoke break now and then (a cartoon cigarette, a few puffs, and a cough) ----
+  let smoking = false, smokeTimers = [];
+  const SMOKE_START = ['Taking five.', 'Smoke break.', 'Don\'t mind me.'];
+  const SMOKE_MID = ['Don\'t tell the webmaster.', 'Long week. Good listings, though.', 'Nothing like a quiet night in 1997.'];
+  function puff(big) {
+    const g = $('ray-smoke'), c = document.createElementNS(NSV, 'circle'), r0 = big ? 5 : 3, r1 = big ? 17 : 10;
+    c.setAttribute('cx', 92); c.setAttribute('cy', 57); c.setAttribute('r', r0); c.setAttribute('fill', '#ececec'); c.setAttribute('stroke', '#9a9a9a'); c.setAttribute('stroke-width', '.6');
+    c.style.transformBox = 'fill-box'; c.style.transformOrigin = 'center';
+    g.appendChild(c);
+    const dx = Math.random() * 22 - 4, dy = -(big ? 78 : 52) - Math.random() * 14;
+    const a = c.animate([{ opacity: .9, transform: 'translate(0,0) scale(1)' }, { opacity: 0, transform: 'translate(' + dx + 'px,' + dy + 'px) scale(' + (r1 / r0) + ')' }], { duration: big ? 3000 : 2100, easing: 'ease-out' });
+    a.onfinish = () => c.remove();
+  }
+  function endSmoke(caught) {
+    if (!smoking) return;
+    smokeTimers.forEach(clearTimeout); smokeTimers = [];
+    $('ray-smoke').innerHTML = '';
+    ray.classList.remove('smoking', 'cough'); smoking = false; resetFace();
+    if (!hidden) { const line = caught ? 'You did not see that.' : 'Back to work.'; text.textContent = line; bubble.style.display = ''; setTimeout(() => { if (text.textContent === line) bubble.style.display = 'none'; }, 4000); }
+  }
+  function startSmoke() {
+    if (smoking || lifting || calm || document.hidden || isMad() || document.body.classList.contains('tetris-open')) return false;
+    smoking = true; cool(true);
+    ray.classList.add('smoking');
+    $('ray-lids').style.display = ''; $('ray-cig').style.display = ''; $('ray-mouth').setAttribute('d', 'M40 67 L60 67');
+    $('ray-p1').setAttribute('r', '2.6'); $('ray-p2').setAttribute('r', '2.6');
+    if (!hidden) { text.textContent = SMOKE_START[Math.floor(Math.random() * SMOKE_START.length)]; bubble.style.display = ''; }
+    $('ray-ember').animate([{ fill: '#ff4a1c', r: 2.4 }, { fill: '#ff9a3c', r: 3.4 }], { duration: 900, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' });
+    const at = (ms, fn) => smokeTimers.push(setTimeout(fn, ms));
+    for (let i = 0; i < 8; i++) at(900 + i * 900, () => puff(false));
+    at(2800, () => puff(true)); at(5600, () => puff(true));
+    at(4200, () => { if (!hidden) { const l = SMOKE_MID[Math.floor(Math.random() * SMOKE_MID.length)]; text.textContent = l; bubble.style.display = ''; } });
+    at(7600, () => { ray.classList.add('cough'); if (!hidden) { text.textContent = '*cough cough*'; bubble.style.display = ''; } });
+    at(8800, () => ray.classList.remove('cough'));
+    at(10000, () => endSmoke(false));
+    return true;
+  }
+  (function smokeSchedule() {
+    const wait = Math.max(90000, -Math.log(1 - Math.random()) * 720000);   // random, about every 12 minutes on average
+    setTimeout(() => { if (!startSmoke()) { setTimeout(smokeSchedule, 25000); return; } smokeSchedule(); }, wait);
+  })();
+  // ---- DJ Ray: headphones, shades, two turntables, a head-bobbing set that announces real shows ----
+  const dj = $('raydj'), djHead = $('dj-head');
+  let djing = false;
+  (function buildDj() {
+    [...$('ray-face').children].forEach(n => { const c = n.cloneNode(true); if (n.id === 'ray-mouth') { c.setAttribute('d', 'M32 62 Q50 82 68 62'); djHead.mouth = c; } c.removeAttribute('id'); djHead.appendChild(c); });
+    const x = (tag, attrs) => { const e = document.createElementNS(NSV, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); djHead.appendChild(e); return e; };
+    x('path', { d: 'M5 52 A45 45 0 0 1 95 52', fill: 'none', stroke: '#1a1a22', 'stroke-width': 7, 'stroke-linecap': 'round' });
+    x('rect', { x: -4, y: 38, width: 14, height: 30, rx: 6, fill: '#1a1a22', stroke: '#00e5ff', 'stroke-width': 2 });
+    x('rect', { x: 90, y: 38, width: 14, height: 30, rx: 6, fill: '#1a1a22', stroke: '#00e5ff', 'stroke-width': 2 });
+    x('rect', { x: 24, y: 35, width: 25, height: 17, rx: 5, fill: '#0b0b10', stroke: '#444', 'stroke-width': 1.2 });
+    x('rect', { x: 51, y: 35, width: 25, height: 17, rx: 5, fill: '#0b0b10', stroke: '#444', 'stroke-width': 1.2 });
+    x('line', { x1: 49, y1: 41, x2: 51, y2: 41, stroke: '#444', 'stroke-width': 2 });
+    x('line', { x1: 28, y1: 39, x2: 34, y2: 39, stroke: '#fff', 'stroke-width': 1.6, 'stroke-linecap': 'round', opacity: .7 });
+    const recs = $('dj-recs');
+    [70, 230].forEach(cx => {
+      const g = document.createElementNS(NSV, 'g'); g.setAttribute('class', 'dj-rec');
+      g.innerHTML = '<circle cx="' + cx + '" cy="192" r="35" fill="#0c0c10" stroke="#444" stroke-width="1.5"/><circle cx="' + cx + '" cy="192" r="28" fill="none" stroke="#25252d" stroke-width="1.5"/><circle cx="' + cx + '" cy="192" r="21" fill="none" stroke="#25252d" stroke-width="1.5"/>'
+        + '<circle cx="' + cx + '" cy="192" r="12" fill="#e63946"/><circle cx="' + (cx + 6) + '" cy="192" r="2" fill="#fff"/><circle cx="' + cx + '" cy="192" r="1.6" fill="#000"/>';
+      recs.appendChild(g);
+    });
+    const COL = ['#27d96b', '#27d96b', '#ffd34a', '#ff9a3c', '#ff4455'];
+    [['dj-eql', 10], ['dj-eqr', 242]].forEach(([id, x0]) => COL.forEach((c, i) => {
+      const r = document.createElementNS(NSV, 'rect'); r.setAttribute('x', x0 + i * 10); r.setAttribute('y', 76); r.setAttribute('width', 8); r.setAttribute('height', 70); r.setAttribute('fill', c); r.setAttribute('stroke', '#000'); r.setAttribute('stroke-width', .8);
+      r.style.transformBox = 'fill-box'; r.style.transformOrigin = 'bottom';
+      r.animate([{ transform: 'scaleY(.15)' }, { transform: 'scaleY(1)' }], { duration: 260 + Math.random() * 320, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out', delay: -Math.random() * 500 });
+      $(id).appendChild(r);
+    }));
+  })();
+  const DJ_SH = { L: [102, 22], R: [198, 22] };
+  function djArm(side, cy, hx, hy) {
+    const sx = DJ_SH[side][0], sy = cy + DJ_SH[side][1], dx = hx - sx, dy = hy - sy, dist = Math.hypot(dx, dy);
+    const d = Math.min(dist, 2 * LEN - 0.5), h = Math.sqrt(LEN * LEN - d * d / 4), mx = sx + dx / 2, my = sy + dy / 2, nx = -dy / dist, ny = dx / dist;
+    const sign = side === 'L' ? (nx < 0 ? 1 : -1) : (nx > 0 ? 1 : -1), ex = mx + sign * nx * h, ey = my + sign * ny * h;
+    const set = (id, x1, y1, x2, y2) => { const l = $(id); l.setAttribute('x1', x1); l.setAttribute('y1', y1); l.setAttribute('x2', x2); l.setAttribute('y2', y2); };
+    set('dj-arm' + side + '1', sx, sy, ex, ey); set('dj-arm' + side + '2', ex, ey, hx, hy);
+    const hd = $('dj-hand' + side); hd.setAttribute('cx', hx); hd.setAttribute('cy', hy);
+  }
+  function djNote() {
+    const t = document.createElementNS(NSV, 'text'), x0 = 60 + Math.random() * 180;
+    t.textContent = Math.random() < .5 ? '♪' : '♫'; t.setAttribute('x', x0); t.setAttribute('y', 62); t.setAttribute('font-size', 20); t.setAttribute('font-weight', 'bold');
+    t.setAttribute('fill', ['#ff5fa2', '#7dffb0', '#ffd34a', '#00e5ff', '#fff'][Math.floor(Math.random() * 5)]); t.setAttribute('stroke', '#000'); t.setAttribute('stroke-width', .6);
+    $('dj-notes').appendChild(t);
+    const a = t.animate([{ opacity: 1, transform: 'translate(0,0)' }, { opacity: 0, transform: 'translate(' + (Math.random() * 40 - 20) + 'px,-70px)' }], { duration: 1800, easing: 'ease-out' });
+    a.onfinish = () => t.remove();
+  }
+  function startDj() {
+    if (djing || lifting || smoking || calm || document.hidden || isMad() || document.body.classList.contains('tetris-open')) return false;
+    djing = true; lifting = true;                                   // "lifting" is the shared "Ray is busy up on the big stage" flag
+    cool(true); ray.classList.add('lifting');
+    djHead.setAttribute('transform', 'translate(150,100) scale(1.2) translate(-50,-50)');
+    $('dj-count').textContent = '';
+    dj.style.display = 'block'; dj.style.transition = 'none';
+    const fr = $('ray-face').getBoundingClientRect(), lr = dj.getBoundingClientRect();
+    const fx = lr.left + lr.width * 0.5, fy = lr.top + lr.height * (100 / 240), diam = lr.width * (115 / 300);
+    dj.style.transformOrigin = (lr.width * 0.5) + 'px ' + (lr.height * (100 / 240)) + 'px';
+    dj.style.transform = 'translate(' + (fr.left + fr.width / 2 - fx) + 'px,' + (fr.top + fr.height / 2 - fy) + 'px) scale(' + (fr.width / diam) + ')';
+    void dj.offsetWidth; dj.style.transition = ''; dj.style.transform = 'none';
+    const timers = [], at = (ms, fn) => timers.push(setTimeout(fn, ms));
+    const say = t => { $('dj-count').textContent = t; };
+    const shows = (window.KRSHOWS || []).slice(); for (let i = shows.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [shows[i], shows[j]] = [shows[j], shows[i]]; }
+    const track = i => { const e = shows[i]; if (!e) return null; const t = String(e.title); return 'NOW SPINNING: ' + (t.length > 34 ? t.slice(0, 33) + '…' : t) + ' @ ' + e.venue; };
+    const script = [[900, 'DJ RAY IN THE HOUSE!'], [3000, track(0) || 'WICKA WICKA WICKA!'], [5600, 'WICKA WICKA WICKA!'], [7600, track(1) || 'ARE YOU READY, KINGSTON?!'], [10200, 'ARE YOU READY, KINGSTON?!'], [12000, track(2) || 'DROP THE BEAT!'], [14400, 'THANK YOU, KINGSTON!']];
+    script.forEach(([ms, line]) => at(ms, () => say(line)));
+    const startAt = performance.now() + 700; let raf = 0, lastNote = 0;
+    const tick = now => {
+      if (!djing) return;
+      if (now >= startAt) {
+        const tt = (now - startAt) / 1000, beat = tt * Math.PI * 2 / 0.5;      // 120 beats a minute
+        const cy = 100 - 6 * Math.abs(Math.sin(beat / 2)), rot = 5 * Math.sin(beat / 2);
+        djHead.setAttribute('transform', 'translate(150,' + cy + ') rotate(' + rot + ') scale(1.2) translate(-50,-50)');
+        djArm('L', cy, 80 + 12 * Math.sin(beat / 2), 190 + 4 * Math.cos(beat));
+        djArm('R', cy, 220 + 16 * Math.sin(beat), 188 + 3 * Math.cos(beat * 2));
+        if (now - lastNote > 420) { lastNote = now; djNote(); }
+      } else { djArm('L', 100, 80, 190); djArm('R', 100, 220, 188); }
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    at(15600, () => {
+      djing = false; cancelAnimationFrame(raf); say('');
+      const fr2 = $('ray-face').getBoundingClientRect(), lr2 = dj.getBoundingClientRect();
+      const fx2 = lr2.left + lr2.width * 0.5, fy2 = lr2.top + lr2.height * (100 / 240);
+      dj.style.transform = 'translate(' + (fr2.left + fr2.width / 2 - fx2) + 'px,' + (fr2.top + fr2.height / 2 - fy2) + 'px) scale(' + (fr2.width / diam) + ')';
+      setTimeout(() => { dj.style.display = 'none'; dj.style.transform = ''; $('dj-notes').innerHTML = ''; ray.classList.remove('lifting'); resetFace(); lifting = false; }, 850);
+    });
+    return true;
+  }
+  (function djSchedule() {
+    const wait = Math.max(120000, -Math.log(1 - Math.random()) * 900000);   // random, about every 15 minutes on average
+    setTimeout(() => { if (!startDj()) { setTimeout(djSchedule, 25000); return; } djSchedule(); }, wait);
+  })();
+  window.KRRAY = { mad: makeMad, cool, pushups: startPushups, lifting: () => lifting, smoke: startSmoke, smoking: () => smoking, dj: startDj, djing: () => djing };
 
   const ready = list => { wireMood(list); buildTips(list); };
   if (window.KRSHOWS) ready(window.KRSHOWS);
