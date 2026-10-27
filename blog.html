@@ -155,6 +155,7 @@
   #smokecloud { position: fixed; inset: 0; z-index: 9000; pointer-events: none; opacity: 0; display: none; overflow: hidden; transition: opacity 3s ease-in-out; }
   #smokecloud i { position: absolute; width: 75vmax; height: 75vmax; margin: -37vmax 0 0 -37vmax; border-radius: 50%; background: radial-gradient(circle, rgba(222,222,218,.9) 0%, rgba(196,196,192,.6) 38%, rgba(170,170,168,0) 68%); animation: smokedrift 13s ease-in-out infinite alternate; }
   @keyframes smokedrift { from { transform: translate(-7vw, 5vh) scale(1); } to { transform: translate(8vw, -9vh) scale(1.2); } }
+  #smokecloud .cpuff { position: absolute; pointer-events: none; will-change: transform, opacity; }
   #ray.cough svg { animation: rage .12s linear 7; }
   #ray.lifting svg { visibility: hidden; }
   #ray.lifting .bubble { display: none !important; }
@@ -638,7 +639,7 @@
 <div class="foot">
   <p>Best viewed with Netscape Navigator 3.0 or Internet Explorer 3.0 at 800x600.<br>
   <a class="btn" href="#" onclick="window.scrollTo(0,0);return false;">^ Back to Top</a></p>
-  <p class="tiny">Skin: <span id="skin"></span> &nbsp;|&nbsp; Last updated: <span id="updated"></span> &nbsp;|&nbsp; Copyright &copy; 1997 Kingston Radius. All rights reserved.</p>
+  <p class="tiny">Skin: <span id="skin"></span> &nbsp;|&nbsp; Last updated: <span id="updated"></span> &nbsp;|&nbsp; Copyright &copy; Kingston Radius. All rights reserved.</p>
 </div>
 
 </div><!-- /#page -->
@@ -667,7 +668,7 @@
     10: () => '<span class="st">&#9733;</span><span class="st">&#10022;</span><b>' + N + '</b><span class="st">&#10022;</span><span class="st">&#9733;</span>',
     11: () => '<b>' + N.toUpperCase() + '</b>',
     12: () => '<b>' + N + '</b><small>Click here to enter!</small>',
-    13: () => '<b>' + N.toUpperCase() + '</b><small>est. 1997 &middot; Kingston, N.Y.</small>',
+    13: () => '<b>' + N.toUpperCase() + '</b><small>Kingston, N.Y.</small>',
     14: () => '<b>' + N.toUpperCase() + '</b>',
     15: () => letters(N.toUpperCase()),
     16: () => letters(N),
@@ -861,7 +862,7 @@
   };
 
   document.getElementById('skin').textContent = (window.KRTHEME ? window.KRTHEME.name : 'Classic') + (window.KRTHEME ? ' #' + window.KRTHEME.seed : '');
-  document.getElementById('updated').textContent = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).replace(/\d{4}$/, '1997');
+  document.getElementById('updated').textContent = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
   const msg = document.getElementById('msg');
   let data;
@@ -1622,7 +1623,7 @@
 <div id="ray">
   <div class="bubble" id="ray-bubble" style="display:none">
     <div id="ray-text"></div>
-    <div class="acts"><button type="button" id="ray-joke">Joke</button><button type="button" id="ray-next">Next tip</button><button type="button" id="ray-hide">Hide</button></div>
+    <div class="acts"><button type="button" id="ray-next">Next tip</button><button type="button" id="ray-hide">Hide</button></div>
   </div>
   <svg id="ray-face" viewBox="0 0 100 100" role="img" aria-label="Ray, the helper">
     <circle cx="50" cy="50" r="48" fill="#C0392B"/>
@@ -1743,7 +1744,7 @@
     'GRRR. Fine. Go to the show without me.',
     'I do NOT get paid enough for this.',
     'Stop clicking! I can hear that!',
-    'I have been up since 1997!'
+    'I have been up since sunrise!'
   ];
   const ANGRY_AT = { rat: 'A RAT?! Somebody call somebody!', cat: 'Get that cat off my page!', dog: 'WHO LET THE DOG OUT?!' };
   const CALM = ['...Sorry. I get like that sometimes.', 'Okay. Deep breaths. Where were we?', 'Sorry about that. Want a tip?'];
@@ -1882,7 +1883,7 @@
   // ---- Ray takes a smoke break now and then (a cartoon cigarette, a few puffs, and a cough) ----
   let smoking = false, smokeTimers = [];
   const SMOKE_START = ['Taking five.', 'Smoke break.', 'Don\'t mind me.'];
-  const SMOKE_MID = ['Don\'t tell the webmaster.', 'Long week. Good listings, though.', 'Nothing like a quiet night in 1997.'];
+  const SMOKE_MID = ['Don\'t tell the webmaster.', 'Long week. Good listings, though.', 'Nothing like a quiet night in.'];
   function puff(big) {
     const g = $('ray-smoke'), c = document.createElementNS(NSV, 'circle'), r0 = big ? 5 : 3, r1 = big ? 17 : 10;
     c.setAttribute('cx', 92); c.setAttribute('cy', 57); c.setAttribute('r', r0); c.setAttribute('fill', '#ececec'); c.setAttribute('stroke', '#9a9a9a'); c.setAttribute('stroke-width', '.6');
@@ -1896,9 +1897,43 @@
   [[88, 92], [60, 70], [30, 85], [90, 55], [62, 38], [34, 55], [10, 80], [86, 18], [58, 10], [30, 22], [8, 45], [10, 12]].forEach(([x, y], i) => { const b = document.createElement('i'); b.style.left = x + '%'; b.style.top = y + '%'; b.style.animationDelay = (-i * 1.3) + 's'; b.style.animationDuration = (11 + (i % 5) * 2) + 's'; cloud.appendChild(b); });
   document.body.appendChild(cloud);
   const haze = (level, secs) => { cloud.style.transition = 'opacity ' + secs + 's ease-in-out'; cloud.style.opacity = level; };
+  // the clouds: lumpy, shaded puffs (SVG noise-warped circles) that grow out of Ray and drift over the page
+  // Each cloud shape is drawn once into a picture (so moving it around later costs almost nothing), then reused.
+  const SEEDS = [3, 11, 27, 42, 58, 71], SPR = []; let sprStarted = false;
+  const BLOB = '<circle cx="100" cy="100" r="56" fill="url(#smokeG)"/><circle cx="58" cy="112" r="40" fill="url(#smokeG)"/><circle cx="142" cy="106" r="42" fill="url(#smokeG)"/><circle cx="90" cy="58" r="40" fill="url(#smokeG)"/><circle cx="128" cy="64" r="34" fill="url(#smokeG)"/><circle cx="100" cy="146" r="38" fill="url(#smokeG)"/>';
+  function buildSprites() {
+    if (sprStarted) return; sprStarted = true;
+    SEEDS.forEach((sd, i) => {
+      const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 300 300" width="480" height="480"><defs><radialGradient id="smokeG" cx="42%" cy="38%" r="70%"><stop offset="0" stop-color="#f7f7f4"/><stop offset=".55" stop-color="#d9d9d5"/><stop offset="1" stop-color="#9c9c98"/></radialGradient>'
+        + '<filter id="f" x="-35%" y="-35%" width="170%" height="170%"><feTurbulence type="fractalNoise" baseFrequency="0.016" numOctaves="3" seed="' + sd + '" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="78" xChannelSelector="R" yChannelSelector="G"/><feGaussianBlur stdDeviation="2.2"/></filter></defs>'
+        + '<g filter="url(#f)" transform="rotate(' + (i * 57) + ' 100 100)">' + BLOB + '</g></svg>';
+      const img = new Image();
+      img.onload = () => { try { const c = document.createElement('canvas'); c.width = c.height = 480; c.getContext('2d').drawImage(img, 0, 0, 480, 480); c.toBlob(b => { if (b) SPR.push(URL.createObjectURL(b)); }); } catch (err) {} };
+      img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+    });
+  }
+  setTimeout(buildSprites, 6000);
+  let cloudTimers = [];
+  function spawnPuff() {
+    if (!SPR.length) return;
+    const W = innerWidth, H = innerHeight, r = $('ray-face').getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    const size = Math.round(Math.max(W, H) * (0.55 + Math.random() * 0.3));   // each picture has a transparent margin, so these are bigger than they look
+    const el = document.createElement('div'); el.className = 'cpuff';
+    el.style.width = el.style.height = size + 'px'; el.style.left = (cx - size / 2) + 'px'; el.style.top = (cy - size / 2) + 'px';
+    const im = document.createElement('img'); im.alt = ''; im.src = SPR[Math.floor(Math.random() * SPR.length)]; im.style.cssText = 'display:block;width:100%;height:100%'; el.appendChild(im);
+    cloud.appendChild(el);
+    const dx = (0.04 + Math.random() * 0.9) * W - cx, dy = (0.04 + Math.random() * 0.9) * H - cy, dur = 5200 + Math.random() * 3200;
+    el.animate([
+      { transform: 'translate(0,0) scale(.08)', opacity: 0 },
+      { transform: 'translate(' + dx * .3 + 'px,' + dy * .3 + 'px) scale(.5)', opacity: .95, offset: .22 },
+      { transform: 'translate(' + dx + 'px,' + dy + 'px) scale(1.15)', opacity: .92 }
+    ], { duration: dur, easing: 'cubic-bezier(.2,.7,.3,1)', fill: 'forwards' });
+  }
+  function startClouds() { buildSprites(); const n = innerWidth < 760 ? 10 : 15, gap = 7000 / n; for (let i = 0; i < n; i++) cloudTimers.push(setTimeout(spawnPuff, 700 + i * gap)); }   // fewer on phones, to stay smooth
   function endSmoke(caught) {
     if (!smoking) return;
-    haze(0, caught ? 1 : 3.5); clearTimeout(cloudT); cloudT = setTimeout(() => { cloud.style.display = 'none'; }, (caught ? 1 : 3.5) * 1000 + 100);
+    cloudTimers.forEach(clearTimeout); cloudTimers = [];
+    haze(0, caught ? 1 : 3.5); clearTimeout(cloudT); cloudT = setTimeout(() => { cloud.style.display = 'none'; cloud.querySelectorAll('.cpuff').forEach(p => p.remove()); }, (caught ? 1 : 3.5) * 1000 + 100);
     smokeTimers.forEach(clearTimeout); smokeTimers = [];
     $('ray-smoke').innerHTML = '';
     ray.classList.remove('smoking', 'cough'); smoking = false; resetFace();
@@ -1908,16 +1943,16 @@
     if (smoking || lifting || calm || document.hidden || document.body.classList.contains('tetris-open')) return false;   // a mad Ray can still step out for a smoke
     smoking = true; cool(true);
     ray.classList.add('smoking');
-    clearTimeout(cloudT); cloud.style.display = 'block'; cloud.style.opacity = 0; void cloud.offsetWidth; haze(.3, 2.5);   // the smoke slowly takes over the page
+    clearTimeout(cloudT); cloud.style.display = 'block'; cloud.style.opacity = 0; void cloud.offsetWidth; haze(1, .4); startClouds();   // big billowing clouds roll out of Ray and across the page
     $('ray-lids').style.display = ''; $('ray-cig').style.display = ''; $('ray-mouth').setAttribute('d', 'M40 67 L60 67');
     $('ray-p1').setAttribute('r', '2.6'); $('ray-p2').setAttribute('r', '2.6');
     if (!hidden) { text.textContent = SMOKE_START[Math.floor(Math.random() * SMOKE_START.length)]; bubble.style.display = ''; }
     $('ray-ember').animate([{ fill: '#ff4a1c', r: 2.4 }, { fill: '#ff9a3c', r: 3.4 }], { duration: 900, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' });
     const at = (ms, fn) => smokeTimers.push(setTimeout(fn, ms));
     for (let i = 0; i < 8; i++) at(900 + i * 900, () => puff(false));
-    at(2800, () => { puff(true); haze(.55, 2.5); }); at(5600, () => { puff(true); haze(.78, 2.5); });
+    at(2800, () => puff(true)); at(5600, () => puff(true));
     at(4200, () => { if (!hidden) { const l = SMOKE_MID[Math.floor(Math.random() * SMOKE_MID.length)]; text.textContent = l; bubble.style.display = ''; } });
-    at(7600, () => { haze(.88, 1.5); ray.classList.add('cough'); if (!hidden) { text.textContent = '*cough cough*'; bubble.style.display = ''; } });
+    at(7600, () => { ray.classList.add('cough'); if (!hidden) { text.textContent = '*cough cough*'; bubble.style.display = ''; } });
     at(8800, () => ray.classList.remove('cough'));
     at(10000, () => endSmoke(false));
     return true;
@@ -2131,7 +2166,6 @@
     }, 4200);
     return true;
   }
-  $('ray-joke').onclick = () => { if (poke()) return; startJoke(true); };
   (function jokeSchedule() {
     const wait = Math.max(60000, -Math.log(1 - Math.random()) * 240000);   // random, about every 4 minutes on average
     setTimeout(() => { if (!startJoke(false)) { setTimeout(jokeSchedule, 20000); return; } jokeSchedule(); }, wait);
