@@ -2119,5 +2119,9 @@
   "Unicorn Bar||2026-11-27||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1793011394220
+  },
+  "Bard College Conservatory||2026-11-25||": {
+    "status": "rejected",
+    "hiddenAt": 1793108381151
   }
 }
