@@ -319,15 +319,15 @@
   {
     "id": 471,
     "date": "2026-11-01",
-    "title": "Leenalchi (이날치)",
+    "title": "(Canceled) Leenalchi (이날치)",
     "venue": "Assembly Kingston",
     "venueUrl": "https://www.assemblykingston.com/events/leenalchi",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
     "time": "20:00",
-    "price": "$30/$36",
+    "price": "canceled",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "_manual": true,
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792446793503-leenalchi.jpg"
   },
