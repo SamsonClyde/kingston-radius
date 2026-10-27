@@ -131,6 +131,12 @@
   @keyframes rage { 0% { transform: translate(0,0) rotate(0); } 25% { transform: translate(-2px,1px) rotate(-3deg); } 50% { transform: translate(2px,-1px) rotate(3deg); } 75% { transform: translate(-1px,-1px) rotate(-2deg); } 100% { transform: translate(0,0) rotate(0); } }
   @media (prefers-reduced-motion: reduce) { #ray.mad svg { animation: none; } }
 
+  /* Ray's push-ups: he grows, drops to a mat, and does a set */
+  #raylift { position: fixed; left: 0; right: 0; bottom: 8px; margin: 0 auto; width: min(92vw, 360px); z-index: 9700; pointer-events: none; display: none; transition: transform .8s cubic-bezier(.2,.9,.3,1.15); }
+  #raylift svg { width: 100%; height: auto; display: block; filter: drop-shadow(3px 3px 0 rgba(0,0,0,.5)); overflow: visible; }
+  #raylift .count { position: absolute; left: 0; right: 0; top: -34px; text-align: center; font: bold 24px var(--font); letter-spacing: 1px; color: #ff0; text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; }
+  #ray.lifting svg { visibility: hidden; }
+  #ray.lifting .bubble { display: none !important; }
   body.tetris-open #ray { pointer-events: none; }
   #ray.happy svg { animation: hop 0.35s ease-in-out infinite; }
   @keyframes hop { 50% { transform: translateY(-10px); } }
@@ -191,14 +197,6 @@
   @media (prefers-reduced-motion: reduce) { .ball.shake { animation: none; } }
 
 
-  /* speedometer page counter */
-  .speedo { margin: 12px auto 4px; width: 250px; text-align: center; }
-  .speedo svg { display: block; width: 250px; height: 160px; margin: 0 auto; }
-  .speedo .needle { transform-origin: 110px 110px; transition: transform 2.4s cubic-bezier(.2, 1.4, .4, 1); }
-  .speedo .lbl { font-size: 11px; color: var(--pagelo); margin-top: 2px; }
-  .speedo .counter { display: inline-block; background: #000; color: #0f0; font-family: var(--font); font-size: 18px; letter-spacing: 4px; padding: 1px 8px; border: 2px inset #888; }
-
-
   /* drink + food of the day */
   .clip { display: inline-block; width: 110px; height: 110px; line-height: 110px; font-size: 68px; text-align: center; margin: 4px auto; background: radial-gradient(circle at 50% 40%, #fff 0%, #e8e8e8 55%, #bdbdbd 100%); border: 3px var(--tbs) #fff; border-radius: 50%; box-shadow: 3px 3px 0 rgba(0,0,0,.5); }
   .clip span { display: inline-block; animation: bob 2.6s ease-in-out infinite; }
@@ -235,6 +233,17 @@
 
   .more { text-align: center; margin: 22px 0; }
   .guest { max-width: 520px; margin: 24px auto 0; border: var(--bw) var(--bs) var(--bd); background: var(--panel); padding: 8px 14px; text-align: center; color: #fff; }
+  /* friends sidebar: a left-hand frame on wide screens, a plain box at the bottom on small ones */
+  #friends { max-width: 520px; margin: 18px auto 0; border: var(--bw) var(--bs) var(--bd); background: var(--panel); color: #fff; padding: 8px 10px; font-size: 12px; text-align: left; }
+  #friends h4 { margin: 0 0 6px; text-align: center; font-size: 15px; color: var(--hi); }
+  #friends ul { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 12px; }
+  #friends li { padding: 2px 0; break-inside: avoid; overflow-wrap: anywhere; }
+  #friends a:link { color: #9fd4ff; } #friends a:visited { color: #d9a8ff; } #friends a:hover { color: #f00; background: #ff0; }
+  @media (min-width: 900px) {
+    body { padding-left: 176px; }
+    #friends { position: fixed; left: 0; top: 0; bottom: 0; width: 160px; max-width: none; margin: 0; overflow-y: auto; z-index: 50; box-sizing: border-box; }
+    #friends ul { columns: 1; }
+  }
   .foot { text-align: center; margin-top: 18px; font-size: 11px; color: var(--txt); }
   .foot .tiny { font-size: 10px; color: var(--txt); opacity: .75; }
   #msg { text-align: center; color: var(--txt); margin: 30px 0; }
@@ -333,25 +342,6 @@
     Welcome to the Kingston Radius home page! &nbsp;<span class="new blink">NEW!</span>
   </font><br>
   <font size="3" class="wel2">Upcoming shows within a short drive of Kingston, NY. Check back often.</font>
-  <div style="margin-top:10px"><button class="btn" id="tetris-open" type="button">&#9654; TETRIS: Book the Week</button></div>
-
-  <div class="speedo">
-    <svg id="speedo" viewBox="0 0 220 140" role="img" aria-label="Page view counter styled as a speedometer">
-      <path d="M 20 110 A 90 90 0 1 1 200 110" fill="#0a0a14" stroke="#c0c0c0" stroke-width="4"/>
-      <g id="speedo-ticks"></g>
-      <path d="M 28 110 A 82 82 0 0 1 36 76" fill="none" stroke="#00cc00" stroke-width="3"/>
-      <path d="M 184 76 A 82 82 0 0 1 192 110" fill="none" stroke="#ff2222" stroke-width="3"/>
-      <text x="110" y="88" text-anchor="middle" font-family="Courier New, monospace" font-size="9" fill="#99FFFF">x 1000</text>
-      <text x="110" y="132" text-anchor="middle" font-family="Courier New, monospace" font-size="10" style="fill:var(--pagehi)" font-weight="bold">PAGE VIEWS</text>
-      <g class="needle" id="speedo-needle" style="transform: rotate(-120deg)">
-        <line x1="110" y1="110" x2="110" y2="38" stroke="#ff2222" stroke-width="3" stroke-linecap="round"/>
-        <line x1="110" y1="110" x2="110" y2="122" stroke="#ff2222" stroke-width="3" stroke-linecap="round"/>
-      </g>
-      <circle cx="110" cy="110" r="7" fill="#c0c0c0" stroke="#444" stroke-width="2"/>
-    </svg>
-    <span class="counter" id="odo">000000</span>
-    <div class="lbl">visitors since 1997</div>
-  </div>
 </center>
 
 <marquee scrollamount="5">Welcome to the Kingston Radius home page! ... Please bookmark this site and check back for new listings ... </marquee>
@@ -435,6 +425,7 @@
 <div class="games" id="games">
   <h2>Games Corner</h2>
   <div class="cap">Take a break between shows. Arrow keys work for Snake.</div>
+  <div style="text-align:center;margin:6px 0 10px"><button class="btn" id="tetris-open" type="button">&#9654; TETRIS: Book the Week</button></div>
   <div class="gamerow">
 
     <div class="game" id="g-snake">
@@ -482,6 +473,11 @@
 </div>
 
 </div><!-- /#page -->
+
+<div id="friends">
+  <h4>friends:</h4>
+  <ul id="friends-list"><li>loading...</li></ul>
+</div>
 
 <div id="zoo" aria-hidden="true"></div>
 
@@ -544,6 +540,28 @@
     ...(data.scrapedEvents || []),
     ...(data.emailEvents   || [])
   ];
+  // "friends": every venue that has ever had a listed show, past or upcoming (same approval rules as the listings)
+  try {
+    const cv = data.customVenues || {}, fr = new Map();
+    for (const e of all) {
+      const name = String(e.venue || '').trim();
+      if (!name || !e.title) continue;
+      const st = status[key(e)];
+      if (rejected(st)) continue;
+      if (!e._manual && !approved(st)) continue;
+      const k = name.toLowerCase(), cur = fr.get(k) || { name, url: '', fixed: false, last: '' };
+      const own = cv[name] && cv[name].venueUrl;
+      if (okUrl(own)) { cur.url = own.trim(); cur.fixed = true; }
+      else if (!cur.fixed && okUrl(e.venueUrl) && String(e.date || '') >= cur.last) { cur.url = e.venueUrl.trim(); cur.last = String(e.date || ''); }
+      fr.set(k, cur);
+    }
+    const sortKey = n => n.replace(/^(the|a)\s+/i, '').toLowerCase();
+    const names = [...fr.values()].sort((a, b) => sortKey(a.name).localeCompare(sortKey(b.name)));
+    document.getElementById('friends-list').innerHTML = names.length
+      ? names.map(v => '<li>' + (v.url ? '<a href="' + esc(v.url) + '" target="_blank" rel="noopener">' + esc(v.name) + '</a>' : esc(v.name)) + '</li>').join('')
+      : '<li>(none yet)</li>';
+  } catch (err) { document.getElementById('friends').style.display = 'none'; }
+
   const seen = new Set(), list = [];
   for (const e of all) {
     if (!e.date || !e.title) continue;
@@ -770,10 +788,12 @@
     const kind = ['dog', 'cat', 'rat'][Math.floor(Math.random() * 3)], sp = SP[kind];
     document.dispatchEvent(new CustomEvent('krcritter', { detail: kind }));
     const top = kind === 'rat' ? h - rand(40, 70) : rand(h * 0.25, h - sp.size - 20);
-    run(kind, dir, top, 0, rand(sp.dur[0], sp.dur[1]));
+    const dur = rand(sp.dur[0], sp.dur[1]);
+    run(kind, dir, top, 0, dur);
+    if (Math.random() < 0.35) run(kind, -dir, top, dur + 500, dur);          // some turn around and come back
   }
   window.KRCRITTER = critters;
-  (function schedule(first) { setTimeout(() => { critters(); schedule(false); }, first ? rand(4000, 9000) : rand(9000, 28000)); })(true);
+  (function schedule(first) { setTimeout(() => { critters(); schedule(false); }, first ? rand(2700, 6000) : rand(6000, 18700)); })(true);
 
   // ---------- drink + food of the day ----------
   const DRINKS = [
@@ -1025,6 +1045,17 @@
   if (!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) setInterval(() => { const a = $('pet-ant'); a.setAttribute('opacity', a.getAttribute('opacity') === '0.15' ? '1' : '0.15'); }, 900);
 })();
 </script>
+<div id="raylift" aria-hidden="true">
+  <div class="count" id="rl-count"></div>
+  <svg viewBox="0 0 300 240">
+    <rect x="14" y="214" width="272" height="12" rx="3" fill="#1fa37a" stroke="#000" stroke-width="2"/>
+    <line id="rl-armL1" stroke="#7a241a" stroke-width="12" stroke-linecap="round"/><line id="rl-armL2" stroke="#7a241a" stroke-width="12" stroke-linecap="round"/>
+    <line id="rl-armR1" stroke="#7a241a" stroke-width="12" stroke-linecap="round"/><line id="rl-armR2" stroke="#7a241a" stroke-width="12" stroke-linecap="round"/>
+    <circle id="rl-handL" r="9" fill="#fff" stroke="#000" stroke-width="2"/><circle id="rl-handR" r="9" fill="#fff" stroke="#000" stroke-width="2"/>
+    <g id="rl-body"></g>
+  </svg>
+</div>
+
 <div id="ray">
   <div class="bubble" id="ray-bubble" style="display:none">
     <div id="ray-text"></div>
@@ -1117,7 +1148,8 @@
     'Not sure what to see? Try the Mood of the Day box near the top of the page.',
     'Remember to check back often. New shows are added all the time.',
     'Press the Tetris button near the top. Every piece is a real listing.',
-    'Keep an eye on the bottom of the screen. Something might run by.'
+    'Keep an eye on the bottom of the screen. Something might run by.',
+    'I try to squeeze in some push-ups now and then. Stay strong.'
   ];
   function buildTips(list) {
     const t = [tips[0]], today = dayStr(new Date());
@@ -1148,7 +1180,7 @@
   let madT = null, madUntil = 0;
   const FACE = { calm: 'M36 64 Q50 76 64 64', mad: 'M36 72 Q50 58 64 72' };
   function makeMad(line, ms) {
-    if (hidden) return;
+    if (hidden || lifting) return;
     ray.classList.add('mad'); $('ray-brows').style.display = ''; $('ray-mouth').setAttribute('d', FACE.mad);
     $('ray-p1').setAttribute('r', '2.2'); $('ray-p2').setAttribute('r', '2.2');
     text.textContent = line; bubble.style.display = '';
@@ -1165,7 +1197,7 @@
   }
   // happy (booked a day) and sad (calendar full) faces
   function feel(kind, line, ms) {
-    if (hidden) return;
+    if (hidden || lifting) return;
     clearTimeout(madT); resetFace(); ray.classList.add(kind);
     if (kind === 'happy') { $('ray-mouth').setAttribute('d', 'M30 60 Q50 90 70 60'); }
     else { $('ray-sadbrows').style.display = ''; $('ray-tear').style.display = ''; $('ray-mouth').setAttribute('d', FACE.mad); }
@@ -1193,7 +1225,83 @@
   // and when the page misbehaves
   document.addEventListener('krquake', () => { if (Math.random() < 0.5) makeMad('WHO KEEPS SHAKING THE PAGE?!', 6000); });
   document.addEventListener('krcritter', e => { if (Math.random() < 0.5) makeMad(ANGRY_AT[e.detail] || 'WHAT WAS THAT?!', 6000); });
-  window.KRRAY = { mad: makeMad, cool };
+  // ---- Ray gets big and does push-ups (about once every 10 minutes, on average) ----
+  const lift = $('raylift');
+  let lifting = false;
+  const NSV = 'http://www.w3.org/2000/svg';
+  const body = $('rl-body'), part = {};
+  body.setAttribute('transform', 'translate(150,100) scale(1.2) translate(-50,-50)');
+  [...$('ray-face').children].forEach(n => { const c = n.cloneNode(true); if (n.id) { part[n.id] = c; c.removeAttribute('id'); } body.appendChild(c); });
+  const SHOULD = { L: [102, 20], R: [198, 20] }, HAND = { L: [55, 212], R: [245, 212] }, UP = 100, DOWN = 150, LEN = 58;
+  function arm(side, cy) {
+    const sx = SHOULD[side][0], sy = cy + SHOULD[side][1], hx = HAND[side][0], hy = HAND[side][1];
+    const dx = hx - sx, dy = hy - sy, d = Math.min(Math.hypot(dx, dy), 2 * LEN - 0.5), h = Math.sqrt(LEN * LEN - d * d / 4);
+    const mx = sx + dx / 2, my = sy + dy / 2, nx = -dy / Math.hypot(dx, dy), ny = dx / Math.hypot(dx, dy);
+    const sign = side === 'L' ? (nx < 0 ? 1 : -1) : (nx > 0 ? 1 : -1);          // elbows point outward
+    const ex = mx + sign * nx * h, ey = my + sign * ny * h;
+    const set = (id, x1, y1, x2, y2) => { const l = $(id); l.setAttribute('x1', x1); l.setAttribute('y1', y1); l.setAttribute('x2', x2); l.setAttribute('y2', y2); };
+    set('rl-arm' + side + '1', sx, sy, ex, ey); set('rl-arm' + side + '2', ex, ey, hx, hy);
+    const hd = $('rl-hand' + side); hd.setAttribute('cx', hx); hd.setAttribute('cy', hy - 4);
+  }
+  function pose(cy, jitter) {
+    body.setAttribute('transform', 'translate(' + (150 + (jitter || 0)) + ',' + cy + ') scale(1.2) translate(-50,-50)');
+    arm('L', cy); arm('R', cy);
+  }
+  const setFace = (mouth, brows, sweat) => {
+    part['ray-mouth'].setAttribute('d', mouth);
+    part['ray-brows'].style.display = brows ? '' : 'none';
+    part['ray-tear'].style.display = sweat ? '' : 'none';
+  };
+  function startPushups() {
+    if (lifting || calm || document.hidden || isMad() || document.body.classList.contains('tetris-open')) return false;
+    lifting = true;
+    cool(true); ray.classList.add('lifting');
+    const reps = 6 + Math.floor(Math.random() * 4);
+    pose(UP); setFace(FACE.calm, false, false); $('rl-count').textContent = '';
+    lift.style.display = 'block'; lift.style.transition = 'none';
+    // start tiny, right where Ray normally sits, then grow into the middle of the screen
+    const fr = $('ray-face').getBoundingClientRect(), lr = lift.getBoundingClientRect();
+    const fx = lr.left + lr.width * 0.5, fy = lr.top + lr.height * (UP / 240), diam = lr.width * (115 / 300);
+    lift.style.transformOrigin = (lr.width * 0.5) + 'px ' + (lr.height * (UP / 240)) + 'px';
+    lift.style.transform = 'translate(' + (fr.left + fr.width / 2 - fx) + 'px,' + (fr.top + fr.height / 2 - fy) + 'px) scale(' + (fr.width / diam) + ')';
+    void lift.offsetWidth; lift.style.transition = '';
+    lift.style.transform = 'none';
+    const startAt = performance.now() + 900;
+    let rep = 0, last = startAt, raf = 0;
+    const dur = r => 800 + r * 70;                                    // he slows down as he gets tired
+    const finish = () => {
+      pose(UP); setFace('M30 60 Q50 90 70 60', false, false); $('rl-count').textContent = reps + ' push-ups! Phew.';
+      setTimeout(() => {
+        $('rl-count').textContent = '';
+        const fr2 = $('ray-face').getBoundingClientRect(), lr2 = lift.getBoundingClientRect();
+        const fx2 = lr2.left + lr2.width * 0.5, fy2 = lr2.top + lr2.height * (UP / 240);
+        lift.style.transform = 'translate(' + (fr2.left + fr2.width / 2 - fx2) + 'px,' + (fr2.top + fr2.height / 2 - fy2) + 'px) scale(' + (fr2.width / diam) + ')';
+        setTimeout(() => { lift.style.display = 'none'; lift.style.transform = ''; ray.classList.remove('lifting'); resetFace(); lifting = false; }, 850);
+      }, 1500);
+    };
+    const tick = now => {
+      if (now < startAt) { raf = requestAnimationFrame(tick); return; }
+      const t = (now - last) / dur(rep);
+      if (t >= 1) {
+        rep++; last = now;
+        if (rep >= reps) { finish(); return; }
+        $('rl-count').textContent = rep + '!';
+      }
+      const tt = Math.min((now - last) / dur(rep), 1), p = 0.5 - 0.5 * Math.cos(2 * Math.PI * tt);
+      const tired = rep >= reps - 4, shaky = rep >= reps - 2 && p > 0.6;
+      setFace(tired ? 'M36 70 Q43 64 50 70 T64 70' : FACE.calm, tired, rep >= reps - 5);
+      pose(UP + (DOWN - UP) * p, shaky ? Math.sin(now / 35) * 2.5 : 0);
+      raf = requestAnimationFrame(tick);
+    };
+    $('rl-count').textContent = 'Watch this!';
+    raf = requestAnimationFrame(tick);
+    return true;
+  }
+  (function pushSchedule() {
+    const wait = Math.max(45000, -Math.log(1 - Math.random()) * 600000);   // random gaps, about 10 minutes apart on average
+    setTimeout(() => { if (!startPushups()) { setTimeout(pushSchedule, 20000); return; } pushSchedule(); }, wait);
+  })();
+  window.KRRAY = { mad: makeMad, cool, pushups: startPushups, lifting: () => lifting };
 
   const ready = list => { wireMood(list); buildTips(list); };
   if (window.KRSHOWS) ready(window.KRSHOWS);
@@ -1302,35 +1410,6 @@
   }
   if (window.KRSHOWS) wire(window.KRSHOWS);
   else document.addEventListener('krshows', () => wire(window.KRSHOWS || []));
-})();
-</script>
-
-<script>
-// Speedometer page counter (the number climbs a little every day and never goes backwards)
-(function () {
-  const days = Math.floor(Date.now() / 86400000);
-  const value = 4217 + (days - 20000) * 3 + Math.floor((Date.now() % 86400000) / 600000);
-  document.getElementById('odo').textContent = String(value).padStart(6, '0');
-  const g = document.getElementById('speedo-ticks'), NS = 'http://www.w3.org/2000/svg', cx = 110, cy = 110;
-  for (let i = 0; i <= 50; i++) {
-    const a = (-120 + 240 * i / 50) * Math.PI / 180, major = i % 5 === 0, r1 = major ? 70 : 76, r2 = 82;
-    const l = document.createElementNS(NS, 'line');
-    l.setAttribute('x1', cx + r1 * Math.sin(a)); l.setAttribute('y1', cy - r1 * Math.cos(a));
-    l.setAttribute('x2', cx + r2 * Math.sin(a)); l.setAttribute('y2', cy - r2 * Math.cos(a));
-    l.setAttribute('stroke', major ? '#fff' : '#888'); l.setAttribute('stroke-width', major ? 2 : 1);
-    g.appendChild(l);
-    if (major) {
-      const t = document.createElementNS(NS, 'text'), rr = 58;
-      t.setAttribute('x', cx + rr * Math.sin(a)); t.setAttribute('y', cy - rr * Math.cos(a) + 3);
-      t.setAttribute('text-anchor', 'middle'); t.setAttribute('font-size', 9); t.setAttribute('font-family', 'Courier New, monospace'); t.setAttribute('fill', '#fff');
-      t.textContent = i / 5; g.appendChild(t);
-    }
-  }
-  const needle = document.getElementById('speedo-needle');
-  const angle = -120 + 240 * Math.min(value / 10000, 1);
-  const calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (calm) { needle.style.transition = 'none'; needle.style.transform = 'rotate(' + angle + 'deg)'; }
-  else setTimeout(() => { needle.style.transform = 'rotate(' + angle + 'deg)'; }, 250);
 })();
 </script>
 </body>
