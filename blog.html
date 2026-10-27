@@ -17,7 +17,8 @@
     cursor: crosshair;
     overflow-x: hidden;
   }
-  #scribble { position: absolute; left: 0; top: 0; z-index: -1; pointer-events: none; }
+  #scribble { position: absolute; left: 0; top: 0; z-index: 7500; pointer-events: none; }
+  body.scribbling, body.scribbling * { user-select: none; -webkit-user-select: none; }
   a:link { color: var(--link); }
   a:visited { color: var(--visited); }
   a:hover { color: #FF0000; background: #FFFF00; }
@@ -810,7 +811,7 @@
   document.addEventListener('keydown', e => { if (e.key === 'Escape') stopTrip(); });
   (function tripSchedule(first) { setTimeout(() => { if (!startTrip(false)) { tripSchedule(false); return; } tripSchedule(false); }, first ? rand(60000, 150000) : rand(150000, 330000)); })(true);
 
-  // ---------- crayon: hold the mouse down on the background to scribble (it all goes away on reload) ----------
+  // ---------- crayon: hold the mouse down anywhere to scribble over the whole page (it all goes away on reload) ----------
   (function () {
     const cv = document.createElement('canvas'); cv.id = 'scribble'; document.body.insertBefore(cv, document.body.firstChild);
     let ctx = cv.getContext('2d'), drawing = false, lx = 0, ly = 0, color = '#e63946', drewAny = false;
@@ -835,8 +836,11 @@
       else { const keep = document.createElement('canvas'); keep.width = cv.width; keep.height = cv.height; keep.getContext('2d').drawImage(cv, 0, 0); cv.width = nw; cv.height = nh; cv.getContext('2d').drawImage(keep, 0, 0); }
       ctx = cv.getContext('2d');
     }
-    const EMPTY = new Set(['HTML', 'BODY', 'CENTER']);
-    const backdrop = t => t === page || t === $('days') || EMPTY.has(t.tagName) || (t.classList && (t.classList.contains('grid') || t.classList.contains('foot')));
+    // The crayon works over everything. Form fields, the Tetris window, Ray and the games' canvases keep their own mouse handling.
+    const SKIP = 'input,select,textarea,option,canvas,#tetris,#ray,#tripstop';
+    const CLICKY = 'a,button,label,summary,.btn,[onclick]';
+    let pending = false, swallow = false, sx = 0, sy = 0;
+    const begin = (x, y) => { drawing = true; document.body.classList.add('scribbling'); try { getSelection().removeAllRanges(); } catch (err) {} lx = x; ly = y; dab(lx, ly); drewAny = true; };
     function dab(x, y) {
       ctx.fillStyle = color;
       for (let i = 0; i < 7; i++) {                    // lots of little waxy specks, so it looks like crayon and not marker
@@ -852,14 +856,27 @@
       lx = x; ly = y; drewAny = true;
     }
     addEventListener('mousedown', e => {
-      if (e.button !== 0 || !backdrop(e.target) || $('tetris').classList.contains('open')) return;
-      e.preventDefault();                              // no text selecting while scribbling
+      if (e.button !== 0 || $('tetris').classList.contains('open') || (e.target.closest && e.target.closest(SKIP))) return;
       color = COLORS[Math.floor(Math.random() * COLORS.length)]; setCursor();
-      fit(); drawing = true; lx = e.pageX; ly = e.pageY; dab(lx, ly); drewAny = true;
+      fit(); sx = e.pageX; sy = e.pageY;
+      if (e.target.closest && e.target.closest(CLICKY)) { pending = true; return; }   // a plain click still works; dragging from here scribbles
+      e.preventDefault(); begin(e.pageX, e.pageY);
     });
-    addEventListener('mousemove', e => { if (!drawing) return; if (!(e.buttons & 1)) { drawing = false; return; } seg(e.pageX, e.pageY); });
-    addEventListener('mouseup', () => { drawing = false; });
-    addEventListener('blur', () => { drawing = false; });
+    addEventListener('mousemove', e => {
+      if (pending) {
+        if (!(e.buttons & 1)) { pending = false; return; }
+        if (Math.hypot(e.pageX - sx, e.pageY - sy) < 6) return;
+        pending = false; swallow = true; begin(sx, sy);
+      }
+      if (!drawing) return;
+      if (!(e.buttons & 1)) { stop(); return; }
+      seg(e.pageX, e.pageY);
+    });
+    function stop() { drawing = false; pending = false; document.body.classList.remove('scribbling'); setTimeout(() => { swallow = false; }, 80); }
+    addEventListener('mouseup', stop);
+    addEventListener('blur', stop);
+    addEventListener('click', e => { if (swallow) { e.preventDefault(); e.stopPropagation(); swallow = false; } }, true);
+    addEventListener('dragstart', e => { if (pending || drawing) e.preventDefault(); });
     window.KRCRAYON = { color: () => color, drewAny: () => drewAny, size: () => [cv.width, cv.height] };
   })();
 
@@ -1280,7 +1297,7 @@
     'Press the Tetris button near the top. Every piece is a real listing.',
     'Keep an eye on the bottom of the screen. Something might run by.',
     'I try to squeeze in some push-ups now and then. Stay strong.',
-    'Hold the mouse button down on the background and scribble. Reload the page and it all disappears.'
+    'Hold the mouse button down anywhere and scribble. Reload the page and it all disappears.'
   ];
   function buildTips(list) {
     const t = [tips[0]], today = dayStr(new Date());
