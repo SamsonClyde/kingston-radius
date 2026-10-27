@@ -7,18 +7,17 @@
 <title>Kingston Radius - Live Music in the Hudson Valley</title>
 <style>
   /* Old-school page, on purpose. */
-  html { background: var(--bg); }
+  /* the wallpaper lives on <html> so the scribble canvas can sit between it and the page */
+  html { background-color: var(--bg); background-image: var(--bgimg); background-size: var(--bgsz); background-position: var(--bgpos); }
   body {
     margin: 0; padding: 8px 8px 30px;
     font-family: var(--font);
     font-size: var(--fs); color: var(--txt); letter-spacing: var(--ls);
-    background-color: var(--bg);
-    background-image: var(--bgimg);
-    background-size: var(--bgsz);
-    background-position: var(--bgpos);
-    cursor: var(--cur);
+    background: none;
+    cursor: crosshair;
     overflow-x: hidden;
   }
+  #scribble { position: absolute; left: 0; top: 0; z-index: -1; pointer-events: none; }
   a:link { color: var(--link); }
   a:visited { color: var(--visited); }
   a:hover { color: #FF0000; background: #FFFF00; }
@@ -57,6 +56,9 @@
   }
   .tile a:link { color: #0000EE; } .tile a:visited { color: #551A8B; } .tile a:hover { color: #f00; background: #ff0; }
   .tile .poster { display: block; border: 2px inset #808080; background: #fff; margin-bottom: 4px; line-height: 0; }
+  .tile .poster { position: relative; }
+  .tile .poster canvas.pix { position: absolute; left: 0; top: 0; width: 100%; height: 100%; image-rendering: pixelated; image-rendering: crisp-edges; image-rendering: pixelated; }
+  .tile .poster:hover canvas.pix { animation: spin 1.2s linear infinite; }
   .tile .poster img { width: 100%; height: auto; display: block; image-rendering: auto; }
   /* posters spin while the mouse is over them */
   .tile { position: relative; }
@@ -808,6 +810,84 @@
   document.addEventListener('keydown', e => { if (e.key === 'Escape') stopTrip(); });
   (function tripSchedule(first) { setTimeout(() => { if (!startTrip(false)) { tripSchedule(false); return; } tripSchedule(false); }, first ? rand(60000, 150000) : rand(150000, 330000)); })(true);
 
+  // ---------- crayon: hold the mouse down on the background to scribble (it all goes away on reload) ----------
+  (function () {
+    const cv = document.createElement('canvas'); cv.id = 'scribble'; document.body.insertBefore(cv, document.body.firstChild);
+    let ctx = cv.getContext('2d'), drawing = false, lx = 0, ly = 0, color = '#e63946', drewAny = false;
+    const COLORS = ['#e63946', '#f77f00', '#fcbf49', '#2a9d8f', '#1d7fd6', '#7b2cbf', '#ff5fa2', '#3a3a3a', '#8ac926'];
+    const shade = (hex, f) => '#' + [1, 3, 5].map(i => Math.round(parseInt(hex.substr(i, 2), 16) * f).toString(16).padStart(2, '0')).join('');
+    function crayon(c) {
+      const svg = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">'
+        + '<polygon points="3,29 10.5,26.5 5.5,21.5" fill="' + c + '" stroke="#000" stroke-width="1" stroke-linejoin="round"/>'
+        + '<polygon points="5.5,21.5 10.5,26.5 23.9,13.1 18.9,8.1" fill="' + c + '" stroke="#000" stroke-width="1" stroke-linejoin="round"/>'
+        + '<polygon points="8.4,18.6 13.4,23.6 20.6,16.4 15.6,11.4" fill="' + shade(c, .72) + '" stroke="#000" stroke-width=".8" stroke-linejoin="round"/>'
+        + '<line x1="11" y1="21" x2="18" y2="14" stroke="#fff" stroke-width="1.6" stroke-dasharray="2 1.6"/>'
+        + '</svg>';
+      return 'url("data:image/svg+xml,' + encodeURIComponent(svg) + '") 3 29, crosshair';
+    }
+    const setCursor = () => { document.body.style.cursor = crayon(color); };
+    setCursor();
+    function fit() {                                   // the canvas covers the whole page and only ever grows
+      const w = document.documentElement.clientWidth, h = Math.min(9000, Math.ceil(page.offsetTop + page.offsetHeight + 60));
+      if (cv.width >= w && cv.height >= h) return;
+      const nw = Math.max(cv.width, w), nh = Math.max(cv.height, h);
+      if (!cv.width || !drewAny) { cv.width = nw; cv.height = nh; }
+      else { const keep = document.createElement('canvas'); keep.width = cv.width; keep.height = cv.height; keep.getContext('2d').drawImage(cv, 0, 0); cv.width = nw; cv.height = nh; cv.getContext('2d').drawImage(keep, 0, 0); }
+      ctx = cv.getContext('2d');
+    }
+    const EMPTY = new Set(['HTML', 'BODY', 'CENTER']);
+    const backdrop = t => t === page || t === $('days') || EMPTY.has(t.tagName) || (t.classList && (t.classList.contains('grid') || t.classList.contains('foot')));
+    function dab(x, y) {
+      ctx.fillStyle = color;
+      for (let i = 0; i < 7; i++) {                    // lots of little waxy specks, so it looks like crayon and not marker
+        const a = Math.random() * 6.283, r = Math.random() * 5.5;
+        ctx.globalAlpha = 0.28 + Math.random() * 0.4;
+        ctx.beginPath(); ctx.arc(x + Math.cos(a) * r, y + Math.sin(a) * r, 1.2 + Math.random() * 2.6, 0, 6.283); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    }
+    function seg(x, y) {
+      const dx = x - lx, dy = y - ly, n = Math.max(1, Math.ceil(Math.hypot(dx, dy) / 2));
+      for (let i = 1; i <= n; i++) dab(lx + dx * i / n, ly + dy * i / n);
+      lx = x; ly = y; drewAny = true;
+    }
+    addEventListener('mousedown', e => {
+      if (e.button !== 0 || !backdrop(e.target) || $('tetris').classList.contains('open')) return;
+      e.preventDefault();                              // no text selecting while scribbling
+      color = COLORS[Math.floor(Math.random() * COLORS.length)]; setCursor();
+      fit(); drawing = true; lx = e.pageX; ly = e.pageY; dab(lx, ly); drewAny = true;
+    });
+    addEventListener('mousemove', e => { if (!drawing) return; if (!(e.buttons & 1)) { drawing = false; return; } seg(e.pageX, e.pageY); });
+    addEventListener('mouseup', () => { drawing = false; });
+    addEventListener('blur', () => { drawing = false; });
+    window.KRCRAYON = { color: () => color, drewAny: () => drewAny, size: () => [cv.width, cv.height] };
+  })();
+
+  // ---------- every so often, all the posters turn into big chunky pixels for 3 seconds ----------
+  let pixelating = false;
+  function pixelate() {
+    if (pixelating || calm || document.hidden || $('tetris').classList.contains('open')) return false;
+    const imgs = [...document.querySelectorAll('.tile .poster img')].filter(im => {
+      if (!(im.complete && im.naturalWidth)) return false;
+      const r = im.getBoundingClientRect(); return r.bottom > -800 && r.top < innerHeight + 800 && r.width > 0;
+    });
+    if (!imgs.length) return false;
+    pixelating = true;
+    const jobs = imgs.map(im => { const c = document.createElement('canvas'); c.className = 'pix'; c.setAttribute('aria-hidden', 'true'); im.parentNode.appendChild(c); return { im, c }; });
+    const paint = cols => jobs.forEach(({ im, c }) => {
+      const w = Math.max(4, cols), h = Math.max(4, Math.round(cols * (im.naturalHeight / im.naturalWidth)));
+      c.width = w; c.height = h;
+      const g = c.getContext('2d'); g.imageSmoothingEnabled = true;
+      try { g.drawImage(im, 0, 0, w, h); im.style.opacity = '0'; } catch (err) { /* leave this one alone */ }
+    });
+    const LEVELS = [9, 18, 12, 24];
+    LEVELS.forEach((cols, i) => setTimeout(() => { if (pixelating) paint(cols); }, i * 750));
+    setTimeout(() => { jobs.forEach(({ im, c }) => { im.style.opacity = ''; c.remove(); }); pixelating = false; }, 3000);
+    return true;
+  }
+  window.KRPIXEL = pixelate;
+  (function pixSchedule() { setTimeout(() => { pixelate(); pixSchedule(); }, rand(20000, 75000)); })();
+
   // ---------- animals ----------
   const SP = {
     dog: { e: '\u{1F415}', size: 46, dur: [5000, 8000] },
@@ -1199,7 +1279,8 @@
     'Remember to check back often. New shows are added all the time.',
     'Press the Tetris button near the top. Every piece is a real listing.',
     'Keep an eye on the bottom of the screen. Something might run by.',
-    'I try to squeeze in some push-ups now and then. Stay strong.'
+    'I try to squeeze in some push-ups now and then. Stay strong.',
+    'Hold the mouse button down on the background and scribble. Reload the page and it all disappears.'
   ];
   function buildTips(list) {
     const t = [tips[0]], today = dayStr(new Date());
