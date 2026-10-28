@@ -2222,5 +2222,9 @@
   "Opus 40||2026-11-07||11:00 am": {
     "status": "rejected",
     "hiddenAt": 1793184649210
+  },
+  "Stissing Center||2026-11-07||7:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1793184654905
   }
 }
