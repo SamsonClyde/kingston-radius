@@ -2197,5 +2197,10 @@
   "NoFun||2026-10-28||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1793184462750
-  }
+  },
+  "Love, Velma||2027-03-20||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1793184594990
+  },
+  "Love, Velma||2027-03-20||19:30": "approved"
 }
