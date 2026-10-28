@@ -10273,18 +10273,18 @@
   },
   {
     "id": 444,
-    "date": "2026-11-11",
-    "title": "THAO (Thao & The Get Down Stay Down), Kendra McKinley",
-    "venue": "Unicorn Bar",
-    "venueUrl": "https://unicornkingston.com/calendar",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
-    "time": "19:00",
-    "price": "$25adv/$30door",
+    "date": "2027-03-20",
+    "title": "Fred thomas of the JBs (Membership Required)",
+    "venue": "Love, Velma",
+    "venueUrl": "https://www.lovevelma.com/calendar/x7ig7xhduqf7sirn5qjbyy00jqegto",
+    "location": "Ellenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1N7G54TEiuvAWsch9",
+    "time": "19:30",
+    "price": "members only",
     "free": false,
     "_source": "scraped",
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792345162436-1000090153.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793184584176-lv-32027-sqs-fred.webp",
+    "_manual": true
   },
   {
     "id": 1787594727637,
