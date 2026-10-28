@@ -1228,5 +1228,11 @@
     "location": "New Paltz, NY",
     "mapsUrl": "https://www.instagram.com/law_n_order1/",
     "drive": 25
+  },
+  "The Wayside": {
+    "venueUrl": "https://www.instagram.com/thewayside_ellenville/",
+    "location": "Ellenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/3k1CcwNfcQZg7gaw5",
+    "drive": 41
   }
 }
