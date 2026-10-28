@@ -1632,7 +1632,7 @@ body { background: none !important; font-family: var(--fk-font) !important; font
 .site-footer-links .sep { color: var(--fk-txt); }
 
 /* --- pinball + memory 10x --- */
-#funhouse #g-pin { width: 304px; }
+#funhouse #g-pin { width: 344px; }
 #funhouse #pin { background: #000; border: 3px inset #808080; display: block; margin: 0 auto; max-width: 100%; height: auto; touch-action: none; }
 #funhouse .pinpad { display: flex; gap: 4px; justify-content: center; margin: 4px 0; }
 #funhouse .pinpad .btn { flex: 1; min-height: 36px; touch-action: none; user-select: none; -webkit-user-select: none; }
@@ -5411,7 +5411,7 @@ window.KR_EXPLORE = {
 // KINGSTON RADIUS /fun : the real index page plus the chaos from the blog page.
 (function () {
   if (window.__KRFUN) return; window.__KRFUN = 1;
-  const H = {"hdr": "<div id=\"hdr\">\n  <pre class=\"ascii\" aria-hidden=\"true\"><span class=\"a1\">#   # ##### #   #  ####  #### #####  ###  #   #\n#  #    #   ##  # #     #       #   #   # ##  #\n###     #   # # # #  ##  ###    #   #   # # # #\n#  #    #   #  ## #   #     #   #   #   # #  ##\n#   # ##### #   #  ###  ####    #    ###  #   #</span>\n<span class=\"a2\">####   ###  ####  ##### #   #  ####\n#   # #   # #   #   #   #   # #    \n####  ##### #   #   #   #   #  ### \n#  #  #   # #   #   #   #   #     #\n#   # #   # ####  #####  ###  #### </span></pre>\n  <div id=\"hdr-alt\" aria-hidden=\"true\"></div>\n  </div>", "clock": "<div class=\"clockbar\" id=\"clockbar\">&nbsp;</div>", "wx": "<div class=\"wx\" id=\"wx\">\n  <h3>Kingston, NY Weather Report</h3>\n  <div id=\"wx-body\">Checking the sky... please wait.</div>\n</div>\n\n", "toys": "<div class=\"mood\">\n  <b>Mood of the Day</b><br>\n  How are you feeling today?\n  <select id=\"mood\">\n    <option>Chill</option><option>Rowdy</option><option>Romantic</option><option>Mysterious</option><option>Nostalgic</option><option>Curious</option>\n  </select>\n  <button class=\"btn\" id=\"mood-go\" type=\"button\" disabled>Pick a show</button>\n  <div id=\"mood-out\">Loading the show list...</div>\n</div>\n\n<div class=\"toys\">\n  <div class=\"toy\" id=\"fortune\">\n    <h3>Fortune Cookie</h3>\n    Crack open a cookie to find out your lucky show.<br>\n    <button class=\"btn\" id=\"fortune-go\" type=\"button\" disabled>Your Lucky Show</button>\n    <div class=\"out\" id=\"fortune-out\">Loading the show list...</div>\n  </div>\n  <div class=\"toy\" id=\"ball-box\">\n    <h3>Magic 8-Ball</h3>\n    Should I go out tonight?<br>\n    <input type=\"text\" id=\"ball-q\" maxlength=\"80\" placeholder=\"Type your question (optional)\">\n    <div class=\"ball\" id=\"ball\"><div class=\"win eight\" id=\"ball-win\">8</div></div>\n    <button class=\"btn\" id=\"ball-go\" type=\"button\" disabled>Shake</button>\n    <div class=\"out\" id=\"ball-out\">Loading the show list...</div>\n  </div>\n</div>\n\n<div class=\"toys\" id=\"dailies\">\n  <div class=\"toy\" id=\"drink-box\">\n    <h3>Drink of the Day</h3>\n    <div class=\"clip\" id=\"drink-pic\"></div>\n    <div class=\"out\" id=\"drink-out\"></div>\n  </div>\n  <div class=\"toy\" id=\"food-box\">\n    <h3>Food of the Day</h3>\n    <div class=\"clip\" id=\"food-pic\"></div>\n    <div class=\"out\" id=\"food-out\"></div>\n  </div>\n</div>\n\n<div class=\"toys\">\n  <div class=\"toy\" id=\"pet-box\">\n    <h3>Pet Radar</h3>\n    Meet Blip, a radar screen with feelings. Blip likes snacks and gets hungry over time.\n    <svg id=\"pet-svg\" viewBox=\"0 0 120 120\" role=\"img\" aria-label=\"Blip, your pet radar screen\">\n      <ellipse cx=\"60\" cy=\"113\" rx=\"32\" ry=\"5\" fill=\"rgba(0,0,0,.45)\"/>\n      <rect x=\"36\" y=\"104\" width=\"12\" height=\"8\" rx=\"2\" fill=\"#c0c0c0\"/><rect x=\"72\" y=\"104\" width=\"12\" height=\"8\" rx=\"2\" fill=\"#c0c0c0\"/>\n      <circle cx=\"60\" cy=\"64\" r=\"44\" fill=\"#0a2a1a\" stroke=\"#c0c0c0\" stroke-width=\"5\"/>\n      <g id=\"pet-rings\" fill=\"none\" stroke=\"#2fd36b\" stroke-opacity=\".55\" stroke-width=\"2\"><circle cx=\"60\" cy=\"64\" r=\"32\"/><circle cx=\"60\" cy=\"64\" r=\"18\"/></g>\n      <g id=\"pet-sweep\" class=\"pet-sweep\"><path id=\"pet-wedge\" d=\"M60 64 L60 20 A 44 44 0 0 1 98 42 Z\" fill=\"#2fd36b\" opacity=\".28\"/><line id=\"pet-line\" x1=\"60\" y1=\"64\" x2=\"98\" y2=\"42\" stroke=\"#7dffa8\" stroke-width=\"3\" stroke-linecap=\"round\"/></g>\n      <circle id=\"pet-ant\" cx=\"86\" cy=\"36\" r=\"3.5\" fill=\"#7dffa8\"/>\n      <circle cx=\"46\" cy=\"62\" r=\"6.5\" fill=\"#fff\"/><circle cx=\"70\" cy=\"62\" r=\"6.5\" fill=\"#fff\"/>\n      <circle id=\"pet-e1\" cx=\"47\" cy=\"63\" r=\"3.2\" fill=\"#000\"/><circle id=\"pet-e2\" cx=\"71\" cy=\"63\" r=\"3.2\" fill=\"#000\"/>\n      <path id=\"pet-mouth\" d=\"M48 78 Q60 90 72 78\" fill=\"none\" stroke=\"#7dffa8\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n    </svg>\n    <div>Fullness: <span id=\"pet-bar\"><i id=\"pet-fill\"></i></span> <span id=\"pet-pct\">100%</span></div>\n    <div class=\"out\" id=\"pet-out\" style=\"min-height:22px\">Blip is happy to see you.</div>\n    <button class=\"btn\" id=\"pet-feed\" type=\"button\">Feed Blip</button>\n    <button class=\"btn\" id=\"pet-pet\" type=\"button\">Pet Blip</button>\n  </div>\n</div>\n\n", "games": "<div class=\"games\" id=\"games\">\n  <h2>Games Corner</h2>\n  <div class=\"cap\">Take a break between shows. Arrow keys work for Snake. Pinball: Z and / flip, Space launches.</div>\n  <div style=\"text-align:center;margin:6px 0 10px\"><button class=\"btn\" id=\"tetris-open\" type=\"button\">&#9654; TETRIS: Book the Week</button> <button class=\"btn\" id=\"trip-btn\" type=\"button\">&#9788; Go Trippy</button></div>\n  <div class=\"gamerow\">\n\n    <div class=\"game\" id=\"g-snake\">\n      <h3>Snake</h3>\n      <canvas id=\"snake\" width=\"224\" height=\"224\"></canvas>\n      <div class=\"stat\" id=\"snake-stat\">Press Start</div>\n      <button class=\"btn\" id=\"snake-start\" type=\"button\">Start</button>\n      <div class=\"pad\">\n        <span></span><button class=\"btn\" type=\"button\" data-d=\"U\">^</button><span></span>\n        <button class=\"btn\" type=\"button\" data-d=\"L\">&lt;</button><button class=\"btn\" type=\"button\" data-d=\"D\">v</button><button class=\"btn\" type=\"button\" data-d=\"R\">&gt;</button>\n      </div>\n    </div>\n\n    <div class=\"game\" id=\"g-pin\">\n      <h3>Pinball</h3>\n      <canvas id=\"pin\" width=\"280\" height=\"440\" aria-label=\"Pinball table\"></canvas>\n      <div class=\"stat\" id=\"pin-stat\">Press Start</div>\n      <div class=\"pinpad\"><button class=\"btn\" id=\"pin-l\" type=\"button\">&lt; Flip</button><button class=\"btn\" id=\"pin-p\" type=\"button\">LAUNCH</button><button class=\"btn\" id=\"pin-r\" type=\"button\">Flip &gt;</button></div>\n      <button class=\"btn\" id=\"pin-go\" type=\"button\">Start</button>\n    </div>\n\n    <div class=\"game wide\" id=\"g-mem\">\n      <h3>Memory Match 10x</h3>\n      <div class=\"mem\" id=\"mem\"></div>\n      <div class=\"stat\" id=\"mem-stat\">Find all 80 pairs.</div>\n      <button class=\"btn\" id=\"mem-reset\" type=\"button\">New Game</button>\n    </div>\n\n  </div>\n</div>\n\n\n", "over": "<div id=\"zoo\" aria-hidden=\"true\"></div>\n\n<div id=\"tetris\" role=\"dialog\" aria-label=\"Tetris\">\n  <div class=\"tbox\">\n    <h2><span>TETRIS: Book the Week</span> <button class=\"btn\" id=\"tclose\" type=\"button\">X Close</button></h2>\n    <div class=\"cap\">Each falling piece is a real listing. Fill a whole row to book that day. Arrow keys move, Up turns, Space drops, P pauses.</div>\n    <div class=\"tgrid\">\n      <div class=\"tboard\"><div class=\"tlabels\" id=\"tlabels\"></div><canvas id=\"tcv\" width=\"240\" height=\"480\"></canvas></div>\n      <div class=\"tside\">\n        <canvas id=\"tnext\" width=\"96\" height=\"96\"></canvas>\n        <div class=\"row\">Score: <b id=\"tscore\">0</b></div>\n        <div class=\"row\">Days booked: <b id=\"tdays\">0</b></div>\n        <div class=\"row\">Level: <b id=\"tlevel\">1</b></div>\n        <div class=\"row\" id=\"tfall\">Press Start</div>\n        <button class=\"btn\" id=\"tstart\" type=\"button\">New Game</button>\n        <div id=\"tlog\"></div>\n      </div>\n    </div>\n    <div class=\"tctl\">\n      <button class=\"btn\" type=\"button\" data-t=\"L\" aria-label=\"Move left\">&lt;</button>\n      <button class=\"btn\" type=\"button\" data-t=\"R2\" aria-label=\"Turn\">Turn</button>\n      <button class=\"btn\" type=\"button\" data-t=\"R\" aria-label=\"Move right\">&gt;</button>\n      <button class=\"btn\" type=\"button\" data-t=\"D\" aria-label=\"Down\">v</button>\n      <button class=\"btn\" type=\"button\" data-t=\"DROP\" aria-label=\"Drop\">Drop</button>\n    </div>\n    <div id=\"tmsg\"></div>\n  </div>\n</div>\n\n<div id=\"sotd\" role=\"dialog\" aria-label=\"Show of the day\"></div>\n\n<div id=\"raydj\" aria-hidden=\"true\">\n  <div class=\"count\" id=\"dj-count\"></div>\n  <svg viewBox=\"0 0 300 240\">\n    <g id=\"dj-eql\"></g><g id=\"dj-eqr\"></g>\n    <rect x=\"12\" y=\"150\" width=\"276\" height=\"82\" rx=\"6\" fill=\"#2b2b36\" stroke=\"#000\" stroke-width=\"2\"/>\n    <rect x=\"12\" y=\"150\" width=\"276\" height=\"6\" rx=\"3\" fill=\"#4a4a5a\"/>\n    <g id=\"dj-recs\"></g>\n    <rect x=\"118\" y=\"162\" width=\"64\" height=\"60\" rx=\"4\" fill=\"#15151c\" stroke=\"#000\" stroke-width=\"1.5\"/>\n    <circle cx=\"134\" cy=\"176\" r=\"6\" fill=\"#888\" stroke=\"#000\"/><circle cx=\"150\" cy=\"176\" r=\"6\" fill=\"#888\" stroke=\"#000\"/><circle cx=\"166\" cy=\"176\" r=\"6\" fill=\"#888\" stroke=\"#000\"/>\n    <line x1=\"134\" y1=\"190\" x2=\"134\" y2=\"214\" stroke=\"#555\" stroke-width=\"3\"/><line x1=\"150\" y1=\"190\" x2=\"150\" y2=\"214\" stroke=\"#555\" stroke-width=\"3\"/><line x1=\"166\" y1=\"190\" x2=\"166\" y2=\"214\" stroke=\"#555\" stroke-width=\"3\"/>\n    <rect x=\"129\" y=\"198\" width=\"10\" height=\"6\" fill=\"#ddd\"/><rect x=\"145\" y=\"205\" width=\"10\" height=\"6\" fill=\"#ddd\"/><rect x=\"161\" y=\"195\" width=\"10\" height=\"6\" fill=\"#ddd\"/>\n    <line id=\"dj-armL1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"dj-armL2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <line id=\"dj-armR1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"dj-armR2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <circle id=\"dj-handL\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/><circle id=\"dj-handR\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/>\n    <g id=\"dj-head\"></g>\n    <g id=\"dj-notes\"></g>\n  </svg>\n</div>\n\n<div id=\"raylift\" aria-hidden=\"true\">\n  <div class=\"count\" id=\"rl-count\"></div>\n  <svg viewBox=\"0 0 300 240\">\n    <rect x=\"14\" y=\"214\" width=\"272\" height=\"12\" rx=\"3\" fill=\"#1fa37a\" stroke=\"#000\" stroke-width=\"2\"/>\n    <line id=\"rl-armL1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"rl-armL2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <line id=\"rl-armR1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"rl-armR2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <circle id=\"rl-handL\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/><circle id=\"rl-handR\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/>\n    <g id=\"rl-body\"></g>\n  </svg>\n</div>\n\n<div id=\"ray\">\n  <div class=\"bubble\" id=\"ray-bubble\" style=\"display:none\">\n    <div id=\"ray-text\"></div>\n    <div class=\"acts\"><button type=\"button\" id=\"ray-next\">Next tip</button><button type=\"button\" id=\"ray-hide\">Hide</button></div>\n  </div>\n  <svg id=\"ray-face\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Ray, the helper\">\n    <circle cx=\"50\" cy=\"50\" r=\"48\" fill=\"#C0392B\"/>\n    <circle cx=\"50\" cy=\"50\" r=\"34\" fill=\"none\" stroke=\"#fff\" stroke-opacity=\"0.45\" stroke-width=\"5\"/>\n    <line x1=\"50\" y1=\"50\" x2=\"88\" y2=\"6\" stroke=\"#fff\" stroke-width=\"9\" stroke-linecap=\"round\"/>\n    <circle cx=\"37\" cy=\"44\" r=\"8\" fill=\"#fff\"/><circle cx=\"63\" cy=\"44\" r=\"8\" fill=\"#fff\"/>\n    <circle id=\"ray-p1\" cx=\"39\" cy=\"45\" r=\"3.5\" fill=\"#000\"/><circle id=\"ray-p2\" cx=\"65\" cy=\"45\" r=\"3.5\" fill=\"#000\"/>\n    <g id=\"ray-sadbrows\" style=\"display:none\" stroke=\"#300\" stroke-width=\"5\" stroke-linecap=\"round\"><line x1=\"27\" y1=\"36\" x2=\"45\" y2=\"30\"/><line x1=\"73\" y1=\"36\" x2=\"55\" y2=\"30\"/></g>\n    <path id=\"ray-tear\" style=\"display:none\" d=\"M33 56 q-5 9 0 12 q5 -3 0 -12z\" fill=\"#7fd0ff\" stroke=\"#fff\" stroke-width=\"1\"/>\n    <g id=\"ray-brows\" style=\"display:none\" stroke=\"#300\" stroke-width=\"5\" stroke-linecap=\"round\"><line x1=\"27\" y1=\"30\" x2=\"45\" y2=\"38\"/><line x1=\"73\" y1=\"30\" x2=\"55\" y2=\"38\"/></g>\n    <path id=\"ray-mouth\" d=\"M36 64 Q50 76 64 64\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\" stroke-linecap=\"round\"/>\n    <g id=\"ray-lids\" style=\"display:none\"><path d=\"M29 44 A8 8 0 0 1 45 44 Z\" fill=\"#C0392B\" stroke=\"#300\" stroke-width=\"1.6\"/><path d=\"M55 44 A8 8 0 0 1 71 44 Z\" fill=\"#C0392B\" stroke=\"#300\" stroke-width=\"1.6\"/></g>\n    <g id=\"ray-cig\" style=\"display:none\"><g transform=\"rotate(-10 58 66)\"><rect x=\"58\" y=\"63.8\" width=\"30\" height=\"4.4\" rx=\"1\" fill=\"#fff\" stroke=\"#000\" stroke-width=\".8\"/><rect x=\"58\" y=\"63.8\" width=\"7\" height=\"4.4\" rx=\"1\" fill=\"#d98e2b\" stroke=\"#000\" stroke-width=\".8\"/><rect x=\"83\" y=\"63.8\" width=\"5\" height=\"4.4\" fill=\"#9a9a9a\"/></g><circle id=\"ray-ember\" cx=\"88.5\" cy=\"60.8\" r=\"2.6\" fill=\"#ff4a1c\"/></g>\n    <g id=\"ray-smoke\"></g>\n  </svg>\n</div>\n\n"};
+  const H = {"hdr": "<div id=\"hdr\">\n  <pre class=\"ascii\" aria-hidden=\"true\"><span class=\"a1\">#   # ##### #   #  ####  #### #####  ###  #   #\n#  #    #   ##  # #     #       #   #   # ##  #\n###     #   # # # #  ##  ###    #   #   # # # #\n#  #    #   #  ## #   #     #   #   #   # #  ##\n#   # ##### #   #  ###  ####    #    ###  #   #</span>\n<span class=\"a2\">####   ###  ####  ##### #   #  ####\n#   # #   # #   #   #   #   # #    \n####  ##### #   #   #   #   #  ### \n#  #  #   # #   #   #   #   #     #\n#   # #   # ####  #####  ###  #### </span></pre>\n  <div id=\"hdr-alt\" aria-hidden=\"true\"></div>\n  </div>", "clock": "<div class=\"clockbar\" id=\"clockbar\">&nbsp;</div>", "wx": "<div class=\"wx\" id=\"wx\">\n  <h3>Kingston, NY Weather Report</h3>\n  <div id=\"wx-body\">Checking the sky... please wait.</div>\n</div>\n\n", "toys": "<div class=\"mood\">\n  <b>Mood of the Day</b><br>\n  How are you feeling today?\n  <select id=\"mood\">\n    <option>Chill</option><option>Rowdy</option><option>Romantic</option><option>Mysterious</option><option>Nostalgic</option><option>Curious</option>\n  </select>\n  <button class=\"btn\" id=\"mood-go\" type=\"button\" disabled>Pick a show</button>\n  <div id=\"mood-out\">Loading the show list...</div>\n</div>\n\n<div class=\"toys\">\n  <div class=\"toy\" id=\"fortune\">\n    <h3>Fortune Cookie</h3>\n    Crack open a cookie to find out your lucky show.<br>\n    <button class=\"btn\" id=\"fortune-go\" type=\"button\" disabled>Your Lucky Show</button>\n    <div class=\"out\" id=\"fortune-out\">Loading the show list...</div>\n  </div>\n  <div class=\"toy\" id=\"ball-box\">\n    <h3>Magic 8-Ball</h3>\n    Should I go out tonight?<br>\n    <input type=\"text\" id=\"ball-q\" maxlength=\"80\" placeholder=\"Type your question (optional)\">\n    <div class=\"ball\" id=\"ball\"><div class=\"win eight\" id=\"ball-win\">8</div></div>\n    <button class=\"btn\" id=\"ball-go\" type=\"button\" disabled>Shake</button>\n    <div class=\"out\" id=\"ball-out\">Loading the show list...</div>\n  </div>\n</div>\n\n<div class=\"toys\" id=\"dailies\">\n  <div class=\"toy\" id=\"drink-box\">\n    <h3>Drink of the Day</h3>\n    <div class=\"clip\" id=\"drink-pic\"></div>\n    <div class=\"out\" id=\"drink-out\"></div>\n  </div>\n  <div class=\"toy\" id=\"food-box\">\n    <h3>Food of the Day</h3>\n    <div class=\"clip\" id=\"food-pic\"></div>\n    <div class=\"out\" id=\"food-out\"></div>\n  </div>\n</div>\n\n<div class=\"toys\">\n  <div class=\"toy\" id=\"pet-box\">\n    <h3>Pet Radar</h3>\n    Meet Blip, a radar screen with feelings. Blip likes snacks and gets hungry over time.\n    <svg id=\"pet-svg\" viewBox=\"0 0 120 120\" role=\"img\" aria-label=\"Blip, your pet radar screen\">\n      <ellipse cx=\"60\" cy=\"113\" rx=\"32\" ry=\"5\" fill=\"rgba(0,0,0,.45)\"/>\n      <rect x=\"36\" y=\"104\" width=\"12\" height=\"8\" rx=\"2\" fill=\"#c0c0c0\"/><rect x=\"72\" y=\"104\" width=\"12\" height=\"8\" rx=\"2\" fill=\"#c0c0c0\"/>\n      <circle cx=\"60\" cy=\"64\" r=\"44\" fill=\"#0a2a1a\" stroke=\"#c0c0c0\" stroke-width=\"5\"/>\n      <g id=\"pet-rings\" fill=\"none\" stroke=\"#2fd36b\" stroke-opacity=\".55\" stroke-width=\"2\"><circle cx=\"60\" cy=\"64\" r=\"32\"/><circle cx=\"60\" cy=\"64\" r=\"18\"/></g>\n      <g id=\"pet-sweep\" class=\"pet-sweep\"><path id=\"pet-wedge\" d=\"M60 64 L60 20 A 44 44 0 0 1 98 42 Z\" fill=\"#2fd36b\" opacity=\".28\"/><line id=\"pet-line\" x1=\"60\" y1=\"64\" x2=\"98\" y2=\"42\" stroke=\"#7dffa8\" stroke-width=\"3\" stroke-linecap=\"round\"/></g>\n      <circle id=\"pet-ant\" cx=\"86\" cy=\"36\" r=\"3.5\" fill=\"#7dffa8\"/>\n      <circle cx=\"46\" cy=\"62\" r=\"6.5\" fill=\"#fff\"/><circle cx=\"70\" cy=\"62\" r=\"6.5\" fill=\"#fff\"/>\n      <circle id=\"pet-e1\" cx=\"47\" cy=\"63\" r=\"3.2\" fill=\"#000\"/><circle id=\"pet-e2\" cx=\"71\" cy=\"63\" r=\"3.2\" fill=\"#000\"/>\n      <path id=\"pet-mouth\" d=\"M48 78 Q60 90 72 78\" fill=\"none\" stroke=\"#7dffa8\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n    </svg>\n    <div>Fullness: <span id=\"pet-bar\"><i id=\"pet-fill\"></i></span> <span id=\"pet-pct\">100%</span></div>\n    <div class=\"out\" id=\"pet-out\" style=\"min-height:22px\">Blip is happy to see you.</div>\n    <button class=\"btn\" id=\"pet-feed\" type=\"button\">Feed Blip</button>\n    <button class=\"btn\" id=\"pet-pet\" type=\"button\">Pet Blip</button>\n  </div>\n</div>\n\n", "games": "<div class=\"games\" id=\"games\">\n  <h2>Games Corner</h2>\n  <div class=\"cap\">Take a break between shows. Arrow keys work for Snake. Pinball: Z and / flip, Space launches, N nudges.</div>\n  <div style=\"text-align:center;margin:6px 0 10px\"><button class=\"btn\" id=\"tetris-open\" type=\"button\">&#9654; TETRIS: Book the Week</button> <button class=\"btn\" id=\"trip-btn\" type=\"button\">&#9788; Go Trippy</button></div>\n  <div class=\"gamerow\">\n\n    <div class=\"game\" id=\"g-snake\">\n      <h3>Snake</h3>\n      <canvas id=\"snake\" width=\"224\" height=\"224\"></canvas>\n      <div class=\"stat\" id=\"snake-stat\">Press Start</div>\n      <button class=\"btn\" id=\"snake-start\" type=\"button\">Start</button>\n      <div class=\"pad\">\n        <span></span><button class=\"btn\" type=\"button\" data-d=\"U\">^</button><span></span>\n        <button class=\"btn\" type=\"button\" data-d=\"L\">&lt;</button><button class=\"btn\" type=\"button\" data-d=\"D\">v</button><button class=\"btn\" type=\"button\" data-d=\"R\">&gt;</button>\n      </div>\n    </div>\n\n    <div class=\"game\" id=\"g-pin\">\n      <h3>Pinball</h3>\n      <canvas id=\"pin\" width=\"320\" height=\"540\" aria-label=\"Pinball table\"></canvas>\n      <div class=\"stat\" id=\"pin-stat\">Press Start</div>\n      <div class=\"pinpad\"><button class=\"btn\" id=\"pin-l\" type=\"button\">&lt; Flip</button><button class=\"btn\" id=\"pin-p\" type=\"button\">LAUNCH</button><button class=\"btn\" id=\"pin-r\" type=\"button\">Flip &gt;</button><button class=\"btn\" id=\"pin-n\" type=\"button\">Nudge</button></div>\n      <button class=\"btn\" id=\"pin-go\" type=\"button\">Start</button>\n    </div>\n\n    <div class=\"game wide\" id=\"g-mem\">\n      <h3>Memory Match 10x</h3>\n      <div class=\"mem\" id=\"mem\"></div>\n      <div class=\"stat\" id=\"mem-stat\">Find all 80 pairs.</div>\n      <button class=\"btn\" id=\"mem-reset\" type=\"button\">New Game</button>\n    </div>\n\n  </div>\n</div>\n\n\n", "over": "<div id=\"zoo\" aria-hidden=\"true\"></div>\n\n<div id=\"tetris\" role=\"dialog\" aria-label=\"Tetris\">\n  <div class=\"tbox\">\n    <h2><span>TETRIS: Book the Week</span> <button class=\"btn\" id=\"tclose\" type=\"button\">X Close</button></h2>\n    <div class=\"cap\">Each falling piece is a real listing. Fill a whole row to book that day. Arrow keys move, Up turns, Space drops, P pauses.</div>\n    <div class=\"tgrid\">\n      <div class=\"tboard\"><div class=\"tlabels\" id=\"tlabels\"></div><canvas id=\"tcv\" width=\"240\" height=\"480\"></canvas></div>\n      <div class=\"tside\">\n        <canvas id=\"tnext\" width=\"96\" height=\"96\"></canvas>\n        <div class=\"row\">Score: <b id=\"tscore\">0</b></div>\n        <div class=\"row\">Days booked: <b id=\"tdays\">0</b></div>\n        <div class=\"row\">Level: <b id=\"tlevel\">1</b></div>\n        <div class=\"row\" id=\"tfall\">Press Start</div>\n        <button class=\"btn\" id=\"tstart\" type=\"button\">New Game</button>\n        <div id=\"tlog\"></div>\n      </div>\n    </div>\n    <div class=\"tctl\">\n      <button class=\"btn\" type=\"button\" data-t=\"L\" aria-label=\"Move left\">&lt;</button>\n      <button class=\"btn\" type=\"button\" data-t=\"R2\" aria-label=\"Turn\">Turn</button>\n      <button class=\"btn\" type=\"button\" data-t=\"R\" aria-label=\"Move right\">&gt;</button>\n      <button class=\"btn\" type=\"button\" data-t=\"D\" aria-label=\"Down\">v</button>\n      <button class=\"btn\" type=\"button\" data-t=\"DROP\" aria-label=\"Drop\">Drop</button>\n    </div>\n    <div id=\"tmsg\"></div>\n  </div>\n</div>\n\n<div id=\"sotd\" role=\"dialog\" aria-label=\"Show of the day\"></div>\n\n<div id=\"raydj\" aria-hidden=\"true\">\n  <div class=\"count\" id=\"dj-count\"></div>\n  <svg viewBox=\"0 0 300 240\">\n    <g id=\"dj-eql\"></g><g id=\"dj-eqr\"></g>\n    <rect x=\"12\" y=\"150\" width=\"276\" height=\"82\" rx=\"6\" fill=\"#2b2b36\" stroke=\"#000\" stroke-width=\"2\"/>\n    <rect x=\"12\" y=\"150\" width=\"276\" height=\"6\" rx=\"3\" fill=\"#4a4a5a\"/>\n    <g id=\"dj-recs\"></g>\n    <rect x=\"118\" y=\"162\" width=\"64\" height=\"60\" rx=\"4\" fill=\"#15151c\" stroke=\"#000\" stroke-width=\"1.5\"/>\n    <circle cx=\"134\" cy=\"176\" r=\"6\" fill=\"#888\" stroke=\"#000\"/><circle cx=\"150\" cy=\"176\" r=\"6\" fill=\"#888\" stroke=\"#000\"/><circle cx=\"166\" cy=\"176\" r=\"6\" fill=\"#888\" stroke=\"#000\"/>\n    <line x1=\"134\" y1=\"190\" x2=\"134\" y2=\"214\" stroke=\"#555\" stroke-width=\"3\"/><line x1=\"150\" y1=\"190\" x2=\"150\" y2=\"214\" stroke=\"#555\" stroke-width=\"3\"/><line x1=\"166\" y1=\"190\" x2=\"166\" y2=\"214\" stroke=\"#555\" stroke-width=\"3\"/>\n    <rect x=\"129\" y=\"198\" width=\"10\" height=\"6\" fill=\"#ddd\"/><rect x=\"145\" y=\"205\" width=\"10\" height=\"6\" fill=\"#ddd\"/><rect x=\"161\" y=\"195\" width=\"10\" height=\"6\" fill=\"#ddd\"/>\n    <line id=\"dj-armL1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"dj-armL2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <line id=\"dj-armR1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"dj-armR2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <circle id=\"dj-handL\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/><circle id=\"dj-handR\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/>\n    <g id=\"dj-head\"></g>\n    <g id=\"dj-notes\"></g>\n  </svg>\n</div>\n\n<div id=\"raylift\" aria-hidden=\"true\">\n  <div class=\"count\" id=\"rl-count\"></div>\n  <svg viewBox=\"0 0 300 240\">\n    <rect x=\"14\" y=\"214\" width=\"272\" height=\"12\" rx=\"3\" fill=\"#1fa37a\" stroke=\"#000\" stroke-width=\"2\"/>\n    <line id=\"rl-armL1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"rl-armL2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <line id=\"rl-armR1\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/><line id=\"rl-armR2\" stroke=\"#7a241a\" stroke-width=\"12\" stroke-linecap=\"round\"/>\n    <circle id=\"rl-handL\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/><circle id=\"rl-handR\" r=\"9\" fill=\"#fff\" stroke=\"#000\" stroke-width=\"2\"/>\n    <g id=\"rl-body\"></g>\n  </svg>\n</div>\n\n<div id=\"ray\">\n  <div class=\"bubble\" id=\"ray-bubble\" style=\"display:none\">\n    <div id=\"ray-text\"></div>\n    <div class=\"acts\"><button type=\"button\" id=\"ray-next\">Next tip</button><button type=\"button\" id=\"ray-hide\">Hide</button></div>\n  </div>\n  <svg id=\"ray-face\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Ray, the helper\">\n    <circle cx=\"50\" cy=\"50\" r=\"48\" fill=\"#C0392B\"/>\n    <circle cx=\"50\" cy=\"50\" r=\"34\" fill=\"none\" stroke=\"#fff\" stroke-opacity=\"0.45\" stroke-width=\"5\"/>\n    <line x1=\"50\" y1=\"50\" x2=\"88\" y2=\"6\" stroke=\"#fff\" stroke-width=\"9\" stroke-linecap=\"round\"/>\n    <circle cx=\"37\" cy=\"44\" r=\"8\" fill=\"#fff\"/><circle cx=\"63\" cy=\"44\" r=\"8\" fill=\"#fff\"/>\n    <circle id=\"ray-p1\" cx=\"39\" cy=\"45\" r=\"3.5\" fill=\"#000\"/><circle id=\"ray-p2\" cx=\"65\" cy=\"45\" r=\"3.5\" fill=\"#000\"/>\n    <g id=\"ray-sadbrows\" style=\"display:none\" stroke=\"#300\" stroke-width=\"5\" stroke-linecap=\"round\"><line x1=\"27\" y1=\"36\" x2=\"45\" y2=\"30\"/><line x1=\"73\" y1=\"36\" x2=\"55\" y2=\"30\"/></g>\n    <path id=\"ray-tear\" style=\"display:none\" d=\"M33 56 q-5 9 0 12 q5 -3 0 -12z\" fill=\"#7fd0ff\" stroke=\"#fff\" stroke-width=\"1\"/>\n    <g id=\"ray-brows\" style=\"display:none\" stroke=\"#300\" stroke-width=\"5\" stroke-linecap=\"round\"><line x1=\"27\" y1=\"30\" x2=\"45\" y2=\"38\"/><line x1=\"73\" y1=\"30\" x2=\"55\" y2=\"38\"/></g>\n    <path id=\"ray-mouth\" d=\"M36 64 Q50 76 64 64\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\" stroke-linecap=\"round\"/>\n    <g id=\"ray-lids\" style=\"display:none\"><path d=\"M29 44 A8 8 0 0 1 45 44 Z\" fill=\"#C0392B\" stroke=\"#300\" stroke-width=\"1.6\"/><path d=\"M55 44 A8 8 0 0 1 71 44 Z\" fill=\"#C0392B\" stroke=\"#300\" stroke-width=\"1.6\"/></g>\n    <g id=\"ray-cig\" style=\"display:none\"><g transform=\"rotate(-10 58 66)\"><rect x=\"58\" y=\"63.8\" width=\"30\" height=\"4.4\" rx=\"1\" fill=\"#fff\" stroke=\"#000\" stroke-width=\".8\"/><rect x=\"58\" y=\"63.8\" width=\"7\" height=\"4.4\" rx=\"1\" fill=\"#d98e2b\" stroke=\"#000\" stroke-width=\".8\"/><rect x=\"83\" y=\"63.8\" width=\"5\" height=\"4.4\" fill=\"#9a9a9a\"/></g><circle id=\"ray-ember\" cx=\"88.5\" cy=\"60.8\" r=\"2.6\" fill=\"#ff4a1c\"/></g>\n    <g id=\"ray-smoke\"></g>\n  </svg>\n</div>\n\n"};
   const hdr = document.querySelector('header'); if (!hdr) return;
 
   // everything that is "the page" goes in one wrapper, so quakes and trips can bend it without touching the pop-up layers
@@ -5687,7 +5687,7 @@ try {
       const h = { x: snake[0].x + dir.x, y: snake[0].y + dir.y };
       if (h.x < 0 || h.y < 0 || h.x >= N || h.y >= N || snake.some(p => p.x === h.x && p.y === h.y)) return over();
       snake.unshift(h);
-      if (h.x === food.x && h.y === food.y) { score++; stat('Score ' + score + '  Best ' + best); place(); } else snake.pop();
+      if (h.x === food.x && h.y === food.y) { score++; stat('Score ' + score + '  Best ' + best); place(); document.dispatchEvent(new CustomEvent('krsnake', { detail: { foods: score, el: cv } })); } else snake.pop();
       draw();
     };
     const start = () => {
@@ -5701,7 +5701,7 @@ try {
     document.querySelectorAll('#g-snake .pad button').forEach(b => { b.onclick = () => turn(DIRS[b.dataset.d]); });
     document.addEventListener('keydown', e => {
       const k = { ArrowUp: 'U', ArrowDown: 'D', ArrowLeft: 'L', ArrowRight: 'R', w: 'U', s: 'D', a: 'L', d: 'R' }[e.key];
-      if (!k || !running) return;
+      if (!k || !running || document.body.classList.contains('tetris-open')) return;
       e.preventDefault(); turn(DIRS[k]);
     });
     let t0 = null;     // swipe on the canvas
@@ -5715,107 +5715,205 @@ try {
     stat(best ? 'Best ' + best + '. Press Start' : 'Press Start');
   })();
 
-  // ---------- Pinball (replaces tic-tac-toe) ----------
+  // ---------- Pinball: a proper little table (slingshots, SHOW lanes, weekend drop targets, a lock + multiball, ball save, skill shot, nudge/tilt) ----------
   (function () {
-    const cv = $('pin'), cx = cv.getContext('2d'), W = 280, H = 440, R = 6, SUB = 6, G = 0.34;
+    const cv = $('pin'), cx = cv.getContext('2d'), W = 320, H = 540, R = 6, SUB = 6, G = 0.34, VMAX = 20;
     const stat = t => { $('pin-stat').textContent = t; };
     let best = 0; try { best = +localStorage.getItem('kr_pin_best') || 0; } catch (e) {}
+    const CX = 150, DIV = W - 30, LANE_X = W - 20;
+    const mir = x => 2 * CX - x;
     const WALLS = [
-      [8, 70, 8, H - 120], [8, 70, 70, 8], [70, 8, W - 70, 8], [W - 8, 70, W - 70, 8], [W - 8, 70, W - 8, H - 20],
-      [W - 28, 90, W - 28, H - 20], [W - 28, H - 20, W - 8, H - 20],
-      [8, H - 120, 59, H - 66], [W - 28, H - 120, W - 81, H - 66]
+      [10, 90, 10, 410], [10, 90, 90, 10], [90, 10, 230, 10], [W - 10, 90, 230, 10], [W - 10, 90, W - 10, H - 20],
+      [DIV, 110, DIV, H - 20], [DIV, H - 20, W - 10, H - 20],
+      [10, 410, 78, 470], [DIV, 410, 222, 470],
+      [120, 24, 120, 46], [150, 24, 150, 46], [180, 24, 180, 46]            // posts between the four SHOW lanes
     ];
-    const BUMPS = [{ x: 100, y: 130, r: 15, v: 100 }, { x: 165, y: 112, r: 15, v: 100 }, { x: 132, y: 186, r: 15, v: 100 },
-                   { x: 44, y: 236, r: 9, v: 50 }, { x: 214, y: 236, r: 9, v: 50 }, { x: 70, y: 168, r: 5, v: 25 }, { x: 196, y: 168, r: 5, v: 25 }];
-    const FL = [{ px: 62, py: H - 62, s: 1, th: 0.45, ph: 0.45, on: false }, { px: W - 84, py: H - 62, s: -1, th: 0.45, ph: 0.45, on: false }];
-    const FLEN = 50, FR = 5, REST = 0.45, UP = -0.5;
-    let state = 'idle', ball, score, balls, charge = 0, charging = false, keys = { l: false, r: false }, raf = 0, still = 0, flash = [], last = 0;
+    const SLINGS = [{ a: [50, 380], b: [78, 436], c: [50, 436], hit: 0 }, { a: [mir(50), 380], b: [mir(78), 436], c: [mir(50), 436], hit: 0 }];
+    const BUMPS = [{ x: 118, y: 172, r: 16 }, { x: 182, y: 172, r: 16 }, { x: 150, y: 218, r: 16 }, { x: 48, y: 300, r: 8 }, { x: mir(48), y: 300, r: 8 }];
+    const VENUES = ["Tubby's", 'BSP Kingston', 'UPAC', 'Colony', 'Bearsville', 'Club Helsinki', 'Anchor', 'Levon Helm Studios'];
+    const LANES = [105, 135, 165, 195], LETTERS = ['S', 'H', 'O', 'W'];
+    const SAUCER = { x: 48, y: 214, r: 9 };
+    const FL = [{ px: 78, py: 470, s: 1, th: 0.45 }, { px: mir(78), py: 470, s: -1, th: 0.45 }];
+    const FLEN = 56, FR = 5, REST = 0.45, UP = -0.5;
+    let phase = 'idle', balls = [], score, ballNo, ballsLeft, ballStart, charge = 0, charging = false, keys = { l: false, r: false }, raf = 0, last = 0, now = 0;
+    let lockLit, lit, mult, bumperHits, dropHits, slingHits, targets, weekends, locks, held, mb, saveUntil, skill, tilt, tilted, msgs, shake, over_t, extraBalls, nudgeAt, venueNames;
     const colors = () => { const cs = getComputedStyle($('funhouse') || document.body); return { hi: cs.getPropertyValue('--fk-hi').trim() || '#ff0', acc: cs.getPropertyValue('--fk-acc').trim() || '#f0f' }; };
     const visible = () => cv.offsetParent !== null && !document.hidden;
-    function newBall() { ball = { x: W - 18, y: H - 30, vx: 0, vy: 0 }; state = 'ready'; charge = 0; still = 0; stat('Ball ' + (4 - balls) + ' of 3. Hold LAUNCH, let go to shoot.'); }
-    function reset() { score = 0; balls = 3; flash = []; newBall(); stat('Hold LAUNCH (or Space), let go to shoot.'); $('pin-go').textContent = 'Quit'; kick(); }
-    function over() {
-      state = 'over'; $('pin-go').textContent = 'New Game'; const hi = score > best;
+    const rnd = (a, b) => a + Math.random() * (b - a);
+    const addScore = n => { score += n; };
+    const say = (t, ms) => { msgs = { t, until: now + (ms || 1700) }; };
+    const live = () => balls.filter(b => !b.held && !b.pl);
+    const plunger = () => balls.find(b => b.pl);
+    function pickVenues() { const list = (window.KRSHOWS || []).map(e => e.venue).filter(Boolean); const u = [...new Set(list)]; venueNames = (u.length >= 3 ? u : VENUES).slice().sort(() => Math.random() - 0.5).slice(0, 5).map(n => n.length > 13 ? n.slice(0, 12) + '.' : n); }
+    function resetTable() { lit = [false, false, false, false]; targets = [0, 1, 2, 3, 4].map(i => ({ x: 100 + i * 25, w: 20, down: false, flash: 0, ch: 'WTFSS'[i] })); BUMPS.forEach(b => b.hit = 0); }
+    function spawn(pl, auto) { const b = { x: LANE_X, y: H - 30, vx: 0, vy: 0, pl: !!pl, held: false, trail: [] }; balls.push(b); if (auto) { b.pl = false; b.vy = -(VMAX - 0.5); } return b; }
+    function newBall() {
+      ballsLeft--; ballNo++; balls = balls.filter(b => b.held); bumperHits = dropHits = slingHits = 0; tilt = 0; tilted = false; mult = 1; skill = 0; ballStart = score;
+      resetTable(); lockLit = lockLit && locks > 0; spawn(true); phase = 'play'; charge = 0; mb = false; saveUntil = 0;
+      say('BALL ' + ballNo + '. Hold LAUNCH.', 2200);
+    }
+    function reset() {
+      score = 0; ballNo = 0; ballsLeft = 3; weekends = 0; locks = 0; lockLit = false; extraBalls = 0; balls = []; msgs = null; shake = 0; pickVenues(); newBall();
+      $('pin-go').textContent = 'Quit'; kick();
+    }
+    function endBall() {
+      phase = 'between'; const bonus = Math.round((bumperHits * 30 + dropHits * 100 + slingHits * 10) * mult); addScore(bonus);
+      const pts = score - ballStart; document.dispatchEvent(new CustomEvent('krpinball', { detail: { score: pts, ball: ballNo } }));
+      say('BONUS ' + bonus + (mult > 1 ? ' (x' + mult + ')' : ''), 1400); over_t = now + 1500;
+    }
+    function finish() {
+      phase = 'over'; $('pin-go').textContent = 'New Game'; const hi = score > best;
       if (hi) { best = score; try { localStorage.setItem('kr_pin_best', best); } catch (e) {} }
       stat('Game over: ' + score + (hi ? ' (new best!)' : best ? '. Best ' + best : '')); draw();
-      try { if (window.KRRAY && KRRAY.chat) KRRAY.chat(hi && score > 0 ? 'A new pinball high score! ' + score + '!' : score > 2500 ? 'Not bad at pinball.' : 'Pinball is hard. Try again?', 3500); } catch (e) {}
+      try { if (window.KRRAY && KRRAY.chat) KRRAY.chat(hi && score > 0 ? 'A new pinball high score! ' + score + '!' : score > 20000 ? 'Okay, that was good pinball.' : 'Pinball is hard. Try again?', 3500); } catch (e) {}
     }
-    function seg(ax, ay, bx, by, e, rad) {
-      const dx = bx - ax, dy = by - ay, l2 = dx * dx + dy * dy; let t = ((ball.x - ax) * dx + (ball.y - ay) * dy) / l2; t = Math.max(0, Math.min(1, t));
-      const px = ax + dx * t, py = ay + dy * t; let nx = ball.x - px, ny = ball.y - py, d = Math.hypot(nx, ny), need = R + (rad || 0);
+    // ---------- collisions ----------
+    function seg(b, ax, ay, bx, by, e, rad) {
+      const dx = bx - ax, dy = by - ay, l2 = dx * dx + dy * dy; let t = ((b.x - ax) * dx + (b.y - ay) * dy) / l2; t = Math.max(0, Math.min(1, t));
+      const px = ax + dx * t, py = ay + dy * t; let nx = b.x - px, ny = b.y - py, d = Math.hypot(nx, ny); const need = R + (rad || 0);
       if (d >= need) return null; if (d < 1e-6) { nx = -dy; ny = dx; d = Math.hypot(nx, ny); } nx /= d; ny /= d;
-      ball.x = px + nx * need; ball.y = py + ny * need;
-      const vn = ball.vx * nx + ball.vy * ny; if (vn < 0) { ball.vx -= (1 + e) * vn * nx; ball.vy -= (1 + e) * vn * ny; }
-      return { nx, ny, t, px, py };
+      b.x = px + nx * need; b.y = py + ny * need;
+      const vn = b.vx * nx + b.vy * ny; if (vn < 0) { b.vx -= (1 + e) * vn * nx; b.vy -= (1 + e) * vn * ny; }
+      return { nx, ny, vn };
     }
-    function circ(x, y, rad, e) {
-      let nx = ball.x - x, ny = ball.y - y, d = Math.hypot(nx, ny), need = R + rad; if (d >= need) return null; if (d < 1e-6) { nx = 0; ny = -1; d = 1; } nx /= d; ny /= d;
-      ball.x = x + nx * need; ball.y = y + ny * need; const vn = ball.vx * nx + ball.vy * ny; if (vn < 0) { ball.vx -= (1 + e) * vn * nx; ball.vy -= (1 + e) * vn * ny; } return { nx, ny };
+    function circ(b, x, y, rad, e) {
+      let nx = b.x - x, ny = b.y - y, d = Math.hypot(nx, ny), need = R + rad; if (d >= need) return null; if (d < 1e-6) { nx = 0; ny = -1; d = 1; } nx /= d; ny /= d;
+      b.x = x + nx * need; b.y = y + ny * need; const vn = b.vx * nx + b.vy * ny; if (vn < 0) { b.vx -= (1 + e) * vn * nx; b.vy -= (1 + e) * vn * ny; } return { nx, ny };
     }
+    function flip(side) {    // pressing a flipper also rolls the lit SHOW letters sideways
+      if (phase !== 'play' || tilted) return; const k = side < 0 ? 'l' : 'r'; if (keys[k]) return; keys[k] = true;
+      if (lit.some(Boolean)) lit = side < 0 ? lit.slice(1).concat(lit[0]) : [lit[3]].concat(lit.slice(0, 3));
+    }
+    function relFlip(side) { keys[side < 0 ? 'l' : 'r'] = false; }
+    function laneHit(i) {
+      if (skill && now < skill.until && skill.lane === i) { addScore(1000); say('SKILL SHOT! 1000', 1800); skill = 0; }
+      if (lit[i]) { addScore(25); return; }
+      lit[i] = true; addScore(100);
+      if (lit.every(Boolean)) { lit = [false, false, false, false]; mult = Math.min(5, mult + 1); addScore(500 * mult); lockLit = true; say('SHOW COMPLETE! BONUS x' + mult + '. LOCK LIT', 2200); }
+    }
+    function dropTarget(t) {
+      if (t.down) return; t.down = true; t.flash = 12; dropHits++; addScore(250);
+      if (targets.every(x => x.down)) {
+        weekends++; addScore(2500); lockLit = true; say('WEEKEND BOOKED! LOCK LIT', 2200);
+        if (weekends % 2 === 0) { ballsLeft++; extraBalls++; say('WEEKEND BOOKED! EXTRA BALL!', 2600); }
+        setTimeout(() => { targets.forEach(x => { x.down = false; x.flash = 10; }); }, 1400);
+      }
+    }
+    function saucer(b) {
+      if (b.held || b.pl || Math.hypot(b.x - SAUCER.x, b.y - SAUCER.y) > SAUCER.r - 2 || Math.hypot(b.vx, b.vy) > 12) return;
+      if (mb) { addScore(5000); say('JACKPOT! 5000', 1800); b.vx = rnd(5, 8); b.vy = rnd(-9, -6); b.x = SAUCER.x + 12; return; }
+      if (!lockLit) { addScore(250); say('KICKOUT 250', 1000); b.vx = rnd(5, 8); b.vy = rnd(-9, -6); b.x = SAUCER.x + 12; return; }
+      lockLit = false;
+      locks++; b.held = true; b.x = SAUCER.x; b.y = SAUCER.y; b.vx = b.vy = 0; addScore(500);
+      if (locks >= 2) {   // second lock: everything is released at once
+        locks = 0; mb = true; saveUntil = now + 20000; say('MULTIBALL!', 2600);
+        const rel = balls.filter(x => x.held); rel.forEach((x, k) => { x.held = false; x.x = SAUCER.x + 12; x.y = SAUCER.y; x.vx = rnd(4, 7); x.vy = rnd(-10, -5) - k; });
+        spawn(false, true);
+      } else { say('BALL LOCKED 1/2', 1800); if (!live().length && !plunger()) spawn(false, true); }
+    }
+    function nudge() {
+      if (phase !== 'play' || tilted || now - nudgeAt < 350) return; nudgeAt = now; tilt += 1.1; shake = 8;
+      live().forEach(b => { b.vx += rnd(-1.8, 1.8); b.vy -= 1.2; });
+      if (tilt >= 3) { tilted = true; saveUntil = 0; keys.l = keys.r = false; say('TILT!', 2400); } else if (tilt >= 2) say('Careful...', 900);
+    }
+    // ---------- the physics step ----------
     function step(dt) {
-      for (const f of FL) { const on = f.s > 0 ? keys.l : keys.r; f.ph = f.th; f.th += on ? -0.26 * dt : 0.17 * dt; f.th = Math.max(UP, Math.min(REST, f.th)); f.dth = (f.th - f.ph) / dt; }
-      if (state !== 'play' && state !== 'ready') return;
-      if (state === 'ready') {   // the ball sits on the plunger; it only moves once launched
-        ball.y = H - 30 + charge * 6; return;
+      for (const f of FL) { const on = !tilted && (f.s > 0 ? keys.l : keys.r); f.ph = f.th; f.th += on ? -0.26 * dt : 0.17 * dt; f.th = Math.max(UP, Math.min(REST, f.th)); f.dth = (f.th - f.ph) / dt; }
+      if (phase !== 'play') return;
+      tilt = Math.max(0, tilt - dt / 300);
+      for (const b of balls) {
+        if (b.held) continue;
+        if (b.pl) { b.y = H - 30 + charge * 6; continue; }
+        const prevY = b.y;
+        b.vy += G * dt; const sp = Math.hypot(b.vx, b.vy); if (sp > VMAX) { b.vx *= VMAX / sp; b.vy *= VMAX / sp; }
+        b.x += b.vx * dt; b.y += b.vy * dt;
+        for (const w of WALLS) seg(b, w[0], w[1], w[2], w[3], 0.45);
+        if (b.x > DIV && b.y >= H - 27 && Math.abs(b.vy) < 1.5) {          // too weak a shot: back on the plunger
+          b.y = H - 30; b.vx = b.vy = 0; if (live().length === 1 && !plunger()) b.pl = true; else { b.vy = -(VMAX - 0.5); }
+        }
+        BUMPS.forEach((p, i) => { const r = circ(b, p.x, p.y, p.r, 0.4); if (r) { const k = p.r > 10 ? 5.2 : 4; b.vx += r.nx * k; b.vy += r.ny * k; addScore(p.r > 10 ? 100 : 50); p.hit = 10; bumperHits++; p.label = venueNames[i % venueNames.length]; } });
+        SLINGS.forEach(s => { const r = seg(b, s.a[0], s.a[1], s.b[0], s.b[1], 0.3, 1); if (r && r.vn < -1) { b.vx += r.nx * 5.5; b.vy += r.ny * 5.5; addScore(10); s.hit = 8; slingHits++; } });
+        targets.forEach(t => { if (t.down) return; const r = seg(b, t.x - t.w / 2, 90, t.x + t.w / 2, 90, 0.3, 2.5); if (r) dropTarget(t); });
+        if (b.vy > 0 && prevY < b.y) LANES.forEach((lx, i) => { if (Math.abs(b.x - lx) < 12 && b.y > 28 && b.y < 44 && prevY <= 36) laneHit(i); });
+        saucer(b);
+        for (const f of FL) {
+          const tx = f.px + f.s * Math.cos(f.th) * FLEN, ty = f.py + Math.sin(f.th) * FLEN, dx = tx - f.px, dy = ty - f.py, l2 = dx * dx + dy * dy;
+          let t = ((b.x - f.px) * dx + (b.y - f.py) * dy) / l2; t = Math.max(0, Math.min(1, t));
+          const px = f.px + dx * t, py = f.py + dy * t; let nx = b.x - px, ny = b.y - py, d = Math.hypot(nx, ny); const need = R + FR + (1 - t) * 2;
+          if (d >= need || d < 1e-6) continue; nx /= d; ny /= d; b.x = px + nx * need; b.y = py + ny * need;
+          const sx = -f.s * Math.sin(f.th), sy = Math.cos(f.th), w = (f.dth || 0) * t * FLEN, svx = sx * w, svy = sy * w;
+          const rx = b.vx - svx, ry = b.vy - svy, vn = rx * nx + ry * ny; if (vn < 0) { const e = 0.35; b.vx = rx - (1 + e) * vn * nx + svx; b.vy = ry - (1 + e) * vn * ny + svy; }
+        }
+        b.trail.push(b.x, b.y); if (b.trail.length > 12) b.trail.splice(0, 2);
+        if (Math.hypot(b.vx, b.vy) < 0.15 && b.y < H - 170 && b.y > 20 && b.x < DIV) { b.still = (b.still || 0) + 1; if (b.still > 90) { b.vx += rnd(-3, 3); b.vy -= 3; b.still = 0; } } else b.still = 0;
       }
-      ball.vy += G * dt; const sp = Math.hypot(ball.vx, ball.vy); if (sp > 17) { ball.vx *= 17 / sp; ball.vy *= 17 / sp; }
-      ball.x += ball.vx * dt; ball.y += ball.vy * dt;
-      for (const w of WALLS) seg(w[0], w[1], w[2], w[3], 0.45);
-      if (ball.x > W - 28 && ball.y > H - 40 && ball.vy > 0 && Math.abs(ball.vy) < 1.2) {   // fell back into the shooter lane: back on the plunger
-        if (ball.y >= H - 27) { ball.y = H - 30; ball.vy = 0; ball.vx = 0; state = 'ready'; charge = 0; }
+      // drains
+      for (const b of live().slice()) if (b.y > H + 12) {
+        balls.splice(balls.indexOf(b), 1);
+        if (now < saveUntil && !tilted) { say('BALL SAVED', 1500); spawn(false, true); continue; }
+        if (mb && live().length <= 1 && !plunger()) { mb = false; say('Multiball over', 1200); }
       }
-      for (const b of BUMPS) { const r = circ(b.x, b.y, b.r, 0.4); if (r) { const k = b.r > 10 ? 5.2 : 4; ball.vx += r.nx * k; ball.vy += r.ny * k; score += b.v; b.hit = 8; } }
-      for (const f of FL) {
-        const tx = f.px + f.s * Math.cos(f.th) * FLEN, ty = f.py + Math.sin(f.th) * FLEN;
-        const dx = tx - f.px, dy = ty - f.py, l2 = dx * dx + dy * dy; let t = ((ball.x - f.px) * dx + (ball.y - f.py) * dy) / l2; t = Math.max(0, Math.min(1, t));
-        const px = f.px + dx * t, py = f.py + dy * t; let nx = ball.x - px, ny = ball.y - py, d = Math.hypot(nx, ny); const need = R + FR + (1 - t) * 2;
-        if (d >= need || d < 1e-6) continue; nx /= d; ny /= d; ball.x = px + nx * need; ball.y = py + ny * need;
-        const sx = -f.s * Math.sin(f.th), sy = Math.cos(f.th), w = (f.dth || 0) * t * FLEN; const svx = sx * w, svy = sy * w;
-        const rx = ball.vx - svx, ry = ball.vy - svy, vn = rx * nx + ry * ny; if (vn < 0) { const e = 0.35; ball.vx = rx - (1 + e) * vn * nx + svx; ball.vy = ry - (1 + e) * vn * ny + svy; }
-      }
-      if (ball.y > H + 12) { balls--; if (balls <= 0) { over(); } else { newBall(); } return; }
-      if (Math.hypot(ball.vx, ball.vy) < 0.15 && ball.y < H - 150 && ball.y > 20) { if (++still > 90) { ball.vx += (Math.random() - 0.5) * 6; ball.vy -= 3; still = 0; } } else still = 0;
+      if (phase === 'play' && !live().length && !plunger()) endBall();
     }
     function frame(ts) {
-      raf = 0; if (state === 'idle' || state === 'over') { last = 0; return; }
+      raf = 0; if (phase === 'idle' || phase === 'over') { last = 0; return; }
       if (visible()) {
-        const k = last ? Math.max(0.5, Math.min(2, (ts - last) / 16.67)) : 1; last = ts;   // same speed on 30, 60 and 120 Hz screens
-        if (charging && state === 'ready') charge = Math.min(1, charge + 0.025 * k);
+        const k = last ? Math.max(0.5, Math.min(2, (ts - last) / 16.67)) : 1; last = ts; now += 16.67 * k;
+        if (charging && plunger()) charge = Math.min(1, charge + 0.025 * k);
         for (let i = 0; i < SUB; i++) step(k / SUB);
-        stat('Score ' + score + '   Ball ' + (4 - balls) + '/3' + (best ? '   Best ' + best : ''));
-        if (state === 'ready') stat('Ball ' + (4 - balls) + '/3. Hold LAUNCH, let go to shoot.' + (score ? '  Score ' + score : ''));
+        if (phase === 'between' && now >= over_t) { if (ballsLeft <= 0) finish(); else { newBall(); } }
+        if (shake > 0) shake -= k;
+        stat('Score ' + score + '   Ball ' + Math.min(ballNo, 3 + extraBalls) + (extraBalls ? '+' : '') + '   x' + mult + (locks ? '   Lock ' + locks + '/2' : '') + (best ? '   Best ' + best : ''));
         draw();
       }
-      raf = requestAnimationFrame(frame);
+      if (phase !== 'over' && phase !== 'idle') raf = requestAnimationFrame(frame);
     }
     function kick() { if (!raf) raf = requestAnimationFrame(frame); }
-    function launch() { if (state !== 'ready') return; ball.vy = -(10.5 + charge * 8.5); ball.vx = 0; charge = 0; charging = false; state = 'play'; }
+    function launch() { const b = plunger(); if (!b) return; b.pl = false; b.vy = -(10.5 + charge * 9); b.vx = 0; skill = { lane: Math.floor(Math.random() * 4), until: now + 6000 }; saveUntil = now + 12000; charge = 0; charging = false; }
+    // ---------- drawing ----------
     function draw() {
-      const c = colors(); cx.fillStyle = '#000'; cx.fillRect(0, 0, W, H);
-      cx.lineWidth = 3; cx.strokeStyle = c.acc; cx.lineCap = 'round'; cx.beginPath(); for (const w of WALLS) { cx.moveTo(w[0], w[1]); cx.lineTo(w[2], w[3]); } cx.stroke();
-      for (const b of BUMPS) { if (b.hit > 0) b.hit--; cx.beginPath(); cx.arc(b.x, b.y, b.r, 0, 6.3); cx.fillStyle = b.hit > 0 ? '#fff' : b.r > 10 ? c.hi : '#0cf'; cx.fill(); cx.lineWidth = 3; cx.strokeStyle = '#000'; cx.stroke(); }
-      cx.lineWidth = FR * 2; cx.strokeStyle = '#eee';
+      const c = colors(); cx.save(); if (shake > 0) cx.translate(rnd(-2, 2), rnd(-2, 2));
+      const g = cx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#05050f'); g.addColorStop(1, '#0c0618'); cx.fillStyle = g; cx.fillRect(-4, -4, W + 8, H + 8);
+      cx.lineCap = 'round'; cx.lineWidth = 3; cx.strokeStyle = c.acc; cx.beginPath(); for (const w of WALLS) { cx.moveTo(w[0], w[1]); cx.lineTo(w[2], w[3]); } cx.stroke();
+      // lanes
+      cx.font = 'bold 12px monospace'; cx.textAlign = 'center'; cx.textBaseline = 'middle';
+      LANES.forEach((lx, i) => { const on = lit && lit[i], sk = skill && skill.lane === i && now < skill.until && Math.floor(now / 160) % 2; cx.fillStyle = on ? c.hi : sk ? '#fff' : '#334'; cx.beginPath(); cx.arc(lx, 36, 9, 0, 6.3); cx.fill(); cx.fillStyle = on || sk ? '#000' : '#889'; cx.fillText(LETTERS[i], lx, 36); });
+      // drop targets
+      (targets || []).forEach(t => { if (t.flash > 0) t.flash--; cx.lineWidth = 5; cx.strokeStyle = t.down ? '#223' : t.flash % 2 ? '#fff' : '#f60'; cx.beginPath(); cx.moveTo(t.x - t.w / 2, 90); cx.lineTo(t.x + t.w / 2, 90); cx.stroke(); cx.fillStyle = t.down ? '#445' : '#ddd'; cx.font = '10px monospace'; cx.fillText(t.ch, t.x, 76); });
+      // saucer, slings
+      cx.beginPath(); cx.arc(SAUCER.x, SAUCER.y, SAUCER.r, 0, 6.3); cx.fillStyle = '#000'; cx.fill(); cx.lineWidth = 3; cx.strokeStyle = mb ? '#fff' : lockLit && Math.floor(now / 200) % 2 ? c.hi : '#0cf'; cx.stroke(); cx.fillStyle = '#9cf'; cx.font = '8px monospace'; cx.fillText(mb ? 'JACKPOT' : lockLit ? 'LOCK LIT' : 'LOCK', SAUCER.x, SAUCER.y + 20);
+      SLINGS.forEach(s => { if (s.hit > 0) s.hit--; cx.beginPath(); cx.moveTo(s.a[0], s.a[1]); cx.lineTo(s.b[0], s.b[1]); cx.lineTo(s.c[0], s.c[1]); cx.closePath(); cx.fillStyle = s.hit ? '#fff' : '#a0f'; cx.fill(); });
+      BUMPS.forEach((b, i) => { if (b.hit > 0) b.hit--; cx.beginPath(); cx.arc(b.x, b.y, b.r + (b.hit > 0 ? 2 : 0), 0, 6.3); cx.fillStyle = b.hit > 0 ? '#fff' : b.r > 10 ? c.hi : '#0cf'; cx.fill(); cx.lineWidth = 3; cx.strokeStyle = '#000'; cx.stroke(); if (b.hit > 0 && b.label) { cx.fillStyle = '#fff'; cx.font = 'bold 9px monospace'; cx.fillText(b.label, b.x, b.y - b.r - 7); } });
+      cx.lineWidth = FR * 2; cx.strokeStyle = tilted ? '#733' : '#eee';
       for (const f of FL) { cx.beginPath(); cx.moveTo(f.px, f.py); cx.lineTo(f.px + f.s * Math.cos(f.th) * FLEN, f.py + Math.sin(f.th) * FLEN); cx.stroke(); }
-      cx.fillStyle = '#888'; cx.fillRect(W - 24, H - 18 + (state === 'ready' ? charge * 6 : 0), 12, 6);
-      if (ball && state !== 'idle') { cx.beginPath(); cx.arc(ball.x, ball.y, R, 0, 6.3); cx.fillStyle = '#fff'; cx.fill(); cx.beginPath(); cx.arc(ball.x - 2, ball.y - 2, 2, 0, 6.3); cx.fillStyle = '#9cf'; cx.fill(); }
-      cx.font = 'bold 13px monospace'; cx.textAlign = 'left'; cx.fillStyle = c.hi; cx.fillText(String(score || 0), 14, 24);
-      cx.textAlign = 'right'; cx.fillStyle = '#fff'; cx.fillText('Ball ' + Math.min(3, 4 - (balls || 3)) + '/3', W - 14, 24);
-      if (state === 'idle' || state === 'over') { cx.textAlign = 'center'; cx.fillStyle = '#fff'; cx.font = 'bold 22px monospace'; cx.fillText(state === 'over' ? 'GAME OVER' : 'PINBALL', W / 2, H / 2 - 20); cx.font = '12px monospace'; cx.fillText('Z and / flip, or tap', W / 2, H / 2 + 4); cx.fillText('Space = launch', W / 2, H / 2 + 22); }
+      cx.fillStyle = '#888'; cx.fillRect(W - 26, H - 18 + (plunger() ? charge * 6 : 0), 12, 6);
+      balls.forEach(b => { if (b.held) { cx.beginPath(); cx.arc(SAUCER.x, SAUCER.y, R - 1, 0, 6.3); cx.fillStyle = '#9cf'; cx.fill(); return; }
+        for (let i = 0; i < b.trail.length; i += 2) { cx.globalAlpha = i / b.trail.length * 0.35; cx.beginPath(); cx.arc(b.trail[i], b.trail[i + 1], R - 2, 0, 6.3); cx.fillStyle = '#9cf'; cx.fill(); } cx.globalAlpha = 1;
+        cx.beginPath(); cx.arc(b.x, b.y, R, 0, 6.3); cx.fillStyle = '#fff'; cx.fill(); cx.beginPath(); cx.arc(b.x - 2, b.y - 2, 2, 0, 6.3); cx.fillStyle = '#9cf'; cx.fill(); });
+      cx.textAlign = 'left'; cx.textBaseline = 'alphabetic'; cx.font = 'bold 14px monospace'; cx.fillStyle = c.hi; cx.fillText(String(score || 0), 16, 22);
+      cx.textAlign = 'right'; cx.fillStyle = '#fff'; cx.font = 'bold 12px monospace'; cx.fillText('x' + (mult || 1) + '  BALL ' + Math.min(ballNo || 1, 9), W - 16, 22);
+      if (msgs && now < msgs.until && Math.floor(now / 140) % 4) { cx.textAlign = 'center'; cx.font = 'bold 15px monospace'; cx.fillStyle = tilted ? '#f55' : '#fff'; cx.fillText(msgs.t, CX, 280); }
+      if (phase === 'idle' || phase === 'over') { cx.textAlign = 'center'; cx.fillStyle = 'rgba(0,0,0,.55)'; cx.fillRect(30, H / 2 - 60, W - 60, 130); cx.fillStyle = '#fff'; cx.font = 'bold 24px monospace'; cx.fillText(phase === 'over' ? 'GAME OVER' : 'PINBALL', CX, H / 2 - 24); cx.font = '12px monospace'; cx.fillText('Z and / flip. Space launches.', CX, H / 2); cx.fillText('N nudges. Light S-H-O-W,', CX, H / 2 + 18); cx.fillText('book the weekend, lock 2 for multiball', CX, H / 2 + 36); }
+      cx.restore();
     }
+    // ---------- input ----------
     const typing = e => /^(INPUT|SELECT|TEXTAREA)$/.test((e.target || {}).tagName || '');
-    const KEY = { ArrowLeft: 'l', KeyZ: 'l', ArrowRight: 'r', Slash: 'r', KeyM: 'r', Space: 'p', ArrowDown: 'p' };
+    const KEY = { KeyZ: 'l', Slash: 'r', KeyM: 'r', Space: 'p', KeyN: 'n' };
+    const active = () => phase === 'play' && visible() && !document.body.classList.contains('tetris-open');
     document.addEventListener('keydown', e => {
-      const k = KEY[e.code]; if (!k || typing(e) || e.ctrlKey || e.metaKey || e.altKey || (state !== 'ready' && state !== 'play') || !visible()) return; e.preventDefault();
-      if (k === 'p') { if (state === 'ready') charging = true; } else keys[k] = true;
+      const k = KEY[e.code]; if (!k || typing(e) || e.ctrlKey || e.metaKey || e.altKey || !active()) return; e.preventDefault(); if (e.repeat) return;
+      if (k === 'p') { if (plunger()) charging = true; } else if (k === 'n') nudge(); else flip(k === 'l' ? -1 : 1);
     });
-    document.addEventListener('keyup', e => { const k = KEY[e.code]; if (!k) return; if (k === 'p') { if (charging) { charging = false; launch(); } } else keys[k] = false; });
-    const hold = (id, fn_on, fn_off) => { const b = $(id); const on = e => { e.preventDefault(); fn_on(); }, off = () => fn_off(); b.addEventListener('pointerdown', on); ['pointerup', 'pointercancel', 'pointerleave'].forEach(n => b.addEventListener(n, off)); };
-    hold('pin-l', () => { keys.l = true; }, () => { keys.l = false; });
-    hold('pin-r', () => { keys.r = true; }, () => { keys.r = false; });
-    hold('pin-p', () => { if (state === 'ready') charging = true; }, () => { if (charging) { charging = false; launch(); } });
-    $('pin-go').onclick = () => { if (state === 'ready' || state === 'play') { state = 'idle'; $('pin-go').textContent = 'Start'; stat(best ? 'Best ' + best + '. Press Start' : 'Press Start'); draw(); } else reset(); };
-    window.KRPIN = { state: () => state, ball: () => ball, score: () => score, force: () => { if (state === 'ready') { charge = 1; launch(); } } };
-    draw(); stat(best ? 'Best ' + best + '. Press Start' : 'Press Start');
+    document.addEventListener('keyup', e => { const k = KEY[e.code]; if (!k) return; if (k === 'p') { if (charging) { charging = false; launch(); } } else if (k !== 'n') relFlip(k === 'l' ? -1 : 1); });
+    const hold = (id, on, off) => { const b = $(id); b.addEventListener('pointerdown', e => { e.preventDefault(); on(); }); ['pointerup', 'pointercancel', 'pointerleave'].forEach(n => b.addEventListener(n, off)); };
+    hold('pin-l', () => flip(-1), () => relFlip(-1)); hold('pin-r', () => flip(1), () => relFlip(1));
+    hold('pin-p', () => { if (plunger()) charging = true; }, () => { if (charging) { charging = false; launch(); } });
+    $('pin-n').addEventListener('pointerdown', e => { e.preventDefault(); nudge(); });
+    $('pin-go').onclick = () => { if (phase === 'play' || phase === 'between') { phase = 'idle'; $('pin-go').textContent = 'Start'; stat(best ? 'Best ' + best + '. Press Start' : 'Press Start'); draw(); } else reset(); };
+    window.KRPIN = { state: () => phase, ball: () => live()[0] || plunger() || { x: NaN, y: NaN }, balls: () => live().length, score: () => score,
+      force: () => { if (plunger()) { charge = 1; launch(); } },
+      dbg: { lanes: i => laneHit(i), drop: i => dropTarget(targets[i]), lockBall: () => { const b = spawn(false, true); b.x = SAUCER.x; b.y = SAUCER.y; b.vx = b.vy = 0; saucer(b); }, nudge, info: () => ({ lockLit, lit, mult, locks, mb, tilted, ballsLeft, ballNo, weekends, held: balls.filter(b => b.held).length, live: live().length, down: targets.filter(t => t.down).length }), clock: () => now, addSave: ms => { saveUntil = now + ms; } } };
+    resetTable(); lockLit = false; lit = [false, false, false, false]; mult = 1; score = 0; ballNo = 0; balls = []; locks = 0; skill = 0; tilt = 0; nudgeAt = -999; pickVenues(); draw(); stat(best ? 'Best ' + best + '. Press Start' : 'Press Start');
   })();
 
   // ---------- Memory Match 10x: 160 cards, 80 pairs ----------
@@ -7162,7 +7260,7 @@ try {
 (function () {
   const KEY = 'kr_fun_pts';
   const RANKS = [[0, 'Wristband'], [100, 'Opener'], [600, 'Roadie'], [2000, 'Sound Tech'], [6000, 'Headliner'], [20000, 'Legend'], [75000, 'Hall of Famer'], [250000, 'Immortal']];
-  const BUD = { tet: { full: 600, soft: 1000, name: 'Tetris' }, pairs: { full: 150, soft: 250, name: 'Memory pairs' }, blip: { full: 90, soft: 130, name: 'Blip snacks' } };   // full value up to `full`, a quarter value up to `soft`, then nothing until tomorrow
+  const BUD = { tet: { full: 600, soft: 1000, name: 'Tetris' }, pairs: { full: 150, soft: 250, name: 'Memory pairs' }, blip: { full: 90, soft: 130, name: 'Blip snacks' }, pin: { full: 150, soft: 250, name: 'Pinball' }, snake: { full: 70, soft: 120, name: 'Snake' } };   // full value up to `full`, a quarter value up to `soft`, then nothing until tomorrow
   const ROWS = [0, 10, 25, 50, 100], REPEAT = [1, .5, .25, .1], COOL = 20 * 60000;
   const $ = id => document.getElementById(id);
   const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
@@ -7171,14 +7269,14 @@ try {
   const dstr = d => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
   const todayS = () => dstr(new Date());
   const yestS = () => { const d = new Date(); return dstr(new Date(d.getFullYear(), d.getMonth(), d.getDate() - 1)); };
-  const fresh = () => ({ v: 1, total: 0, day: '', used: { tet: 0, pairs: 0, blip: 0 }, done: 0, noted: {}, streak: 0, last: '', lastFeed: 0, life: { rows: 0, pairs: 0, boards: 0, feeds: 0, bestMoves: 0 } });
+  const fresh = () => ({ v: 1, total: 0, day: '', used: { tet: 0, pairs: 0, blip: 0, pin: 0, snake: 0 }, done: 0, noted: {}, streak: 0, last: '', lastFeed: 0, life: { rows: 0, pairs: 0, boards: 0, feeds: 0, bestMoves: 0, foods: 0, balls: 0 } });
   function load() { try { const r = JSON.parse(localStorage.getItem(KEY) || 'null'); if (r && typeof r.total === 'number') { const f = fresh(); return Object.assign(f, r, { used: Object.assign(f.used, r.used), life: Object.assign(f.life, r.life), noted: r.noted || {} }); } } catch (e) {} return fresh(); }
   let S = load();
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} };
   const rankIx = t => { let i = 0; RANKS.forEach((r, k) => { if (t >= r[0]) i = k; }); return i; };
   const mult = () => 1 + 0.1 * Math.min(Math.max(S.streak, 1) - 1, 5);
   function roll() {   // a new day: budgets refill, and the streak grows if you were here yesterday
-    const t = todayS(); if (S.day !== t) { S.day = t; S.used = { tet: 0, pairs: 0, blip: 0 }; S.done = 0; S.noted = {}; }
+    const t = todayS(); if (S.day !== t) { S.day = t; S.used = { tet: 0, pairs: 0, blip: 0, pin: 0, snake: 0 }; S.done = 0; S.noted = {}; }
   }
   function touch() { const t = todayS(); if (S.last !== t) { S.streak = S.last === yestS() ? S.streak + 1 : 1; S.last = t; } }
   function pay(src, raw) {
@@ -7228,6 +7326,12 @@ try {
     add(pts, 'board', 'ALL ' + e.detail.pairs + ' PAIRS!', $('mem'), true, true);
     banner('<b>ALL ' + e.detail.pairs + ' PAIRS!</b><br>+' + fmt(pts) + ' points' + (rep < 1 ? '<br><small>(repeat boards pay less: ' + Math.round(rep * 100) + '%)</small>' : '') + '<br><small>' + moves + ' moves' + (eff > 0.99 ? ' (max efficiency)' : '') + '</small>');
   });
+  document.addEventListener('krsnake', e => {                       // Snake: 1 point a bite, +6 every tenth
+    const n = e.detail.foods | 0; S.life.foods++; award('snake', 1 + (n > 0 && n % 10 === 0 ? 6 : 0), n % 10 === 0 ? n + ' BITES!' : '', e.detail.el);
+  });
+  document.addEventListener('krpinball', e => {                     // Pinball: one point per 200 on the table, paid when each ball ends
+    S.life.balls++; const raw = Math.floor((e.detail.score | 0) / 200); if (raw > 0) award('pin', raw, 'pinball', $('pin'));
+  });
   function feed(f, el) {                                            // Blip: only a hungry Blip earns points, and only one snack per 20 minutes
     roll(); const now = Date.now();
     if (f >= 70) return { pts: 0, why: 'full' };
@@ -7250,14 +7354,18 @@ try {
       + '<h4>Today' + (S.streak > 1 ? ' &middot; ' + S.streak + '-day streak (x' + mult().toFixed(1) + ')' : '') + '</h4>'
       + '<table class="fk-t"><tr><td>Tetris rows</td><td>' + bar(S.used.tet, BUD.tet) + '</td><td>' + used('tet') + '</td></tr>'
       + '<tr><td>Memory pairs</td><td>' + bar(S.used.pairs, BUD.pairs) + '</td><td>' + used('pairs') + '</td></tr>'
-      + '<tr><td>Blip snacks</td><td>' + bar(S.used.blip, BUD.blip) + '</td><td>' + used('blip') + '</td></tr></table>'
+      + '<tr><td>Blip snacks</td><td>' + bar(S.used.blip, BUD.blip) + '</td><td>' + used('blip') + '</td></tr>'
+      + '<tr><td>Pinball</td><td>' + bar(S.used.pin, BUD.pin) + '</td><td>' + used('pin') + '</td></tr>'
+      + '<tr><td>Snake</td><td>' + bar(S.used.snake, BUD.snake) + '</td><td>' + used('snake') + '</td></tr></table>'
       + '<div class="fk-small">Bars fill at full value, then a quarter value past the notch, then stop until tomorrow. Boards finished today: ' + S.done + '. Next Blip snack points: ' + (cooldownLeft() ? 'in ' + cooldownLeft() + ' min' : 'ready (when he is hungry)') + '.</div>'
       + '<h4>How to earn</h4><ul class="fk-how">'
       + '<li><b>Tetris:</b> each booked day (row) 10, two at once 25, three 50, four 100. +5% per level, up to +50%.</li>'
       + '<li><b>Memory Match:</b> each pair 2, plus 1 for every match in a row (up to 5). <b>Find all 80 pairs: 300 to 600</b> (fewer moves = more). Repeat boards pay half, a quarter, then a little.</li>'
       + '<li><b>Blip:</b> a snack when he is hungry is worth 15 (8 if he was starving, 5 if just peckish). <b>Overfeeding earns nothing.</b> One scored snack per 20 minutes.</li>'
+      + '<li><b>Pinball:</b> 1 point for every 200 on the table, paid as each ball ends (so a big multiball ball pays well).</li>'
+      + '<li><b>Snake:</b> 1 point a bite, plus 6 on every tenth.</li>'
       + '<li><b>Streak:</b> come back on consecutive days for up to +50% on everything.</li></ul>'
-      + '<h4>Lifetime</h4><div class="fk-small">' + fmt(S.life.rows) + ' rows booked &middot; ' + fmt(S.life.pairs) + ' pairs matched &middot; ' + S.life.boards + ' boards cleared' + (S.life.bestMoves ? ' (best ' + S.life.bestMoves + ' moves)' : '') + ' &middot; ' + S.life.feeds + ' good snacks</div>'
+      + '<h4>Lifetime</h4><div class="fk-small">' + fmt(S.life.rows) + ' rows booked &middot; ' + fmt(S.life.pairs) + ' pairs matched &middot; ' + S.life.boards + ' boards cleared' + (S.life.bestMoves ? ' (best ' + S.life.bestMoves + ' moves)' : '') + ' &middot; ' + S.life.feeds + ' good snacks &middot; ' + fmt(S.life.balls) + ' pinball balls &middot; ' + fmt(S.life.foods) + ' snake bites</div>'
       + '<div class="fk-small">Your saved shows (' + saved + ') are shared with the main site. Points live only on this page, in this browser.</div>'
       + '<div class="fk-act"><button type="button" class="fk-reset">Reset points</button></div>';
   }
