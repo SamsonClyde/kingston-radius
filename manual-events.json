@@ -30380,5 +30380,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793183952205,
+    "title": "The Land is Calling - Mario Rincon Y Los Caprichos",
+    "date": "2026-11-18",
+    "time": "17:30",
+    "venue": "Senate Garage",
+    "venueUrl": "https://www.instagram.com/kingstonlandtrust/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/7hSEeT4WaZaxKG7W7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793183947839-unnamed-2.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
