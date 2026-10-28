@@ -30410,5 +30410,20 @@
     "_source": "scraped",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793184370905-sp-keeganales-e1793107229208.jpg",
     "_manual": true
+  },
+  {
+    "id": 76,
+    "date": "2026-11-27",
+    "title": "Perowsky, Torn, Medeski, Ultan",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/perowsky_torn_medeski_ultan/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "time": "19:30",
+    "price": "$25+",
+    "free": false,
+    "_source": "email",
+    "posterUrl": "",
+    "_manual": true
   }
 ]
