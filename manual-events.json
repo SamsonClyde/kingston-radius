@@ -30425,5 +30425,20 @@
     "_source": "email",
     "posterUrl": "",
     "_manual": true
+  },
+  {
+    "id": 331,
+    "date": "2026-11-15",
+    "title": "Bridge Arts Fall Jazz Showcase",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "time": "13:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793184865684-6594a7812cb56ebdde795c8e-hvyo.png",
+    "_manual": true
   }
 ]
