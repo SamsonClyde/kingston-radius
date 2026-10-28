@@ -437,10 +437,6 @@
   "Tubby's||2026-10-17||20:00": "approved",
   "Tubby's||2026-10-22||20:00": "approved",
   "Tubby's||2026-10-23||20:00": "approved",
-  "Tubby's||2026-10-27||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787310467651
-  },
   "Tubby's||2026-10-27||20:00": "approved",
   "Tubby's||2026-11-05||7:00 pm": {
     "status": "rejected",
@@ -1433,10 +1429,6 @@
     "hiddenAt": 1790680772980
   },
   "Athens Cultural Center||2026-10-18||17:00": "approved",
-  "Tempo Arts||2026-10-27||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790764649664
-  },
   "Tempo Arts||2026-10-29||8:15 PM": {
     "status": "rejected",
     "hiddenAt": 1790764652552
@@ -1504,10 +1496,6 @@
   "The Half Moon||2026-11-18||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790852636378
-  },
-  "Tompkins Corners Cultural Center||2026-10-27||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790852641676
   },
   "Tompkins Corners Cultural Center||2026-11-06||7:30 pm": {
     "status": "rejected",
@@ -1958,17 +1946,9 @@
     "status": "rejected",
     "hiddenAt": 1792632642450
   },
-  "Keegan Ales||2026-10-27||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792632657801
-  },
   "Athens Cultural Center||2026-10-29||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1792664760226
-  },
-  "Bard College Conservatory||2026-10-27||": {
-    "status": "rejected",
-    "hiddenAt": 1792666719301
   },
   "Bard College Conservatory||2026-10-27||19:30": "approved",
   "PS21 Chatham||2026-10-28||5:00 PM": {
