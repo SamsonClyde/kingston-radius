@@ -30366,5 +30366,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793183791155,
+    "title": "Cafe Del Rio DJ Dance Party",
+    "date": "2026-10-29",
+    "time": "19:00",
+    "venue": "Tilda's Kitchen",
+    "venueUrl": "https://www.instagram.com/tildas_kitchen_and_market/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/NDYDWUJJ8GLabmDZ7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793183780811-unnamed-1.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
