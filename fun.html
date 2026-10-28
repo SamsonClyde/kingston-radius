@@ -6279,12 +6279,15 @@ window.KRBIG = (function () { let last = Date.now() - 100000; return {
   dailies();
   function pairs(list) {
     if (!list || !list.length) return;
-    const k = dayKey(), lim = new Date(); lim.setDate(lim.getDate() + 7);
-    const ds = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
-    const week = list.filter(e => e.date <= ds(lim)), pool = week.length ? week : list;
-    const pe = pool[seed(k + 'dp') % pool.length], pf = pool[seed(k + 'fp') % pool.length];
-    $('drink-pair').innerHTML = 'Try it at: ' + esc(pe.venue) + ' (' + esc(pe.title) + ', ' + esc(pretty(pe)) + ')';
-    $('food-pair').innerHTML = 'Try it at: ' + esc(pf.venue) + ' (' + esc(pf.title) + ', ' + esc(pretty(pf)) + ')';
+    const k = dayKey(), n = new Date(), ds = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'), today = ds(n);
+    const days = [...new Set(list.map(e => e.date).filter(d => d >= today))].sort(), day = days.find(d => d === today) || days[0];   // today, or the next day that has shows
+    if (!day) return;
+    const pool = list.filter(e => e.date === day).sort((a, b) => String(a.time || '').localeCompare(String(b.time || '')));
+    const i1 = seed(k + 'dp') % pool.length, pe = pool[i1], pf = pool.length > 1 ? pool[(i1 + 1 + seed(k + 'fp') % (pool.length - 1)) % pool.length] : pool[0];   // a different show for the food when there are two or more
+    const lead = day === today ? "Goes with tonight's show" : 'Goes with the next show day (' + pretty(pe).replace(/,.*$/, '') + ')';
+    const tm = e => { let t = e.time && e.time !== 'See website' ? String(e.time).trim() : ''; if (/^\d{1,2}:\d{2}$/.test(t)) { const [h, m] = t.split(':').map(Number); t = (h % 12 || 12) + ':' + String(m).padStart(2, '0') + (h >= 12 ? ' PM' : ' AM'); } return t; };
+    const line = e => esc(lead) + ': <b>' + esc(e.title) + '</b> @ ' + esc(e.venue) + (tm(e) ? ', ' + esc(tm(e)) : '') + ' <a href="#" class="fk-find" data-reveal="' + esc(e.venue + '||' + e.date + '||' + (e.time || '')) + '">find it below</a>';
+    $('drink-pair').innerHTML = line(pe); $('food-pair').innerHTML = line(pf);
   }
   if (window.KRSHOWS) pairs(window.KRSHOWS); else document.addEventListener('krshows', () => pairs(window.KRSHOWS));
 
