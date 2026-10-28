@@ -30395,5 +30395,20 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 275,
+    "date": "2026-11-06",
+    "title": "Soul Purpose",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/event/soul-purpose/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "free",
+    "free": true,
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793184370905-sp-keeganales-e1793107229208.jpg",
+    "_manual": true
   }
 ]
