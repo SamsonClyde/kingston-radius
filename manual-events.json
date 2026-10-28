@@ -30440,5 +30440,19 @@
     "_source": "scraped",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793184865684-6594a7812cb56ebdde795c8e-hvyo.png",
     "_manual": true
+  },
+  {
+    "id": 1793185149533,
+    "title": "Letters From The Front",
+    "date": "2026-11-11",
+    "time": "19:00",
+    "venue": "Bard Fisher Center",
+    "venueUrl": "https://fishercenter.bard.edu/events/letters-from-the-front/",
+    "location": "Annandale-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=60+Manor+Ave+Annandale-on-Hudson+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793185146492-letters-from-the-front-2560-x-1440-no-logo2-1536x864.jpg",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
