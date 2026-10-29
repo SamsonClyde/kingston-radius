@@ -64,17 +64,17 @@ exports.handler = async (event) => {
 
     for (let attempt = 1; attempt <= 5; attempt++) {
       const { rows, sha } = await read();
-      if (rows.some(r => r.id !== me && String(r.name).toLowerCase() === name.toLowerCase())) return json(409, { error: 'Somebody already signed as that. Pick another name.' });
+      if (!rows.some(r => r.id === me) && rows.some(r => String(r.name).toLowerCase() === name.toLowerCase())) return json(409, { error: 'Somebody already signed as that. Pick another name.' });
       const mine = rows.find(r => r.id === me);
       if (mine && score > mine.score + DAILY * (Math.ceil((now - (mine.t || now)) / DAY) + 1)) return json(400, { error: 'That score looks off.' });
-      if (mine) { mine.name = name; mine.score = Math.max(mine.score, score); mine.t = now; }
+      if (mine) { mine.score = Math.max(mine.score, score); mine.t = now; }          // the name is set once and never changes
       else rows.push({ id: me, name, score, t: now });
       rows.sort((a, c) => c.score - a.score || a.t - c.t);
       const kept = rows.slice(0, KEEP);
       const put = await fetch(api, { method: 'PUT', headers, body: JSON.stringify({ message: '[fun] leaderboard', content: Buffer.from(JSON.stringify(kept)).toString('base64'), branch: BRANCH, ...(sha ? { sha } : {}) }) });
       if (put.ok) {
         const rank = kept.findIndex(r => r.id === me) + 1;
-        return json(200, { ok: true, rank: rank || null, board: view(kept, me) });
+        return json(200, { ok: true, rank: rank || null, name: (kept.find(r => r.id === me) || {}).name || name, board: view(kept, me) });
       }
       if ((put.status === 409 || put.status === 422) && attempt < 5) { await new Promise(r => setTimeout(r, 150 * attempt)); continue; }
       throw new Error('write ' + put.status);
