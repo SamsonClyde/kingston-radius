@@ -1490,14 +1490,15 @@ body.scribbling, body.scribbling * { user-select: none; -webkit-user-select: non
 
 
 /* --- pinball + memory 10x --- */
-#funhouse #g-pin { width: 344px; }
+#funhouse #g-pin, #funhouse #g-snake { box-sizing: border-box; width: 346px; max-width: 100%; }
+#funhouse #snake { display: block; margin: 0 auto; width: 320px; max-width: 100%; height: auto; aspect-ratio: 320 / 540; touch-action: none; }
 #funhouse #pin { background: #000; border: 3px inset #808080; display: block; margin: 0 auto; max-width: 100%; height: auto; touch-action: none; }
 #funhouse .pinpad { display: flex; gap: 4px; justify-content: center; margin: 4px 0; }
 #funhouse .pinpad .btn { flex: 1; min-height: 36px; touch-action: none; user-select: none; -webkit-user-select: none; }
 #funhouse .game.wide { width: min(100%, 560px); }
 #funhouse .game.wide .mem { grid-template-columns: repeat(16, 1fr); gap: 2px; width: 100%; }
 #funhouse .game.wide .mem .cell { height: auto; aspect-ratio: 1; font-size: clamp(11px, 2.3vw, 19px); border-width: 2px; line-height: 1; padding: 0; min-width: 0; }
-@media (max-width: 520px) { #funhouse .game.wide .mem { grid-template-columns: repeat(10, 1fr); } #funhouse #g-pin { width: 100%; } }
+@media (max-width: 520px) { #funhouse .game.wide .mem { grid-template-columns: repeat(10, 1fr); } #funhouse #g-pin, #funhouse #g-snake { width: 100%; } }
 
 
 /* --- Radius Points --- */
@@ -1806,6 +1807,13 @@ html[data-kall] #funhouse .mood { width: 900px; max-width: 100%; box-sizing: bor
 html[data-kall] #funhouse .toys { max-width: 900px; margin-left: auto; margin-right: auto; }
 html[data-kall] #funhouse .fk-pane > .wx { max-width: 900px; margin-left: auto; margin-right: auto; }
 @media (max-width: 760px) { html[data-kall] #funhouse .games .game, html[data-kall] #funhouse .game.wide { width: 100%; max-width: none; box-sizing: border-box; } }
+
+/* Snake is as big as the Pinball table */
+html[data-kall] #funhouse #snake { display: block; margin: 0 auto; max-width: 100%; height: auto; touch-action: none; }
+html[data-kall] #funhouse #g-snake { box-sizing: border-box; width: 346px; max-width: 100%; }
+html[data-kall] #funhouse #g-snake #snake { width: 320px; max-width: 100%; }
+html[data-kall] #funhouse .game:has(#pin) { box-sizing: border-box; width: 346px; max-width: 100%; }
+html[data-kall] #funhouse #snake, html[data-kall] #funhouse #pin { box-sizing: border-box; width: 320px; max-width: 100%; height: auto; aspect-ratio: 320 / 540; }
 
 </style>
 <style id="kall-stub">#fk-fun-nav{background:none;border:0;cursor:pointer;font:500 1rem 'DM Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.5);padding:6px 10px;border-radius:4px;transition:color .15s}#fk-fun-nav:hover{color:rgba(255,255,255,.9)}#fk-fun-nav.on{color:#fff;background:rgba(255,255,255,.1)}@media(max-width:560px){#fk-fun-nav{padding:6px 4px;font-size:.7rem;letter-spacing:.03em}header nav{gap:2px}#theme-toggle-btn{margin-left:6px!important}}</style>
@@ -5605,7 +5613,31 @@ window.__krFunStart=function(){
 
   // glue between the toys and the real list: "find it below" jumps to that show in the real Feed (clears filters, scrolls, pulses)
   const hk = str => { let h = 5381; for (let i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) | 0; return (h >>> 0).toString(36); };
-  window.KRFUN = { hk, reveal(key) { try { return !!(window.KR_EXPLORE && KR_EXPLORE.jumpToHash(hk(key))); } catch (err) { return false; } } };
+  // "find it below": shows with a poster live in the Feed; shows without one only exist in the List, so those jump there instead
+  function revealList(key) {
+    try {
+      Object.assign(KRF, { q: '', from: '', to: '', venue: '', dist: 'all', saved: false, sort: 'date', view: 'list', dayOffset: null });
+      const up = krBaseEvents().sort((a, b) => (a.date || '').localeCompare(b.date || '') || (a.time || '').localeCompare(b.time || ''));
+      const idx = up.findIndex(e => eventKey(e) === key); if (idx < 0) return false;
+      const page0 = Math.floor(idx / 100) + 1, pages = [page0, page0 + 1, page0 - 1].filter(p => p >= 1);
+      const find = () => [...document.querySelectorAll('#events-list .event-card')].find(c => c.dataset.ekey === key);
+      let el = null;
+      for (const p of pages) { _currentPage = p; if (typeof populateVenueSelect === 'function') populateVenueSelect(); krRender(); el = find(); if (el) break; }
+      if (!el) return false;
+      setTimeout(() => {
+        el = find() || el; el.scrollIntoView({ block: 'start' }); window.scrollBy(0, -70);
+        el.classList.add('highlight-pulse'); setTimeout(() => el.classList.remove('highlight-pulse'), 2200);
+      }, 60);
+      return true;
+    } catch (err) { return false; }
+  }
+  window.KRFUN = { hk, reveal(key) {
+    try {
+      const sh = (window.KRSHOWS || []).find(e => (e.venue + '||' + e.date + '||' + (e.time || '')) === key);
+      if (sh && !sh.posterUrl) return revealList(key);
+      return !!(window.KR_EXPLORE && KR_EXPLORE.jumpToHash(hk(key)));
+    } catch (err) { return false; }
+  } };
   document.addEventListener('click', ev => {
     const a = ev.target.closest && ev.target.closest('[data-reveal]'); if (!a) return;
     ev.preventDefault();
@@ -5724,11 +5756,11 @@ try {
 
   // ---------- Snake ----------
   (function () {
-    const cv = $('snake'), cx = cv.getContext('2d'), N = 14, C = 16;
+    const cv = $('snake'), cx = cv.getContext('2d'), NX = 16, NY = 27, C = 20; cv.width = NX * C; cv.height = NY * C;
     let snake, dir, nextDir, food, timer, score, running = false;
     let best = 0; try { best = +localStorage.getItem('kr_snake_best') || 0; } catch (e) {}
     const stat = t => { $('snake-stat').textContent = t; };
-    const place = () => { do { food = { x: Math.floor(Math.random() * N), y: Math.floor(Math.random() * N) }; } while (snake.some(p => p.x === food.x && p.y === food.y)); };
+    const place = () => { do { food = { x: Math.floor(Math.random() * NX), y: Math.floor(Math.random() * NY) }; } while (snake.some(p => p.x === food.x && p.y === food.y)); };
     const draw = () => {
       cx.fillStyle = '#000'; cx.fillRect(0, 0, cv.width, cv.height);
       cx.fillStyle = '#ff0000'; cx.fillRect(food.x * C + 2, food.y * C + 2, C - 4, C - 4);
@@ -5743,13 +5775,13 @@ try {
     const step = () => {
       dir = nextDir;
       const h = { x: snake[0].x + dir.x, y: snake[0].y + dir.y };
-      if (h.x < 0 || h.y < 0 || h.x >= N || h.y >= N || snake.some(p => p.x === h.x && p.y === h.y)) return over();
+      if (h.x < 0 || h.y < 0 || h.x >= NX || h.y >= NY || snake.some(p => p.x === h.x && p.y === h.y)) return over();
       snake.unshift(h);
       if (h.x === food.x && h.y === food.y) { score++; stat('Score ' + score + '  Best ' + best); place(); document.dispatchEvent(new CustomEvent('krsnake', { detail: { foods: score, el: cv } })); } else snake.pop();
       draw();
     };
     const start = () => {
-      snake = [{ x: 7, y: 7 }, { x: 6, y: 7 }, { x: 5, y: 7 }]; dir = nextDir = { x: 1, y: 0 }; score = 0;
+      snake = [{ x: 8, y: 13 }, { x: 7, y: 13 }, { x: 6, y: 13 }]; dir = nextDir = { x: 1, y: 0 }; score = 0;
       place(); draw(); stat('Score 0  Best ' + best); running = true;
       clearInterval(timer); timer = setInterval(step, 120); $('snake-start').textContent = 'Restart';
     };
@@ -5769,7 +5801,7 @@ try {
       if (Math.max(Math.abs(dx), Math.abs(dy)) < 20) return;
       turn(Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? DIRS.R : DIRS.L) : (dy > 0 ? DIRS.D : DIRS.U));
     }, { passive: true });
-    snake = [{ x: 7, y: 7 }, { x: 6, y: 7 }, { x: 5, y: 7 }]; food = { x: 11, y: 7 }; draw();
+    snake = [{ x: 8, y: 13 }, { x: 7, y: 13 }, { x: 6, y: 13 }]; food = { x: 12, y: 13 }; draw();
     stat(best ? 'Best ' + best + '. Press Start' : 'Press Start');
   })();
 
@@ -7354,7 +7386,8 @@ try {
 (function () {
   const KEY = 'kr_fun_pts';
   const RANKS = [[0, 'Wristband'], [100, 'Opener'], [600, 'Roadie'], [2000, 'Sound Tech'], [6000, 'Headliner'], [20000, 'Legend'], [75000, 'Hall of Famer'], [250000, 'Immortal']].concat(window.__KRALL ? [[1000000, 'Rock God'], [3000000, 'Living Myth'], [10000000, 'Constellation'], [50000000, 'Heat Death of the Universe']] : []);
-  const BUD = { tet: { full: 600, soft: 1000, name: 'Tetris' }, pairs: { full: 150, soft: 250, name: 'Memory pairs' }, blip: { full: 90, soft: 130, name: 'Blip snacks' }, pin: { full: 150, soft: 250, name: 'Pinball' }, snake: { full: 70, soft: 120, name: 'Snake' } };   // full value up to `full`, a quarter value up to `soft`, then nothing until tomorrow
+  const ALLP = true;                                   // Memory Match has no daily cap, and the crayon needs 5x the ink (both pages)
+  const BUD = { tet: { full: 600, soft: 1000, name: 'Tetris' }, pairs: ALLP ? { full: Infinity, soft: Infinity, name: 'Memory pairs' } : { full: 150, soft: 250, name: 'Memory pairs' }, blip: { full: 90, soft: 130, name: 'Blip snacks' }, pin: { full: 150, soft: 250, name: 'Pinball' }, snake: { full: 70, soft: 120, name: 'Snake' } };   // full value up to `full`, a quarter value up to `soft`, then nothing until tomorrow
   const ROWS = [0, 10, 25, 50, 100], REPEAT = [1, .5, .25, .1], COOL = 20 * 60000;
   const $ = id => document.getElementById(id);
   const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
@@ -7492,7 +7525,7 @@ try {
   let ink = 0;                                                      // drawing a lot (8,000 px of crayon in a day) pays 5, once a day
   document.addEventListener('krdraw', e => {
     roll(); if (S.inkDay === todayS()) return; ink += e.detail.d || 0;
-    if (ink >= 8000) { ink = 0; touch(); S.inkDay = todayS(); S.life.art = (S.life.art | 0) + 1; add(5, 'draw', 'ARTIST!', document.body, true); banner('<b>YOU DREW A LOT!</b><br>+5 stubs<br><small>once a day</small>'); }
+    if (ink >= (ALLP ? 40000 : 8000)) { ink = 0; touch(); S.inkDay = todayS(); S.life.art = (S.life.art | 0) + 1; add(5, 'draw', 'ARTIST!', document.body, true); banner('<b>YOU DREW A LOT!</b><br>+5 stubs<br><small>once a day</small>'); }
   });
   // ---- the leaderboard: sign it once you pass 1,000 stubs. Shared through a Netlify function; if that is not there it keeps a board on this device ----
   const LBMIN = 1000, LBURL = '/.netlify/functions/leaderboard', LBLOCAL = 'kr_fun_lb_local';
@@ -7566,21 +7599,21 @@ try {
       + lbHtml()
       + '<h4>Today' + (S.streak > 1 ? ' &middot; ' + S.streak + '-day streak (x' + mult().toFixed(1) + ')' : '') + '</h4>'
       + '<table class="fk-t"><tr><td>Tetris rows</td><td>' + bar(S.used.tet, BUD.tet) + '</td><td>' + used('tet') + '</td></tr>'
-      + '<tr><td>Memory pairs</td><td>' + bar(S.used.pairs, BUD.pairs) + '</td><td>' + used('pairs') + '</td></tr>'
+      + '<tr><td>Memory pairs</td><td>' + (ALLP ? '<span class="fk-small">no daily cap</span>' : bar(S.used.pairs, BUD.pairs)) + '</td><td>' + used('pairs') + '</td></tr>'
       + '<tr><td>Blip snacks</td><td>' + bar(S.used.blip, BUD.blip) + '</td><td>' + used('blip') + '</td></tr>'
       + '<tr><td>Pinball</td><td>' + bar(S.used.pin, BUD.pin) + '</td><td>' + used('pin') + '</td></tr>'
       + '<tr><td>Snake</td><td>' + bar(S.used.snake, BUD.snake) + '</td><td>' + used('snake') + '</td></tr></table>'
-      + '<div class="fk-small">Bars fill at full value, then a quarter value past the notch, then stop until tomorrow. Boards finished today: ' + S.done + '.</div>'
+      + '<div class="fk-small">Bars fill at full value, then a quarter value past the notch, then stop until tomorrow' + (ALLP ? ' (Memory Match never stops)' : '') + '. Boards finished today: ' + S.done + '.</div>'
       + '<h4>How to earn</h4><ul class="fk-how">'
       + '<li><b>Tetris:</b> each booked day (row) 10, two at once 25, three 50, four 100. +5% per level, up to +50%.</li>'
-      + '<li><b>Memory Match:</b> each pair 2, plus 1 for every match in a row (up to 5). <b>Find all 80 pairs: 300 to 600</b> (fewer moves = more). Repeat boards pay half, a quarter, then a little.</li>'
+      + '<li><b>Memory Match:</b> each pair 2, plus 1 for every match in a row (up to 5). <b>Find all 80 pairs: 300 to 600</b> (fewer moves = more). Repeat boards pay half, a quarter, then a little.' + (ALLP ? ' <b>Memory Match has no daily cap.</b>' : '') + '</li>'
       + '<li><b>Blip:</b> every snack scores until he hits 100%: 10 if he was hungry, 8 if so-so, 5 if nearly full. <b>Feeding a full Blip earns nothing.</b> Pat him once a day for 1 stub.</li>'
       + '<li><b>Daily toys:</b> 1 stub each, once a day, for the Magic 8 Ball, the fortune cookie and the mood pick.</li>'
       + '<li><b>More small ones:</b> 1 stub each, once a day: opening a pin on the map, using a &ldquo;find it&rdquo; link, and visiting each tab of the drawer. Saving a show is 1 stub (3 a day).</li>'
       + '<li><b>Daily set:</b> do the 8-ball, fortune, mood, a pat and a Blip snack in one day for 5 extra.</li>'
       + '<li><b>New best:</b> beat your own Pinball or Snake record for 5 (once each a day).</li>'
       + '<li><b>Catch Ray:</b> click Ray while he is DJing, doing push-ups, smoking or the page is warping for 3 (up to 5 a day).</li>'
-      + '<li><b>Drawing:</b> scribble a lot (about 8,000 px of crayon) for 5 stubs, once a day.</li>'
+      + '<li><b>Drawing:</b> scribble a lot (about ' + (ALLP ? '40,000' : '8,000') + ' px of crayon) for 5 stubs, once a day.</li>'
       + '<li><b>Pinball:</b> 1 stub for every 200 on the table, paid as each ball ends (so a big multiball ball pays well).</li>'
       + '<li><b>Snake:</b> 1 stub a bite, plus 6 on every tenth.</li>'
       + '<li><b>Streak:</b> come back on consecutive days for up to +50% on everything.</li></ul>'
