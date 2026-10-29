@@ -6458,7 +6458,7 @@ try {
 // Pet Radar: Blip gets hungry while you are away. Feed and pet him. His snacks are saved in this browser.
 (function () {
   const $ = id => document.getElementById(id);
-  const KEY = 'kr_pet_blip', RATE = 1 / 90000;                       // lose 1 stub of fullness every 90 seconds (about 2.5 hours from full to empty)
+  const KEY = 'kr_pet_blip', RATE = 1 / 1728000;                      // lose 1 stub of fullness every 28.8 minutes (2 days from full to empty)
   const SNACKS = ['\u{1F36A}', '\u{1F355}', '\u{1F34E}', '\u{1F9C0}', '\u{1F955}', '\u{1F369}', '\u{1F32D}', '\u{1F34C}'];
   let st = { f: 80, ts: Date.now(), fed: 0, pets: 0 };
   try { const raw = JSON.parse(localStorage.getItem(KEY) || 'null'); if (raw && typeof raw.f === 'number') st = Object.assign(st, raw); } catch (e) {}
