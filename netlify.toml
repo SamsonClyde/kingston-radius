@@ -37,3 +37,14 @@
   from = "/fun/"
   to = "/fun.html"
   status = 200
+
+# Secret page: kingstonradius.com/all (the /fun page dressed in the index page's own look). Not linked anywhere, not in the sitemap, marked noindex.
+[[redirects]]
+  from = "/all"
+  to = "/all.html"
+  status = 200
+
+[[redirects]]
+  from = "/all/"
+  to = "/all.html"
+  status = 200
