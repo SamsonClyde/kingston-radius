@@ -30468,5 +30468,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793271442667,
+    "title": "Kurt Rosenwinkel",
+    "date": "2027-01-19",
+    "time": "19:00",
+    "venue": "City Winery HV",
+    "venueUrl": "https://citywinery.com/pages/events/hudson-valley#",
+    "location": "Montgomery, NY",
+    "mapsUrl": "https://maps.app.goo.gl/eaFRDVZgzj3VpTpi8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793271431814-image.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
