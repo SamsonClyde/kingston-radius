@@ -7,7 +7,10 @@
 // It is an honor system (scores come from the visitor's browser), so it only does sanity checks.
 const crypto = require('crypto');
 
-const FILE = 'leaderboard.json', BRANCH = 'data', SHOW = 25, KEEP = 50, MIN = 1000, MAXSCORE = 5000000;
+const FILE = 'leaderboard.json', BRANCH = 'data', SHOW = 25, KEEP = 50, MIN = 1000, MAXSCORE = 2000000000;
+// Scores can only grow so fast (the daily caps in the page add up to a few thousand a day at most), so a claim has to fit the calendar:
+// a new name can't beat DAILY x days since the points system started, and a returning name can't jump more than DAILY x days since its last update.
+const DAILY = 6000, LAUNCH = Date.UTC(2026, 9, 1), DAY = 86400000;
 const BAD = ['fuck', 'shit', 'cunt', 'nigg', 'fagg', 'rape', 'nazi', 'bitch', 'whore', 'slut', 'dick', 'cock', 'penis', 'vagina', 'hitler', 'kkk'];
 const lastHit = new Map();   // best-effort per-IP throttle (resets when the function instance recycles)
 
@@ -56,12 +59,14 @@ exports.handler = async (event) => {
     if (rude(name)) return json(400, { error: 'Pick a different name.' });
     if (!Number.isFinite(score) || score < MIN) return json(400, { error: 'You need ' + MIN + ' points to sign the board.' });
     if (score > MAXSCORE) return json(400, { error: 'That score looks off.' });
+    if (score > DAILY * (Math.ceil((Date.now() - LAUNCH) / DAY) + 1)) return json(400, { error: 'That score looks off.' });
     const me = hash(id);
 
     for (let attempt = 1; attempt <= 5; attempt++) {
       const { rows, sha } = await read();
       if (rows.some(r => r.id !== me && String(r.name).toLowerCase() === name.toLowerCase())) return json(409, { error: 'Somebody already signed as that. Pick another name.' });
       const mine = rows.find(r => r.id === me);
+      if (mine && score > mine.score + DAILY * (Math.ceil((now - (mine.t || now)) / DAY) + 1)) return json(400, { error: 'That score looks off.' });
       if (mine) { mine.name = name; mine.score = Math.max(mine.score, score); mine.t = now; }
       else rows.push({ id: me, name, score, t: now });
       rows.sort((a, c) => c.score - a.score || a.t - c.t);
