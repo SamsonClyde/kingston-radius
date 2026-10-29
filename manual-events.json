@@ -30454,5 +30454,19 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793269719569,
+    "title": "Drusey Blonde",
+    "date": "2026-11-25",
+    "time": "",
+    "venue": "Be Golden Farms",
+    "venueUrl": "https://www.instagram.com/begoldenfarms/",
+    "location": "Berne, NY",
+    "mapsUrl": "https://maps.app.goo.gl/3DEmzTSGmhS6bwgC8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793269710405-unnamed-4.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
