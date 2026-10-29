@@ -9,9 +9,6 @@
   <meta name="google-site-verification" content="C9ujBV4i8BVq5idhf23JE6bc7wvwErRKXJCpFt7uQTw">
   <meta name="description" content="Live music calendar for the Hudson Valley — concerts and shows within 90 minutes of Kingston, NY. Updated daily.">
   <meta name="keywords" content="Kingston NY live music, Hudson Valley concerts, live music near Kingston, Hudson Valley events, Woodstock music, Saugerties concerts, New Paltz shows">
-  <meta name="robots" content="index, follow">
-  
-
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Kingston Radius — Live Music in the Hudson Valley">
@@ -1790,6 +1787,9 @@ html[data-kall] #fk-lbpane h4 { color: var(--muted); font: 600 .7rem 'DM Sans', 
 html[data-kall] #fk-lbpane .fk-btn { display: inline-block; border: 1.5px solid var(--border); background: transparent; color: var(--text); font: 500 .8rem 'DM Sans', sans-serif; padding: 5px 13px; border-radius: 20px; cursor: pointer; }
 html[data-kall] #fk-lbpane .fk-btn:hover { border-color: var(--text); background: var(--tag-bg); }
 html[data-kall] #fk-lbpane .fk-lb { max-height: none; }
+
+/* Wall view: the posters stay still on /all */
+html[data-kall] #page-explore .pb-wall .pb-tile img, html[data-kall] #page-explore .pb-wall .pb-tile:hover img { animation: none !important; transform: none !important; }
 
 </style>
 <style id="kall-stub">#fk-fun-nav{background:none;border:0;cursor:pointer;font:500 1rem 'DM Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.5);padding:6px 10px;border-radius:4px;transition:color .15s}#fk-fun-nav:hover{color:rgba(255,255,255,.9)}#fk-fun-nav.on{color:#fff;background:rgba(255,255,255,.1)}@media(max-width:560px){#fk-fun-nav{padding:6px 4px;font-size:.7rem;letter-spacing:.03em}header nav{gap:2px}#theme-toggle-btn{margin-left:6px!important}}</style>
