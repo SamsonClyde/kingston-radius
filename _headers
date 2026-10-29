@@ -28,3 +28,7 @@
 # Keep the secret fun page out of search engines
 /fun*
   X-Robots-Tag: noindex, nofollow, noarchive
+
+# Keep the secret all page out of search engines
+/all*
+  X-Robots-Tag: noindex, nofollow, noarchive
