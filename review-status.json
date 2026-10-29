@@ -1279,10 +1279,6 @@
     "status": "rejected",
     "hiddenAt": 1790246916590
   },
-  "Tubby's||2026-10-28||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790246996671
-  },
   "Tubby's||2026-10-21||20:00": "approved",
   "Tubby's||2026-12-12||7:00 pm": {
     "status": "rejected",
@@ -1657,10 +1653,6 @@
   },
   "Tubby's||2027-03-23||20:00": "approved",
   "Unicorn Bar||2026-10-24||21:00": "approved",
-  "Unicorn Bar||2026-10-28||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1791628861458
-  },
   "Unicorn Bar||2026-11-13||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1791628865080
@@ -1882,10 +1874,6 @@
     "status": "rejected",
     "hiddenAt": 1792450094898
   },
-  "The Local Saugerties||2026-10-28||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792450303216
-  },
   "The Local Saugerties||2026-10-30||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792450333309
@@ -1951,10 +1939,6 @@
     "hiddenAt": 1792664760226
   },
   "Bard College Conservatory||2026-10-27||19:30": "approved",
-  "PS21 Chatham||2026-10-28||5:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792666723511
-  },
   "Stissing Center||2026-11-08||3:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792666753452
@@ -2104,14 +2088,6 @@
     "status": "rejected",
     "hiddenAt": 1793108381151
   },
-  "Colony Woodstock||2026-10-28||5:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793108431627
-  },
-  "Colony Woodstock||2026-10-28||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793108992366
-  },
   "Colony Woodstock||2026-10-29||5:30 PM": {
     "status": "rejected",
     "hiddenAt": 1793109796495
@@ -2157,10 +2133,6 @@
     "hiddenAt": 1793109975076
   },
   "The Half Moon||2026-11-14||20:00": "approved",
-  "The Living Room at Full Circle||2026-10-28||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793109981734
-  },
   "The Local Saugerties||2026-10-29||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1793109998086
@@ -2172,10 +2144,6 @@
   "WildHeart: Center for Performance and Embodiment Practice||2026-11-20||5:00 pm": {
     "status": "rejected",
     "hiddenAt": 1793110015165
-  },
-  "Bard College Conservatory||2026-10-28||": {
-    "status": "rejected",
-    "hiddenAt": 1793184170935
   },
   "Basilica Hudson||2026-11-13||See website": {
     "status": "rejected",
@@ -2194,10 +2162,6 @@
     "hiddenAt": 1793184376902
   },
   "Keegan Ales||2026-11-06||20:00": "approved",
-  "NoFun||2026-10-28||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793184462750
-  },
   "Love, Velma||2027-03-20||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1793184594990
@@ -2245,10 +2209,6 @@
     "hiddenAt": 1793184871453
   },
   "The Falcon||2026-11-15||13:00": "approved",
-  "The Grand||2026-10-28||5:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793184875180
-  },
   "The Grand||2026-10-29||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1793184880094
