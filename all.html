@@ -1791,6 +1791,22 @@ html[data-kall] #fk-lbpane .fk-lb { max-height: none; }
 /* Wall view: the posters stay still on /all */
 html[data-kall] #page-explore .pb-wall .pb-tile img, html[data-kall] #page-explore .pb-wall .pb-tile:hover img { animation: none !important; transform: none !important; }
 
+/* ---- Fun strip flows into the filter bar: same width, same paper, same gutters ---- */
+html[data-kall] #funhouse { max-width: none; margin: 0; padding: 12px 24px 0; background: var(--card); }
+html[data-kall] #funhouse .fk-quote { text-align: left; padding: 0; }
+html[data-kall] #funhouse .clockbar { text-align: left; background: none; padding: 0; margin: 6px 0 0; border-radius: 0; }
+html[data-kall] #funhouse #freshnote { margin: 8px 0 0; }
+html[data-kall] #funhouse #fh-more { margin-top: 10px; }
+html[data-kall] #funhouse #fh-more > summary { margin: 0; }
+@media (max-width: 760px) { html[data-kall] #funhouse { padding: 10px 12px 0; } }
+
+/* cohesion pass: even widths inside the drawer, breathing room before the filters */
+html[data-kall] #funhouse { padding-bottom: 6px; }
+html[data-kall] #funhouse .mood { width: 900px; max-width: 100%; box-sizing: border-box; margin-left: auto; margin-right: auto; }
+html[data-kall] #funhouse .toys { max-width: 900px; margin-left: auto; margin-right: auto; }
+html[data-kall] #funhouse .fk-pane > .wx { max-width: 900px; margin-left: auto; margin-right: auto; }
+@media (max-width: 760px) { html[data-kall] #funhouse .games .game, html[data-kall] #funhouse .game.wide { width: 100%; max-width: none; box-sizing: border-box; } }
+
 </style>
 <style id="kall-stub">#fk-fun-nav{background:none;border:0;cursor:pointer;font:500 1rem 'DM Sans',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.5);padding:6px 10px;border-radius:4px;transition:color .15s}#fk-fun-nav:hover{color:rgba(255,255,255,.9)}#fk-fun-nav.on{color:#fff;background:rgba(255,255,255,.1)}@media(max-width:560px){#fk-fun-nav{padding:6px 4px;font-size:.7rem;letter-spacing:.03em}header nav{gap:2px}#theme-toggle-btn{margin-left:6px!important}}</style>
 </head>
@@ -1800,7 +1816,7 @@ html[data-kall] #page-explore .pb-wall .pb-tile img, html[data-kall] #page-explo
   <a href="?" class="logo" id="home-logo-link" style="text-decoration:none;">Kingston<span>Radius</span></a>
   <nav>
     <a href="#" class="active" data-page="music">Music</a>
-    <a href="about.html">About</a>
+    <a href="all-about.html">About</a>
     <a href="#" data-page="admin" id="admin-nav-link" style="display:none;">Admin<span id="review-badge"></span></a>
     <button id="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode" style="background:none;border:1px solid rgba(255,255,255,0.25);border-radius:20px;width:30px;height:30px;margin-left:16px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;color:#fff;vertical-align:middle;">
       <svg id="theme-icon-sun" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
@@ -1910,7 +1926,7 @@ html[data-kall] #page-explore .pb-wall .pb-tile img, html[data-kall] #page-explo
   
 </div>
 
-<div class="site-footer-links"><a href="about.html">About</a><span class="sep">·</span><a href="privacy.html">Privacy Policy</a><span class="sep">·</span><a href="contact.html">Contact</a></div>
+<div class="site-footer-links"><a href="all-about.html">About</a><span class="sep">·</span><a href="all-privacy.html">Privacy Policy</a><span class="sep">·</span><a href="all-contact.html">Contact</a></div>
 
 </div><!-- /page-music -->
 
@@ -5599,7 +5615,7 @@ window.__krFunStart=function(){
 
   // the blog's webmaster box + footer, under the real footer links
   const foot = document.createElement('div'); foot.id = 'fk-foot';
-  foot.innerHTML = '<div class="rainbow"></div><div class="guest"><b>Webmaster</b><br>Know of a show that should be listed here?<br><a href="contact.html">Send me e-mail</a><br><a class="btn" href="#" onclick="window.scrollTo(0,0);return false;">^ Back to Top</a> <a class="btn" href="index.html">The boring version</a></div>'
+  foot.innerHTML = '<div class="rainbow"></div><div class="guest"><b>Webmaster</b><br>Know of a show that should be listed here?<br><a href="all-contact.html">Send me e-mail</a><br><a class="btn" href="#" onclick="window.scrollTo(0,0);return false;">^ Back to Top</a> <a class="btn" href="/all">The boring version</a></div>'
     + '<div class="foot"><span class="tiny">Skin: <span id="skin"></span> &nbsp;|&nbsp; Last updated: <span id="updated"></span> &nbsp;|&nbsp; Hold the mouse down anywhere to scribble</span></div>';
   if (!ALL) page.appendChild(foot);
 
@@ -6410,7 +6426,7 @@ try {
 // Pet Radar: Blip gets hungry while you are away. Feed and pet him. His snacks are saved in this browser.
 (function () {
   const $ = id => document.getElementById(id);
-  const KEY = 'kr_pet_blip', RATE = 1 / 90000;                       // lose 1 point of fullness every 90 seconds (about 2.5 hours from full to empty)
+  const KEY = 'kr_pet_blip', RATE = 1 / 90000;                       // lose 1 stub of fullness every 90 seconds (about 2.5 hours from full to empty)
   const SNACKS = ['\u{1F36A}', '\u{1F355}', '\u{1F34E}', '\u{1F9C0}', '\u{1F955}', '\u{1F369}', '\u{1F32D}', '\u{1F34C}'];
   let st = { f: 80, ts: Date.now(), fed: 0, pets: 0 };
   try { const raw = JSON.parse(localStorage.getItem(KEY) || 'null'); if (raw && typeof raw.f === 'number') st = Object.assign(st, raw); } catch (e) {}
@@ -6450,7 +6466,7 @@ try {
   function say(t, ms) { out.textContent = t; lock = now() + (ms || 3500); }
   function feed() {
     const f = full(), pr = window.KRPTS ? KRPTS.feed(f, svg) : null;
-    const ptsNote = (r, f) => !r ? '' : r.why === 'ok' ? 'Nom nom! +' + r.pts + ' points. Blip beeps happily.' : r.why === 'full' ? (f >= 95 ? 'Blip is stuffed! No points for overfeeding.' : 'Blip is full. No points for overfeeding.') : 'You have maxed out Blip points for today.';
+    const ptsNote = (r, f) => !r ? '' : r.why === 'ok' ? 'Nom nom! +' + r.pts + ' stubs. Blip beeps happily.' : r.why === 'full' ? (f >= 95 ? 'Blip is stuffed! No stubs for overfeeding.' : 'Blip is full. No stubs for overfeeding.') : 'You have maxed out Blip stubs for today.';
     st.f = Math.min(100, f + 25); st.ts = now(); st.fed++; save();
     floaty(SNACKS[Math.floor(Math.random() * SNACKS.length)], svg); anim('eat');
     say(ptsNote(pr, f) || (f >= 95 ? 'Blip is stuffed! He can\'t eat another bite.' : f < 12 ? 'Blip scarfs it down. Thank you thank you thank you.' : 'Nom nom nom. Blip beeps happily. (' + st.fed + (st.fed === 1 ? ' snack' : ' snacks') + ' so far)'));
@@ -6461,7 +6477,7 @@ try {
     const pp = window.KRPTS ? KRPTS.pet(svg) : 0;
     floaty('♥', svg); anim('wiggle');
     say(f < 12 ? 'Blip would rather have a snack than a pat.' : f < 36 ? 'Blip lets you pet him, but keeps glancing at the snack drawer.' : 'Blip leans into the pat. Beep beep.', 3000);
-    if (pp) say('Blip leans into the pat. +1 point for the daily pat!', 3000);
+    if (pp) say('Blip leans into the pat. +1 stub for the daily pat!', 3000);
     render(false);
   }
   $('pet-feed').onclick = feed; $('pet-pet').onclick = pet; svg.onclick = pet;
@@ -7334,7 +7350,7 @@ try {
 
 } catch (err) { console.error('[fun:gps]', err); }
 try {
-// Radius Points: tetris rows, memory matches and feeding Blip earn points. Saved in this browser only (the real site has no points).
+// Stubs: tetris rows, memory matches and feeding Blip earn stubs. Saved in this browser only (the real site has no stubs).
 (function () {
   const KEY = 'kr_fun_pts';
   const RANKS = [[0, 'Wristband'], [100, 'Opener'], [600, 'Roadie'], [2000, 'Sound Tech'], [6000, 'Headliner'], [20000, 'Legend'], [75000, 'Hall of Famer'], [250000, 'Immortal']].concat(window.__KRALL ? [[1000000, 'Rock God'], [3000000, 'Living Myth'], [10000000, 'Constellation'], [50000000, 'Heat Death of the Universe']] : []);
@@ -7343,7 +7359,7 @@ try {
   const $ = id => document.getElementById(id);
   const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
   const fmt = n => Math.round(n).toLocaleString('en-US');
-  // very big totals get short forms where space is tight: 125K, 1.25M, 3.4B (the full number stays in tooltips and the points panel)
+  // very big totals get short forms where space is tight: 125K, 1.25M, 3.4B (the full number stays in tooltips and the stubs panel)
   const cfmt = n => { if (!window.__KRALL) return fmt(n); n = Math.round(n); const a = Math.abs(n); const f = (v, u) => (v >= 100 ? Math.round(v) : Math.round(v * 10) / 10) + u; return a >= 1e9 ? f(n / 1e9, 'B') : a >= 1e6 ? f(n / 1e6, 'M') : a >= 1e5 ? f(n / 1e3, 'K') : n.toLocaleString('en-US'); };
   const pad = n => String(n).padStart(2, '0');
   const dstr = d => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
@@ -7377,20 +7393,20 @@ try {
     b.innerHTML = h; b.classList.remove('on'); void b.offsetWidth; b.classList.add('on'); clearTimeout(banT); banT = setTimeout(() => b.classList.remove('on'), 4200);
   }
   const say = (t, ms) => { try { if (window.KRRAY && KRRAY.chat) KRRAY.chat(t, ms || 3500); } catch (e) {} };
-  // ---- the one place points get added ----
+  // ---- the one place stubs get added ----
   function add(pts, src, label, el, big, noPop) {
     const before = rankIx(S.total), before0 = S.total; S.total += pts; save();
     if (pts > 0 && !noPop) pop('+' + fmt(pts) + (label ? ' ' + label : ''), el, big);
     refresh(); document.dispatchEvent(new CustomEvent('krpoints', { detail: { total: S.total, pts, src } }));
-    if (before0 < LBMIN && S.total >= LBMIN) setTimeout(() => { if (badge) badge.classList.add('fk-glow'); banner('<b>' + fmt(LBMIN) + ' POINTS!</b><br>You can sign the leaderboard<br><small>open the star up top</small>'); say('1,000 points! Open the star and sign the leaderboard.', 5000); }, big ? 2200 : 700);
+    if (before0 < LBMIN && S.total >= LBMIN) setTimeout(() => { if (badge) badge.classList.add('fk-glow'); banner('<b>' + fmt(LBMIN) + ' STUBS!</b><br>You can sign the leaderboard<br><small>open the star up top</small>'); say('1,000 stubs! Open the star and sign the leaderboard.', 5000); }, big ? 2200 : 700);
     lbAuto();
     const after = rankIx(S.total);
     if (after > before) { const nm = RANKS[after][1]; setTimeout(() => { banner('<b>RANK UP!</b><br>You are now a <u>' + esc(nm) + '</u>'); say('Rank up! You are a ' + nm + ' now.', 4500); }, big ? 1800 : 300); }
   }
   function award(src, raw, label, el, big) {
     roll(); touch(); const base = pay(src, raw);
-    if (base <= 0) { if (raw > 0 && !S.noted[src]) { S.noted[src] = 1; save(); pop(BUD[src].name + ' points are maxed out for today', el); refresh(); } return -1; }
-    const exact = base * mult() + (S.frac || 0), pts = Math.floor(exact + 1e-9); S.frac = exact - pts;   // keep the leftover fraction so quarter-rate points never round up
+    if (base <= 0) { if (raw > 0 && !S.noted[src]) { S.noted[src] = 1; save(); pop(BUD[src].name + ' stubs are maxed out for today', el); refresh(); } return -1; }
+    const exact = base * mult() + (S.frac || 0), pts = Math.floor(exact + 1e-9); S.frac = exact - pts;   // keep the leftover fraction so quarter-rate stubs never round up
     if (pts <= 0) { save(); return 0; } add(pts, src, label, el, big); return pts;
   }
   // ---- the three sources ----
@@ -7406,12 +7422,12 @@ try {
     S.done++; S.life.boards++; if (!S.life.bestMoves || moves < S.life.bestMoves) S.life.bestMoves = moves;
     const pts = Math.round((300 + 300 * eff) * rep * mult());
     add(pts, 'board', 'ALL ' + e.detail.pairs + ' PAIRS!', $('mem'), true, true);
-    banner('<b>ALL ' + e.detail.pairs + ' PAIRS!</b><br>+' + fmt(pts) + ' points' + (rep < 1 ? '<br><small>(repeat boards pay less: ' + Math.round(rep * 100) + '%)</small>' : '') + '<br><small>' + moves + ' moves' + (eff > 0.99 ? ' (max efficiency)' : '') + '</small>');
+    banner('<b>ALL ' + e.detail.pairs + ' PAIRS!</b><br>+' + fmt(pts) + ' stubs' + (rep < 1 ? '<br><small>(repeat boards pay less: ' + Math.round(rep * 100) + '%)</small>' : '') + '<br><small>' + moves + ' moves' + (eff > 0.99 ? ' (max efficiency)' : '') + '</small>');
   });
-  document.addEventListener('krsnake', e => {                       // Snake: 1 point a bite, +6 every tenth
+  document.addEventListener('krsnake', e => {                       // Snake: 1 stub a bite, +6 every tenth
     const n = e.detail.foods | 0; S.life.foods++; award('snake', 1 + (n > 0 && n % 10 === 0 ? 6 : 0), n % 10 === 0 ? n + ' BITES!' : '', e.detail.el);
   });
-  document.addEventListener('krpinball', e => {                     // Pinball: one point per 200 on the table, paid when each ball ends
+  document.addEventListener('krpinball', e => {                     // Pinball: one stub per 200 on the table, paid when each ball ends
     S.life.balls++; const raw = Math.floor((e.detail.score | 0) / 200); if (raw > 0) award('pin', raw, 'pinball', $('pin'));
   });
   function feed(f, el) {                                            // Blip: every snack scores while he is below 100%; feeding a full Blip scores nothing
@@ -7421,14 +7437,14 @@ try {
     if (pts < 0) return { pts: 0, why: 'cap' };
     S.life.feeds++; S.once = S.once || {}; S.once.fed = 1; save(); checkSet(); return { pts, why: 'ok' };
   }
-  function pet(el) {                                                // one point for the first pat of each day
+  function pet(el) {                                                // one stub for the first pat of each day
     roll(); touch(); if (S.petDay === todayS()) return 0;
     S.petDay = todayS(); S.once = S.once || {}; S.once.pet = 1; S.life.pats = (S.life.pats | 0) + 1; add(1, 'pet', 'daily pat', el); checkSet(); return 1;
   }
-  function once(key, label, el) {                                  // one point, once a day, for each small daily thing
+  function once(key, label, el) {                                  // one stub, once a day, for each small daily thing
     roll(); touch(); S.once = S.once || {}; if (S.once[key]) return 0; S.once[key] = 1; add(1, key, label, el); checkSet(); return 1;
   }
-  // the toys: a point the first time each day that the Magic 8 Ball, fortune cookie or mood pick actually gives an answer
+  // the toys: a stub the first time each day that the Magic 8 Ball, fortune cookie or mood pick actually gives an answer
   [['ball-go', 'ball-out', 'ball', '8-ball'], ['fortune-go', 'fortune-out', 'fortune', 'fortune'], ['mood-go', 'mood-out', 'mood', 'mood']].forEach(t => {
     document.addEventListener('click', e => {
       const b = e.target.closest && e.target.closest('#' + t[0]); if (!b || b.disabled) return;
@@ -7441,10 +7457,10 @@ try {
   function checkSet() {
     S.once = S.once || {}; if (S.once.set || !SET.every(k => S.once[k])) return;
     S.once.set = 1; S.life.sets = (S.life.sets | 0) + 1; save();
-    setTimeout(() => { add(5, 'set', 'DAILY SET!', document.body, true); banner('<b>DAILY SET!</b><br>8-ball, fortune, mood, a pat and a snack<br>+5 points'); say('Daily set complete! Five points.', 4000); }, 900);
+    setTimeout(() => { add(5, 'set', 'DAILY SET!', document.body, true); banner('<b>DAILY SET!</b><br>8-ball, fortune, mood, a pat and a snack<br>+5 stubs'); say('Daily set complete! Five stubs.', 4000); }, 900);
   }
   const cnt = (k, max) => { S.cnt = S.cnt || {}; if ((S.cnt[k] | 0) >= max) return false; S.cnt[k] = (S.cnt[k] | 0) + 1; return true; };
-  // saving a show (heart): 1 point for each newly saved show, up to 3 a day
+  // saving a show (heart): 1 stub for each newly saved show, up to 3 a day
   document.addEventListener('click', e => {
     const h = e.target.closest && e.target.closest('[data-fav]'); if (!h) return;
     const read = () => { try { return JSON.parse(localStorage.getItem('kr_favs') || '[]'); } catch (x) { return []; } }, before = new Set(read());
@@ -7453,7 +7469,7 @@ try {
       read().forEach(k => { if (before.has(k) || S.hk[k]) return; S.hk[k] = 1; if (cnt('heart', 3)) { touch(); add(1, 'heart', 'saved', h); } });
     }, 150);
   }, true);
-  // using the page: opening a pin on the map, following a "find it below" link, visiting each tab of the drawer: 1 point each, once a day
+  // using the page: opening a pin on the map, following a "find it below" link, visiting each tab of the drawer: 1 stub each, once a day
   document.addEventListener('click', e => {
     const t = e.target; if (!t || !t.closest) return;
     if (t.closest('.pb-pin, .kg-screen .leaflet-marker-icon')) once('mappin', 'map pin', t);
@@ -7464,9 +7480,9 @@ try {
   document.addEventListener('krbest', e => {
     const g = e.detail && e.detail.game; if (!g) return; roll(); S.once = S.once || {}; const k = 'best:' + g; if (S.once[k]) return; S.once[k] = 1; touch();
     add(5, 'best', 'NEW BEST!', document.getElementById(g === 'pin' ? 'pin' : 'snake') || document.body, true);
-    banner('<b>NEW PERSONAL BEST!</b><br>' + (g === 'pin' ? 'Pinball' : 'Snake') + ': ' + fmt(e.detail.score) + '<br>+5 points');
+    banner('<b>NEW PERSONAL BEST!</b><br>' + (g === 'pin' ? 'Pinball' : 'Snake') + ': ' + fmt(e.detail.score) + '<br>+5 stubs');
   });
-  // catching a rare event (Ray's DJ set, push-ups, smoke break, a page warp): click Ray while it is happening, 3 points, up to 5 a day
+  // catching a rare event (Ray's DJ set, push-ups, smoke break, a page warp): click Ray while it is happening, 3 stubs, up to 5 a day
   let bigUntil = 0, caught = false;
   document.addEventListener('krbig', () => { bigUntil = Date.now() + 25000; caught = false; });
   document.addEventListener('click', e => {
@@ -7476,9 +7492,9 @@ try {
   let ink = 0;                                                      // drawing a lot (8,000 px of crayon in a day) pays 5, once a day
   document.addEventListener('krdraw', e => {
     roll(); if (S.inkDay === todayS()) return; ink += e.detail.d || 0;
-    if (ink >= 8000) { ink = 0; touch(); S.inkDay = todayS(); S.life.art = (S.life.art | 0) + 1; add(5, 'draw', 'ARTIST!', document.body, true); banner('<b>YOU DREW A LOT!</b><br>+5 points<br><small>once a day</small>'); }
+    if (ink >= 8000) { ink = 0; touch(); S.inkDay = todayS(); S.life.art = (S.life.art | 0) + 1; add(5, 'draw', 'ARTIST!', document.body, true); banner('<b>YOU DREW A LOT!</b><br>+5 stubs<br><small>once a day</small>'); }
   });
-  // ---- the leaderboard: sign it once you pass 1,000 points. Shared through a Netlify function; if that is not there it keeps a board on this device ----
+  // ---- the leaderboard: sign it once you pass 1,000 stubs. Shared through a Netlify function; if that is not there it keeps a board on this device ----
   const LBMIN = 1000, LBURL = '/.netlify/functions/leaderboard', LBLOCAL = 'kr_fun_lb_local';
   const LB = { rows: [], shared: null, msg: '', busy: false, loaded: false, last: 0 };
   const lbId = () => { S.lb = S.lb || {}; if (!S.lb.id) { S.lb.id = 'p' + Math.random().toString(36).slice(2, 12) + Date.now().toString(36); save(); } return S.lb.id; };
@@ -7498,7 +7514,7 @@ try {
   }
   async function lbSubmit(raw, quiet) {
     roll(); const name = (S.lb && S.lb.locked && S.lb.name) ? S.lb.name : lbClean(raw);   // once the board has the name, it is the name for good
-    if (S.total < LBMIN) { LB.msg = 'You need ' + fmt(LBMIN) + ' points to sign the board.'; refresh(); return false; }
+    if (S.total < LBMIN) { LB.msg = 'You need ' + fmt(LBMIN) + ' stubs to sign the board.'; refresh(); return false; }
     if (!name) { LB.msg = 'Write a name first (letters, numbers and spaces).'; refresh(); return false; }
     if (LB.busy) return false; LB.busy = true; if (!quiet) { LB.msg = 'Writing your name on the wall...'; refresh(); }
     let ok = false;
@@ -7528,12 +7544,12 @@ try {
     const mine = S.lb && S.lb.name;
     let h = '<h4>Leaderboard</h4>';
     if (!LB.loaded) h += '<div class="fk-small">Loading the wall...</div>';
-    else if (!LB.rows.length) h += '<div class="fk-small">Nobody has signed yet. Be the first to pass ' + fmt(LBMIN) + ' points.</div>';
+    else if (!LB.rows.length) h += '<div class="fk-small">Nobody has signed yet. Be the first to pass ' + fmt(LBMIN) + ' stubs.</div>';
     else h += '<ol class="fk-lb">' + LB.rows.slice(0, 25).map((r, i) => '<li' + (r.me ? ' class="me"' : '') + '><span class="n">' + (i + 1) + '</span><b>' + esc(r.name) + '</b><span class="p" title="' + fmt(r.score) + '">' + (r.score >= 1e7 ? cfmt(r.score) : fmt(r.score)) + '</span></li>').join('') + '</ol>';
     if (LB.shared === false && LB.loaded) h += '<div class="fk-small">The shared board is offline, so this is this device only.</div>';
-    if (S.total < LBMIN) h += '<div class="fk-small">Get to <b>' + fmt(LBMIN) + ' points</b> to sign the board (' + fmt(LBMIN - S.total) + ' to go).</div>';
+    if (S.total < LBMIN) h += '<div class="fk-small">Get to <b>' + fmt(LBMIN) + ' stubs</b> to sign the board (' + fmt(LBMIN - S.total) + ' to go).</div>';
     else if (!mine || (LB.editing && !(S.lb && S.lb.locked))) h += '<div class="fk-sign"><input id="fk-lb-name" type="text" maxlength="14" autocomplete="off" spellcheck="false" placeholder="Your name" value="' + esc(mine || '') + '"> <button type="button" class="fk-btn fk-lbgo">' + (mine ? 'Save name' : 'Sign it') + '</button></div><div class="fk-small">14 letters, numbers or spaces. Choose carefully: you can only sign once, and the name can never be changed.</div>';
-    else h += '<div class="fk-small">Signed as <b>' + esc(mine) + '</b> with ' + fmt(S.lb.sent || 0) + ' pts. ' + (S.total - (S.lb.sent || 0) >= 1 ? '<button type="button" class="fk-btn fk-lbup">Update to ' + fmt(S.total) + '</button> ' : '') + '' + (S.lb && S.lb.locked ? '' : '<button type="button" class="fk-btn fk-lbren">Change name</button>') + '</div>';
+    else h += '<div class="fk-small">Signed as <b>' + esc(mine) + '</b> with ' + fmt(S.lb.sent || 0) + ' stubs. ' + (S.total - (S.lb.sent || 0) >= 1 ? '<button type="button" class="fk-btn fk-lbup">Update to ' + fmt(S.total) + '</button> ' : '') + '' + (S.lb && S.lb.locked ? '' : '<button type="button" class="fk-btn fk-lbren">Change name</button>') + '</div>';
     if (LB.msg) h += '<div class="fk-small fk-lbmsg">' + esc(LB.msg) + '</div>';
     return h;
   }
@@ -7543,8 +7559,8 @@ try {
     const ix = rankIx(S.total), nxt = RANKS[ix + 1], base = RANKS[ix][0], pct = nxt ? Math.min(100, (S.total - base) / (nxt[0] - base) * 100) : 100;
     let saved = 0; try { saved = JSON.parse(localStorage.getItem('kr_favs') || '[]').length; } catch (e) {}
     const used = k => Math.round(S.used[k]);
-    return '<button type="button" class="fk-x" aria-label="Close">&times;</button><h3>Radius Points</h3>'
-      + '<div class="fk-rank"><b>' + esc(RANKS[ix][1]) + '</b> &middot; ' + fmt(S.total) + ' pts</div>'
+    return '<button type="button" class="fk-x" aria-label="Close">&times;</button><h3>Stubs</h3>'
+      + '<div class="fk-rank"><b>' + esc(RANKS[ix][1]) + '</b> &middot; ' + fmt(S.total) + ' stubs</div>'
       + '<div class="fk-meter big"><i style="width:' + pct + '%"></i></div>'
       + '<div class="fk-next">' + (nxt ? fmt(nxt[0] - S.total) + ' to ' + esc(nxt[1]) : 'Top rank. Ray is very impressed.') + '</div>'
       + lbHtml()
@@ -7558,23 +7574,23 @@ try {
       + '<h4>How to earn</h4><ul class="fk-how">'
       + '<li><b>Tetris:</b> each booked day (row) 10, two at once 25, three 50, four 100. +5% per level, up to +50%.</li>'
       + '<li><b>Memory Match:</b> each pair 2, plus 1 for every match in a row (up to 5). <b>Find all 80 pairs: 300 to 600</b> (fewer moves = more). Repeat boards pay half, a quarter, then a little.</li>'
-      + '<li><b>Blip:</b> every snack scores until he hits 100%: 10 if he was hungry, 8 if so-so, 5 if nearly full. <b>Feeding a full Blip earns nothing.</b> Pat him once a day for 1 point.</li>'
-      + '<li><b>Daily toys:</b> 1 point each, once a day, for the Magic 8 Ball, the fortune cookie and the mood pick.</li>'
-      + '<li><b>More small ones:</b> 1 point each, once a day: opening a pin on the map, using a &ldquo;find it&rdquo; link, and visiting each tab of the drawer. Saving a show is 1 point (3 a day).</li>'
+      + '<li><b>Blip:</b> every snack scores until he hits 100%: 10 if he was hungry, 8 if so-so, 5 if nearly full. <b>Feeding a full Blip earns nothing.</b> Pat him once a day for 1 stub.</li>'
+      + '<li><b>Daily toys:</b> 1 stub each, once a day, for the Magic 8 Ball, the fortune cookie and the mood pick.</li>'
+      + '<li><b>More small ones:</b> 1 stub each, once a day: opening a pin on the map, using a &ldquo;find it&rdquo; link, and visiting each tab of the drawer. Saving a show is 1 stub (3 a day).</li>'
       + '<li><b>Daily set:</b> do the 8-ball, fortune, mood, a pat and a Blip snack in one day for 5 extra.</li>'
       + '<li><b>New best:</b> beat your own Pinball or Snake record for 5 (once each a day).</li>'
       + '<li><b>Catch Ray:</b> click Ray while he is DJing, doing push-ups, smoking or the page is warping for 3 (up to 5 a day).</li>'
-      + '<li><b>Drawing:</b> scribble a lot (about 8,000 px of crayon) for 5 points, once a day.</li>'
-      + '<li><b>Pinball:</b> 1 point for every 200 on the table, paid as each ball ends (so a big multiball ball pays well).</li>'
-      + '<li><b>Snake:</b> 1 point a bite, plus 6 on every tenth.</li>'
+      + '<li><b>Drawing:</b> scribble a lot (about 8,000 px of crayon) for 5 stubs, once a day.</li>'
+      + '<li><b>Pinball:</b> 1 stub for every 200 on the table, paid as each ball ends (so a big multiball ball pays well).</li>'
+      + '<li><b>Snake:</b> 1 stub a bite, plus 6 on every tenth.</li>'
       + '<li><b>Streak:</b> come back on consecutive days for up to +50% on everything.</li></ul>'
       + '<h4>Lifetime</h4><div class="fk-small">' + fmt(S.life.rows) + ' rows booked &middot; ' + fmt(S.life.pairs) + ' pairs matched &middot; ' + S.life.boards + ' boards cleared' + (S.life.bestMoves ? ' (best ' + S.life.bestMoves + ' moves)' : '') + ' &middot; ' + S.life.feeds + ' good snacks &middot; ' + fmt(S.life.balls) + ' pinball balls &middot; ' + fmt(S.life.foods) + ' snake bites</div>'
-      + '<div class="fk-small">Your saved shows (' + saved + ') are shared with the main site. Points live only on this page, in this browser.</div>'
-      + '<div class="fk-act"><button type="button" class="fk-reset">Reset points</button></div>';
+      + '<div class="fk-small">Your saved shows (' + saved + ') are shared with the main site. Stubs live only on this page, in this browser.</div>'
+      + '<div class="fk-act"><button type="button" class="fk-reset">Reset stubs</button></div>';
   }
   let pan = null, badge = null;
   function refresh() {
-    if (badge) { badge.textContent = '★ ' + cfmt(S.total); badge.title = RANKS[rankIx(S.total)][1] + ' - ' + fmt(S.total) + ' points. Click to see your points.'; }
+    if (badge) { badge.textContent = '★ ' + cfmt(S.total); badge.title = RANKS[rankIx(S.total)][1] + ' - ' + fmt(S.total) + ' stubs. Click to see your stubs.'; }
     const typing = document.activeElement && document.activeElement.id === 'fk-lb-name';
     if (pan && pan.classList.contains('on') && !(typing && pan.contains(document.activeElement))) { pan.innerHTML = panel(); wire(pan); }
     lbPane();
@@ -7585,7 +7601,7 @@ try {
     const pane = el.closest('.fk-pane'); if (!force && pane && pane.hidden) return;
     if (el.contains(document.activeElement) && document.activeElement.id === 'fk-lb-name') return;
     const ix = rankIx(S.total), nxt = RANKS[ix + 1], mi = LB.rows.findIndex(r => r.me);
-    el.innerHTML = '<div class="fk-rank"><b>' + esc(RANKS[ix][1]) + '</b> &middot; ' + fmt(S.total) + ' pts' + (S.lb && S.lb.name && mi >= 0 ? ' &middot; <b>#' + (mi + 1) + '</b> on the wall' : '') + '</div>'
+    el.innerHTML = '<div class="fk-rank"><b>' + esc(RANKS[ix][1]) + '</b> &middot; ' + fmt(S.total) + ' stubs' + (S.lb && S.lb.name && mi >= 0 ? ' &middot; <b>#' + (mi + 1) + '</b> on the wall' : '') + '</div>'
       + '<div class="fk-next">' + (nxt ? fmt(nxt[0] - S.total) + ' to ' + esc(nxt[1]) : 'Top rank. Ray is very impressed.') + '</div>' + lbHtml()
       + '<div class="fk-small">Scores are on the honor system. Daily caps keep everybody honest-ish, and the board only keeps the top 25.</div>';
     wire(el);
@@ -7604,7 +7620,7 @@ try {
     const skin = $('fk-skin-nav') || $('theme-toggle-btn'); if (!skin) return false;
     badge = document.createElement('button'); badge.type = 'button'; badge.id = 'fk-pts-nav'; badge.className = 'fk-navbtn';
     skin.parentNode.insertBefore(badge, skin);
-    pan = document.createElement('div'); pan.id = 'fk-pts'; pan.setAttribute('role', 'dialog'); pan.setAttribute('aria-label', 'Radius Points'); document.body.appendChild(pan);
+    pan = document.createElement('div'); pan.id = 'fk-pts'; pan.setAttribute('role', 'dialog'); pan.setAttribute('aria-label', 'Stubs'); document.body.appendChild(pan);
     badge.onclick = () => (pan.classList.contains('on') ? close() : open());
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && pan.classList.contains('on')) close(); });
     document.addEventListener('click', e => { if (pan.classList.contains('on') && e.target.isConnected && !pan.contains(e.target) && !badge.contains(e.target)) close(); });
