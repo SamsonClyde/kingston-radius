@@ -30496,5 +30496,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793372179828,
+    "title": "Asanabenche",
+    "date": "2026-11-01",
+    "time": "17:00",
+    "venue": "The Tavern",
+    "venueUrl": "https://tavernstoneridge.org/events.html",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cnCcaEUgbrMj1ai26",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793372172491-1000090989.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
