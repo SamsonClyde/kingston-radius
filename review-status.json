@@ -283,10 +283,6 @@
   "The Falcon||2026-10-22||19:30": "approved",
   "The Falcon||2026-10-24||19:30": "approved",
   "The Falcon||2026-10-25||19:30": "approved",
-  "The Falcon||2026-10-29||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076761712
-  },
   "The Falcon||2026-10-29||19:30": "approved",
   "The Falcon||2026-10-30||See website": {
     "status": "rejected",
@@ -996,10 +992,6 @@
     "status": "rejected",
     "hiddenAt": 1789389534723
   },
-  "Towne Crier Café||2026-10-29||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789389681966
-  },
   "Tubby's||2026-10-30||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1789389708820
@@ -1139,10 +1131,6 @@
   "The Living Room at Full Circle||2026-12-17||6:30 PM": {
     "status": "rejected",
     "hiddenAt": 1790117836976
-  },
-  "Time & Space Limited||2026-10-29||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790117853953
   },
   "Time & Space Limited||2026-11-01||2:00 PM": {
     "status": "rejected",
@@ -1417,10 +1405,6 @@
     "hiddenAt": 1790680772980
   },
   "Athens Cultural Center||2026-10-18||17:00": "approved",
-  "Tempo Arts||2026-10-29||8:15 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790764652552
-  },
   "The Grand||2026-10-04||23:00": "approved",
   "The Grand||2026-10-23||20:00": "approved",
   "Tompkins Corners Cultural Center||2026-11-11||7:30 pm": {
@@ -1827,10 +1811,6 @@
     "status": "rejected",
     "hiddenAt": 1792149293597
   },
-  "Unicorn Bar||2026-10-29||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792149413699
-  },
   "Unicorn Bar||2026-10-29||19:30": "approved",
   "Unicorn Bar||2026-11-07||6:00 pm": {
     "status": "rejected",
@@ -1926,10 +1906,6 @@
     "status": "rejected",
     "hiddenAt": 1792632642450
   },
-  "Athens Cultural Center||2026-10-29||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792664760226
-  },
   "Bard College Conservatory||2026-10-27||19:30": "approved",
   "Stissing Center||2026-11-08||3:00 PM": {
     "status": "rejected",
@@ -1954,10 +1930,6 @@
   "The Grand||2026-12-10||": {
     "status": "rejected",
     "hiddenAt": 1792666834323
-  },
-  "The Living Room at Full Circle||2026-10-29||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792666878925
   },
   "Time & Space Limited||2026-11-19||7:30 PM": {
     "status": "rejected",
@@ -2010,10 +1982,6 @@
     "hiddenAt": 1792762265068
   },
   "The Lace Mill||2026-10-26||19:00": "approved",
-  "Towne Crier Café||2026-10-29||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792762494266
-  },
   "Towne Crier Café||2026-10-31||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1792764434367
@@ -2080,14 +2048,6 @@
     "status": "rejected",
     "hiddenAt": 1793108381151
   },
-  "Colony Woodstock||2026-10-29||5:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793109796495
-  },
-  "Colony Woodstock||2026-10-29||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793109800324
-  },
   "Colony Woodstock||2026-10-30||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1793109811197
@@ -2103,10 +2063,6 @@
   "Tempo Arts||2026-11-22||3:00 pm": {
     "status": "rejected",
     "hiddenAt": 1793109850853
-  },
-  "The Falcon||2026-10-29||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1793109856084
   },
   "The Falcon||2026-11-01||7:30 pm": {
     "status": "rejected",
@@ -2125,10 +2081,6 @@
     "hiddenAt": 1793109975076
   },
   "The Half Moon||2026-11-14||20:00": "approved",
-  "The Local Saugerties||2026-10-29||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793109998086
-  },
   "The Local Saugerties||2026-11-07||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1793110008116
