@@ -1234,5 +1234,11 @@
     "location": "Ellenville, NY",
     "mapsUrl": "https://maps.app.goo.gl/3k1CcwNfcQZg7gaw5",
     "drive": 41
+  },
+  "Phoenicia Playhouse": {
+    "venueUrl": "https://phoeniciaplayhouse.com/",
+    "location": "Phoenicia, NY",
+    "mapsUrl": "https://maps.app.goo.gl/XHuDXJoBDG96mf8K8",
+    "drive": 34
   }
 }
