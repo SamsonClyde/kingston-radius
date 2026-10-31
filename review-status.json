@@ -929,10 +929,6 @@
     "status": "rejected",
     "hiddenAt": 1789064665567
   },
-  "Assembly Kingston||2026-10-30||20:00": {
-    "status": "rejected",
-    "hiddenAt": 1789071591626
-  },
   "Assembly||2026-10-23||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789346674613
@@ -991,10 +987,6 @@
   "Tompkins Corners Cultural Center||2027-03-10||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1789389534723
-  },
-  "Tubby's||2026-10-30||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789389708820
   },
   "Tubby's||2026-10-31||6:30 pm": {
     "status": "rejected",
@@ -1119,10 +1111,6 @@
   "PS21 Chatham||2026-11-01||3:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790117662839
-  },
-  "The Half Moon||2026-10-30||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790117715428
   },
   "The Living Room at Full Circle||2026-11-19||6:30 PM": {
     "status": "rejected",
@@ -1491,10 +1479,6 @@
     "hiddenAt": 1790962848239
   },
   "Towne Crier Café||2026-10-11||11:30": "approved",
-  "Assembly Kingston||2026-10-30||9:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1791024496657
-  },
   "Assembly Kingston||2026-10-30||21:00": "approved",
   "Assembly Kingston||2026-10-31||9:00 pm": {
     "status": "rejected",
