@@ -856,10 +856,6 @@
   "Tompkins Corners Cultural Center||2026-10-09||19:30": "approved",
   "Towne Crier Café||2026-09-11||18:30": "approved",
   "Towne Crier Café||2026-09-19||20:00": "approved",
-  "Unicorn Bar||2026-10-31||9:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788286814183
-  },
   "Bardavon||2026-11-13||7:30 PM": {
     "status": "rejected",
     "hiddenAt": 1788345251502
@@ -1084,10 +1080,6 @@
     "status": "rejected",
     "hiddenAt": 1790117608154
   },
-  "PS21 Chatham||2026-10-31||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1790117653575
-  },
   "PS21 Chatham||2026-11-01||3:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790117662839
@@ -1103,10 +1095,6 @@
   "Time & Space Limited||2026-11-01||2:00 PM": {
     "status": "rejected",
     "hiddenAt": 1790117856929
-  },
-  "Towne Crier Café||2026-10-31||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790117879776
   },
   "Assembly Kingston||2026-09-25||12:00 am": {
     "status": "rejected",
@@ -1155,14 +1143,6 @@
   "Assembly Kingston||2026-12-09||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790245545028
-  },
-  "Hudson River Cruises||2026-10-31||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790245550490
-  },
-  "Lydia's Cafe||2026-10-31||8:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1790245597007
   },
   "Lydia's Cafe||2026-11-07||7:00 pm": {
     "status": "rejected",
@@ -1304,10 +1284,6 @@
   "Bardavon||2026-12-17||7:30 PM": {
     "status": "rejected",
     "hiddenAt": 1790419655763
-  },
-  "Keegan Ales||2026-10-31||9:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790419699298
   },
   "The Falcon||2026-11-14||See website": {
     "status": "rejected",
@@ -1532,10 +1508,6 @@
     "hiddenAt": 1791628114329
   },
   "Assembly Kingston||2026-12-04||20:00": "approved",
-  "Bard College Conservatory||2026-10-31||10:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1791628128284
-  },
   "Bard College Conservatory||2026-11-13||": {
     "status": "rejected",
     "hiddenAt": 1791628131743
@@ -1901,10 +1873,6 @@
     "status": "rejected",
     "hiddenAt": 1792762262046
   },
-  "The Falcon||2026-10-31||See website": {
-    "status": "rejected",
-    "hiddenAt": 1792762265068
-  },
   "The Lace Mill||2026-10-26||19:00": "approved",
   "Towne Crier Café||2026-10-31||6:00 pm": {
     "status": "rejected",
@@ -2035,10 +2003,6 @@
     "status": "rejected",
     "hiddenAt": 1793184604938
   },
-  "NoFun||2026-10-31||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793184629210
-  },
   "NoFun||2026-11-01||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1793184633354
@@ -2073,25 +2037,9 @@
     "status": "rejected",
     "hiddenAt": 1793184880094
   },
-  "The Grand||2026-10-31||4:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793184883219
-  },
-  "The Grand||2026-10-31||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793184887507
-  },
   "The Grand||2026-11-01||11:00 AM": {
     "status": "rejected",
     "hiddenAt": 1793184906302
-  },
-  "Time & Space Limited||2026-10-31||2:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793184917940
-  },
-  "Time & Space Limited||2026-10-31||2:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793184920154
   },
   "Time & Space Limited||2026-11-01||4:30 PM": {
     "status": "rejected",
