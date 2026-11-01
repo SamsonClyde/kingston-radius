@@ -972,10 +972,6 @@
     "status": "rejected",
     "hiddenAt": 1789389534723
   },
-  "Tubby's||2026-10-31||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789389719856
-  },
   "Tubby's||2026-11-07||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1789389736467
@@ -1456,10 +1452,6 @@
   },
   "Towne Crier Café||2026-10-11||11:30": "approved",
   "Assembly Kingston||2026-10-30||21:00": "approved",
-  "Assembly Kingston||2026-10-31||9:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792368127831
-  },
   "Tempo Arts||2026-11-15||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1791024634434
