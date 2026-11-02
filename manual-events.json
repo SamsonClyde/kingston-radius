@@ -30608,5 +30608,19 @@
     "price": "$20 suggested donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793618295441,
+    "title": "Howland 5 - Mezcal Spring, Killgore Trout, Decent Colors, Xondra, Omar Ramirez",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "venue": "Balsam Palace",
+    "venueUrl": "https://www.instagram.com/balsampalace/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dL8ZNZWM9Gwf83m66",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793618273190-unnamed-2.jpg",
+    "price": "$5",
+    "free": false,
+    "_manual": true
   }
 ]
