@@ -1240,5 +1240,11 @@
     "location": "Phoenicia, NY",
     "mapsUrl": "https://maps.app.goo.gl/XHuDXJoBDG96mf8K8",
     "drive": 34
+  },
+  "Balsam Palace": {
+    "venueUrl": "https://www.instagram.com/balsampalace/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dL8ZNZWM9Gwf83m66",
+    "drive": 40
   }
 }
