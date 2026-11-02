@@ -30566,5 +30566,19 @@
     "price": "$20 suggested donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793617720572,
+    "title": "The Charles Cacioppo Group",
+    "date": "2026-12-04",
+    "time": "19:00",
+    "venue": "The Tavern",
+    "venueUrl": "https://tavernstoneridge.org/events.html",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cnCcaEUgbrMj1ai26",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793617632305-2026-12-04-charles-cacioppo.jpg",
+    "price": "$20 suggested donation",
+    "free": false,
+    "_manual": true
   }
 ]
