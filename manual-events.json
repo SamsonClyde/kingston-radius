@@ -30594,5 +30594,19 @@
     "price": "$20 suggested donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793617969982,
+    "title": "Chimera - Iva Bittova, Timothy Hill, Steve Gorn and Michael Bisio",
+    "date": "2026-12-17",
+    "time": "19:00",
+    "venue": "The Tavern",
+    "venueUrl": "https://tavernstoneridge.org/events.html",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cnCcaEUgbrMj1ai26",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793617955371-2026-12-17-chimera.jpg",
+    "price": "$20 suggested donation",
+    "free": false,
+    "_manual": true
   }
 ]
