@@ -30706,5 +30706,19 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793619537149,
+    "title": "Ominous Seapods",
+    "date": "2027-01-17",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793619530577-image-7.webp",
+    "price": "$17",
+    "free": false,
+    "_manual": true
   }
 ]
