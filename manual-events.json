@@ -30524,5 +30524,19 @@
     "price": "$25 suggested donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793616848726,
+    "title": "(dm for address) James Bird, Matthew Beck, Malerie Day",
+    "date": "2026-11-22",
+    "time": "18:00",
+    "venue": "Cottage Sessions",
+    "venueUrl": "https://www.instagram.com/malerie_day/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://www.instagram.com/malerie_day/",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793616843943-unnamed-1.jpg",
+    "price": "$15-$35 suggested donation",
+    "free": false,
+    "_manual": true
   }
 ]
