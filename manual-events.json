@@ -30636,5 +30636,19 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793618821594,
+    "title": "The Shambles featuring Jay Collins and Martee Lebow",
+    "date": "2026-12-06",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793618814217-image-2.webp",
+    "price": "$23",
+    "free": false,
+    "_manual": true
   }
 ]
