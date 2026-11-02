@@ -30580,5 +30580,19 @@
     "price": "$20 suggested donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793617891564,
+    "title": "Bob Meyer Trio",
+    "date": "2026-12-12",
+    "time": "19:00",
+    "venue": "The Tavern",
+    "venueUrl": "https://tavernstoneridge.org/events.html",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cnCcaEUgbrMj1ai26",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793617883238-screen-shot-2026-11-02-at-6-10-38-am.png",
+    "price": "$20 suggested donation",
+    "free": false,
+    "_manual": true
   }
 ]
