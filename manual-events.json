@@ -30538,5 +30538,19 @@
     "price": "$15-$35 suggested donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793616974841,
+    "title": "Phil Haynes In Motion with Radam Schwartz, Peyton Pleninger, Adam Siegel",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "venue": "The Tavern",
+    "venueUrl": "https://tavernstoneridge.org/events.html",
+    "location": "Stone Ridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cnCcaEUgbrMj1ai26",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793616970871-2026-11-07-phil-haynes-in-motion.jpg",
+    "price": "$20 suggested donation",
+    "free": false,
+    "_manual": true
   }
 ]
