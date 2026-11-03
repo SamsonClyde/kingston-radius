@@ -2148,5 +2148,10 @@
   "Old Dutch Church||2026-11-07||3:00 pm": {
     "status": "rejected",
     "hiddenAt": 1793706353288
-  }
+  },
+  "PS21 Chatham||2026-11-05||5:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1793706462977
+  },
+  "PS21 Chatham||2026-11-05||17:30": "approved"
 }
