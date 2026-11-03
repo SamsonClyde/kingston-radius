@@ -2210,5 +2210,9 @@
   "Towne Crier Café||2026-12-18||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1793706867056
+  },
+  "Ulster Performing Arts Center (UPAC)||2026-11-07||7:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1793706870615
   }
 }
