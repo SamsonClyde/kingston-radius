@@ -215,16 +215,17 @@
   },
   {
     "id": 420,
-    "date": "2026-10-03",
-    "title": "Margaret Glaspy, Julia Zivic",
+    "date": "2027-01-16",
+    "title": "Las Migas",
     "venue": "Assembly Kingston",
-    "venueUrl": "https://www.assemblykingston.com/events/margaret-glaspy",
+    "venueUrl": "https://www.assemblykingston.com/events/las-migas",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
     "time": "20:00",
-    "price": "$30",
+    "price": "$30+",
     "free": false,
-    "_source": "manual",
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793704896881-f5046e24-bc07-46fe-93b3-4ce3fbcd3031.jpg",
     "_manual": true
   },
   {
