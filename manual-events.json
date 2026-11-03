@@ -30822,5 +30822,19 @@
     "_source": "email",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793705974598-oip.jpeg",
     "_manual": true
+  },
+  {
+    "id": 1793742184026,
+    "title": "Hasan & The Half Moon Howlers, Bobby G & The Bohemians",
+    "date": "2026-11-07",
+    "time": "16:00",
+    "venue": "Green Growler",
+    "venueUrl": "https://www.thegreengrowler.com/calendar",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GWWFznRhKUNYef138",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793742176757-screen-shot-2026-11-03-at-4-42-28-pm.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
