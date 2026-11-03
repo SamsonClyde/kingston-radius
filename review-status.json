@@ -1316,10 +1316,6 @@
     "hiddenAt": 1790765664194
   },
   "Tompkins Corners Cultural Center||2026-11-11||19:30": "approved",
-  "Bard College Conservatory||2026-11-02||": {
-    "status": "rejected",
-    "hiddenAt": 1790852449859
-  },
   "Bard College Conservatory||2026-11-05||": {
     "status": "rejected",
     "hiddenAt": 1790852455134
@@ -1961,14 +1957,6 @@
     "status": "rejected",
     "hiddenAt": 1793184880094
   },
-  "Time & Space Limited||2026-11-02||4:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793184927718
-  },
-  "Time & Space Limited||2026-11-02||4:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793184930206
-  },
   "Time & Space Limited||2026-11-22||1:00 PM": {
     "status": "rejected",
     "hiddenAt": 1793184934396
@@ -1988,10 +1976,6 @@
   "Unicorn Bar||2026-11-19||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1793184955841
-  },
-  "Bardavon||2026-11-02||": {
-    "status": "rejected",
-    "hiddenAt": 1793269209499
   },
   "Bardavon||2026-11-17||": {
     "status": "rejected",
