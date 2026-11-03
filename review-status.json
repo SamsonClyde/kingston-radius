@@ -2119,5 +2119,9 @@
     "status": "rejected",
     "hiddenAt": 1793705668020
   },
-  "Keegan Ales||2026-11-14||21:00": "approved"
+  "Keegan Ales||2026-11-14||21:00": "approved",
+  "Lydia's Cafe||2026-11-14||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1793705826344
+  }
 }
