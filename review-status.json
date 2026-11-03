@@ -2153,5 +2153,9 @@
     "status": "rejected",
     "hiddenAt": 1793706462977
   },
-  "PS21 Chatham||2026-11-05||17:30": "approved"
+  "PS21 Chatham||2026-11-05||17:30": "approved",
+  "Stissing Center||2026-11-13||7:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1793706544365
+  }
 }
