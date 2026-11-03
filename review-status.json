@@ -2009,5 +2009,9 @@
   "Stissing Center||2026-11-06||7:30 PM": {
     "status": "rejected",
     "hiddenAt": 1793269446505
+  },
+  "Assembly Kingston||2026-11-07||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1793704776399
   }
 }
