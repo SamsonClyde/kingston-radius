@@ -2166,5 +2166,9 @@
     "status": "rejected",
     "hiddenAt": 1793706726543
   },
-  "The Falcon||2027-01-29||19:30": "approved"
+  "The Falcon||2027-01-29||19:30": "approved",
+  "The Local Saugerties||2026-11-11||7:30 PM": {
+    "status": "rejected",
+    "hiddenAt": 1793706744289
+  }
 }
