@@ -30805,5 +30805,20 @@
     "price": "free and open to the public",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 9,
+    "date": "2026-11-05",
+    "title": "Secret Show",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "7:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793705974598-oip.jpeg",
+    "_manual": true
   }
 ]
