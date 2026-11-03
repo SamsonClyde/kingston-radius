@@ -2214,5 +2214,9 @@
   "Ulster Performing Arts Center (UPAC)||2026-11-07||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1793706870615
+  },
+  "Ulster Performing Arts Center (UPAC)||2026-11-19||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1793706873621
   }
 }
