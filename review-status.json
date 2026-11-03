@@ -2144,5 +2144,9 @@
   "NoFun||2026-11-08||6:00 PM": {
     "status": "rejected",
     "hiddenAt": 1793706328782
+  },
+  "Old Dutch Church||2026-11-07||3:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1793706353288
   }
 }
