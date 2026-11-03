@@ -2017,5 +2017,10 @@
   "Assembly Kingston||2026-11-08||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1793704779939
-  }
+  },
+  "Assembly Kingston||2027-01-16||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1793704914409
+  },
+  "Assembly Kingston||2027-01-16||20:00": "approved"
 }
