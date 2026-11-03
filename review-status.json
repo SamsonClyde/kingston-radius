@@ -2128,5 +2128,9 @@
     "status": "rejected",
     "hiddenAt": 1793705846986
   },
-  "NoFun||2026-11-05||7:00 PM": "approved"
+  "NoFun||2026-11-05||7:00 PM": "approved",
+  "NoFun||2026-11-06||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1793706012356
+  }
 }
