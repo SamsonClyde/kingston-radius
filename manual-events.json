@@ -30791,5 +30791,19 @@
     "price": "$29+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793705392906,
+    "title": "Guest Artist Recital: Laurie Smukler and Qing Jiang",
+    "date": "2026-12-05",
+    "time": "16:00",
+    "venue": "Bard College Conservatory",
+    "venueUrl": "https://www.bard.edu/inside/calendar/guest-artist-recital-laurie-smukler-violin-and-qing-jiang-piano-2026",
+    "location": "Annandale-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/wECqQ3w1ZdnHNNZh9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793705365865-get-event-image.png",
+    "price": "free and open to the public",
+    "free": false,
+    "_manual": true
   }
 ]
