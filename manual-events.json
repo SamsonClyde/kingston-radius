@@ -31046,5 +31046,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793792701008,
+    "title": "New Moon Soundscapes",
+    "date": "2026-11-08",
+    "time": "14:00",
+    "venue": "Hudson Harmonic",
+    "venueUrl": "https://www.instagram.com/hudsonharmonic/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cf4gKpApEsoxXPM28",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793792690302-unnamed-4.jpg",
+    "price": "$25",
+    "free": false,
+    "_manual": true
   }
 ]
