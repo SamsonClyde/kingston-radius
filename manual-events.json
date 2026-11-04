@@ -31075,5 +31075,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793793334506,
+    "title": "Shanksgiving with The Kingston Skanks and Dirt Surfers",
+    "date": "2026-11-25",
+    "time": "19:00",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793793303807-skanksgiving-tabloid-11x17-print-663x1024.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
