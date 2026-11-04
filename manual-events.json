@@ -28474,7 +28474,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793793067488-2026-12-05-neckscars-square.webp",
     "price": "$10",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1792546003128,
