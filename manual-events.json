@@ -31018,5 +31018,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793792003820,
+    "title": "Rage Against The Machine - A BMF Rock Camp Show",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "venue": "Happy Valley Arcade",
+    "venueUrl": "https://happyvalleybeacon.com/events",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LAGZJ318ZdvL9AvC6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793792000830-unnamed-2.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
