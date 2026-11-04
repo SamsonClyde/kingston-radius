@@ -30976,5 +30976,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793791618202,
+    "title": "The Kulprits",
+    "date": "2026-12-18",
+    "time": "19:00",
+    "venue": "Green Growler",
+    "venueUrl": "https://www.thegreengrowler.com/calendar",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GWWFznRhKUNYef138",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793791606238-unnamed-1.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
