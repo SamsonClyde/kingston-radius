@@ -31032,5 +31032,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793792109214,
+    "title": "Sarah Noell, Nora Knight, Glenn Echo",
+    "date": "2026-11-12",
+    "time": "19:00",
+    "venue": "Night Swim",
+    "venueUrl": "https://www.instagram.com/nightswimkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sZe9CAVM8vJMB9UL6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793792105463-unnamed-3.jpg",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
