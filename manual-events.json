@@ -31566,5 +31566,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793879869151,
+    "title": "Brian Mitchell",
+    "date": "2026-12-18",
+    "time": "19:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793879852577-w926-17.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
