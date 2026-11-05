@@ -6729,7 +6729,7 @@ try {
   };
   function startPushups() {
     if (lifting || smoking || calm || document.hidden || isMad() || document.body.classList.contains('tetris-open')) return false;
-    lifting = true;
+    lifting = true; document.dispatchEvent(new Event('krpush'));
     cool(true); ray.classList.add('lifting');
     const reps = 6 + Math.floor(Math.random() * 4);
     pose(UP); setFace(FACE.calm, false, false); $('rl-count').textContent = '';
@@ -7536,11 +7536,15 @@ try {
     banner('<b>NEW PERSONAL BEST!</b><br>' + (g === 'pin' ? 'Pinball' : 'Snake') + ': ' + fmt(e.detail.score) + '<br>+5 stubs');
   });
   // catching a rare event (Ray's DJ set, push-ups, smoke break, a page warp): click Ray while it is happening, 3 stubs, up to 5 a day
-  let bigUntil = 0, caught = false;
+  // On /all the four showy ones (push-ups, the page warping, the page shaking, DJ set) pay 20 stubs; a smoke break or the posters going pixelly still pay 3.
+  let bigUntil = 0, caught = false, bigKind = '', bigKindAt = 0;
+  if (window.__KRALL) [['krquake', 'shake'], ['krtrip', 'warp'], ['krdj', 'dj'], ['krpush', 'push']].forEach(([ev, k]) => document.addEventListener(ev, () => { bigKind = k; bigKindAt = Date.now(); }));
   document.addEventListener('krbig', () => { bigUntil = Date.now() + 25000; caught = false; });
   document.addEventListener('click', e => {
     if (caught || Date.now() > bigUntil || !e.target.closest || !e.target.closest('#ray, #raylift, #raydj, #smokecloud')) return;
-    roll(); if (!cnt('catch', 5)) return; caught = true; touch(); add(3, 'catch', 'CAUGHT IT!', e.target, true);
+    roll(); if (!cnt('catch', 5)) return; caught = true; touch();
+    const big = !!window.__KRALL && bigKind && Date.now() - bigKindAt < 30000;
+    add(big ? 20 : 3, 'catch', 'CAUGHT IT!', e.target, true);
   }, true);
   let ink = 0;                                                      // drawing a lot (8,000 px of crayon in a day) pays 5, once a day
   document.addEventListener('krdraw', e => {
@@ -7566,13 +7570,14 @@ try {
     LB.loaded = true; refresh();
   }
   async function lbSubmit(raw, quiet) {
-    roll(); const name = (S.lb && S.lb.locked && S.lb.name) ? S.lb.name : lbClean(raw);   // once the board has the name, it is the name for good
+    roll(); const name = (window.__KRALL && S.lb && S.lb.name) ? S.lb.name : lbClean(raw);   // on /all a name is written once and is then the name for good; on /fun it can be changed
+    const renaming = !window.__KRALL && !!(S.lb && S.lb.name) && name !== S.lb.name;
     if (S.total < LBMIN) { LB.msg = 'You need ' + fmt(LBMIN) + ' stubs to sign the board.'; refresh(); return false; }
     if (!name) { LB.msg = 'Write a name first (letters, numbers and spaces).'; refresh(); return false; }
     if (LB.busy) return false; LB.busy = true; if (!quiet) { LB.msg = 'Writing your name on the wall...'; refresh(); }
     let ok = false;
     try {
-      const r = await fetch(LBURL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: lbId(), name, score: Math.floor(S.total) }) });
+      const r = await fetch(LBURL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.assign({ id: lbId(), name, score: Math.floor(S.total) }, renaming ? { rename: true } : {})) });
       let j = {}; try { j = await r.json(); } catch (e) {}
       if (r.ok && j.ok) {
         ok = true; LB.rows = j.board || LB.rows; LB.shared = true; S.lb.name = j.name || name; S.lb.locked = true; S.lb.sent = Math.floor(S.total); S.lb.at = Date.now(); save();
@@ -7580,10 +7585,13 @@ try {
       } else if (r.status === 400 || r.status === 409 || r.status === 429) { LB.msg = j.error || 'That did not work. Try again.'; }
       else throw new Error('offline');
     } catch (e) {
-      if (!LB.msg || /Writing/.test(LB.msg)) {                      // the shared board is not there: keep it on this device
-        const rows = lbLocal().filter(x => x.id !== lbId()); rows.push({ id: lbId(), name, score: Math.floor(S.total), t: Date.now() }); try { localStorage.setItem(LBLOCAL, JSON.stringify(rows.slice(-25))); } catch (e2) {}
-        S.lb.name = name; S.lb.sent = Math.floor(S.total); save(); lbOffline(); ok = true;
-        if (!quiet) LB.msg = 'Saved on this device. The shared board is not reachable right now.';
+      if (!LB.msg || /Writing/.test(LB.msg)) {
+        if (window.__KRALL) { if (!quiet) LB.msg = 'The board cannot be reached right now, so nothing was saved. Try again in a moment.'; }   // /all: no shared board, no name; a name is only ever written once the board has it
+        else {                                                    // /fun: the shared board is not there, so keep it on this device
+          const rows = lbLocal().filter(x => x.id !== lbId()); rows.push({ id: lbId(), name, score: Math.floor(S.total), t: Date.now() }); try { localStorage.setItem(LBLOCAL, JSON.stringify(rows.slice(-25))); } catch (e2) {}
+          S.lb.name = name; S.lb.sent = Math.floor(S.total); save(); lbOffline(); ok = true;
+          if (!quiet) LB.msg = 'Saved on this device. The shared board is not reachable right now.';
+        }
       }
     }
     LB.busy = false; refresh(); return ok;
@@ -7612,8 +7620,8 @@ try {
     if (LB.shared === false && LB.loaded) h += '<div class="fk-small">The shared board is offline, so this is this device only.</div>';
     else if (LB.shared && LB.loaded) h += '<div class="fk-small fk-live">&#9679; Live: the wall refreshes by itself.</div>';
     if (S.total < LBMIN) h += '<div class="fk-small">Get to <b>' + fmt(LBMIN) + ' stubs</b> to sign the board (' + fmt(LBMIN - S.total) + ' to go).</div>';
-    else if (!mine || (LB.editing && !(S.lb && S.lb.locked))) h += '<div class="fk-sign"><input id="fk-lb-name" type="text" maxlength="14" autocomplete="off" spellcheck="false" placeholder="Your name" value="' + esc(mine || '') + '"> <button type="button" class="fk-btn fk-lbgo">' + (mine ? 'Save name' : 'Sign it') + '</button></div><div class="fk-small">14 letters, numbers or spaces. Choose carefully: you can only sign once, and the name can never be changed.</div>';
-    else h += '<div class="fk-small">Signed as <b>' + esc(mine) + '</b> with ' + fmt(S.lb.sent || 0) + ' stubs. ' + (S.total - (S.lb.sent || 0) >= 1 ? '<button type="button" class="fk-btn fk-lbup">Update to ' + fmt(S.total) + '</button> ' : '') + '' + (S.lb && S.lb.locked ? '' : '<button type="button" class="fk-btn fk-lbren">Change name</button>') + '</div>';
+    else if (!mine || (!window.__KRALL && LB.editing)) h += '<div class="fk-sign"><input id="fk-lb-name" type="text" maxlength="14" autocomplete="off" spellcheck="false" placeholder="Your name" value="' + esc(mine || '') + '"> <button type="button" class="fk-btn fk-lbgo">' + (mine ? 'Save name' : 'Sign it') + '</button></div><div class="fk-small">' + (window.__KRALL ? '14 letters, numbers or spaces. Choose carefully: you can only sign once, and the name can never be changed.' : '14 letters, numbers or spaces.') + '</div>';
+    else h += '<div class="fk-small">Signed as <b>' + esc(mine) + '</b> with ' + fmt(S.lb.sent || 0) + ' stubs. ' + (S.total - (S.lb.sent || 0) >= 1 ? '<button type="button" class="fk-btn fk-lbup">Update to ' + fmt(S.total) + '</button> ' : '') + (window.__KRALL ? '' : '<button type="button" class="fk-btn fk-lbren">Change name</button>') + '</div>';
     if (LB.msg) h += '<div class="fk-small fk-lbmsg">' + esc(LB.msg) + '</div>';
     return h;
   }
@@ -7643,7 +7651,7 @@ try {
       + '<li><b>More small ones:</b> 1 stub each, once a day: opening a pin on the map, using a &ldquo;find it&rdquo; link, and visiting each tab of the drawer. Saving a show is 1 stub (3 a day).</li>'
       + '<li><b>Daily set:</b> do the 8-ball, fortune, mood, a pat and a Blip snack in one day for 5 extra.</li>'
       + '<li><b>New best:</b> beat your own Pinball or Snake record for 5 (once each a day).</li>'
-      + '<li><b>Catch Ray:</b> click Ray while he is DJing, doing push-ups, smoking or the page is warping for 3 (up to 5 a day).</li>'
+      + (window.__KRALL ? '<li><b>Catch Ray:</b> click Ray while he is DJing, doing push-ups, or while the page is warping or shaking for 20 (a smoke break or the posters going pixelly pay 3). Up to 5 catches a day.</li>' : '<li><b>Catch Ray:</b> click Ray while he is DJing, doing push-ups, smoking or the page is warping for 3 (up to 5 a day).</li>')
       + '<li><b>Drawing:</b> scribble a lot (about ' + (ALLP ? '40,000' : '8,000') + ' px of crayon) for 5 stubs, once a day.</li>'
       + '<li><b>Pinball:</b> 1 stub for every 200 on the table, paid as each ball ends (so a big multiball ball pays well).</li>'
       + '<li><b>Snake:</b> 1 stub a bite, plus 6 on every tenth.</li>'
@@ -7674,8 +7682,8 @@ try {
     root = root || pan; const pan0 = pan; const x = root.querySelector('.fk-x'); if (x) x.onclick = close;
     const go = root.querySelector('.fk-lbgo'), nm = root.querySelector('#fk-lb-name');
     if (go && nm) { const send = () => { LB.editing = false; lbSubmit(nm.value); }; go.onclick = send; nm.onkeydown = e => { e.stopPropagation(); if (e.key === 'Enter') send(); }; nm.onkeyup = e => e.stopPropagation(); }
-    const up = root.querySelector('.fk-lbup'); if (up) up.onclick = () => lbSubmit(S.lb.name);
     const ren = root.querySelector('.fk-lbren'); if (ren) ren.onclick = () => { LB.editing = true; LB.msg = ''; refresh(); const i = root.querySelector('#fk-lb-name'); if (i) i.focus(); };
+    const up = root.querySelector('.fk-lbup'); if (up) up.onclick = () => lbSubmit(S.lb.name);
     const r = root.querySelector('.fk-reset'); if (r) r.onclick = () => { if (r.dataset.sure) { const keep = S.lb; S = fresh(); if (keep) S.lb = keep; save(); r.dataset.sure = ''; refresh(); } else { r.dataset.sure = '1'; r.textContent = 'Really reset everything? Click again'; } };
   }
   function open() { roll(); pan.classList.add('on'); badge.classList.add('on'); badge.classList.remove('fk-glow'); pan.innerHTML = panel(); wire(pan); if (!LB.loaded || Date.now() - LB.last > 30000) lbFetch(); }
