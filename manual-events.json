@@ -31286,5 +31286,19 @@
     "price": "$6",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793878623657,
+    "title": "Küf Knotz & Christine Elise, Blue Porter & The Leo Belsky Band",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "venue": "Park Theater",
+    "venueUrl": "https://parktheaterhudson.com/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/rumcuWciwQhFjQRr8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793878604527-img-0981.webp",
+    "price": "$18+",
+    "free": false,
+    "_manual": true
   }
 ]
