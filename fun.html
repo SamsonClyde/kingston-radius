@@ -21,6 +21,10 @@
   <meta name="twitter:title" content="Kingston Radius — Live Music in the Hudson Valley">
   <meta name="twitter:description" content="Concerts and live music within 90 minutes of Kingston, NY. 100+ venues, updated daily.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#1A1A18">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>if ("serviceWorker" in navigator) window.addEventListener("load", function () { navigator.serviceWorker.register("/sw.js").catch(function () {}); });</script>
 <title>Kingston Radius (the fun one)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -4672,9 +4676,13 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
   // value; the meaning shifts with _customLocation inside krFilteredEvents.
   btn.addEventListener('click', () => { KRF.dist = btn.dataset.filter; krFilterChanged(); });
 });
-let _kwTimer;
+let _kwTimer, _rayTimer;
 document.getElementById('keyword-search')?.addEventListener('input', e => {
   const raw = e.target.value;
+  clearTimeout(_rayTimer);
+  if (raw.trim().toLowerCase() === 'ray' && !document.getElementById('fun-css')) {   // typing "ray" (and pausing, so "Raymond" can still be typed) opens the other page
+    _rayTimer = setTimeout(() => { if (e.target.value.trim().toLowerCase() === 'ray') location.href = '/all'; }, 800);
+  }
   if (raw.trim().toLowerCase() === 'change') {        // typing "change" opens the zip-code box
     e.target.value = ''; KRF.q = '';
     showLocationModal(); krFilterChanged();
@@ -4682,6 +4690,9 @@ document.getElementById('keyword-search')?.addEventListener('input', e => {
   }
   KRF.q = raw;
   clearTimeout(_kwTimer); _kwTimer = setTimeout(krFilterChanged, 120);
+});
+document.getElementById('keyword-search')?.addEventListener('keydown', e => {   // Enter on "ray" goes right away
+  if (e.key === 'Enter' && e.target.value.trim().toLowerCase() === 'ray' && !document.getElementById('fun-css')) location.href = '/all';
 });
 document.getElementById('date-from')?.addEventListener('change', e => {
   KRF.from = e.target.value; KRF.dayOffset = null;
@@ -5495,14 +5506,14 @@ window.KR_EXPLORE = {
     + '<details id="fh-more"><summary>' + (ALL ? 'Toys &amp; games' : 'funhouse') + '</summary>'
     + '<div class="fh-body">' + H.wx + H.toys + (ALL ? '' : '<div class="rainbow"></div>') + H.games
     + (ALL ? '<div id="fk-lbpane"></div>' : '')
-    + '<div id="friends"><h4>friends:</h4><div class="cap2">Every venue that ever had a show. The name opens their site, the magnifier filters the list below to just that venue.</div><ul id="friends-list"><li>loading...</li></ul></div>'
+    + '<div id="friends"' + (ALL ? ' hidden style="display:none"' : '') + '><h4>friends:</h4><div class="cap2">Every venue that ever had a show. The name opens their site, the magnifier filters the list below to just that venue.</div><ul id="friends-list"><li>loading...</li></ul></div>'
     + '</div></details>';
   page.appendChild(fh);
 
   // the drawer is a tabbed console, so the toys take up one panel's worth of room instead of a mile of boxes
   (function () {
     const body = fh.querySelector('.fh-body'), toys = [...fh.querySelectorAll('.fh-body > .toys')];
-    const defs = [['Weather', ['#wx']], ['Mood &amp; Luck', ['.mood', toys[0]]], ['Daily', [toys[1]]], ['Pet Radar', [toys[2]]], ['Games', ['#games']]].concat(ALL ? [['Leaderboard', ['#fk-lbpane']]] : []).concat([['Friends', ['#friends']]]);
+    const defs = [['Weather', ['#wx']], ['Mood &amp; Luck', ['.mood', toys[0]]], ['Daily', [toys[1]]], ['Pet Radar', [toys[2]]], ['Games', ['#games']]].concat(ALL ? [['Leaderboard', ['#fk-lbpane']]] : []).concat(ALL ? [] : [['Friends', ['#friends']]]);
     const bar = document.createElement('div'); bar.className = 'fk-tabs'; bar.setAttribute('role', 'tablist');
     const panes = defs.map(([label, parts], i) => {
       const p = document.createElement('div'); p.className = 'fk-pane'; p.setAttribute('role', 'tabpanel'); if (i) p.hidden = true;
@@ -5512,20 +5523,21 @@ window.KR_EXPLORE = {
       bar.appendChild(t); return p;
     });
     const cl = document.createElement('button'); cl.type = 'button'; cl.className = 'fk-tab fk-close'; cl.innerHTML = '&times; close'; cl.onclick = () => { if (ALL) { const m = document.getElementById('fh-more'); if (m) m.open = false; return; } const f = document.getElementById('fk-fun-nav'); if (f) f.click(); }; bar.appendChild(cl);
-    body.innerHTML = ''; body.appendChild(bar); panes.forEach(p => body.appendChild(p));
+    const fr = ALL ? fh.querySelector('#friends') : null; if (fr) fr.remove();
+    body.innerHTML = ''; body.appendChild(bar); panes.forEach(p => body.appendChild(p)); if (ALL && fr) body.appendChild(fr);   // /all has no Venues tab: the list stays here, hidden, so the code that fills it has somewhere to write
   })();
   [...document.body.children].filter(n => n.classList && n.classList.contains('page')).forEach(n => page.appendChild(n));
 
   // nav bar: a Funhouse button (opens the toys drawer) and a skin shuffler (the old light/dark toggle is hidden)
   const nav = hdr.querySelector('nav'), more = document.getElementById('fh-more');
   const navBtn = (id, label, tip) => { const b = document.createElement('button'); b.type = 'button'; b.id = id; b.className = 'fk-navbtn'; b.textContent = label; b.title = tip; return b; };
-  const funBtn = ALL ? (document.getElementById('fk-fun-nav') || navBtn('fk-fun-nav', 'Fun', '')) : navBtn('fk-fun-nav', 'Funhouse', 'Weather, toys, pets, games and friends');
-  if (ALL) { funBtn.className = 'fk-navbtn on'; funBtn.textContent = '\u2715'; funBtn.title = 'Back to the regular page'; funBtn.setAttribute('aria-label', 'Back to the regular page'); }
+  const funBtn = navBtn('fk-fun-nav', ALL ? '\u2715' : 'Funhouse', ALL ? 'Back to Kingston Radius' : 'Weather, toys, pets, games and friends');
+  if (ALL) { funBtn.setAttribute('aria-label', 'Back to Kingston Radius'); }
   const skinBtn = navBtn('fk-skin-nav', 'New skin', 'Roll a brand new look for the whole site');
   if (ALL) skinBtn.hidden = true;    // the look is fixed on /all; the page's own light/dark button stays
   const anchor = document.getElementById('theme-toggle-btn');
-  (ALL ? [skinBtn] : [funBtn, skinBtn]).forEach(b => anchor ? nav.insertBefore(b, anchor) : nav.appendChild(b));
-  if (ALL) { funBtn.onclick = () => { location.reload(); }; more.open = true; } else funBtn.onclick = () => { more.open = !more.open; funBtn.classList.toggle('on', more.open); if (more.open) more.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+  [funBtn, skinBtn].forEach(b => anchor ? nav.insertBefore(b, anchor) : nav.appendChild(b));
+  if (ALL) { funBtn.onclick = () => { location.href = '/'; }; more.open = true; } else funBtn.onclick = () => { more.open = !more.open; funBtn.classList.toggle('on', more.open); if (more.open) more.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
   skinBtn.onclick = () => { if (window.KRTHEME && KRTHEME.reroll) KRTHEME.reroll(); };
 
   // glue between the toys and the real list: "find it below" jumps to that show in the real Feed (clears filters, scrolls, pulses)
@@ -5565,7 +5577,7 @@ window.KR_EXPLORE = {
   // the blog's webmaster box + footer, under the real footer links
   const foot = document.createElement('div'); foot.id = 'fk-foot';
   foot.innerHTML = '<div class="rainbow"></div><div class="guest"><b>Webmaster</b><br>Know of a show that should be listed here?<br><a href="contact.html">Send me e-mail</a><br><a class="btn" href="#" onclick="window.scrollTo(0,0);return false;">^ Back to Top</a> <a class="btn" href="index.html">The boring version</a></div>'
-    + '<div class="foot"><span class="tiny">Skin: <span id="skin"></span> &nbsp;|&nbsp; Last updated: <span id="updated"></span> &nbsp;|&nbsp; Hold the mouse down anywhere to scribble</span></div>';
+    + '<div class="foot"><span class="tiny">Skin: <span id="skin"></span> &nbsp;|&nbsp; Last updated: <span id="updated"></span> &nbsp;<span class="fk-scrib">|&nbsp; Hold the mouse down anywhere to scribble</span></span></div>';
   if (!ALL) page.appendChild(foot);
 
   const over = document.createElement('div'); over.innerHTML = H.over;
@@ -7404,9 +7416,14 @@ try {
   const todayS = () => dstr(new Date());
   const yestS = () => { const d = new Date(); return dstr(new Date(d.getFullYear(), d.getMonth(), d.getDate() - 1)); };
   const fresh = () => ({ v: 1, total: 0, day: '', used: { tet: 0, pairs: 0, blip: 0, pin: 0, snake: 0 }, done: 0, noted: {}, streak: 0, last: '', lastFeed: 0, life: { rows: 0, pairs: 0, boards: 0, feeds: 0, bestMoves: 0, foods: 0, balls: 0 } });
-  function load() { try { const r = JSON.parse(localStorage.getItem(KEY) || 'null'); if (r && typeof r.total === 'number') { const f = fresh(); return Object.assign(f, r, { used: Object.assign(f.used, r.used), life: Object.assign(f.life, r.life), noted: r.noted || {} }); } } catch (e) {} return fresh(); }
+  // The saved game carries a signature made from its own contents, so hand-editing the number in the browser's storage does not work:
+  // a save that does not match its signature is thrown away. (This stops casual tinkering. The leaderboard server does the real checking.)
+  const SIGK = ['kr', 'pts', '4b1', 'e9d', '70c'].join('-');
+  const sig = str => { let a = 0xdeadbeef ^ 17, b = 0x41c6ce57 ^ 29, c = 0x9e3779b9; const t = SIGK + '|' + str; for (let i = 0; i < t.length; i++) { const k = t.charCodeAt(i); a = Math.imul(a ^ k, 2654435761); b = Math.imul(b ^ k, 1597334677); c = Math.imul(c ^ (a >>> 13) ^ (b << 7), 2246822519); } a = Math.imul(a ^ (a >>> 16), 2246822507) ^ Math.imul(b ^ (b >>> 13), 3266489909); b = Math.imul(b ^ (b >>> 16), 2246822507) ^ Math.imul(a ^ (a >>> 13), 3266489909); return ((a >>> 0).toString(36) + (b >>> 0).toString(36) + (c >>> 0).toString(36)); };
+  const body = o => { const q = Object.assign({}, o); delete q.sig; return JSON.stringify(q); };
+  function load() { try { const r = JSON.parse(localStorage.getItem(KEY) || 'null'); if (r && typeof r.total === 'number') { if (r.sig !== undefined && r.sig !== sig(body(r))) return fresh(); const f = fresh(); return Object.assign(f, r, { used: Object.assign(f.used, r.used), life: Object.assign(f.life, r.life), noted: r.noted || {} }); } } catch (e) {} return fresh(); }
   let S = load();
-  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} };
+  const save = () => { try { S.sig = sig(body(S)); localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} };
   const rankIx = t => { let i = 0; RANKS.forEach((r, k) => { if (t >= r[0]) i = k; }); return i; };
   const mult = () => 1 + 0.1 * Math.min(Math.max(S.streak, 1) - 1, 5);
   function roll() {   // a new day: budgets refill, and the streak grows if you were here yesterday
@@ -7437,7 +7454,7 @@ try {
     if (pts > 0 && !noPop) pop('+' + fmt(pts) + (label ? ' ' + label : ''), el, big);
     refresh(); document.dispatchEvent(new CustomEvent('krpoints', { detail: { total: S.total, pts, src } }));
     if (before0 < LBMIN && S.total >= LBMIN) setTimeout(() => { if (badge) badge.classList.add('fk-glow'); banner('<b>' + fmt(LBMIN) + ' POINTS!</b><br>You can sign the leaderboard<br><small>open the star up top</small>'); say('1,000 points! Open the star and sign the leaderboard.', 5000); }, big ? 2200 : 700);
-    lbAuto();
+    lbAuto(); lbHello();
     const after = rankIx(S.total);
     if (after > before) { const nm = RANKS[after][1]; setTimeout(() => { banner('<b>RANK UP!</b><br>You are now a <u>' + esc(nm) + '</u>'); say('Rank up! You are a ' + nm + ' now.', 4500); }, big ? 1800 : 300); }
   }
@@ -7573,10 +7590,20 @@ try {
     }
     LB.busy = false; refresh(); return ok;
   }
+  // The board server wants to know when a player first got going, so it can check a claimed score against how fast points can really be earned.
+  // So at 300 points the page quietly says hello (just the random player id, no name). Signing later needs that hello.
+  const HELLOAT = 300; let helloT = 0;
+  async function lbHello() {
+    if (S.total < HELLOAT || (S.lb && S.lb.hello) || LB.busy || Date.now() - helloT < 60000) return; helloT = Date.now();
+    try {
+      const r = await fetch(LBURL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: lbId(), hello: true }) }), j = await r.json();
+      if (r.ok && j.ok) { S.lb.hello = Date.now(); save(); }
+    } catch (e) {}
+  }
   let lbTimer = 0;
   function lbAuto() {                                               // after signing, keep the board score fresh without asking again
-    if (!S.lb || !S.lb.name || lbTimer || S.total - (S.lb.sent || 0) < 100) return;
-    lbTimer = setTimeout(() => { lbTimer = 0; if (S.total - (S.lb.sent || 0) >= 100) lbSubmit(S.lb.name, true); }, 4000);
+    if (!S.lb || !S.lb.name || lbTimer || S.total - (S.lb.sent || 0) < 500) return;
+    lbTimer = setTimeout(() => { lbTimer = 0; if (S.total - (S.lb.sent || 0) >= 500) lbSubmit(S.lb.name, true); }, 4000);
   }
   function lbHtml() {
     const mine = S.lb && S.lb.name;
@@ -7585,6 +7612,7 @@ try {
     else if (!LB.rows.length) h += '<div class="fk-small">Nobody has signed yet. Be the first to pass ' + fmt(LBMIN) + ' points.</div>';
     else h += '<ol class="fk-lb">' + LB.rows.slice(0, 25).map((r, i) => '<li' + (r.me ? ' class="me"' : '') + '><span class="n">' + (i + 1) + '</span><b>' + esc(r.name) + '</b><span class="p" title="' + fmt(r.score) + '">' + (r.score >= 1e7 ? cfmt(r.score) : fmt(r.score)) + '</span></li>').join('') + '</ol>';
     if (LB.shared === false && LB.loaded) h += '<div class="fk-small">The shared board is offline, so this is this device only.</div>';
+    else if (LB.shared && LB.loaded) h += '<div class="fk-small fk-live">&#9679; Live: the wall refreshes by itself.</div>';
     if (S.total < LBMIN) h += '<div class="fk-small">Get to <b>' + fmt(LBMIN) + ' points</b> to sign the board (' + fmt(LBMIN - S.total) + ' to go).</div>';
     else if (!mine || (LB.editing && !(S.lb && S.lb.locked))) h += '<div class="fk-sign"><input id="fk-lb-name" type="text" maxlength="14" autocomplete="off" spellcheck="false" placeholder="Your name" value="' + esc(mine || '') + '"> <button type="button" class="fk-btn fk-lbgo">' + (mine ? 'Save name' : 'Sign it') + '</button></div><div class="fk-small">14 letters, numbers or spaces. Choose carefully: you can only sign once, and the name can never be changed.</div>';
     else h += '<div class="fk-small">Signed as <b>' + esc(mine) + '</b> with ' + fmt(S.lb.sent || 0) + ' pts. ' + (S.total - (S.lb.sent || 0) >= 1 ? '<button type="button" class="fk-btn fk-lbup">Update to ' + fmt(S.total) + '</button> ' : '') + '' + (S.lb && S.lb.locked ? '' : '<button type="button" class="fk-btn fk-lbren">Change name</button>') + '</div>';
@@ -7670,8 +7698,17 @@ try {
     setTimeout(() => { lbPane(true); if (!LB.loaded || Date.now() - LB.last > 30000) lbFetch(); }, 0);
   });
   setTimeout(() => lbPane(), 400);
+  // live: while the Leaderboard tab (or the stubs panel) is on screen, the wall refreshes by itself about once a minute
+  setInterval(() => {
+    if (document.hidden || Date.now() - LB.last < 55000) return;
+    const lp = $('fk-lbpane'), seen = (pan && pan.classList.contains('on')) || (lp && lp.offsetParent !== null);
+    if (seen) lbFetch();
+  }, 30000);
+  setTimeout(lbHello, 3000);
   window.addEventListener('storage', e => { if (e.key === KEY) { S = load(); refresh(); } });   // another tab earned some
-  window.KRPTS = { lb: { state: () => ({ LB, me: S.lb }), submit: lbSubmit, fetch: lbFetch }, award, feed, pet, once, total: () => S.total, rank: () => RANKS[rankIx(S.total)][1], state: () => S, open, close, reset: () => { S = fresh(); save(); refresh(); } };
+  const API = { lb: { state: () => ({ LB, me: S.lb }), submit: lbSubmit, fetch: lbFetch }, award, feed, pet, once, total: () => S.total, rank: () => RANKS[rankIx(S.total)][1], state: () => S, open, close, reset: () => { S = fresh(); save(); refresh(); } };
+  // on the live site only what Blip needs is reachable from the console; the full set (for testing) is only there on a local machine
+  window.KRPTS = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname) ? API : Object.freeze({ feed, pet, open });
 })();
 
 } catch (err) { console.error('[fun:points]', err); }
