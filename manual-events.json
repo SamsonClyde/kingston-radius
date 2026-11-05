@@ -31454,5 +31454,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793879495386,
+    "title": "9 Feet Down",
+    "date": "2026-11-28",
+    "time": "19:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793879489171-w926-10.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
