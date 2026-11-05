@@ -31258,5 +31258,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793878406701,
+    "title": "Top of The World (Carpenters Cover Band)",
+    "date": "2027-03-07",
+    "time": "19:00",
+    "venue": "Paramount Theater",
+    "venueUrl": "https://paramounthudsonvalley.com/events/",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K4BUTXiZQQFsneUD7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793878378941-27-03-07-1920x1080-totw.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
