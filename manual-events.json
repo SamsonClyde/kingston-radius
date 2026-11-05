@@ -31216,5 +31216,19 @@
     "price": "$15",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793876883656,
+    "title": "Experimental Gathering On Death & Remembrance",
+    "date": "2026-11-07",
+    "time": "12:00",
+    "venue": "Spiral Park House",
+    "venueUrl": "https://spiralhousepark.org/events/fall-festival/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/CzBHtFzbMLJGPNkF6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793876860504-unnamed-8.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
