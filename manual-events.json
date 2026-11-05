@@ -31608,5 +31608,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793880030440,
+    "title": "Jay Collins' Gravy Train",
+    "date": "2026-12-27",
+    "time": "11:00",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793880026356-w926-19.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
