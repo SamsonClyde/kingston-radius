@@ -31412,5 +31412,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793879343341,
+    "title": "Sarah Power",
+    "date": "2026-11-22",
+    "time": "11:00",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793879336590-w926-8.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
