@@ -31370,5 +31370,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793879151251,
+    "title": "Journey To Blue Heaven Quartet",
+    "date": "2026-11-15",
+    "time": "11:00",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793879140917-w926-5.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
