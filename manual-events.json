@@ -31159,5 +31159,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793840759834,
+    "title": "Dom.i.nique, Maxx Wright, Xavier Sharp, Jalen Thompson",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "venue": "Night Swim",
+    "venueUrl": "https://www.instagram.com/nightswimkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sZe9CAVM8vJMB9UL6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793840752160-unnamed-3.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
