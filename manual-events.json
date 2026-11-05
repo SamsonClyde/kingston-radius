@@ -31173,5 +31173,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793840934763,
+    "title": "Puppy Pile, Swimmers, Jimmy Blackwell",
+    "date": "2026-11-05",
+    "time": "19:30",
+    "venue": "Night Swim",
+    "venueUrl": "https://www.instagram.com/nightswimkingston/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/sZe9CAVM8vJMB9UL6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793840927949-unnamed-4.jpg",
+    "price": "$5",
+    "free": false,
+    "_manual": true
   }
 ]
