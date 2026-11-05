@@ -31103,5 +31103,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793839299244,
+    "title": "Sound Era DJ Set",
+    "date": "2026-11-06",
+    "time": "20:00",
+    "venue": "Margaux Bar",
+    "venueUrl": "https://www.instagram.com/_margauxbar_/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/P4n7TjWBn2QuciMQ6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793839292996-screen-shot-2026-11-04-at-7-40-35-pm.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
