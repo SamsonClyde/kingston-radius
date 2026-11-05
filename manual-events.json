@@ -31398,5 +31398,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793879284310,
+    "title": "NYFUNK Alliance",
+    "date": "2026-11-21",
+    "time": "19:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793879277109-w926-7.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
