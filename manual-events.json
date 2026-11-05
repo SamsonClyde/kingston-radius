@@ -31328,5 +31328,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793878804182,
+    "title": "Tree of Life Quartet",
+    "date": "2026-11-08",
+    "time": "11:00",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793878799412-w926-2.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
