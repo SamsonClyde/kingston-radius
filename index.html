@@ -32,6 +32,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="twitter:title" content="Kingston Radius — Live Music in the Hudson Valley">
   <meta name="twitter:description" content="Concerts and live music within 90 minutes of Kingston, NY. 100+ venues, updated daily.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#1A1A18">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script>if ("serviceWorker" in navigator) window.addEventListener("load", function () { navigator.serviceWorker.register("/sw.js").catch(function () {}); });</script>
 <title>Kingston Radius — Live Music Near You</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -4133,9 +4137,13 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
   // value; the meaning shifts with _customLocation inside krFilteredEvents.
   btn.addEventListener('click', () => { KRF.dist = btn.dataset.filter; krFilterChanged(); });
 });
-let _kwTimer;
+let _kwTimer, _rayTimer;
 document.getElementById('keyword-search')?.addEventListener('input', e => {
   const raw = e.target.value;
+  clearTimeout(_rayTimer);
+  if (raw.trim().toLowerCase() === 'ray' && !document.getElementById('fun-css')) {   // typing "ray" (and pausing, so "Raymond" can still be typed) opens the other page
+    _rayTimer = setTimeout(() => { if (e.target.value.trim().toLowerCase() === 'ray') location.href = '/all'; }, 800);
+  }
   if (raw.trim().toLowerCase() === 'change') {        // typing "change" opens the zip-code box
     e.target.value = ''; KRF.q = '';
     showLocationModal(); krFilterChanged();
@@ -4143,6 +4151,9 @@ document.getElementById('keyword-search')?.addEventListener('input', e => {
   }
   KRF.q = raw;
   clearTimeout(_kwTimer); _kwTimer = setTimeout(krFilterChanged, 120);
+});
+document.getElementById('keyword-search')?.addEventListener('keydown', e => {   // Enter on "ray" goes right away
+  if (e.key === 'Enter' && e.target.value.trim().toLowerCase() === 'ray' && !document.getElementById('fun-css')) location.href = '/all';
 });
 document.getElementById('date-from')?.addEventListener('change', e => {
   KRF.from = e.target.value; KRF.dayOffset = null;
