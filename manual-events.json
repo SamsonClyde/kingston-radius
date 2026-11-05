@@ -31580,5 +31580,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793879919649,
+    "title": "Tree of Life Quartet featuring Sasha Grin",
+    "date": "2026-12-20",
+    "time": "11:00",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793879908115-w926-18.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
