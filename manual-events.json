@@ -31426,5 +31426,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793879412206,
+    "title": "DJ Magic Juan",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793879399515-logo-new.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
