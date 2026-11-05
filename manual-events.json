@@ -31230,5 +31230,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793877304801,
+    "title": "EYEHATEGOD",
+    "date": "2026-12-20",
+    "time": "18:30",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793877290560-image.webp",
+    "price": "sold out",
+    "free": false,
+    "_manual": true
   }
 ]
