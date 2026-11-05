@@ -31384,5 +31384,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793879222730,
+    "title": "Donnelly & Einhorn R&B Project",
+    "date": "2026-11-20",
+    "time": "19:30",
+    "venue": "Pearl Moon",
+    "venueUrl": "https://pearlmoonwoodstock.com/events",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/K1Kn6KSA3NmTLcRy8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793879198076-w926-6.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
