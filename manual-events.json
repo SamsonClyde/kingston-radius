@@ -31272,5 +31272,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793878501009,
+    "title": "The Unofficial Post NERFA Conference Hootenanny",
+    "date": "2026-11-15",
+    "time": "17:00",
+    "venue": "Park Theater",
+    "venueUrl": "https://parktheaterhudson.com/events/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/rumcuWciwQhFjQRr8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793878489657-hootenanny-grid.webp",
+    "price": "$6",
+    "free": false,
+    "_manual": true
   }
 ]
