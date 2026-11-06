@@ -31832,5 +31832,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793964122809,
+    "title": "Paynes Grey Sky",
+    "date": "2026-11-27",
+    "time": "16:00",
+    "venue": "RMV Cellars",
+    "venueUrl": "https://www.redmaplevineyard.com/rmvcellars",
+    "location": "West Park, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YKDAq1q7vWCf2mNd9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793964109979-black-friday.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
