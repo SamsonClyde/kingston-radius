@@ -31902,5 +31902,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793965661375,
+    "title": "Tim Berne Capatosta",
+    "date": "2026-11-06",
+    "time": "19:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793965659650-unnamed-13.jpg",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
