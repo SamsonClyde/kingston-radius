@@ -31916,5 +31916,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793965839382,
+    "title": "DJ Jonny2x",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793965838205-unnamed-14.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
