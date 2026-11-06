@@ -31888,5 +31888,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793965473749,
+    "title": "All Out War, Age of Apocalypse, Mortal Sin, Godskin Peeler, Kingdom21d, Outcome",
+    "date": "2026-12-18",
+    "time": "19:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793965471280-unnamed-12.jpg",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
