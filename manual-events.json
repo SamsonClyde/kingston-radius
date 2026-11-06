@@ -31930,5 +31930,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1793965972937,
+    "title": "DJ Mago Ez3",
+    "date": "2026-11-06",
+    "time": "22:30",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793965955907-unnamed-15.jpg",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
