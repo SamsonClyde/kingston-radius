@@ -32000,5 +32000,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794050688048,
+    "title": "Ugly Sweater Sip & Steal -Live Music",
+    "date": "2026-12-19",
+    "time": "23:00",
+    "venue": "Robibero Winery",
+    "venueUrl": "https://www.robiberofamilyvineyards.com/events",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://www.robiberofamilyvineyards.com/events",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794050677372-9554efa3-4381-46f8-a9b9-3d061ec9b606-1793134076177-9vyxezhx-.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
