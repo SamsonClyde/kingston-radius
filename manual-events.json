@@ -32070,5 +32070,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794051410692,
+    "title": "Roe Jan Bluegrass Band",
+    "date": "2026-11-15",
+    "time": "17:00",
+    "venue": "Roe Jan Brewing Co",
+    "venueUrl": "https://roejanbrewing.com/",
+    "location": "Hillsdale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gFZHMJd4BnhB6pwZ6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794051410512-roe-jan-bluegrass-band-ig-35.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
