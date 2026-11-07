@@ -32196,5 +32196,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794053054485,
+    "title": "Metal Takeover 9",
+    "date": "2026-11-07",
+    "time": "19:00",
+    "venue": "Rushing Duck",
+    "venueUrl": "https://www.instagram.com/rushingduck/",
+    "location": "Chester, NY",
+    "mapsUrl": "https://maps.app.goo.gl/fi4Ajewb9mjY2p4G9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794053021934-unnamed-4.jpg",
+    "price": "$15",
+    "free": false,
+    "_manual": true
   }
 ]
