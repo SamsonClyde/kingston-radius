@@ -5935,9 +5935,34 @@ try {
     const VENUES = ["Tubby's", 'BSP Kingston', 'UPAC', 'Colony', 'Bearsville', 'Club Helsinki', 'Anchor', 'Levon Helm Studios'];
     const LANES = [105, 135, 165, 195], LETTERS = ['S', 'H', 'O', 'W'];
     const SAUCER = { x: 48, y: 214, r: 9 };
-    // the table's little residents: they live on the playfield, flinch and hop as the ball goes by, and get knocked about when it hits them
-    const CRIT = [{ k: 'cat', hx: 62, hy: 150, r: 10, say: 'MEOW' }, { k: 'squirrel', hx: 238, hy: 150, r: 10, say: 'CHIT' }, { k: 'feedback', hx: 94, hy: 262, r: 10, say: 'EEEK' }, { k: 'blip', hx: 206, hy: 262, r: 10, say: 'BEEP' }, { k: 'bunny', hx: 150, hy: 298, r: 10, say: 'THUMP' }]
-      .map((c, i) => Object.assign(c, { x: c.hx, y: c.hy, vx: 0, vy: 0, sq: 0, hop: 0, nextHop: 60 + i * 47, scare: 0, hit: 0, cool: 0, lx: 0, ly: 0, ph: i * 1.7 }));
+    // the page's own wandering animals (the emoji that stroll across the screen) are living bumpers while a ball is in play:
+    // wherever one walks over the table the ball bounces off it, and it flinches, hops and gets knocked about for real
+    let WANDS = [], wandMap = new Map(), wandId = 0, spawnT = 1400;
+    const SAYS = ['BONK!', 'BOING!', 'OOF!', 'SQUEAK!', 'WHOA!'];
+    function scanWanderers(k) {
+      const rc = cv.getBoundingClientRect(), out = [], live = new Set(); if (!rc.width) { WANDS = out; return; }
+      const sc = W / rc.width;
+      document.querySelectorAll('.critter').forEach(el => {
+        if (el.style.visibility === 'hidden') return; const r = el.getBoundingClientRect(); if (r.width < 4 || r.height < 4) return;
+        const x = (r.left + r.width / 2 - rc.left) * sc, y = (r.top + r.height * 0.55 - rc.top) * sc, rad = Math.max(9, Math.min(21, Math.min(r.width, r.height) * 0.42 * sc));
+        let w = wandMap.get(el); if (!w) { w = { el, id: ++wandId, x, y, vx: 0, vy: 0, cool: 0, near: 0 }; wandMap.set(el, w); }
+        w.vx = Math.max(-6, Math.min(6, (x - w.x) / k)); w.vy = Math.max(-6, Math.min(6, (y - w.y) / k)); w.x = x; w.y = y; w.r = rad; live.add(el);
+        if (x > -rad && x < W + rad && y > -rad && y < H + rad) out.push(w);
+      });
+      for (const el of wandMap.keys()) if (!live.has(el)) wandMap.delete(el);
+      WANDS = out;
+    }
+    function wandReact(w, nx, ny, hard) {   // knock the real animal on the page: a bounce, a tumble and a puff
+      const el = w.el; try {
+        el.animate([{ translate: '0 0', rotate: '0deg' }, { translate: (-nx * 28) + 'px ' + (-ny * 14 - 16) + 'px', rotate: (nx > 0 ? -1 : 1) * 26 + 'deg', offset: .35 }, { translate: '0 0', rotate: '0deg' }], { duration: hard ? 560 : 360, easing: 'ease-out' });
+        if (hard) { const p = document.createElement('span'); p.textContent = ['\u{1F4A5}', '\u2B50', '\u{1F4AB}'][Math.floor(Math.random() * 3)]; p.style.cssText = 'position:absolute;left:50%;top:-.4em;font-size:.6em;margin-left:-.3em;pointer-events:none'; el.appendChild(p); p.animate([{ opacity: 1, transform: 'translateY(0) scale(.6)' }, { opacity: 0, transform: 'translateY(-26px) scale(1.2)' }], { duration: 650, easing: 'ease-out' }).onfinish = () => p.remove(); }
+      } catch (e) {}
+    }
+    function feedWanderers(k) {   // keep a couple of animals strolling across the table while a ball is live
+      spawnT -= 16.67 * k; if (spawnT > 0 || phase !== 'play' || typeof window.KRCRITTERAT !== 'function') return; spawnT = 1800 + Math.random() * 1800;
+      if (WANDS.length >= 2) return; const rc = cv.getBoundingClientRect(); if (rc.bottom < 80 || rc.top > innerHeight - 80) return;
+      window.KRCRITTERAT(rc.top + (150 + Math.random() * 250) * rc.height / H, rc.left + (0.2 + Math.random() * 0.6) * rc.width);
+    }
     const SPIN = { x: 150, y: 128, hw: 17 }, STAR = [{ x: 118, y: 352 }, { x: 150, y: 352 }, { x: 182, y: 352 }];
     const SPECK = Array.from({ length: 46 }, (_, i) => ({ x: (i * 73 + 11) % W, y: (i * 131 + 7) % H, r: 0.6 + (i % 3) * 0.4, p: i * 1.3 }));
     const FL = [{ px: 78, py: 470, s: 1, th: 0.45 }, { px: mir(78), py: 470, s: -1, th: 0.45 }];
@@ -5961,7 +5986,7 @@ try {
       say('BALL ' + ballNo + '. Hold LAUNCH.', 2200);
     }
     function reset() {
-      score = 0; ballNo = 0; ballsLeft = 3; pops = []; CRIT.forEach(c => { c.x = c.hx; c.y = c.hy; c.vx = c.vy = 0; }); weekends = 0; locks = 0; lockLit = false; extraBalls = 0; balls = []; msgs = null; shake = 0; pickVenues(); newBall();
+      score = 0; ballNo = 0; ballsLeft = 3; pops = []; weekends = 0; locks = 0; lockLit = false; extraBalls = 0; balls = []; msgs = null; shake = 0; pickVenues(); newBall();
       $('pin-go').textContent = 'Quit'; kick();
     }
     function endBall() {
@@ -6024,25 +6049,32 @@ try {
       live().forEach(b => { b.vx += rnd(-1.8, 1.8); b.vy -= 1.2; });
       if (tilt >= 3) { tilted = true; saveUntil = 0; keys.l = keys.r = false; say('TILT!', 2400); } else if (tilt >= 2) say('Careful...', 900);
     }
+    // ---------- never stuck: a ball that stops going anywhere is shaken loose, and one that leaves the table is put back ----------
+    const unstuckLog = []; let wdOff = false;
+    function watchdog(dt) {
+      if (wdOff) return;
+      for (const b of balls) {
+        if (b.held || b.pl) { b.at = 0; b.ax = undefined; continue; }
+        if (b.x !== b.x || b.y !== b.y || b.y < -12 || ((b.x < 3 || b.x > W - 3) && b.y < 470)) { unstuckLog.push(['oob', Math.round(b.x), Math.round(b.y), +b.vx.toFixed(1), +b.vy.toFixed(1)]); b.x = b.x === b.x && b.x > 3 && b.x < W - 3 ? b.x : CX; b.y = 60; b.vx = rnd(-1, 1); b.vy = 3; b.ax = undefined; continue; }
+        if (b.ax === undefined || Math.hypot(b.x - b.ax, b.y - b.ay) > 16) { if (b.ax !== undefined && Math.hypot(b.x - b.ax, b.y - b.ay) > 60) b.kicks = 0; b.ax = b.x; b.ay = b.y; b.at = 0; continue; }
+        b.at += dt;
+        if (b.at >= 85) {                          // about a second and a half stuck inside one small spot
+          b.at = 0; b.kicks = (b.kicks || 0) + 1; unstuckLog.push([Math.round(b.x), Math.round(b.y), b.kicks]);
+          if (b.kicks >= 3) { b.x = CX + rnd(-30, 30); b.y = 70; b.vx = rnd(-1.5, 1.5); b.vy = 2; b.kicks = 0; b.ax = undefined; pop(CX, 100, 'FREE!', '#fff'); }
+          else { b.vx = Math.sign(CX - b.x || 1) * rnd(1.5, 3.5); b.vy = -rnd(5, 8); pop(b.x, b.y - 14, 'SHAKE!', '#9cf'); }
+        }
+      }
+    }
     // ---------- the physics step ----------
     function step(dt) {
       for (const f of FL) { const on = !tilted && (f.s > 0 ? keys.l : keys.r); f.ph = f.th; f.th += on ? -0.26 * dt : 0.17 * dt; f.th = Math.max(UP, Math.min(REST, f.th)); f.dth = (f.th - f.ph) / dt; }
       if (phase !== 'play') return;
-      tilt = Math.max(0, tilt - dt / 300); spinA += spinW * dt; spinW *= Math.pow(0.985, dt);
-      for (const cr of CRIT) {                                           // spring home, shy away from a close ball, look at it
-        cr.vx += (cr.hx - cr.x) * 0.014 * dt; cr.vy += (cr.hy - cr.y) * 0.014 * dt; const damp = Math.pow(0.93, dt); cr.vx *= damp; cr.vy *= damp;
-        let near = null, nd = 1e9; for (const b of balls) { if (b.held || b.pl) continue; const d = Math.hypot(b.x - cr.x, b.y - cr.y); if (d < nd) { nd = d; near = b; } }
-        if (near) { cr.lx += ((near.x - cr.x) / (nd || 1) - cr.lx) * 0.25; cr.ly += ((near.y - cr.y) / (nd || 1) - cr.ly) * 0.25; const zone = cr.r + R + 24; if (nd < zone) { const k = 1 - nd / zone; cr.vx -= (near.x - cr.x) / (nd || 1) * k * 0.22 * dt; cr.vy -= (near.y - cr.y) / (nd || 1) * k * 0.22 * dt; if (cr.scare <= 0) cr.hop = 1; cr.scare = 18; } }
-        cr.x += cr.vx * dt; cr.y += cr.vy * dt;
-        const ox = cr.x - cr.hx, oy = cr.y - cr.hy, od = Math.hypot(ox, oy); if (od > 26) { cr.x = cr.hx + ox / od * 26; cr.y = cr.hy + oy / od * 26; cr.vx *= 0.3; cr.vy *= 0.3; }
-        cr.sq *= Math.pow(0.86, dt); if (cr.scare > 0) cr.scare -= dt; if (cr.hit > 0) cr.hit -= dt; if (cr.cool > 0) cr.cool -= dt;
-        cr.nextHop -= dt; if (cr.nextHop <= 0 && cr.hop <= 0) { cr.hop = 1; cr.nextHop = 150 + Math.random() * 260; }
-        if (cr.hop > 0) cr.hop = Math.max(0, cr.hop - 0.06 * dt);
-      }
+      tilt = Math.max(0, tilt - dt / 300); spinA += spinW * dt; spinW *= Math.pow(0.985, dt); watchdog(dt);
       for (const b of balls) {
         if (b.held) continue;
         if (b.pl) { b.y = H - 30 + charge * 6; continue; }
         const prevY = b.y;
+        if (b.y > 436 && Math.hypot(b.vx, b.vy) < 0.8) for (const f of FL) if (f.th > REST - 0.08 && Math.abs(b.x - f.px) < 34 && Math.abs(b.y - f.py) < 34) b.vx += f.s * 0.14 * dt;   // a ball that settles at the foot of a resting flipper is rolled toward the middle, never left in the crease
         b.vy += G * dt; const sp = Math.hypot(b.vx, b.vy); if (sp > VMAX) { b.vx *= VMAX / sp; b.vy *= VMAX / sp; }
         b.x += b.vx * dt; b.y += b.vy * dt;
         for (const w of WALLS) seg(b, w[0], w[1], w[2], w[3], 0.45);
@@ -6068,16 +6100,20 @@ try {
         if (Math.abs(b.x - SPIN.x) < SPIN.hw && (prevY - SPIN.y) * (b.y - SPIN.y) <= 0 && prevY !== b.y) { const sp = Math.hypot(b.vx, b.vy); spinW = Math.min(1.4, spinW + 0.25 + sp * 0.03); addScore(20); pop(SPIN.x + 22, SPIN.y, '+20', '#8ff'); }
         // star rollovers in the lower middle: light all three for a frenzy
         STAR.forEach((st, i) => { if (!stars[i] && Math.hypot(b.x - st.x, b.y - st.y) < 10) { stars[i] = true; addScore(75); pop(st.x, st.y - 10, '+75', '#ffd24a'); if (stars.every(Boolean)) { stars = [false, false, false]; frenzy = now + 9000; addScore(600); say('STAR FRENZY! BUMPERS x2', 2200); } } });
-        // the creatures: the ball bounces off them, and they are knocked away by it
-        CRIT.forEach((cr, ci) => {
-          const dx = b.x - cr.x, dy = b.y - cr.y, d = Math.hypot(dx, dy), need = R + cr.r; if (d >= need) return;
-          const nx = d > 1e-6 ? dx / d : 0, ny = d > 1e-6 ? dy / d : -1, rel = (b.vx - cr.vx) * nx + (b.vy - cr.vy) * ny;
-          b.x = cr.x + nx * need; b.y = cr.y + ny * need;
-          if (rel < 0) { const jn = -(1 + 0.6) * rel; b.vx += nx * jn * 0.62; b.vy += ny * jn * 0.62; cr.vx -= nx * jn * 0.55; cr.vy -= ny * jn * 0.55; }
-          if (cr.cool <= 0) {
-            cr.cool = 28; cr.hit = 16; cr.sq = 0.5; addScore(50 * (frenzy > now ? 2 : 1)); pop(cr.x, cr.y - 16, cr.say + '!', '#fff'); if (!zoo[ci]) { zoo[ci] = 1; if (Object.keys(zoo).length === CRIT.length) { zoo = {}; addScore(1500 * mult); lockLit = true; say('ZOO PARTY! LOCK LIT', 2400); pop(CX, 250, 'ZOO PARTY +' + 1500 * mult, '#ffd24a'); } }
+        // the wandering animals: the ball bounces off whoever is walking over the table
+        for (const w of WANDS) {
+          const dx = b.x - w.x, dy = b.y - w.y, d = Math.hypot(dx, dy), need = R + w.r;
+          if (d >= need + 28) continue;
+          if (d >= need) { if (w.near <= 0) { w.near = 50; wandReact(w, dx / (d || 1), dy / (d || 1), false); } continue; }   // the ball just whizzed past: it flinches
+          const nx = d > 1e-6 ? dx / d : 0, ny = d > 1e-6 ? dy / d : -1, rel = (b.vx - w.vx) * nx + (b.vy - w.vy) * ny;
+          b.x = w.x + nx * need; b.y = w.y + ny * need;
+          if (rel < 0) { const jn = -(1 + 0.75) * rel; b.vx += nx * jn; b.vy += ny * jn; }
+          const sp = Math.hypot(b.vx, b.vy); if (sp < 5) { b.vx = b.vx / (sp || 1) * 5; b.vy = b.vy / (sp || 1) * 5; }
+          if (w.cool <= 0) {
+            w.cool = 30; addScore(50 * (frenzy > now ? 2 : 1)); pop(w.x, w.y - w.r - 6, SAYS[Math.floor(Math.random() * SAYS.length)], '#fff'); wandReact(w, nx, ny, true); shake = Math.max(shake, 3);
+            if (!zoo[w.id]) { zoo[w.id] = 1; if (Object.keys(zoo).length >= 5) { zoo = {}; addScore(1500 * mult); lockLit = true; say('ZOO PARTY! LOCK LIT', 2400); pop(CX, 250, 'ZOO PARTY +' + 1500 * mult, '#ffd24a'); } }
           }
-        });
+        }
         for (const f of FL) {
           const tx = f.px + f.s * Math.cos(f.th) * FLEN, ty = f.py + Math.sin(f.th) * FLEN, dx = tx - f.px, dy = ty - f.py, l2 = dx * dx + dy * dy;
           let t = ((b.x - f.px) * dx + (b.y - f.py) * dy) / l2; t = Math.max(0, Math.min(1, t));
@@ -6102,6 +6138,7 @@ try {
       if (visible()) {
         const k = last ? Math.max(0.5, Math.min(2, (ts - last) / 16.67)) : 1; last = ts; now += 16.67 * k;
         if (charging && plunger()) charge = Math.min(1, charge + 0.025 * k);
+        scanWanderers(k); feedWanderers(k); WANDS.forEach(w => { if (w.cool > 0) w.cool -= k; if (w.near > 0) w.near -= k; });
         for (let i = 0; i < SUB; i++) step(k / SUB);
         if (phase === 'between' && now >= over_t) { if (ballsLeft <= 0) finish(); else { newBall(); } }
         if (shake > 0) shake -= k;
@@ -6115,42 +6152,6 @@ try {
     // ---------- drawing ----------
     const rr = (x, y, w, h, r) => { cx.beginPath(); cx.moveTo(x + r, y); cx.arcTo(x + w, y, x + w, y + h, r); cx.arcTo(x + w, y + h, x, y + h, r); cx.arcTo(x, y + h, x, y, r); cx.arcTo(x, y, x + w, y, r); cx.closePath(); };
     const glowStroke = (col, w) => { cx.save(); cx.globalAlpha = 0.22; cx.lineWidth = w + 5; cx.strokeStyle = col; cx.stroke(); cx.globalAlpha = 1; cx.lineWidth = w; cx.stroke(); cx.restore(); };
-    function drawCreature(cr) {
-      const bob = Math.sin(now / 420 + cr.ph) * 0.8, hopY = -Math.sin(Math.PI * (1 - cr.hop)) * (cr.hop > 0 ? 7 : 0), sq = cr.sq, sc = cr.scare > 0;
-      cx.save(); cx.translate(cr.x, cr.y + bob + hopY); cx.scale(1 + sq * 0.5, 1 - sq * 0.5);
-      cx.fillStyle = 'rgba(0,0,0,.35)'; cx.beginPath(); cx.ellipse(0, 11 - hopY * 0.2, 9 - hopY * 0.25, 3, 0, 0, 6.3); cx.fill();
-      const eyes = (ey, sep, er) => { const o = er * 0.45; [-sep, sep].forEach(x => { cx.fillStyle = '#fff'; cx.beginPath(); cx.arc(x, ey, er, 0, 6.3); cx.fill(); cx.fillStyle = '#111'; cx.beginPath(); cx.arc(x + cr.lx * o, ey + cr.ly * o, er * 0.52, 0, 6.3); cx.fill(); }); };
-      const mouth = (y) => { cx.strokeStyle = '#111'; cx.lineWidth = 1.3; cx.beginPath(); if (cr.hit > 0 || sc) cx.arc(0, y + 1, 1.8, 0, 6.3); else { cx.moveTo(-2.5, y); cx.quadraticCurveTo(0, y + 2.4, 2.5, y); } cx.stroke(); };
-      if (cr.k === 'cat') {
-        const wag = Math.sin(now / 150 + cr.ph) * 3; cx.strokeStyle = '#d9822b'; cx.lineWidth = 3.2; cx.lineCap = 'round'; cx.beginPath(); cx.moveTo(7, 4); cx.quadraticCurveTo(15, 0 + wag, 13, -9); cx.stroke();
-        cx.fillStyle = '#e8923a'; cx.beginPath(); cx.arc(0, 1, 10, 0, 6.3); cx.fill(); cx.beginPath(); cx.moveTo(-9, -4); cx.lineTo(-7, -14); cx.lineTo(-1, -8); cx.moveTo(9, -4); cx.lineTo(7, -14); cx.lineTo(1, -8); cx.fill();
-        cx.fillStyle = '#f7c58c'; cx.beginPath(); cx.arc(0, 4, 5.5, 0, 3.14); cx.fill(); cx.strokeStyle = '#b8651a'; cx.lineWidth = 1.2; cx.beginPath(); cx.moveTo(-4, -6); cx.lineTo(-2, -4); cx.moveTo(4, -6); cx.lineTo(2, -4); cx.stroke();
-        eyes(-1, 3.6, sc ? 3 : 2.5); cx.fillStyle = '#e8728a'; cx.beginPath(); cx.moveTo(-1.2, 2); cx.lineTo(1.2, 2); cx.lineTo(0, 3.4); cx.fill(); mouth(5);
-        cx.strokeStyle = 'rgba(255,255,255,.7)'; cx.lineWidth = 0.8; cx.beginPath(); cx.moveTo(-10, 2); cx.lineTo(-5, 3); cx.moveTo(-10, 5); cx.lineTo(-5, 4); cx.moveTo(10, 2); cx.lineTo(5, 3); cx.moveTo(10, 5); cx.lineTo(5, 4); cx.stroke();
-      } else if (cr.k === 'squirrel') {
-        const sw = Math.sin(now / 260 + cr.ph) * 2; cx.fillStyle = '#8a5a34'; cx.beginPath(); cx.ellipse(9, -3 + sw * 0.4, 6, 11, 0.5, 0, 6.3); cx.fill(); cx.fillStyle = '#b17a4a'; cx.beginPath(); cx.ellipse(10, -4 + sw * 0.4, 3, 7, 0.5, 0, 6.3); cx.fill();
-        cx.fillStyle = '#a06c3e'; cx.beginPath(); cx.arc(0, 1, 9.5, 0, 6.3); cx.fill(); cx.beginPath(); cx.moveTo(-7, -5); cx.lineTo(-6, -12); cx.lineTo(-1, -8); cx.moveTo(5, -5); cx.lineTo(4, -12); cx.lineTo(0, -8); cx.fill();
-        cx.fillStyle = '#e8cfa8'; cx.beginPath(); cx.arc(-1, 4, 5, 0, 3.14); cx.fill(); eyes(-1.5, 3.2, sc ? 2.8 : 2.3); cx.fillStyle = '#222'; cx.beginPath(); cx.arc(-1.5, 2.2, 1.1, 0, 6.3); cx.fill(); mouth(5.4);
-        cx.fillStyle = '#e8d2a0'; cx.fillRect(-4, 5.6, 3, 2.2); cx.fillRect(-0.5, 5.6, 3, 2.2);
-      } else if (cr.k === 'bunny') {
-        const ea = sc ? -0.35 : Math.sin(now / 500 + cr.ph) * 0.08; [[-4, -1], [4, 1]].forEach(([x, s2]) => { cx.save(); cx.translate(x, -7); cx.rotate(ea * s2 + s2 * 0.12); cx.fillStyle = '#f4f4f4'; cx.beginPath(); cx.ellipse(0, -7, 3.2, 8, 0, 0, 6.3); cx.fill(); cx.fillStyle = '#f2a8b8'; cx.beginPath(); cx.ellipse(0, -7, 1.5, 5.5, 0, 0, 6.3); cx.fill(); cx.restore(); });
-        cx.fillStyle = '#f6f6f6'; cx.beginPath(); cx.arc(0, 2, 10, 0, 6.3); cx.fill(); cx.fillStyle = '#fff'; cx.beginPath(); cx.arc(8, 8, 3.4, 0, 6.3); cx.fill();
-        eyes(0, 3.5, sc ? 3 : 2.4); cx.fillStyle = '#f08aa0'; cx.beginPath(); cx.arc(0, 4.2, 1.5, 0, 6.3); cx.fill(); mouth(6.4);
-        cx.fillStyle = 'rgba(240,138,160,.5)'; cx.beginPath(); cx.arc(-6.5, 5, 2.2, 0, 6.3); cx.arc(6.5, 5, 2.2, 0, 6.3); cx.fill();
-      } else if (cr.k === 'feedback') {
-        cx.fillStyle = cr.hit > 0 ? '#e8ecf2' : '#a4abb4'; cx.beginPath(); cx.moveTo(-11, 9); for (let i = 0; i <= 6; i++) cx.lineTo(-11 + i * 3.7, i % 2 ? -12 - (sc ? 3 : 0) : -4); cx.lineTo(11, 9); cx.closePath(); cx.fill(); cx.strokeStyle = '#575e68'; cx.lineWidth = 1.6; cx.stroke();
-        eyes(-1, 3.8, sc ? 3.1 : 2.7); cx.strokeStyle = '#111'; cx.lineWidth = 1.4; cx.beginPath(); cx.moveTo(-7.5, -4.5); cx.lineTo(-1.5, -2.2); cx.moveTo(7.5, -4.5); cx.lineTo(1.5, -2.2); cx.stroke();
-        cx.strokeStyle = '#111'; cx.beginPath(); cx.moveTo(-4, 6); for (let i = 0; i < 5; i++) cx.lineTo(-4 + i * 2 + 1, i % 2 ? 6 : 8); cx.stroke();
-      } else {
-        cx.fillStyle = '#c4c8cf'; cx.beginPath(); cx.arc(0, 1, 10.5, 0, 6.3); cx.fill(); cx.fillStyle = '#0a2a1a'; cx.beginPath(); cx.arc(0, 1, 8.4, 0, 6.3); cx.fill();
-        cx.strokeStyle = 'rgba(80,255,150,.55)'; cx.lineWidth = 0.8; cx.beginPath(); cx.arc(0, 1, 5, 0, 6.3); cx.stroke();
-        const ang = now / 380 + cr.ph; cx.strokeStyle = '#7dffa8'; cx.lineWidth = 1.4; cx.beginPath(); cx.moveTo(0, 1); cx.lineTo(Math.cos(ang) * 8, 1 + Math.sin(ang) * 8); cx.stroke();
-        eyes(-0.5, 3, sc ? 2.5 : 2.1); cx.strokeStyle = '#7dffa8'; cx.lineWidth = 1.3; cx.beginPath(); if (cr.hit > 0 || sc) cx.arc(0, 6.2, 1.5, 0, 6.3); else { cx.moveTo(-2.6, 5.6); cx.quadraticCurveTo(0, 8, 2.6, 5.6); } cx.stroke();
-        cx.fillStyle = '#7dffa8'; cx.fillRect(-0.6, -12, 1.2, 3); cx.beginPath(); cx.arc(0, -13, 1.6, 0, 6.3); cx.fill();
-      }
-      if (cr.hit > 8) { cx.fillStyle = '#ffd24a'; for (let i = 0; i < 3; i++) { const a = now / 90 + i * 2.1; cx.beginPath(); cx.arc(Math.cos(a) * 12, -12 + Math.sin(a) * 3.5, 1.7, 0, 6.3); cx.fill(); } }
-      cx.restore();
-    }
     function draw() {
       const c = colors(), fr = frenzy > now, pulse = 0.5 + 0.5 * Math.sin(now / 160);
       cx.save(); if (shake > 0) cx.translate(rnd(-2, 2), rnd(-2, 2));
@@ -6184,8 +6185,8 @@ try {
         const bg2 = cx.createRadialGradient(b.x - b.r * 0.3, b.y - b.r * 0.35, 1, b.x, b.y, b.r); bg2.addColorStop(0, '#fff'); bg2.addColorStop(0.35, hot ? '#fff' : base); bg2.addColorStop(1, hot ? '#ddd' : '#1a1a30'); cx.beginPath(); cx.arc(b.x, b.y, b.r - (hot ? 0 : 1), 0, 6.3); cx.fillStyle = bg2; cx.fill();
         cx.beginPath(); cx.arc(b.x, b.y, b.r * 0.42, 0, 6.3); cx.fillStyle = hot ? '#ffe9a0' : 'rgba(0,0,0,.45)'; cx.fill();
         if (hot && b.label) { cx.fillStyle = '#fff'; cx.font = 'bold 9px monospace'; cx.fillText(b.label, b.x, b.y - b.r - 8); } });
-      // the table's residents
-      CRIT.forEach(drawCreature);
+      // dotted rings under the wandering animals that are over the table
+      WANDS.forEach(w => { cx.strokeStyle = 'rgba(255,255,255,' + (w.cool > 0 ? .5 : .14) + ')'; cx.lineWidth = 1.2; cx.setLineDash([3, 4]); cx.beginPath(); cx.arc(w.x, w.y, w.r, 0, 6.3); cx.stroke(); cx.setLineDash([]); });
       // flippers: tapered, with a red rubber tip and a pivot cap
       for (const f of FL) { const a = Math.atan2(Math.sin(f.th), f.s * Math.cos(f.th)); cx.save(); cx.translate(f.px, f.py); cx.rotate(a); if (f.s < 0) cx.scale(1, -1);
         cx.fillStyle = 'rgba(0,0,0,.35)'; cx.beginPath(); cx.ellipse(FLEN / 2 + 2, 6, FLEN / 2 + 6, 5, 0, 0, 6.3); cx.fill();
@@ -6211,7 +6212,7 @@ try {
       if (phase === 'idle' || phase === 'over') {
         cx.textAlign = 'center'; cx.fillStyle = 'rgba(4,3,16,.78)'; rr(26, H / 2 - 74, W - 52, 158, 12); cx.fill(); cx.strokeStyle = c.acc; cx.lineWidth = 2; cx.stroke();
         cx.fillStyle = c.hi; cx.font = 'bold 26px monospace'; cx.fillText(phase === 'over' ? 'GAME OVER' : 'PINBALL', CX, H / 2 - 40); cx.fillStyle = '#fff'; cx.font = '12px monospace';
-        cx.fillText('Z and / flip  ·  Space launches', CX, H / 2 - 12); cx.fillText('N nudges (not too much)', CX, H / 2 + 6); cx.fillStyle = '#9cf'; cx.fillText('Hit all five critters for a ZOO PARTY', CX, H / 2 + 30); cx.fillText('Light three stars for a frenzy', CX, H / 2 + 48); cx.fillStyle = '#ccc'; cx.fillText(phase === 'over' ? 'Press New Game' : 'Press Start', CX, H / 2 + 70);
+        cx.fillText('Z and / flip  ·  Space launches', CX, H / 2 - 12); cx.fillText('N nudges (not too much)', CX, H / 2 + 6); cx.fillStyle = '#9cf'; cx.fillText('Bump 5 passing animals: ZOO PARTY', CX, H / 2 + 30); cx.fillText('Light three stars for a frenzy', CX, H / 2 + 48); cx.fillStyle = '#ccc'; cx.fillText(phase === 'over' ? 'Press New Game' : 'Press Start', CX, H / 2 + 70);
       }
       cx.restore();
     }
@@ -6231,7 +6232,21 @@ try {
     $('pin-go').onclick = () => { if (phase === 'play' || phase === 'between') { phase = 'idle'; $('pin-go').textContent = 'Start'; stat(best ? 'Best ' + best + '. Press Start' : 'Press Start'); draw(); } else reset(); };
     window.KRPIN = { state: () => phase, ball: () => live()[0] || plunger() || { x: NaN, y: NaN }, balls: () => live().length, score: () => score,
       force: () => { if (plunger()) { charge = 1; launch(); } },
-      dbg: { crit: () => CRIT, spin: () => ({ spinW, spinA }), stars: () => stars, frenzy: () => frenzy > now, lanes: i => laneHit(i), drop: i => dropTarget(targets[i]), lockBall: () => { const b = spawn(false, true); b.x = SAUCER.x; b.y = SAUCER.y; b.vx = b.vy = 0; saucer(b); }, nudge, info: () => ({ lockLit, lit, mult, locks, mb, tilted, ballsLeft, ballNo, weekends, held: balls.filter(b => b.held).length, live: live().length, down: targets.filter(t => t.down).length }), clock: () => now, addSave: ms => { saveUntil = now + ms; } } };
+      dbg: { crit: () => WANDS, stuck: () => unstuckLog,
+        sim: (frames, noWd, calm) => {   // test helper: plays itself at random, without drawing, and reports every spell where a ball went nowhere for 3+ seconds
+          wdOff = !!noWd; unstuckLog.length = 0; const spells = []; if (phase === 'idle' || phase === 'over') document.getElementById('pin-go').click();
+          for (let i = 0; i < frames; i++) {
+            if (phase === 'idle' || phase === 'over') document.getElementById('pin-go').click();
+            if (plunger()) { charge = 0.55 + Math.random() * 0.45; launch(); }
+            if (i % 9 === 0) { keys.l = !calm && Math.random() < .5; keys.r = !calm && Math.random() < .5; }
+            if (i % 400 === 0 && !calm) nudge();
+            now += 16.67; scanWanderers(1); WANDS.forEach(w => { if (w.cool > 0) w.cool -= 1; if (w.near > 0) w.near -= 1; }); for (let j = 0; j < SUB; j++) step(1 / SUB);
+            if (phase === 'between' && now >= over_t) { if (ballsLeft <= 0) finish(); else newBall(); }
+            for (const b of balls) { if (b.held || b.pl) { b.sx = undefined; continue; } if (b.sx === undefined || Math.hypot(b.x - b.sx, b.y - b.sy) > 14) { b.sx = b.x; b.sy = b.y; b.st = i; } else if (i - b.st === 180) spells.push([Math.round(b.x), Math.round(b.y), i, phase, +b.vx.toFixed(2), +b.vy.toFixed(2), b.still, balls.length, tilted]); }
+          }
+          wdOff = false; return { spells, shakes: unstuckLog.slice(), score, fl: FL.map(f => [f.th, f.px, f.py]), keys: [keys.l, keys.r], bs: balls.map(b => [b.x | 0, b.y | 0, b.wt, b.still, b.wx, b.held, b.pl]) };
+        },
+ spin: () => ({ spinW, spinA }), stars: () => stars, frenzy: () => frenzy > now, lanes: i => laneHit(i), drop: i => dropTarget(targets[i]), lockBall: () => { const b = spawn(false, true); b.x = SAUCER.x; b.y = SAUCER.y; b.vx = b.vy = 0; saucer(b); }, nudge, info: () => ({ lockLit, lit, mult, locks, mb, tilted, ballsLeft, ballNo, weekends, held: balls.filter(b => b.held).length, live: live().length, down: targets.filter(t => t.down).length }), clock: () => now, addSave: ms => { saveUntil = now + ms; } } };
     resetTable(); lockLit = false; lit = [false, false, false, false]; mult = 1; score = 0; ballNo = 0; balls = []; locks = 0; skill = 0; tilt = 0; nudgeAt = -999; pickVenues(); draw(); stat(best ? 'Best ' + best + '. Press Start' : 'Press Start');
   })();
 
@@ -6969,6 +6984,13 @@ window.KRBIG = (function () { let last = Date.now() - 100000; return {
     }
   });
   window.KRCRITTER = critters;
+  window.KRCRITTERAT = (cy, sitX) => {   // pinball: one animal strolls across at this height (px), now and then sitting down at x = sitX
+    if (calm || document.hidden || document.querySelectorAll('.critter').length > 18) return;
+    const kind = BAG[Math.floor(Math.random() * BAG.length)], sp = SP[kind], dir = Math.random() < 0.5 ? 1 : -1, dur = rand(Math.min(sp.dur[0], 4200), Math.min(sp.dur[1], 6500));
+    let stay = null;
+    if (sitX != null && Math.random() < 0.3) { const w = innerWidth, from = dir > 0 ? -90 : w + 90, to = dir > 0 ? w + 90 : -90, at = (sitX - from) / (to - from); if (at > 0.1 && at < 0.9) stay = { at, ms: rand(2500, 5000) }; }
+    run(kind, dir, Math.max(8, cy - sp.size * 0.55), 0, dur, stay);
+  };
   (function schedule(first) { setTimeout(() => { critters(); schedule(false); }, first ? rand(1200, 2600) : rand(1800, 5000)); })(true);
 
   // ---------- drink + food of the day ----------
@@ -8841,3 +8863,4 @@ try {
 </script>
 </body>
 </html>
+                                                                            
