@@ -2727,6 +2727,19 @@ function formatEventBlurb(e) {
   return `${e.title}\n${e.venue}\n${dateStr}${timeStr ? ', ' + timeStr : ''}`;
 }
 
+// Sharing a show with a poster shares the poster picture itself, with the link to the show as its caption. If the poster can't be read
+// (some image hosts don't allow it) or the phone can't share files, it falls back to the usual title/venue/date text and link.
+async function posterFile(e) {
+  if (!e || !e.posterUrl || !navigator.canShare || !window.File) return null;
+  try {
+    const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 4500);
+    const r = await fetch(e.posterUrl, { mode: 'cors', signal: ctl.signal }); clearTimeout(t);
+    if (!r.ok) return null;
+    const b = await r.blob(); if (!/^image\//.test(b.type)) return null;
+    const f = new File([b], 'poster.' + (b.type.split('/')[1] || 'jpg').replace('jpeg', 'jpg').replace(/[^a-z0-9]/g, ''), { type: b.type });
+    return navigator.canShare({ files: [f] }) ? f : null;
+  } catch (err) { return null; }
+}
 async function shareEvent(e) {
   const key = eventKey(e);
   const url = new URL(window.location.href);
@@ -2737,6 +2750,8 @@ async function shareEvent(e) {
 
   const shareText = formatEventBlurb(e);
 
+  const pf = await posterFile(e);
+  if (pf) { try { await navigator.share({ files: [pf], text: shareUrl }); return; } catch (err) { if (err && err.name === 'AbortError') return; } }
   if (navigator.share) {
     try {
       await navigator.share({ title: e.title, text: shareText, url: shareUrl });
@@ -4634,6 +4649,8 @@ function blurb(e) {
 async function shareEvent(e) {
   // Links to this show in the Feed view
   const shareUrl = `${location.origin}${location.pathname}?view=feed&show=${shortHash(eventKey(e))}`;
+  const pf = await posterFile(e);
+  if (pf) { try { await navigator.share({ files: [pf], text: shareUrl }); return; } catch (err) { if (err && err.name === 'AbortError') return; } }
   if (navigator.share) {
     try { await navigator.share({ title: e.title, text: blurb(e), url: shareUrl }); return; }
     catch (err) { if (err && err.name === 'AbortError') return; }
