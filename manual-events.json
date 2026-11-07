@@ -32042,5 +32042,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794051343047,
+    "title": "Austin Bonk",
+    "date": "2026-11-13",
+    "time": "19:00",
+    "venue": "Roe Jan Brewing Co",
+    "venueUrl": "https://roejanbrewing.com/",
+    "location": "Hillsdale, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gFZHMJd4BnhB6pwZ6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794051341098-austin-bonk-instagram-post-1.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
