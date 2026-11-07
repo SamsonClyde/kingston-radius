@@ -554,10 +554,6 @@
   "Tempo Arts||2026-12-12||20:00": "approved",
   "The Falcon||2026-09-12||19:30": "approved",
   "The Falcon||2026-10-08||19:30": "approved",
-  "The Falcon||2026-11-06||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787540606047
-  },
   "The Falcon||2026-11-06||19:30": "approved",
   "The Half Moon||2026-09-26||14:00": "approved",
   "The Lace Mill||2026-08-24||18:00": "approved",
@@ -1044,10 +1040,6 @@
     "status": "rejected",
     "hiddenAt": 1790204011020
   },
-  "Assembly Kingston||2026-11-05||12:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1790245500350
-  },
   "Assembly Kingston||2026-11-07||12:00 am": {
     "status": "rejected",
     "hiddenAt": 1790245502607
@@ -1247,10 +1239,6 @@
     "hiddenAt": 1790422408009
   },
   "Towne Crier Café||2026-10-09||18:30": "approved",
-  "Towne Crier Café||2026-11-06||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790593307515
-  },
   "Assembly Kingston||2026-11-04||20:00": "approved",
   "Bardavon||2026-12-17||": {
     "status": "rejected",
@@ -1272,10 +1260,6 @@
     "hiddenAt": 1790765664194
   },
   "Tompkins Corners Cultural Center||2026-11-11||19:30": "approved",
-  "Bard College Conservatory||2026-11-06||": {
-    "status": "rejected",
-    "hiddenAt": 1790852458848
-  },
   "Bard College Conservatory||2026-11-07||": {
     "status": "rejected",
     "hiddenAt": 1790852461131
@@ -1316,10 +1300,6 @@
   "The Half Moon||2026-11-18||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790852636378
-  },
-  "Tompkins Corners Cultural Center||2026-11-06||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790852645732
   },
   "Unicorn Bar||2026-10-22||19:30": "approved",
   "Avalon Lounge||2026-10-09||20:00": "approved",
@@ -1577,10 +1557,6 @@
     "status": "rejected",
     "hiddenAt": 1792148793955
   },
-  "The Grand||2026-11-06||": {
-    "status": "rejected",
-    "hiddenAt": 1792148906777
-  },
   "The Grand||2026-11-12||": {
     "status": "rejected",
     "hiddenAt": 1792148972463
@@ -1654,17 +1630,9 @@
     "hiddenAt": 1792372520237
   },
   "Keegan Ales||2026-10-30||20:00": "approved",
-  "Unicorn Bar||2026-11-06||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792450349269
-  },
   "Unicorn Bar||2026-11-28||4:00 pm": {
     "status": "rejected",
     "hiddenAt": 1792450353187
-  },
-  "Keegan Ales||2026-11-05||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792499756771
   },
   "Tompkins Corners Cultural Center||2027-04-18||7:30 pm": {
     "status": "rejected",
@@ -1737,10 +1705,6 @@
     "hiddenAt": 1792667352163
   },
   "Tubby's||2026-12-31||19:00": "approved",
-  "Unicorn Bar||2026-11-06||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792667362098
-  },
   "MASS MoCA||2026-11-07||4:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792761106704
@@ -1775,10 +1739,6 @@
   "The Falcon||2026-11-20||See website": {
     "status": "rejected",
     "hiddenAt": 1793010758776
-  },
-  "Towne Crier Café||2026-11-06||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1793011229615
   },
   "Towne Crier Café||2026-12-04||8:00 pm": {
     "status": "rejected",
@@ -1844,14 +1804,6 @@
   "Basilica Hudson||2027-02-18||See website": {
     "status": "rejected",
     "hiddenAt": 1793184295112
-  },
-  "Keegan Ales||2026-11-03||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1793184298234
-  },
-  "Keegan Ales||2026-11-06||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1793184376902
   },
   "Keegan Ales||2026-11-06||20:00": "approved",
   "Love, Velma||2027-03-20||7:30 pm": {
@@ -1941,10 +1893,6 @@
   "Bardavon||2027-02-13||": {
     "status": "rejected",
     "hiddenAt": 1793269425410
-  },
-  "Stissing Center||2026-11-06||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793269446505
   },
   "Assembly Kingston||2026-11-07||8:00 pm": {
     "status": "rejected",
