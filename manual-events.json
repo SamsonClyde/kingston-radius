@@ -29307,7 +29307,7 @@
   },
   {
     "id": 1792763700062,
-    "title": "You Don't Need  Smartphone - QWIP",
+    "title": "You Don't Need  Smartphone - Lorraine Salisbury, Ian Donohue",
     "date": "2026-11-11",
     "time": "19:00",
     "venue": "The Draw",
@@ -29317,7 +29317,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794089114934-1000091211.jpg",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1792763924635,
