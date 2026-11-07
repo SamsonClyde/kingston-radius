@@ -32168,5 +32168,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794052455497,
+    "title": "Nicer Days, Carly Flowers",
+    "date": "2026-11-28",
+    "time": "18:30",
+    "venue": "The Parlour",
+    "venueUrl": "https://www.instagram.com/theparlouron1main/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/ZQZqCGA7gysXWpmi7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794052455119-unnamed-2.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
