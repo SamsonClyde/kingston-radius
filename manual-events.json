@@ -32225,5 +32225,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794137259117,
+    "title": "Ukrainian Christmas Concert - Sofiya Vorobets and Friends",
+    "date": "2026-12-13",
+    "time": "13:00",
+    "venue": "Soyuzivka",
+    "venueUrl": "https://soyuzivka.com/events/calendar-of-events/",
+    "location": "Kerhonkson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GMq2kokoye5V1SnG7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794137253614-sofiya-vorobets-819x1024.jpg",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
