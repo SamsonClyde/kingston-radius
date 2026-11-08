@@ -7404,8 +7404,13 @@ try {
         if (pick.style.display !== 'none') { pick.style.display = 'none'; tg.setAttribute('aria-expanded', 'false'); return; }
         let tsr = 0; for (let i = 1; i <= TOTAL; i++) tsr += nStar(i); let h = '<div id="run-pcap" style="text-align:center;font-size:12px;min-height:18px;margin-bottom:4px">Stars ' + tsr + '/' + TOTAL * 3 + '. Pick a stage to replay (smokes, no hits, par time).</div><div style="display:grid;grid-template-columns:repeat(10,1fr);gap:4px;max-height:210px;overflow:auto;padding:2px">';
         for (let i = 1; i <= TOTAL; i++) { const n = nStar(i), lock = i > saved; h += '<button type="button" class="btn" data-lv="' + i + '"' + (lock ? ' disabled' : '') + ' style="padding:3px 0;font-size:11px;line-height:1.1;min-width:0;' + (i % 5 === 0 ? 'border-bottom:3px solid #c0392b;' : '') + '">' + i + '<br><span style="font-size:9px;letter-spacing:-1px;color:' + (n === 3 ? '#e0a800' : '#888') + '">' + (lock ? '\u00b7\u00b7\u00b7' : '\u2605'.repeat(n) + '\u2606'.repeat(3 - n)) + '</span></button>'; }
-        pick.innerHTML = h + '</div>'; pick.style.display = 'block'; tg.setAttribute('aria-expanded', 'true');
+        pick.innerHTML = h + '</div><div style="text-align:center;margin-top:8px"><button type="button" class="btn" id="run-reset">Reset all progress</button></div>'; pick.style.display = 'block'; tg.setAttribute('aria-expanded', 'true');
         const cap = document.getElementById('run-pcap');
+        { const rb = document.getElementById('run-reset'); let armed = 0, tm0 = 0;
+          rb.onclick = () => {
+            if (!armed) { armed = 1; rb.textContent = 'Click again to erase stage progress and stars'; tm0 = setTimeout(() => { armed = 0; rb.textContent = 'Reset all progress'; }, 4000); return; }
+            clearTimeout(tm0); saved = 1; pwStore = 0; pw = 0; stars = {}; try { ['kr_rayrun_lv', 'kr_rayrun_pw', 'kr_rayrun_stars'].forEach(k => localStorage.removeItem(k)); } catch (e) {}
+            pick.style.display = 'none'; tg.setAttribute('aria-expanded', 'false'); begin(1); } }
         pick.querySelectorAll('button[data-lv]').forEach(b => { const lv = +b.dataset.lv, show = () => { cap.textContent = 'Stage ' + lv + ': ' + theme(lv).n + '  \u00b7  vs. ' + (lv % 5 === 0 ? bossDef(lv).name + ' (boss)' : vill(lv).name); }; b.onmouseenter = show; b.onfocus = show; b.onclick = () => { pick.style.display = 'none'; tg.setAttribute('aria-expanded', 'false'); begin(lv); }; });
       };
     }
