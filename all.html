@@ -6491,7 +6491,7 @@ try {
       return (themeCache[lv] = K);
     };
     const rngFor = lv => { let a = (lv * 2654435761 + 12345) >>> 0; return () => { a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; };
-    let decor = [], pwStore = pwInit, curV = null, lobs = [], warns = [], shots = [], waves = [], plats = [], bumps = [], texts = [], pw = 0, fcool = 0, dropT = 0, stageT = 0, hint = 0, bricks = [], active = false, grid, W, coins, foes, items, hazards, door, cps, cpy, level, lives, score, got, phase, p, cam, inv, keys, tm, raf = 0, last = 0, acc = 0, msg = '', msgT = 0, bgT = 0, flash = 0, parts = [], boss = null;
+    let paused = false, shk = 0, hitsT = 0, sum = null, stars = {}, decor = [], pwStore = pwInit, curV = null, lobs = [], warns = [], shots = [], waves = [], plats = [], bumps = [], texts = [], pw = 0, fcool = 0, dropT = 0, stageT = 0, hint = 0, bricks = [], active = false, grid, W, coins, foes, items, hazards, door, cps, cpy, level, lives, score, got, phase, p, cam, inv, keys, tm, raf = 0, last = 0, acc = 0, msg = '', msgT = 0, bgT = 0, flash = 0, parts = [], boss = null;
 
     function build(lv) {
       const R = rngFor(lv), d = 1 + (lv - 1) / 6, n = Math.min(6 + Math.floor((lv - 1) / 3), 26), bossLv = lv % 5 === 0, bhp = 5 + Math.floor(lv / 8) + (lv % 10 === 0 ? 2 : 0), V = vill(lv), BD = bossLv ? bossDef(lv) : null; curV = V;
@@ -6543,7 +6543,7 @@ try {
       const pcx = p.x + p.w / 2, tcx = h.x + 15;
       if (h.st === 0) { if (h.cd > 0) h.cd--; else if (Math.abs(pcx - tcx) < 44 && p.y > h.y) { h.st = 1; h.t = 0; } }
       else if (h.st === 1) { h.t++; if (h.t > 22) { h.st = 2; h.vy = 1; } }
-      else if (h.st === 2) { h.vy = Math.min(10, h.vy + .7); h.y += h.vy; let gt = 7 * TS; const c = Math.floor(tcx / TS); for (let r = Math.floor(h.y / TS); r < ROWS; r++) if (grid[r][c] === 1) { gt = r * TS; break; } if (h.y + h.h >= gt) { h.y = gt - h.h; h.st = 3; h.t = 0; burst(h.x + 15, gt, '#e8d5b0', 8); flash = 3; } }
+      else if (h.st === 2) { h.vy = Math.min(10, h.vy + .7); h.y += h.vy; let gt = 7 * TS; const c = Math.floor(tcx / TS); for (let r = Math.floor(h.y / TS); r < ROWS; r++) if (grid[r][c] === 1) { gt = r * TS; break; } if (h.y + h.h >= gt) { h.y = gt - h.h; h.st = 3; h.t = 0; burst(h.x + 15, gt, '#e8d5b0', 8); flash = 3; if (Math.abs(h.x - p.x) < 260) { shk = Math.max(shk, 5); snd('thump'); } } }
       else if (h.st === 3) { h.t++; if (h.t > 50) h.st = 4; }
       else { h.y -= 2; if (h.y <= h.y0) { h.y = h.y0; h.st = 0; h.cd = 40; } }
     }
@@ -6638,7 +6638,7 @@ try {
       return false;
     }
     function brickHit(r, c) {
-      if (grid[r][c] !== 3) return; grid[r][c] = 4; bumps.push({ r, c, t: 10 });
+      if (grid[r][c] !== 3) return; snd('brick'); grid[r][c] = 4; bumps.push({ r, c, t: 10 });
       items.push({ kind: 'pw', x: c * TS + 6, y: r * TS - 24, w: 18, h: 20, got: false }); addScore(20); burst(c * TS + 15, r * TS + 6, '#ffb066', 8);
     }
     function bumpHead() {
@@ -6649,7 +6649,7 @@ try {
     function shoot() {
       if (!pw) { if (!hint) { msg = 'Hit a \u266A brick from below for a cassette'; msgT = 70; hint = 120; } return; }
       const vin = pw > 1; if (fcool > 0 || shots.length >= (vin ? 3 : 2)) return; fcool = vin ? 14 : 20;
-      shots.push({ x: p.x + p.w / 2 + p.face * 12, y: p.y + 10, vx: p.face * (vin ? 6 : 5.2), vy: vin ? -1 : 0, kind: vin ? 'v' : 't', life: vin ? 170 : 75, wb: 0, a: 0, r: vin ? 8 : 7 });
+      snd('shoot'); shots.push({ x: p.x + p.w / 2 + p.face * 12, y: p.y + 10, vx: p.face * (vin ? 6 : 5.2), vy: vin ? -1 : 0, kind: vin ? 'v' : 't', life: vin ? 170 : 75, wb: 0, a: 0, r: vin ? 8 : 7 });
     }
     function shotsStep() {
       for (const sh of shots) {
@@ -6683,11 +6683,46 @@ try {
       shots = shots.filter(q => q.life > 0 && q.x > cam - 60 && q.x < cam + VW + 60 && q.y < ROWS * TS + 40); waves = waves.filter(w => w.life > 0); lobs = lobs.filter(l => l.life > 0 && l.y < ROWS * TS + 40); warns = warns.filter(w => w.t > 0);
     }
 
+    try { stars = JSON.parse(localStorage.getItem('kr_rayrun_stars') || '{}') || {}; } catch (e) { stars = {}; }
+    let sndOn = false, actx = null; try { sndOn = localStorage.getItem('kr_rayrun_snd') === '1'; } catch (e) {}
+    function snd(n) {   // tiny chiptune effects, off until the player turns Sound on
+      if (!sndOn) return;
+      try {
+        if (!actx) { const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return; actx = new AC(); }
+        if (actx.state === 'suspended') actx.resume();
+        const t0 = actx.currentTime;
+        const tone = (f0, f1, d, ty, v, dl) => { const o = actx.createOscillator(), g = actx.createGain(), st = t0 + (dl || 0); o.type = ty || 'square'; o.frequency.setValueAtTime(f0, st); if (f1 !== f0) o.frequency.exponentialRampToValueAtTime(f1, st + d); g.gain.setValueAtTime(v || .05, st); g.gain.exponentialRampToValueAtTime(.0001, st + d); o.connect(g); g.connect(actx.destination); o.start(st); o.stop(st + d + .03); };
+        const noise = (d, v) => { const k = Math.floor(actx.sampleRate * d), b = actx.createBuffer(1, k, actx.sampleRate), a = b.getChannelData(0); for (let i = 0; i < k; i++) a[i] = (Math.random() * 2 - 1) * (1 - i / k); const sr = actx.createBufferSource(), g = actx.createGain(); sr.buffer = b; g.gain.value = v || .08; sr.connect(g); g.connect(actx.destination); sr.start(t0); };
+        const arp = (fs, d, v, ty) => fs.forEach((f, i) => tone(f, f, d, ty || 'square', v || .045, i * d * .85));
+        switch (n) {
+          case 'jump': tone(260, 540, .12, 'square', .035); break;
+          case 'coin': tone(988, 988, .05, 'square', .035); tone(1319, 1319, .1, 'square', .035, .05); break;
+          case 'stomp': tone(240, 70, .13, 'triangle', .11); noise(.06, .05); break;
+          case 'hurt': tone(320, 70, .32, 'sawtooth', .06); break;
+          case 'power': arp([523, 659, 784, 1047], .08); break;
+          case 'life': arp([660, 880, 1175], .1, .05, 'triangle'); break;
+          case 'smoke': tone(440, 880, .3, 'sine', .07); break;
+          case 'shoot': tone(900, 380, .07, 'square', .03); break;
+          case 'brick': tone(190, 120, .09, 'square', .06); break;
+          case 'spring': tone(200, 760, .2, 'sine', .08); break;
+          case 'thump': noise(.12, .1); tone(90, 40, .16, 'sine', .12); break;
+          case 'cp': arp([587, 784], .09, .04, 'triangle'); break;
+          case 'bhit': noise(.14, .09); tone(160, 60, .2, 'sawtooth', .07); break;
+          case 'bdown': noise(.55, .12); tone(420, 50, .55, 'sawtooth', .08); break;
+          case 'clear': arp([523, 659, 784, 1047, 1319], .11, .045); break;
+          case 'over': arp([392, 330, 262, 196], .2, .06, 'triangle'); break;
+          case 'tick': tone(700, 700, .04, 'square', .025); break;
+        }
+      } catch (e) {}
+    }
+    const fmtT = t => Math.floor(t / 60) + ':' + String(Math.floor(t % 60)).padStart(2, '0');
+    function saveStars(lv, bits) { stars[lv] = (stars[lv] || 0) | bits; try { localStorage.setItem('kr_rayrun_stars', JSON.stringify(stars)); } catch (e) {} }
+    const nStar = lv => { const b = stars[lv] || 0; return (b & 1 ? 1 : 0) + (b & 2 ? 1 : 0) + (b & 4 ? 1 : 0); };
     const ev = d => document.dispatchEvent(new CustomEvent('krrun', { detail: d }));
     function saveProgress(n) { n = Math.min(TOTAL, n); if (n > saved) { saved = n; try { localStorage.setItem('kr_rayrun_lv', String(n)); } catch (e) {} } contBtn(); }
     function contBtn() {   // Start always picks up at the furthest stage reached: dying or finishing never sends Ray back to the beginning
       const b = document.getElementById('run-go'); if (!b) return;
-      if (!phase) { b.textContent = saved > 1 ? 'Start at stage ' + saved : 'Start'; stat('Press Start to ' + (saved > 1 ? 'pick up at stage ' + saved + ' of ' + TOTAL + ' (your progress is saved)' : 'begin stage 1 of ' + TOTAL) + '. You gain a life for every stage you clear, and a hit only costs you a power level while you have one, but the stages are tough. Run with the arrow keys or A/D, jump with Space (Down drops through planks), X shoots, R goes back to the checkpoint if you get stuck. Hit a music brick for a cassette, another for vinyl. On a phone, use the buttons.'); }
+      if (!phase) { b.textContent = saved > 1 ? 'Start at stage ' + saved : 'Start'; stat('Press Start to ' + (saved > 1 ? 'pick up at stage ' + saved + ' of ' + TOTAL + ' (your progress is saved)' : 'begin stage 1 of ' + TOTAL) + '. You gain a life for every stage you clear, and a hit only costs you a power level while you have one, but the stages are tough. Run with the arrow keys or A/D, jump with Space (Down drops through planks), X shoots, R goes back to the checkpoint if you get stuck, P pauses. Hit a music brick for a cassette, another for vinyl. Pick any cleared stage with Stages, and turn on Sound if you like. On a phone, use the buttons.'); }
     }
     function winEnd() {
       if (score > bestStart && bestStart > 0 && score >= 500) document.dispatchEvent(new CustomEvent('krbest', { detail: { game: 'run', score } }));
@@ -6702,7 +6737,7 @@ try {
     function startLevel() {
       build(level); got = 0; const s = spawnAt(2 * TS);
       p = { x: s.x, y: s.y, w: 20, h: 26, vx: 0, vy: 0, face: 1, ground: false, coy: 0, jb: 0, ang: 0, sq: 0, cp: 0, smoke: 0, fast: 0, air: 0 };
-      cam = 0; inv = 60; keys = { l: false, r: false, j: false, dn: false, f: false }; stageT = 0; fcool = 0; dropT = 0; hint = 0; phase = 'play'; parts = []; { const K = theme(level); msg = ['Stage ' + level + ' of ' + TOTAL + '  ·  ' + K.n, 'vs. ' + vill(level).name, [boss ? 'BOSS: ' + boss.name : '', K.mod ? MODN[K.mod] : '', pw ? 'Carrying ' + (pw > 1 ? 'vinyl' : 'cassette') + ' over' : ''].filter(Boolean).join('  ·  ')].filter(Boolean).join('\n'); } msgT = 120; hud();
+      paused = false; sum = null; hitsT = 0; shk = 0; cam = 0; inv = 60; keys = { l: false, r: false, j: false, dn: false, f: false }; stageT = 0; fcool = 0; dropT = 0; hint = 0; phase = 'play'; parts = []; { const K = theme(level); msg = ['Stage ' + level + ' of ' + TOTAL + '  ·  ' + K.n, 'vs. ' + vill(level).name, [boss ? 'BOSS: ' + boss.name : '', K.mod ? MODN[K.mod] : '', pw ? 'Carrying ' + (pw > 1 ? 'vinyl' : 'cassette') + ' over' : ''].filter(Boolean).join('  ·  ')].filter(Boolean).join('\n'); } msgT = 120; hud();
     }
     function hud() { stat('Stage ' + level + '/' + TOTAL + ' (' + theme(level).n + ')  ·  vs. ' + (boss ? boss.name : vill(level).name) + (theme(level).mod ? '  ·  ' + MODN[theme(level).mod] : '') + '  ·  Smokes ' + got + '  ·  Lives ' + lives + '  ·  Score ' + score + (best ? '  ·  Best ' + best : '')); }
     function addScore(n) { score += n; if (score > best) { best = score; try { localStorage.setItem('kr_rayrun_best', String(best)); } catch (e) {} } }
@@ -6710,21 +6745,22 @@ try {
     function puff(x, y) { parts.push({ x, y, vx: (Math.random() - .5) * .6, vy: -.5 - Math.random() * .5, life: 40 + Math.random() * 20, col: '#cfd3d8', puff: 1, r: 3 + Math.random() * 3 }); }
     function hurt() {
       if (inv > 0 || p.smoke > 0) return;
+      hitsT++; shk = 7; snd('hurt');
       if (pw > 0) { pw--; savePw(); inv = 70; flash = 8; p.vy = -7; p.vx = -p.face * 3; msg = pw ? 'Back down to a cassette' : 'Lost the tape'; msgT = 50; burst(p.x + 10, p.y + 8, '#ffd24a', 10); return; }
-      lives--; pw = 0; savePw(); p.fast = 0; flash = 12; hud();
-      if (lives <= 0) { phase = 'over'; if (score > bestStart && bestStart > 0 && score >= 500) document.dispatchEvent(new CustomEvent('krbest', { detail: { game: 'run', score } })); msg = 'Game over'; msgT = 1e9; document.getElementById('run-go').textContent = 'Retry stage ' + saved; stat('Game over. Score ' + score + (score >= best && score > 0 ? '  ·  New best!' : '  ·  Best ' + best) + '  ·  Your progress is saved: you restart at stage ' + saved + '.'); return; }
+      lives--; pw = 0; savePw(); p.fast = 0; flash = 12; shk = 10; burst(p.x + 10, p.y + 12, '#ff6a5a', 16); burst(p.x + 10, p.y + 8, '#ffffff', 6); hud();
+      if (lives <= 0) { snd('over'); phase = 'over'; if (score > bestStart && bestStart > 0 && score >= 500) document.dispatchEvent(new CustomEvent('krbest', { detail: { game: 'run', score } })); msg = 'Game over'; msgT = 1e9; document.getElementById('run-go').textContent = 'Retry stage ' + saved; stat('Game over. Score ' + score + (score >= best && score > 0 ? '  ·  New best!' : '  ·  Best ' + best) + '  ·  Your progress is saved: you restart at stage ' + saved + '.'); return; }
       const s = spawnAt(cps[p.cp]); p.x = s.x; p.y = s.y; p.vx = p.vy = 0; inv = 90; cam = Math.max(0, Math.min(W * TS - VW, p.x - VW * .4)); rearm();
     }
 
     const FOEPTS = { e: 50, k: 75, b: 80, n: 80, a: 60, f: 70, c: 70, j: 60, h: 70, s: 80, r: 60, g: 90 };
     function bossHit(f) {
       if (f.hit > 0 || f.ghost) return false;
-      f.hp--; f.hit = 46; burst(f.x + f.w / 2, f.y + 6, '#ffd27a', 12); addScore(100);
+      f.hp--; f.hit = 46; shk = Math.max(shk, 6); if (f.hp > 0) snd('bhit'); burst(f.x + f.w / 2, f.y + 6, '#ffd27a', 12); addScore(100);
       if (f.hp <= 0) bossDown(f); else f.vx = Math.sign(f.vx || 1) * Math.min(3.8, 1.2 + (f.mx - f.hp) * .55);
       return true;
     }
     function bossDown(f) {
-      f.dead = 1; addScore(500); msg = f.name + ' is quiet!'; msgT = 90; burst(f.x + f.w / 2, f.y + 20, '#ffffff', 22); burst(f.x + f.w / 2, f.y + 10, f.sk.c1, 16);
+      f.dead = 1; shk = 16; snd('bdown'); addScore(500); msg = f.name + ' is quiet!'; msgT = 90; burst(f.x + f.w / 2, f.y + 20, '#ffffff', 22); burst(f.x + f.w / 2, f.y + 10, f.sk.c1, 16);
       for (const m of foes) if (m.minion && !m.dead) { m.dead = 1; burst(m.x + 12, m.y + 8, '#ffffff', 6); }
       lobs.length = 0; waves.length = 0; warns.length = 0;
     }
@@ -6833,7 +6869,7 @@ try {
       if (MD === 'belt' && p.ground) { const bx = level % 2 ? -.8 : .8; if (!hits(p.x + bx, p.y, p.w, p.h)) p.x += bx; }
       // jump
       p.coy = p.ground ? 6 : Math.max(0, p.coy - 1); p.jb = Math.max(0, p.jb - 1);
-      if (p.jb > 0 && p.coy > 0) { p.vy = MD === 'lowg' ? -8.4 : -9.6; p.jb = 0; p.coy = 0; p.ground = false; p.sq = -.25; }
+      if (p.jb > 0 && p.coy > 0) { p.vy = MD === 'lowg' ? -8.4 : -9.6; p.jb = 0; p.coy = 0; p.ground = false; p.sq = -.25; snd('jump'); }
       if (p.vy >= 0) p.bounce = false;
       if (!keys.j && p.vy < -3.6 && !p.bounce) p.vy = -3.6;   // letting go of jump cuts a jump short, but never a spring or a stomp bounce
       // vertical
@@ -6847,14 +6883,14 @@ try {
       if (p.fast > 0) { p.fast--; if (bgT % 4 === 0) parts.push({ x: p.x + p.w / 2 - p.face * 8, y: p.y + p.h - 4, vx: -p.face * .5, vy: -.3, life: 14, col: '#f0d9b0' }); }
       if (p.y > ROWS * TS + 60) { const sm = p.smoke; p.smoke = 0; inv = 0; pw = 0; hurt(); p.smoke = sm; if (phase === 'play' && p.y > ROWS * TS + 60) { const s = spawnAt(cps[p.cp]); p.x = s.x; p.y = s.y; p.vy = 0; } }
       // checkpoints
-      for (let i = cps.length - 1; i > p.cp; i--) if (p.x > cps[i]) { p.cp = i; break; }
+      for (let i = cps.length - 1; i > p.cp; i--) if (p.x > cps[i]) { p.cp = i; texts.push({ x: p.x, y: p.y - 12, t: 'Checkpoint', life: 50 }); snd('cp'); burst(p.x + 10, p.y + 12, '#9ad7ff', 6); break; }
       // stubs
-      for (const c of coins) if (!c.got && p.x < c.x + c.w && p.x + p.w > c.x && p.y < c.y + c.h && p.y + p.h > c.y) { c.got = true; got++; addScore(10); ev({ kind: 'coin', el: cv }); burst(c.x + 7, c.y + 9, '#ff9a3c', 5); if (got % 10 === 0) { p.smoke = 330; msg = 'Smoke break!'; msgT = 70; burst(p.x + 10, p.y + 8, '#cfd3d8', 10); } hud(); }
+      for (const c of coins) if (!c.got && p.x < c.x + c.w && p.x + p.w > c.x && p.y < c.y + c.h && p.y + p.h > c.y) { c.got = true; got++; addScore(10); ev({ kind: 'coin', el: cv }); snd('coin'); burst(c.x + 7, c.y + 9, '#ff9a3c', 5); if (got % 10 === 0) { snd('smoke'); p.smoke = 330; msg = 'Smoke break!'; msgT = 70; burst(p.x + 10, p.y + 8, '#cfd3d8', 10); } hud(); }
       for (const it of items) if (!it.got && p.x < it.x + it.w && p.x + p.w > it.x && p.y < it.y + it.h && p.y + p.h > it.y) {
         it.got = true; addScore(25);
         if (it.kind === 'pw') { setTimeout(savePw, 0); addScore(75); if (pw === 0) { pw = 1; msg = 'Cassette! X shoots tapes'; } else if (pw === 1) { pw = 2; msg = 'VINYL! Records bounce and pierce'; } else msg = 'Bonus record! +100'; if (pw === 2 && msg.startsWith('Bonus')) addScore(100); burst(it.x + 9, it.y + 10, pw > 1 ? '#c9a8ff' : '#ffd24a', 14); }
         else if (it.kind === 'h') { lives = Math.min(9, lives + 1); msg = 'Extra life!'; burst(it.x + 9, it.y + 10, '#ff5a6a', 10); } else { p.fast = 540; msg = 'Coffee! Fast legs.'; burst(it.x + 9, it.y + 10, '#c89a6a', 10); }
-        msgT = 60; hud();
+        snd(it.kind === 'h' ? 'life' : 'power'); msgT = 60; hud();
       }
       for (const h of hazards) if (h.kind === 'thwomp') thwompStep(h);
       for (const h of hazards) {
@@ -6862,7 +6898,7 @@ try {
         if (h.kind === 'spike') { if (p.smoke <= 0) hurt(); }
         else if (h.kind === 'pop') { if (popUp(h) && p.smoke <= 0) hurt(); }
         else if (h.kind === 'thwomp') { if ((h.st === 2 || h.st === 3) && p.smoke <= 0) hurt(); }
-        else if (p.vy >= 0 && p.y + p.h - h.y < 14) { p.vy = MD === 'lowg' ? -11 : -14; p.bounce = true; p.sq = .4; p.ground = false; h.sq = 8; burst(h.x + 13, h.y, '#dfe3e8', 4); }
+        else if (p.vy >= 0 && p.y + p.h - h.y < 14) { snd('spring'); p.vy = MD === 'lowg' ? -11 : -14; p.bounce = true; p.sq = .4; p.ground = false; h.sq = 8; burst(h.x + 13, h.y, '#dfe3e8', 4); }
       }
       hazards.forEach(h => { if (h.sq) h.sq--; });
       // villains and bosses
@@ -6874,7 +6910,7 @@ try {
         if (p.x < f.x + f.w && p.x + p.w > f.x && p.y < f.y + f.h && p.y + p.h > f.y) {
           if (p.smoke > 0 && f.kind !== 'B' && !f.inv) { f.dead = 1; addScore(50); burst(f.x + f.w / 2, f.y + 8, '#bfc3c9', 8); hud(); }
           else if (p.vy > .5 && p.y + p.h - f.y < (f.kind === 'B' ? 22 : 16) && !f.nostomp && !f.inv) {
-            p.vy = keys.j ? -9 : -6.5; p.bounce = true;
+            snd(f.kind === 'B' ? 'bhit' : 'stomp'); p.vy = keys.j ? -9 : -6.5; p.bounce = true;
             if (f.kind === 'B') bossHit(f);
             else { f.dead = 1; p.air = (p.air || 0) + 1; const mu = Math.min(4, p.air), base = (FOEPTS[f.kind] || 50) * mu; addScore(base); texts.push({ x: f.x + f.w / 2, y: f.y - 4, t: '+' + base + (mu > 1 ? ' x' + mu : ''), life: 44 }); burst(f.x + f.w / 2, f.y + 8, f.sk ? f.sk.c1 : '#bfc3c9', 8); }
             hud();
@@ -6884,10 +6920,13 @@ try {
       shotsStep();
       if (door && boss && !boss.dead && p.x + p.w > door.x - 6 && msgT <= 0) { msg = 'Defeat ' + boss.name + ' first!'; msgT = 70; }
       if (door && (!boss || boss.dead) && p.x < door.x + door.w && p.x + p.w > door.x && p.y < door.y + door.h && p.y + p.h > door.y - 240) {   // the door counts all the way up, so jumping over it still finishes the stage
-        const par = W / 75, tb = Math.min(300, Math.max(0, Math.round(par - stageT / 60)) * 5), bonus = 200 + lives * 50 + got * 5 + (boss ? 300 : 0) + tb; if (tb) texts.push({ x: p.x, y: p.y - 10, t: 'Time +' + tb, life: 60 }); addScore(bonus); ev({ kind: 'clear', level, el: cv }); burst(door.x + 15, door.y + 20, '#ffffff', 14);
+        const secs = stageT / 60, parT = W * .3 + (boss ? 25 : 0), tb = Math.min(300, Math.max(0, Math.round((parT - secs) / 2)) * 5), tot = coins.length;
+        const g = [tot === 0 || got >= Math.ceil(tot * .9), hitsT === 0, secs <= parT], perfect = g[0] && g[1] && g[2];
+        const bonus = 200 + lives * 50 + got * 5 + (boss ? 300 : 0) + tb + (perfect ? 300 : 0); if (tb) texts.push({ x: p.x, y: p.y - 10, t: 'Time +' + tb, life: 60 }); addScore(bonus); ev({ kind: 'clear', level, el: cv }); burst(door.x + 15, door.y + 20, '#ffffff', 14); snd('clear');
+        saveStars(level, (g[0] ? 1 : 0) | (g[1] ? 2 : 0) | (g[2] ? 4 : 0)); sum = { lv: level, got, tot, hits: hitsT, secs, par: parT, g, bonus, perfect };
         saveProgress(level + 1); savePw();
         if (level >= TOTAL) { phase = 'won'; addScore(5000); msg = 'You finished the tour!'; msgT = 1e9; hud(); winEnd(); }
-        else { lives = Math.min(9, lives + 1); phase = 'clear'; msg = 'Stage ' + level + ' clear!  +' + bonus + '  +1 life'; msgT = 120; hud(); }
+        else { lives = Math.min(9, lives + 1); phase = 'clear'; msg = ''; msgT = 190; hud(); }
       }
       cam += (Math.max(0, Math.min(W * TS - VW, p.x + p.w / 2 - VW * .4)) - cam) * .12;
     }
@@ -7209,7 +7248,8 @@ try {
       else if (K.night) { for (let i = 0; i < 14; i++) { const x = wrap(i * 97 + Math.sin(t / 60 + i) * 24 - par, 500) - 10, y = 110 + (i * 53) % 90 + Math.sin(t / 45 + i * 2) * 10; cx.fillStyle = 'rgba(255,243,160,' + (.35 + .35 * Math.sin(t / 12 + i * 3)) + ')'; cx.beginPath(); cx.arc(x, y, 1.8, 0, 7); cx.fill(); } }
       else { cx.strokeStyle = 'rgba(30,30,40,.6)'; cx.lineWidth = 1.3; for (let i = 0; i < 3; i++) { const x = wrap(i * 230 + t * (.7 + i * .1) - par, 760) - 100, y = 38 + i * 19 + Math.sin(t / 50 + i) * 6, f = Math.sin(t / 5 + i * 2) * 3; cx.beginPath(); cx.moveTo(x - 6, y - 2 - f); cx.lineTo(x, y + 1); cx.lineTo(x + 6, y - 2 - f); cx.stroke(); } }
     }
-    function draw() {
+    function draw() { cx.save(); if (shk > .5 && grid) cx.translate((Math.random() - .5) * shk, (Math.random() - .5) * shk); draw0(); cx.restore(); }
+    function draw0() {
       const K = grid ? theme(level) : theme(saved || 1);
       skyAndFar(K);
       if (!grid) { cx.fillStyle = '#fff'; cx.font = '600 20px DM Sans, sans-serif'; cx.textAlign = 'center'; cx.fillText('Ray Run', VW / 2, VH / 2 - 6); cx.font = '14px DM Sans, sans-serif'; cx.fillText('Press Start', VW / 2, VH / 2 + 18); return; }
@@ -7305,6 +7345,11 @@ try {
       if (p && p.smoke > 0) { cx.fillStyle = '#cfd3d8'; cx.fillText('Smoke break ' + Math.ceil(p.smoke / 60) + 's', 235, 15); } else if (p && p.fast > 0) { cx.fillStyle = '#e0b98a'; cx.fillText('Coffee ' + Math.ceil(p.fast / 60) + 's', 235, 15); }
       if (pw) { drawPower(346, 11, pw > 1 ? 'v' : 't', false, .75); cx.textAlign = 'left'; cx.fillStyle = pw > 1 ? '#c9a8ff' : '#ffd24a'; cx.font = '600 11px DM Sans, sans-serif'; cx.fillText(pw > 1 ? 'vinyl' : 'tape', 358, 15); cx.font = '600 12px DM Sans, sans-serif'; }
       cx.fillStyle = '#fff'; cx.textAlign = 'right'; cx.fillText('Score ' + score, VW - 8, 15);
+      if (p && door) {   // progress bar: where Ray is, the checkpoints and the stage door
+        const tx = door.x, fr = Math.max(0, Math.min(1, p.x / tx)); cx.fillStyle = 'rgba(0,0,0,.4)'; cx.fillRect(0, 22, VW, 4); cx.fillStyle = '#ffb066'; cx.fillRect(0, 22, VW * fr, 4);
+        cx.fillStyle = 'rgba(255,255,255,.7)'; for (let i = 1; i < cps.length; i++) cx.fillRect(Math.round(cps[i] / tx * VW) - 1, 22, 2, 4);
+        cx.fillStyle = boss && !boss.dead ? '#ff5a5a' : '#9ff0a8'; cx.fillRect(VW - 4, 21, 4, 6);
+      }
       if (phase === 'won') {
         cx.fillStyle = 'rgba(10,6,24,.78)'; cx.fillRect(0, 0, VW, VH); cx.textAlign = 'center';
         for (let i = 0; i < 36; i++) { const a = bgT / 40 + i, x = (i * 53 + Math.sin(a) * 30) % VW, y = ((i * 37 + bgT * (1 + (i % 3) * .6)) % (VH + 20)) - 10; cx.fillStyle = ['#ffd24a', '#ff6a7a', '#8fe0ff', '#c9a8ff'][i % 4]; cx.fillRect(x, y, 4, 7); }
@@ -7313,8 +7358,18 @@ try {
         cx.fillStyle = '#c9ced6'; cx.font = '13px DM Sans, sans-serif'; cx.fillText('Press Play again to run it once more', VW / 2, VH / 2 + 46);
       }
       else if (flash > 0) { cx.fillStyle = 'rgba(192,57,43,' + flash / 24 + ')'; cx.fillRect(0, 0, VW, VH); }
-      if (phase === 'play' && !active) { cx.fillStyle = 'rgba(0,0,0,.5)'; cx.fillRect(0, VH / 2 - 26, VW, 52); cx.fillStyle = '#fff'; cx.textAlign = 'center'; cx.font = '600 16px DM Sans, sans-serif'; cx.fillText('Paused. Tap or click the game to play.', VW / 2, VH / 2 + 6); }
-      else if (msgT > 0 && msg && phase !== 'won') { const ls = msg.split('\n'), n = ls.length, hh = n > 1 ? 14 + n * 24 : 52; cx.fillStyle = 'rgba(0,0,0,.58)'; cx.fillRect(0, VH / 2 - hh / 2, VW, hh); cx.fillStyle = '#fff'; cx.textAlign = 'center'; ls.forEach((t, i) => { cx.font = '700 ' + (n > 1 ? (i ? 15 : 17) : (t.length > 24 ? 17 : 22)) + 'px DM Sans, sans-serif'; cx.fillStyle = i === 2 ? '#ffd27a' : '#fff'; cx.fillText(t, VW / 2, n > 1 ? VH / 2 - hh / 2 + 28 + i * 24 : VH / 2 + 8); }); }
+      if (paused && phase === 'play') { cx.fillStyle = 'rgba(0,0,0,.6)'; cx.fillRect(0, 0, VW, VH); cx.fillStyle = '#fff'; cx.textAlign = 'center'; cx.font = '700 26px DM Sans, sans-serif'; cx.fillText('Paused', VW / 2, VH / 2 - 6); cx.font = '13px DM Sans, sans-serif'; cx.fillStyle = '#c9ced6'; cx.fillText('Press P or Esc, tap the game, or press Resume', VW / 2, VH / 2 + 18); }
+      else if (phase === 'play' && !active) { cx.fillStyle = 'rgba(0,0,0,.5)'; cx.fillRect(0, VH / 2 - 26, VW, 52); cx.fillStyle = '#fff'; cx.textAlign = 'center'; cx.font = '600 16px DM Sans, sans-serif'; cx.fillText('Paused. Tap or click the game to play.', VW / 2, VH / 2 + 6); }
+      else if (msgT > 0 && msg && phase !== 'won' && phase !== 'clear') { const ls = msg.split('\n'), n = ls.length, hh = n > 1 ? 14 + n * 24 : 52; cx.fillStyle = 'rgba(0,0,0,.58)'; cx.fillRect(0, VH / 2 - hh / 2, VW, hh); cx.fillStyle = '#fff'; cx.textAlign = 'center'; ls.forEach((t, i) => { cx.font = '700 ' + (n > 1 ? (i ? 15 : 17) : (t.length > 24 ? 17 : 22)) + 'px DM Sans, sans-serif'; cx.fillStyle = i === 2 ? '#ffd27a' : '#fff'; cx.fillText(t, VW / 2, n > 1 ? VH / 2 - hh / 2 + 28 + i * 24 : VH / 2 + 8); }); }
+      if (phase === 'clear' && sum) {   // stage summary with the three goals
+        cx.fillStyle = 'rgba(8,6,20,.84)'; cx.fillRect(56, 40, VW - 112, VH - 80); cx.strokeStyle = '#ffd27a'; cx.lineWidth = 2; cx.strokeRect(57, 41, VW - 114, VH - 82);
+        cx.textAlign = 'center'; cx.fillStyle = '#ffd27a'; cx.font = '700 21px DM Sans, sans-serif'; cx.fillText(sum.perfect ? 'Stage ' + sum.lv + ' perfect!' : 'Stage ' + sum.lv + ' clear!', VW / 2, 70);
+        cx.fillStyle = '#c9ced6'; cx.font = '12px DM Sans, sans-serif'; cx.fillText(theme(sum.lv).n, VW / 2, 88);
+        const rows = [['Smokes ' + sum.got + '/' + sum.tot + '  (90% for the star)', sum.g[0]], ['No hits taken' + (sum.hits ? '  (' + sum.hits + ' hit' + (sum.hits > 1 ? 's' : '') + ')' : ''), sum.g[1]], ['Time ' + fmtT(sum.secs) + '  (par ' + fmtT(sum.par) + ')', sum.g[2]]];
+        rows.forEach((r, i) => { const y = 118 + i * 24; cx.textAlign = 'left'; cx.font = '700 18px DM Sans, sans-serif'; cx.fillStyle = r[1] ? '#ffd24a' : '#555a66'; cx.fillText(r[1] ? '\u2605' : '\u2606', 104, y); cx.font = '14px DM Sans, sans-serif'; cx.fillStyle = r[1] ? '#fff' : '#9aa0ac'; cx.fillText(r[0], 130, y - 1); });
+        cx.textAlign = 'center'; cx.fillStyle = '#9ff0a8'; cx.font = '600 14px DM Sans, sans-serif'; cx.fillText('+' + sum.bonus + ' points' + (sum.perfect ? ' (perfect bonus)' : '') + '   \u00b7   +1 life', VW / 2, 202);
+        cx.fillStyle = '#c9ced6'; cx.font = '12px DM Sans, sans-serif'; cx.fillText('Space or tap for the next stage', VW / 2, 222);
+      }
     }
 
     function tick(t) {
@@ -7323,7 +7378,8 @@ try {
       if (!last) last = t; acc += Math.min(100, t - last); last = t;
       while (acc >= 1000 / 60) {
         acc -= 1000 / 60; bgT++;
-        if (phase === 'play' && active) step();
+        if (phase === 'play' && active && !paused) step();
+        if (shk > 0) shk = Math.max(0, shk - .6);
         parts.forEach(q => { q.x += q.vx; q.y += q.vy; if (!q.puff) q.vy += .15; q.life--; }); parts = parts.filter(q => q.life > 0);
         
         if (flash > 0) flash--; texts.forEach(t => { t.y -= .5; t.life--; }); texts = texts.filter(t => t.life > 0); bumps.forEach(b => b.t--); bumps = bumps.filter(b => b.t > 0);
@@ -7331,11 +7387,33 @@ try {
       }
       draw();
     }
-    function begin(lv0) { active = true; newGame(lv0); document.getElementById('run-go').textContent = 'Restart stage'; if (!raf) raf = requestAnimationFrame(tick); }
+    function begin(lv0) { active = true; newGame(lv0); { const pb = document.getElementById('run-pause'); if (pb) pb.textContent = 'Pause'; } document.getElementById('run-go').textContent = 'Restart stage'; if (!raf) raf = requestAnimationFrame(tick); }
     draw();
     if (!raf) raf = requestAnimationFrame(tick);
 
-    document.getElementById('run-go').onclick = () => begin(saved);
+    document.getElementById('run-go').onclick = () => begin(phase && phase !== 'over' && phase !== 'won' && level ? level : saved);
+    { const go = document.getElementById('run-go'), row2 = document.createElement('div'); row2.style.cssText = 'display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:6px';
+      row2.innerHTML = '<button class="btn" id="run-pause" type="button">Pause</button><button class="btn" id="run-snd" type="button"></button><button class="btn" id="run-stg" type="button" aria-expanded="false">Stages</button>';
+      const pick = document.createElement('div'); pick.id = 'run-pick'; pick.style.cssText = 'display:none;max-width:480px;margin:8px auto 0';
+      go.insertAdjacentElement('afterend', row2); row2.insertAdjacentElement('afterend', pick);
+      const sb = document.getElementById('run-snd'), sbt = () => { sb.textContent = 'Sound: ' + (sndOn ? 'on' : 'off'); sb.setAttribute('aria-pressed', sndOn ? 'true' : 'false'); }; sbt();
+      sb.onclick = () => { sndOn = !sndOn; try { localStorage.setItem('kr_rayrun_snd', sndOn ? '1' : '0'); } catch (e) {} sbt(); if (sndOn) snd('coin'); };
+      document.getElementById('run-pause').onclick = () => togglePause();
+      const tg = document.getElementById('run-stg');
+      tg.onclick = () => {
+        if (pick.style.display !== 'none') { pick.style.display = 'none'; tg.setAttribute('aria-expanded', 'false'); return; }
+        let tsr = 0; for (let i = 1; i <= TOTAL; i++) tsr += nStar(i); let h = '<div id="run-pcap" style="text-align:center;font-size:12px;min-height:18px;margin-bottom:4px">Stars ' + tsr + '/' + TOTAL * 3 + '. Pick a stage to replay (smokes, no hits, par time).</div><div style="display:grid;grid-template-columns:repeat(10,1fr);gap:4px;max-height:210px;overflow:auto;padding:2px">';
+        for (let i = 1; i <= TOTAL; i++) { const n = nStar(i), lock = i > saved; h += '<button type="button" class="btn" data-lv="' + i + '"' + (lock ? ' disabled' : '') + ' style="padding:3px 0;font-size:11px;line-height:1.1;min-width:0;' + (i % 5 === 0 ? 'border-bottom:3px solid #c0392b;' : '') + '">' + i + '<br><span style="font-size:9px;letter-spacing:-1px;color:' + (n === 3 ? '#e0a800' : '#888') + '">' + (lock ? '\u00b7\u00b7\u00b7' : '\u2605'.repeat(n) + '\u2606'.repeat(3 - n)) + '</span></button>'; }
+        pick.innerHTML = h + '</div>'; pick.style.display = 'block'; tg.setAttribute('aria-expanded', 'true');
+        const cap = document.getElementById('run-pcap');
+        pick.querySelectorAll('button[data-lv]').forEach(b => { const lv = +b.dataset.lv, show = () => { cap.textContent = 'Stage ' + lv + ': ' + theme(lv).n + '  \u00b7  vs. ' + (lv % 5 === 0 ? bossDef(lv).name + ' (boss)' : vill(lv).name); }; b.onmouseenter = show; b.onfocus = show; b.onclick = () => { pick.style.display = 'none'; tg.setAttribute('aria-expanded', 'false'); begin(lv); }; });
+      };
+    }
+    function togglePause(force) {
+      if (!grid || phase !== 'play') return; paused = force === undefined ? !paused : force; if (paused) { active = true; keys.l = keys.r = keys.j = keys.dn = keys.f = false; }
+      const b = document.getElementById('run-pause'); if (b) b.textContent = paused ? 'Resume' : 'Pause';
+    }
+    document.addEventListener('keydown', e => { if (!visible() || typing(e) || e.metaKey || e.ctrlKey) return; if ((e.key === 'p' || e.key === 'P' || e.key === 'Escape') && grid && phase === 'play') { e.preventDefault(); togglePause(); } else if (phase === 'clear' && (e.key === ' ' || e.key === 'Enter' || e.key === 'ArrowRight' || e.key === 'ArrowUp')) { e.preventDefault(); if (msgT > 2) msgT = 2; } });
     contBtn();
     const KEYS = { ArrowLeft: 'l', a: 'l', A: 'l', ArrowRight: 'r', d: 'r', D: 'r', ArrowUp: 'j', w: 'j', W: 'j', ' ': 'j', ArrowDown: 'dn', s: 'dn', S: 'dn', x: 'f', X: 'f', f: 'f', F: 'f' };
     const typing = e => /^(INPUT|TEXTAREA|SELECT)$/.test((e.target && e.target.tagName) || '');
@@ -7343,7 +7421,7 @@ try {
     document.addEventListener('keyup', e => { const k = KEYS[e.key]; if (!k || !keys) return; keys[k] = false; });
     const hold = (id, k) => { const b = document.getElementById(id); const on = e => { e.preventDefault(); active = true; if (!keys || phase !== 'play') return; if (k === 'j' && !keys.j) p.jb = 7; if (k === 'f' && !keys.f) shoot(); keys[k] = true; }; const off = e => { if (keys) keys[k] = false; }; b.addEventListener('pointerdown', on); ['pointerup', 'pointercancel', 'pointerleave'].forEach(ev => b.addEventListener(ev, off)); b.addEventListener('contextmenu', e => e.preventDefault()); };
     hold('run-l', 'l'); hold('run-r', 'r'); hold('run-j', 'j'); hold('run-f', 'f');
-    cv.addEventListener('pointerdown', e => { if (!phase) begin(); else active = true; });
+    cv.addEventListener('pointerdown', e => { if (!phase) begin(); else { active = true; if (paused) togglePause(false); else if (phase === 'clear' && msgT > 2) msgT = 2; } });
     document.addEventListener('pointerdown', e => { if (!(e.target.closest && e.target.closest('#g-run'))) { active = false; if (keys) keys.l = keys.r = keys.j = keys.dn = keys.f = false; } });
     window.KRRUN = { vill: n => vill(n), mod: n => theme(n).mod, loc: n => theme(n).n, hurt: () => hurt(), clearInv: () => { inv = 0; }, run: (n, cb) => { for (let i = 0; i < n; i++) { cb(); step(); if (phase === 'clear') { level++; startLevel(); } else if (phase !== 'play') break; } return phase; }, god: () => { inv = 999; lives = 9; }, total: TOTAL, saved: () => saved, dbg: () => ({ lobs, warns, p, foes, grid, W, coins, items, hazards, boss, door, phase, lives, level, score, got, keys, pw, shots, waves, plats }), give: n => { pw = n; }, toCp: i => { p.cp = i; toCheckpoint(); }, brick: () => { for (let r = 0; r < ROWS; r++) for (let c = 0; c < W; c++) if (grid[r][c] === 3) return { r, c }; return null; }, hit: (r, c) => brickHit(r, c), start: begin, to: n => { level = n; startLevel(); } };
   })();
