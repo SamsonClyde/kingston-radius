@@ -32253,5 +32253,19 @@
     "price": "$25+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794139323684,
+    "title": "Sound Sanctuary",
+    "date": "2026-12-04",
+    "time": "19:00",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794139320940-soundsanctuary-dec-viewcy-1080x608.webp",
+    "price": "$35+",
+    "free": false,
+    "_manual": true
   }
 ]
