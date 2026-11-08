@@ -3419,15 +3419,43 @@ function formatEventBlurb(e) {
   return `${e.title}\n${e.venue}\n${dateStr}${timeStr ? ', ' + timeStr : ''}`;
 }
 
-// Sharing a show with a poster shares the poster picture itself, with the link to the show as its caption. If the poster can't be read
-// (some image hosts don't allow it) or the phone can't share files, it falls back to the usual title/venue/date text and link.
-async function posterFile(e) {
+// Sharing a show with a poster shares the poster picture itself, with a branded strip under it (the Radius logo, the name and the link to the
+// show) and the link as the caption too. If the poster can't be read (some image hosts don't allow it) or the phone can't share files,
+// it falls back to the usual title/venue/date text and link.
+async function brandedPoster(blob, shareUrl) {
+  let bmp;
+  try { bmp = await createImageBitmap(blob); }
+  catch (err) { bmp = await new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = URL.createObjectURL(blob); }); }
+  const iw = bmp.width, ih = bmp.height; if (!iw || !ih) return null;
+  try { await Promise.race([document.fonts.load('40px "DM Serif Display"'), document.fonts.load('500 20px "DM Sans"'), new Promise(r => setTimeout(r, 800))]); } catch (err) {}
+  let sc = Math.min(1, 1400 / iw); const fhOf = w => Math.max(120, Math.round(w * 0.17)); if ((ih * sc) + fhOf(iw * sc) > 3000) sc = Math.min(sc, 2800 / ih);
+  const w = Math.round(iw * sc), ph = Math.round(ih * sc), fh = fhOf(w);
+  const cv = document.createElement('canvas'); cv.width = w; cv.height = ph + fh; const c = cv.getContext('2d');
+  c.fillStyle = '#1a1f29'; c.fillRect(0, 0, w, ph + fh); c.drawImage(bmp, 0, 0, w, ph);
+  // the strip: radar logo on the left, KingstonRadius and the link on the right
+  const r = Math.round(fh * 0.3), cx0 = Math.round(fh * 0.22) + r, cy0 = ph + fh / 2;
+  c.fillStyle = '#c0392b'; c.beginPath(); c.arc(cx0, cy0, r, 0, 7); c.fill();
+  c.strokeStyle = 'rgba(255,255,255,.45)'; c.lineWidth = r * 0.09; c.beginPath(); c.arc(cx0, cy0, r * 0.6, 0, 7); c.stroke();
+  c.strokeStyle = '#fff'; c.lineWidth = r * 0.2; c.lineCap = 'round'; c.beginPath(); c.moveTo(cx0, cy0); c.lineTo(cx0 + r * 0.74, cy0 - r * 0.8); c.stroke();
+  c.fillStyle = '#fff'; c.beginPath(); c.arc(cx0, cy0, r * 0.19, 0, 7); c.fill();
+  const x0 = cx0 + r + Math.round(fh * 0.2), room = w - x0 - Math.round(fh * 0.2);
+  let fs = Math.round(fh * 0.3); const wm = s => `${fs}px "DM Serif Display", Georgia, serif`;
+  c.font = wm(); while (c.measureText('KingstonRadius').width > room && fs > 12) { fs -= 2; c.font = wm(); }
+  c.textBaseline = 'alphabetic'; const ty = cy0 - fh * 0.02;
+  c.fillStyle = '#fff'; c.fillText('Kingston', x0, ty); const kw = c.measureText('Kingston').width; c.fillStyle = '#e8574a'; c.fillText('Radius', x0 + kw, ty);
+  const link = String(shareUrl || location.host).replace(/^https?:\/\//, ''); let ls = Math.round(fh * 0.15);
+  const lf = z => `500 ${z}px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace`; c.font = lf(ls); while (c.measureText(link).width > room && ls > 9) { ls -= 1; c.font = lf(ls); }
+  c.fillStyle = '#b6bcc8'; c.fillText(link, x0, ty + fh * 0.2);
+  return await new Promise(res => cv.toBlob(res, 'image/jpeg', 0.92));
+}
+async function posterFile(e, shareUrl) {
   if (!e || !e.posterUrl || !navigator.canShare || !window.File) return null;
   try {
     const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 4500);
     const r = await fetch(e.posterUrl, { mode: 'cors', signal: ctl.signal }); clearTimeout(t);
     if (!r.ok) return null;
     const b = await r.blob(); if (!/^image\//.test(b.type)) return null;
+    try { const bb = await brandedPoster(b, shareUrl); if (bb) { const bf = new File([bb], 'poster.jpg', { type: 'image/jpeg' }); if (navigator.canShare({ files: [bf] })) return bf; } } catch (err) {}
     const f = new File([b], 'poster.' + (b.type.split('/')[1] || 'jpg').replace('jpeg', 'jpg').replace(/[^a-z0-9]/g, ''), { type: b.type });
     return navigator.canShare({ files: [f] }) ? f : null;
   } catch (err) { return null; }
@@ -3442,7 +3470,7 @@ async function shareEvent(e) {
 
   const shareText = formatEventBlurb(e);
 
-  const pf = await posterFile(e);
+  const pf = await posterFile(e, shareUrl);
   if (pf) { try { await navigator.share({ files: [pf], text: shareUrl }); return; } catch (err) { if (err && err.name === 'AbortError') return; } }
   if (navigator.share) {
     try {
@@ -5341,7 +5369,7 @@ function blurb(e) {
 async function shareEvent(e) {
   // Links to this show in the Feed view
   const shareUrl = `${location.origin}/?view=feed&show=${shortHash(eventKey(e))}`;
-  const pf = await posterFile(e);
+  const pf = await posterFile(e, shareUrl);
   if (pf) { try { await navigator.share({ files: [pf], text: shareUrl }); return; } catch (err) { if (err && err.name === 'AbortError') return; } }
   if (navigator.share) {
     try { await navigator.share({ title: e.title, text: blurb(e), url: shareUrl }); return; }
@@ -6287,14 +6315,14 @@ try {
 
 } catch (err) { console.error('[fun:games]', err); }
 try {
-  // ---------- Ray Run: a side-scrolling platformer. Ray rolls and jumps across four Hudson Valley stages that repeat and get harder, collects cigarettes (ten of them is a smoke break: a few seconds of being unstoppable), stomps Feedback and crows, bounces on springs, dodges spikes, beats Mega Feedback every fourth stage and finds the stage door. ----------
+  // ---------- Ray Run: a side-scrolling platformer. Ray rolls and jumps across fifty stages in five Hudson Valley worlds (every stage is the same each time, and a cleared stage is a life), collects cigarettes (ten of them is a smoke break: a few seconds of being unstoppable), stomps Feedback and crows, bounces on springs, dodges spikes, beats a boss every fifth stage and finds the stage door. ----------
   (function () {
     const row = document.getElementById('run-slot') || document.querySelector('#games .gamerow'); if (!row) return;
     const card = document.createElement('div'); card.className = 'game wide'; card.id = 'g-run';
     card.innerHTML = '<style>#g-run #run{display:block;width:100%;max-width:480px;height:auto;margin:0 auto;border-radius:6px;touch-action:none;user-select:none;-webkit-user-select:none}'
       + '#g-run .runpad{display:flex;gap:8px;justify-content:center;margin:8px auto 6px;max-width:480px}#g-run .runpad .btn{flex:1;min-width:0;padding:10px 0;min-height:44px;touch-action:none;user-select:none;-webkit-user-select:none}#g-run .runpad .big{flex:2}</style>'
       + '<h3>Ray Run</h3><canvas id="run" width="480" height="270" aria-label="Ray Run platformer"></canvas>'
-      + '<div class="stat" id="run-stat">Press Start. Run with the arrow keys or A/D, jump with Space (Down drops through planks), X shoots, R goes back to the checkpoint if you get stuck. Hit a music brick for a cassette, another for vinyl. On a phone, use the buttons.</div>'
+      + '<div class="stat" id="run-stat">Press Start for stage 1 of 50 (you gain a life for every stage you clear, and a hit only costs you a power level while you have one). Run with the arrow keys or A/D, jump with Space (Down drops through planks), X shoots, R goes back to the checkpoint if you get stuck. Hit a music brick for a cassette, another for vinyl. On a phone, use the buttons.</div>'
       + '<div class="runpad"><button class="btn" id="run-l" type="button" aria-label="Run left">&lt;</button><button class="btn big" id="run-j" type="button">Jump</button><button class="btn" id="run-r" type="button" aria-label="Run right">&gt;</button><button class="btn" id="run-f" type="button" aria-label="Shoot">Shoot</button></div>'
       + '<button class="btn" id="run-go" type="button">Start</button>';
     row.appendChild(card);
@@ -6302,14 +6330,15 @@ try {
     const cv = document.getElementById('run'), cx = cv.getContext('2d'), VW = 480, VH = 270, TS = 30, ROWS = 9, CW = 12;
     const stat = t => { document.getElementById('run-stat').textContent = t; };
     const visible = () => cv.offsetParent !== null && !document.hidden;
-    let best = 0, bestStart = 0; try { best = +localStorage.getItem('kr_rayrun_best') || 0; } catch (e) {}
+    const TOTAL = 50; let best = 0, bestStart = 0, saved = 1; try { best = +localStorage.getItem('kr_rayrun_best') || 0; saved = Math.max(1, Math.min(TOTAL, +localStorage.getItem('kr_rayrun_lv') || 1)); } catch (e) {}
 
     // ---- stages are built from 12-column chunks (rows 0..3 are sky, rows 4..6 are where things float or stand, rows 7..8 are the ground) ----
     // legend: # block  = plank  o cigarette  e Feedback (the squealing blob)  k crow  ^ spikes  s spring  c coffee  h extra heart  B Mega Feedback  D stage door
-    const C = (a, b, c, d) => { const blank = '.'.repeat(CW), rows = [blank, blank, blank, blank, a, b, c, d, d]; rows.forEach(r => { if (r.length !== CW) throw new Error('bad chunk ' + r); }); return rows; };
+    const C = (a, b, c, d, t) => { const blank = '.'.repeat(CW), rows = [blank, blank, blank, t || blank, a, b, c, d, d]; rows.forEach(r => { if (r.length !== CW) throw new Error('bad chunk ' + r); }); return rows; };
     const START = C('............', '............', '............', '############');
     const GOAL = C('............', '............', '..o..o..oD..', '############');
     const BOSS = C('............', '............', '.......B....', '############');
+    const BOSS2 = C('............', '..=M=..=M=..', '.......B....', '############');
     const POOL = [
       { w: 3, lv: 1, g: C('............', '............', '..o.o.o.o...', '############') },
       { w: 3, lv: 1, g: C('............', '....oooo....', '............', '#####..#####') },
@@ -6336,7 +6365,30 @@ try {
       { w: 2, lv: 2, g: C('............', '...o...o....', '...P...o....', '###......###') },            // a moving platform over a pit
       { w: 2, lv: 3, g: C('............', '..o.....o...', '..e...a..o..', '############') },            // an amp that fires sound waves
       { w: 2, lv: 3, g: C('....o.o.....', '.....===.k..', '..o..a....o.', '############') },
-      { w: 1, lv: 3, g: C('..o.o.o.o...', '....P.......', '............', '##........##') }
+      { w: 1, lv: 3, g: C('..o.o.o.o...', '....P.......', '............', '##........##') },
+      { w: 2, lv: 2, g: C('...o..o.....', '............', '....#..#....', '############') },
+      { w: 2, lv: 2, g: C('............', '..o.o.o.o...', '....e....e..', '############') },
+      { w: 2, lv: 3, g: C('....ooo.....', '............', '............', '####...#####') },                     // a three-wide pit
+      { w: 2, lv: 3, g: C('............', '...====.===.', '....e.......', '############') },
+      { w: 1, lv: 3, g: C('............', '............', '..s.........', '############', '...ooooooo..') },         // spring and a trail of coins
+      { w: 2, lv: 4, g: C('..ooooo.....', '....====....', '..s.........', '############', '......ooo...') },
+      { w: 2, lv: 4, g: C('............', '...=========', '...^^..^^...', '############') },                   // spikes under planks: take the high road
+      { w: 2, lv: 4, g: C('...o....o...', '....#....#..', '...##.e..##.', '############') },                  // two towers with a Feedback between
+      { w: 2, lv: 5, g: C('............', '..o......o..', '..P....P....', '##........##') },                    // two moving platforms over a wide pit
+      { w: 2, lv: 5, g: C('............', '....k..k....', '.o...^^^...o', '############') },
+      { w: 2, lv: 5, g: C('............', '..o......o..', '...a......a.', '############') },                     // two amps shouting at each other
+      { w: 2, lv: 6, g: C('............', '...o..o.....', '...^^#.^^#..', '############') },                    // spike steps
+      { w: 2, lv: 6, g: C('...ooo......', '....===.....', '.....e..^^..', '############') },
+      { w: 2, lv: 6, g: C('............', '....M.......', '......a..e..', '############') },
+      { w: 1, lv: 6, g: C('....h.......', '...===......', '..o.....o...', '############') },
+      { w: 2, lv: 7, g: C('............', '.....k..k...', '..o.......o.', '#####..#####') },
+      { w: 2, lv: 7, g: C('..o.o.o.o.o.', '..=========.', '....e..a....', '############') },
+      { w: 2, lv: 8, g: C('............', '...M..M..M..', '.....^^e....', '############') },                  // a vault of three music bricks
+      { w: 2, lv: 8, g: C('............', '....k..k....', '..o.....o...', '#####...####') },
+      { w: 2, lv: 9, g: C('............', '....k..k....', '..P....P....', '##........##') },                    // crows over the moving platforms
+      { w: 2, lv: 9, g: C('..o.o.o.o...', '..=======...', '.^^^^^^^^^^.', '############') },                    // the whole floor is spikes: walk the planks
+      { w: 2, lv: 10, g: C('............', '..o..o..o...', '....a..e..a.', '############') },
+      { w: 2, lv: 10, g: C('............', '...===.===..', '...^^....^^.', '############') }
     ];
     // music bricks: bump one from below (or shoot it) and a power-up pops out: first a cassette, then vinyl
     const BRK = [
@@ -6344,47 +6396,87 @@ try {
       C('....ooo.....', '...=M=......', '..e.....e...', '############'),
       C('............', '...M.....M..', '....e...e...', '############')
     ];
-    // four looks that repeat: [name, sky top, sky bottom, far hills, near hills, dirt, dirt2, grass, plank, far silhouette, night, sun/moon colour, sun x/y, clouds]
+    // five worlds of ten stages: [name, sky top, sky bottom, far hills, near hills, dirt, dirt2, grass, plank, far silhouette, night, sun/moon colour, sun x/y, clouds]
     const TH = [
       { n: 'Kingston Waterfront', s1: '#0d1b2a', s2: '#27425f', h1: '#17283b', h2: '#1f3a52', d1: '#6b4a2f', d2: '#573a24', gr: '#4f9d4f', pl: '#b9854a', far: '#10202f', fk: 'town', night: true, sun: ['#f3eed2', 380, 52, 15], cl: 0 },
       { n: 'Woodstock Meadow', s1: '#6db6ea', s2: '#e6f5ff', h1: '#7fc08a', h2: '#5fa86c', d1: '#7a5a38', d2: '#654a2c', gr: '#58b058', pl: '#c8955a', far: '#4f8e5e', fk: 'trees', night: false, sun: ['#fff1a8', 90, 48, 17], cl: 1 },
-      { n: 'Catskill Night', s1: '#05060f', s2: '#1b1f3f', h1: '#141833', h2: '#1c2447', d1: '#4a3a52', d2: '#3a2c42', gr: '#3f7f6a', pl: '#9a7ab0', far: '#0b0e22', fk: 'pines', night: true, sun: ['#e8ecff', 330, 44, 19], cl: 0 },
-      { n: 'Beacon Sunset', s1: '#3a1c4a', s2: '#f08a4b', h1: '#5a2b4f', h2: '#6e3552', d1: '#6b4034', d2: '#55322a', gr: '#7a9b4a', pl: '#c9794a', far: '#3f1f40', fk: 'mount', night: false, sun: ['#ffd27a', 130, 128, 26], cl: 1 }
+      { n: 'Beacon Sunset', s1: '#3a1c4a', s2: '#f08a4b', h1: '#5a2b4f', h2: '#6e3552', d1: '#6b4034', d2: '#55322a', gr: '#7a9b4a', pl: '#c9794a', far: '#3f1f40', fk: 'mount', night: false, sun: ['#ffd27a', 130, 128, 26], cl: 1 },
+      { n: 'Catskill Midnight', s1: '#05060f', s2: '#1b1f3f', h1: '#141833', h2: '#1c2447', d1: '#4a3a52', d2: '#3a2c42', gr: '#3f7f6a', pl: '#9a7ab0', far: '#0b0e22', fk: 'pines', night: true, dark: true, sun: ['#e8ecff', 330, 44, 19], cl: 0 },
+      { n: 'The Big Stage', s1: '#14061f', s2: '#5a1670', h1: '#2a0f3d', h2: '#3b1654', d1: '#3a3140', d2: '#2e2634', gr: '#e0457b', pl: '#7a5aa0', far: '#1a0a2a', fk: 'stage', night: true, sun: ['#fff2c0', 250, 46, 15], cl: 0 }
     ];
-    const theme = lv => TH[(lv - 1) % TH.length];
-    let shots = [], waves = [], plats = [], bumps = [], texts = [], pw = 0, fcool = 0, dropT = 0, stageT = 0, hint = 0, active = false, grid, W, coins, foes, items, hazards, door, cps, cpy, level, lives, score, got, phase, p, cam, inv, keys, tm, raf = 0, last = 0, acc = 0, msg = '', msgT = 0, bgT = 0, flash = 0, parts = [], boss = null;
+    const world = lv => Math.min(4, Math.floor((lv - 1) / 10)), theme = lv => TH[world(lv)];
+    const rngFor = lv => { let a = (lv * 2654435761 + 12345) >>> 0; return () => { a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; };
+    let shots = [], waves = [], plats = [], bumps = [], texts = [], pw = 0, fcool = 0, dropT = 0, stageT = 0, hint = 0, bricks = [], active = false, grid, W, coins, foes, items, hazards, door, cps, cpy, level, lives, score, got, phase, p, cam, inv, keys, tm, raf = 0, last = 0, acc = 0, msg = '', msgT = 0, bgT = 0, flash = 0, parts = [], boss = null;
 
     function build(lv) {
-      const n = Math.min(4 + lv, 11), chunks = [START, BRK[lv > 1 && Math.random() < .4 ? 2 : Math.floor(Math.random() * 2)]];
-      const pool = POOL.filter(c => c.lv <= lv), isBoss = lv % 4 === 0;
+      const R = rngFor(lv), d = 1 + (lv - 1) / 3, n = Math.min(5 + Math.floor((lv - 1) / 2.2), 21), bossLv = lv % 5 === 0, bhp = 4 + Math.floor(lv / 6);
+      const pool = POOL.filter(c => c.lv <= d), chunks = [START, BRK[lv > 1 && R() < .4 ? 2 : Math.floor(R() * 2)]]; let lastG = null;
       for (let i = 0; i < n; i++) {
-        const tot = pool.reduce((a, c) => a + c.w, 0); let r = Math.random() * tot, pick = pool[0];
-        for (const c of pool) { r -= c.w; if (r <= 0) { pick = c; break; } }
-        chunks.push(i === Math.floor(n / 2) && lv > 1 ? BRK[Math.floor(Math.random() * 3)] : pick.g);
+        let pick = pool[0];
+        for (let tries = 0; tries < 3; tries++) {
+          const tot = pool.reduce((a, c) => a + c.w * (c.lv >= d - 3 ? 2.4 : 0.4), 0); let r = R() * tot;
+          for (const c of pool) { r -= c.w * (c.lv >= d - 3 ? 2.4 : 0.4); if (r <= 0) { pick = c; break; } }
+          if (pick.g !== lastG) break;
+        }
+        lastG = pick.g;
+        if (i === Math.floor(n / 2) && lv > 1 && (lv < 12 || lv % 2 === 0)) chunks.push(BRK[Math.floor(R() * 3)]);
+        else if (lv > 10 && lv % 3 === 0 && i === Math.floor(n * .8)) chunks.push(BRK[Math.floor(R() * 3)]);
+        else chunks.push(pick.g);
       }
-      if (isBoss) chunks.push(BOSS);
+      if (bossLv) chunks.push(lv % 10 === 0 ? BOSS2 : BOSS);
       chunks.push(GOAL);
-      W = chunks.length * CW; grid = []; coins = []; foes = []; items = []; hazards = []; door = null; cps = []; cpy = []; boss = null; shots = []; waves = []; plats = []; bumps = []; texts = [];
-      const spd = 0.8 + Math.min(.6, lv * .04);
+      W = chunks.length * CW; grid = []; coins = []; foes = []; items = []; hazards = []; door = null; cps = []; cpy = []; boss = null; shots = []; waves = []; plats = []; bumps = []; texts = []; bricks = [];
+      const spd = 0.95 + Math.min(1.25, lv * .03), psp = .9;
       for (let r = 0; r < ROWS; r++) grid.push(new Array(W).fill(0));
       chunks.forEach((ch, k) => {
         cps.push(k * CW * TS + 1.5 * TS);
         for (let r = 0; r < ROWS; r++) for (let c = 0; c < CW; c++) {
           const ch1 = ch[r][c], X = k * CW + c;
-          if (ch1 === '#') grid[r][X] = 1; else if (ch1 === '=') grid[r][X] = 2; else if (ch1 === 'M') grid[r][X] = 3;
-          else if (ch1 === 'P') plats.push({ x: X * TS, y: (r + 1) * TS, w: 56, h: 8, ox: X * TS, rg: 120, vx: .9, dx: 0 });
-          else if (ch1 === 'a') foes.push({ x: X * TS + 1, y: (r + 1) * TS - 28, w: 28, h: 28, vx: 0, dead: 0, kind: 'a', fire: Math.floor(Math.random() * 90) });
+          if (ch1 === '#') grid[r][X] = 1; else if (ch1 === '=') grid[r][X] = 2; else if (ch1 === 'M') { grid[r][X] = 3; bricks.push({ r, c: X }); }
+          else if (ch1 === 'P') plats.push({ x: X * TS + (X % 2 ? 0 : 120), y: (r + 1) * TS, w: 56, h: 8, ox: X * TS, rg: 120, vx: X % 2 ? psp : -psp, dx: 0 });   // neighbours swing in opposite directions, so there is always a moment when they meet
+          else if (ch1 === 'a') foes.push({ x: X * TS + 1, y: (r + 1) * TS - 28, w: 28, h: 28, vx: 0, dead: 0, kind: 'a', fire: Math.floor(R() * 90) });
           else if (ch1 === 'o') coins.push({ x: X * TS + 8, y: r * TS + 6, w: 14, h: 18, got: false });
-          else if (ch1 === 'e') foes.push({ x: X * TS + 3, y: (r + 1) * TS - 20, w: 24, h: 20, vx: (Math.random() < .5 ? -1 : 1) * spd, dead: 0, kind: 'e' });
-          else if (ch1 === 'k') foes.push({ x: X * TS + 4, y: r * TS + 6, w: 22, h: 14, vx: -(spd + .2), dead: 0, kind: 'k', ox: X * TS + 4, oy: r * TS + 6, t: Math.random() * 6 });
-          else if (ch1 === 'B') { boss = { x: X * TS - 12, y: (r + 1) * TS - 44, w: 54, h: 44, vx: 1.1, dead: 0, kind: 'B', hp: 3, hit: 0, a: k * CW * TS + 8, b: (k + 1) * CW * TS - 8 }; foes.push(boss); }
+          else if (ch1 === 'e') foes.push({ x: X * TS + 3, y: (r + 1) * TS - 20, w: 24, h: 20, vx: (R() < .5 ? -1 : 1) * spd, dead: 0, kind: 'e' });
+          else if (ch1 === 'k') foes.push({ x: X * TS + 4, y: r * TS + 6, w: 22, h: 14, vx: -(spd + .2), dead: 0, kind: 'k', ox: X * TS + 4, oy: r * TS + 6, t: R() * 6 });
+          else if (ch1 === 'B') { boss = { x: X * TS - 12, y: (r + 1) * TS - 44, w: 54, h: 44, vx: 1.2 + lv * .02, dead: 0, kind: 'B', hp: bhp, mx: bhp, fire: 0, hit: 0, a: k * CW * TS + 8, b: (k + 1) * CW * TS - 8 }; foes.push(boss); }
           else if (ch1 === '^') hazards.push({ kind: 'spike', x: X * TS + 2, y: r * TS + 13, w: 26, h: 17 });
           else if (ch1 === 's') hazards.push({ kind: 'spring', x: X * TS + 2, y: r * TS + 17, w: 26, h: 13, sq: 0 });
           else if (ch1 === 'c' || ch1 === 'h') items.push({ kind: ch1, x: X * TS + 6, y: r * TS + 6, w: 18, h: 20, got: false });
           else if (ch1 === 'D') door = { x: X * TS, y: (r - 1) * TS, w: TS, h: 2 * TS };
         }
       });
+      harden(lv, R, bossLv);
       cps.forEach(x => { const c = Math.floor(x / TS); let y = 7 * TS; for (let r = 0; r < ROWS; r++) if (grid[r][c] === 1) { y = r * TS; break; } cpy.push(y); });
+    }
+    // every stage past the first gets extra walkers, spikes, amps and crows dropped onto open ground (deterministic per stage), and hearts get rare: lives come from clearing stages
+    function harden(lv, R, bossLv) {
+      if (lv > 3) items = items.filter(it => it.kind !== 'h' || R() < .3);
+      if (lv < 2) return;
+      const nch = W / CW, last = nch - 2 - (bossLv ? 1 : 0);
+      const want = [];
+      const add = (t, n) => { for (let i = 0; i < n; i++) want.push(t); };
+      add('e', Math.min(16, 1 + Math.floor((lv - 1) * .42))); add('^', lv < 5 ? 0 : Math.min(11, Math.floor((lv - 3) * .32)));
+      add('a', lv < 9 ? 0 : Math.min(7, 1 + Math.floor((lv - 7) / 6))); add('k', lv < 4 ? 0 : Math.min(9, Math.floor((lv - 2) * .22)));
+      for (let i = want.length - 1; i > 0; i--) { const j = Math.floor(R() * (i + 1)); [want[i], want[j]] = [want[j], want[i]]; }
+      const brickCols = new Set(bricks.map(b => Math.floor(b.c / CW))); const springCols = new Set(hazards.filter(h => h.kind === 'spring').map(h => Math.floor(h.x / TS / CW)));
+      const free = (a, c) => { for (let r = a; r <= 5; r++) if (grid[r][c] === 1 || grid[r][c] === 3 || grid[r][c] === 4) return false; return true; };
+      const placed = [];
+      for (const t of want) {
+        for (let tries = 0; tries < 30; tries++) {
+          const k = 2 + Math.floor(R() * Math.max(1, last - 1)); if (k > last || brickCols.has(k) || springCols.has(k) || springCols.has(k + 1)) continue;
+          const c = k * CW + 3 + Math.floor(R() * (CW - 6)), x = c * TS;
+          let flat = true; for (let q = c - 5; q <= c + 5; q++) if (grid[7][q] !== 1 || grid[6][q] !== 0) flat = false; if (!flat) continue;   // flat, open ground all around, so a jump over it never lands in a pit
+          if (!free(3, c) || !free(3, c - 1) || !free(3, c + 1)) continue;
+          if (t === 'k') { let ok = true; for (let q = c - 3; q <= c + 3; q++) if (!free(3, q) || grid[7][q] === 0) ok = false; if (!ok) continue; }
+          if (foes.some(f => Math.abs(f.x - x) < TS * 4) || hazards.some(h => Math.abs(h.x - x) < TS * 3) || plats.some(m => Math.abs(m.ox + 60 - x) < 230) || placed.some(q => Math.abs(q - x) < TS * 3.5)) continue;
+          placed.push(x);
+          if (t === 'e') foes.push({ x: x + 3, y: 7 * TS - 20, w: 24, h: 20, vx: (R() < .5 ? -1 : 1) * (0.95 + Math.min(1.25, lv * .03)), dead: 0, kind: 'e' });
+          else if (t === '^') hazards.push({ kind: 'spike', x: x + 2, y: 6 * TS + 13, w: 26, h: 17 });
+          else if (t === 'a') foes.push({ x: x + 1, y: 7 * TS - 28, w: 28, h: 28, vx: 0, dead: 0, kind: 'a', fire: Math.floor(R() * 90) });
+          else foes.push({ x: x + 4, y: 4 * TS + 6, w: 22, h: 14, vx: -(0.95 + Math.min(1.25, lv * .03) + .2), dead: 0, kind: 'k', ox: x + 4, oy: 4 * TS + 6, t: R() * 6 });
+          break;
+        }
+      }
     }
     const solidAt = (px, py) => { const c = Math.floor(px / TS), r = Math.floor(py / TS); if (c < 0 || c >= W) return true; if (r < 0 || r >= ROWS) return false; const v = grid[r][c]; return v === 1 || v === 3 || v === 4; };
     const hits = (x, y, w, h) => solidAt(x, y) || solidAt(x + w - 1, y) || solidAt(x, y + h - 1) || solidAt(x + w - 1, y + h - 1);
@@ -6443,7 +6535,7 @@ try {
           if (f.kind === 'B') {
             if (f.hit > 0) { if (!vin) sh.life = 0; continue; }
             f.hp--; f.hit = 40; burst(f.x + 27, f.y + 6, '#ffd27a', 12); addScore(100);
-            if (f.hp <= 0) { f.dead = 1; addScore(500); msg = 'Mega Feedback is quiet!'; msgT = 80; burst(f.x + f.w / 2, f.y + 20, '#ffffff', 22); } else f.vx = Math.sign(f.vx || 1) * (1.1 + (3 - f.hp) * .5);
+            if (f.hp <= 0) { f.dead = 1; addScore(500); msg = 'Mega Feedback is quiet!'; msgT = 80; burst(f.x + f.w / 2, f.y + 20, '#ffffff', 22); } else f.vx = Math.sign(f.vx || 1) * Math.min(3.8, 1.2 + (f.mx - f.hp) * .55);
           } else { f.dead = 1; const base = f.kind === 'k' ? 75 : f.kind === 'a' ? 60 : 50; addScore(base); texts.push({ x: f.x + f.w / 2, y: f.y - 4, t: '+' + base, life: 40 }); burst(f.x + f.w / 2, f.y + 8, f.kind === 'k' ? '#2b2b33' : '#bfc3c9', 8); }
           hud(); if (!vin) { sh.life = 0; break; }
         }
@@ -6457,22 +6549,35 @@ try {
     }
 
     const ev = d => document.dispatchEvent(new CustomEvent('krrun', { detail: d }));
-    function newGame() { level = 1; lives = 3; score = 0; pw = 0; bestStart = best; startLevel(); }
+    function saveProgress(n) { n = Math.min(TOTAL, n); if (n > saved) { saved = n; try { localStorage.setItem('kr_rayrun_lv', String(n)); } catch (e) {} } contBtn(); }
+    function contBtn() {   // Start always picks up at the furthest stage reached: dying or finishing never sends Ray back to the beginning
+      const b = document.getElementById('run-go'); if (!b) return;
+      if (!phase) { b.textContent = saved > 1 ? 'Start at stage ' + saved : 'Start'; stat('Press Start to ' + (saved > 1 ? 'pick up at stage ' + saved + ' of ' + TOTAL + ' (your progress is saved)' : 'begin stage 1 of ' + TOTAL) + '. You gain a life for every stage you clear, and a hit only costs you a power level while you have one, but the stages are tough. Run with the arrow keys or A/D, jump with Space (Down drops through planks), X shoots, R goes back to the checkpoint if you get stuck. Hit a music brick for a cassette, another for vinyl. On a phone, use the buttons.'); }
+    }
+    function winEnd() {
+      if (score > bestStart && bestStart > 0 && score >= 500) document.dispatchEvent(new CustomEvent('krbest', { detail: { game: 'run', score } }));
+      document.getElementById('run-go').textContent = 'Replay stage ' + TOTAL; stat('You finished all ' + TOTAL + ' stages! Final score ' + score + '. Press Replay to take on the last stage again.');
+    }
+    function rearm() {   // after losing a life the music bricks from the checkpoint onward are ready again, so a power-up can always be won back
+      const x0 = cps[p.cp]; bricks.forEach(b => { if (b.c * TS >= x0 && grid[b.r][b.c] === 4) grid[b.r][b.c] = 3; });
+      items = items.filter(it => !(it.kind === 'pw' && it.x >= x0 && !it.got));
+    }
+    function newGame(lv0) { level = lv0 || saved || 1; lives = 3; score = 0; pw = 0; bestStart = best; startLevel(); }
     function startLevel() {
       build(level); got = 0; const s = spawnAt(2 * TS);
       p = { x: s.x, y: s.y, w: 20, h: 26, vx: 0, vy: 0, face: 1, ground: false, coy: 0, jb: 0, ang: 0, sq: 0, cp: 0, smoke: 0, fast: 0, air: 0 };
-      cam = 0; inv = 60; keys = { l: false, r: false, j: false, dn: false, f: false }; stageT = 0; fcool = 0; dropT = 0; hint = 0; phase = 'play'; parts = []; msg = 'Stage ' + level + ': ' + theme(level).n + (boss ? '  (boss!)' : ''); msgT = 110; hud();
+      cam = 0; inv = 60; keys = { l: false, r: false, j: false, dn: false, f: false }; stageT = 0; fcool = 0; dropT = 0; hint = 0; phase = 'play'; parts = []; msg = 'Stage ' + level + ' of ' + TOTAL + ' · ' + theme(level).n + (boss ? (level % 10 === 0 ? '  · BOSS' : '  · mini-boss') : ''); msgT = 120; hud();
     }
-    function hud() { stat('Stage ' + level + ' (' + theme(level).n + ')  ·  Smokes ' + got + '  ·  Lives ' + lives + '  ·  Score ' + score + (best ? '  ·  Best ' + best : '')); }
+    function hud() { stat('Stage ' + level + '/' + TOTAL + ' (' + theme(level).n + ')  ·  Smokes ' + got + '  ·  Lives ' + lives + '  ·  Score ' + score + (best ? '  ·  Best ' + best : '')); }
     function addScore(n) { score += n; if (score > best) { best = score; try { localStorage.setItem('kr_rayrun_best', String(best)); } catch (e) {} } }
     function burst(x, y, col, n) { for (let i = 0; i < n; i++) parts.push({ x, y, vx: (Math.random() - .5) * 4, vy: -Math.random() * 3 - 1, life: 24 + Math.random() * 10, col }); }
     function puff(x, y) { parts.push({ x, y, vx: (Math.random() - .5) * .6, vy: -.5 - Math.random() * .5, life: 40 + Math.random() * 20, col: '#cfd3d8', puff: 1, r: 3 + Math.random() * 3 }); }
     function hurt() {
       if (inv > 0 || p.smoke > 0) return;
-      if (pw > 0) { pw--; inv = 90; flash = 8; p.vy = -7; p.vx = -p.face * 3; msg = pw ? 'Back down to a cassette' : 'Lost the tape'; msgT = 50; burst(p.x + 10, p.y + 8, '#ffd24a', 10); return; }
+      if (pw > 0) { pw--; inv = 70; flash = 8; p.vy = -7; p.vx = -p.face * 3; msg = pw ? 'Back down to a cassette' : 'Lost the tape'; msgT = 50; burst(p.x + 10, p.y + 8, '#ffd24a', 10); return; }
       lives--; pw = 0; p.fast = 0; flash = 12; hud();
-      if (lives <= 0) { phase = 'over'; if (score > bestStart && bestStart > 0 && score >= 500) document.dispatchEvent(new CustomEvent('krbest', { detail: { game: 'run', score } })); msg = 'Game over'; msgT = 1e9; document.getElementById('run-go').textContent = 'Play again'; stat('Game over. Score ' + score + (score >= best && score > 0 ? '  ·  New best!' : '  ·  Best ' + best)); return; }
-      const s = spawnAt(cps[p.cp]); p.x = s.x; p.y = s.y; p.vx = p.vy = 0; inv = 90; cam = Math.max(0, Math.min(W * TS - VW, p.x - VW * .4));
+      if (lives <= 0) { phase = 'over'; if (score > bestStart && bestStart > 0 && score >= 500) document.dispatchEvent(new CustomEvent('krbest', { detail: { game: 'run', score } })); msg = 'Game over'; msgT = 1e9; document.getElementById('run-go').textContent = 'Retry stage ' + saved; stat('Game over. Score ' + score + (score >= best && score > 0 ? '  ·  New best!' : '  ·  Best ' + best) + '  ·  Your progress is saved: you restart at stage ' + saved + '.'); return; }
+      const s = spawnAt(cps[p.cp]); p.x = s.x; p.y = s.y; p.vx = p.vy = 0; inv = 90; cam = Math.max(0, Math.min(W * TS - VW, p.x - VW * .4)); rearm();
     }
 
     function step() {
@@ -6493,7 +6598,8 @@ try {
       // jump
       p.coy = p.ground ? 6 : Math.max(0, p.coy - 1); p.jb = Math.max(0, p.jb - 1);
       if (p.jb > 0 && p.coy > 0) { p.vy = -9.6; p.jb = 0; p.coy = 0; p.ground = false; p.sq = -.25; }
-      if (!keys.j && p.vy < -3.6) p.vy = -3.6;
+      if (p.vy >= 0) p.bounce = false;
+      if (!keys.j && p.vy < -3.6 && !p.bounce) p.vy = -3.6;   // letting go of jump cuts a jump short, but never a spring or a stomp bounce
       // vertical
       if (keys.dn && p.ground && !hits(p.x, p.y + 1, p.w, p.h)) { dropT = 14; p.y += 2; p.ground = false; }
       p.vy = Math.min(11, p.vy + .5); const ny = p.y + p.vy;
@@ -6511,13 +6617,13 @@ try {
       for (const it of items) if (!it.got && p.x < it.x + it.w && p.x + p.w > it.x && p.y < it.y + it.h && p.y + p.h > it.y) {
         it.got = true; addScore(25);
         if (it.kind === 'pw') { addScore(75); if (pw === 0) { pw = 1; msg = 'Cassette! X shoots tapes'; } else if (pw === 1) { pw = 2; msg = 'VINYL! Records bounce and pierce'; } else msg = 'Bonus record! +100'; if (pw === 2 && msg.startsWith('Bonus')) addScore(100); burst(it.x + 9, it.y + 10, pw > 1 ? '#c9a8ff' : '#ffd24a', 14); }
-        else if (it.kind === 'h') { lives = Math.min(5, lives + 1); msg = 'Extra life!'; burst(it.x + 9, it.y + 10, '#ff5a6a', 10); } else { p.fast = 540; msg = 'Coffee! Fast legs.'; burst(it.x + 9, it.y + 10, '#c89a6a', 10); }
+        else if (it.kind === 'h') { lives = Math.min(9, lives + 1); msg = 'Extra life!'; burst(it.x + 9, it.y + 10, '#ff5a6a', 10); } else { p.fast = 540; msg = 'Coffee! Fast legs.'; burst(it.x + 9, it.y + 10, '#c89a6a', 10); }
         msgT = 60; hud();
       }
       for (const h of hazards) {
         if (!(p.x < h.x + h.w && p.x + p.w > h.x && p.y < h.y + h.h && p.y + p.h > h.y)) continue;
         if (h.kind === 'spike') { if (p.smoke <= 0) hurt(); }
-        else if (p.vy >= 0 && p.y + p.h - h.y < 14) { p.vy = -14; p.sq = .4; p.ground = false; h.sq = 8; burst(h.x + 13, h.y, '#dfe3e8', 4); }
+        else if (p.vy >= 0 && p.y + p.h - h.y < 14) { p.vy = -14; p.bounce = true; p.sq = .4; p.ground = false; h.sq = 8; burst(h.x + 13, h.y, '#dfe3e8', 4); }
       }
       hazards.forEach(h => { if (h.sq) h.sq--; });
       // Feedback, crows and Mega Feedback
@@ -6525,7 +6631,8 @@ try {
         if (f.dead) { f.dead++; continue; }
         if (f.hit > 0) f.hit--;
         if (f.kind === 'k') { f.t += .06; f.x += f.vx; if (f.x < f.ox - 90 || f.x > f.ox + 90) f.vx = -f.vx; f.y = f.oy + Math.sin(f.t * 2.2) * 12; }
-        else if (f.kind === 'a') { f.fire++; if (f.fire > 150 && Math.abs(p.x - f.x) < 280 && Math.abs(p.y - f.y) < 90) { f.fire = 0; const d = p.x < f.x ? -1 : 1; waves.push({ x: f.x + f.w / 2 + d * 16, y: f.y + 10, vx: d * 1.7, life: 220 }); } }
+        else if (f.kind === 'B' && level >= 10 && !f.dead && (++f.fire > Math.max(80, 190 - level * 2)) && Math.abs(p.x - f.x) < 320) { f.fire = 0; const dd = p.x < f.x ? -1 : 1; waves.push({ x: f.x + f.w / 2 + dd * 30, y: f.y + 16, vx: dd * (2 + Math.min(.9, level * .02)), life: 240 }); f.x += f.vx; if (hits(f.x, f.y, f.w, f.h) || f.x < f.a || f.x + f.w > f.b) { f.x -= f.vx; f.vx = -f.vx; } }
+        else if (f.kind === 'a') { f.fire++; if (f.fire > Math.max(85, 150 - level * 1.6) && Math.abs(p.x - f.x) < 280 && Math.abs(p.y - f.y) < 90) { f.fire = 0; const d = p.x < f.x ? -1 : 1; waves.push({ x: f.x + f.w / 2 + d * 16, y: f.y + 10, vx: d * (1.7 + Math.min(.9, level * .02)), life: 220 }); } }
         else {
           f.x += f.vx;
           const ahead = f.vx > 0 ? f.x + f.w + 1 : f.x - 1;
@@ -6534,16 +6641,19 @@ try {
         if (p.x < f.x + f.w && p.x + p.w > f.x && p.y < f.y + f.h && p.y + p.h > f.y) {
           if (p.smoke > 0 && f.kind !== 'B') { f.dead = 1; addScore(50); burst(f.x + f.w / 2, f.y + 8, '#bfc3c9', 8); hud(); }
           else if (p.vy > .5 && p.y + p.h - f.y < (f.kind === 'B' ? 22 : 16)) {
-            p.vy = keys.j ? -9 : -6.5;
-            if (f.kind === 'B') { if (f.hit > 0) continue; f.hp--; f.hit = 50; burst(f.x + 27, f.y + 6, '#ffd27a', 12); addScore(100); if (f.hp <= 0) { f.dead = 1; addScore(500); msg = 'Mega Feedback is quiet!'; msgT = 80; burst(f.x + 27, f.y + 20, '#ffffff', 22); } else f.vx = Math.sign(f.vx || 1) * (1.1 + (3 - f.hp) * .5); }
+            p.vy = keys.j ? -9 : -6.5; p.bounce = true;
+            if (f.kind === 'B') { if (f.hit > 0) continue; f.hp--; f.hit = 50; burst(f.x + 27, f.y + 6, '#ffd27a', 12); addScore(100); if (f.hp <= 0) { f.dead = 1; addScore(500); msg = 'Mega Feedback is quiet!'; msgT = 80; burst(f.x + 27, f.y + 20, '#ffffff', 22); } else f.vx = Math.sign(f.vx || 1) * Math.min(3.8, 1.2 + (f.mx - f.hp) * .55); }
             else { f.dead = 1; p.air = (p.air || 0) + 1; const mu = Math.min(4, p.air), base = (f.kind === 'k' ? 75 : 50) * mu; addScore(base); texts.push({ x: f.x + f.w / 2, y: f.y - 4, t: '+' + base + (mu > 1 ? ' x' + mu : ''), life: 44 }); burst(f.x + f.w / 2, f.y + 8, f.kind === 'k' ? '#2b2b33' : '#bfc3c9', 8); }
             hud();
           } else if (!(f.kind === 'B' && f.hit > 0)) hurt();
         }
       }
       shotsStep();
-      if (door && p.x < door.x + door.w && p.x + p.w > door.x && p.y < door.y + door.h && p.y + p.h > door.y) {
-        const par = W / 75, tb = Math.min(300, Math.max(0, Math.round(par - stageT / 60)) * 5), bonus = 200 + lives * 50 + got * 5 + (boss ? 300 : 0) + tb; if (tb) texts.push({ x: p.x, y: p.y - 10, t: 'Time +' + tb, life: 60 }); addScore(bonus); phase = 'clear'; ev({ kind: 'clear', level, el: cv }); msg = 'Stage ' + level + ' clear!  +' + bonus; msgT = 110; hud(); burst(door.x + 15, door.y + 20, '#ffffff', 14);
+      if (door && p.x < door.x + door.w && p.x + p.w > door.x && p.y < door.y + door.h && p.y + p.h > door.y - 240) {   // the door counts all the way up, so jumping over it still finishes the stage
+        const par = W / 75, tb = Math.min(300, Math.max(0, Math.round(par - stageT / 60)) * 5), bonus = 200 + lives * 50 + got * 5 + (boss ? 300 : 0) + tb; if (tb) texts.push({ x: p.x, y: p.y - 10, t: 'Time +' + tb, life: 60 }); addScore(bonus); ev({ kind: 'clear', level, el: cv }); burst(door.x + 15, door.y + 20, '#ffffff', 14);
+        saveProgress(level + 1);
+        if (level >= TOTAL) { phase = 'won'; addScore(5000); msg = 'You finished the tour!'; msgT = 1e9; hud(); winEnd(); }
+        else { lives = Math.min(9, lives + 1); phase = 'clear'; msg = 'Stage ' + level + ' clear!  +' + bonus + '  +1 life'; msgT = 120; hud(); }
       }
       cam += (Math.max(0, Math.min(W * TS - VW, p.x + p.w / 2 - VW * .4)) - cam) * .12;
     }
@@ -6560,6 +6670,10 @@ try {
       cx.fillStyle = K.far; const par = cm * .3;
       if (K.fk === 'town') { const w = 44, i0 = Math.floor(par / w); for (let i = i0 - 1; i < i0 + VW / w + 2; i++) { const h = 26 + ((i * 37) % 11) * 6, x = i * w - par; cx.fillRect(x, 212 - h, w - 4, h); if (K.night) { cx.fillStyle = 'rgba(255,214,120,.7)'; for (let r = 0; r < h / 14 - 1; r++) if ((i + r) % 3) cx.fillRect(x + 6, 212 - h + 6 + r * 14, 4, 5); cx.fillStyle = K.far; } } }
       else if (K.fk === 'pines') { const w = 26, i0 = Math.floor(par / w); for (let i = i0 - 1; i < i0 + VW / w + 2; i++) { const h = 40 + ((i * 13) % 5) * 9, x = i * w - par; cx.beginPath(); cx.moveTo(x, 214); cx.lineTo(x + w / 2, 214 - h); cx.lineTo(x + w, 214); cx.fill(); } }
+      else if (K.fk === 'stage') {
+        for (let i = 0; i < 4; i++) { const bx = ((i * 190 + 60 - bgT * .6) % 760 + 760) % 760 - 140, a = Math.sin(bgT / 90 + i * 1.7) * .35; cx.save(); cx.translate(bx + 40, 0); cx.rotate(a); const gl = cx.createLinearGradient(0, 0, 0, 230); gl.addColorStop(0, 'rgba(255,230,160,.22)'); gl.addColorStop(1, 'rgba(255,230,160,0)'); cx.fillStyle = gl; cx.beginPath(); cx.moveTo(-5, 0); cx.lineTo(5, 0); cx.lineTo(48, 230); cx.lineTo(-48, 230); cx.fill(); cx.restore(); }
+        cx.fillStyle = K.far; const w = 58, i0 = Math.floor(par / w); for (let i = i0 - 1; i < i0 + VW / w + 2; i++) { const h = 36 + ((i * 29) % 4) * 14, x = i * w - par; cx.fillRect(x, 214 - h, w - 10, h); cx.fillStyle = 'rgba(255,255,255,.08)'; cx.beginPath(); cx.arc(x + (w - 10) / 2, 214 - h * .6, 11, 0, 7); cx.fill(); cx.fillStyle = K.far; }
+      }
       else if (K.fk === 'trees') { const w = 46, i0 = Math.floor(par / w); for (let i = i0 - 1; i < i0 + VW / w + 2; i++) { const r = 17 + ((i * 7) % 4) * 3, x = i * w - par; cx.fillRect(x + w / 2 - 2, 196, 4, 20); cx.beginPath(); cx.arc(x + w / 2, 194 - r * .3, r, 0, 7); cx.fill(); } }
       else { const w = 130, i0 = Math.floor(par / w); for (let i = i0 - 1; i < i0 + VW / w + 2; i++) { const h = 50 + ((i * 11) % 4) * 14, x = i * w - par; cx.beginPath(); cx.moveTo(x - 20, 214); cx.lineTo(x + w / 2, 214 - h); cx.lineTo(x + w + 20, 214); cx.fill(); } }
       hill(.3, 225, 40, K.h2, 55);
@@ -6623,7 +6737,7 @@ try {
       cx.fillStyle = '#fff'; cx.fillRect(-7, -12, 5, 5); cx.fillRect(2, -12, 5, 5); cx.fillStyle = '#000'; cx.fillRect(-5, -10, 3, 3); cx.fillRect(4, -10, 3, 3);
       cx.strokeStyle = big ? '#7a1010' : '#000'; cx.lineWidth = (big ? 2.2 : 1.5) / k; cx.beginPath(); cx.moveTo(-8, big ? -16 : -14); cx.lineTo(-2, -12); cx.moveTo(8, big ? -16 : -14); cx.lineTo(2, -12); cx.stroke();
       cx.restore();
-      if (big && !f.dead) { for (let i = 0; i < 3; i++) { cx.fillStyle = i < f.hp ? '#ff5a5a' : 'rgba(255,255,255,.25)'; cx.fillRect(f.x + 8 + i * 13, f.y - 10, 10, 5); } }
+      if (big && !f.dead) { for (let i = 0; i < f.mx; i++) { cx.fillStyle = i < f.hp ? '#ff5a5a' : 'rgba(255,255,255,.25)'; cx.fillRect(f.x + 4 + i * (46 / f.mx), f.y - 10, 46 / f.mx - 2.5, 5); } }
     }
     function draw() {
       const K = grid ? theme(level) : TH[0];
@@ -6680,15 +6794,25 @@ try {
       }
       for (const q of parts) { cx.fillStyle = q.col; cx.globalAlpha = Math.max(0, q.life / (q.puff ? 60 : 30)) * (q.puff ? .7 : 1); if (q.puff) { cx.beginPath(); cx.arc(q.x, q.y, q.r, 0, 7); cx.fill(); } else cx.fillRect(q.x, q.y, 3, 3); }
       cx.globalAlpha = 1; cx.restore();
+      if (K.dark && p && phase === 'play') {   // the Catskill nights are dark: a soft circle of light follows Ray
+        const sx = p.x + p.w / 2 - Math.round(cam), sy = p.y + p.h / 2, g = cx.createRadialGradient(sx, sy, 60, sx, sy, 250); g.addColorStop(0, 'rgba(0,0,12,0)'); g.addColorStop(1, 'rgba(0,0,12,.62)'); cx.fillStyle = g; cx.fillRect(0, 0, VW, VH);
+      }
       // HUD
       cx.fillStyle = 'rgba(0,0,0,.45)'; cx.fillRect(0, 0, VW, 22); cx.font = '600 12px DM Sans, sans-serif'; cx.textAlign = 'left'; cx.fillStyle = '#fff';
-      cx.fillText('Stage ' + (level || 1), 8, 15); drawCig(92, 11, -.5, false); cx.fillStyle = '#ffb066'; cx.fillText('x ' + got, 104, 15); cx.fillStyle = '#ff8a7a'; cx.fillText('♥'.repeat(Math.max(0, lives)), 150, 15);
+      cx.fillText('Stage ' + (level || 1) + '/' + TOTAL, 8, 15); drawCig(100, 11, -.5, false); cx.fillStyle = '#ffb066'; cx.fillText('x ' + got, 112, 15); cx.fillStyle = '#ff8a7a'; cx.fillText('♥'.repeat(Math.min(5, Math.max(0, lives))) + (lives > 5 ? '+' + (lives - 5) : ''), 150, 15);
       if (p && p.smoke > 0) { cx.fillStyle = '#cfd3d8'; cx.fillText('Smoke break ' + Math.ceil(p.smoke / 60) + 's', 235, 15); } else if (p && p.fast > 0) { cx.fillStyle = '#e0b98a'; cx.fillText('Coffee ' + Math.ceil(p.fast / 60) + 's', 235, 15); }
       if (pw) { drawPower(346, 11, pw > 1 ? 'v' : 't', false, .75); cx.textAlign = 'left'; cx.fillStyle = pw > 1 ? '#c9a8ff' : '#ffd24a'; cx.font = '600 11px DM Sans, sans-serif'; cx.fillText(pw > 1 ? 'vinyl' : 'tape', 358, 15); cx.font = '600 12px DM Sans, sans-serif'; }
       cx.fillStyle = '#fff'; cx.textAlign = 'right'; cx.fillText('Score ' + score, VW - 8, 15);
-      if (flash > 0) { cx.fillStyle = 'rgba(192,57,43,' + flash / 24 + ')'; cx.fillRect(0, 0, VW, VH); }
+      if (phase === 'won') {
+        cx.fillStyle = 'rgba(10,6,24,.78)'; cx.fillRect(0, 0, VW, VH); cx.textAlign = 'center';
+        for (let i = 0; i < 36; i++) { const a = bgT / 40 + i, x = (i * 53 + Math.sin(a) * 30) % VW, y = ((i * 37 + bgT * (1 + (i % 3) * .6)) % (VH + 20)) - 10; cx.fillStyle = ['#ffd24a', '#ff6a7a', '#8fe0ff', '#c9a8ff'][i % 4]; cx.fillRect(x, y, 4, 7); }
+        cx.fillStyle = '#ffd24a'; cx.font = '700 28px DM Serif Display, serif'; cx.fillText('You finished the tour!', VW / 2, VH / 2 - 34);
+        cx.fillStyle = '#fff'; cx.font = '600 15px DM Sans, sans-serif'; cx.fillText('All ' + TOTAL + ' stages · ' + got + ' smokes in the last stage', VW / 2, VH / 2 - 6); cx.fillText('Final score ' + score, VW / 2, VH / 2 + 18);
+        cx.fillStyle = '#c9ced6'; cx.font = '13px DM Sans, sans-serif'; cx.fillText('Press Play again to run it once more', VW / 2, VH / 2 + 46);
+      }
+      else if (flash > 0) { cx.fillStyle = 'rgba(192,57,43,' + flash / 24 + ')'; cx.fillRect(0, 0, VW, VH); }
       if (phase === 'play' && !active) { cx.fillStyle = 'rgba(0,0,0,.5)'; cx.fillRect(0, VH / 2 - 26, VW, 52); cx.fillStyle = '#fff'; cx.textAlign = 'center'; cx.font = '600 16px DM Sans, sans-serif'; cx.fillText('Paused. Tap or click the game to play.', VW / 2, VH / 2 + 6); }
-      else if (msgT > 0 && msg) { cx.fillStyle = 'rgba(0,0,0,.55)'; cx.fillRect(0, VH / 2 - 26, VW, 52); cx.fillStyle = '#fff'; cx.textAlign = 'center'; cx.font = '700 ' + (msg.length > 24 ? 17 : 22) + 'px DM Sans, sans-serif'; cx.fillText(msg, VW / 2, VH / 2 + 8); }
+      else if (msgT > 0 && msg && phase !== 'won') { cx.fillStyle = 'rgba(0,0,0,.55)'; cx.fillRect(0, VH / 2 - 26, VW, 52); cx.fillStyle = '#fff'; cx.textAlign = 'center'; cx.font = '700 ' + (msg.length > 24 ? 17 : 22) + 'px DM Sans, sans-serif'; cx.fillText(msg, VW / 2, VH / 2 + 8); }
     }
 
     function tick(t) {
@@ -6705,11 +6829,12 @@ try {
       }
       draw();
     }
-    function begin() { active = true; newGame(); document.getElementById('run-go').textContent = 'Restart'; if (!raf) raf = requestAnimationFrame(tick); }
+    function begin(lv0) { active = true; newGame(lv0); document.getElementById('run-go').textContent = 'Restart stage'; if (!raf) raf = requestAnimationFrame(tick); }
     draw();
     if (!raf) raf = requestAnimationFrame(tick);
 
-    document.getElementById('run-go').onclick = begin;
+    document.getElementById('run-go').onclick = () => begin(saved);
+    contBtn();
     const KEYS = { ArrowLeft: 'l', a: 'l', A: 'l', ArrowRight: 'r', d: 'r', D: 'r', ArrowUp: 'j', w: 'j', W: 'j', ' ': 'j', ArrowDown: 'dn', s: 'dn', S: 'dn', x: 'f', X: 'f', f: 'f', F: 'f' };
     const typing = e => /^(INPUT|TEXTAREA|SELECT)$/.test((e.target && e.target.tagName) || '');
     document.addEventListener('keydown', e => { if ((e.key === 'r' || e.key === 'R') && keys && p && phase === 'play' && active && visible() && !typing(e) && !e.metaKey && !e.ctrlKey) { e.preventDefault(); toCheckpoint(); return; } const k = KEYS[e.key]; if (!k || !keys || phase !== 'play' || !visible() || typing(e)) return; e.preventDefault(); if (k === 'j') { if (!keys.j) p.jb = 7; } if (k === 'f' && !keys.f) shoot(); keys[k] = true; });
@@ -6718,7 +6843,7 @@ try {
     hold('run-l', 'l'); hold('run-r', 'r'); hold('run-j', 'j'); hold('run-f', 'f');
     cv.addEventListener('pointerdown', e => { if (!phase) begin(); else active = true; });
     document.addEventListener('pointerdown', e => { if (!(e.target.closest && e.target.closest('#g-run'))) { active = false; if (keys) keys.l = keys.r = keys.j = keys.dn = keys.f = false; } });
-    window.KRRUN = { dbg: () => ({ p, foes, grid, W, coins, items, hazards, boss, door, phase, lives, level, score, got, keys, pw, shots, waves, plats }), give: n => { pw = n; }, toCp: i => { p.cp = i; toCheckpoint(); }, brick: () => { for (let r = 0; r < ROWS; r++) for (let c = 0; c < W; c++) if (grid[r][c] === 3) return { r, c }; return null; }, hit: (r, c) => brickHit(r, c), start: begin, to: n => { level = n; startLevel(); } };
+    window.KRRUN = { hurt: () => hurt(), clearInv: () => { inv = 0; }, run: (n, cb) => { for (let i = 0; i < n; i++) { cb(); step(); if (phase === 'clear') { level++; startLevel(); } else if (phase !== 'play') break; } return phase; }, god: () => { inv = 999; lives = 9; }, total: TOTAL, saved: () => saved, dbg: () => ({ p, foes, grid, W, coins, items, hazards, boss, door, phase, lives, level, score, got, keys, pw, shots, waves, plats }), give: n => { pw = n; }, toCp: i => { p.cp = i; toCheckpoint(); }, brick: () => { for (let r = 0; r < ROWS; r++) for (let c = 0; c < W; c++) if (grid[r][c] === 3) return { r, c }; return null; }, hit: (r, c) => brickHit(r, c), start: begin, to: n => { level = n; startLevel(); } };
   })();
 
 } catch (err) { console.error('[fun:rayrun]', err); }
