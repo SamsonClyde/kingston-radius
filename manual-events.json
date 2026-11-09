@@ -32449,5 +32449,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794234605031,
+    "title": "Candlelight: 90s Hip-Hop on Strings",
+    "date": "2026-12-04",
+    "time": "18:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794234603479-2023-01-14-fountains-street-church-grand-rapids-us-01-1-1-op.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
