@@ -32435,5 +32435,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794234498043,
+    "title": "Candlelight: The Lord of the Rings",
+    "date": "2026-11-12",
+    "time": "",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794234494499-2023-01-14-fountains-street-church-grand-rapids-us-01-1-1-op.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
