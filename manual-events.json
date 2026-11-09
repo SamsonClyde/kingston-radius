@@ -32337,5 +32337,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794225754542,
+    "title": "Hot Chocolate Fest",
+    "date": "2027-02-14",
+    "time": "",
+    "venue": "The Ashokan Center",
+    "venueUrl": "https://ashokancenter.org/events/",
+    "location": "Olivebridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794225752100-new-3-e1730740067536.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
