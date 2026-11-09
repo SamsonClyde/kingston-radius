@@ -32309,5 +32309,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794225682176,
+    "title": "Winter Hoot Day Two",
+    "date": "2027-01-30",
+    "time": "",
+    "venue": "The Ashokan Center",
+    "venueUrl": "https://ashokancenter.org/events/",
+    "location": "Olivebridge, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dA1kEJHCycFXjV6DA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794225673152-wh27-prod-4.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
