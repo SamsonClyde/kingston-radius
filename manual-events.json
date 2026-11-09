@@ -32379,5 +32379,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794232962834,
+    "title": "Fieldwork : Vol 1 - DJs: Naiad, Samonik, Wolf Flow",
+    "date": "2026-11-21",
+    "time": "20:00",
+    "venue": "The Belvedere Inn",
+    "venueUrl": "https://www.instagram.com/thebelvedereinn/",
+    "location": "Stamford, NY",
+    "mapsUrl": "https://maps.app.goo.gl/ZBoswHRanp9PYVXT9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794232953399-unnamed.jpg",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
