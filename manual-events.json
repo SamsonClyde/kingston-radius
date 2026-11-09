@@ -32421,5 +32421,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794234246371,
+    "title": "Tha Paradigm Shift",
+    "date": "2026-11-21",
+    "time": "19:30",
+    "venue": "The Common Good",
+    "venueUrl": "https://www.thecommongoodny.com/",
+    "location": "Ellenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LHV8FPfmhjg3qRaLA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794234239688-unnamed-2.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
