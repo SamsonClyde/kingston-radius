@@ -124,10 +124,6 @@
     "status": "rejected",
     "hiddenAt": 1786963721979
   },
-  "Assembly Kingston||2026-11-08||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786963737098
-  },
   "Assembly Kingston||2026-11-13||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963741860
@@ -273,10 +269,6 @@
   "The Falcon||2026-10-25||19:30": "approved",
   "The Falcon||2026-10-29||19:30": "approved",
   "The Falcon||2026-10-30||19:30": "approved",
-  "The Falcon||2026-11-08||See website": {
-    "status": "rejected",
-    "hiddenAt": 1787076784857
-  },
   "The Falcon||2026-11-08||19:30": "approved",
   "The Falcon||2026-11-13||See website": {
     "status": "rejected",
@@ -1351,10 +1343,6 @@
     "status": "rejected",
     "hiddenAt": 1791334553086
   },
-  "UPAC||2026-11-08||15:00": {
-    "status": "rejected",
-    "hiddenAt": 1791334634981
-  },
   "Time & Space Limited||2026-10-09||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791369167910
@@ -1542,10 +1530,6 @@
     "status": "rejected",
     "hiddenAt": 1792149161106
   },
-  "Time & Space Limited||2026-11-08||1:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792149171863
-  },
   "Time & Space Limited||2026-11-14||1:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792149174770
@@ -1619,10 +1603,6 @@
     "hiddenAt": 1792632642450
   },
   "Bard College Conservatory||2026-10-27||19:30": "approved",
-  "Stissing Center||2026-11-08||3:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792666753452
-  },
   "Tempo Arts||2026-11-13||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792666798156
@@ -1671,10 +1651,6 @@
   },
   "The Lace Mill||2026-10-26||19:00": "approved",
   "Keegan Ales||2026-11-07||20:00": "approved",
-  "Keegan Ales||2026-11-08||2:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1793010635502
-  },
   "Love, Velma||2026-12-31||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1793010754171
@@ -1830,10 +1806,6 @@
     "status": "rejected",
     "hiddenAt": 1793269425410
   },
-  "Assembly Kingston||2026-11-08||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1793704779939
-  },
   "Assembly Kingston||2027-01-16||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1793704914409
@@ -1891,10 +1863,6 @@
     "status": "rejected",
     "hiddenAt": 1793705531233
   },
-  "Colony Woodstock||2026-11-08||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793705569328
-  },
   "Keegan Ales||2026-11-06||9:00 pm": {
     "status": "rejected",
     "hiddenAt": 1793705588686
@@ -1925,10 +1893,6 @@
     "status": "rejected",
     "hiddenAt": 1793706012356
   },
-  "NoFun||2026-11-08||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793706328782
-  },
   "PS21 Chatham||2026-11-05||17:30": "approved",
   "Stissing Center||2026-11-13||7:30 PM": {
     "status": "rejected",
@@ -1958,14 +1922,6 @@
   "Tompkins Corners Cultural Center||2027-04-29||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1793706790022
-  },
-  "Towne Crier Café||2026-11-08||11:30 am": {
-    "status": "rejected",
-    "hiddenAt": 1793706819345
-  },
-  "Towne Crier Café||2026-11-08||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1793706822503
   },
   "Towne Crier Café||2026-12-12||8:00 pm": {
     "status": "rejected",
@@ -2014,10 +1970,6 @@
   "Tempo Arts||2026-11-27||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1793877423658
-  },
-  "The Grand||2026-11-08||11:00 AM": {
-    "status": "rejected",
-    "hiddenAt": 1793877912034
   },
   "Bard College Conservatory||2026-11-09||": {
     "status": "rejected",
