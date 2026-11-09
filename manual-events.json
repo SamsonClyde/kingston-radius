@@ -32267,5 +32267,19 @@
     "price": "$35+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794224998694,
+    "title": "Zozulka Trio",
+    "date": "2026-12-11",
+    "time": "19:30",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794224986434-berezaberyoze-viewcy-1080x608-1.webp",
+    "price": "$15+",
+    "free": false,
+    "_manual": true
   }
 ]
