@@ -32561,5 +32561,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794235341872,
+    "title": "KT Tunstall Live",
+    "date": "2027-04-25",
+    "time": "20:00",
+    "venue": "The Egg",
+    "venueUrl": "https://theegg.org/events/",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yqnSr2KY4AQYXPuM6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794235336732-kt-tunstall-main-press-shot-credit-cortney-armitage-low-res-.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
