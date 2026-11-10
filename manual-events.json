@@ -32659,5 +32659,19 @@
     "price": "$24+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794309920857,
+    "title": "CAPYAC",
+    "date": "2027-02-04",
+    "time": "20:00",
+    "venue": "Lark Hall",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794309912729-https-3a-2f-2fcdn-4.webp",
+    "price": "$22+",
+    "free": false,
+    "_manual": true
   }
 ]
