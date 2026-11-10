@@ -32717,5 +32717,19 @@
     "price": "$27+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794311355983,
+    "title": "Alex Hamburger Quartet, Illari",
+    "date": "2026-11-22",
+    "time": "17:00",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com/",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794311354919-6a710e18bbb649ec52a79340-alex-hamburger-p-1600.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
