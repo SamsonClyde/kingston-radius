@@ -2019,5 +2019,9 @@
     "status": "rejected",
     "hiddenAt": 1794310115549
   },
-  "Glen Falls House||2027-01-08||17:00": "approved"
+  "Glen Falls House||2027-01-08||17:00": "approved",
+  "Keegan Ales||2026-11-10||6:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1794310125099
+  }
 }
