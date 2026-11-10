@@ -32703,5 +32703,19 @@
     "price": "$16+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794310705468,
+    "title": "Heart Awakening Music",
+    "date": "2026-11-29",
+    "time": "15:00",
+    "venue": "The Ellis",
+    "venueUrl": "https://www.theellisnewburgh.com/",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/r8BMC6j6N8u7Y8Y97",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794310705478-https-3a-2f-2fcdn-6.webp",
+    "price": "$27+",
+    "free": false,
+    "_manual": true
   }
 ]
