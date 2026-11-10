@@ -2027,5 +2027,9 @@
   "Keegan Ales||2026-11-12||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1794310127394
+  },
+  "Keegan Ales||2026-11-14||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1794310140242
   }
 }
