@@ -2014,5 +2014,10 @@
   "Colony Woodstock||2026-11-15||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1794310036659
-  }
+  },
+  "Glen Falls House||2027-01-08||": {
+    "status": "rejected",
+    "hiddenAt": 1794310115549
+  },
+  "Glen Falls House||2027-01-08||17:00": "approved"
 }
