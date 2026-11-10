@@ -2049,5 +2049,9 @@
     "status": "rejected",
     "hiddenAt": 1794310273705
   },
-  "KinoSaito||2026-12-12||17:00": "approved"
+  "KinoSaito||2026-12-12||17:00": "approved",
+  "MASS MoCA||2026-11-14||1:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1794310281806
+  }
 }
