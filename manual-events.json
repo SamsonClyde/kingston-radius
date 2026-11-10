@@ -32645,5 +32645,19 @@
     "price": "donation",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794309866191,
+    "title": "The Wheel perform Tampa, FL 12/18/73",
+    "date": "2026-12-18",
+    "time": "20:00",
+    "venue": "Lark Hall",
+    "venueUrl": "https://www.eventbrite.com/o/lark-hall-albany-32943154085",
+    "location": "Albany, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xmUcCF8obWJwHGXz5",
+    "posterUrl": "",
+    "price": "$24+",
+    "free": false,
+    "_manual": true
   }
 ]
