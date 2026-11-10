@@ -2141,5 +2141,9 @@
   "The Local Saugerties||2026-12-03||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1794310373404
+  },
+  "The Local Saugerties||2026-12-05||": {
+    "status": "rejected",
+    "hiddenAt": 1794310375617
   }
 }
