@@ -1990,5 +1990,9 @@
   "Assembly Kingston||2026-11-20||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1794309234592
+  },
+  "Colony Woodstock||2026-11-11||7:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1794309237650
   }
 }
