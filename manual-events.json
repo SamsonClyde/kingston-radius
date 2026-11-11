@@ -32802,5 +32802,19 @@
     "price": "$12+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794397207551,
+    "title": "Honest Dark",
+    "date": "2026-11-21",
+    "time": "21:00",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794397205843-logo-oct6-white.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
