@@ -53,6 +53,19 @@
   },
   {
     "id": 5,
+    "date": "2026-11-11",
+    "title": "No Fun Open Mic and Talent Show",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "7:00 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 6,
     "date": "2026-11-12",
     "title": "Laura Cantrell",
     "venue": "The Grand",
@@ -65,7 +78,7 @@
     "_source": "email"
   },
   {
-    "id": 6,
+    "id": 7,
     "date": "2026-11-12",
     "title": "Family Night",
     "venue": "MASS MoCA",
@@ -78,7 +91,7 @@
     "_source": "email"
   },
   {
-    "id": 7,
+    "id": 8,
     "date": "2026-11-12",
     "title": "Songs of the Sea Social Sing with Shinbone Alley",
     "venue": "Tempo Arts",
@@ -91,7 +104,7 @@
     "_source": "email"
   },
   {
-    "id": 8,
+    "id": 9,
     "date": "2026-11-12",
     "title": "Michaela Anne x Ambassador Parsley & the Lying Hearts Club",
     "venue": "Colony Woodstock",
@@ -104,7 +117,20 @@
     "_source": "email"
   },
   {
-    "id": 9,
+    "id": 10,
+    "date": "2026-11-12",
+    "title": "Vethaken / We Used to Cut the Grass / She'shavingameltdown / Ampevene",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "$12",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 11,
     "date": "2026-11-13",
     "title": "Judy Collins - Sweet Judy Blue Eyes Farewell Tour",
     "venue": "Bardavon",
@@ -117,7 +143,7 @@
     "_source": "email"
   },
   {
-    "id": 10,
+    "id": 12,
     "date": "2026-11-13",
     "title": "Judy Collins - Sweet Judy Blue Eyes: Farewell Tour",
     "venue": "Bardavon",
@@ -130,7 +156,7 @@
     "_source": "email"
   },
   {
-    "id": 11,
+    "id": 13,
     "date": "2026-11-13",
     "title": "Jason Carter Band",
     "venue": "Tempo Arts",
@@ -143,7 +169,7 @@
     "_source": "email"
   },
   {
-    "id": 12,
+    "id": 14,
     "date": "2026-11-13",
     "title": "Edie Carey",
     "venue": "Stissing Center",
@@ -156,7 +182,7 @@
     "_source": "email"
   },
   {
-    "id": 13,
+    "id": 15,
     "date": "2026-11-13",
     "title": "Afrobeat and Juju Legend: Kaleta and Super Yamba Band",
     "venue": "The Local Saugerties",
@@ -169,7 +195,7 @@
     "_source": "email"
   },
   {
-    "id": 14,
+    "id": 16,
     "date": "2026-11-13",
     "title": "Laura Cantrell",
     "venue": "The Grand",
@@ -182,7 +208,7 @@
     "_source": "email"
   },
   {
-    "id": 15,
+    "id": 17,
     "date": "2026-11-13",
     "title": "Aaron Lee Tasjan w/ Madeleine Kelson",
     "venue": "Colony Woodstock",
@@ -195,7 +221,7 @@
     "_source": "email"
   },
   {
-    "id": 16,
+    "id": 18,
     "date": "2026-11-13",
     "title": "DJ Darkstar Presents: A Nightmare Before Christmas Soiree",
     "venue": "Colony Woodstock",
@@ -208,7 +234,46 @@
     "_source": "email"
   },
   {
-    "id": 17,
+    "id": 19,
+    "date": "2026-11-13",
+    "title": "Crash Out for Tachycardia: Benefit Show",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "$10",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 20,
+    "date": "2026-11-13",
+    "title": "Once Upon a Time in Harlem",
+    "venue": "Time & Space Limited",
+    "venueUrl": "#",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "time": "6:30 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 21,
+    "date": "2026-11-13",
+    "title": "Soul Patrol",
+    "venue": "Time & Space Limited",
+    "venueUrl": "#",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "time": "7:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 22,
     "date": "2026-11-14",
     "title": "Endea Owens & The Cookout",
     "venue": "MASS MoCA",
@@ -221,7 +286,7 @@
     "_source": "email"
   },
   {
-    "id": 18,
+    "id": 23,
     "date": "2026-11-14",
     "title": "Carmen",
     "venue": "Time & Space Limited",
@@ -234,7 +299,7 @@
     "_source": "email"
   },
   {
-    "id": 19,
+    "id": 24,
     "date": "2026-11-14",
     "title": "The Ballad Tree",
     "venue": "Tempo Arts",
@@ -247,7 +312,7 @@
     "_source": "email"
   },
   {
-    "id": 20,
+    "id": 25,
     "date": "2026-11-14",
     "title": "The Slocan Ramblers",
     "venue": "Stissing Center",
@@ -260,7 +325,7 @@
     "_source": "email"
   },
   {
-    "id": 21,
+    "id": 26,
     "date": "2026-11-14",
     "title": "Brazil's Rising Star - Bia Ferreira",
     "venue": "The Local Saugerties",
@@ -273,7 +338,7 @@
     "_source": "email"
   },
   {
-    "id": 22,
+    "id": 27,
     "date": "2026-11-14",
     "title": "Uncomputable Thread: Presentation and Movement Workshop",
     "venue": "MASS MoCA",
@@ -286,7 +351,7 @@
     "_source": "email"
   },
   {
-    "id": 23,
+    "id": 28,
     "date": "2026-11-14",
     "title": "Artist Tour: Jimena Sarno: Rhapsody",
     "venue": "MASS MoCA",
@@ -299,7 +364,7 @@
     "_source": "email"
   },
   {
-    "id": 24,
+    "id": 29,
     "date": "2026-11-14",
     "title": "James and the Giant Peach",
     "venue": "The Grand",
@@ -312,7 +377,7 @@
     "_source": "email"
   },
   {
-    "id": 25,
+    "id": 30,
     "date": "2026-11-14",
     "title": "Duke of Surl",
     "venue": "The Grand",
@@ -325,7 +390,7 @@
     "_source": "email"
   },
   {
-    "id": 26,
+    "id": 31,
     "date": "2026-11-14",
     "title": "The Bones of J.R. Jones w/ Chris Kasper",
     "venue": "Colony Woodstock",
@@ -338,7 +403,59 @@
     "_source": "email"
   },
   {
-    "id": 27,
+    "id": 32,
+    "date": "2026-11-14",
+    "title": "We're Turning 9! Celebrate With Us!",
+    "venue": "Rough Draft Books",
+    "venueUrl": "https://www.roughdraftny.com/events",
+    "location": "Red Hook, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LLZ4sLnaNhZtSSar9",
+    "time": "6:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 33,
+    "date": "2026-11-14",
+    "title": "Automelodi / Vick Vapors / Holy Water / Hellseeker DJ's",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "$10",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 34,
+    "date": "2026-11-14",
+    "title": "Once Upon a Time in Harlem",
+    "venue": "Time & Space Limited",
+    "venueUrl": "#",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "time": "7:15 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 35,
+    "date": "2026-11-14",
+    "title": "Soul Patrol",
+    "venue": "Time & Space Limited",
+    "venueUrl": "#",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "time": "2:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 36,
     "date": "2026-11-15",
     "title": "Jay Ungar's 80th Birthday Concert",
     "venue": "Tempo Arts",
@@ -351,7 +468,7 @@
     "_source": "email"
   },
   {
-    "id": 28,
+    "id": 37,
     "date": "2026-11-15",
     "title": "Hearing Things Record Release Show",
     "venue": "Tempo Arts",
@@ -364,7 +481,7 @@
     "_source": "email"
   },
   {
-    "id": 29,
+    "id": 38,
     "date": "2026-11-15",
     "title": "Live Music Brunch",
     "venue": "The Grand",
@@ -377,7 +494,7 @@
     "_source": "email"
   },
   {
-    "id": 30,
+    "id": 39,
     "date": "2026-11-15",
     "title": "Tinsley Ellis w/ Ray Bonneville",
     "venue": "Colony Woodstock",
@@ -390,7 +507,72 @@
     "_source": "email"
   },
   {
-    "id": 31,
+    "id": 40,
+    "date": "2026-11-15",
+    "title": "Last Ride: GTA Video Game Night",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "6:00 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 41,
+    "date": "2026-11-15",
+    "title": "Once Upon a Time in Harlem",
+    "venue": "Time & Space Limited",
+    "venueUrl": "#",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "time": "4:30 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 42,
+    "date": "2026-11-15",
+    "title": "Soul Patrol",
+    "venue": "Time & Space Limited",
+    "venueUrl": "#",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "time": "4:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 43,
+    "date": "2026-11-16",
+    "title": "Once Upon a Time in Harlem",
+    "venue": "Time & Space Limited",
+    "venueUrl": "#",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "time": "4:30 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 44,
+    "date": "2026-11-16",
+    "title": "Soul Patrol",
+    "venue": "Time & Space Limited",
+    "venueUrl": "#",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "time": "6:30 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 45,
     "date": "2026-11-17",
     "title": "The Fateful Hour",
     "venue": "Bardavon",
@@ -403,7 +585,7 @@
     "_source": "email"
   },
   {
-    "id": 32,
+    "id": 46,
     "date": "2026-11-17",
     "title": "FREE EVENT (PPLD): The Fateful Hour",
     "venue": "Bardavon",
@@ -416,7 +598,20 @@
     "_source": "email"
   },
   {
-    "id": 33,
+    "id": 47,
+    "date": "2026-11-17",
+    "title": "November Night School",
+    "venue": "Rough Draft Books",
+    "venueUrl": "https://www.roughdraftny.com/events",
+    "location": "Red Hook, NY",
+    "mapsUrl": "https://maps.app.goo.gl/LLZ4sLnaNhZtSSar9",
+    "time": "6:00 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 48,
     "date": "2026-11-18",
     "title": "Exploding Definitions: A Storytelling Event",
     "venue": "Bardavon",
@@ -429,7 +624,7 @@
     "_source": "email"
   },
   {
-    "id": 34,
+    "id": 49,
     "date": "2026-11-18",
     "title": "Pipo Romero",
     "venue": "Tempo Arts",
@@ -442,7 +637,7 @@
     "_source": "email"
   },
   {
-    "id": 35,
+    "id": 50,
     "date": "2026-11-18",
     "title": "Book Club: On the Calculation of Volume (Book I)",
     "venue": "MASS MoCA",
@@ -455,7 +650,7 @@
     "_source": "email"
   },
   {
-    "id": 36,
+    "id": 51,
     "date": "2026-11-18",
     "title": "FREE EVENT (TMI Project & Engaged Pluralism at Vassar College): Exploding Definitions: A Storytelling Event",
     "venue": "Bardavon",
@@ -468,7 +663,7 @@
     "_source": "email"
   },
   {
-    "id": 37,
+    "id": 52,
     "date": "2026-11-19",
     "title": "Community Potluck",
     "venue": "The Living Room at Full Circle",
@@ -481,7 +676,7 @@
     "_source": "email"
   },
   {
-    "id": 38,
+    "id": 53,
     "date": "2026-11-19",
     "title": "Claywoman plus Alexandra Auder",
     "venue": "Time & Space Limited",
@@ -494,7 +689,7 @@
     "_source": "email"
   },
   {
-    "id": 39,
+    "id": 54,
     "date": "2026-11-19",
     "title": "Holly Macve",
     "venue": "The Grand",
@@ -507,7 +702,7 @@
     "_source": "email"
   },
   {
-    "id": 40,
+    "id": 55,
     "date": "2026-11-19",
     "title": "The Legendary Jim Kweskin & Samoa Wilson",
     "venue": "The Local Saugerties",
@@ -520,7 +715,7 @@
     "_source": "email"
   },
   {
-    "id": 41,
+    "id": 56,
     "date": "2026-11-20",
     "title": "Baklava Express",
     "venue": "Tempo Arts",
@@ -533,7 +728,20 @@
     "_source": "email"
   },
   {
-    "id": 42,
+    "id": 57,
+    "date": "2026-11-20",
+    "title": "Raise the Red Lantern",
+    "venue": "Time & Space Limited",
+    "venueUrl": "#",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 58,
     "date": "2026-11-21",
     "title": "The Pirates of Penzance",
     "venue": "Bardavon",
@@ -546,7 +754,7 @@
     "_source": "email"
   },
   {
-    "id": 43,
+    "id": 59,
     "date": "2026-11-21",
     "title": "Mirrored Pool",
     "venue": "MASS MoCA",
@@ -559,7 +767,7 @@
     "_source": "email"
   },
   {
-    "id": 44,
+    "id": 60,
     "date": "2026-11-21",
     "title": "Rose & The Bros",
     "venue": "Tempo Arts",
@@ -572,7 +780,7 @@
     "_source": "email"
   },
   {
-    "id": 45,
+    "id": 61,
     "date": "2026-11-21",
     "title": "Member Sip & Shop",
     "venue": "MASS MoCA",
@@ -585,7 +793,7 @@
     "_source": "email"
   },
   {
-    "id": 46,
+    "id": 62,
     "date": "2026-11-21",
     "title": "Rachna Nivas \"Unedited\"",
     "venue": "Stissing Center",
@@ -598,7 +806,20 @@
     "_source": "email"
   },
   {
-    "id": 47,
+    "id": 63,
+    "date": "2026-11-21",
+    "title": "Golden Boy - Encore",
+    "venue": "Time & Space Limited",
+    "venueUrl": "#",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "time": "2:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 64,
     "date": "2026-11-22",
     "title": "Carmen",
     "venue": "Time & Space Limited",
@@ -611,7 +832,7 @@
     "_source": "email"
   },
   {
-    "id": 48,
+    "id": 65,
     "date": "2026-11-27",
     "title": "Perowsky / Torn / Medeski / Ultan",
     "venue": "Tempo Arts",
@@ -624,7 +845,7 @@
     "_source": "email"
   },
   {
-    "id": 49,
+    "id": 66,
     "date": "2026-12-03",
     "title": "Grace Potter",
     "venue": "Bardavon",
@@ -637,7 +858,7 @@
     "_source": "email"
   },
   {
-    "id": 50,
+    "id": 67,
     "date": "2026-12-03",
     "title": "Grace Potter",
     "venue": "Bardavon",
@@ -650,7 +871,7 @@
     "_source": "email"
   },
   {
-    "id": 51,
+    "id": 68,
     "date": "2026-12-03",
     "title": "Jazz Vocalists Duchess",
     "venue": "The Local Saugerties",
@@ -663,7 +884,20 @@
     "_source": "email"
   },
   {
-    "id": 52,
+    "id": 69,
+    "date": "2026-12-04",
+    "title": "Josephine",
+    "venue": "Time & Space Limited",
+    "venueUrl": "#",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1yKdQW8g696zu6v68",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 70,
     "date": "2026-12-05",
     "title": "Amber Rubarth Single Release Party",
     "venue": "Tempo Arts",
@@ -676,7 +910,7 @@
     "_source": "email"
   },
   {
-    "id": 53,
+    "id": 71,
     "date": "2026-12-05",
     "title": "Songs of Southern Italy Maria Mazzota",
     "venue": "The Local Saugerties",
@@ -689,7 +923,7 @@
     "_source": "email"
   },
   {
-    "id": 54,
+    "id": 72,
     "date": "2026-12-06",
     "title": "Candice Guardino",
     "venue": "Bardavon",
@@ -702,7 +936,7 @@
     "_source": "email"
   },
   {
-    "id": 55,
+    "id": 73,
     "date": "2026-12-06",
     "title": "Candice Guardino: Italian Bred",
     "venue": "Bardavon",
@@ -715,7 +949,7 @@
     "_source": "email"
   },
   {
-    "id": 56,
+    "id": 74,
     "date": "2026-12-08",
     "title": "The LeeVees",
     "venue": "The Grand",
@@ -728,7 +962,7 @@
     "_source": "email"
   },
   {
-    "id": 57,
+    "id": 75,
     "date": "2026-12-10",
     "title": "Sea Glass",
     "venue": "The Grand",
@@ -741,7 +975,7 @@
     "_source": "email"
   },
   {
-    "id": 58,
+    "id": 76,
     "date": "2026-12-11",
     "title": "BEREZA / BERYOZE with Zozulka Trio",
     "venue": "Tempo Arts",
@@ -754,7 +988,7 @@
     "_source": "email"
   },
   {
-    "id": 59,
+    "id": 77,
     "date": "2026-12-12",
     "title": "New Paltz Ballet Theatre: The Nutcracker",
     "venue": "Bardavon",
@@ -767,7 +1001,7 @@
     "_source": "email"
   },
   {
-    "id": 60,
+    "id": 78,
     "date": "2026-12-12",
     "title": "New Paltz Ballet Theatre: The Nutcracker",
     "venue": "Bardavon",
@@ -780,7 +1014,7 @@
     "_source": "email"
   },
   {
-    "id": 61,
+    "id": 79,
     "date": "2026-12-13",
     "title": "New Paltz Ballet Theatre: The Nutcracker",
     "venue": "Bardavon",
@@ -793,7 +1027,7 @@
     "_source": "email"
   },
   {
-    "id": 62,
+    "id": 80,
     "date": "2026-12-13",
     "title": "New Paltz Ballet Theatre: The Nutcracker",
     "venue": "Bardavon",
@@ -806,7 +1040,7 @@
     "_source": "email"
   },
   {
-    "id": 63,
+    "id": 81,
     "date": "2026-12-16",
     "title": "Holiday Hootenanny for Feeding Westchester",
     "venue": "The Grand",
@@ -819,7 +1053,7 @@
     "_source": "email"
   },
   {
-    "id": 64,
+    "id": 82,
     "date": "2026-12-17",
     "title": "Community Potluck",
     "venue": "The Living Room at Full Circle",
@@ -832,7 +1066,7 @@
     "_source": "email"
   },
   {
-    "id": 65,
+    "id": 83,
     "date": "2026-12-17",
     "title": "FREE FILM: Cult Classics Love Actually",
     "venue": "Bardavon",
@@ -845,7 +1079,7 @@
     "_source": "email"
   },
   {
-    "id": 66,
+    "id": 84,
     "date": "2026-12-17",
     "title": "FREE FILM: Love Actually (2003)",
     "venue": "Bardavon",
@@ -858,7 +1092,7 @@
     "_source": "email"
   },
   {
-    "id": 67,
+    "id": 85,
     "date": "2026-12-19",
     "title": "Paula Poundstone",
     "venue": "Bardavon",
@@ -871,7 +1105,7 @@
     "_source": "email"
   },
   {
-    "id": 68,
+    "id": 86,
     "date": "2026-12-19",
     "title": "Paula Poundstone",
     "venue": "Bardavon",
@@ -884,7 +1118,7 @@
     "_source": "email"
   },
   {
-    "id": 69,
+    "id": 87,
     "date": "2026-12-20",
     "title": "MET ENCORE: Samson et Dalila (Saint-Saëns)",
     "venue": "Bardavon",
@@ -897,7 +1131,7 @@
     "_source": "email"
   },
   {
-    "id": 70,
+    "id": 88,
     "date": "2027-01-16",
     "title": "Hay Fever",
     "venue": "Time & Space Limited",
@@ -910,7 +1144,7 @@
     "_source": "email"
   },
   {
-    "id": 71,
+    "id": 89,
     "date": "2027-01-23",
     "title": "Chanticleer",
     "venue": "Bardavon",
@@ -923,7 +1157,7 @@
     "_source": "email"
   },
   {
-    "id": 72,
+    "id": 90,
     "date": "2027-01-24",
     "title": "Puppy Pals Live - The Action-Packed Comedic Stunt Dog Show",
     "venue": "Bardavon",
@@ -936,7 +1170,7 @@
     "_source": "email"
   },
   {
-    "id": 73,
+    "id": 91,
     "date": "2027-01-30",
     "title": "MET ENCORE: La Fanciulla del West (Puccini)",
     "venue": "Bardavon",
@@ -949,7 +1183,7 @@
     "_source": "email"
   },
   {
-    "id": 74,
+    "id": 92,
     "date": "2027-02-13",
     "title": "A Taste of Ireland",
     "venue": "Bardavon",
