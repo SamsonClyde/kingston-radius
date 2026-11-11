@@ -32984,5 +32984,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794398206957,
+    "title": "Rock the Pantry - Bear Grass, Nathan Meltz and the House of Tomorrow, Pony and the Pancake, Front Biz",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "venue": "The Hangar",
+    "venueUrl": "https://www.thehangaronthehudson.com/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agP4ptppoZV8vK1h9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794398195415-screenshot-2026-11-09-at-1-55-31-pm.webp",
+    "price": "$25 (cash only) & bring a non perishable food item",
+    "free": false,
+    "_manual": true
   }
 ]
