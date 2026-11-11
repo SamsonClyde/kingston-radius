@@ -2727,15 +2727,43 @@ function formatEventBlurb(e) {
   return `${e.title}\n${e.venue}\n${dateStr}${timeStr ? ', ' + timeStr : ''}`;
 }
 
-// Sharing a show with a poster shares the poster picture itself, with the link to the show as its caption. If the poster can't be read
-// (some image hosts don't allow it) or the phone can't share files, it falls back to the usual title/venue/date text and link.
-async function posterFile(e) {
+// Sharing a show with a poster shares the poster picture itself, with a branded strip under it (the Radius logo, the name and the link to the
+// show) and the link as the caption too. If the poster can't be read (some image hosts don't allow it) or the phone can't share files,
+// it falls back to the usual title/venue/date text and link.
+async function brandedPoster(blob, shareUrl) {
+  let bmp;
+  try { bmp = await createImageBitmap(blob); }
+  catch (err) { bmp = await new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = URL.createObjectURL(blob); }); }
+  const iw = bmp.width, ih = bmp.height; if (!iw || !ih) return null;
+  try { await Promise.race([document.fonts.load('40px "DM Serif Display"'), document.fonts.load('500 20px "DM Sans"'), new Promise(r => setTimeout(r, 800))]); } catch (err) {}
+  let sc = Math.min(1, 1400 / iw); const fhOf = w => Math.max(120, Math.round(w * 0.17)); if ((ih * sc) + fhOf(iw * sc) > 3000) sc = Math.min(sc, 2800 / ih);
+  const w = Math.round(iw * sc), ph = Math.round(ih * sc), fh = fhOf(w);
+  const cv = document.createElement('canvas'); cv.width = w; cv.height = ph + fh; const c = cv.getContext('2d');
+  c.fillStyle = '#1a1f29'; c.fillRect(0, 0, w, ph + fh); c.drawImage(bmp, 0, 0, w, ph);
+  // the strip: radar logo on the left, KingstonRadius and the link on the right
+  const r = Math.round(fh * 0.3), cx0 = Math.round(fh * 0.22) + r, cy0 = ph + fh / 2;
+  c.fillStyle = '#c0392b'; c.beginPath(); c.arc(cx0, cy0, r, 0, 7); c.fill();
+  c.strokeStyle = 'rgba(255,255,255,.45)'; c.lineWidth = r * 0.09; c.beginPath(); c.arc(cx0, cy0, r * 0.6, 0, 7); c.stroke();
+  c.strokeStyle = '#fff'; c.lineWidth = r * 0.2; c.lineCap = 'round'; c.beginPath(); c.moveTo(cx0, cy0); c.lineTo(cx0 + r * 0.74, cy0 - r * 0.8); c.stroke();
+  c.fillStyle = '#fff'; c.beginPath(); c.arc(cx0, cy0, r * 0.19, 0, 7); c.fill();
+  const x0 = cx0 + r + Math.round(fh * 0.2), room = w - x0 - Math.round(fh * 0.2);
+  let fs = Math.round(fh * 0.3); const wm = s => `${fs}px "DM Serif Display", Georgia, serif`;
+  c.font = wm(); while (c.measureText('KingstonRadius').width > room && fs > 12) { fs -= 2; c.font = wm(); }
+  c.textBaseline = 'alphabetic'; const ty = cy0 - fh * 0.02;
+  c.fillStyle = '#fff'; c.fillText('Kingston', x0, ty); const kw = c.measureText('Kingston').width; c.fillStyle = '#e8574a'; c.fillText('Radius', x0 + kw, ty);
+  const link = String(shareUrl || location.host).replace(/^https?:\/\//, ''); let ls = Math.round(fh * 0.15);
+  const lf = z => `500 ${z}px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace`; c.font = lf(ls); while (c.measureText(link).width > room && ls > 9) { ls -= 1; c.font = lf(ls); }
+  c.fillStyle = '#b6bcc8'; c.fillText(link, x0, ty + fh * 0.2);
+  return await new Promise(res => cv.toBlob(res, 'image/jpeg', 0.92));
+}
+async function posterFile(e, shareUrl) {
   if (!e || !e.posterUrl || !navigator.canShare || !window.File) return null;
   try {
     const ctl = new AbortController(), t = setTimeout(() => ctl.abort(), 4500);
     const r = await fetch(e.posterUrl, { mode: 'cors', signal: ctl.signal }); clearTimeout(t);
     if (!r.ok) return null;
     const b = await r.blob(); if (!/^image\//.test(b.type)) return null;
+    try { const bb = await brandedPoster(b, shareUrl); if (bb) { const bf = new File([bb], 'poster.jpg', { type: 'image/jpeg' }); if (navigator.canShare({ files: [bf] })) return bf; } } catch (err) {}
     const f = new File([b], 'poster.' + (b.type.split('/')[1] || 'jpg').replace('jpeg', 'jpg').replace(/[^a-z0-9]/g, ''), { type: b.type });
     return navigator.canShare({ files: [f] }) ? f : null;
   } catch (err) { return null; }
@@ -2750,7 +2778,7 @@ async function shareEvent(e) {
 
   const shareText = formatEventBlurb(e);
 
-  const pf = await posterFile(e);
+  const pf = await posterFile(e, shareUrl);
   if (pf) { try { await navigator.share({ files: [pf], text: shareUrl }); return; } catch (err) { if (err && err.name === 'AbortError') return; } }
   if (navigator.share) {
     try {
@@ -4649,7 +4677,7 @@ function blurb(e) {
 async function shareEvent(e) {
   // Links to this show in the Feed view
   const shareUrl = `${location.origin}${location.pathname}?view=feed&show=${shortHash(eventKey(e))}`;
-  const pf = await posterFile(e);
+  const pf = await posterFile(e, shareUrl);
   if (pf) { try { await navigator.share({ files: [pf], text: shareUrl }); return; } catch (err) { if (err && err.name === 'AbortError') return; } }
   if (navigator.share) {
     try { await navigator.share({ title: e.title, text: blurb(e), url: shareUrl }); return; }
