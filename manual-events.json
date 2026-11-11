@@ -32858,5 +32858,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794397427409,
+    "title": "Punch For Zero",
+    "date": "2026-12-05",
+    "time": "21:00",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794397399242-p4z-dec-5.webp",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
