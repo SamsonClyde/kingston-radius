@@ -32942,5 +32942,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794397861580,
+    "title": "Holiday Hootenanny",
+    "date": "2026-12-16",
+    "time": "18:30",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794397854474-holiday-hootenanny-poster.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
