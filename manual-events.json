@@ -33026,5 +33026,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794398528443,
+    "title": "Evolfo, Secret Family, The Abyssmals",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "venue": "The Hangar",
+    "venueUrl": "https://www.thehangaronthehudson.com/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agP4ptppoZV8vK1h9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794398509096-abyss.webp",
+    "price": "$10+",
+    "free": false,
+    "_manual": true
   }
 ]
