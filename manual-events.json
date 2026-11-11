@@ -32773,5 +32773,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794396889362,
+    "title": "Holly Macve with Sean Griffin",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "venue": "The Falcon",
+    "venueUrl": "https://www.liveatthefalcon.com/",
+    "location": "Marlboro, NY",
+    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794396884757-holly3.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
