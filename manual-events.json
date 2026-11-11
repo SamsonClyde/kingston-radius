@@ -32830,5 +32830,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794397312365,
+    "title": "Songwriters Circle Holiday Showcase",
+    "date": "2026-12-03",
+    "time": "20:00",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794397306918-12-3-26-the-grand-b-w-4-5-1.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
