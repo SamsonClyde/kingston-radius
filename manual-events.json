@@ -33012,5 +33012,19 @@
     "price": "$15+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794398363175,
+    "title": "Black Friday - The Silos, Regal Selects, Saucer",
+    "date": "2026-11-27",
+    "time": "18:00",
+    "venue": "The Hangar",
+    "venueUrl": "https://www.thehangaronthehudson.com/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agP4ptppoZV8vK1h9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794398338034-walter-salas-humara-2018-hi-rez4.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
