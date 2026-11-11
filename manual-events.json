@@ -32787,5 +32787,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794397014267,
+    "title": "Holly Macve with Sean Griffin",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "venue": "The Grand",
+    "venueUrl": "https://thegrandcroton.com/happening",
+    "location": "Croton-On-Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/siSD9xiXMswFGDfp8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794396981135-holly3.webp",
+    "price": "$12+",
+    "free": false,
+    "_manual": true
   }
 ]
