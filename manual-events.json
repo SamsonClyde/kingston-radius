@@ -32998,5 +32998,19 @@
     "price": "$25 (cash only) & bring a non perishable food item",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794398279765,
+    "title": "RadioRadioX presents Punxgiving",
+    "date": "2026-11-21",
+    "time": "18:00",
+    "venue": "The Hangar",
+    "venueUrl": "https://www.thehangaronthehudson.com/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agP4ptppoZV8vK1h9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794398264508-img-2067.webp",
+    "price": "$15+",
+    "free": false,
+    "_manual": true
   }
 ]
