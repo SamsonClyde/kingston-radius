@@ -27076,7 +27076,7 @@
   },
   {
     "id": 1792406474778,
-    "title": "Funk Night - Jesse Gibbons & Band",
+    "title": "Funk Night - Croton City Limits",
     "date": "2026-11-20",
     "time": "20:30",
     "venue": "The Grand",
@@ -27086,7 +27086,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792406462780-jesse-gibbons.png",
     "price": "See website",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1792406734887,
