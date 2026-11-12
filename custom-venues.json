@@ -1258,5 +1258,11 @@
     "location": "New Paltz, NY",
     "mapsUrl": "https://maps.app.goo.gl/dyruE5BAQmwtc4P2A",
     "drive": 22
+  },
+  "Benton Beer Garden": {
+    "venueUrl": "https://www.instagram.com/bentonbeergarden/",
+    "location": "Gardiner, NY",
+    "mapsUrl": "https://maps.app.goo.gl/6NXrdKWvMmmZWCnj7",
+    "drive": 35
   }
 }
