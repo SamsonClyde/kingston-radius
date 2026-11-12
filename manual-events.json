@@ -33054,5 +33054,19 @@
     "price": "$17+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794483161795,
+    "title": "Sean Rowe",
+    "date": "2026-11-13",
+    "time": "20:00",
+    "venue": "Denizen Theater",
+    "venueUrl": "https://denizentheatre.org/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dyruE5BAQmwtc4P2A",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794483155483-8-13-26-sean-rowe-nov-26-event-image.png",
+    "price": "$30+",
+    "free": false,
+    "_manual": true
   }
 ]
