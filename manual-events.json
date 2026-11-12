@@ -33152,5 +33152,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794483947261,
+    "title": "Kayla Rae",
+    "date": "2026-11-28",
+    "time": "16:00",
+    "venue": "1817 Cider House",
+    "venueUrl": "https://www.instagram.com/1817_cider_house/",
+    "location": "Milton, NY",
+    "mapsUrl": "https://maps.app.goo.gl/XfCsQQsdLwadoiUd8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794483926204-unnamed-6.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
