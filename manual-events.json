@@ -33180,5 +33180,19 @@
     "price": "$25+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794484503446,
+    "title": "Quiet Nights - Errant Space, Mossy Undertones, deep deep dirt, Bildpunkt, Kyle Turgeon, Bob Valgenti",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "venue": "Benton Beer Garden",
+    "venueUrl": "https://www.instagram.com/bentonbeergarden/",
+    "location": "Gardiner, NY",
+    "mapsUrl": "https://maps.app.goo.gl/6NXrdKWvMmmZWCnj7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794484412227-1794052389730-unnamed.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
