@@ -33068,5 +33068,19 @@
     "price": "$30+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794483295426,
+    "title": "The Sweet Clementines",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "venue": "The Lemon Squeeze",
+    "venueUrl": "https://thelemonsqueezenewpaltz.com/events/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/gF18nSCWjJQgxY4s6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794483270346-logotoseekeys.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
