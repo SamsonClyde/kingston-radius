@@ -1252,5 +1252,11 @@
     "location": "Annandale-On-Hudson, NY",
     "mapsUrl": "https://maps.app.goo.gl/wECqQ3w1ZdnHNNZh9",
     "drive": 20
+  },
+  "Denizen Theater": {
+    "venueUrl": "https://denizentheatre.org/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/dyruE5BAQmwtc4P2A",
+    "drive": 22
   }
 }
