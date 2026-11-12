@@ -658,10 +658,6 @@
   "Unicorn Bar||2026-09-18||19:00": "approved",
   "Unicorn Bar||2026-09-19||19:00": "approved",
   "Unicorn Bar||2026-10-01||19:00": "approved",
-  "Unicorn Bar||2026-11-11||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787591545501
-  },
   "Unicorn Bar||2026-11-11||19:00": "approved",
   "The Grand||2026-08-26||8:00 PM": {
     "status": "rejected",
@@ -1303,10 +1299,6 @@
   "NoFun||2026-10-09||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1791307322100
-  },
-  "The Falcon||2026-11-11||See website": {
-    "status": "rejected",
-    "hiddenAt": 1791307585655
   },
   "The Falcon||2026-11-11||19:30": "approved",
   "The Grand||2026-10-11||11:00": "approved",
