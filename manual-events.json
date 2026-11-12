@@ -33166,5 +33166,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794484127511,
+    "title": "The Sounding Joy",
+    "date": "2026-12-05",
+    "time": "20:00",
+    "venue": "Old Dutch Church",
+    "venueUrl": "https://www.familyofwoodstockinc.org/sounding-joy-concert-2026-featuring-amanda-seyfried/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/yuvCVGBQVs4zNbK3A",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794484123396-unnamed-7.jpg",
+    "price": "$25+",
+    "free": false,
+    "_manual": true
   }
 ]
