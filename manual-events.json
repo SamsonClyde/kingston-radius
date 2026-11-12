@@ -33124,5 +33124,19 @@
     "price": "free",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794483843135,
+    "title": "Brendan Bartow",
+    "date": "2026-11-13",
+    "time": "18:00",
+    "venue": "1817 Cider House",
+    "venueUrl": "https://www.instagram.com/1817_cider_house/",
+    "location": "Milton, NY",
+    "mapsUrl": "https://maps.app.goo.gl/XfCsQQsdLwadoiUd8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794483835958-unnamed-6.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
