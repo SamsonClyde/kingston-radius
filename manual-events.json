@@ -33307,5 +33307,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794603620863,
+    "title": "Booker Stardrum",
+    "date": "2027-02-10",
+    "time": "19:30",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794603617946-image-261028082511199.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
