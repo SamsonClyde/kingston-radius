@@ -33475,5 +33475,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794605110319,
+    "title": "Gratefully Yours",
+    "date": "2027-01-29",
+    "time": "20:00",
+    "venue": "Towne Crier Café",
+    "venueUrl": "https://townecrier.com/",
+    "location": "Beacon, NY",
+    "mapsUrl": "https://maps.google.com/?q=379+Main+St+Beacon+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794605100979-gratefully-yours-2026-web.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
