@@ -9293,18 +9293,18 @@
   },
   {
     "id": 437,
-    "date": "2026-11-05",
-    "title": "The Tom Prettys",
-    "venue": "The Falcon",
-    "venueUrl": "https://www.liveatthefalcon.com",
-    "location": "Marlboro, NY",
-    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    "time": "19:30",
-    "price": "See website",
+    "date": "2027-04-24",
+    "title": "Dirty Projectors (solo)",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/dirty-projectors-solo",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "$35+",
     "free": false,
     "_source": "scraped",
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791975150962-6a6f44d2bac578cb7557ad1b-tom-prettys-2026-p-1600.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794605920692-unnamed-11.jpg",
+    "_manual": true
   },
   {
     "id": 1787540173755,
