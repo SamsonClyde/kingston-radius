@@ -33222,5 +33222,19 @@
     "price": "$35",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794590675221,
+    "title": "The Champagne Poneys",
+    "date": "2027-01-13",
+    "time": "19:30",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794590670262-6fbcc6d1-476f-4660-8f63-056fc13333a0.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
