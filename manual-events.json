@@ -30562,8 +30562,8 @@
   },
   {
     "id": 1793617476218,
-    "title": "Shakoor Hakeem with Adam Siegel and Peyton Pleninger",
-    "date": "2026-11-21",
+    "title": "After Some Time - Shakoor Hakeem with Adam Siegel and Peyton Pleninger",
+    "date": "2026-11-19",
     "time": "19:00",
     "venue": "The Tavern",
     "venueUrl": "https://tavernstoneridge.org/events.html",
@@ -30572,7 +30572,8 @@
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1793617446824-screen-shot-2026-11-02-at-6-03-37-am.png",
     "price": "$20 suggested donation",
     "free": false,
-    "_manual": true
+    "_manual": true,
+    "_source": "manual"
   },
   {
     "id": 1793617720572,
