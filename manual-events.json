@@ -33264,5 +33264,19 @@
     "price": "$10",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794602979153,
+    "title": "Wizard Fest",
+    "date": "2026-12-05",
+    "time": "19:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794602976328-3981da-21614e29fed545bdbf435090f5efe760-mv2.avif",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
