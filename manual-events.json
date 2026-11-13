@@ -33278,5 +33278,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794603031932,
+    "title": "Tony DePaolo",
+    "date": "2026-12-06",
+    "time": "11:00",
+    "venue": "The Silk Factory",
+    "venueUrl": "https://www.silkfcty.com/event-list",
+    "location": "Newburgh, NY",
+    "mapsUrl": "https://maps.app.goo.gl/H5x6iXtWrSQHFo5q6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794603029544-3981da-eb86c6a677574f47b4df6d141daebe90-mv2.avif",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
