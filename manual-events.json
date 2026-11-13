@@ -33419,5 +33419,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794604416586,
+    "title": "Souls United Gospel Choir  and Community Party",
+    "date": "2026-12-12",
+    "time": "12:00",
+    "venue": "Tompkins Corners Cultural Center",
+    "venueUrl": "https://www.tompkinscorners.org/music.html",
+    "location": "Putnam Valley, NY",
+    "mapsUrl": "https://maps.google.com/?q=729+Peekskill+Hollow+Rd+Putnam+Valley+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794604409667-graphic-souls-united-choir-2026-1.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
