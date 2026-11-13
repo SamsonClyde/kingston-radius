@@ -2161,5 +2161,9 @@
   "The Living Room at Full Circle||2026-11-14||19:00": {
     "status": "rejected",
     "hiddenAt": 1794484533760
+  },
+  "Assembly Kingston||2026-11-21||2:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1794605325239
   }
 }
