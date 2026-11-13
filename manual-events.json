@@ -33349,5 +33349,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794603848447,
+    "title": "Maeve Gilchrist",
+    "date": "2027-03-17",
+    "time": "19:30",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794603846035-image-261028083225731.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
