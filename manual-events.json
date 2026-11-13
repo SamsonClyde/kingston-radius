@@ -33573,5 +33573,19 @@
     "price": "$44+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794606300212,
+    "title": "Jonathan Richman featuring Tommy Larkins - 3 Nights!",
+    "date": "2027-03-04",
+    "time": "19:00",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794606298212-drielys-gs1a9004.webp",
+    "price": "$44+",
+    "free": false,
+    "_manual": true
   }
 ]
