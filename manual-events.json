@@ -33377,5 +33377,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794603975052,
+    "title": "Maria Zemantauski with the Maria Z Ensemble",
+    "date": "2027-05-05",
+    "time": "18:00",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794603973149-image-261104113416351.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
