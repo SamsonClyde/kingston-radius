@@ -33236,5 +33236,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794590740103,
+    "title": "Fascinating Chimera Project",
+    "date": "2027-02-10",
+    "time": "19:30",
+    "venue": "The Local Saugerties",
+    "venueUrl": "https://www.thelocalsaugerties.com/calendar",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/w8FxcfHYNpgkccUD9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794590734721-6d698f3e-6e82-4838-85ef-4a3b45211915.jpg",
+    "price": "free",
+    "free": false,
+    "_manual": true
   }
 ]
