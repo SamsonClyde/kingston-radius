@@ -33363,5 +33363,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794603929668,
+    "title": "Hannah Frances",
+    "date": "2027-04-21",
+    "time": "18:00",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794603924700-image-261104113157654.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
