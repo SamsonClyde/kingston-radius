@@ -581,10 +581,6 @@
   "Old Dutch Church||2026-10-25||16:00": "approved",
   "Tompkins Corners Cultural Center||2026-09-12||19:30": "approved",
   "Tompkins Corners Cultural Center||2026-09-27||14:00": "approved",
-  "Tompkins Corners Cultural Center||2026-11-12||2:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787576067650
-  },
   "Tompkins Corners Cultural Center||2026-11-16||4:00 pm": {
     "status": "rejected",
     "hiddenAt": 1787576070092
@@ -819,10 +815,6 @@
   "Pearl Moon||2026-09-06||11:00 am": {
     "status": "rejected",
     "hiddenAt": 1788657013708
-  },
-  "The Falcon||2026-11-12||See website": {
-    "status": "rejected",
-    "hiddenAt": 1788658908081
   },
   "Towne Crier Café||2026-09-13||23:30": "approved",
   "The Eleven||2027-03-03||18:00": {
@@ -1086,10 +1078,6 @@
     "hiddenAt": 1790247231006
   },
   "Unicorn Bar||2026-11-20||19:30": "approved",
-  "Tubby's||2026-11-12||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790283087278
-  },
   "Tubby's||2026-11-12||20:00": "approved",
   "Tubby's||2026-11-19||7:00 pm": {
     "status": "rejected",
@@ -1250,10 +1238,6 @@
   "Bard College Conservatory||2026-11-01||13:00": "approved",
   "Colony Woodstock||2026-10-14||19:00": "approved",
   "Colony Woodstock||2026-10-21||19:00": "approved",
-  "Tempo Arts||2026-11-12||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1790962840161
-  },
   "Tempo Arts||2026-11-13||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790962848239
@@ -1476,10 +1460,6 @@
   "The Grand||2026-10-18||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792148793955
-  },
-  "The Grand||2026-11-12||": {
-    "status": "rejected",
-    "hiddenAt": 1792148972463
   },
   "The Grand||2026-11-13||20:00": "approved",
   "Time & Space Limited||2026-10-17||7:00 PM": {
