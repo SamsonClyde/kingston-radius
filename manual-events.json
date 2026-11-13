@@ -33335,5 +33335,19 @@
     "price": "$51+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794603789829,
+    "title": "Gaelic Storm",
+    "date": "2027-02-26",
+    "time": "19:30",
+    "venue": "The Troy Savings Bank Music Hall",
+    "venueUrl": "https://www.troymusichall.org/events/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/d1sEZHn665erYpuc8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794603787241-image-261027124138867.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
