@@ -1264,5 +1264,11 @@
     "location": "Gardiner, NY",
     "mapsUrl": "https://maps.app.goo.gl/6NXrdKWvMmmZWCnj7",
     "drive": 35
+  },
+  "Vassar Bike Shop": {
+    "venueUrl": "https://www.instagram.com/vc_bikes/",
+    "location": "Arlington, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cRcsgWXfogfeLsFr5",
+    "drive": 37
   }
 }
