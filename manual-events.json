@@ -33760,5 +33760,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794658337018,
+    "title": "(dm for address) oddball song creation, twink adjacent, Pink Lady, star tripper",
+    "date": "2026-11-14",
+    "time": "19:00",
+    "venue": "The Shed",
+    "venueUrl": "https://www.instagram.com/theshednp/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://www.instagram.com/theshednp/",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794658331586-unnamed-10.jpg",
+    "price": "$5",
+    "free": false,
+    "_manual": true
   }
 ]
