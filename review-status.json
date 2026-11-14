@@ -2324,5 +2324,9 @@
   "Ulster Performing Arts Center (UPAC)||2027-02-13||12:00 am": {
     "status": "rejected",
     "hiddenAt": 1794657491737
+  },
+  "Unicorn Bar||2026-11-25||6:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1794657496708
   }
 }
