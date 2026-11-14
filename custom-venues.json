@@ -1270,5 +1270,11 @@
     "location": "Arlington, NY",
     "mapsUrl": "https://maps.app.goo.gl/cRcsgWXfogfeLsFr5",
     "drive": 37
+  },
+  "Depot Theater": {
+    "venueUrl": "https://www.depottheater.org/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAaceQUEesauSedX4J_ZbBIqsiHPNA6BYes3lX2PwQvqnWezsKg5TxO21W3H1lA_aem_8HA1jCP8K6wAn5jSpJgEOQ",
+    "location": "Garrison, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9Rovk5XNSU1vU1AW6",
+    "drive": 58
   }
 }
