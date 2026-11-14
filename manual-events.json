@@ -33633,5 +33633,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794656004248,
+    "title": "DJ King Appollo",
+    "date": "2026-11-14",
+    "time": "22:00",
+    "venue": "Reason & Ruckus",
+    "venueUrl": "https://www.instagram.com/reasonandruckus/?hl=en",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.app.goo.gl/enGb3PBDiSP7GR1j9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794656001505-unnamed-3.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
