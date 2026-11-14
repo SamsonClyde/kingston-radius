@@ -2143,5 +2143,10 @@
   "Bard College Conservatory||2026-12-04||9:00 am": {
     "status": "rejected",
     "hiddenAt": 1794655143913
-  }
+  },
+  "Keegan Ales||2026-11-15||5:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1794655263805
+  },
+  "Keegan Ales||2026-11-15||17:00": "approved"
 }
