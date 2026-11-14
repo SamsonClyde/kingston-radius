@@ -33675,5 +33675,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794656459718,
+    "title": "Emerson Laura Palmer, Roan Martin & The Fools, Kilgore Trout, Oddball Song Creations",
+    "date": "2026-12-11",
+    "time": "20:00",
+    "venue": "Snug Harbor",
+    "venueUrl": "https://www.instagram.com/snugsnpz_38main/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/UxtL3uvDoYHidUS4A",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794656418641-unnamed-7.jpg",
+    "price": "$8",
+    "free": false,
+    "_manual": true
   }
 ]
