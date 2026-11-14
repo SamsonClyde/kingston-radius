@@ -2139,5 +2139,9 @@
   "Bard College Conservatory||2026-11-22||": {
     "status": "rejected",
     "hiddenAt": 1794655140208
+  },
+  "Bard College Conservatory||2026-12-04||9:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1794655143913
   }
 }
