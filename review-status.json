@@ -2157,5 +2157,9 @@
     "status": "rejected",
     "hiddenAt": 1794655335782
   },
-  "Keegan Ales||2026-11-28||19:00": "approved"
+  "Keegan Ales||2026-11-28||19:00": "approved",
+  "MASS MoCA||2027-01-30||7:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1794655341745
+  }
 }
