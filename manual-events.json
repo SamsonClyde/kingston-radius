@@ -33661,5 +33661,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794656353001,
+    "title": "Red McAdam",
+    "date": "2026-11-25",
+    "time": "20:00",
+    "venue": "Return Brewing",
+    "venueUrl": "https://www.instagram.com/returnbrewing/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/YDngVHEAKTL39QGy9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794656352185-unnamed-6.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
