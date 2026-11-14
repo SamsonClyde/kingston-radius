@@ -124,10 +124,6 @@
     "status": "rejected",
     "hiddenAt": 1786963721979
   },
-  "Assembly Kingston||2026-11-13||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786963741860
-  },
   "Assembly Kingston||2026-11-17||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963744408
@@ -436,10 +432,6 @@
   "Love, Velma||2026-09-25||19:30": "approved",
   "Love, Velma||2026-10-03||21:00": "approved",
   "Love, Velma||2026-10-23||19:00": "approved",
-  "Love, Velma||2026-11-13||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787345336307
-  },
   "Love, Velma||2026-11-13||19:00": "approved",
   "Love, Velma||2027-02-13||8:00 pm": {
     "status": "rejected",
@@ -792,17 +784,9 @@
   "Tompkins Corners Cultural Center||2026-10-09||19:30": "approved",
   "Towne Crier Café||2026-09-11||18:30": "approved",
   "Towne Crier Café||2026-09-19||20:00": "approved",
-  "Bardavon||2026-11-13||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788345251502
-  },
   "Bardavon||2026-12-19||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1788345270005
-  },
-  "Bardavon||2026-11-13||": {
-    "status": "rejected",
-    "hiddenAt": 1788656952191
   },
   "Bardavon||2026-12-19||": {
     "status": "rejected",
@@ -876,10 +860,6 @@
     "status": "rejected",
     "hiddenAt": 1789389534723
   },
-  "Tubby's||2026-11-13||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1789389740770
-  },
   "Unicorn Bar||2026-09-26||21:00": "approved",
   "Unicorn Bar||2026-10-09||21:00": "approved",
   "Green Kill||2026-09-20||19:00": {
@@ -897,10 +877,6 @@
   "The Egg||2026-12-18||20:00": {
     "status": "rejected",
     "hiddenAt": 1789478314511
-  },
-  "The Egg||2026-11-13||19:30": {
-    "status": "rejected",
-    "hiddenAt": 1789480325169
   },
   "The Egg - Swyer Theatre||2026-11-14||20:00": {
     "status": "rejected",
@@ -1539,10 +1515,6 @@
     "hiddenAt": 1792632642450
   },
   "Bard College Conservatory||2026-10-27||19:30": "approved",
-  "Tempo Arts||2026-11-13||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792666798156
-  },
   "Tempo Arts||2026-11-15||2:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792666807665
@@ -1822,10 +1794,6 @@
     "hiddenAt": 1793706012356
   },
   "PS21 Chatham||2026-11-05||17:30": "approved",
-  "Stissing Center||2026-11-13||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793706544365
-  },
   "Stissing Center||2026-11-14||7:30 PM": {
     "status": "rejected",
     "hiddenAt": 1793706602658
@@ -1838,10 +1806,6 @@
   "The Local Saugerties||2026-11-11||7:30 PM": {
     "status": "rejected",
     "hiddenAt": 1793706744289
-  },
-  "The Local Saugerties||2026-11-13||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793706752440
   },
   "Tompkins Corners Cultural Center||2026-11-13||7:30 pm": {
     "status": "rejected",
@@ -1922,14 +1886,6 @@
   "Colony Woodstock||2026-11-12||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1794309245107
-  },
-  "Colony Woodstock||2026-11-13||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1794310006547
-  },
-  "Colony Woodstock||2026-11-13||10:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1794310014404
   },
   "Colony Woodstock||2026-11-14||7:00 PM": {
     "status": "rejected",
@@ -2029,10 +1985,6 @@
   "The Grand||2026-11-11||": {
     "status": "rejected",
     "hiddenAt": 1794310348837
-  },
-  "The Grand||2026-11-13||": {
-    "status": "rejected",
-    "hiddenAt": 1794310352088
   },
   "The Grand||2026-11-14||4:30 PM": {
     "status": "rejected",
