@@ -2194,5 +2194,9 @@
     "status": "rejected",
     "hiddenAt": 1794655508766
   },
-  "Rough Draft Books||2026-11-14||18:00": "approved"
+  "Rough Draft Books||2026-11-14||18:00": "approved",
+  "Rough Draft Books||2026-11-17||6:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1794655590503
+  }
 }
