@@ -33717,5 +33717,20 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 229,
+    "date": "2026-11-14",
+    "title": "Early Worm + Jim Yanda",
+    "venue": "The Lace Mill",
+    "venueUrl": "https://www.instagram.com/thelacemillartscouncil/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=The%20Lace%20Mill%20Kingston%2C%20NY",
+    "time": "15:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794657315414-screen-shot-2026-11-14-at-6-54-21-am.png",
+    "_manual": true
   }
 ]
