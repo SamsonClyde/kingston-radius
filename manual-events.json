@@ -33703,5 +33703,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794657097715,
+    "title": "The Hilary Hawke Band",
+    "date": "2026-12-06",
+    "time": "19:30",
+    "venue": "Depot Theater",
+    "venueUrl": "https://www.depottheater.org/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAaceQUEesauSedX4J_ZbBIqsiHPNA6BYes3lX2PwQvqnWezsKg5TxO21W3H1lA_aem_8HA1jCP8K6wAn5jSpJgEOQ",
+    "location": "Garrison, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9Rovk5XNSU1vU1AW6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794657095713-hilary-hawke-band-poster-rv.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
