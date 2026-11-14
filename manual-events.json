@@ -33689,5 +33689,19 @@
     "price": "$8",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794656565526,
+    "title": "Ecstatic Dance with Melissa Officinalis - Matthew Beck & Malerie Day",
+    "date": "2026-11-21",
+    "time": "14:00",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794656560151-unnamed-8.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
