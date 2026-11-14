@@ -2135,5 +2135,9 @@
     "status": "rejected",
     "hiddenAt": 1794606478413
   },
-  "Greig Farm||2026-11-14||13:00": "approved"
+  "Greig Farm||2026-11-14||13:00": "approved",
+  "Bard College Conservatory||2026-11-22||": {
+    "status": "rejected",
+    "hiddenAt": 1794655140208
+  }
 }
