@@ -33817,5 +33817,19 @@
     "price": "$5",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794743499451,
+    "title": "TLB Duo Show",
+    "date": "2026-11-21",
+    "time": "19:00",
+    "venue": "Urban Cowboy Lodge",
+    "venueUrl": "https://www.instagram.com/urbancowboylodge/",
+    "location": "Big Indian, NY",
+    "mapsUrl": "https://maps.app.goo.gl/2RzqXZmM9TBGowJY8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794743276157-unnamed-5.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
