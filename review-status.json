@@ -2340,5 +2340,10 @@
   "Towne Crier Café||2026-12-26||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1794742073333
-  }
+  },
+  "Tremper||2026-11-17||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1794742390213
+  },
+  "Tremper||2026-11-17||19:00": "approved"
 }
