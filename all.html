@@ -1826,7 +1826,7 @@ html[data-kall] .fk-tabbub, html[data-kall] .fk-pop { z-index: 9000; }
 /* ---- pass 4 ---- */
 html[data-kall] #trip-btn { display: none !important; }
 html[data-kall] #funhouse .games .row, html[data-kall] #funhouse .games .grid { align-items: flex-start; }
-html[data-kall] #page > header nav #fk-pts-nav { white-space: nowrap; }
+html[data-kall] #page > header nav #fk-pts-nav, html[data-kall] #page > header nav #fk-fun-nav { white-space: nowrap; }
 html[data-kall] #funhouse .fk-pane { animation: none; }
 
 /* ---- Fun mode: the drawer's own opener ---- */
@@ -1834,6 +1834,12 @@ html[data-kall] #funhouse #fh-more > summary { list-style: none; cursor: pointer
 html[data-kall] #funhouse #fh-more > summary::-webkit-details-marker { display: none; }
 html[data-kall] #funhouse #fh-more > summary:hover { border-color: var(--text); background: var(--tag-bg); }
 html[data-kall] #funhouse #fh-more[open] > summary { display: none !important; }
+
+
+/* ---- /all: two views. Default = the ordinary page; #games = just the drawer ---- */
+html[data-kall][data-kview="main"] #funhouse { display: none; }
+html[data-kall][data-kview="games"] #page > .page { display: none !important; }
+html[data-kall][data-kview="games"] #funhouse { min-height: 70vh; }
 
 /* the Leaderboard tab in the drawer */
 #fk-lbpane .fk-rank { font-size: 16px; } #fk-lbpane .fk-rank b { color: var(--fk-hi); }
@@ -5730,7 +5736,7 @@ window.KR_EXPLORE = {
       t.onclick = () => { panes.forEach((q, j) => { q.hidden = j !== i; }); [...bar.children].forEach((c, j) => { c.classList.toggle('on', j === i); c.setAttribute('aria-selected', j === i ? 'true' : 'false'); }); const r = bar.getBoundingClientRect(); if (r.top < 64) window.scrollBy(0, r.top - 70); };   // a long tab never leaves you stranded below the tab bar
       bar.appendChild(t); return p;
     });
-    const cl = document.createElement('button'); cl.type = 'button'; cl.className = 'fk-tab fk-close'; cl.innerHTML = '&times; close'; cl.onclick = () => { if (ALL) { const m = document.getElementById('fh-more'); if (m) m.open = false; return; } const f = document.getElementById('fk-fun-nav'); if (f) f.click(); }; bar.appendChild(cl);
+    const cl = document.createElement('button'); cl.type = 'button'; cl.className = 'fk-tab fk-close'; cl.innerHTML = '&times; close'; cl.onclick = () => { if (ALL) { if (window.KRVIEW) KRVIEW.set('main', true); return; } const f = document.getElementById('fk-fun-nav'); if (f) f.click(); }; bar.appendChild(cl);
     const fr = ALL ? fh.querySelector('#friends') : null; if (fr) fr.remove();
     body.innerHTML = ''; body.appendChild(bar); panes.forEach(p => body.appendChild(p)); if (ALL && fr) body.appendChild(fr);   // /all has no Venues tab: the list stays here, hidden, so the code that fills it has somewhere to write
   })();
@@ -5739,13 +5745,28 @@ window.KR_EXPLORE = {
   // nav bar: a Funhouse button (opens the toys drawer) and a skin shuffler (the old light/dark toggle is hidden)
   const nav = hdr.querySelector('nav'), more = document.getElementById('fh-more');
   const navBtn = (id, label, tip) => { const b = document.createElement('button'); b.type = 'button'; b.id = id; b.className = 'fk-navbtn'; b.textContent = label; b.title = tip; return b; };
-  const funBtn = navBtn('fk-fun-nav', ALL ? '\u2715' : 'Funhouse', ALL ? 'Back to Kingston Radius' : 'Weather, toys, pets, games and friends');
-  if (ALL) { funBtn.setAttribute('aria-label', 'Back to Kingston Radius'); }
+  const funBtn = navBtn('fk-fun-nav', ALL ? 'Games & More' : 'Funhouse', ALL ? 'Weather, toys, pets and games' : 'Weather, toys, pets, games and friends');
   const skinBtn = navBtn('fk-skin-nav', 'New skin', 'Roll a brand new look for the whole site');
   if (ALL) skinBtn.hidden = true;    // the look is fixed on /all; the page's own light/dark button stays
   const anchor = document.getElementById('theme-toggle-btn');
   [funBtn, skinBtn].forEach(b => anchor ? nav.insertBefore(b, anchor) : nav.appendChild(b));
-  if (ALL) { funBtn.onclick = () => { location.href = '/'; }; more.open = true; } else funBtn.onclick = () => { more.open = !more.open; funBtn.classList.toggle('on', more.open); if (more.open) more.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+  if (ALL) {
+    // /all has two views: the ordinary page (default) and Games & More, which is just the drawer
+    more.open = true;
+    const setView = v => {
+      const g = v === 'games';
+      document.documentElement.setAttribute('data-kview', g ? 'games' : 'main');
+      funBtn.classList.toggle('on', g);
+      const mn = hdr.querySelector('nav a[data-page="music"]'); if (mn) mn.classList.toggle('active', !g);
+      if (g) window.scrollTo(0, 0);
+    };
+    window.KRVIEW = { set: (v, push) => { if (push) { if (v === 'games') { if (location.hash !== '#games') location.hash = 'games'; } else if (location.hash) history.pushState(null, '', location.pathname + location.search); } setView(v); }, get: () => document.documentElement.getAttribute('data-kview') };
+    funBtn.onclick = () => KRVIEW.set(KRVIEW.get() === 'games' ? 'main' : 'games', true);
+    window.addEventListener('hashchange', () => setView(location.hash === '#games' ? 'games' : 'main'));
+    window.addEventListener('popstate', () => setView(location.hash === '#games' ? 'games' : 'main'));
+    hdr.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => { if (KRVIEW.get() === 'games') KRVIEW.set('main', true); }));
+    setView(location.hash === '#games' ? 'games' : 'main');
+  } else funBtn.onclick = () => { more.open = !more.open; funBtn.classList.toggle('on', more.open); if (more.open) more.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
   skinBtn.onclick = () => { if (window.KRTHEME && KRTHEME.reroll) KRTHEME.reroll(); };
 
   // glue between the toys and the real list: "find it below" jumps to that show in the real Feed (clears filters, scrolls, pulses)
@@ -5770,6 +5791,7 @@ window.KR_EXPLORE = {
   }
   window.KRFUN = { hk, reveal(key) {
     try {
+      if (window.KRVIEW && KRVIEW.get() === 'games') KRVIEW.set('main', true);
       const sh = (window.KRSHOWS || []).find(e => (e.venue + '||' + e.date + '||' + (e.time || '')) === key);
       if (sh && !sh.posterUrl) return revealList(key);
       return !!(window.KR_EXPLORE && KR_EXPLORE.jumpToHash(hk(key)));
@@ -8097,10 +8119,10 @@ try {
     'Click a poster to see it full size.',
     'Click the name of a show to visit the venue\'s own page.',
     'Try holding your mouse over a poster. Go on.',
-    'There are some games at the bottom of the page. Snake is my favorite.',
-    'Not sure what to see? Try the Mood of the Day box near the top of the page.',
+    'Games & More, up in the menu, has Snake, Pinball and more. Snake is my favorite.',
+    'Not sure what to see? Try the Mood of the Day in Games & More, up in the menu.',
     'Remember to check back often. New shows are added all the time.',
-    'Press the Tetris button near the top. Every piece is a real listing.',
+    'Games & More has Tetris. Every piece is a real listing.',
     'Keep an eye on the bottom of the screen. Something might run by.',
     'I try to squeeze in some push-ups now and then. Stay strong.',
     'Hold the mouse button down anywhere and scribble. Reload the page and it all disappears.',
