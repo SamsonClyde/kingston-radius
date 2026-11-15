@@ -33845,5 +33845,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794743868963,
+    "title": "DJ BLK Dot, DJ Craig",
+    "date": "2026-11-27",
+    "time": "16:00",
+    "venue": "West Kill Supply (Kingston)",
+    "venueUrl": "https://www.westkillbrewing.com",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/FDYVgTuBWmmjw1tS6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794743867371-unnamed-6.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
