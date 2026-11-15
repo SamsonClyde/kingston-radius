@@ -33873,5 +33873,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794744117529,
+    "title": "A Classical Holiday with Pianist Katya Grineva",
+    "date": "2026-12-13",
+    "time": "15:00",
+    "venue": "Woodstock Byrdcliffe Guild",
+    "venueUrl": "https://www.woodstockguild.org/events/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.app.goo.gl/pVBrB3SCGDhdaGhx5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794744115356-12-27-26-katya-grineva.avif",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
