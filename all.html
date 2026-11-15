@@ -1180,7 +1180,8 @@
 <style id="fun-css">
 #scribble{ position: absolute; left: 0; top: 0; width: 100%; height: 0; overflow: hidden; z-index: 7500; pointer-events: none; }
 #scribble canvas{ position: absolute; left: 0; display: block; }
-body.scribbling,body.scribbling *{ user-select: none; -webkit-user-select: none; }
+body.scribbling,body.scribbling *{ user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; touch-action: none; }
+#page a, #page img { -webkit-touch-callout: none; }
 #funhouse a:link,#tetris a:link,#sotd a:link,#ray a:link{ color: var(--fk-link); }
 #funhouse a:visited,#tetris a:visited,#sotd a:visited,#ray a:visited{ color: var(--fk-visited); }
 #funhouse a:hover,#tetris a:hover,#sotd a:hover,#ray a:hover{ color: #FF0000; background: #FFFF00; }
@@ -7606,6 +7607,27 @@ window.KRBIG = (function () { let last = Date.now() - 100000; return {
     addEventListener('blur', stop);
     addEventListener('click', e => { if (swallow) { e.preventDefault(); e.stopPropagation(); swallow = false; } }, true);
     addEventListener('dragstart', e => { if (pending || drawing) e.preventDefault(); });
+    // phone: press and hold a spot for a moment and the crayon turns on; drag to draw, lift to stop. A quick swipe still scrolls the page.
+    let tt = 0, tx = 0, ty = 0, tdraw = false;
+    const tClear = () => { clearTimeout(tt); tt = 0; };
+    addEventListener('touchstart', e => {
+      tClear();
+      if (e.touches.length !== 1 || $('tetris').classList.contains('open') || (e.target.closest && e.target.closest(SKIP))) { if (tdraw) { tdraw = false; stop(); } return; }
+      const t = e.touches[0]; tx = t.pageX; ty = t.pageY;
+      tt = setTimeout(() => {
+        tt = 0; color = COLORS[Math.floor(Math.random() * COLORS.length)]; fit(); tdraw = true; swallow = true; begin(tx, ty);
+        try { if (navigator.vibrate) navigator.vibrate(15); } catch (err) {}
+        document.dispatchEvent(new CustomEvent('krcrayon', { detail: { touch: true } }));
+      }, 420);
+    }, { passive: true });
+    addEventListener('touchmove', e => {
+      const t = e.touches[0]; if (!t) return;
+      if (tdraw) { e.preventDefault(); if ((++moves & 15) === 0) fit(); seg(t.pageX, t.pageY); return; }
+      if (tt && Math.hypot(t.pageX - tx, t.pageY - ty) > 10) tClear();     // it is a scroll, not a hold
+    }, { passive: false });
+    const tEnd = () => { tClear(); if (tdraw) { tdraw = false; stop(); } };
+    addEventListener('touchend', tEnd); addEventListener('touchcancel', tEnd);
+    addEventListener('contextmenu', e => { if (tdraw || tt) e.preventDefault(); });
     window.KRCRAYON = { color: () => color, drewAny: () => drewAny, size: () => [layer.offsetWidth, layer.offsetHeight], tiles: () => tiles.size };
   })();
 
@@ -8114,7 +8136,7 @@ try {
   // ---- Ray the helper ----
   const bubble = $('ray-bubble'), text = $('ray-text'); bubble.style.display = 'none';
   const TOUCHY = !!(window.matchMedia && matchMedia('(hover: none), (pointer: coarse)').matches);
-  let tips = [TOUCHY ? 'Hi! I\'m Ray. Looking for a show? Press "Next tip" and I\'ll try to help.' : 'Hi! I\'m Ray. Looking for a show? Hold the mouse down anywhere to scribble.'], at = 0, hidden = true;
+  let tips = [TOUCHY ? 'Hi! I\'m Ray. Looking for a show? Press and hold anywhere to draw with a crayon.' : 'Hi! I\'m Ray. Looking for a show? Hold the mouse down anywhere to scribble.'], at = 0, hidden = true;
   const STATIC = [
     'Click a poster to see it full size.',
     'Click the name of a show to visit the venue\'s own page.',
@@ -8125,7 +8147,7 @@ try {
     'Games & More has Tetris. Every piece is a real listing.',
     'Keep an eye on the bottom of the screen. Something might run by.',
     'I try to squeeze in some push-ups now and then. Stay strong.',
-    'Hold the mouse button down anywhere and scribble. Reload the page and it all disappears.',
+    TOUCHY ? 'Press and hold anywhere on the screen, then drag, to draw with a crayon. Reload the page and it all disappears.' : 'Hold the mouse button down anywhere and scribble. Reload the page and it all disappears.',
     'The GPS under the weather report shows where the shows are. Tap a number to see them.'
   ];
   function buildTips(list) {
