@@ -1276,5 +1276,11 @@
     "location": "Garrison, NY",
     "mapsUrl": "https://maps.app.goo.gl/9Rovk5XNSU1vU1AW6",
     "drive": 58
+  },
+  "The Shed": {
+    "venueUrl": "https://www.instagram.com/theshednp/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://www.instagram.com/theshednp/",
+    "drive": 25
   }
 }
