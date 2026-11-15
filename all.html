@@ -6947,7 +6947,7 @@ try {
         const bonus = 200 + lives * 50 + got * 5 + (boss ? 300 : 0) + tb + (perfect ? 300 : 0); if (tb) texts.push({ x: p.x, y: p.y - 10, t: 'Time +' + tb, life: 60 }); addScore(bonus); ev({ kind: 'clear', level, el: cv }); burst(door.x + 15, door.y + 20, '#ffffff', 14); snd('clear');
         saveStars(level, (g[0] ? 1 : 0) | (g[1] ? 2 : 0) | (g[2] ? 4 : 0)); sum = { lv: level, got, tot, hits: hitsT, secs, par: parT, g, bonus, perfect };
         saveProgress(level + 1); savePw();
-        if (level >= TOTAL) { phase = 'won'; addScore(5000); msg = 'You finished the tour!'; msgT = 1e9; hud(); winEnd(); }
+        if (level >= TOTAL) { ev({ kind: 'win', level, el: cv }); phase = 'won'; addScore(5000); msg = 'You finished the tour!'; msgT = 1e9; hud(); winEnd(); }
         else { lives = Math.min(9, lives + 1); phase = 'clear'; msg = ''; msgT = 190; hud(); }
       }
       cam += (Math.max(0, Math.min(W * TS - VW, p.x + p.w / 2 - VW * .4)) - cam) * .12;
@@ -9302,7 +9302,14 @@ try {
   document.addEventListener('krrun', e => {                        // Ray Run: 1 stub a coin, a bonus for each stage cleared (8 and up, 20 at most)
     const d = e.detail || {}; S.life.runs = (S.life.runs | 0) + (d.kind === 'coin' ? 1 : 0);
     if (d.kind === 'coin') award('run', 1, '', d.el);
-    else if (d.kind === 'clear') award('run', Math.min(20, 8 + 2 * Math.max(0, (d.level | 0) - 1)), 'stage clear', d.el);
+    else if (d.kind === 'clear') {                                  // 5 stubs the first time each stage is cleared (replays pay nothing), whatever the daily limits say
+      const lv = d.level | 0; roll(); touch(); S.life.runLv = Array.isArray(S.life.runLv) ? S.life.runLv : [];
+      if (lv >= 1 && S.life.runLv.indexOf(lv) < 0) { S.life.runLv.push(lv); add(5, 'runlv', 'stage ' + lv + ' clear', d.el); }
+    }
+    else if (d.kind === 'win' && !S.life.runWon) {                    // all 100 stages: 1,000 stubs, once
+      S.life.runWon = 1; roll(); touch(); add(1000, 'runwin', 'TOUR COMPLETE!', d.el, true, true);
+      banner('<b>ALL 100 STAGES!</b><br>+' + fmt(1000) + ' stubs'); say('You finished the whole tour! A thousand stubs!', 6000);
+    }
   });
   document.addEventListener('krpinball', e => {                     // Pinball: one stub per 200 on the table, paid when each ball ends
     S.life.balls++; const raw = Math.floor((e.detail.score | 0) / 200); if (raw > 0) award('pin', raw, 'pinball', $('pin'));
@@ -9487,7 +9494,7 @@ try {
       + '<li><b>Drawing:</b> scribble a lot (about ' + (ALLP ? '40,000' : '8,000') + ' px of crayon) for 5 stubs, once a day.</li>'
       + '<li><b>Pinball:</b> 1 stub for every 200 on the table, paid as each ball ends (so a big multiball ball pays well).</li>'
       + '<li><b>Snake:</b> 1 stub a bite, plus 6 on every tenth.</li>'
-      + '<li><b>Ray Run:</b> 1 stub a coin, plus 8 for clearing a stage (2 more each stage, up to 20).</li>'
+      + '<li><b>Ray Run:</b> 1 stub a coin, plus 5 the first time you clear each stage, plus 1,000 for finishing all 100 stages (once).</li>'
       + '<li><b>Streak:</b> come back on consecutive days for up to +50% on everything.</li></ul>'
       + '<h4>Lifetime</h4><div class="fk-small">' + fmt(S.life.rows) + ' rows booked &middot; ' + fmt(S.life.pairs) + ' pairs matched &middot; ' + S.life.boards + ' boards cleared' + (S.life.bestMoves ? ' (best ' + S.life.bestMoves + ' moves)' : '') + ' &middot; ' + S.life.feeds + ' good snacks &middot; ' + fmt(S.life.balls) + ' pinball balls &middot; ' + fmt(S.life.foods) + ' snake bites &middot; ' + fmt(S.life.runs | 0) + ' Ray Run coins</div>'
       + '<div class="fk-small">Your saved shows (' + saved + ') are shared with the main site. Stubs live only on this page, in this browser.</div>'
