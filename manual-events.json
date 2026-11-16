@@ -34461,5 +34461,19 @@
     "price": "$23",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794846454154,
+    "title": "ROADHOUSE 60's",
+    "date": "2027-01-08",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794846448546-https-3a-2f-2fcdn-3.webp",
+    "price": "$17",
+    "free": false,
+    "_manual": true
   }
 ]
