@@ -33985,5 +33985,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794837820020,
+    "title": "Kilgore Trout",
+    "date": "2026-11-21",
+    "time": "19:00",
+    "venue": "The Baldwin",
+    "venueUrl": "https://www.instagram.com/liquidmercantile/",
+    "location": "Pine Bush, NY",
+    "mapsUrl": "https://maps.app.goo.gl/WhfYUq8ysYeaa6reA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794837807244-unnamed-14.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
