@@ -33943,5 +33943,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794837113928,
+    "title": "Everybody That Loves You, Claicuzns, Daisy Chain, & Fire, Escape!",
+    "date": "2026-12-19",
+    "time": "20:00",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794837097862-unnamed-11.jpg",
+    "price": "$10+",
+    "free": false,
+    "_manual": true
   }
 ]
