@@ -34391,5 +34391,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794844865195,
+    "title": "Foreigner, Yachtley Crew",
+    "date": "2027-07-18",
+    "time": "19:00",
+    "venue": "Bethel Woods",
+    "venueUrl": "https://www.bethelwoodscenter.org/events",
+    "location": "Bethel, NY",
+    "mapsUrl": "https://maps.google.com/?q=200+Hurd+Rd+Bethel+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794844843880-foreigner-1440x660-d9cccafcc7.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
