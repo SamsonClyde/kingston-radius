@@ -34139,5 +34139,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794841569058,
+    "title": "Temple Grandin",
+    "date": "2027-02-25",
+    "time": "19:00",
+    "venue": "UPAC",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/jC2VFr3GrpBVxt7h7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794841559572-templegrandin-upac-admat-web-990x792.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
