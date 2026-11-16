@@ -34517,5 +34517,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794846980360,
+    "title": "Forgotten by Friday",
+    "date": "2027-01-06",
+    "time": "19:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794846972046-74-edp.jpg",
+    "price": "$29+",
+    "free": false,
+    "_manual": true
   }
 ]
