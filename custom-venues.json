@@ -1306,5 +1306,11 @@
     "location": "Rhinebeck, NY",
     "mapsUrl": "https://maps.app.goo.gl/v4BDpm5adaczzA947",
     "drive": 20
+  },
+  "Roundabouts Now": {
+    "venueUrl": "https://www.instagram.com/roundaboutsnow_/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/pRq79YKo1oLFtdiU9",
+    "drive": 5
   }
 }
