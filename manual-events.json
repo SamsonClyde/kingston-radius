@@ -34251,5 +34251,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794843195650,
+    "title": "Medeski, Martin, Metzger, Cline",
+    "date": "2026-12-29",
+    "time": "20:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794843177399-etix-medeski-208311793786706.jfif",
+    "price": "$57+",
+    "free": false,
+    "_manual": true
   }
 ]
