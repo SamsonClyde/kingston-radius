@@ -1318,5 +1318,11 @@
     "location": "Andes, NY",
     "mapsUrl": "https://maps.app.goo.gl/qcy5UCn2nmuEwn9o9",
     "drive": 70
+  },
+  "Spencertown Academy": {
+    "venueUrl": "https://www.instagram.com/thespencertownacademy/",
+    "location": "Spencertown, NY",
+    "mapsUrl": "https://maps.app.goo.gl/jEdJ1jLbUsUyWKkb9",
+    "drive": 63
   }
 }
