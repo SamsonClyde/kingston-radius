@@ -34685,5 +34685,19 @@
     "price": "$34+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794848200492,
+    "title": "DCxPC Live Benefit For Chris's Prosthetic Leg",
+    "date": "2026-12-13",
+    "time": "16:00",
+    "venue": "Snapper McGee's",
+    "venueUrl": "https://www.instagram.com/snappermagees/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/cjXnAPfsLHZ7XD8c9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794848171458-screen-shot-2026-11-16-at-11-55-26-am.png",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
