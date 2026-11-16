@@ -34111,5 +34111,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794840969438,
+    "title": "Temple Roots",
+    "date": "2026-11-27",
+    "time": "22:00",
+    "venue": "Bacchus",
+    "venueUrl": "https://bacchusnewpaltz.com/music-events",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://maps.app.goo.gl/wttxmc4veyLzkc1s6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794840959304-unnamed-18.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
