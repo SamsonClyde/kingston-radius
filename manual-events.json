@@ -33999,5 +33999,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794838028537,
+    "title": "Chez Shaye Cabaret",
+    "date": "2026-12-05",
+    "time": "19:00",
+    "venue": "Wayside Cider",
+    "venueUrl": "https://www.instagram.com/wayside_cider/",
+    "location": "Andes, NY",
+    "mapsUrl": "https://maps.app.goo.gl/qcy5UCn2nmuEwn9o9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794838023338-unnamed-15.jpg",
+    "price": "$20+",
+    "free": false,
+    "_manual": true
   }
 ]
