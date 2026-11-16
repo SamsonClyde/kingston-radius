@@ -34209,5 +34209,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794842256253,
+    "title": "A Very Gyspy Christmas with Doug Munro",
+    "date": "2026-12-12",
+    "time": "18:00",
+    "venue": "Bean Runner Cafe",
+    "venueUrl": "https://www.beanrunnercafe.com/music-events",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vZjz5gV6k4ZhHTLy5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794842254026-calentry-72044-dre4a8b47c077ce3-photo.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
