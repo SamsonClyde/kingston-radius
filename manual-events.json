@@ -34713,5 +34713,19 @@
     "price": "$5",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794850046707,
+    "title": "Goose Control, The Antarctican",
+    "date": "2026-11-20",
+    "time": "19:00",
+    "venue": "El Dorado Bar",
+    "venueUrl": "https://www.instagram.com/eldoradobar_troy/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/QwhaMLfRyAoqbWLt9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794850030109-unnamed-1.jpg",
+    "price": "$10",
+    "free": false,
+    "_manual": true
   }
 ]
