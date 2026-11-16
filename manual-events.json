@@ -34223,5 +34223,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794842377311,
+    "title": "Steve Chizmadia and Band",
+    "date": "2026-12-18",
+    "time": "19:00",
+    "venue": "Bean Runner Cafe",
+    "venueUrl": "https://www.beanrunnercafe.com/music-events",
+    "location": "Peekskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/vZjz5gV6k4ZhHTLy5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794842374731-calentry-72045-dre4a8b47c077ce3-photo.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
