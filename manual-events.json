@@ -34153,5 +34153,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794841718419,
+    "title": "Zebra",
+    "date": "2027-02-20",
+    "time": "19:30",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+Street+Poughkeepsie+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794841716612-zebra-bardavon-1000-x800-web-990x792.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
