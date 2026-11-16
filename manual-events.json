@@ -34405,5 +34405,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794845371777,
+    "title": "AZ with DJ DOO WOP",
+    "date": "2026-12-18",
+    "time": "19:00",
+    "venue": "City Winery HV",
+    "venueUrl": "https://citywinery.com/pages/events/hudson-valley#",
+    "location": "Montgomery, NY",
+    "mapsUrl": "https://maps.app.goo.gl/eaFRDVZgzj3VpTpi8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794845324686-image.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
