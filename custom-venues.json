@@ -1282,5 +1282,11 @@
     "location": "New Paltz, NY",
     "mapsUrl": "https://www.instagram.com/theshednp/",
     "drive": 25
+  },
+  "Old Books": {
+    "venueUrl": "https://www.instagram.com/oldbookshudson/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/Q1iTeiq3RGKyRSUJ6",
+    "drive": 38
   }
 }
