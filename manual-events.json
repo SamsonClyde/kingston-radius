@@ -33957,5 +33957,19 @@
     "price": "$10+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794837485386,
+    "title": "Otiis!!",
+    "date": "2026-11-18",
+    "time": "19:00",
+    "venue": "Rhinecellar",
+    "venueUrl": "https://www.instagram.com/rhinecellarlounge/",
+    "location": "Rhinebeck, NY",
+    "mapsUrl": "https://maps.app.goo.gl/v4BDpm5adaczzA947",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794837481871-unnamed-12.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
