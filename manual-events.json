@@ -34265,5 +34265,19 @@
     "price": "$57+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794843261747,
+    "title": "Harvest And Rust: A Tribute To Neil Young",
+    "date": "2027-01-23",
+    "time": "20:00",
+    "venue": "Bearsville Theater",
+    "venueUrl": "https://bearsvilletheater.com/",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=291+Tinker+St+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794843250021-etix-harvest-208071793621135.jfif",
+    "price": "$35",
+    "free": false,
+    "_manual": true
   }
 ]
