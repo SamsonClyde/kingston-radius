@@ -34643,5 +34643,19 @@
     "price": "$34+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794847693353,
+    "title": "Double Vision (Foreigner Cover Band)",
+    "date": "2027-03-26",
+    "time": "20:00",
+    "venue": "Daryl's House Club",
+    "venueUrl": "https://darylshouseclub.com/shows/",
+    "location": "Pawling, NY",
+    "mapsUrl": "https://maps.app.goo.gl/agVM241931SfSAoe7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794847685497-64-edp-1.jpg",
+    "price": "$45+",
+    "free": false,
+    "_manual": true
   }
 ]
