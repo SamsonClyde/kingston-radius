@@ -34447,5 +34447,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794846376944,
+    "title": "Bruce Katz and Joel Harrison",
+    "date": "2027-01-02",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794846372225-https-3a-2f-2fcdn-2.webp",
+    "price": "$23",
+    "free": false,
+    "_manual": true
   }
 ]
