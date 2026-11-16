@@ -34699,5 +34699,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794848635803,
+    "title": "Ursa and the Major Key, The Greetings",
+    "date": "2026-11-19",
+    "time": "20:00",
+    "venue": "El Dorado Bar",
+    "venueUrl": "https://www.instagram.com/eldoradobar_troy/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/QwhaMLfRyAoqbWLt9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794848622187-unnamed.jpg",
+    "price": "$5",
+    "free": false,
+    "_manual": true
   }
 ]
