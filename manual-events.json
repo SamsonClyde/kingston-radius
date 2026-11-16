@@ -34433,5 +34433,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794846263660,
+    "title": "Gratefully Yours",
+    "date": "2026-12-30",
+    "time": "19:00",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794846257468-https-3a-2f-2fcdn-1.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
