@@ -1294,5 +1294,11 @@
     "location": "New Paltz, NY",
     "mapsUrl": "https://www.instagram.com/theorchard_np/",
     "drive": 25
+  },
+  "Apex Brewery": {
+    "venueUrl": "https://www.instagram.com/apexbeer/",
+    "location": "Monroe, NY",
+    "mapsUrl": "https://maps.app.goo.gl/nteadq4otwuVUUu67",
+    "drive": 52
   }
 }
