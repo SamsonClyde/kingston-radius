@@ -33887,5 +33887,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794835284626,
+    "title": "Eric Copeland, Demon Portraits",
+    "date": "2026-11-20",
+    "time": "19:00",
+    "venue": "Old Books",
+    "venueUrl": "https://www.instagram.com/oldbookshudson/",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/Q1iTeiq3RGKyRSUJ6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794835154917-unnamed-7.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
