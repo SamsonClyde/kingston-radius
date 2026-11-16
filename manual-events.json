@@ -34041,5 +34041,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794840062907,
+    "title": "Quartet A",
+    "date": "2026-11-22",
+    "time": "18:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794840046307-j2vi3fm0j6kta91busflve62kh0f.jpeg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
