@@ -1490,6 +1490,8 @@ body.scribbling, body.scribbling * { user-select: none; -webkit-user-select: non
 #funhouse .fk-pane[hidden] { display: none; }
 #funhouse .fk-pane .wx, #funhouse .fk-pane .mood, #funhouse .fk-pane #friends { margin-top: 0; }
 #funhouse .fk-pane .toys { margin-top: 0; }
+#funhouse .fk-wxrow { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: stretch; }
+#funhouse .fk-wxrow > #wx, #funhouse .fk-wxrow > #moonbox { flex: 1 1 330px; max-width: 560px !important; min-width: 0; margin: 0 !important; box-sizing: border-box; }
 #funhouse .fk-pane .games { margin-top: 0; border: 0; background: none; padding-top: 0; }
 #funhouse .fk-pane #friends { border: 0; background: none; padding-top: 0; max-width: none; }
 @media (max-width: 700px) { #page > header { position: static; } }
@@ -5758,7 +5760,8 @@ window.KR_EXPLORE = {
     if (tRow) tRow.style.display = 'none';   // the old open-Tetris button stays in the DOM, unseen, so the game's own code still finds it
     const tetSlot = document.createElement('div'); tetSlot.id = 'tetris-slot';   // the Tetris module moves the board in here
     const gameTabs = [['Tetris', [tetSlot, tRow]], ['Snake', [capDiv('Arrow keys steer.'), gp('#g-snake')]], ['Pinball', [capDiv('Z and / flip, Space launches, N nudges.'), gp('#g-pin')]], ['Memory', [gp('#g-mem')]], ['Ray Run', [capDiv('Arrow keys or A and D run, Space jumps. The buttons work on a phone.'), runSlot]]];
-    const defs = [['Weather', ['#wx', '#moonbox']], ['Horoscope', ['#starbox']], ['Mood &amp; Luck', ['.mood', toys[0]]], ['Daily', [toys[1]]], ['Pet Radar', [toys[2]]]].concat(gameTabs).concat(ALL ? [['Leaderboard', ['#fk-lbpane']]] : []).concat(ALL ? [] : [['Friends', ['#friends']]]);
+    const wxRow = document.createElement('div'); wxRow.className = 'fk-wxrow'; ['#wx', '#moonbox'].forEach(q => { const n = fh.querySelector(q); if (n) wxRow.appendChild(n); });
+    const defs = [['Weather', [wxRow]], ['Horoscope', ['#starbox']], ['Mood &amp; Luck', ['.mood', toys[0]]], ['Daily', [toys[1]]], ['Pet Radar', [toys[2]]]].concat(gameTabs).concat(ALL ? [['Leaderboard', ['#fk-lbpane']]] : []).concat(ALL ? [] : [['Friends', ['#friends']]]);
     const bar = document.createElement('div'); bar.className = 'fk-tabs'; bar.setAttribute('role', 'tablist');
     const panes = defs.map(([label, parts], i) => {
       const p = document.createElement('div'); p.className = 'fk-pane'; p.setAttribute('role', 'tabpanel'); if (i) p.hidden = true;
