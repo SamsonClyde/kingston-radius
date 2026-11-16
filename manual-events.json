@@ -34055,5 +34055,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794840178428,
+    "title": "Le Ren, Ongoing",
+    "date": "2026-12-01",
+    "time": "20:00",
+    "venue": "Avalon Lounge",
+    "venueUrl": "https://www.theavalonlounge.com/show-calendar",
+    "location": "Catskill, NY",
+    "mapsUrl": "https://maps.app.goo.gl/KxKYfY86NzkhCB4K6",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794840174848-leren2022b-crop03.webp",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
