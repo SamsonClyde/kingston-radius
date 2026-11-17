@@ -34814,5 +34814,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1794916662179,
+    "title": "DJ Dookz",
+    "date": "2026-11-25",
+    "time": "21:00",
+    "venue": "Salt Box",
+    "venueUrl": "https://www.instagram.com/saltbox.bar/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/MaspqTBZQT2VwjnJ9",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794916654176-unnamed-11.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
