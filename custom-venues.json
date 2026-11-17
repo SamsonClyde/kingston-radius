@@ -1330,5 +1330,11 @@
     "location": "Hurley, NY",
     "mapsUrl": "https://maps.app.goo.gl/BytB3SwBfc8ec9Ru7",
     "drive": 9
+  },
+  "Paper Moon Books": {
+    "venueUrl": "https://www.instagram.com/paper_moon_troy/",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/4EsEgpHey6nWQ8fB7",
+    "drive": 64
   }
 }
