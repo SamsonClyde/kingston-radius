@@ -184,8 +184,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .view-btn .vi { display: inline-block; width: 1.05rem; height: 1.05rem; margin-right: 3px; vertical-align: -3px; }
   .view-btn .vi svg { display: block; width: 100%; height: 100%; }
   @media (max-width: 380px) { .view-btn { font-size: 0.82rem; padding: 4px 2px; } .view-btn .vi { width: 0.95rem; height: 0.95rem; margin-right: 2px; } }
-  /* the "No artwork" sort only makes sense in the List view */
-  body:not([data-view="list"]) #sort-art-btn { display: none !important; }
+  /* the admin Sort row (Date / Venue / No artwork) stays visible in every view; picking No artwork jumps to the List */
 
   /* ── MAIN ── */
   main { max-width: 860px; margin: 0 auto; padding: 28px 16px 80px; }
@@ -1263,7 +1262,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="filter-label">Sort</span>
     <button class="filter-btn active" id="sort-date-btn" onclick="setSortMode('date')" style="padding:4px 10px;font-size:0.75rem;">Date</button>
     <button class="filter-btn" id="sort-venue-btn" onclick="setSortMode('venue')" style="padding:4px 10px;font-size:0.75rem;">Venue</button>
-    <button class="filter-btn" id="sort-art-btn" onclick="setSortMode('art')" title="Admin: list shows with no artwork first" style="padding:4px 10px;font-size:0.75rem;">No artwork</button>
+    <button class="filter-btn" id="sort-art-btn" onclick="setSortMode('art')" title="Admin: jump to the List with no-artwork shows first" style="padding:4px 10px;font-size:0.75rem;">No artwork</button>
   </div>
   <div id="venue-delete-bar" style="display:none;padding:8px 0 4px;gap:6px;flex-wrap:wrap;" class="filter-row">
     <span style="font-size:0.72rem;color:var(--red);font-weight:600;">Select a venue to hide all its events:</span>
@@ -1558,6 +1557,11 @@ const TOWN_COORDS = {  "kingston, ny": {lat: 41.9270, lng: -73.9974, side: 'w'},
   "hannacroix, ny": {lat: 42.4289, lng: -73.8092, side: 'w'},
   "elizaville, ny": {lat: 42.0508, lng: -73.7936, side: 'e'},
   "woodbourne, ny": {lat: 41.7670, lng: -74.6000, side: 'w'},
+  "arlington, ny": {lat: 41.6998, lng: -73.8940, side: 'e'},
+  "monroe, ny": {lat: 41.3306, lng: -74.1865, side: 'w'},
+  "andes, ny": {lat: 42.1953, lng: -74.7837, side: 'w'},
+  "spencertown, ny": {lat: 42.3950, lng: -73.5450, side: 'e'},
+  "hurley, ny": {lat: 41.9283, lng: -74.0627, side: 'w'},
 };
 
 const DRIVE_TIMES = {
