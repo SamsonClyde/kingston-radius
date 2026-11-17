@@ -569,10 +569,6 @@
   "Old Dutch Church||2026-10-25||16:00": "approved",
   "Tompkins Corners Cultural Center||2026-09-12||19:30": "approved",
   "Tompkins Corners Cultural Center||2026-09-27||14:00": "approved",
-  "Tompkins Corners Cultural Center||2026-11-16||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787576070092
-  },
   "Tompkins Corners Cultural Center||2026-11-18||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1787576073246
@@ -1147,10 +1143,6 @@
   "Bard College Conservatory||2026-11-14||": {
     "status": "rejected",
     "hiddenAt": 1790852464501
-  },
-  "Bard College Conservatory||2026-11-16||": {
-    "status": "rejected",
-    "hiddenAt": 1790852469445
   },
   "Bard College Conservatory||2026-11-17||": {
     "status": "rejected",
@@ -2159,14 +2151,6 @@
   "Time & Space Limited||2026-11-14||2:00 PM": {
     "status": "rejected",
     "hiddenAt": 1794657347071
-  },
-  "Time & Space Limited||2026-11-16||4:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1794657353660
-  },
-  "Time & Space Limited||2026-11-16||6:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1794657355607
   },
   "Time & Space Limited||2026-11-20||": {
     "status": "rejected",
