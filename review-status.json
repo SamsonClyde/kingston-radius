@@ -302,10 +302,6 @@
     "hiddenAt": 1787076980142
   },
   "The Falcon||2026-12-26||19:30": "approved",
-  "Glen Falls House||2026-11-16||": {
-    "status": "rejected",
-    "hiddenAt": 1787077554604
-  },
   "Glen Falls House||2026-12-30||": {
     "status": "rejected",
     "hiddenAt": 1787077557531
@@ -716,10 +712,6 @@
   "Keegan Ales||2026-09-04||19:00": "approved",
   "Keegan Ales||2026-09-05||19:00": "approved",
   "MASS MoCA||2026-10-10||13:00": "approved",
-  "MASS MoCA||2026-11-14||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788106583379
-  },
   "MASS MoCA||2026-11-14||20:00": "approved",
   "MASS MoCA||2026-11-21||7:00 PM": {
     "status": "rejected",
@@ -741,10 +733,6 @@
   "Towne Crier Café||2026-09-06||23:30": "approved",
   "Unicorn Bar||2026-09-18||21:30": "approved",
   "Unicorn Bar||2026-10-02||19:30": "approved",
-  "Unicorn Bar||2026-11-14||9:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1788108087049
-  },
   "Unicorn Bar||2026-11-14||21:00": "approved",
   "Assembly||2026-09-05||7:00 pm": {
     "status": "rejected",
@@ -944,10 +932,6 @@
     "status": "rejected",
     "hiddenAt": 1790204011020
   },
-  "Assembly Kingston||2026-11-13||12:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1790245508244
-  },
   "Assembly Kingston||2026-11-17||12:00 am": {
     "status": "rejected",
     "hiddenAt": 1790245529835
@@ -967,10 +951,6 @@
   "Assembly Kingston||2026-12-09||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1790245545028
-  },
-  "Lydia's Cafe||2026-11-14||8:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1790245605639
   },
   "Lydia's Cafe||2026-11-21||7:00 pm": {
     "status": "rejected",
@@ -1085,17 +1065,9 @@
     "hiddenAt": 1790333146596
   },
   "Glen Falls House||2026-10-09||23:00": "approved",
-  "Assembly Kingston||2026-11-14||12:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1790419599053
-  },
   "Bardavon||2026-12-17||7:30 PM": {
     "status": "rejected",
     "hiddenAt": 1790419655763
-  },
-  "The Falcon||2026-11-14||See website": {
-    "status": "rejected",
-    "hiddenAt": 1790420059484
   },
   "The Falcon||2026-12-12||See website": {
     "status": "rejected",
@@ -1140,10 +1112,6 @@
     "hiddenAt": 1790765664194
   },
   "Tompkins Corners Cultural Center||2026-11-11||19:30": "approved",
-  "Bard College Conservatory||2026-11-14||": {
-    "status": "rejected",
-    "hiddenAt": 1790852464501
-  },
   "Bard College Conservatory||2026-11-17||": {
     "status": "rejected",
     "hiddenAt": 1790852471909
@@ -1179,10 +1147,6 @@
   "Tompkins Corners Cultural Center||2027-04-01||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1791024640806
-  },
-  "Towne Crier Café||2026-11-14||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1791200090226
   },
   "Colony Woodstock||2026-10-07||5:30 PM": {
     "status": "rejected",
@@ -1235,10 +1199,6 @@
   "Christ the King Episcopal Church||2027-03-07||": {
     "status": "rejected",
     "hiddenAt": 1791628171480
-  },
-  "Tempo Arts||2026-11-14||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1791628387816
   },
   "Tempo Arts||2026-11-14||20:00": "approved",
   "The Falcon||2026-11-25||See website": {
@@ -1330,10 +1290,6 @@
     "status": "rejected",
     "hiddenAt": 1792148473195
   },
-  "Tempo Arts||2026-11-14||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792148495069
-  },
   "Tempo Arts||2026-11-18||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792148514420
@@ -1386,14 +1342,6 @@
     "status": "rejected",
     "hiddenAt": 1792149161106
   },
-  "Time & Space Limited||2026-11-14||1:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792149174770
-  },
-  "Tompkins Corners Cultural Center||2026-11-13||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792149223912
-  },
   "Tompkins Corners Cultural Center||2026-11-13||19:00": "approved",
   "Tompkins Corners Cultural Center||2027-04-13||7:30 pm": {
     "status": "rejected",
@@ -1408,10 +1356,6 @@
     "hiddenAt": 1792149293597
   },
   "Unicorn Bar||2026-10-29||19:30": "approved",
-  "Unicorn Bar||2026-11-14||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792149504113
-  },
   "Unicorn Bar||2026-11-14||16:00": "approved",
   "Unicorn Bar||2026-11-18||8:00 pm": {
     "status": "rejected",
