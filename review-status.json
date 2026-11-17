@@ -2254,5 +2254,10 @@
   "Tompkins Corners Cultural Center||2027-05-16||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1794915209046
-  }
+  },
+  "Tubby's||2027-01-16||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1794915310315
+  },
+  "Tubby's||2027-01-16||20:00": "approved"
 }
