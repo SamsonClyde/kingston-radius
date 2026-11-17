@@ -19651,18 +19651,18 @@
   },
   {
     "id": 390,
-    "date": "2026-10-30",
-    "title": "Dent May",
-    "venue": "The Half Moon",
-    "venueUrl": "https://www.thehalfmoonhudson.com/events/lfwmenyb45ns7jj-n6clk-d5pxc-f2g8r-n9k2y-6ysah-rcxp9-cr5zn-5323g-6a3rl",
-    "location": "Hudson, NY",
-    "mapsUrl": "https://maps.app.goo.gl/2xtXkdDVa2REhf9VA",
-    "time": "19:00",
-    "price": "$17",
+    "date": "2027-01-16",
+    "title": "Dogo Du Togo and The Alagaa Beat Band",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/dogo-du-togo-and-the-alagaa-beat-band",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "$22",
     "free": false,
     "_source": "scraped",
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792201141004-1000090085.webp"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794915305052-unnamed-5.jpg",
+    "_manual": true
   },
   {
     "id": 368,
