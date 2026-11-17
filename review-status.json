@@ -2241,5 +2241,9 @@
   "Unicorn Bar||2026-12-10||8:30 pm": {
     "status": "rejected",
     "hiddenAt": 1794742395372
+  },
+  "Keegan Ales||2026-11-22||11:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1794914732660
   }
 }
