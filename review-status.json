@@ -2245,5 +2245,10 @@
   "Keegan Ales||2026-11-22||11:00 am": {
     "status": "rejected",
     "hiddenAt": 1794914732660
-  }
+  },
+  "St. James Methodist Church||2026-12-06||2:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1794915105367
+  },
+  "St. James Methodist Church||2026-12-06||14:00": "approved"
 }
