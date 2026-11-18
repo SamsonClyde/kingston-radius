@@ -2236,5 +2236,9 @@
   "The Grand||2026-11-22||11:00 AM": {
     "status": "rejected",
     "hiddenAt": 1795001794985
+  },
+  "The Grand||2026-12-03||": {
+    "status": "rejected",
+    "hiddenAt": 1795001797524
   }
 }
