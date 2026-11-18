@@ -5828,18 +5828,18 @@
   },
   {
     "id": 403,
-    "date": "2026-10-15",
-    "title": "The Tubs, Mopar Stars",
-    "venue": "Tubby's",
-    "venueUrl": "https://www.tubbyskingston.com/calendar/the-tubs",
+    "date": "2027-03-13",
+    "title": "Land of Talk, Soak",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/events/land-of-talk-amp-soak",
     "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
     "time": "20:00",
-    "price": "$25adv",
+    "price": "See website",
     "free": false,
-    "_source": "manual",
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790456460552-1000088705.jpg"
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795001669160-6eb229be-6721-4ce0-9474-b6f8b9ef3e88.jpg",
+    "_manual": true
   },
   {
     "id": 406,
