@@ -2182,5 +2182,10 @@
     "status": "rejected",
     "hiddenAt": 1794915771068
   },
-  "Tubby's||2027-02-11||20:00": "approved"
+  "Tubby's||2027-02-11||20:00": "approved",
+  "Assembly Kingston||2027-03-05||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1795001599373
+  },
+  "Assembly Kingston||2027-03-05||20:00": "approved"
 }
