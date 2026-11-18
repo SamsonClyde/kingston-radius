@@ -2216,5 +2216,9 @@
   "Tempo Arts||2026-12-10||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1795001765180
+  },
+  "Tempo Arts||2026-12-16||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1795001770051
   }
 }
