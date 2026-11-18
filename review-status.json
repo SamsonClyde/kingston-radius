@@ -2192,5 +2192,9 @@
     "status": "rejected",
     "hiddenAt": 1795001674016
   },
-  "Assembly Kingston||2027-03-13||20:00": "approved"
+  "Assembly Kingston||2027-03-13||20:00": "approved",
+  "Bard College Conservatory||2026-12-04||": {
+    "status": "rejected",
+    "hiddenAt": 1795001680240
+  }
 }
