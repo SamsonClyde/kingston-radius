@@ -124,10 +124,6 @@
     "status": "rejected",
     "hiddenAt": 1786963721979
   },
-  "Assembly Kingston||2026-11-17||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1786963744408
-  },
   "Assembly Kingston||2026-11-19||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1786963747872
@@ -1112,10 +1108,6 @@
     "hiddenAt": 1790765664194
   },
   "Tompkins Corners Cultural Center||2026-11-11||19:30": "approved",
-  "Bard College Conservatory||2026-11-17||": {
-    "status": "rejected",
-    "hiddenAt": 1790852471909
-  },
   "Bard College Conservatory||2026-11-20||": {
     "status": "rejected",
     "hiddenAt": 1790852474369
@@ -1192,10 +1184,6 @@
     "hiddenAt": 1791628114329
   },
   "Assembly Kingston||2026-12-04||20:00": "approved",
-  "Bardavon||2026-11-17||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1791628169424
-  },
   "Christ the King Episcopal Church||2027-03-07||": {
     "status": "rejected",
     "hiddenAt": 1791628171480
@@ -1545,10 +1533,6 @@
     "status": "rejected",
     "hiddenAt": 1793184955841
   },
-  "Bardavon||2026-11-17||": {
-    "status": "rejected",
-    "hiddenAt": 1793269216542
-  },
   "Bardavon||2026-11-18||": {
     "status": "rejected",
     "hiddenAt": 1793269247485
@@ -1731,10 +1715,6 @@
     "status": "rejected",
     "hiddenAt": 1794052692694
   },
-  "Assembly Kingston||2026-11-17||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1794309227417
-  },
   "Assembly Kingston||2026-11-19||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1794309232443
@@ -1906,10 +1886,6 @@
     "status": "rejected",
     "hiddenAt": 1794310406749
   },
-  "Tubby's||2026-11-17||6:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1794310409503
-  },
   "Tubby's||2026-11-24||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1794310412857
@@ -1985,10 +1961,6 @@
     "hiddenAt": 1794655143913
   },
   "Keegan Ales||2026-11-15||17:00": "approved",
-  "Keegan Ales||2026-11-17||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1794655266613
-  },
   "Keegan Ales||2026-11-28||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1794655335782
@@ -2027,10 +1999,6 @@
     "hiddenAt": 1794655508766
   },
   "Rough Draft Books||2026-11-14||18:00": "approved",
-  "Rough Draft Books||2026-11-17||6:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1794655590503
-  },
   "Stissing Center||2026-11-29||3:00 PM": {
     "status": "rejected",
     "hiddenAt": 1794657111103
@@ -2176,10 +2144,6 @@
   "Towne Crier Café||2026-12-26||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1794742073333
-  },
-  "Tremper||2026-11-17||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1794742390213
   },
   "Tremper||2026-11-17||19:00": "approved",
   "Unicorn Bar||2026-12-10||8:30 pm": {
