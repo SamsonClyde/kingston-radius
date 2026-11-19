@@ -35054,5 +35054,19 @@
     "price": "$15+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1795089152778,
+    "title": "Concrete, Incontinence, SCUMBAG, FUTILITY",
+    "date": "2026-12-06",
+    "time": "18:30",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795089138819-https-3a-2f-2fcdn-1.webp",
+    "price": "$15+",
+    "free": false,
+    "_manual": true
   }
 ]
