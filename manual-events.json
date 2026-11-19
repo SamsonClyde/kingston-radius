@@ -34856,5 +34856,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1795047943701,
+    "title": "Ryley Walker",
+    "date": "2027-03-24",
+    "time": "20:00",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795047939203-unnamed-5.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
