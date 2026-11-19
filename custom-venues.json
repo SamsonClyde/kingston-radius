@@ -1348,5 +1348,11 @@
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/mit3YGpZ2s4esnEq5",
     "drive": 7
+  },
+  "Portraiture Platform": {
+    "venueUrl": "https://www.instagram.com/portraitureplatform/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://www.instagram.com/portraitureplatform/",
+    "drive": 5
   }
 }
