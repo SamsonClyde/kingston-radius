@@ -561,10 +561,6 @@
   "Old Dutch Church||2026-10-25||16:00": "approved",
   "Tompkins Corners Cultural Center||2026-09-12||19:30": "approved",
   "Tompkins Corners Cultural Center||2026-09-27||14:00": "approved",
-  "Tompkins Corners Cultural Center||2026-11-18||7:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787576073246
-  },
   "Tompkins Corners Cultural Center||2026-11-19||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1787576078058
@@ -1217,10 +1213,6 @@
     "status": "rejected",
     "hiddenAt": 1791901548897
   },
-  "Bardavon||2026-11-18||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792148014931
-  },
   "Colony Woodstock||2026-10-17||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792148022834
@@ -1265,10 +1257,6 @@
   "NoFun||2026-10-18||6:00 PM": {
     "status": "rejected",
     "hiddenAt": 1792148473195
-  },
-  "Tempo Arts||2026-11-18||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792148514420
   },
   "Tempo Arts||2026-11-21||8:00 pm": {
     "status": "rejected",
@@ -1333,10 +1321,6 @@
   },
   "Unicorn Bar||2026-10-29||19:30": "approved",
   "Unicorn Bar||2026-11-14||16:00": "approved",
-  "Unicorn Bar||2026-11-18||8:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792149512502
-  },
   "Unicorn Bar||2026-12-20||6:00 pm": {
     "status": "rejected",
     "hiddenAt": 1792149516649
@@ -1401,10 +1385,6 @@
     "hiddenAt": 1792667352163
   },
   "Tubby's||2026-12-31||19:00": "approved",
-  "MASS MoCA||2026-11-18||5:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1792762262046
-  },
   "The Lace Mill||2026-10-26||19:00": "approved",
   "Keegan Ales||2026-11-07||20:00": "approved",
   "Love, Velma||2026-12-31||8:00 pm": {
@@ -1428,10 +1408,6 @@
     "status": "rejected",
     "hiddenAt": 1793011237473
   },
-  "Unicorn Bar||2026-11-18||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1793011390946
-  },
   "Unicorn Bar||2026-11-27||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1793011394220
@@ -1447,10 +1423,6 @@
   "Tempo Arts||2026-11-22||3:00 pm": {
     "status": "rejected",
     "hiddenAt": 1793109850853
-  },
-  "The Falcon||2026-11-18||See website": {
-    "status": "rejected",
-    "hiddenAt": 1793109866558
   },
   "The Falcon||2026-12-16||See website": {
     "status": "rejected",
@@ -1520,10 +1492,6 @@
   "Unicorn Bar||2026-11-19||7:30 pm": {
     "status": "rejected",
     "hiddenAt": 1793184955841
-  },
-  "Bardavon||2026-11-18||": {
-    "status": "rejected",
-    "hiddenAt": 1793269247485
   },
   "Bardavon||2026-12-03||7:30 PM": {
     "status": "rejected",
