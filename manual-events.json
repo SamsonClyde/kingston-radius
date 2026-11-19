@@ -22095,7 +22095,7 @@
   {
     "id": 377,
     "date": "2026-12-12",
-    "title": "Alex Koi × Kirin McElwain12 Dec. 2026",
+    "title": "Alex Koi × Kirin McElwain",
     "venue": "KinoSaito",
     "venueUrl": "https://www.kinosaito.org/performances",
     "location": "Verplanck, NY",
@@ -22103,7 +22103,7 @@
     "time": "17:00",
     "price": "See website",
     "free": false,
-    "_source": "scraped",
+    "_source": "manual",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1794310257812-alex-koi-kirin-mcelwain-2x.webp",
     "_manual": true
   },
