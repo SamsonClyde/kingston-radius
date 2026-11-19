@@ -34842,5 +34842,19 @@
     "price": "$20",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1795047888587,
+    "title": "Dug",
+    "date": "2027-03-19",
+    "time": "20:00",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795047881938-unnamed-4.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
