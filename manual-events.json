@@ -34926,5 +34926,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1795049648134,
+    "title": "(dm for address) Portraiture Holiday Gathering & Potluck",
+    "date": "2026-12-04",
+    "time": "18:00",
+    "venue": "Portraiture Platform",
+    "venueUrl": "https://www.instagram.com/portraitureplatform/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://www.instagram.com/portraitureplatform/",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795049640123-unnamed-8.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
