@@ -34884,5 +34884,19 @@
     "price": "$10+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1795048356424,
+    "title": "Honky Tonk Wednesdays - The New Original Locals featuring Cindy Cashdollar",
+    "date": "2026-12-09",
+    "time": "18:15",
+    "venue": "Rice Hall VFW",
+    "venueUrl": "https://www.instagram.com/connorfkennedy/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/mit3YGpZ2s4esnEq5",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795048350991-unnamed-6.jpg",
+    "price": "$10+",
+    "free": false,
+    "_manual": true
   }
 ]
