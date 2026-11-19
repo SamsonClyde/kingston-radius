@@ -34968,5 +34968,19 @@
     "price": "$39+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1795050043486,
+    "title": "Small Isles",
+    "date": "2027-04-10",
+    "time": "20:00",
+    "venue": "MASS MoCA",
+    "venueUrl": "https://massmoca.org/performances/",
+    "location": "North Adams, MA",
+    "mapsUrl": "https://maps.app.goo.gl/SttEGBLzqFEAu41cA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795050039139-webcuts-wsp27-small-isles-1920-x-1920-1280x1280.jpg",
+    "price": "$29+",
+    "free": false,
+    "_manual": true
   }
 ]
