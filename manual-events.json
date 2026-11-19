@@ -34997,5 +34997,20 @@
     "price": "$29-$45",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 12,
+    "date": "2026-11-20",
+    "title": "ANIME RAVE - Bitchin' Betty + DJ 2nd Ch!ld",
+    "venue": "NoFun",
+    "venueUrl": "https://www.nofuntroy.com/events",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "19:00",
+    "price": "$11",
+    "free": false,
+    "_source": "email",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795087850463-https-3a-2f-2fcdn.webp",
+    "_manual": true
   }
 ]
