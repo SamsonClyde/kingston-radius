@@ -34828,5 +34828,19 @@
     "price": "See website",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1795047835526,
+    "title": "The Champagne Poneys, Neon Moons",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "venue": "The Half Moon",
+    "venueUrl": "https://www.thehalfmoonhudson.com/events",
+    "location": "Hudson, NY",
+    "mapsUrl": "https://maps.app.goo.gl/2xtXkdDVa2REhf9VA",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795047798432-unnamed-3.jpg",
+    "price": "$20",
+    "free": false,
+    "_manual": true
   }
 ]
