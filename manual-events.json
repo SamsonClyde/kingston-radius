@@ -35124,5 +35124,19 @@
     "price": "$10+",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1795178176072,
+    "title": "(dm for address) Crike, Thorns in The Mouth of God, Trip, Sundered, Anomaly",
+    "date": "2026-12-05",
+    "time": "18:30",
+    "venue": "The Shed",
+    "venueUrl": "https://www.instagram.com/theshednp/",
+    "location": "New Paltz, NY",
+    "mapsUrl": "https://www.instagram.com/theshednp/",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795178174448-unnamed-4.jpg",
+    "price": "$5",
+    "free": false,
+    "_manual": true
   }
 ]
