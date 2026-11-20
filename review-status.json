@@ -2193,5 +2193,9 @@
   "Tompkins Corners Cultural Center||2027-05-18||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1795087885916
+  },
+  "Bard College Conservatory||2026-12-03||8:30 pm": {
+    "status": "rejected",
+    "hiddenAt": 1795177191724
   }
 }
