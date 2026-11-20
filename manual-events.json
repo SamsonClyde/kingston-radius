@@ -35082,5 +35082,19 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1795177316549,
+    "title": "The Belle Curves",
+    "date": "2026-11-25",
+    "time": "19:00",
+    "venue": "Indian Ladder Farms",
+    "venueUrl": "https://www.indianladderfarms.com/events-calendar/",
+    "location": "Altamont, NY",
+    "mapsUrl": "https://maps.app.goo.gl/jpA91USiPrfPdQfL7",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795177285022-unnamed.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
