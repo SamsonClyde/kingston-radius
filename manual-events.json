@@ -35138,5 +35138,19 @@
     "price": "$5",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1795261159364,
+    "title": "Andalucia Project",
+    "date": "2026-11-27",
+    "time": "18:00",
+    "venue": "Rock Da Casbah",
+    "venueUrl": "https://www.instagram.com/andaluciaprojectny/",
+    "location": "Saugerties, NY",
+    "mapsUrl": "https://maps.app.goo.gl/hxwRzV1LDWkGx3gL8",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795261155345-unnamed-5.jpg",
+    "price": "See website",
+    "free": false,
+    "_manual": true
   }
 ]
