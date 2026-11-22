@@ -340,10 +340,6 @@
   "Keegan Ales||2026-08-29||20:00": "approved",
   "Keegan Ales||2026-09-02||19:00": "approved",
   "Keegan Ales||2026-09-11||19:00": "approved",
-  "Keegan Ales||2026-11-21||3:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787188391968
-  },
   "Tubby's||2026-08-20||20:00": "approved",
   "Tubby's||2026-08-21||20:00": "approved",
   "Tubby's||2026-08-22||20:00": "approved",
@@ -506,10 +502,6 @@
     "hiddenAt": 1787541411536
   },
   "The Outlier Inn||2026-09-10||19:30": "approved",
-  "Bardavon||2026-11-21||": {
-    "status": "rejected",
-    "hiddenAt": 1787572498266
-  },
   "Bardavon||2026-12-20||": {
     "status": "rejected",
     "hiddenAt": 1787572635646
@@ -593,10 +585,6 @@
   "Towne Crier Café||2026-10-03||20:00": "approved",
   "Towne Crier Café||2026-10-04||19:00": "approved",
   "Towne Crier Café||2026-10-10||20:00": "approved",
-  "Tubby's||2026-11-21||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1787579658451
-  },
   "Unicorn Bar||2026-08-26||19:30": "approved",
   "Unicorn Bar||2026-08-27||19:30": "approved",
   "Unicorn Bar||2026-08-28||7:30 pm": "approved",
@@ -685,10 +673,6 @@
   "Keegan Ales||2026-09-05||19:00": "approved",
   "MASS MoCA||2026-10-10||13:00": "approved",
   "MASS MoCA||2026-11-14||20:00": "approved",
-  "MASS MoCA||2026-11-21||7:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1788106610546
-  },
   "Tempo Arts||2026-09-14||19:30": "approved",
   "Tempo Arts||2026-10-07||19:30": "approved",
   "The Ashokan Center||2026-10-18||": {
@@ -829,14 +813,6 @@
   "The Egg||2026-12-18||20:00": {
     "status": "rejected",
     "hiddenAt": 1789478314511
-  },
-  "The Egg - Swyer Theatre||2026-11-21||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1789480394455
-  },
-  "The Egg - Swyer Theatre||2026-11-21||21:30": {
-    "status": "rejected",
-    "hiddenAt": 1789480416144
   },
   "The Egg||2026-11-22||19:00": {
     "status": "rejected",
@@ -1302,10 +1278,6 @@
     "status": "rejected",
     "hiddenAt": 1792499981517
   },
-  "Daryl's House Club||2026-11-21||12:00": {
-    "status": "rejected",
-    "hiddenAt": 1792539366843
-  },
   "Daryl's House Club||2027-01-03||19:00": {
     "status": "rejected",
     "hiddenAt": 1792539548328
@@ -1398,10 +1370,6 @@
   "Opus 40||2026-11-07||11:00 am": {
     "status": "rejected",
     "hiddenAt": 1793184649210
-  },
-  "Tempo Arts||2026-11-21||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793184662457
   },
   "Tempo Arts||2026-11-27||7:30 PM": {
     "status": "rejected",
@@ -1646,17 +1614,9 @@
     "status": "rejected",
     "hiddenAt": 1794310286032
   },
-  "MASS MoCA||2026-11-21||5:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1794310288544
-  },
   "Rough Draft Bar & Books||2026-12-12||5:00 pm": {
     "status": "rejected",
     "hiddenAt": 1794310293361
-  },
-  "Stissing Center||2026-11-21||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1794310297823
   },
   "Stone Ridge Orchard||2027-05-09||2:00 pm": {
     "status": "rejected",
@@ -1781,10 +1741,6 @@
   "Unicorn Bar||2026-12-09||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1794310444347
-  },
-  "Assembly Kingston||2026-11-21||2:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1794605325239
   },
   "Assembly Kingston||2026-11-21||12:00 am": {
     "status": "rejected",
@@ -1911,10 +1867,6 @@
   "Time & Space Limited||2026-11-14||2:00 PM": {
     "status": "rejected",
     "hiddenAt": 1794657347071
-  },
-  "Time & Space Limited||2026-11-21||2:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1794657359343
   },
   "Time & Space Limited||2026-12-04||": {
     "status": "rejected",
@@ -2057,10 +2009,6 @@
     "status": "rejected",
     "hiddenAt": 1795001770051
   },
-  "The Grand||2026-11-21||4:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1795001792437
-  },
   "The Grand||2026-11-22||11:00 AM": {
     "status": "rejected",
     "hiddenAt": 1795001794985
@@ -2072,10 +2020,6 @@
   "The Grand||2026-12-12||": {
     "status": "rejected",
     "hiddenAt": 1795001801317
-  },
-  "The Living Room at Full Circle||2026-11-21||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1795001804011
   },
   "The Local Saugerties||2026-12-18||": {
     "status": "rejected",
@@ -2114,10 +2058,6 @@
     "hiddenAt": 1795087671462
   },
   "NoFun||2026-11-20||19:00": "approved",
-  "NoFun||2026-11-21||8:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1795087879379
-  },
   "NoFun||2026-11-22||4:00 PM": {
     "status": "rejected",
     "hiddenAt": 1795087881916
