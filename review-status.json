@@ -765,10 +765,6 @@
     "hiddenAt": 1789389412523
   },
   "The Falcon||2026-11-21||19:30": "approved",
-  "The Falcon||2026-11-22||See website": {
-    "status": "rejected",
-    "hiddenAt": 1789389425383
-  },
   "The Falcon||2026-11-22||19:30": "approved",
   "The Falcon||2026-12-03||See website": {
     "status": "rejected",
@@ -813,10 +809,6 @@
   "The Egg||2026-12-18||20:00": {
     "status": "rejected",
     "hiddenAt": 1789478314511
-  },
-  "The Egg||2026-11-22||19:00": {
-    "status": "rejected",
-    "hiddenAt": 1789480426856
   },
   "The Egg||2026-11-23||19:00": {
     "status": "rejected",
@@ -1340,10 +1332,6 @@
     "status": "rejected",
     "hiddenAt": 1793109837827
   },
-  "Tempo Arts||2026-11-22||3:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1793109850853
-  },
   "The Falcon||2026-12-16||See website": {
     "status": "rejected",
     "hiddenAt": 1793109897502
@@ -1380,10 +1368,6 @@
   "The Grand||2026-10-29||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1793184880094
-  },
-  "Time & Space Limited||2026-11-22||1:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1793184934396
   },
   "Time & Space Limited||2027-01-16||2:00 PM": {
     "status": "rejected",
@@ -1760,10 +1744,6 @@
     "hiddenAt": 1794606478413
   },
   "Greig Farm||2026-11-14||13:00": "approved",
-  "Bard College Conservatory||2026-11-22||": {
-    "status": "rejected",
-    "hiddenAt": 1794655140208
-  },
   "Bard College Conservatory||2026-12-04||9:00 am": {
     "status": "rejected",
     "hiddenAt": 1794655143913
@@ -1810,10 +1790,6 @@
   "Stissing Center||2026-11-29||3:00 PM": {
     "status": "rejected",
     "hiddenAt": 1794657111103
-  },
-  "Tempo Arts||2026-11-22||3:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1794657132719
   },
   "Tempo Arts||2026-12-05||8:00 pm": {
     "status": "rejected",
@@ -1876,14 +1852,6 @@
     "status": "rejected",
     "hiddenAt": 1794657365743
   },
-  "Towne Crier Café||2026-11-22||11:30 am": {
-    "status": "rejected",
-    "hiddenAt": 1794657370633
-  },
-  "Towne Crier Café||2026-11-22||6:30 pm": {
-    "status": "rejected",
-    "hiddenAt": 1794657373794
-  },
   "Towne Crier Café||2026-12-20||5:30 pm": {
     "status": "rejected",
     "hiddenAt": 1794657377067
@@ -1941,10 +1909,6 @@
   "Unicorn Bar||2026-12-10||8:30 pm": {
     "status": "rejected",
     "hiddenAt": 1794742395372
-  },
-  "Keegan Ales||2026-11-22||11:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1794914732660
   },
   "St. James Methodist Church||2026-12-06||2:00 pm": {
     "status": "rejected",
@@ -2009,10 +1973,6 @@
     "status": "rejected",
     "hiddenAt": 1795001770051
   },
-  "The Grand||2026-11-22||11:00 AM": {
-    "status": "rejected",
-    "hiddenAt": 1795001794985
-  },
   "The Grand||2026-12-03||": {
     "status": "rejected",
     "hiddenAt": 1795001797524
@@ -2058,10 +2018,6 @@
     "hiddenAt": 1795087671462
   },
   "NoFun||2026-11-20||19:00": "approved",
-  "NoFun||2026-11-22||4:00 PM": {
-    "status": "rejected",
-    "hiddenAt": 1795087881916
-  },
   "Tompkins Corners Cultural Center||2027-05-18||7:00 pm": {
     "status": "rejected",
     "hiddenAt": 1795087885916
