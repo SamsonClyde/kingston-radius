@@ -1,6 +1,71 @@
 [
   {
     "id": 1,
+    "date": "2026-11-24",
+    "title": "VCR Vortex VHS Night - Darkside of Comedy Double Feature",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "7:00 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 2,
+    "date": "2026-11-25",
+    "title": "Kulture Klub: 80's Punk + New Wave Junk - All Vinyl Dance Party",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 3,
+    "date": "2026-11-25",
+    "title": "Thanksgiving Eve",
+    "venue": "The Grand",
+    "venueUrl": "#",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "5:00 PM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 4,
+    "date": "2026-11-25",
+    "title": "Dead Last Wednesday with Gratefully Yours",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$20",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 5,
+    "date": "2026-11-26",
+    "title": "Albany Hardcore Black Friday Show",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "7:30 PM",
+    "price": "$15",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 6,
     "date": "2026-11-27",
     "title": "Perowsky / Torn / Medeski / Ultan",
     "venue": "Tempo Arts",
@@ -13,7 +78,46 @@
     "_source": "email"
   },
   {
-    "id": 2,
+    "id": 7,
+    "date": "2026-11-27",
+    "title": "Sound Boy Ent. Rave",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "$18",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 8,
+    "date": "2026-11-27",
+    "title": "Black Friday Dance Party",
+    "venue": "The Grand",
+    "venueUrl": "#",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 9,
+    "date": "2026-11-27",
+    "title": "The Big Takeover",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$25",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 10,
     "date": "2026-11-28",
     "title": "Wintertide at TEMPO: Open House",
     "venue": "Tempo Arts",
@@ -26,7 +130,46 @@
     "_source": "email"
   },
   {
-    "id": 3,
+    "id": 11,
+    "date": "2026-11-28",
+    "title": "No Fun Karaoke Night",
+    "venue": "NoFun",
+    "venueUrl": "#",
+    "location": "Troy, NY",
+    "mapsUrl": "https://maps.app.goo.gl/GRbCRRS7txtQCFU37",
+    "time": "8:00 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 12,
+    "date": "2026-11-28",
+    "title": "Movie + Alt Rock Night",
+    "venue": "The Grand",
+    "venueUrl": "#",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "4:00 PM",
+    "price": "Free",
+    "free": true,
+    "_source": "email"
+  },
+  {
+    "id": 13,
+    "date": "2026-11-28",
+    "title": "John Gullo's ROLLING STONES Thanksgiving Weekend Show",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$25",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 14,
     "date": "2026-11-29",
     "title": "Peter and the Wolf",
     "venue": "Stissing Center",
@@ -39,7 +182,33 @@
     "_source": "email"
   },
   {
-    "id": 4,
+    "id": 15,
+    "date": "2026-11-29",
+    "title": "Live Music Brunch",
+    "venue": "The Grand",
+    "venueUrl": "#",
+    "location": "Croton-on-Hudson, NY",
+    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
+    "time": "11:00 AM",
+    "price": "See website",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 16,
+    "date": "2026-11-29",
+    "title": "Honky Tonk Last Sunday w/ Hudson Valley Flyers",
+    "venue": "Colony Woodstock",
+    "venueUrl": "https://www.colonywoodstock.com/shows",
+    "location": "Woodstock, NY",
+    "mapsUrl": "https://maps.google.com/?q=22+Rock+City+Rd+Woodstock+NY",
+    "time": "7:00 PM",
+    "price": "$15",
+    "free": false,
+    "_source": "email"
+  },
+  {
+    "id": 17,
     "date": "2026-12-03",
     "title": "Grace Potter",
     "venue": "Bardavon",
@@ -52,7 +221,7 @@
     "_source": "email"
   },
   {
-    "id": 5,
+    "id": 18,
     "date": "2026-12-03",
     "title": "Grace Potter",
     "venue": "Bardavon",
@@ -65,7 +234,7 @@
     "_source": "email"
   },
   {
-    "id": 6,
+    "id": 19,
     "date": "2026-12-03",
     "title": "Jazz Vocalists Duchess",
     "venue": "The Local Saugerties",
@@ -78,7 +247,7 @@
     "_source": "email"
   },
   {
-    "id": 7,
+    "id": 20,
     "date": "2026-12-03",
     "title": "Songwriters Circle: Original Holiday Songs",
     "venue": "The Grand",
@@ -91,7 +260,7 @@
     "_source": "email"
   },
   {
-    "id": 8,
+    "id": 21,
     "date": "2026-12-04",
     "title": "Josephine",
     "venue": "Time & Space Limited",
@@ -104,7 +273,7 @@
     "_source": "email"
   },
   {
-    "id": 9,
+    "id": 22,
     "date": "2026-12-04",
     "title": "Sound Sanctuary",
     "venue": "Tempo Arts",
@@ -117,7 +286,7 @@
     "_source": "email"
   },
   {
-    "id": 10,
+    "id": 23,
     "date": "2026-12-05",
     "title": "Amber Rubarth Single Release Party",
     "venue": "Tempo Arts",
@@ -130,7 +299,7 @@
     "_source": "email"
   },
   {
-    "id": 11,
+    "id": 24,
     "date": "2026-12-05",
     "title": "Songs of Southern Italy Maria Mazzota",
     "venue": "The Local Saugerties",
@@ -143,7 +312,7 @@
     "_source": "email"
   },
   {
-    "id": 12,
+    "id": 25,
     "date": "2026-12-06",
     "title": "Candice Guardino",
     "venue": "Bardavon",
@@ -156,7 +325,7 @@
     "_source": "email"
   },
   {
-    "id": 13,
+    "id": 26,
     "date": "2026-12-06",
     "title": "Candice Guardino: Italian Bred",
     "venue": "Bardavon",
@@ -169,7 +338,7 @@
     "_source": "email"
   },
   {
-    "id": 14,
+    "id": 27,
     "date": "2026-12-06",
     "title": "African Film, Live Music and Food An evening with famed radio show Afropop Worldwide",
     "venue": "The Local Saugerties",
@@ -182,7 +351,7 @@
     "_source": "email"
   },
   {
-    "id": 15,
+    "id": 28,
     "date": "2026-12-06",
     "title": "American String Quartet",
     "venue": "Stissing Center",
@@ -195,7 +364,7 @@
     "_source": "email"
   },
   {
-    "id": 16,
+    "id": 29,
     "date": "2026-12-06",
     "title": "Mr Sun Plays Duke Ellington's Nutcracker Suite",
     "venue": "Tempo Arts",
@@ -208,7 +377,7 @@
     "_source": "email"
   },
   {
-    "id": 17,
+    "id": 30,
     "date": "2026-12-08",
     "title": "The LeeVees",
     "venue": "The Grand",
@@ -221,7 +390,7 @@
     "_source": "email"
   },
   {
-    "id": 18,
+    "id": 31,
     "date": "2026-12-08",
     "title": "TEMPO Uncharted: Opening With The Creative Music Studio Improvisers Orchestra",
     "venue": "Tempo Arts",
@@ -234,7 +403,7 @@
     "_source": "email"
   },
   {
-    "id": 19,
+    "id": 32,
     "date": "2026-12-09",
     "title": "Local Waves Play Time",
     "venue": "The Local Saugerties",
@@ -247,7 +416,7 @@
     "_source": "email"
   },
   {
-    "id": 20,
+    "id": 33,
     "date": "2026-12-10",
     "title": "Sea Glass",
     "venue": "The Grand",
@@ -260,7 +429,7 @@
     "_source": "email"
   },
   {
-    "id": 21,
+    "id": 34,
     "date": "2026-12-11",
     "title": "BEREZA / BERYOZE with Zozulka Trio",
     "venue": "Tempo Arts",
@@ -273,7 +442,7 @@
     "_source": "email"
   },
   {
-    "id": 22,
+    "id": 35,
     "date": "2026-12-12",
     "title": "New Paltz Ballet Theatre: The Nutcracker",
     "venue": "Bardavon",
@@ -286,7 +455,7 @@
     "_source": "email"
   },
   {
-    "id": 23,
+    "id": 36,
     "date": "2026-12-12",
     "title": "New Paltz Ballet Theatre: The Nutcracker",
     "venue": "Bardavon",
@@ -299,7 +468,7 @@
     "_source": "email"
   },
   {
-    "id": 24,
+    "id": 37,
     "date": "2026-12-12",
     "title": "Pete Donnelly's Holiday Blowout",
     "venue": "The Grand",
@@ -312,7 +481,7 @@
     "_source": "email"
   },
   {
-    "id": 25,
+    "id": 38,
     "date": "2026-12-12",
     "title": "Kimberly Bartosik: bLUr",
     "venue": "MASS MoCA",
@@ -325,7 +494,7 @@
     "_source": "email"
   },
   {
-    "id": 26,
+    "id": 39,
     "date": "2026-12-13",
     "title": "New Paltz Ballet Theatre: The Nutcracker",
     "venue": "Bardavon",
@@ -338,7 +507,7 @@
     "_source": "email"
   },
   {
-    "id": 27,
+    "id": 40,
     "date": "2026-12-13",
     "title": "New Paltz Ballet Theatre: The Nutcracker",
     "venue": "Bardavon",
@@ -351,7 +520,7 @@
     "_source": "email"
   },
   {
-    "id": 28,
+    "id": 41,
     "date": "2026-12-16",
     "title": "Holiday Hootenanny for Feeding Westchester",
     "venue": "The Grand",
@@ -364,7 +533,7 @@
     "_source": "email"
   },
   {
-    "id": 29,
+    "id": 42,
     "date": "2026-12-17",
     "title": "Community Potluck",
     "venue": "The Living Room at Full Circle",
@@ -377,7 +546,7 @@
     "_source": "email"
   },
   {
-    "id": 30,
+    "id": 43,
     "date": "2026-12-17",
     "title": "FREE FILM: Cult Classics Love Actually",
     "venue": "Bardavon",
@@ -390,7 +559,7 @@
     "_source": "email"
   },
   {
-    "id": 31,
+    "id": 44,
     "date": "2026-12-17",
     "title": "FREE FILM: Love Actually (2003)",
     "venue": "Bardavon",
@@ -403,7 +572,7 @@
     "_source": "email"
   },
   {
-    "id": 32,
+    "id": 45,
     "date": "2026-12-18",
     "title": "A Gospel Holiday",
     "venue": "The Local Saugerties",
@@ -416,7 +585,7 @@
     "_source": "email"
   },
   {
-    "id": 33,
+    "id": 46,
     "date": "2026-12-19",
     "title": "Paula Poundstone",
     "venue": "Bardavon",
@@ -429,7 +598,7 @@
     "_source": "email"
   },
   {
-    "id": 34,
+    "id": 47,
     "date": "2026-12-19",
     "title": "Paula Poundstone",
     "venue": "Bardavon",
@@ -442,7 +611,7 @@
     "_source": "email"
   },
   {
-    "id": 35,
+    "id": 48,
     "date": "2026-12-20",
     "title": "MET ENCORE: Samson et Dalila (Saint-Saëns)",
     "venue": "Bardavon",
@@ -455,7 +624,7 @@
     "_source": "email"
   },
   {
-    "id": 36,
+    "id": 49,
     "date": "2027-01-16",
     "title": "Hay Fever",
     "venue": "Time & Space Limited",
@@ -468,7 +637,7 @@
     "_source": "email"
   },
   {
-    "id": 37,
+    "id": 50,
     "date": "2027-01-23",
     "title": "Chanticleer",
     "venue": "Bardavon",
@@ -481,7 +650,7 @@
     "_source": "email"
   },
   {
-    "id": 38,
+    "id": 51,
     "date": "2027-01-24",
     "title": "Puppy Pals Live - The Action-Packed Comedic Stunt Dog Show",
     "venue": "Bardavon",
@@ -494,7 +663,7 @@
     "_source": "email"
   },
   {
-    "id": 39,
+    "id": 52,
     "date": "2027-01-30",
     "title": "MET ENCORE: La Fanciulla del West (Puccini)",
     "venue": "Bardavon",
@@ -507,7 +676,7 @@
     "_source": "email"
   },
   {
-    "id": 40,
+    "id": 53,
     "date": "2027-01-30",
     "title": "Gibney Company: Another Look",
     "venue": "MASS MoCA",
@@ -520,7 +689,7 @@
     "_source": "email"
   },
   {
-    "id": 41,
+    "id": 54,
     "date": "2027-02-06",
     "title": "Perfume Genius & Kate Wallich",
     "venue": "MASS MoCA",
@@ -533,7 +702,7 @@
     "_source": "email"
   },
   {
-    "id": 42,
+    "id": 55,
     "date": "2027-02-12",
     "title": "The Dark Festival",
     "venue": "PS21 Chatham",
@@ -546,7 +715,7 @@
     "_source": "email"
   },
   {
-    "id": 43,
+    "id": 56,
     "date": "2027-02-13",
     "title": "A Taste of Ireland",
     "venue": "Bardavon",
@@ -559,7 +728,7 @@
     "_source": "email"
   },
   {
-    "id": 44,
+    "id": 57,
     "date": "2027-02-15",
     "title": "Touki Delphine: SUPERDRUM",
     "venue": "MASS MoCA",
@@ -572,7 +741,7 @@
     "_source": "email"
   },
   {
-    "id": 45,
+    "id": 58,
     "date": "2027-02-21",
     "title": "The Dark Festival",
     "venue": "PS21 Chatham",
@@ -585,7 +754,7 @@
     "_source": "email"
   },
   {
-    "id": 46,
+    "id": 59,
     "date": "2027-02-25",
     "title": "Open Studios",
     "venue": "MASS MoCA",
@@ -598,7 +767,7 @@
     "_source": "email"
   },
   {
-    "id": 47,
+    "id": 60,
     "date": "2027-02-26",
     "title": "Handle with Care",
     "venue": "MASS MoCA",
@@ -611,7 +780,7 @@
     "_source": "email"
   },
   {
-    "id": 48,
+    "id": 61,
     "date": "2027-03-06",
     "title": "Vijay Iyer Quartet",
     "venue": "MASS MoCA",
