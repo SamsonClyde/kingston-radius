@@ -2043,5 +2043,9 @@
     "status": "rejected",
     "hiddenAt": 1795605495218
   },
-  "Bardavon||2027-03-19||20:00": "approved"
+  "Bardavon||2027-03-19||20:00": "approved",
+  "Bardavon||2027-03-20||": {
+    "status": "rejected",
+    "hiddenAt": 1795605502754
+  }
 }
