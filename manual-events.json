@@ -35210,5 +35210,20 @@
     "_source": "email",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795605488306-ironwine-1000-x800-web-990x792.jpg",
     "_manual": true
+  },
+  {
+    "id": 269,
+    "date": "2026-12-04",
+    "title": "Easy Money",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/event/easy-money/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "time": "20:00",
+    "price": "free",
+    "free": true,
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795605720622-emoctober17keegan2026-small-663x1024-1.png",
+    "_manual": true
   }
 ]
