@@ -2245,5 +2245,9 @@
   "Time & Space Limited||2026-11-30||6:30 PM": {
     "status": "rejected",
     "hiddenAt": 1795607230994
+  },
+  "Time & Space Limited||2026-12-05||12:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1795607234386
   }
 }
