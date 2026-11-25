@@ -2205,5 +2205,9 @@
   "The Grand||2026-11-29||11:00 AM": {
     "status": "rejected",
     "hiddenAt": 1795607175082
+  },
+  "The Half Moon||2026-12-12||8:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1795607178764
   }
 }
