@@ -15813,18 +15813,18 @@
   },
   {
     "id": 381,
-    "date": "2026-10-23",
-    "title": "The Rocky Horror Picture Show: Live & Loud",
-    "venue": "Assembly Kingston",
-    "venueUrl": "https://www.assemblykingston.com/events/the-rocky-horror-picture-show-live-amp-loud-1",
+    "date": "2027-01-09",
+    "title": "Clifford Turns 50 With Samara Lubelski, Bill Nace, and Pst Trio",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/clifford-turns-50-with-samara-lubelski-bill-nace-duo-and-pst-trio-plump-sargent-turco",
     "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
     "time": "20:00",
-    "price": "$35",
+    "price": "See website",
     "free": false,
-    "_source": "manual",
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792446452730-rocky-horror.jpg"
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795608105218-tubbys-logo.svg",
+    "_manual": true
   },
   {
     "id": 1789297083889,
