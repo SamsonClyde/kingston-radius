@@ -35273,5 +35273,20 @@
     "_source": "scraped",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795608134567-tubbys-logo.svg",
     "_manual": true
+  },
+  {
+    "id": 383,
+    "date": "2027-01-14",
+    "title": "Chicha Libre",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/cumbia-night-chicha-libre-1",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "$25",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795608216959-9bd32aa1-b796-4b5f-8b68-a155e59c200e.avif",
+    "_manual": true
   }
 ]
