@@ -35166,5 +35166,19 @@
     "price": "$25",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 1795605122208,
+    "title": "Labiahead",
+    "date": "2026-12-04",
+    "time": "20:00",
+    "venue": "Assembly Kingston",
+    "venueUrl": "https://www.assemblykingston.com/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=236+Wall+Street+Kingston+NY",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795605115737-1423f627-8b67-4232-917c-b186e9c0fa5b.jpg",
+    "price": "$33",
+    "free": false,
+    "_manual": true
   }
 ]
