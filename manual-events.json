@@ -19889,18 +19889,18 @@
   },
   {
     "id": 290,
-    "date": "2026-10-09",
-    "title": "2026 O+ Festival: Friday – Parade Kick off, Honky Tonk Night with Two Step Dance Lesson, Champagne Poneys & Bourbon Sprawl!",
+    "date": "2026-12-06",
+    "title": "Nancy & the Re-Petes",
     "venue": "Keegan Ales",
-    "venueUrl": "https://www.keeganales.com/event/2018-o-festival-parade-kick-off-forefathers-featuring-paul-rivers-bailey-key-q-bottoms-dixieland-jazz-band/",
+    "venueUrl": "https://www.keeganales.com/event/nancy-donnelly-quartet/",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
-    "time": "19:00",
-    "price": "See website",
-    "free": false,
+    "time": "20:00",
+    "price": "free",
+    "free": true,
     "_source": "scraped",
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1791460292618-1000089313.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795605789611-unnamed-6.jpg",
+    "_manual": true
   },
   {
     "id": 1790086619732,
