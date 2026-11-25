@@ -20909,18 +20909,18 @@
   },
   {
     "id": 67,
-    "date": "2026-11-05",
-    "title": "Steve Gunn",
-    "venue": "The Grand",
-    "venueUrl": "https://thegrandcroton.com/calendar",
-    "location": "Croton-on-Hudson, NY",
-    "mapsUrl": "https://maps.google.com/?q=The+Grand+Croton-on-Hudson+NY",
-    "time": "19:00",
-    "price": "See website",
+    "date": "2027-01-01",
+    "title": "Medicine Disco",
+    "venue": "Tempo Arts",
+    "venueUrl": "https://tempokingston.org/events/medicine_disco/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
+    "time": "15:00",
+    "price": "$20+",
     "free": false,
     "_source": "email",
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1792200806592-1000090082.jpg"
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795606891182-unnamed-1080x608.webp",
+    "_manual": true
   },
   {
     "id": 500,
