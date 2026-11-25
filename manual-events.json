@@ -35243,5 +35243,20 @@
     "_source": "scraped",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795605886415-lv-121826-hifi-lounge-sqs.webp",
     "_manual": true
+  },
+  {
+    "id": 379,
+    "date": "2027-01-08",
+    "title": "SPAIN, TV Sleep, Bruise Bath",
+    "venue": "Tubby's",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/spain-tv-sleep-bruise-bath",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
+    "time": "20:00",
+    "price": "See website",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795608049149-tubbys-logo.svg",
+    "_manual": true
   }
 ]
