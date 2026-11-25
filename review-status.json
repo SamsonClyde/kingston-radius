@@ -2274,5 +2274,9 @@
     "status": "rejected",
     "hiddenAt": 1795607389239
   },
-  "Town of Ulster Library||2026-12-12||11:00": "approved"
+  "Town of Ulster Library||2026-12-12||11:00": "approved",
+  "Towne Crier Café||2026-11-26||12:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1795607395589
+  }
 }
