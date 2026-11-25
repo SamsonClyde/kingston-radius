@@ -2108,5 +2108,10 @@
   "MASS MoCA||2026-12-12||7:00 PM": {
     "status": "rejected",
     "hiddenAt": 1795605923190
-  }
+  },
+  "NoFun||2026-11-25||8:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1795606012846
+  },
+  "NoFun||2026-11-25||20:00": "approved"
 }
