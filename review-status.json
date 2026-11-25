@@ -2209,5 +2209,9 @@
   "The Half Moon||2026-12-12||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1795607178764
+  },
+  "Time & Space Limited||2026-11-27||7:00 PM": {
+    "status": "rejected",
+    "hiddenAt": 1795607208605
   }
 }
