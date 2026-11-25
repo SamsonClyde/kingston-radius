@@ -35180,5 +35180,20 @@
     "price": "$33",
     "free": false,
     "_manual": true
+  },
+  {
+    "id": 33,
+    "date": "2026-12-05",
+    "title": "Marist's A Candlelight Service of Lessons & Carols",
+    "venue": "Bardavon",
+    "venueUrl": "https://www.bardavon.org/",
+    "location": "Poughkeepsie, NY",
+    "mapsUrl": "https://maps.google.com/?q=35+Market+St+Poughkeepsie+NY",
+    "time": "15:00",
+    "price": "free",
+    "free": true,
+    "_source": "email",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795605247328-2-2vkt1-990x792.jpg",
+    "_manual": true
   }
 ]
