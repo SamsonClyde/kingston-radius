@@ -2269,5 +2269,10 @@
   "Tompkins Corners Cultural Center||2027-05-22||6:30 pm": {
     "status": "rejected",
     "hiddenAt": 1795607250074
-  }
+  },
+  "Town of Ulster Library||2026-12-12||11:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1795607389239
+  },
+  "Town of Ulster Library||2026-12-12||11:00": "approved"
 }
