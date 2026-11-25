@@ -2013,5 +2013,9 @@
   "Assembly Kingston||2026-12-31||10:00 pm": {
     "status": "rejected",
     "hiddenAt": 1795605176399
+  },
+  "Bard College Conservatory||2026-12-16||9:00 am": {
+    "status": "rejected",
+    "hiddenAt": 1795605183068
   }
 }
