@@ -2399,5 +2399,9 @@
   "Unicorn Bar||2026-12-31||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1795608535603
+  },
+  "Upstate Films' Orpheum Theatre||2026-12-07||7:00 pm": {
+    "status": "rejected",
+    "hiddenAt": 1795608538706
   }
 }
