@@ -2184,5 +2184,10 @@
     "status": "rejected",
     "hiddenAt": 1795606922700
   },
-  "Tempo Arts||2027-01-01||15:00": "approved"
+  "Tempo Arts||2027-01-01||15:00": "approved",
+  "The Falcon||2026-12-30||See website": {
+    "status": "rejected",
+    "hiddenAt": 1795607017316
+  },
+  "The Falcon||2026-12-30||19:30": "approved"
 }
