@@ -5802,18 +5802,18 @@
   },
   {
     "id": 384,
-    "date": "2026-10-07",
-    "title": "Horse Lords, Silk Fence",
+    "date": "2027-01-15",
+    "title": "Datachoir, Caithlin De Marrais, Holotypes",
     "venue": "Tubby's",
-    "venueUrl": "https://www.tubbyskingston.com/calendar/horse-lords-silk-fence",
+    "venueUrl": "https://www.tubbyskingston.com/calendar/datachoir-caithlin-de-marrais-holotypes",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.app.goo.gl/9NwYaQgiCuChwZJ47",
     "time": "20:00",
-    "price": "sold out",
+    "price": "See website",
     "free": false,
-    "_source": "manual",
-    "_manual": true,
-    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1790456668075-1000088707.jpg"
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795608282968-tubbys-logo.svg",
+    "_manual": true
   },
   {
     "id": 403,
