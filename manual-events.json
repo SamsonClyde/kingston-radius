@@ -35226,5 +35226,20 @@
     "_source": "scraped",
     "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795605720622-emoctober17keegan2026-small-663x1024-1.png",
     "_manual": true
+  },
+  {
+    "id": 349,
+    "date": "2026-12-18",
+    "title": "Lover’s Lounge (Membership Required)",
+    "venue": "Love, Velma",
+    "venueUrl": "https://www.lovevelma.com/calendar/hlu4p3aig63fz12ozepqf14m98lm6b",
+    "location": "Ellenville, NY",
+    "mapsUrl": "https://maps.app.goo.gl/1N7G54TEiuvAWsch9",
+    "time": "19:00",
+    "price": "members only",
+    "free": false,
+    "_source": "scraped",
+    "posterUrl": "https://raw.githubusercontent.com/SamsonClyde/kingston-radius/data/posters/1795605886415-lv-121826-hifi-lounge-sqs.webp",
+    "_manual": true
   }
 ]
