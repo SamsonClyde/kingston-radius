@@ -1243,10 +1243,6 @@
     "status": "rejected",
     "hiddenAt": 1792666966894
   },
-  "Tubby's||2026-11-25||4:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1792667230313
-  },
   "Tubby's||2026-11-25||16:00": "approved",
   "Tubby's||2026-11-26||": {
     "status": "rejected",
@@ -1529,10 +1525,6 @@
     "hiddenAt": 1794310140242
   },
   "Keegan Ales||2026-11-20||20:00": "approved",
-  "Keegan Ales||2026-11-25||7:00 pm": {
-    "status": "rejected",
-    "hiddenAt": 1794310206430
-  },
   "KinoSaito||2026-12-12||5:30 pm": {
     "status": "rejected",
     "hiddenAt": 1794310273705
