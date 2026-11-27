@@ -1735,10 +1735,6 @@
     "status": "rejected",
     "hiddenAt": 1794657160925
   },
-  "The Falcon||2026-11-26||See website": {
-    "status": "rejected",
-    "hiddenAt": 1794657163160
-  },
   "The Falcon||2026-12-06||See website": {
     "status": "rejected",
     "hiddenAt": 1794657165993
@@ -2016,10 +2012,6 @@
     "status": "rejected",
     "hiddenAt": 1795605556365
   },
-  "Keegan Ales||2026-11-26||10:00 am": {
-    "status": "rejected",
-    "hiddenAt": 1795605565002
-  },
   "Keegan Ales||2026-11-27||8:00 pm": {
     "status": "rejected",
     "hiddenAt": 1795605684796
@@ -2062,10 +2054,6 @@
     "hiddenAt": 1795606012846
   },
   "NoFun||2026-11-25||20:00": "approved",
-  "NoFun||2026-11-26||7:30 PM": {
-    "status": "rejected",
-    "hiddenAt": 1795606070688
-  },
   "NoFun||2026-11-27||8:00 PM": {
     "status": "rejected",
     "hiddenAt": 1795606117550
