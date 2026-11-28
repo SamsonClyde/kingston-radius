@@ -2605,78 +2605,6 @@
   },
   {
     "id": 218,
-    "date": "2026-11-27",
-    "title": "The Soul Experience ft. Corey Glover (of Living Colour)",
-    "venue": "The Falcon",
-    "venueUrl": "https://www.liveatthefalcon.com",
-    "location": "Marlboro, NY",
-    "mapsUrl": "https://maps.google.com/?q=1348+Route+9W+Marlboro+NY",
-    "time": "See website",
-    "price": "See website",
-    "free": false
-  },
-  {
-    "id": 219,
-    "date": "2026-11-27",
-    "title": "Murali Coryell Band",
-    "venue": "Keegan Ales",
-    "venueUrl": "https://www.keeganales.com/event/murali-coryell-band/",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
-    "time": "8:00 pm",
-    "price": "Free",
-    "free": true
-  },
-  {
-    "id": 220,
-    "date": "2026-11-27",
-    "title": "Bear Night Happy Hour at Unicorn Bar!",
-    "venue": "Unicorn Bar",
-    "venueUrl": "https://unicornkingston.com/calendar",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
-    "time": "5:30 pm",
-    "price": "See website",
-    "free": false
-  },
-  {
-    "id": 221,
-    "date": "2026-11-27",
-    "title": "TODD ALSUP\u00e2\u0080\u0099S Piano Bar",
-    "venue": "Unicorn Bar",
-    "venueUrl": "https://unicornkingston.com/calendar",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
-    "time": "6:30 pm",
-    "price": "See website",
-    "free": false
-  },
-  {
-    "id": 222,
-    "date": "2026-11-27",
-    "title": "Adventure[s] BK presents: THE ENYA PARTY",
-    "venue": "Unicorn Bar",
-    "venueUrl": "https://unicornkingston.com/calendar",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
-    "time": "9:00 pm",
-    "price": "See website",
-    "free": false
-  },
-  {
-    "id": 223,
-    "date": "2026-11-27",
-    "title": "Perowsky / Torn / Medeski / Ultan",
-    "venue": "Tempo Arts",
-    "venueUrl": "https://tempokingston.org/events/",
-    "location": "Kingston, NY",
-    "mapsUrl": "https://maps.google.com/?q=Tempo+Kingston+NY",
-    "time": "7:30 pm",
-    "price": "See website",
-    "free": false
-  },
-  {
-    "id": 224,
     "date": "2026-11-28",
     "title": "TOP RANK ANNIVERSARY AND FREAKOUT SPOT RECORD FAIR",
     "venue": "Tubby's",
@@ -2688,7 +2616,7 @@
     "free": true
   },
   {
-    "id": 225,
+    "id": 219,
     "date": "2026-11-28",
     "title": "HUNG With Care",
     "venue": "Assembly Kingston",
@@ -2700,7 +2628,7 @@
     "free": false
   },
   {
-    "id": 226,
+    "id": 220,
     "date": "2026-11-28",
     "title": "Second Annual LocalMotion Benefit Concert",
     "venue": "The Falcon",
@@ -2712,7 +2640,7 @@
     "free": false
   },
   {
-    "id": 227,
+    "id": 221,
     "date": "2026-11-28",
     "title": "Feast of Friends with Guests AM Gold",
     "venue": "Keegan Ales",
@@ -2724,7 +2652,7 @@
     "free": true
   },
   {
-    "id": 228,
+    "id": 222,
     "date": "2026-11-28",
     "title": "84 Retro Vintage X Julie's Girls Club present: A Queer Holiday Market",
     "venue": "Unicorn Bar",
@@ -2736,7 +2664,7 @@
     "free": false
   },
   {
-    "id": 229,
+    "id": 223,
     "date": "2026-11-28",
     "title": "Unicorn Bar presents: A Y2K Dance Party with DJ Lovely Candela",
     "venue": "Unicorn Bar",
@@ -2748,7 +2676,7 @@
     "free": false
   },
   {
-    "id": 230,
+    "id": 224,
     "date": "2026-11-28",
     "title": "David Gilmore Quartet",
     "venue": "Lydia's Cafe",
@@ -2760,7 +2688,7 @@
     "free": false
   },
   {
-    "id": 231,
+    "id": 225,
     "date": "2026-11-29",
     "title": "Will Bernard and Freelance Subversives",
     "venue": "The Falcon",
@@ -2772,7 +2700,7 @@
     "free": false
   },
   {
-    "id": 232,
+    "id": 226,
     "date": "2026-11-29",
     "title": "Sunday 5K with Keegan Army",
     "venue": "Keegan Ales",
@@ -2784,11 +2712,11 @@
     "free": true
   },
   {
-    "id": 233,
+    "id": 227,
     "date": "2026-11-29",
     "title": "The Jinkx & DeLa Holiday Show",
     "venue": "Ulster Performing Arts Center (UPAC)",
-    "venueUrl": "https://www.ulstersavings.com/personal/checking/",
+    "venueUrl": "https://www.rehercenter.org",
     "location": "Kingston, NY",
     "mapsUrl": "https://maps.google.com/?q=Ulster%20Performing%20Arts%20Center%20%28UPAC%29%20Kingston%2C%20NY",
     "time": "7:00 pm",
@@ -2796,7 +2724,7 @@
     "free": false
   },
   {
-    "id": 234,
+    "id": 228,
     "date": "2026-11-30",
     "title": "Monday, November 30, 2026Charles P. Stevenson Jr. Library, Room 402, 11 am \u2013 1 pmNoon Concert Series",
     "venue": "Bard College Conservatory",
@@ -2808,7 +2736,7 @@
     "free": true
   },
   {
-    "id": 235,
+    "id": 229,
     "date": "2026-12-01",
     "title": "CHESS NIGHT (FREE)",
     "venue": "Tubby's",
@@ -2820,7 +2748,7 @@
     "free": true
   },
   {
-    "id": 236,
+    "id": 230,
     "date": "2026-12-01",
     "title": "Trivia Break Tuesdays with Andre",
     "venue": "Keegan Ales",
@@ -2832,7 +2760,7 @@
     "free": true
   },
   {
-    "id": 237,
+    "id": 231,
     "date": "2026-12-01",
     "title": "A Christmas CarolMaster Storyteller Jonathan Kruk",
     "venue": "Tompkins Corners Cultural Center",
@@ -2844,7 +2772,7 @@
     "free": false
   },
   {
-    "id": 238,
+    "id": 232,
     "date": "2026-12-02",
     "title": "FRANK HURRICANE + TARA ZORTHIAN + BILLY WAKEMAN",
     "venue": "Tubby's",
@@ -2856,7 +2784,7 @@
     "free": false
   },
   {
-    "id": 239,
+    "id": 233,
     "date": "2026-12-02",
     "title": "PolyTalk HV: Poly/ENM Story Slam",
     "venue": "Unicorn Bar",
@@ -2868,7 +2796,7 @@
     "free": false
   },
   {
-    "id": 240,
+    "id": 234,
     "date": "2026-12-02",
     "title": "Queer Trivia Wednesdays with Diana Dysentery",
     "venue": "Unicorn Bar",
@@ -2880,7 +2808,7 @@
     "free": false
   },
   {
-    "id": 241,
+    "id": 235,
     "date": "2026-12-02",
     "title": "Wednesday, December 2, 2026Olin Language Center, Room 115, 7:30\u20138:30 pmBard Baroque Ensemble",
     "venue": "Bard College Conservatory",
@@ -2892,7 +2820,7 @@
     "free": true
   },
   {
-    "id": 242,
+    "id": 236,
     "date": "2026-12-03",
     "title": "RITUAL ARCANA + SUN VOYAGER + SPREADERS",
     "venue": "Tubby's",
@@ -2904,7 +2832,7 @@
     "free": true
   },
   {
-    "id": 243,
+    "id": 237,
     "date": "2026-12-03",
     "title": "Fonville x Fribush",
     "venue": "The Falcon",
@@ -2916,7 +2844,7 @@
     "free": false
   },
   {
-    "id": 244,
+    "id": 238,
     "date": "2026-12-03",
     "title": "Open Mic Comedy",
     "venue": "Keegan Ales",
@@ -2928,7 +2856,7 @@
     "free": true
   },
   {
-    "id": 245,
+    "id": 239,
     "date": "2026-12-03",
     "title": "Queer Line Dancing - First Thursdays",
     "venue": "Unicorn Bar",
@@ -2940,7 +2868,7 @@
     "free": false
   },
   {
-    "id": 246,
+    "id": 240,
     "date": "2026-12-03",
     "title": "Dream Choir\"Happy\" Concert",
     "venue": "Tompkins Corners Cultural Center",
@@ -2952,7 +2880,7 @@
     "free": false
   },
   {
-    "id": 247,
+    "id": 241,
     "date": "2026-12-03",
     "title": "Thursday, December 3, 2026Kline, College Room, 11:30 am \u2013 12:30 pmStudent Recital: Antonio Fiorenza, trumpet: The Myth of the Metals",
     "venue": "Bard College Conservatory",
@@ -2964,7 +2892,7 @@
     "free": true
   },
   {
-    "id": 248,
+    "id": 242,
     "date": "2026-12-03",
     "title": "Thursday, December 3, 2026Bertelsmann Campus Center, Weis Cinema, 8\u201310 pmMiriam Kagan-Dubrof senior concert",
     "venue": "Bard College Conservatory",
@@ -2976,7 +2904,7 @@
     "free": true
   },
   {
-    "id": 249,
+    "id": 243,
     "date": "2026-12-04",
     "title": "MOON MULLINS + NICK SCHOFIELD",
     "venue": "Tubby's",
@@ -2988,7 +2916,7 @@
     "free": false
   },
   {
-    "id": 250,
+    "id": 244,
     "date": "2026-12-04",
     "title": "Labiahead",
     "venue": "Assembly Kingston",
@@ -3000,7 +2928,7 @@
     "free": false
   },
   {
-    "id": 251,
+    "id": 245,
     "date": "2026-12-04",
     "title": "Upstate",
     "venue": "The Falcon",
@@ -3012,7 +2940,7 @@
     "free": false
   },
   {
-    "id": 252,
+    "id": 246,
     "date": "2026-12-04",
     "title": "Easy Money",
     "venue": "Keegan Ales",
@@ -3024,7 +2952,7 @@
     "free": true
   },
   {
-    "id": 253,
+    "id": 247,
     "date": "2026-12-04",
     "title": "Writing Group with Teresa",
     "venue": "Unicorn Bar",
@@ -3036,7 +2964,7 @@
     "free": false
   },
   {
-    "id": 254,
+    "id": 248,
     "date": "2026-12-04",
     "title": "Queeraoke with Major Mayhem",
     "venue": "Unicorn Bar",
@@ -3048,7 +2976,7 @@
     "free": false
   },
   {
-    "id": 255,
+    "id": 249,
     "date": "2026-12-04",
     "title": "Martin Sexton Live Wide Open Tour",
     "venue": "Bearsville Theater",
@@ -3060,7 +2988,7 @@
     "free": false
   },
   {
-    "id": 256,
+    "id": 250,
     "date": "2026-12-04",
     "title": "Friday, December 4, 2026Campus Center North, Robert Kelly Multipurpose Room, 7\u201310 pmPercussion Studio Recital",
     "venue": "Bard College Conservatory",
@@ -3072,7 +3000,7 @@
     "free": true
   },
   {
-    "id": 257,
+    "id": 251,
     "date": "2026-12-04",
     "title": "Los Cumplea\u00f1os (Membership Required)",
     "venue": "Love, Velma",
@@ -3084,7 +3012,7 @@
     "free": false
   },
   {
-    "id": 258,
+    "id": 252,
     "date": "2026-12-05",
     "title": "REAL YOUNG AND LAZY HORSE",
     "venue": "Tubby's",
@@ -3096,7 +3024,7 @@
     "free": false
   },
   {
-    "id": 259,
+    "id": 253,
     "date": "2026-12-05",
     "title": "HVSO Strings | Festive Baroque",
     "venue": "Assembly Kingston",
@@ -3108,7 +3036,7 @@
     "free": false
   },
   {
-    "id": 260,
+    "id": 254,
     "date": "2026-12-05",
     "title": "Friendship & Charlotte Cornfield",
     "venue": "Assembly Kingston",
@@ -3120,7 +3048,7 @@
     "free": false
   },
   {
-    "id": 261,
+    "id": 255,
     "date": "2026-12-05",
     "title": "The Brighton Beat",
     "venue": "The Falcon",
@@ -3132,7 +3060,7 @@
     "free": false
   },
   {
-    "id": 262,
+    "id": 256,
     "date": "2026-12-05",
     "title": "Gratefully Yours",
     "venue": "Keegan Ales",
@@ -3144,7 +3072,7 @@
     "free": true
   },
   {
-    "id": 263,
+    "id": 257,
     "date": "2026-12-05",
     "title": "Upstate + Theater: SCRIPTS & SIPS",
     "venue": "Unicorn Bar",
@@ -3156,7 +3084,7 @@
     "free": false
   },
   {
-    "id": 264,
+    "id": 258,
     "date": "2026-12-05",
     "title": "CHAOTIC GROUP CHAT: Queer Comedy Chaos",
     "venue": "Unicorn Bar",
@@ -3168,7 +3096,7 @@
     "free": false
   },
   {
-    "id": 265,
+    "id": 259,
     "date": "2026-12-05",
     "title": "Friendship & Charlotte Cornfield w/ More Eaze at Assembly \u2013 Kingston, NY",
     "venue": "Assembly Kingston",
@@ -3180,7 +3108,7 @@
     "free": false
   },
   {
-    "id": 266,
+    "id": 260,
     "date": "2026-12-05",
     "title": "Amber Rubarth Single Release Party",
     "venue": "Tempo Arts",
@@ -3192,7 +3120,7 @@
     "free": false
   },
   {
-    "id": 267,
+    "id": 261,
     "date": "2026-12-05",
     "title": "David Heckendorn",
     "venue": "Lydia's Cafe",
@@ -3204,7 +3132,7 @@
     "free": false
   },
   {
-    "id": 268,
+    "id": 262,
     "date": "2026-12-05",
     "title": "Saturday, December 5, 2026Performing Arts Lab, Studio C, 2\u20133 pmGuest Artist Recital: Laurie Smukler, violin\u00a0and Qing Jiang, piano",
     "venue": "Bard College Conservatory",
@@ -3216,7 +3144,7 @@
     "free": true
   },
   {
-    "id": 269,
+    "id": 263,
     "date": "2026-12-06",
     "title": "KJ Denhert & The NY Unit",
     "venue": "The Falcon",
@@ -3228,7 +3156,7 @@
     "free": false
   },
   {
-    "id": 270,
+    "id": 264,
     "date": "2026-12-06",
     "title": "Nancy & the Re-Petes",
     "venue": "Keegan Ales",
@@ -3240,7 +3168,7 @@
     "free": true
   },
   {
-    "id": 271,
+    "id": 265,
     "date": "2026-12-06",
     "title": "Mr Sun Plays Duke Ellington\u2019s Nutcracker Suite",
     "venue": "Tempo Arts",
@@ -3252,11 +3180,11 @@
     "free": false
   },
   {
-    "id": 272,
+    "id": 266,
     "date": "2026-12-06",
     "title": "Mid-Hudson Women\u2019s Chorus Winter Concert",
     "venue": "St. James Methodist Church",
-    "venueUrl": "https://www.ulstersavings.com/personal/checking/",
+    "venueUrl": "https://www.rehercenter.org",
     "location": "Hudson, NY",
     "mapsUrl": "https://maps.google.com/?q=St.%20James%20Methodist%20Church%20Hudson%2C%20NY",
     "time": "2:00 pm",
@@ -3264,7 +3192,7 @@
     "free": false
   },
   {
-    "id": 273,
+    "id": 267,
     "date": "2026-12-06",
     "title": "Sunday, December 6, 2026Performing Arts Lab, Studio D, 7\u20138 pmViola Studio Recital: Featuring the students of Luosha Fang, Melissa Reardon, Marka Gustavsson and Caeli Smith.",
     "venue": "Bard College Conservatory",
@@ -3276,11 +3204,11 @@
     "free": true
   },
   {
-    "id": 274,
+    "id": 268,
     "date": "2026-12-07",
     "title": "My 90s Rock Photographs: FOREWORD! w/ author Melissa Auf der Maur",
     "venue": "Upstate Films' Orpheum Theatre",
-    "venueUrl": "https://www.ulstersavings.com/personal/checking/",
+    "venueUrl": "https://www.rehercenter.org",
     "location": "Saugerties, NY",
     "mapsUrl": "https://maps.google.com/?q=Upstate%20Films%27%20Orpheum%20Theatre%20Saugerties%2C%20NY",
     "time": "7:00 pm",
@@ -3288,7 +3216,7 @@
     "free": false
   },
   {
-    "id": 275,
+    "id": 269,
     "date": "2026-12-07",
     "title": "Monday, December 7, 2026Bit\u00f3 Conservatory Building, Performance Space, 7:30 pmTzedek Fishman moderation concert",
     "venue": "Bard College Conservatory",
@@ -3300,7 +3228,7 @@
     "free": true
   },
   {
-    "id": 276,
+    "id": 270,
     "date": "2026-12-08",
     "title": "LILY SEABIRD + ELIZA NIEMI",
     "venue": "Tubby's",
@@ -3312,7 +3240,7 @@
     "free": false
   },
   {
-    "id": 277,
+    "id": 271,
     "date": "2026-12-08",
     "title": "Welcome to Night Vale: Murder Night in Blood Forest",
     "venue": "Assembly Kingston",
@@ -3324,7 +3252,7 @@
     "free": false
   },
   {
-    "id": 278,
+    "id": 272,
     "date": "2026-12-08",
     "title": "TEMPO Uncharted: The Emergent Improvisers Series",
     "venue": "Tempo Arts",
@@ -3336,7 +3264,7 @@
     "free": false
   },
   {
-    "id": 279,
+    "id": 273,
     "date": "2026-12-08",
     "title": "Tuesday, December 8, 2026Hegeman 105 & Hegeman 107, 7\u20139 pmThe Music of Angelica Sanchez",
     "venue": "Bard College Conservatory",
@@ -3348,7 +3276,7 @@
     "free": true
   },
   {
-    "id": 280,
+    "id": 274,
     "date": "2026-12-09",
     "title": "BCMC + GIFT HORSE",
     "venue": "Tubby's",
@@ -3360,7 +3288,7 @@
     "free": false
   },
   {
-    "id": 281,
+    "id": 275,
     "date": "2026-12-09",
     "title": "Fred Tackett & Scott Sharrard",
     "venue": "Assembly Kingston",
@@ -3372,7 +3300,7 @@
     "free": false
   },
   {
-    "id": 282,
+    "id": 276,
     "date": "2026-12-09",
     "title": "PolyTalk HV: Poly/ENM Salon & Mixer",
     "venue": "Unicorn Bar",
@@ -3384,7 +3312,7 @@
     "free": false
   },
   {
-    "id": 283,
+    "id": 277,
     "date": "2026-12-09",
     "title": "Fred Tackett & Scott Sharrard (From Little Feat) at Assembly",
     "venue": "Assembly Kingston",
@@ -3396,7 +3324,7 @@
     "free": false
   },
   {
-    "id": 284,
+    "id": 278,
     "date": "2026-12-09",
     "title": "Wednesday, December 9, 2026Chapel of the Holy Innocents, 7\u20138 pmSun Ra class concert",
     "venue": "Bard College Conservatory",
@@ -3408,7 +3336,7 @@
     "free": true
   },
   {
-    "id": 285,
+    "id": 279,
     "date": "2026-12-10",
     "title": "Queer Classics Book Club: \"Lucky Red\" by Claudia Cravens",
     "venue": "Unicorn Bar",
@@ -3420,7 +3348,7 @@
     "free": false
   },
   {
-    "id": 286,
+    "id": 280,
     "date": "2026-12-10",
     "title": "Unicorn Bar presents: Make the Yuletide Gay!",
     "venue": "Unicorn Bar",
@@ -3432,7 +3360,7 @@
     "free": false
   },
   {
-    "id": 287,
+    "id": 281,
     "date": "2026-12-10",
     "title": "Hansel and Gretel Presented By Bard\u2019s Graduate Vocal Arts Program",
     "venue": "Tempo Arts",
@@ -3444,7 +3372,7 @@
     "free": false
   },
   {
-    "id": 288,
+    "id": 282,
     "date": "2026-12-10",
     "title": "Monday, December 14, 2026 \u2013 Friday, December 18, 2026Bard College CampusJust Call it Nature\u00a02026 Fall Senior Dance Concert: Senior Projects in Dance by:\u00a0Alice Crotty\u00a0Zo\u00eb Guzin\u00a0Nyx Hernandez\u00a0Elizabeth Mickens\u00a0Sativa Torres",
     "venue": "Bard College Conservatory",
@@ -3456,7 +3384,7 @@
     "free": true
   },
   {
-    "id": 289,
+    "id": 283,
     "date": "2026-12-11",
     "title": "MANAS + M WING",
     "venue": "Tubby's",
@@ -3468,7 +3396,7 @@
     "free": true
   },
   {
-    "id": 290,
+    "id": 284,
     "date": "2026-12-11",
     "title": "Ian Hendrickson-Smith's Christmas Blues Band",
     "venue": "The Falcon",
@@ -3480,7 +3408,7 @@
     "free": false
   },
   {
-    "id": 291,
+    "id": 285,
     "date": "2026-12-11",
     "title": "Hudson Valley Queer Speed Friending",
     "venue": "Unicorn Bar",
@@ -3492,7 +3420,7 @@
     "free": false
   },
   {
-    "id": 292,
+    "id": 286,
     "date": "2026-12-11",
     "title": "KNK Night Kingston",
     "venue": "Unicorn Bar",
@@ -3504,7 +3432,7 @@
     "free": false
   },
   {
-    "id": 293,
+    "id": 287,
     "date": "2026-12-11",
     "title": "BEREZA / BERYOZE with Zozulka Trio",
     "venue": "Tempo Arts",
@@ -3516,7 +3444,7 @@
     "free": false
   },
   {
-    "id": 294,
+    "id": 288,
     "date": "2026-12-11",
     "title": "Friday, December 11, 2026Kline Commons, 4\u20135 pmPiano Studio Recital: Featuring the students of Rieko Aizawa",
     "venue": "Bard College Conservatory",
@@ -3528,7 +3456,7 @@
     "free": true
   },
   {
-    "id": 295,
+    "id": 289,
     "date": "2026-12-11",
     "title": "Friday, December 11, 2026The Jazz Room, Blum N211, 7:30 pmCult Classics- Weekly Movie Screening",
     "venue": "Bard College Conservatory",
@@ -3540,7 +3468,7 @@
     "free": true
   },
   {
-    "id": 296,
+    "id": 290,
     "date": "2026-12-11",
     "title": "Friday, December 11, 2026SMOG, 8 pm \u2013 1 amContemporary Jazz Composers",
     "venue": "Bard College Conservatory",
@@ -3552,7 +3480,7 @@
     "free": true
   },
   {
-    "id": 297,
+    "id": 291,
     "date": "2026-12-12",
     "title": "TAPERS CHOICE",
     "venue": "Tubby's",
@@ -3564,7 +3492,7 @@
     "free": false
   },
   {
-    "id": 298,
+    "id": 292,
     "date": "2026-12-12",
     "title": "Hanukkah Special with Michael Winograd & the Honorable Mentshn",
     "venue": "The Falcon",
@@ -3576,7 +3504,7 @@
     "free": false
   },
   {
-    "id": 299,
+    "id": 293,
     "date": "2026-12-12",
     "title": "DYKETACTICS: All Vinyl Brazilian, House, Electronic Dance Party",
     "venue": "Unicorn Bar",
@@ -3588,7 +3516,7 @@
     "free": false
   },
   {
-    "id": 300,
+    "id": 294,
     "date": "2026-12-12",
     "title": "Souls United Gospel Choir and Community Party",
     "venue": "Tompkins Corners Cultural Center",
@@ -3600,7 +3528,7 @@
     "free": false
   },
   {
-    "id": 301,
+    "id": 295,
     "date": "2026-12-12",
     "title": "Rachael & Vilray w/ Taylor Ashton at TEMPO \u2013 Kingston, NY",
     "venue": "Tempo Arts",
@@ -3612,7 +3540,7 @@
     "free": false
   },
   {
-    "id": 302,
+    "id": 296,
     "date": "2026-12-12",
     "title": "Taper\u2019s Choice at Tubby\u2019s",
     "venue": "Tubby\u2019s",
@@ -3624,7 +3552,7 @@
     "free": false
   },
   {
-    "id": 303,
+    "id": 297,
     "date": "2026-12-12",
     "title": "Holiday Performance with the Woodstock Brass Quintet",
     "venue": "Town of Ulster Library",
@@ -3636,7 +3564,7 @@
     "free": false
   },
   {
-    "id": 304,
+    "id": 298,
     "date": "2026-12-12",
     "title": "Hudson Valley Gay Soccer Winter Fundraiser",
     "venue": "Rough Draft Bar & Books",
@@ -3648,7 +3576,7 @@
     "free": false
   },
   {
-    "id": 305,
+    "id": 299,
     "date": "2026-12-12",
     "title": "Alex Koi \u00d7 Kirin McElwain12 Dec. 2026",
     "venue": "KinoSaito",
@@ -3660,7 +3588,7 @@
     "free": false
   },
   {
-    "id": 306,
+    "id": 300,
     "date": "2026-12-12",
     "title": "Levin, McNeal & Siegel",
     "venue": "Lydia's Cafe",
@@ -3672,7 +3600,7 @@
     "free": false
   },
   {
-    "id": 307,
+    "id": 301,
     "date": "2026-12-12",
     "title": "Saturday, December 12, 2026CCS Bard Galleries, 11 am \u2013 5 pmFall Senior Dance Concert 2026",
     "venue": "Bard College Conservatory",
@@ -3684,7 +3612,7 @@
     "free": true
   },
   {
-    "id": 308,
+    "id": 302,
     "date": "2026-12-12",
     "title": "Show & Event Listings",
     "venue": "The Half Moon",
@@ -3696,7 +3624,7 @@
     "free": false
   },
   {
-    "id": 309,
+    "id": 303,
     "date": "2026-12-13",
     "title": "Jeremy Baum Trio: Charlie \"Baum\" Christmas",
     "venue": "The Falcon",
@@ -3708,7 +3636,19 @@
     "free": false
   },
   {
-    "id": 310,
+    "id": 304,
+    "date": "2026-12-13",
+    "title": "Irish Music Sessions",
+    "venue": "Keegan Ales",
+    "venueUrl": "https://www.keeganales.com/event/irish-music-sessions-2/",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.google.com/?q=20+Saint+James+Street+Kingston+NY",
+    "time": "2:00 pm",
+    "price": "Free",
+    "free": true
+  },
+  {
+    "id": 305,
     "date": "2026-12-13",
     "title": "An Evening of Community, Connection, and Healingwith Alison Jolicoeur and Chris Toland",
     "venue": "Tompkins Corners Cultural Center",
@@ -3720,11 +3660,11 @@
     "free": false
   },
   {
-    "id": 311,
+    "id": 306,
     "date": "2026-12-13",
     "title": "DCxPC Live Punk Benefit for Chris for New Prosthetic Leg",
     "venue": "Snapper Magee's",
-    "venueUrl": "https://www.ulstersavings.com/personal/checking/",
+    "venueUrl": "https://www.rehercenter.org",
     "location": "Hudson, NY",
     "mapsUrl": "https://maps.google.com/?q=Snapper%20Magee%27s%20Hudson%2C%20NY",
     "time": "4:00 pm",
@@ -3732,7 +3672,7 @@
     "free": false
   },
   {
-    "id": 312,
+    "id": 307,
     "date": "2026-12-13",
     "title": "Sunday, December 13, 2026Sawkill Coffee House, 11 am \u2013 1 pmGilbert Otten senior concert",
     "venue": "Bard College Conservatory",
@@ -3744,7 +3684,7 @@
     "free": true
   },
   {
-    "id": 313,
+    "id": 308,
     "date": "2026-12-14",
     "title": "Monday, December 14, 2026Bertelsmann Campus Center, George Ball Lounge, 6\u20137 pmBard Gamelan Fall concert",
     "venue": "Bard College Conservatory",
@@ -3756,7 +3696,7 @@
     "free": true
   },
   {
-    "id": 314,
+    "id": 309,
     "date": "2026-12-15",
     "title": "NOELE FLOWERS + JESSE IN GREY",
     "venue": "Tubby's",
@@ -3768,7 +3708,7 @@
     "free": false
   },
   {
-    "id": 315,
+    "id": 310,
     "date": "2026-12-15",
     "title": "Tuesday, December 15, 2026Hegeman 105 & Hegeman 107, 7\u20139 pmDouble Bass Studio Recital: Featuring the students of Satoshi Okamoto",
     "venue": "Bard College Conservatory",
@@ -3780,7 +3720,7 @@
     "free": true
   },
   {
-    "id": 316,
+    "id": 311,
     "date": "2026-12-16",
     "title": "The Underground Blues Jam | Hosted by Karl Allweier",
     "venue": "The Falcon",
@@ -3792,7 +3732,7 @@
     "free": false
   },
   {
-    "id": 317,
+    "id": 312,
     "date": "2026-12-16",
     "title": "The Sweetback Sisters Country Christmas Sing Along Spectacular",
     "venue": "Tempo Arts",
@@ -3804,7 +3744,7 @@
     "free": false
   },
   {
-    "id": 318,
+    "id": 313,
     "date": "2026-12-16",
     "title": "Tuesday, December 15, 2026Blum N211, the Jazz room, 8 pmAcupuncture @ Bard",
     "venue": "Bard College Conservatory",
@@ -3816,7 +3756,7 @@
     "free": true
   },
   {
-    "id": 319,
+    "id": 314,
     "date": "2026-12-16",
     "title": "Wednesday, December 16, 2026Hegeman 105 & Hegeman 107, 7\u20139 pmThe Georgian Choir winter concert",
     "venue": "Bard College Conservatory",
@@ -3828,7 +3768,7 @@
     "free": true
   },
   {
-    "id": 320,
+    "id": 315,
     "date": "2026-12-17",
     "title": "Jeremy Baum Trio: Charlie \"Baum\" Christmas",
     "venue": "The Falcon",
@@ -3840,7 +3780,7 @@
     "free": false
   },
   {
-    "id": 321,
+    "id": 316,
     "date": "2026-12-17",
     "title": "Into the Ice with Seamus Egan and Maeve Gilchrist",
     "venue": "Tempo Arts",
@@ -3852,7 +3792,7 @@
     "free": false
   },
   {
-    "id": 322,
+    "id": 317,
     "date": "2026-12-18",
     "title": "SPIRAL EDITIONS ZINE FAIR! + DREAMHOUSE RELEASE",
     "venue": "Tubby's",
@@ -3864,7 +3804,7 @@
     "free": false
   },
   {
-    "id": 323,
+    "id": 318,
     "date": "2026-12-18",
     "title": "Collazo Christmas @ The Falcon Benefit",
     "venue": "The Falcon",
@@ -3876,7 +3816,19 @@
     "free": false
   },
   {
-    "id": 324,
+    "id": 319,
+    "date": "2026-12-18",
+    "title": "TODD ALSUP\u00e2\u0080\u0099S Piano Bar",
+    "venue": "Unicorn Bar",
+    "venueUrl": "https://unicornkingston.com/calendar",
+    "location": "Kingston, NY",
+    "mapsUrl": "https://maps.app.goo.gl/xxU8VCyMJjTQ4nEY8",
+    "time": "6:30 pm",
+    "price": "See website",
+    "free": false
+  },
+  {
+    "id": 320,
     "date": "2026-12-18",
     "title": "The Putnam ChoraleSongs of the Season",
     "venue": "Tompkins Corners Cultural Center",
@@ -3888,7 +3840,7 @@
     "free": false
   },
   {
-    "id": 325,
+    "id": 321,
     "date": "2026-12-18",
     "title": "KZE Holiday Benefit Concert for CPCA",
     "venue": "Tempo Arts",
@@ -3900,7 +3852,7 @@
     "free": false
   },
   {
-    "id": 326,
+    "id": 322,
     "date": "2026-12-18",
     "title": "lover\u2019s lounge (Membership Required)",
     "venue": "Love, Velma",
@@ -3912,7 +3864,7 @@
     "free": false
   },
   {
-    "id": 327,
+    "id": 323,
     "date": "2026-12-19",
     "title": "Spencer Zahn presents Vince Guaraldi's A Charlie Brown Christmas",
     "venue": "Tubby's",
@@ -3924,7 +3876,7 @@
     "free": false
   },
   {
-    "id": 328,
+    "id": 324,
     "date": "2026-12-19",
     "title": "The Ed Palermo Big Band",
     "venue": "The Falcon",
@@ -3936,7 +3888,7 @@
     "free": false
   },
   {
-    "id": 329,
+    "id": 325,
     "date": "2026-12-19",
     "title": "Leather Fetish Night",
     "venue": "Unicorn Bar",
@@ -3948,7 +3900,7 @@
     "free": false
   },
   {
-    "id": 330,
+    "id": 326,
     "date": "2026-12-19",
     "title": "Unicorn Bar presents: DJ Patrick Kyle's DIRTY DISCO",
     "venue": "Unicorn Bar",
@@ -3960,7 +3912,7 @@
     "free": false
   },
   {
-    "id": 331,
+    "id": 327,
     "date": "2026-12-19",
     "title": "Jessica Lynn\u2019s \u2013 A Very Merry Classic Christmas",
     "venue": "Ulster Performing Arts Center (UPAC)",
@@ -3972,7 +3924,7 @@
     "free": false
   },
   {
-    "id": 332,
+    "id": 328,
     "date": "2026-12-20",
     "title": "CLOSED",
     "venue": "Tubby's",
@@ -3984,7 +3936,7 @@
     "free": false
   },
   {
-    "id": 333,
+    "id": 329,
     "date": "2026-12-20",
     "title": "The Analog Jazz Orchestra\u2019s \u201cChristmas Swing-A-Long\u201d",
     "venue": "The Falcon",
@@ -3996,7 +3948,7 @@
     "free": false
   },
   {
-    "id": 334,
+    "id": 330,
     "date": "2026-12-20",
     "title": "A Golden Girls Drag Show: Sophia Got Run Over by a Reindeer!",
     "venue": "Unicorn Bar",
@@ -4008,7 +3960,7 @@
     "free": false
   },
   {
-    "id": 335,
+    "id": 331,
     "date": "2026-12-24",
     "title": "Closed on Christmas and Christmas Eve",
     "venue": "The Falcon",
@@ -4020,7 +3972,7 @@
     "free": false
   },
   {
-    "id": 336,
+    "id": 332,
     "date": "2026-12-26",
     "title": "Bruce Katz Band",
     "venue": "The Falcon",
@@ -4032,7 +3984,7 @@
     "free": false
   },
   {
-    "id": 337,
+    "id": 333,
     "date": "2026-12-27",
     "title": "Jerry Vivino\u2019s Jingle Bell Jazz Holiday Show",
     "venue": "The Falcon",
@@ -4044,7 +3996,7 @@
     "free": false
   },
   {
-    "id": 338,
+    "id": 334,
     "date": "2026-12-29",
     "title": "BACKROOM DJ NIGHT: PHOTAY + SAM O.B.",
     "venue": "Tubby's",
@@ -4056,7 +4008,7 @@
     "free": false
   },
   {
-    "id": 339,
+    "id": 335,
     "date": "2026-12-29",
     "title": "Low Cut Connie",
     "venue": "Assembly Kingston",
@@ -4068,7 +4020,7 @@
     "free": false
   },
   {
-    "id": 340,
+    "id": 336,
     "date": "2026-12-30",
     "title": "BEL & STEPHEN BIRTHDAY DJ EXTRAVAGANZA (FREE)",
     "venue": "Tubby's",
@@ -4080,7 +4032,7 @@
     "free": true
   },
   {
-    "id": 341,
+    "id": 337,
     "date": "2026-12-30",
     "title": "Popa Chubby Band",
     "venue": "The Falcon",
@@ -4092,7 +4044,7 @@
     "free": false
   },
   {
-    "id": 342,
+    "id": 338,
     "date": "2026-12-30",
     "title": "New Years Eve",
     "venue": "Glen Falls House",
@@ -4104,7 +4056,7 @@
     "free": false
   },
   {
-    "id": 343,
+    "id": 339,
     "date": "2026-12-31",
     "title": "Velvet Underground New Year's Eve with LOADED",
     "venue": "Tubby's",
@@ -4116,7 +4068,7 @@
     "free": false
   },
   {
-    "id": 344,
+    "id": 340,
     "date": "2026-12-31",
     "title": "Paper Dolls: Silver Lining",
     "venue": "Assembly Kingston",
@@ -4128,7 +4080,7 @@
     "free": false
   },
   {
-    "id": 345,
+    "id": 341,
     "date": "2026-12-31",
     "title": "The Big Takeover | New Year's Eve Show!",
     "venue": "The Falcon",
@@ -4140,7 +4092,7 @@
     "free": false
   },
   {
-    "id": 346,
+    "id": 342,
     "date": "2026-12-31",
     "title": "MIRRORBALL NYE featuring DJ Jams Bond, Unicorn Brass Band, Marvin the Professor & more!",
     "venue": "Unicorn Bar",
@@ -4152,7 +4104,7 @@
     "free": false
   },
   {
-    "id": 347,
+    "id": 343,
     "date": "2026-12-31",
     "title": "NYE Celebration w/ A Groove Gathering",
     "venue": "Lydia's Cafe",
@@ -4164,7 +4116,7 @@
     "free": false
   },
   {
-    "id": 348,
+    "id": 344,
     "date": "2026-12-31",
     "title": "NYE f/DJ Andre Acosta (Membership Required)",
     "venue": "Love, Velma",
@@ -4176,7 +4128,7 @@
     "free": false
   },
   {
-    "id": 349,
+    "id": 345,
     "date": "2027-01-01",
     "title": "Dylan Doyle Band",
     "venue": "The Falcon",
@@ -4188,7 +4140,7 @@
     "free": false
   },
   {
-    "id": 350,
+    "id": 346,
     "date": "2027-01-07",
     "title": "M0NOGAMY + ELSA JOINER + HERE JENNY",
     "venue": "Tubby's",
@@ -4200,7 +4152,7 @@
     "free": false
   },
   {
-    "id": 351,
+    "id": 347,
     "date": "2027-01-08",
     "title": "SPAIN + TV SLEEP + BRUISE BATH",
     "venue": "Tubby's",
@@ -4212,7 +4164,7 @@
     "free": false
   },
   {
-    "id": 352,
+    "id": 348,
     "date": "2027-01-08",
     "title": "Dinner with Elvis",
     "venue": "Glen Falls House",
@@ -4224,7 +4176,7 @@
     "free": false
   },
   {
-    "id": 353,
+    "id": 349,
     "date": "2027-01-09",
     "title": "CLIFFORD TURNS 50 with SAMARA LUBELSKI / BILL NACE (DUO) and PST Trio (Plump / Sargent / Turco)",
     "venue": "Tubby's",
@@ -4236,7 +4188,7 @@
     "free": false
   },
   {
-    "id": 354,
+    "id": 350,
     "date": "2027-01-13",
     "title": "DAVE SCANLON",
     "venue": "Tubby's",
@@ -4248,7 +4200,7 @@
     "free": false
   },
   {
-    "id": 355,
+    "id": 351,
     "date": "2027-01-14",
     "title": "CUMBIA NIGHT: CHICHA LIBRE",
     "venue": "Tubby's",
@@ -4260,7 +4212,7 @@
     "free": false
   },
   {
-    "id": 356,
+    "id": 352,
     "date": "2027-01-15",
     "title": "DATACHOIR + CAITHLIN DE MARRAIS + HOLOTYPES",
     "venue": "Tubby's",
@@ -4272,7 +4224,7 @@
     "free": false
   },
   {
-    "id": 357,
+    "id": 353,
     "date": "2027-01-16",
     "title": "DOGO DU TOGO AND THE ALAGAA BEAT BAND",
     "venue": "Tubby's",
@@ -4284,7 +4236,7 @@
     "free": false
   },
   {
-    "id": 358,
+    "id": 354,
     "date": "2027-01-16",
     "title": "Las Migas",
     "venue": "Assembly Kingston",
@@ -4296,7 +4248,7 @@
     "free": false
   },
   {
-    "id": 359,
+    "id": 355,
     "date": "2027-01-22",
     "title": "goth/darkwave night: ANCIENT MY ENEMBY + ICEBLYNK + DJs Midna Mayhem / Adore Me",
     "venue": "Tubby's",
@@ -4308,7 +4260,7 @@
     "free": false
   },
   {
-    "id": 360,
+    "id": 356,
     "date": "2027-01-23",
     "title": "SALSA NIGHT: CHEO Y LOS CONSENTIDOS DE LA CASA",
     "venue": "Tubby's",
@@ -4320,7 +4272,7 @@
     "free": false
   },
   {
-    "id": 361,
+    "id": 357,
     "date": "2027-01-29",
     "title": "WYGALATOR (RECORD RELEASE)",
     "venue": "Tubby's",
@@ -4332,7 +4284,7 @@
     "free": false
   },
   {
-    "id": 362,
+    "id": 358,
     "date": "2027-01-30",
     "title": "HUSH WOODS + EASY SWEETHEART",
     "venue": "Tubby's",
@@ -4344,7 +4296,7 @@
     "free": false
   },
   {
-    "id": 363,
+    "id": 359,
     "date": "2027-02-04",
     "title": "TARA CLERKIN TRIO",
     "venue": "Tubby's",
@@ -4356,7 +4308,7 @@
     "free": false
   },
   {
-    "id": 364,
+    "id": 360,
     "date": "2027-02-10",
     "title": "BLACK LIPS + PLEASURE DOME",
     "venue": "Tubby's",
@@ -4368,7 +4320,7 @@
     "free": false
   },
   {
-    "id": 365,
+    "id": 361,
     "date": "2027-02-11",
     "title": "Adult DVD",
     "venue": "Tubby's",
@@ -4380,7 +4332,7 @@
     "free": false
   },
   {
-    "id": 366,
+    "id": 362,
     "date": "2027-02-13",
     "title": "Alentine\u2019s Day at UPAC",
     "venue": "Ulster Performing Arts Center (UPAC)",
@@ -4392,7 +4344,7 @@
     "free": false
   },
   {
-    "id": 367,
+    "id": 363,
     "date": "2027-02-13",
     "title": "Lady moon & the Eclipse (Membership Required)",
     "venue": "Love, Velma",
@@ -4404,7 +4356,7 @@
     "free": false
   },
   {
-    "id": 368,
+    "id": 364,
     "date": "2027-02-19",
     "title": "THE BODY & CEL GENESIS",
     "venue": "Tubby's",
@@ -4416,7 +4368,7 @@
     "free": false
   },
   {
-    "id": 369,
+    "id": 365,
     "date": "2027-03-02",
     "title": "JONATHAN RICHMAN featuring TOMMY LARKINS on the drums at Unicorn Bar - 3 Nights!",
     "venue": "Unicorn Bar",
@@ -4428,7 +4380,7 @@
     "free": false
   },
   {
-    "id": 370,
+    "id": 366,
     "date": "2027-03-05",
     "title": "Ladysmith Black Mambazo",
     "venue": "Assembly Kingston",
@@ -4440,7 +4392,7 @@
     "free": false
   },
   {
-    "id": 371,
+    "id": 367,
     "date": "2027-03-07",
     "title": "C\u00e9cilia - Qu\u00e9b\u00e9cois TrioCeltic and Trad MusicTICKETS WILL BE AVAILABLE AT THE DOOR.",
     "venue": "Tompkins Corners Cultural Center",
@@ -4452,7 +4404,7 @@
     "free": false
   },
   {
-    "id": 372,
+    "id": 368,
     "date": "2027-03-08",
     "title": "Bruce Foley & John NolanCelebrating Irish Heritage Month",
     "venue": "Tompkins Corners Cultural Center",
@@ -4464,7 +4416,7 @@
     "free": false
   },
   {
-    "id": 373,
+    "id": 369,
     "date": "2027-03-09",
     "title": "A Celtic Celebrationwith Liz Hanley, Jefferson Hamer and the TC Ceili Band",
     "venue": "Tompkins Corners Cultural Center",
@@ -4476,7 +4428,7 @@
     "free": false
   },
   {
-    "id": 374,
+    "id": 370,
     "date": "2027-03-10",
     "title": "Jerron Paxton + Dennis Lichtman",
     "venue": "Tompkins Corners Cultural Center",
@@ -4488,7 +4440,7 @@
     "free": false
   },
   {
-    "id": 375,
+    "id": 371,
     "date": "2027-03-13",
     "title": "Land of Talk & Soak",
     "venue": "Assembly Kingston",
@@ -4500,7 +4452,7 @@
     "free": false
   },
   {
-    "id": 376,
+    "id": 372,
     "date": "2027-03-13",
     "title": "Bruce Foley and John NolanBack by Popular Demand!",
     "venue": "Tompkins Corners Cultural Center",
@@ -4512,7 +4464,7 @@
     "free": false
   },
   {
-    "id": 377,
+    "id": 373,
     "date": "2027-03-15",
     "title": "ROSE CITY BAND + GLYDERS",
     "venue": "Tubby's",
@@ -4524,7 +4476,7 @@
     "free": false
   },
   {
-    "id": 378,
+    "id": 374,
     "date": "2027-03-19",
     "title": "DUG",
     "venue": "Tubby's",
@@ -4536,7 +4488,7 @@
     "free": false
   },
   {
-    "id": 379,
+    "id": 375,
     "date": "2027-03-19",
     "title": "Heron Valley",
     "venue": "Tompkins Corners Cultural Center",
@@ -4548,7 +4500,7 @@
     "free": false
   },
   {
-    "id": 380,
+    "id": 376,
     "date": "2027-03-20",
     "title": "Fred thomas of the jbs (Membership Required)",
     "venue": "Love, Velma",
@@ -4560,7 +4512,7 @@
     "free": false
   },
   {
-    "id": 381,
+    "id": 377,
     "date": "2027-03-21",
     "title": "HildalandA captivating fusion of folk traditions",
     "venue": "Tompkins Corners Cultural Center",
@@ -4572,7 +4524,7 @@
     "free": false
   },
   {
-    "id": 382,
+    "id": 378,
     "date": "2027-03-23",
     "title": "THIS IS THE KIT",
     "venue": "Tubby's",
@@ -4584,7 +4536,7 @@
     "free": false
   },
   {
-    "id": 383,
+    "id": 379,
     "date": "2027-03-24",
     "title": "RYLEY WALKER",
     "venue": "Tubby's",
@@ -4596,7 +4548,7 @@
     "free": false
   },
   {
-    "id": 384,
+    "id": 380,
     "date": "2027-03-24",
     "title": "Aoife Scott",
     "venue": "Tompkins Corners Cultural Center",
@@ -4608,7 +4560,7 @@
     "free": false
   },
   {
-    "id": 385,
+    "id": 381,
     "date": "2027-04-01",
     "title": "Samoa Wilson",
     "venue": "Tompkins Corners Cultural Center",
@@ -4620,7 +4572,7 @@
     "free": false
   },
   {
-    "id": 386,
+    "id": 382,
     "date": "2027-04-05",
     "title": "Rob Flax's Boom Chick TrioRagtime, Blues, and Songs of the \u201820s",
     "venue": "Tompkins Corners Cultural Center",
@@ -4632,7 +4584,7 @@
     "free": false
   },
   {
-    "id": 387,
+    "id": 383,
     "date": "2027-04-11",
     "title": "ALEX CAMERON",
     "venue": "Tubby's",
@@ -4644,7 +4596,7 @@
     "free": false
   },
   {
-    "id": 388,
+    "id": 384,
     "date": "2027-04-13",
     "title": "Mike + Ruthy\u200b(of the Mammals)Americana from alt-country to folk to bluegrass",
     "venue": "Tompkins Corners Cultural Center",
@@ -4656,7 +4608,7 @@
     "free": false
   },
   {
-    "id": 389,
+    "id": 385,
     "date": "2027-04-14",
     "title": "Nicolas Babineau & Alexis ChartrandQu\u00e9b\u00e9cois Concert",
     "venue": "Tompkins Corners Cultural Center",
@@ -4668,7 +4620,7 @@
     "free": false
   },
   {
-    "id": 390,
+    "id": 386,
     "date": "2027-04-18",
     "title": "Too BlueOriginal Bluegrass and Swing",
     "venue": "Tompkins Corners Cultural Center",
@@ -4680,7 +4632,7 @@
     "free": false
   },
   {
-    "id": 391,
+    "id": 387,
     "date": "2027-04-19",
     "title": "On the TrailModern Bluegrass Quartet",
     "venue": "Tompkins Corners Cultural Center",
@@ -4692,7 +4644,7 @@
     "free": false
   },
   {
-    "id": 392,
+    "id": 388,
     "date": "2027-04-24",
     "title": "Dirty Projectors (solo)",
     "venue": "Assembly Kingston",
@@ -4704,7 +4656,7 @@
     "free": false
   },
   {
-    "id": 393,
+    "id": 389,
     "date": "2027-04-24",
     "title": "Big Lazy (Membership Required)",
     "venue": "Love, Velma",
@@ -4716,7 +4668,7 @@
     "free": false
   },
   {
-    "id": 394,
+    "id": 390,
     "date": "2027-04-26",
     "title": "One Earth So Green and RoundWith Lydia Adams Davis",
     "venue": "Tompkins Corners Cultural Center",
@@ -4728,7 +4680,7 @@
     "free": false
   },
   {
-    "id": 395,
+    "id": 391,
     "date": "2027-04-29",
     "title": "Foy Vance World Tour | 2026 & 2027",
     "venue": "Levon Helm Studios",
@@ -4740,7 +4692,7 @@
     "free": false
   },
   {
-    "id": 396,
+    "id": 392,
     "date": "2027-04-29",
     "title": "Cortlandt String Quartet Traditional and contemporary classical chamber music",
     "venue": "Tompkins Corners Cultural Center",
@@ -4752,7 +4704,7 @@
     "free": false
   },
   {
-    "id": 397,
+    "id": 393,
     "date": "2027-05-04",
     "title": "Moved Indoors\u200bPete Seeger Festival",
     "venue": "Tompkins Corners Cultural Center",
@@ -4764,7 +4716,7 @@
     "free": false
   },
   {
-    "id": 398,
+    "id": 394,
     "date": "2027-05-08",
     "title": "The Madison String Quartet\"Voices of Survival\"",
     "venue": "Tompkins Corners Cultural Center",
@@ -4776,7 +4728,7 @@
     "free": false
   },
   {
-    "id": 399,
+    "id": 395,
     "date": "2027-05-09",
     "title": "MeadowlarkSeptember 14th + 15thFor more information and to buy tickets please visit:https://meadowlarkfest.org/Meadowlark Two Day Farmers & Makers Market withVia Viaggio, Carla Colour, Steffi Snyder Art, GormKin (Sat Only), El Azteca, Cave Glow Studio, Sweet Deliverance, Monroe Jewelry, Lone Dame Vintage, LuAnne Vintage, Crispin Dopamine, The Rolling Cones, The Blissful Dragonfly (Sat Only)GratefulGemHead, Morphologically & Stone Blossom Studio",
     "venue": "Stone Ridge Orchard",
@@ -4788,7 +4740,7 @@
     "free": false
   },
   {
-    "id": 400,
+    "id": 396,
     "date": "2027-05-10",
     "title": "Ensemble SanginetoItalian Strings and Voices for World Music",
     "venue": "Tompkins Corners Cultural Center",
@@ -4800,7 +4752,7 @@
     "free": false
   },
   {
-    "id": 401,
+    "id": 397,
     "date": "2027-05-11",
     "title": "#theoutlierinnpresents\u2026 Yoga Sundays",
     "venue": "The Outlier Inn",
@@ -4812,7 +4764,7 @@
     "free": false
   },
   {
-    "id": 402,
+    "id": 398,
     "date": "2027-05-16",
     "title": "Sprig of ThatBoundary-crossing String Band",
     "venue": "Tompkins Corners Cultural Center",
@@ -4824,7 +4776,7 @@
     "free": false
   },
   {
-    "id": 403,
+    "id": 399,
     "date": "2027-05-17",
     "title": "Tim Eriksen Concert - 7:30",
     "venue": "Tompkins Corners Cultural Center",
@@ -4836,7 +4788,7 @@
     "free": false
   },
   {
-    "id": 404,
+    "id": 400,
     "date": "2027-05-18",
     "title": "Circle of SongDeni Bonet to open our Circle!",
     "venue": "Tompkins Corners Cultural Center",
@@ -4848,7 +4800,7 @@
     "free": false
   },
   {
-    "id": 405,
+    "id": 401,
     "date": "2027-05-22",
     "title": "Deni Bonetwith Chris Flynn",
     "venue": "Tompkins Corners Cultural Center",
@@ -4860,7 +4812,7 @@
     "free": false
   },
   {
-    "id": 406,
+    "id": 402,
     "date": "2027-09-30",
     "title": "Los Vega Son Jarocho with Pulso de Barro",
     "venue": "Tempo Arts",
